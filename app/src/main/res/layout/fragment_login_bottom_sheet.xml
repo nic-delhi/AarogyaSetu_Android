@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/phone_number_validation_layout"
+        layout="@layout/phone_number_layout" />
+
+    <include
+        android:id="@+id/otp_validation_layout"
+        layout="@layout/otp_validation_layout"
+        android:visibility="gone" />
+
+
+</LinearLayout>

@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="10dp">
+
+    <ImageView
+        android:id="@+id/close"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_gravity="center"
+        android:contentDescription="@null"
+        android:padding="4dp"
+        android:src="@drawable/ic_close_24px" />
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/nested_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/close"
+        android:visibility="visible">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="20dp"
+                android:textAppearance="@style/BoldTitleTextStyle"
+                android:textColor="@color/black"
+                android:textSize="24sp"
+                tools:text="Niharika Arora" />
+
+            <TextView
+                android:id="@+id/phone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/name"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="4dp"
+                android:textAppearance="@style/TextStyleFontSemiBold"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                tools:text="75039394506" />
+
+            <include
+                android:id="@+id/scan_container"
+                layout="@layout/qr_code_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/phone" />
+
+            <TextView
+                android:id="@+id/scan_text_desc"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/scan_container"
+                android:layout_centerHorizontal="true"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="6dp"
+                android:layout_marginRight="8dp"
+                android:text="@string/scan_to_check_status"
+                android:textAppearance="@style/TextStyleFontSemiBold"
+                android:textColor="@color/black"
+                android:textSize="16sp" />
+
+            <include
+                android:id="@+id/scan_validity_container"
+                layout="@layout/scan_validity_view" />
+
+            <ImageView
+                android:id="@+id/app_icon"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_below="@+id/scan_validity_container"
+                android:layout_centerInParent="true"
+                android:layout_marginTop="6dp"
+                android:contentDescription="@null"
+                android:src="@drawable/qr_app_logo" />
+        </RelativeLayout>
+    </androidx.core.widget.NestedScrollView>
+
+    <TextView
+        android:id="@+id/scan_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerInParent="true"
+        android:layout_gravity="center"
+        android:layout_marginBottom="16dp"
+        android:background="@drawable/button_with_dark_stroke"
+        android:padding="16dp"
+        android:text="@string/scan_other_s_qr_code"
+        android:textColor="@color/black"
+        android:textSize="14sp" />
+
+    <ProgressBar
+        android:id="@+id/progress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:indeterminate="true"
+        android:indeterminateTint="@color/blue"
+        android:visibility="gone" />
+</RelativeLayout>

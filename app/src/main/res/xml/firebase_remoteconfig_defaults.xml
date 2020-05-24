@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<defaultsMap>
+    <entry>
+        <key>scan_poll_time_android</key>
+        <value>600</value>
+    </entry>
+
+    <entry>
+        <key>upload_enable</key>
+        <value>true</value>
+    </entry>
+
+    <entry>
+        <key>adaptive_scan_enable</key>
+        <value>true</value>
+    </entry>
+
+    <entry>
+        <key>adaptive_scan_upper_balanced_unique_app_devices</key>
+        <value>7</value>
+    </entry>
+
+    <entry>
+        <key>adaptive_scan_upper_balanced_advertisement_internal</key>
+        <value>10000</value>
+    </entry>
+
+    <entry>
+        <key>adaptive_scan_lower_balanced_unique_app_devices</key>
+        <value>2</value>
+    </entry>
+
+    <entry>
+        <key>adaptive_scan_lower_balanced_advertisement_internal</key>
+        <value>7000</value>
+    </entry>
+
+    <entry>
+        <key>adaptive_scan_acceptable_unique_device_delta</key>
+        <value>1</value>
+    </entry>
+
+    <entry>
+        <key>adaptive_scan_k_scan_interval</key>
+        <value>30000</value>
+    </entry>
+
+</defaultsMap>

@@ -1,0 +1,101 @@
+<resources>
+    <string name="app_name">Aarogya Setu</string>
+    <string name="your_mobile_number_is_required_to_know_your_identity">কন্টাক্ট ট্রেসিং (Contact Tracing) এর জন্য আপনার মোবাইল নম্বর প্রয়োজন।</string>
+    <string name="location_text">নিজের লোকেশন শেয়ারিং (Location Sharing) "সর্বদা"("Always") এ সেট করুন। আপনি পরে যে কোনও সময় এটি পরিবর্তন করতে পারেন।</string>
+
+    <!--phone_number_layout-->
+    <string name="enter_mobile_number">মোবাইল নম্বর লিখুন</string>
+    <string name="country_code">+91 </string>
+    <string name="mobile_number">মোবাইল নম্বর</string>
+    <string name="why_is_it_needed">কেন এটি প্রয়োজন?</string>
+    <string name="submit">জমা দিন</string>
+    <string name="resend_otp">ওটিপি (OTP) পুনরায় পাঠান</string>
+
+    <!--otp_validation_layout-->
+    <string name="enter_otp">ওটিপি (OTP) লিখুন</string>
+    <string name="three_dashes">---</string>
+    <string name="we_have_sent_otp">আমরা আপনার মোবাইল নম্বরে ওটিপি(OTP) পাঠিয়েছি</string>
+    <string name="we_have_resent_otp">We have resent OTP to your mobile number.</string>
+    <string name="otp">OTP</string>
+    <string name="please_enter_a_valid_otp">দয়া করে একটি সঠিক ওটিপি (OTP) লিখুন</string>
+
+
+    <!--why_needed_layout-->
+    <string name="i_understand">আমি বুঝেছি.</string>
+    <string name="device_location"><![CDATA[<b>ডিভাইস লোকেশন</b>]]></string>
+    <string name="bluetooth"><![CDATA[<b>ব্লুটুথ</b>]]></string>
+    <string name="monitors_your_device_s_proximity_within_6_feet_range">অন্য মোবাইল ডিভাইসে আপনার ডিভাইসের সান্নিধ্য পর্যবেক্ষণ করে। এটি আপনাকে সর্বদা চালিয়ে যাওয়ার পরামর্শ দেওয়া হয়।</string>
+    <string name="tracks_an_individual_s_touch_points_so_can_easily_find_others_who_came_in_close_contact">আপনার ডেটা কেবল মাত্র ভারত সরকার কে দেয়া হবে। অ্যাপ্লিকেশনটি কোনও সময়ে আপনার নাম এবং নম্বর জনসাধারণের কাছে প্রকাশ করার অনুমতি দেয় না।</string>
+    <string name="contribute_to_a_safer_india">আমি রাজী</string>
+    <string name="data_sharing_with_the_ministry"><![CDATA[<b>ডাটা শেয়ারিং</b>]]></string>
+    <string name="text_value">ধরা যাক, আপনি এক সপ্তাহ আগে কারোর সাথে একটি সমাবেশে দেখা করেছিলেন বা কোনও সর্বজনীক স্থানে অজানা কারোর সংস্পর্শে এসেছিলেন।তার কয়েক দিনের মধ্যে তিনি COVID-19 ইতিবাচক ধরা পড়েন ।\n\nএই অপ্পটি(App) ইনস্টল করা সক্রিয় ডিভাইস এর মাধ্যমে ভারত সরকার গত ১৪ দিনে এই ব্যক্তির নিকটতম ব্যাসার্ধের মধ্যে থাকা সমস্ত তৌচপইন্ট(Touchpoint) গুলো খুঁজে বের করবে।
+\n\nএরপরে আরও একটি ক্রিয়াকলাপের জন্য একটি পরামর্শক (advisory) সহ এ জাতীয় সমস্ত যোগাযোগের কাছে একটি বিজ্ঞপ্তি (notification) পাঠানো হবে, স্ব-বিচ্ছিন্ন করতে বা প্রয়োজন হিসাবে নিকটতম পরীক্ষা কেন্দ্রে পরীক্ষা করাতে।
+\n\nকন্টাক্ট ট্রেসিং (Contact tracing) এ অংশ নিয়ে আপনি আমাদের COVID-19 এর বিস্তার কমিয়ে আনতে ও ভারত সরকারকে আপনার স্বাস্থ্য এবং সুষ্ঠ ভাবে জীবন জাপানের জন্য ব্যবস্থা গ্রহণ এ সহায়তা করবেন।
+\n\n</string>
+    <string name="please_select_a_language_en">Please select your language\nकृपया अपनी भाषा चुनें</string>
+    <string name="next">পরবর্তী</string>
+    <string name="please_select_a_language_to_proceed">এগোনোর জন্য একটি ভাষা নির্বাচন করুন।</string>
+    <!-- Strings used for fragments for navigation -->
+
+    <string name="sharing">অবদান...</string>
+    <string name="please_enter_a_valid_number">দয়া করে একটি সঠিক নম্বর লিখুন</string>
+    <string name="share_app_text"> আমি এই অ্যাপ্লিকেশনটিকে COVID19 এর বিরুদ্ধে লড়াই করার পরামর্শ দিচ্ছি। দয়া করে ডাউনলোড করুন এবং এই লিঙ্কটি ব্যবহার করে প্রচার করুন : \n</string>
+
+
+    <string name="would_you_like_to">আপনি কি COVID-19 সংক্রামিত কোনো ব্যক্তির সঙ্গস্পর্শে এসেছেন কিনা জানতে চান ?</string>
+    <string name="each_one_of_us">ভারতে করোনা ভাইরাস মহামারী রোধ করার ক্ষমতা আমাদের প্রত্যেকের মধ্যে রয়েছে।</string>
+    <string name="simply_1_install_the_app">কেবল,
+\n१ অ্যাপ(App) ইনস্টল করুন
+\n२. ব্লুটুথ (Bluetooth) এবং অবস্থান চালু করুন
+\n३. অবস্থান পরিষেবা (Location) "সর্বদা" সেট করুন
+\n\nঅ্যাপ্লিকেশন ইনস্টল করতে বন্ধুদের এবং পরিবারকে আমন্ত্রণ জানান</string>
+    <string name="cowin_20_tracks_through"><![CDATA[<b>আরোগ্য সেতু</b> ব্লুটুথ / জিপিএস দ্বারা উৎপাদিত সামাজিক গ্রাফের মাধ্যমে, COVID-19 সংক্রামিত কোনও ব্যক্তির সাথে আপনার  যোগাযোগ চিহ্নিত করতে পারে।]]></string>
+    <string name="the_app_alerts_are_accompanied">অ্যাপটির সতর্কীকরণ বারতায় (Alerts) আপনি জানতে পারবেন কীভাবে নিজেকে স্ব-বিচ্ছিন্ন করতে হবে এবং যদি আপনার দেহে রোগটির লক্ষণগুলি প্রকাশ পায় সে ক্ষেত্রে আপনার করনীয় বিধি, যা আপনাকে সহায়তা ও সাহায্য করবে ।
+</string>
+    <string name="you_will_be_alerted_if">COVID-19 ইতিবাচক কোন ব্যক্তি আপনার জ্ঞাত/অজ্ঞাতসারে নিকটবর্তী হলে আপনাকে সতর্ক করা হবে। </string>
+    <string name="with_cowin_20_you_can"><![CDATA[<b>আরোগ্য সেতু</b> এর সাহায্যে আপনি নিজেকে, আপনার পরিবার এবং বন্ধুবান্ধবকে রক্ষা করতে পারেন এবং COVID-19 এর বিরুদ্ধে লড়াই করার প্রয়াসে আমাদের দেশকে সহায়তা করতে পারেন]]></string>
+    <string name="register_now">রেজিস্টার</string>
+
+    <string name="install">Install</string>
+    <string name="bluetooth_and_gps">Bluetooth &amp; Location</string>
+    <string name="location_sharing">location sharing</string>
+    <string name="close">ক্লোসে</string>
+
+    <string name="permission_info_tnc_text"><![CDATA[<p>আপনি যদি এক নিরাপদ ভারতের পথে এগোতে চান তাহলে নীচের বোতামটিতে ক্লিক করে  <a href="https://static.swaraksha.gov.in/tnc/">পরিষেবার শর্তাদি</a> এবং <a href="https://web.swaraksha.gov.in/ncv19/privacy/">গোপনীয়তা নীতি</a> সম্পর্কে আপনার স্বীকৃতি নির্দেশ করুন:</p>]]></string>
+
+    <string name="auth_error_unknown">நீங்கள் உள்நுழைய சில பிழை உள்ளது</string>
+    <string name="auth_error_invalid_otp">நீங்கள் உள்ளிட்ட OTP தவறானது நீங்கள் உள்ளிட்ட OTP தவறானது</string>
+    <string name="resend_otp_in">ওটিপি পুনরায় পাঠান (%s)</string>
+    <string name="auth_error_user_disabled">You are not allowed to sign in</string>
+    <string name="permissions_title">পরিষেবার শর্তাদি এবং গোপনীয়তা</string>
+    <string name="permissions_detail">আমরা এই বিষয়টির প্রকৃতি এবং সংবেদনশীলতা বুঝি অতএব আপনার ডেটা বিপন্ন না হওয়ার বিষয়টি নিশ্চিত করার জন্য কঠোর ব্যবস্থা করেছি।</string>
+    <string name="sync_data_user_consent">কন্ট্যাক্ট ট্রেসিং-এ সাহায্য করার জন্য, ব্লুটুথ এবং GPS সার্ভিসের মাধ্যমে ক্যাপচার করা আপনার কথোপকথনের তথ্য ভারত সরকারের সাথে শেয়ার করা হবে.</string>
+    <string name="confirm_and_proceed">নিশ্চিত করুন এবং এগিয়ে যান</string>
+    <string name="sync_data_detail">আপনার তথ্য সবসময় আপনার ফোনে সেভ হয়. এটিকে নিরাপদ সরকারী সার্ভারে শেয়ার করুন যদি…</string>
+    <string name="sample_collected_for_testing">পরীক্ষার জন্য সংগ্রহ করা নমুনা</string>
+    <string name="tested_positive">Covid19 এর পরীক্ষার ফলাফল পজিটিভ</string>
+    <string name="syncing_data">তথ্য সিঙ্ক করা হচ্ছে</string>
+    <string name="syncing_data_detail">ব্লুটুথ এবং GPS সার্ভিসের মাধ্যমে ক্যাপচার করা কথোপকথনের তথ্য ভারত সরকারকে পাঠানো হচ্ছে.</string>
+    <string name="cancel">বাতিল করুন</string>
+    <string name="syncing_data_success">সিঙ্ক করা সফল হয়েছে</string>
+    <string name="syncing_data_success_detail">আপনার তথ্য এখন ভারত সরকারের সার্ভারে সুরক্ষিত রয়েছে.</string>
+    <string name="syncing_data_failed">সিঙ্ক করা ব্যর্থ হয়েছে</string>
+    <string name="syncing_data_failed_detail">কিছু সমস্যা হয়েছে, অনুগ্রহ করে আবার চেষ্টা করুন.</string>
+    <string name="retry">পুনরায় চেষ্টা করুন</string>
+    <string name="ok">ঠিক আছে</string>
+
+    <string name="image_language_change_content_description">ভাষা পরিবর্তন করুন</string>
+    <string name="image_share_content_description">অ্যাপ্লিকেশন শেয়ার করুন</string>
+    <string name="image_back_content_description">ফিরে যান</string>
+    <string name="image_on_board_content_description">অন-বোর্ডিং দেখান</string>
+    <string name="image_close_content_description">@string/close</string>
+    <string name="image_sync_data_content_description">Sync Data</string>
+    <string name="permission_alert_message">আপনার সেটিংস থেকে অবদানের জন্য আপনাকে প্রয়োজনীয় অবস্থান / ব্লুটুথ অনুমতিগুলি সরবরাহ করতে হবে, অ্যাপটিতে ফিরে এসে আবার ক্লিক করুন।</string>
+    <string name="error_network_error">ইন্টারনেট সংযোগ পরীক্ষা করুন</string>
+    <string name="error_location">অবস্থান সেটিংস অপর্যাপ্ত, এবং এখানে ঠিক করা যাবে না। সেটিংসে ঠিক করুন।</string>
+    <string name="update_required">আপডেট প্রয়োজন</string>
+    <string name="new_version_available">অ্যাপ্লিকেশনটির একটি নতুন সংস্করণ উপলব্ধ এবং এটি চালিয়ে যাওয়া প্রয়োজন. সর্বশেষ সংস্করণে আপডেট করতে দয়া করে নীচে ক্লিক করুন।</string>
+    <string name="turn_on_bluetooth_all_times">অন্যান্য ডিভাইসের সাথে আপনার সান্নিধ্য ট্র্যাক করতে এবং আপনাকে সঠিক সুরক্ষা আপডেট দিতে ব্লুটুথ সর্বদা চালু রাখতে হবে।</string>
+    <string name="make_sure_your_phone_is_connected_to_the_wifi_or_switch_to_mobile_data">আপনার ফোনটি ওয়াইফাইয়ের সাথে সংযুক্ত রয়েছে কিনা তা নিশ্চিত করুন বা মোবাইল ডেটাতে স্যুইচ করুন।</string>
+    <string name="login_failed">লগইন ব্যর্থ. অনুগ্রহপ করে আবার চেষ্টা করুন</string>
+</resources>

@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <com.journeyapps.barcodescanner.BarcodeView
+        android:id="@+id/zxing_barcode_surface"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:zxing_framing_rect_height="250dp"
+        app:zxing_framing_rect_width="250dp" />
+
+    <nic.goi.aarogyasetu.zxing.CustomViewFinderView
+        android:id="@+id/zxing_viewfinder_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:borderWidth="4dp"
+        app:cornerRadius="6dp"
+        app:zxing_possible_result_points="@android:color/white"
+        app:zxing_result_view="@color/zxing_custom_result_view"
+        app:zxing_viewfinder_mask="@color/zxing_custom_viewfinder_mask" />
+
+    <RelativeLayout
+        android:id="@+id/prompt_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginBottom="10dp"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/generate_qr"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/zxing_status_view"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/button_with_light_stroke"
+            android:padding="16dp"
+            android:text="@string/zxing_generate_my_qr_code"
+            android:textColor="@android:color/white"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/zxing_status_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="80dp"
+            android:background="@color/zxing_transparent"
+            android:gravity="center"
+            android:text="@string/scan_prompt"
+            android:textColor="@color/zxing_status_text"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/close"
+        android:layout_width="28dp"
+        android:layout_height="28dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="10dp"
+        android:contentDescription="@null"
+        android:padding="4dp"
+        android:src="@drawable/ic_close_white" />
+
+    <include layout="@layout/status_view" />
+</merge>

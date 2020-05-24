@@ -1,0 +1,101 @@
+<resources>
+    <string name="app_name">Aarogya Setu</string>
+    <string name="your_mobile_number_is_required_to_know_your_identity">ಕಾಂಟಾಕ್ಟ್ ಟ್ರೇಸಿಂಗ್‌ಗಾಗಿ ನಿಮ್ಮ ಮೊಬೈಲ್ ನಂಬರ್ ಅಗತ್ಯವಿದೆ.</string>
+    <string name="location_text">ನಿಮ್ಮ ಲೊಕೇಶನ್ ಅನ್ನು ನೀವು ‘ಯಾವಾಗಲೂ’ ಎಂದು ಸೆಟ್ ಮಾಡಲು ಶಿಫಾರಸು ಮಾಡಲಾಗುತ್ತದೆ. ನೀವು ಇದನ್ನು ನಂತರ ಯಾವಾಗ ಬೇಕಾದರೂ ಬದಲಾಯಿಸಬಹುದು.</string>
+
+    <!--phone_number_layout-->
+    <string name="enter_mobile_number">ಮೊಬೈಲ್ ನಂಬರ್ ನಮೂದಿಸಿ</string>
+    <string name="country_code">+91 </string>
+    <string name="mobile_number">ಮೊಬೈಲ್ ನಂಬರ್</string>
+    <string name="why_is_it_needed">ಇದು ಯಾಕೆ ಬೇಕಾಗಿದೆ?</string>
+    <string name="submit">ಸಲ್ಲಿಸಿ</string>
+    <string name="resend_otp">OTP ಯನ್ನು ಮತ್ತೆ ಕಳುಹಿಸಿ</string>
+
+    <!--otp_validation_layout-->
+    <string name="enter_otp">OTP ನಮೂದಿಸಿ</string>
+    <string name="three_dashes">---</string>
+    <string name="we_have_sent_otp">ನಿಮ್ಮ ಮೊಬೈಲ್ ನಂಬರಿಗೆ ನಾವು OTP ಯನ್ನು ಕಳುಹಿಸಿದ್ದೇವೆ.</string>
+    <string name="we_have_resent_otp">ನಿಮ್ಮ ಮೊಬೈಲ್ ನಂಬರಿಗೆ ನಾವು OTP ಯನ್ನು ಮರುಹೊಂದಿಸಿ.</string>
+    <string name="otp">OTP</string>
+    <string name="please_enter_a_valid_otp">ದಯವಿಟ್ಟು ಮಾನ್ಯವಾದ ಒಟಿಪಿ ನಮೂದಿಸಿ</string>
+
+
+    <!--why_needed_layout-->
+    <string name="i_understand">ನನಗೆ ಅರ್ಥವಾಗುತ್ತದೆ.</string>
+    <string name="device_location"><![CDATA[<b>ಡಿವೈಸ್ ಲೊಕೇಶನ್</b>]]></string>
+    <string name="bluetooth"><![CDATA[<b>ಬ್ಲೂಟೂತ್</b>]]></string>
+    <string name="monitors_your_device_s_proximity_within_6_feet_range">ನಿಮ್ಮ ಡಿವೈಸಿಗೆ ಮತ್ತೊಂದು ಮೊಬೈಲ್ ಡಿವೈಸಿನ ಅಂತರವನ್ನು ಮಾನಿಟರ್ ಮಾಡುತ್ತದೆ.\nನೀವು ಎಲ್ಲಾ ಸಮಯದಲ್ಲೂ ಇದನ್ನು ಆನ್ ಇಟ್ಟುಕೊಳ್ಳಲು ಶಿಫಾರಸು ಮಾಡಲಾಗಿದೆ.</string>
+    <string name="tracks_an_individual_s_touch_points_so_can_easily_find_others_who_came_in_close_contact">ನಿಮ್ಮ ಮಾಹಿತಿಯನ್ನು ಭಾರತ ಸರ್ಕಾರದೊಂದಿಗೆ ಮಾತ್ರ ಹಂಚಿಕೊಳ್ಳಲಾಗುವುದು.\nಆ್ಯಪ್‌ ಯಾವುದೇ ಸಮಯದಲ್ಲಿ ನಿಮ್ಮ ಹೆಸರು ಮತ್ತು ಸಂಖ್ಯೆಯನ್ನು ಸಾರ್ವಜನಿಕರಿಗೆ ಬಹಿರಂಗಪಡಿಸಲು ಅನುಮತಿ ನೀಡುವುದಿಲ್ಲ.</string>
+    <string name="contribute_to_a_safer_india">ನಾನು ಒಪ್ಪುತ್ತೇನೆ</string>
+    <string name="data_sharing_with_the_ministry"><![CDATA[<b>ಮಾಹಿತಿ ಹಂಚಿಕೆ</b>]]></string>
+    <string name="text_value">ನೀವು ವಾರದ ಹಿಂದೆ ಒಬ್ಬರನ್ನು ಭೇಟಿ ಮಾಡಿದ್ದೀರಿ ಅಥವಾ ಸಾರ್ವಜನಿಕ ಸ್ಥಳದಲ್ಲಿ ಅಪರಿಚಿತರ ಹತ್ತಿರದಲ್ಲಿದ್ದಿರಿ ಮತ್ತು ಕೆಲವು ದಿನಗಳ ನಂತರ ಅವರು COVID-19 ಟೆಸ್ಟ್ ಪಾಸಿಟಿವ್ ಆಗಿರುತ್ತಾರೆ\n\nಭಾರತ ಸರ್ಕಾರವು ಕಳೆದ 14 ದಿನಗಳಲ್ಲಿ ಇನ್‌ಸ್ಟಾಲ್ ಮಾಡಲಾದ ಆ್ಯಪ್‌ ಮೂಲಕ ಸಕ್ರಿಯ ಡಿವೈಸ್‌ಗಳೊಂದಿಗೆ ಆ ವ್ಯಕ್ತಿಯ ಹತ್ತಿರದಲ್ಲಿದ್ದ ಎಲ್ಲಾ ಟಚ್ ಪಾಯಿಂಟ್‌ಗಳನ್ನು ವಾಪಸ್ ಟ್ರೇಸ್ ಮಾಡುತ್ತದೆ
+\n\nಮುಂದಿನ ಪ್ರಕ್ರಿಯೆಯಾಗಿ, ಈ ಎಲ್ಲಾ ಕಾಂಟಾಕ್ಟ್‌ಗಳಿಗೆ ಸ್ವಯಂ ಐಸೋಲೇಟ್ ಆಗಲು ಮತ್ತು ಅಗತ್ಯವಿದ್ದರೆ ಹತ್ತಿರದ ಸೆಂಟರಿನಲ್ಲಿ ಟೆಸ್ಟ್ ಮಾಡಿಕೊಳ್ಳುವ ಸಲಹೆಯೊಂದಿಗೆ ನೋಟಿಫಿಕೇಶನ್ ಅನ್ನು ಕಳುಹಿಸಲಾಗುತ್ತದೆ.
+\n\nಸಕ್ರಿಯ ಕಾಂಟಾಕ್ಟ್ ಟ್ರೇಸಿಂಗ್‌ನಲ್ಲಿ ಭಾಗವಹಿಸುವ ಮೂಲಕ, ನೀವು COVID-19 ನ ಹರಡುವಿಕೆಯನ್ನು ಕಡಿಮೆ ಮಾಡಲು ನಮಗೆ ಸಹಾಯ ಮಾಡುತ್ತೀರಿ ಮತ್ತು ನಿಮ್ಮ ಆರೋಗ್ಯ ಮತ್ತು ಯೋಗಕ್ಷೇಮಕ್ಕಾಗಿ ಸಕ್ರಿಯ ಕ್ರಮಗಳನ್ನು ಅನುಷ್ಠಾನಗೊಳಿಸಲು ಭಾರತ ಸರ್ಕಾರಕ್ಕೆ ಅನುವು ಮಾಡಿಕೊಡುತ್ತೀರಿ.
+\n\n</string>
+    <string name="please_select_a_language_en">Please select your language\nकृपया अपनी भाषा चुनें</string>
+    <string name="next">ಮುಂದೆ</string>
+    <string name="please_select_a_language_to_proceed">ಮುಂದುವರೆಯಲು ದಯವಿಟ್ಟು ಭಾಷೆಯನ್ನು ಆಯ್ಕೆಮಾಡಿ.</string>
+    <!-- Strings used for fragments for navigation -->
+
+    <string name="sharing">Contributing...</string>
+    <string name="please_enter_a_valid_number">ದಯವಿಟ್ಟು ಮಾನ್ಯವಾದ ಸಂಖ್ಯೆಯನ್ನು ನಮೂದಿಸಿ</string>
+    <string name="share_app_text"> COVID19 ವಿರುದ್ಧ ಹೋರಾಡಲು ನಾನು ಈ ಆ್ಯಪನ್ನು ಶಿಫಾರಸು ಮಾಡುತ್ತೇನೆ. ದಯವಿಟ್ಟು ಈ ಲಿಂಕನ್ನು ಬಳಸಿ ಡೌನ್ಲೋಡ್ ಮಾಡಿ ಮತ್ತು ಶೇರ್ ಮಾಡಿ: \n</string>
+
+
+    <string name="would_you_like_to">COVID-19 ಪಾಸಿಟಿವ್ ಎಂದು ಟೆಸ್ಟ್ ಫಲಿತಾಂಶ ಪಡೆದ ವ್ಯಕ್ತಿಯೊಂದಿಗೆ ನೀವು ಒಡನಾಡಿದ್ದರೆ ನೀವು ಈ ಕುರಿತು ಮಾಹಿತಿ ಪಡೆಯಲು ಬಯಸುತ್ತೀರಾ?</string>
+    <string name="each_one_of_us">ಭಾರತದಲ್ಲಿ ಸಾಂಕ್ರಾಮಿಕ ಕೊರೋನ ವೈರಸ್ ಹರಡುವುದನ್ನು ತಡೆಯುವಲ್ಲಿ ಸಹಾಯ ಮಾಡಲು ನಮ್ಮಲ್ಲಿ ಪ್ರತಿಯೊಬ್ಬರಿಗೂ ಶಕ್ತಿ ಇದೆ</string>
+    <string name="simply_1_install_the_app">ಸರಳವಾಗಿ,
+\n१ ಆ್ಯಪನ್ನು ಇನ್‌ಸ್ಟಾಲ್ ಮಾಡಿ
+\n२. ಬ್ಲೂಟೂತ್ ಮತ್ತು ಲೊಕೇಶನ್ ಸ್ವಿಚ್ ಆನ್ ಮಾಡಿ
+\n३. ಲೊಕೇಶನ್ ಶೇರಿಂಗ್ ಅನ್ನು "ಯಾವಾಗಲೂ" ಎಂದು ಸೆಟ್ ಮಾಡಿ
+\n\nಆ್ಯಪ್ ಇನ್‌ಸ್ಟಾಲ್ ಮಾಡಲು ನಿಮ್ಮ ಗೆಳೆಯರು ಮತ್ತು ಕುಟುಂಬದವರನ್ನು ಕೂಡ ಆಹ್ವಾನಿಸಿ.</string>
+    <string name="cowin_20_tracks_through"><![CDATA[ಬ್ಲೂಟೂತ್ ಮತ್ತು ಲೊಕೇಶನ್ ಜನರೇಟೆಡ್ ಸೋಶಿಯಲ್ ಗ್ರಾಫ್ ಮೂಲಕ <b>Aarogya Setu</b> ಎಂಬ ಆ್ಯಪ್‌ COVID-19 ಪಾಸಿಟಿವ್ ಹೊಂದಿರಬಹುದಾದ ವ್ಯಕ್ತಿಯೊಂದಿಗಿನ ನಿಮ್ಮ ಒಡನಾಟವನ್ನು ಟ್ರ್ಯಾಕ್ ಮಾಡುತ್ತದೆ]]></string>
+    <string name="the_app_alerts_are_accompanied">ನಿಮ್ಮನ್ನು ನೀವು ಹೇಗೆ ಐಸೋಲೇಟ್ ಆಗಿ ಇಟ್ಟುಕೊಳ್ಳುವುದು ಎಂಬ ಸೂಚನೆಗಳ ಜೊತೆಗೆ ಮತ್ತು ಒಂದುವೇಳೆ ನಿಮಗೆ ಲಕ್ಷಣಗಳು ಕಂಡು ಬಂದರೆ, ಅದಕ್ಕೆ ಬೇಕಾದ ಸಹಾಯಕ್ಕಾಗಿ ಏನು ಮಾಡಬೇಕು ಎಂಬುದರ ಆ್ಯಪ್‌ ಎಚ್ಚರಿಕೆಗಳನ್ನು ನೀಡಲಾಗುತ್ತದೆ
+</string>
+    <string name="you_will_be_alerted_if">ನಿಮಗೆ ಗೊತ್ತಿಲ್ಲದೇ COVID-19 ಪಾಸಿಟಿವ್ ಆದವರ ಬಳಿಯಲ್ಲಿ ನೀವು ಸುಳಿದಾಡಿದ್ದರೆ ನಿಮ್ಮನ್ನು ಎಚ್ಚರಿಸಲಾಗುವುದು</string>
+    <string name="with_cowin_20_you_can"><![CDATA[<b>Aarogya Setu</b>, ನೀವು ನಿಮ್ಮನ್ನು, ನಿಮ್ಮ ಕುಟುಂಬ ಮತ್ತು ಸ್ನೇಹಿತರನ್ನು ರಕ್ಷಿಸಿಕೊಳ್ಳಬಹುದು ಮತ್ತು ನಮ್ಮ ದೇಶಕ್ಕೆ COVID-19 ವಿರುದ್ಧ ಹೋರಾಡುವಲ್ಲಿ ಸಹಾಯ ಮಾಡಬಹುದು]]></string>
+    <string name="register_now">ಈಗಲೇ ನೋಂದಣಿ ಮಾಡಿ</string>
+
+    <string name="install">Install</string>
+    <string name="bluetooth_and_gps">Bluetooth &amp; Location</string>
+    <string name="location_sharing">location sharing</string>
+    <string name="close">ಮುಚ್ಚಿ</string>
+
+    <string name="permission_info_tnc_text"><![CDATA[<p>ನೀವು ಸುರಕ್ಷಿತ ಭಾರತಕ್ಕೆ ಕೊಡುಗೆ ನೀಡಲು ಬಯಸಿದರೆ, ದಯವಿಟ್ಟು ಈ ಕೆಳಗಿನ ಬಟನ್ ಕ್ಲಿಕ್ ಮಾಡುವ ಮೂಲಕ ಸೇವೆಯ  <a href="https://static.swaraksha.gov.in/tnc/">ನಿಯಮಗಳು</a> ಮತ್ತು <a href="https://web.swaraksha.gov.in/ncv19/privacy/"> ಗೌಪ್ಯತಾ ನೀತಿಗಳಿಗೆ</a> ನಿಮ್ಮ ಅಂಗೀಕಾರವನ್ನು ಸೂಚಿಸಿ:</p>]]></string>
+
+    <string name="auth_error_unknown">ಲಾಗಿನ್‌ನಲ್ಲಿ ಕೆಲವು ದೋಷವಿದೆ</string>
+    <string name="auth_error_invalid_otp">ನೀವು ನಮೂದಿಸಿದ ಒಟಿಪಿ ತಪ್ಪಾಗಿದೆ</string>
+    <string name="resend_otp_in">OTP ಅನ್ನು %s ಮರುಹೊಂದಿಸಿ</string>
+    <string name="auth_error_user_disabled">You are not allowed to sign in</string>
+    <string name="permissions_title">सಸಮುದಾಯದಲ್ಲಿ ಪಾಲ್ಗೊಳ್ಳಲು ಲಾಗಿನ್ ಮಾಡಿ</string>
+    <string name="permissions_detail">ಸೇವೆ ಮತ್ತು ಗೌಪ್ಯತೆಯ ನಿಯಮಗಳು ಈ ವಿಷಯದ ಸ್ವರೂಪ ಮತ್ತು ಸೂಕ್ಷ್ಮತೆಯನ್ನು ನಾವು ಅರ್ಥಮಾಡಿಕೊಳ್ಳುತ್ತೇವೆ ಮತ್ತು ನಿಮ್ಮ ಮಾಹಿತಿಗೆ ಯಾವುದೇ ರೀತಿಯ ಧಕ್ಕೆ ಬಾರದಂತೆ ಈ ಕುರಿತು ನಾವು ಪರಿಣಾಮಕಾರಿ ಕ್ರಮಗಳನ್ನು ಕೈಗೊಳ್ಳುವ ಬಗ್ಗೆ ಭರವಸೆ ನೀಡುತ್ತೇವೆ</string>
+    <string name="sync_data_user_consent">ಕಾಂಟಾಕ್ಟ್ ಟ್ರೇಸಿಂಗಿಗೆ ಸಹಾಯ ಮಾಡಲು, ಬ್ಲೂಟೂತ್ ಮತ್ತು GPS ಸೇವೆಗಳ ಮೂಲಕ ಕ್ಯಾಪ್ಚರ್ ಮಾಡಲಾದ ನಿಮ್ಮ ಒಡನಾಟಗಳ ಡೇಟಾವನ್ನು ಭಾರತ ಸರ್ಕಾರದೊಂದಿಗೆ ಹಂಚಿಕೊಳ್ಳಲಾಗುತ್ತದೆ.</string>
+    <string name="confirm_and_proceed">ಖಚಿತಪಡಿಸಿ ಮತ್ತು ಮುಂದುವರೆಯಿರಿ</string>
+    <string name="sync_data_detail">ನಿಮ್ಮ ಡೇಟಾವನ್ನು ಯಾವಾಗಲೂ ನಿಮ್ಮ ಫೋನಿನಲ್ಲಿ ಸೇವ್ ಮಾಡಲಾಗುತ್ತದೆ. ಇದನ್ನು ಸುರಕ್ಷಿತ  ಸರಕಾರಿ ಸರ್ವರ್‌ಗಳಲ್ಲಿ ಹಂಚಿಕೊಳ್ಳಿ, ಒಂದುವೇಳೆ…</string>
+    <string name="sample_collected_for_testing">ಪರೀಕ್ಷೆಗಾಗಿ ಸಂಗ್ರಹಿಸಲಾದ ಮಾದರಿ</string>
+    <string name="tested_positive">Covid19 ಪಾಸಿಟಿವ್ ಎಂದು ಪರೀಕ್ಷಿಸಲಾಗಿದೆ</string>
+    <string name="syncing_data">ಡೇಟಾವನ್ನು ಸಿಂಕ್ ಮಾಡಲಾಗುತ್ತಿದೆ</string>
+    <string name="syncing_data_detail">ಬ್ಲೂಟೂತ್ ಮತ್ತು GPS ಸೇವೆಗಳ ಮೂಲಕ ಕ್ಯಾಪ್ಚರ್ ಮಾಡಲಾದ ಒಡನಾಟಗಳ ಮಾಹಿತಿಯನ್ನು ಭಾರತ ಸರ್ಕಾರಕ್ಕೆ ಕಳುಹಿಸಲಾಗುತ್ತಿದೆ.</string>
+    <string name="cancel">ರದ್ದುಪಡಿಸಿ</string>
+    <string name="syncing_data_success">ಸಿಂಕ್ ಯಶಸ್ವಿಯಾಗಿದೆ</string>
+    <string name="syncing_data_success_detail">ನಿಮ್ಮ ಡೇಟಾ ಈಗ ಭಾರತ ಸರಕಾರದ ಸರ್ವರ್‌ಗಳಲ್ಲಿ ಸುರಕ್ಷಿತವಾಗಿದೆ.</string>
+    <string name="syncing_data_failed">ಸಿಂಕ್ ವಿಫಲವಾಗಿದೆ</string>
+    <string name="syncing_data_failed_detail">ಏನೋ ತಪ್ಪಾಗಿದೆ, ದಯವಿಟ್ಟು ಮತ್ತೆ ಪ್ರಯತ್ನಿಸಿ.</string>
+    <string name="retry">ಮತ್ತೆ ಪ್ರಯತ್ನಿಸಿ</string>
+    <string name="ok">ಸರಿ</string>
+
+    <string name="image_language_change_content_description">ಭಾಷೆ ಬದಲಿಸಿ</string>
+    <string name="image_share_content_description">ಅಪ್ಲಿಕೇಶನ್ ಹಂಚಿಕೊಳ್ಳಿ</string>
+    <string name="image_back_content_description">ಹಿಂತಿರುಗಿ</string>
+    <string name="image_on_board_content_description">ಆನ್-ಬೋರ್ಡಿಂಗ್‌ ತೋರಿಸಿ</string>
+    <string name="image_close_content_description">@string/close</string>
+    <string name="image_sync_data_content_description">Sync Data</string>
+    <string name="permission_alert_message">ನಿಮ್ಮ ಸಂಯೋಜನೆಗಳ ಕೊಡುಗೆಗಾಗಿ ನೀವು ಅಗತ್ಯವಾದ ಸ್ಥಳ / ಬ್ಲೂಟೂತ್ ಅನುಮತಿಗಳನ್ನು ಒದಗಿಸಬೇಕು, ಅಪ್ಲಿಕೇಶನ್‌ಗೆ ಹಿಂತಿರುಗಿ ಹಾಗು ಮತ್ತೆ ಕ್ಲಿಕ್ ಮಾಡಿ.</string>
+    <string name="error_network_error">ದಯವಿಟ್ಟು ಅಂತರ್ಜಾಲ ಸಂಪರ್ಕವನ್ನು ಪರಿಶೀಲಿಸಿ</string>
+    <string name="error_location">ಸ್ಥಳ ಸಂಯೋಜನೆಗಳು ಅಸಮರ್ಪಕವಾಗಿವೆ ಮತ್ತು ಅದನ್ನು ಇಲ್ಲಿ ಸರಿಪಡಿಸಲು ಸಾಧ್ಯವಿಲ್ಲ. ಸಂಯೋಜನೆಗಳಲ್ಲಿ ಸರಿಪಡಿಸಿ.</string>
+    <string name="update_required">ನವೀಕರಣೆಯ ಅಗತ್ಯವಿದೆ</string>
+    <string name="new_version_available">ಅಪ್ಲಿಕೇಶನ್‌ನ ಹೊಸ ಆವೃತ್ತಿ ಲಭ್ಯವಿದೆ ಮತ್ತು ಮುಂದುವರೆಸಲು ಅಗತ್ಯವಿದೆ. ಇತ್ತೀಚಿನ ಆವೃತ್ತಿಗೆ ನವೀಕರಿಸಲು ದಯವಿಟ್ಟು ಕೆಳಗೆ ಕ್ಲಿಕ್ ಮಾಡಿ.</string>
+    <string name="turn_on_bluetooth_all_times">ಇತರ ಸಾಧನಗಳಿಗೆ ನಿಮ್ಮ ಸಾಮೀಪ್ಯವನ್ನು ಪತ್ತೆಹಚ್ಚಲು ಮತ್ತು ನಿಮಗೆ ನಿಖರವಾದ ಸುರಕ್ಷತಾ ನವೀಕರಣಗಳನ್ನು ನೀಡಲು ಬ್ಲೂಟೂತ್ ಎಲ್ಲಾ ಸಮಯದಲ್ಲೂ ಆನ್ ಇರಬೇಕು.</string>
+    <string name="make_sure_your_phone_is_connected_to_the_wifi_or_switch_to_mobile_data">ನಿಮ್ಮ ಫೋನ್ ವೈಫೈಗೆ ಸಂಪರ್ಕಗೊಂಡಿದೆ ಎಂದು ಖಚಿತಪಡಿಸಿಕೊಳ್ಳಿ ಅಥವಾ ಮೊಬೈಲ್ ಅಂತರ್ಜಾಲಕ್ಕೆ ಬದಲಾಯಿಸಿ.</string>
+    <string name="login_failed">ಪ್ರವೇಶ ವಿಫಲವಾಯಿತು. ದಯವಿಟ್ಟು ಪುನಃ ಪ್ರಯತ್ನಿಸಿ</string>
+</resources>

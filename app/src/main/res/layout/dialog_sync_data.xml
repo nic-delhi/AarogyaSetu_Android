@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="8dp">
+
+    <ImageView
+        android:id="@+id/close"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_gravity="end"
+        android:contentDescription="@string/close"
+        android:src="@drawable/ic_close_24px" />
+
+    <ImageView
+        android:id="@+id/iv_sync_data"
+        android:layout_width="64dp"
+        android:layout_height="64dp"
+        android:layout_gravity="center"
+        android:contentDescription="@null"
+        android:src="@drawable/ic_sync_data" />
+
+    <TextView
+        android:id="@+id/tv_sync_data_detail"
+        style="@style/TextStyleFontSemiBold"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="28dp"
+        android:layout_marginBottom="8dp"
+        android:text="@string/sync_data_detail"
+        android:textAlignment="center" />
+
+    <TextView
+        android:id="@+id/btn_being_tested"
+        style="@style/TextStyleFontSemiBold"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginBottom="16dp"
+        android:background="@drawable/button_border_red"
+        android:paddingStart="16dp"
+        android:paddingTop="12dp"
+        android:paddingEnd="16dp"
+        android:paddingBottom="12dp"
+        android:text="@string/sample_collected_for_testing"
+        android:textColor="@color/sync_warning" />
+
+    <Button
+        android:id="@+id/btn_tested_positive"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginBottom="16dp"
+        android:backgroundTint="@color/sync_warning"
+        android:paddingTop="12dp"
+        android:paddingBottom="12dp"
+        android:text="@string/tested_positive" />
+
+</LinearLayout>

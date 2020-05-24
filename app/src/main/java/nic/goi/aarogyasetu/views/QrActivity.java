@@ -1,0 +1,273 @@
+package nic.goi.aarogyasetu.views;
+
+
+import android.app.Activity;
+import android.content.Intent;
+import android.graphics.Bitmap;
+import android.os.Bundle;
+import android.os.CountDownTimer;
+import android.text.TextUtils;
+import android.text.format.Time;
+import android.view.View;
+import android.widget.ImageView;
+import android.widget.ProgressBar;
+import android.widget.TextView;
+import android.widget.Toast;
+
+import androidx.annotation.Nullable;
+import androidx.appcompat.app.AppCompatActivity;
+
+import com.google.zxing.BarcodeFormat;
+import com.google.zxing.MultiFormatWriter;
+import com.google.zxing.WriterException;
+import com.google.zxing.common.BitMatrix;
+import com.journeyapps.barcodescanner.BarcodeEncoder;
+
+import java.security.NoSuchAlgorithmException;
+import java.security.spec.InvalidKeySpecException;
+
+import io.jsonwebtoken.Claims;
+import io.jsonwebtoken.Jws;
+import io.jsonwebtoken.JwtException;
+import nic.goi.aarogyasetu.CoronaApplication;
+import nic.goi.aarogyasetu.R;
+import nic.goi.aarogyasetu.prefs.SharedPref;
+import nic.goi.aarogyasetu.prefs.SharedPrefsConstants;
+import nic.goi.aarogyasetu.utility.AuthUtility;
+import nic.goi.aarogyasetu.utility.Constants;
+import nic.goi.aarogyasetu.utility.CorUtility;
+import nic.goi.aarogyasetu.utility.DecryptionUtil;
+import nic.goi.aarogyasetu.utility.Logger;
+import nic.goi.aarogyasetu.utility.QrCodeListener;
+import nic.goi.aarogyasetu.utility.authsp.AuthSpFactory;
+import nic.goi.aarogyasetu.utility.authsp.AuthSpHelper;
+import nic.goi.aarogyasetu.zxing.CustomScannerActivity;
+
+/**
+ * QrActivity for generating user's Qr code
+ *
+ * @author Niharika.Arora
+ */
+public class QrActivity extends AppCompatActivity implements QrCodeListener {
+
+    private ImageView qrCodeView;
+    private ProgressBar progress;
+    private View nestedView;
+    private TextView qrExpiryView, phoneView, nameView;
+    private final int COUNT_DOWN_INTERVAL_MILLISECONDS = 1000;
+    private final int SECONDS_PER_DAY = 86400;
+    private final int SECONDS_PER_HOUR = 3600;
+    private final int SECONDS_PER_MINUTE = 60;
+    private CountDownTimer timer;
+    private BitMatrix bitMatrix;
+
+    public static void start(Activity activity) {
+        activity.startActivity(new Intent(activity, QrActivity.class));
+    }
+
+    @Override
+    protected void onCreate(@Nullable Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_qr_code);
+        qrCodeView = findViewById(R.id.scan_code);
+        progress = findViewById(R.id.progress);
+        qrExpiryView = findViewById(R.id.expiry_time);
+        phoneView = findViewById(R.id.phone);
+        nameView = findViewById(R.id.name);
+        nestedView = findViewById(R.id.nested_view);
+        configureClicks();
+    }
+
+    private void configureClicks() {
+        checkQrStatus();
+        onDoneClick();
+        onScanClick();
+        onRefreshClick();
+    }
+
+    private void fetchQrCode() {
+        if (CorUtility.isNetworkAvailable(this)) {
+            SharedPref.setStringParams(CoronaApplication.instance, SharedPrefsConstants.QR_TEXT, Constants.EMPTY);
+            nestedView.setVisibility(View.GONE);
+            progress.setVisibility(View.VISIBLE);
+            CorUtility.Companion.fetchQrCodeText(this);
+        } else {
+            Toast.makeText(this, getString(R.string.make_sure_your_phone_is_connected_to_the_wifi_or_switch_to_mobile_data), Toast.LENGTH_LONG).show();
+            showQrFailureView();
+        }
+    }
+
+    private void showQrFailureView() {
+        nestedView.setVisibility(View.VISIBLE);
+        findViewById(R.id.scan_validity_container).setVisibility(View.GONE);
+        SharedPref.setStringParams(CoronaApplication.instance, SharedPrefsConstants.QR_TEXT, Constants.EMPTY);
+        findViewById(R.id.refresh_container).setVisibility(View.VISIBLE);
+        qrCodeView.setAlpha(0.3f);
+    }
+
+    private void onRefreshClick() {
+        findViewById(R.id.refresh_container).setOnClickListener(v -> fetchQrCode());
+        findViewById(R.id.refresh_icon).setOnClickListener(v -> fetchQrCode());
+        findViewById(R.id.tap_to_refresh).setOnClickListener(v -> fetchQrCode());
+    }
+
+    private void onScanClick() {
+        findViewById(R.id.scan_btn).setOnClickListener(v -> {
+            startActivity(new Intent(QrActivity.this, CustomScannerActivity.class));
+            finish();
+        });
+    }
+
+    private void onDoneClick() {
+        findViewById(R.id.close).setOnClickListener(v -> finish());
+    }
+
+    @Override
+    public void onQrCodeFetched(String text) {
+        Logger.d(Constants.QR_SCREEN_TAG, "ON qr fetched ");
+        showViews();
+        Jws<Claims> claimsJws = null;
+        try {
+            claimsJws = DecryptionUtil.decryptFile(text);
+        } catch (NoSuchAlgorithmException | InvalidKeySpecException | JwtException e) {
+            //do nothing
+        }
+        Logger.d(Constants.QR_SCREEN_TAG, "Decryption end");
+        if (claimsJws == null) {
+            onFailure();
+        } else {
+            configureScreen(text, claimsJws);
+        }
+    }
+
+    private void showViews() {
+        nestedView.setVisibility(View.VISIBLE);
+        progress.setVisibility(View.GONE);
+        findViewById(R.id.scan_validity_container).setVisibility(View.VISIBLE);
+        findViewById(R.id.refresh_container).setVisibility(View.GONE);
+        qrCodeView.setAlpha(1f);
+    }
+
+    private void configureScreen(String text, Jws<Claims> claimsJws) {
+        Claims body = claimsJws.getBody();
+        long expiry = body.get(Constants.EXPIRY, Long.class);
+        String name = body.get(Constants.NAME, String.class);
+        String mobileNo = body.get(Constants.MOBILE, String.class);
+        SharedPref.setStringParams(CoronaApplication.instance, SharedPrefsConstants.QR_TEXT, text);
+        AuthUtility.setUserName(name);
+        configureTextViews(name, mobileNo);
+        startTimer(expiry);
+        setImage();
+    }
+
+    private void configureTextViews(String name, String mobileNo) {
+        if (!TextUtils.isEmpty(mobileNo)) {
+            phoneView.setText(mobileNo);
+        }
+        if (!TextUtils.isEmpty(name)) {
+            nameView.setText(name);
+        }
+    }
+
+    private void setImage() {
+        Logger.d(Constants.QR_SCREEN_TAG, "Image write start");
+        String qrText = SharedPref.getStringParams(CoronaApplication.getInstance(), SharedPrefsConstants.QR_TEXT, Constants.EMPTY);
+        MultiFormatWriter multiFormatWriter = new MultiFormatWriter();
+        try {
+            if (bitMatrix != null) {
+                bitMatrix.clear();
+            }
+            bitMatrix = multiFormatWriter.encode(qrText, BarcodeFormat.QR_CODE, 440, 440);
+            BarcodeEncoder barcodeEncoder = new BarcodeEncoder();
+            Bitmap bitmap = barcodeEncoder.createBitmap(bitMatrix);
+            qrCodeView.setImageBitmap(bitmap);
+            Logger.d(Constants.QR_SCREEN_TAG, "Image write end ");
+        } catch (WriterException e) {
+            //do nothing
+        }
+    }
+
+    private void startTimer(long expiry) {
+        final long millisecondsMultiplier = 1000L;
+        long countDownMilliSeconds = expiry * millisecondsMultiplier;
+        Time nowTime = new Time(Time.getCurrentTimezone());
+        nowTime.setToNow();
+        nowTime.normalize(true);
+        long currentTimeMilliSeconds = nowTime.toMillis(true);
+        long milliDiff = countDownMilliSeconds - currentTimeMilliSeconds;
+        if (timer != null) {
+            timer.cancel();
+        }
+        timer = new CountDownTimer(milliDiff, COUNT_DOWN_INTERVAL_MILLISECONDS) {
+
+            public void onTick(long millisUntilFinished) {
+                int days = (int) ((millisUntilFinished / COUNT_DOWN_INTERVAL_MILLISECONDS) / SECONDS_PER_DAY);
+                int hours = (int) (((millisUntilFinished / COUNT_DOWN_INTERVAL_MILLISECONDS) - (days * SECONDS_PER_DAY)) / SECONDS_PER_HOUR);
+                int minutes = (int) (((millisUntilFinished / COUNT_DOWN_INTERVAL_MILLISECONDS) - ((days * SECONDS_PER_DAY) + (hours * SECONDS_PER_HOUR))) / SECONDS_PER_MINUTE);
+                int seconds = (int) ((millisUntilFinished / COUNT_DOWN_INTERVAL_MILLISECONDS) % SECONDS_PER_MINUTE);
+                configureExpiryTime(minutes, seconds);
+            }
+
+            public void onFinish() {
+                showQrFailureView();
+            }
+
+        }.start();
+    }
+
+    private void configureExpiryTime(int minutes, int seconds) {
+        String expiryTme;
+        if (minutes < 1) {
+            qrExpiryView.setText(R.string.few_seconds);
+        } else if (seconds < 1) {
+            expiryTme = minutes + Constants.SPACE + getString(R.string.minutes);
+            qrExpiryView.setText(expiryTme);
+        } else {
+            expiryTme = minutes + Constants.SPACE + getString(R.string.minutes) + Constants.SPACE + seconds + Constants.SPACE + getString(R.string.seconds);
+            qrExpiryView.setText(expiryTme);
+        }
+    }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        if (timer != null) {
+            timer.cancel();
+        }
+    }
+
+    //Show Refresh view when qr code generation failed/qr code expire
+    public void onFailure() {
+        progress.setVisibility(View.GONE);
+        showQrFailureView();
+        SharedPref.setStringParams(CoronaApplication.instance, SharedPrefsConstants.QR_TEXT, Constants.EMPTY);
+    }
+
+    //Method to check Qr status validity or other issues,if valid show Qr else fetch the Qr and show to the user
+    private void checkQrStatus() {
+        Jws<Claims> claimsJws = null;
+        String qrText = SharedPref.getStringParams(CoronaApplication.getInstance(), SharedPrefsConstants.QR_TEXT, Constants.EMPTY);
+        if (!TextUtils.isEmpty(qrText)) {
+            try {
+                claimsJws = DecryptionUtil.decryptFile(qrText);
+            } catch (NoSuchAlgorithmException | InvalidKeySpecException | JwtException e) {
+                //do nothing
+            }
+            if (claimsJws != null) {
+                long qrExpiry = claimsJws.getBody().get(Constants.EXPIRY, Long.class);
+                final long millisecondsMultiplier = 1000L;
+                long countDownMilliSeconds = qrExpiry * millisecondsMultiplier;
+                if (qrExpiry > 0 && System.currentTimeMillis() - countDownMilliSeconds < 0) {
+                    nestedView.setVisibility(View.VISIBLE);
+                    configureScreen(qrText, claimsJws);
+                } else {
+                    onFailure();
+                }
+            } else {
+                fetchQrCode();
+            }
+        } else {
+            fetchQrCode();
+        }
+    }
+}

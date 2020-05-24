@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="8dp">
+
+    <ImageView
+        android:id="@+id/close"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_gravity="end"
+        android:contentDescription="@string/close"
+        android:src="@drawable/ic_close_24px" />
+
+    <TextView
+        android:id="@+id/tv_sync_consent_detail"
+        style="@style/TextStyleFontSemiBold"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="28dp"
+        android:text="@string/sync_data_user_consent"
+        android:textAlignment="center" />
+
+    <Button
+        android:id="@+id/btn_confirm_and_proceed"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginBottom="16dp"
+        android:backgroundTint="@color/sync_warning"
+        android:paddingTop="12dp"
+        android:paddingBottom="12dp"
+        android:text="@string/confirm_and_proceed"
+        android:textSize="14sp" />
+
+</LinearLayout>
