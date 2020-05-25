@@ -9,6 +9,7 @@ import android.os.CountDownTimer;
 import android.text.TextUtils;
 import android.text.format.Time;
 import android.view.View;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.ProgressBar;
 import android.widget.TextView;
@@ -40,6 +41,7 @@ import nic.goi.aarogyasetu.utility.AuthUtility;
 import nic.goi.aarogyasetu.utility.Constants;
 import nic.goi.aarogyasetu.utility.CorUtility;
 import nic.goi.aarogyasetu.utility.DecryptionUtil;
+import nic.goi.aarogyasetu.utility.LocalizationUtil;
 import nic.goi.aarogyasetu.utility.Logger;
 import nic.goi.aarogyasetu.zxing.CustomScannerActivity;
 
@@ -53,7 +55,7 @@ public class QrActivity extends AppCompatActivity implements QrCodeListener, QrP
     private ImageView qrCodeView;
     private ProgressBar progress;
     private View nestedView;
-    private TextView qrExpiryView, phoneView, nameView;
+    private TextView qrExpiryView, phoneView, nameView, qrTapToRefresh, scanBtn, refreshView;
     private final int COUNT_DOWN_INTERVAL_MILLISECONDS = 1000;
     private final int SECONDS_PER_DAY = 86400;
     private final int SECONDS_PER_HOUR = 3600;
@@ -70,13 +72,28 @@ public class QrActivity extends AppCompatActivity implements QrCodeListener, QrP
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_qr_code);
+
+        configureView();
+        configureClicks();
+    }
+
+    private void configureView() {
         qrCodeView = findViewById(R.id.scan_code);
         progress = findViewById(R.id.progress);
         qrExpiryView = findViewById(R.id.expiry_time);
         phoneView = findViewById(R.id.phone);
         nameView = findViewById(R.id.name);
         nestedView = findViewById(R.id.nested_view);
-        configureClicks();
+        qrTapToRefresh = findViewById(R.id.tap_to_refresh);
+        refreshView = findViewById(R.id.refresh_view);
+        qrTapToRefresh.setText(LocalizationUtil.getLocalisedString(this, R.string.tap_to_refresh));
+        TextView scanTextDescription = findViewById(R.id.scan_text_desc);
+        scanTextDescription.setText(LocalizationUtil.getLocalisedString(this, R.string.scan_to_check_status));
+        TextView expiryDescription = findViewById(R.id.expiry_desc);
+        expiryDescription.setText(LocalizationUtil.getLocalisedString(this, R.string.qr_code_valid_for));
+        scanBtn = findViewById(R.id.scan_btn);
+        scanBtn.setText(LocalizationUtil.getLocalisedString(this, R.string.scan_other_s_qr_code));
+        refreshView.setText(LocalizationUtil.getLocalisedString(this, R.string.refresh));
     }
 
     private void configureClicks() {
@@ -93,7 +110,7 @@ public class QrActivity extends AppCompatActivity implements QrCodeListener, QrP
             progress.setVisibility(View.VISIBLE);
             configureQr();
         } else {
-            Toast.makeText(this, getString(R.string.make_sure_your_phone_is_connected_to_the_wifi_or_switch_to_mobile_data), Toast.LENGTH_LONG).show();
+            Toast.makeText(this, LocalizationUtil.getLocalisedString(this, R.string.make_sure_your_phone_is_connected_to_the_wifi_or_switch_to_mobile_data), Toast.LENGTH_LONG).show();
             showQrFailureView();
         }
     }
@@ -117,12 +134,12 @@ public class QrActivity extends AppCompatActivity implements QrCodeListener, QrP
     private void onRefreshClick() {
         findViewById(R.id.refresh_container).setOnClickListener(v -> fetchQrCode());
         findViewById(R.id.refresh_icon).setOnClickListener(v -> fetchQrCode());
-        findViewById(R.id.tap_to_refresh).setOnClickListener(v -> fetchQrCode());
-        findViewById(R.id.refresh_view).setOnClickListener(v -> fetchQrCode());
+        refreshView.setOnClickListener(v -> fetchQrCode());
+        qrTapToRefresh.setOnClickListener(v -> fetchQrCode());
     }
 
     private void onScanClick() {
-        findViewById(R.id.scan_btn).setOnClickListener(v -> {
+        scanBtn.setOnClickListener(v -> {
             startActivity(new Intent(QrActivity.this, CustomScannerActivity.class));
             finish();
         });
@@ -230,12 +247,12 @@ public class QrActivity extends AppCompatActivity implements QrCodeListener, QrP
     private void configureExpiryTime(int minutes, int seconds) {
         String expiryTme;
         if (minutes < 1) {
-            qrExpiryView.setText(R.string.few_seconds);
+            qrExpiryView.setText(LocalizationUtil.getLocalisedString(this, R.string.few_seconds));
         } else if (seconds < 1) {
-            expiryTme = minutes + Constants.SPACE + getString(R.string.minutes);
+            expiryTme = minutes + Constants.SPACE + LocalizationUtil.getLocalisedString(this, R.string.minutes);
             qrExpiryView.setText(expiryTme);
         } else {
-            expiryTme = minutes + Constants.SPACE + getString(R.string.minutes) + Constants.SPACE + seconds + Constants.SPACE + getString(R.string.seconds);
+            expiryTme = minutes + Constants.SPACE + LocalizationUtil.getLocalisedString(this, R.string.minutes) + Constants.SPACE + seconds + Constants.SPACE + LocalizationUtil.getLocalisedString(this, R.string.seconds);
             qrExpiryView.setText(expiryTme);
         }
     }
