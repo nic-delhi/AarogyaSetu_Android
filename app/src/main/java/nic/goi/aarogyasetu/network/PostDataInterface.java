@@ -37,6 +37,9 @@ public interface PostDataInterface {
     @GET(BuildConfig.QR_CODE_API)
     Call<JsonElement> fetchQr(@HeaderMap Map<String, String> headers);
 
+    @GET(BuildConfig.QR_PUBLIC_KEY_API)
+    Call<JsonElement> fetchQrPublicKey(@HeaderMap Map<String, String> headers);
+
     @GET(BuildConfig.CONFIG_API)
     Call<JsonElement> appMeta(@HeaderMap Map<String,String> headers);
 

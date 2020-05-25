@@ -29,8 +29,11 @@ import java.security.spec.InvalidKeySpecException;
 import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.Jws;
 import io.jsonwebtoken.JwtException;
+import io.jsonwebtoken.security.SignatureException;
 import nic.goi.aarogyasetu.CoronaApplication;
 import nic.goi.aarogyasetu.R;
+import nic.goi.aarogyasetu.listener.QrCodeListener;
+import nic.goi.aarogyasetu.listener.QrPublicKeyListener;
 import nic.goi.aarogyasetu.prefs.SharedPref;
 import nic.goi.aarogyasetu.prefs.SharedPrefsConstants;
 import nic.goi.aarogyasetu.utility.AuthUtility;
@@ -38,9 +41,6 @@ import nic.goi.aarogyasetu.utility.Constants;
 import nic.goi.aarogyasetu.utility.CorUtility;
 import nic.goi.aarogyasetu.utility.DecryptionUtil;
 import nic.goi.aarogyasetu.utility.Logger;
-import nic.goi.aarogyasetu.utility.QrCodeListener;
-import nic.goi.aarogyasetu.utility.authsp.AuthSpFactory;
-import nic.goi.aarogyasetu.utility.authsp.AuthSpHelper;
 import nic.goi.aarogyasetu.zxing.CustomScannerActivity;
 
 /**
@@ -48,7 +48,7 @@ import nic.goi.aarogyasetu.zxing.CustomScannerActivity;
  *
  * @author Niharika.Arora
  */
-public class QrActivity extends AppCompatActivity implements QrCodeListener {
+public class QrActivity extends AppCompatActivity implements QrCodeListener, QrPublicKeyListener {
 
     private ImageView qrCodeView;
     private ProgressBar progress;
@@ -60,6 +60,7 @@ public class QrActivity extends AppCompatActivity implements QrCodeListener {
     private final int SECONDS_PER_MINUTE = 60;
     private CountDownTimer timer;
     private BitMatrix bitMatrix;
+    private boolean isPublicKeyToBeFetched = false;
 
     public static void start(Activity activity) {
         activity.startActivity(new Intent(activity, QrActivity.class));
@@ -90,10 +91,18 @@ public class QrActivity extends AppCompatActivity implements QrCodeListener {
             SharedPref.setStringParams(CoronaApplication.instance, SharedPrefsConstants.QR_TEXT, Constants.EMPTY);
             nestedView.setVisibility(View.GONE);
             progress.setVisibility(View.VISIBLE);
-            CorUtility.Companion.fetchQrCodeText(this);
+            configureQr();
         } else {
             Toast.makeText(this, getString(R.string.make_sure_your_phone_is_connected_to_the_wifi_or_switch_to_mobile_data), Toast.LENGTH_LONG).show();
             showQrFailureView();
+        }
+    }
+
+    private void configureQr() {
+        if (isPublicKeyToBeFetched) {
+            CorUtility.Companion.fetchQrPublicKey(this);
+        } else {
+            CorUtility.Companion.fetchQrCodeText(this);
         }
     }
 
@@ -129,8 +138,10 @@ public class QrActivity extends AppCompatActivity implements QrCodeListener {
         Jws<Claims> claimsJws = null;
         try {
             claimsJws = DecryptionUtil.decryptFile(text);
-        } catch (NoSuchAlgorithmException | InvalidKeySpecException | JwtException e) {
-            //do nothing
+        } catch (InvalidKeySpecException | SignatureException e) {
+            isPublicKeyToBeFetched = true;
+        } catch (NoSuchAlgorithmException | JwtException e) {
+            Logger.d(Constants.QR_SCREEN_TAG, e.getMessage());
         }
         Logger.d(Constants.QR_SCREEN_TAG, "Decryption end");
         if (claimsJws == null) {
@@ -269,5 +280,15 @@ public class QrActivity extends AppCompatActivity implements QrCodeListener {
         } else {
             fetchQrCode();
         }
+    }
+
+    @Override
+    public void onQrPublicKeyFetched(String text) {
+        CorUtility.Companion.fetchQrCodeText(this);
+    }
+
+    @Override
+    public void onPublicKeyFetchFailure() {
+        onFailure();
     }
 }

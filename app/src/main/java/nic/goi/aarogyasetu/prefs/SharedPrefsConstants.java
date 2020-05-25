@@ -18,4 +18,5 @@ public class SharedPrefsConstants {
     public static final String QR_TEXT = "qr_text";
     public static final String MENU_INTRO_COUNT = "menu_intro_count";
     public static final String DEFAULT_MENU_INTRO_COUNT = "0";
+    public static final String PUBLIC_KEY="public_key";
 }

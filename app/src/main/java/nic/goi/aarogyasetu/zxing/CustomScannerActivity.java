@@ -30,6 +30,7 @@ import io.jsonwebtoken.ExpiredJwtException;
 import io.jsonwebtoken.Jws;
 import io.jsonwebtoken.MalformedJwtException;
 import io.jsonwebtoken.io.DecodingException;
+import io.jsonwebtoken.security.SignatureException;
 import nic.goi.aarogyasetu.R;
 import nic.goi.aarogyasetu.utility.Constants;
 import nic.goi.aarogyasetu.utility.CorUtility;
@@ -155,8 +156,10 @@ public class CustomScannerActivity extends Activity implements CustomCaptureMana
             claimsJws = DecryptionUtil.decryptFile(code);
         } catch (ExpiredJwtException e) {
             showExpiredCode();
-        } catch (NoSuchAlgorithmException | InvalidKeySpecException | DecodingException | MalformedJwtException exception) {
+        } catch (NoSuchAlgorithmException | DecodingException | MalformedJwtException exception) {
             showInvalidStatus();
+        } catch (SignatureException | InvalidKeySpecException exception) {
+            //todo add firebase String here
         } catch (Exception exception) {
             showCommonInvalidStatus();
         }
