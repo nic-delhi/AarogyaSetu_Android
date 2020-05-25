@@ -118,6 +118,7 @@ public class QrActivity extends AppCompatActivity implements QrCodeListener, QrP
         findViewById(R.id.refresh_container).setOnClickListener(v -> fetchQrCode());
         findViewById(R.id.refresh_icon).setOnClickListener(v -> fetchQrCode());
         findViewById(R.id.tap_to_refresh).setOnClickListener(v -> fetchQrCode());
+        findViewById(R.id.refresh_view).setOnClickListener(v -> fetchQrCode());
     }
 
     private void onScanClick() {
