@@ -305,7 +305,7 @@ class CorUtility {
                         SharedPrefsConstants.PUBLIC_KEY,
                         data
                     )
-                    listener?.onQrPublicKeyFetched(data)
+                    listener?.onQrPublicKeyFetched()
                 }
             } catch (e: java.lang.Exception) {
                 listener?.onPublicKeyFetchFailure()

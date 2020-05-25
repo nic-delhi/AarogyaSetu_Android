@@ -284,7 +284,8 @@ public class QrActivity extends AppCompatActivity implements QrCodeListener, QrP
     }
 
     @Override
-    public void onQrPublicKeyFetched(String text) {
+    public void onQrPublicKeyFetched() {
+        isPublicKeyToBeFetched = false;
         CorUtility.Companion.fetchQrCodeText(this);
     }
 
