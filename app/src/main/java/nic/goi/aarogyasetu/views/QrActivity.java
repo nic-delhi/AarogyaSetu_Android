@@ -75,6 +75,7 @@ public class QrActivity extends AppCompatActivity implements QrCodeListener, QrP
 
         configureView();
         configureClicks();
+        checkQrStatus();
     }
 
     private void configureView() {
@@ -94,10 +95,10 @@ public class QrActivity extends AppCompatActivity implements QrCodeListener, QrP
         scanBtn = findViewById(R.id.scan_btn);
         scanBtn.setText(LocalizationUtil.getLocalisedString(this, R.string.scan_other_s_qr_code));
         refreshView.setText(LocalizationUtil.getLocalisedString(this, R.string.refresh));
+
     }
 
     private void configureClicks() {
-        checkQrStatus();
         onDoneClick();
         onScanClick();
         onRefreshClick();
