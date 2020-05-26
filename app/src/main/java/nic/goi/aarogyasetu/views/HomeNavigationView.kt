@@ -17,6 +17,7 @@ class HomeNavigationView(context: Context, attrs: AttributeSet) : NavigationView
 
     fun inflate(onClick: OnClickListener) {
         val view = View.inflate(context, R.layout.navigation_layout, this)
+        this.view = view
         view.findViewById<Button>(R.id.qr).setOnClickListener(onClick)
         view.findViewById<Button>(R.id.verify_installed_app).setOnClickListener(onClick)
         view.findViewById<Button>(R.id.share_data).setOnClickListener(onClick)
@@ -24,7 +25,7 @@ class HomeNavigationView(context: Context, attrs: AttributeSet) : NavigationView
         view.findViewById<TextView>(R.id.faq).setOnClickListener(onClick)
         view.findViewById<TextView>(R.id.privacy_policy).setOnClickListener(onClick)
         view.findViewById<TextView>(R.id.terms).setOnClickListener(onClick)
-        this.view = view
+        setDetail()
     }
 
     fun setDetail() {

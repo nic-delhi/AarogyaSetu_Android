@@ -483,9 +483,6 @@ public class HomeActivity extends AppCompatActivity implements SelectLanguageFra
     @Override
     protected void onResume() {
         super.onResume();
-        if (homeNavigationView != null) {
-            homeNavigationView.setDetail();
-        }
         if (CorUtility.arePermissionsGranted(this)) {
             checkBluetooth();
         } else {
@@ -702,6 +699,9 @@ public class HomeActivity extends AppCompatActivity implements SelectLanguageFra
             } catch (MalformedURLException e) {
                 //do nothing
             }
+        }
+        if (homeNavigationView != null) {
+            homeNavigationView.setDetail();
         }
     }
 
