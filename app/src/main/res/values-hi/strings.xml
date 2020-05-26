@@ -98,7 +98,7 @@
     <string name="tap_to_refresh">QR कोड ताज़ा करने के लिए टैप करें</string>
     <string name="qr_code_valid_for">QR कोड के लिए मान्य है</string>
     <string name="scan_other_s_qr_code">दूसरे के QR कोड को स्कैन करें</string>
-    <string name="zxing_generate_my_qr_code">मेरा क्यूआर कोड जनरेट करें</string>
+    <string name="generate_my_qr_code">मेरा क्यूआर कोड जनरेट करें</string>
     <string name="invalid_qr_code">अमान्य क्यूआर कोड</string>
     <string name="not_generated_aarogya_setu">इसे आधिकारिक आरोग्य सेतु ऐप द्वारा जनरेट नहीं किया गया है।</string>
     <string name="request_new_code">कृपया नए कोड जनरेट करने के लिए व्यक्ति से अनुरोध करें</string>

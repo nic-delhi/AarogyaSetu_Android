@@ -97,7 +97,7 @@
     <string name="tap_to_refresh">কিউআর কোড রিফ্রেশ করতে আলতো চাপুন</string>
     <string name="qr_code_valid_for">কিউআর কোড এর জন্য বৈধ</string>
     <string name="scan_other_s_qr_code">অন্যের কিউআর কোডটি স্ক্যান করুন</string>
-    <string name="zxing_generate_my_qr_code">আমার কিউআর কোড তৈরি করুন</string>
+    <string name="generate_my_qr_code">আমার কিউআর কোড তৈরি করুন</string>
     <string name="invalid_qr_code">অবৈধ কিউআর কোড</string>
     <string name="not_generated_aarogya_setu">এটি সরকারী আরোগ্য সেতু অ্যাপ্লিকেশন দ্বারা তৈরি করা হয়নি।</string>
     <string name="request_new_code">দয়া করে ব্যক্তিকে নতুন কোড সৃষ্টি তৈরির জন্য অনুরোধ করুন</string>

@@ -97,7 +97,7 @@
     <string name="tap_to_refresh">क्यूआर कोड रीफ्रेश करण्यासाठी टॅप करा</string>
     <string name="qr_code_valid_for">क्यूआर कोड साठी वैध</string>
     <string name="scan_other_s_qr_code">इतरांचा क्यूआर कोड स्कॅन करा</string>
-    <string name="zxing_generate_my_qr_code">माझा क्यूआर कोड व्युत्पन्न करा</string>
+    <string name="generate_my_qr_code">माझा क्यूआर कोड व्युत्पन्न करा</string>
     <string name="invalid_qr_code">अवैध क्यूआर कोड</string>
     <string name="not_generated_aarogya_setu">हे अधिकृत आरोग्य सेतु अ‍ॅपद्वारे तयार केलेले नाही.</string>
     <string name="request_new_code">कृपया त्या व्यक्तीस नवीन कोड व्युत्पन्न करण्याची विनंती करा</string>

@@ -97,7 +97,7 @@
     <string name="tap_to_refresh">QR ਕੋਡ ਨੂੰ ਤਾਜ਼ਾ ਕਰਨ ਲਈ ਟੈਪ ਕਰੋ</string>
     <string name="qr_code_valid_for">ਕਿਊ.ਆਰ ਕੋਡ ਲਈ ਵੈਧ</string>
     <string name="scan_other_s_qr_code">ਦੂਜੇ ਦੇ QR ਕੋਡ ਨੂੰ ਸਕੈਨ ਕਰੋ</string>
-    <string name="zxing_generate_my_qr_code">ਮੇਰਾ QR ਕੋਡ ਬਣਾਓ</string>
+    <string name="generate_my_qr_code">ਮੇਰਾ QR ਕੋਡ ਬਣਾਓ</string>
     <string name="invalid_qr_code">ਗਲਤ QR ਕੋਡ</string>
     <string name="not_generated_aarogya_setu">ਇਸ ਨੂੰ ਅਧਿਕਾਰਤ ਅਰੋਗਯ ਸੇਤੂ ਐਪ ਦੁਆਰਾ ਨਹੀਂ ਬਣਾਇਆ ਗਿਆ ਹੈ।</string>
     <string name="request_new_code">ਕਿਰਪਾ ਕਰਕੇ ਵਿਅਕਤੀ ਨੂੰ ਨਵਾਂ ਕੋਡ ਤਿਆਰ ਕਰਨ ਲਈ ਬੇਨਤੀ ਕਰੋ</string>

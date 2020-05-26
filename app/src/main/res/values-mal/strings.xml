@@ -97,7 +97,7 @@
     <string name="tap_to_refresh">QR കോഡ് പുതുക്കുന്നതിന് ടാപ്പുചെയ്യുക</string>
     <string name="qr_code_valid_for">QR കോഡ് സാധുവാണ്</string>
     <string name="scan_other_s_qr_code">മറ്റുള്ളവരുടെ QR കോഡ് സ്കാൻ ചെയ്യുക</string>
-    <string name="zxing_generate_my_qr_code">എന്റെ QR കോഡ് സൃഷ്ടിക്കുക</string>
+    <string name="generate_my_qr_code">എന്റെ QR കോഡ് സൃഷ്ടിക്കുക</string>
     <string name="invalid_qr_code">QR കോഡ് അസാധുവാണ്</string>
     <string name="not_generated_aarogya_setu">ഇത് ഔദ്യോഗിക ആരോജ്യ സെറ്റു അപ്ലിക്കേഷൻ സൃഷ്ടിച്ചതല്ല.</string>
     <string name="request_new_code">പുതിയ കോഡ് സൃഷ്ടിക്കാൻ വ്യക്തിയോട് അഭ്യർത്ഥിക്കുക</string>

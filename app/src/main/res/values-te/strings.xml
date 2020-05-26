@@ -97,7 +97,7 @@
     <string name="tap_to_refresh">QR కోడ్‌ను రిఫ్రెష్ చేయడానికి నొక్కండి</string>
     <string name="qr_code_valid_for">QR కోడ్ చెల్లుతుంది</string>
     <string name="scan_other_s_qr_code">ఇతరుల QR కోడ్‌ను స్కాన్ చేయండి</string>
-    <string name="zxing_generate_my_qr_code">నా QR కోడ్‌ను రూపొందించండి</string>
+    <string name="generate_my_qr_code">నా QR కోడ్‌ను రూపొందించండి</string>
     <string name="invalid_qr_code">చెల్లని QR కోడ్</string>
     <string name="not_generated_aarogya_setu">ఇది అధికారిక ఆరోగ్య సేతు అనువర్తనం ద్వారా ఉత్పత్తి చేయబడలేదు.</string>
     <string name="request_new_code">దయచేసి క్రొత్త కోడ్‌ను రూపొందించమని వ్యక్తిని అభ్యర్థించండి</string>
