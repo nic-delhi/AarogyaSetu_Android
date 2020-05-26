@@ -15,16 +15,6 @@
     android:visibility="gone"
     tools:visibility="visible">
 
-    <ImageView
-        android:id="@+id/profile"
-        android:layout_width="40dp"
-        android:layout_height="40dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="12dp"
-        android:contentDescription="@null"
-        android:src="@drawable/ic_grocery_male"
-        android:visibility="visible"
-        tools:visibility="visible" />
 
     <ImageView
         android:id="@+id/status_close"
@@ -44,7 +34,6 @@
         android:layout_marginTop="8dp"
         android:layout_marginRight="8dp"
         android:layout_toStartOf="@+id/status_close"
-        android:layout_toEndOf="@id/profile"
         android:orientation="vertical">
 
         <TextView
@@ -66,6 +55,7 @@
             android:textColor="@android:color/white"
             android:textSize="16sp"
             android:visibility="visible"
+            android:textStyle="bold"
             tools:text="Please request the person to generate new code"
             tools:visibility="visible" />
     </LinearLayout>

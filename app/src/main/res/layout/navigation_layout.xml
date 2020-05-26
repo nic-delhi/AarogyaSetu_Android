@@ -17,7 +17,7 @@
             android:layout_height="48dp"
             android:layout_marginStart="16dp"
             android:layout_marginEnd="12dp"
-            android:background="@drawable/ic_grocery_male"
+            android:background="@drawable/ic_profile"
             android:contentDescription="@string/image_user_content_description" />
 
         <LinearLayout
