@@ -201,10 +201,16 @@ object AuthUtility {
 
     @JvmStatic
     @Nullable
-    fun getUserName(): String? = try {
-        authSpHelper.getString(KEY_USER_NAME, "")
-    } catch (e: Exception) {
-        ""
+    fun getUserName(): String? {
+        return try {
+            val name: String? = authSpHelper.getString(KEY_USER_NAME, "")
+            if (!name.isNullOrEmpty()) {
+                return CorUtility.toTitleCase(name)
+            }
+            return "";
+        } catch (e: Exception) {
+            ""
+        }
     }
 
     @JvmStatic
@@ -259,7 +265,7 @@ object AuthUtility {
 
     @JvmStatic
     @JvmOverloads
-    fun logout(context: Context, moveToPermissionScreen : Boolean = true) {
+    fun logout(context: Context, moveToPermissionScreen: Boolean = true) {
         thread {
             synchronized(this) {
                 if (isSignedIn()) {

@@ -66,20 +66,6 @@
             android:src="@drawable/ic_language_change" />
 
         <ImageView
-            android:id="@+id/onboarding"
-            android:layout_width="40dp"
-            android:layout_height="40dp"
-            android:layout_alignBottom="@+id/divider"
-            android:layout_alignParentTop="true"
-            android:layout_toStartOf="@+id/share"
-            android:background="?selectableItemBackgroundBorderless"
-            android:clickable="true"
-            android:contentDescription="@string/image_on_board_content_description"
-            android:focusable="true"
-            android:padding="8dp"
-            app:srcCompat="@drawable/ic_info" />
-
-        <ImageView
             android:id="@+id/share"
             android:layout_width="40dp"
             android:layout_height="40dp"

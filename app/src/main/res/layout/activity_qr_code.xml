@@ -14,6 +14,22 @@
         android:padding="4dp"
         android:src="@drawable/ic_close_24px" />
 
+    <TextView
+        android:id="@+id/refresh_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_gravity="center"
+        android:layout_marginLeft="10dp"
+        android:contentDescription="@null"
+        android:drawableLeft="@drawable/ic_refresh"
+        android:gravity="center"
+        android:padding="4dp"
+        android:text="@string/refresh"
+        android:textColor="@color/refresh_blue"
+        android:textSize="14sp"
+        android:textStyle="bold" />
+
     <androidx.core.widget.NestedScrollView
         android:id="@+id/nested_view"
         android:layout_width="match_parent"
@@ -30,7 +46,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_centerHorizontal="true"
-                android:layout_marginTop="20dp"
+                android:layout_marginTop="30dp"
                 android:textAppearance="@style/BoldTitleTextStyle"
                 android:textColor="@color/black"
                 android:textSize="24sp"
@@ -64,24 +80,16 @@
                 android:layout_marginLeft="8dp"
                 android:layout_marginTop="6dp"
                 android:layout_marginRight="8dp"
+                android:gravity="center"
                 android:text="@string/scan_to_check_status"
                 android:textAppearance="@style/TextStyleFontSemiBold"
                 android:textColor="@color/black"
-                android:textSize="16sp" />
+                android:textSize="16sp"
+                android:textStyle="bold" />
 
             <include
                 android:id="@+id/scan_validity_container"
                 layout="@layout/scan_validity_view" />
-
-            <ImageView
-                android:id="@+id/app_icon"
-                android:layout_width="40dp"
-                android:layout_height="40dp"
-                android:layout_below="@+id/scan_validity_container"
-                android:layout_centerInParent="true"
-                android:layout_marginTop="6dp"
-                android:contentDescription="@null"
-                android:src="@drawable/qr_app_logo" />
         </RelativeLayout>
     </androidx.core.widget.NestedScrollView>
 
@@ -92,12 +100,13 @@
         android:layout_alignParentBottom="true"
         android:layout_centerInParent="true"
         android:layout_gravity="center"
-        android:layout_marginBottom="16dp"
+        android:layout_marginBottom="12dp"
         android:background="@drawable/button_with_dark_stroke"
         android:padding="16dp"
         android:text="@string/scan_other_s_qr_code"
         android:textColor="@color/black"
-        android:textSize="14sp" />
+        android:textSize="16sp"
+        android:textStyle="bold" />
 
     <ProgressBar
         android:id="@+id/progress"

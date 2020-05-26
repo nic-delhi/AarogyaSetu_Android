@@ -1,47 +1,37 @@
 <resources>
-    <string name="app_name">Aarogya Setu</string>
+    <string name="app_name">ఆరోగ్య సేతు</string>
     <string name="your_mobile_number_is_required_to_know_your_identity">కాంటాక్ట్ ట్రేసింగ్ కోసం మీ మొబైల్ నంబర్ అవసరం.</string>
+    <string name="text_value">మీరు ఎవరినైనా ఒక సమావేశం వద్ద ఒక వారం క్రితం కలుసుకున్నారు లేదా ఒక పబ్లిక్ ప్రదేశంలో తెలియని ఎవరికైనా సమీపంలో ఉన్నారు, మరియు కొన్ని రోజులలో, వారు COVID-19 పరీక్షలలో పాజిటివ్‌గా నిర్ధారింపబడ్డారా, చెప్పండి.\n\nఆ వ్యక్తి యొక్క సమీప రేడియస్‌లో గత 14 రోజులలో యాప్‌ ఇన్‌స్టాల్ చేసుకున్న యాక్టివ్ డివైజ్‌ల సహాయంతో ఆ వ్యక్తి యొక్క అన్ని టచ్ పాయింట్లను భారత ప్రభుత్వం తిరిగి ట్రేస్ చేస్తుంది.\n\nఅప్పుడు అటువంటి అన్ని ‌కాంటాక్ట్‌లకు అవసరమైన విధంగా సెల్ఫ్-ఐసోలేట్ అవ్వడం లేదా సమీప పరీక్షా కేంద్రంలో పరీక్ష చేయిపించుకోవడం మొదలైన సలహాలతో ఒక నోటిఫికేషన్ పంపబడుతుంది.\n\nయాక్టివ్ కాంటాక్ట్ ట్రేసింగ్ లో పాల్గొనడం ద్వారా, మీరు COVID-19 యొక్క వ్యాప్తి తగ్గించడానికి మరియు భారత ప్రభుత్వం మీ ఆరోగ్యం మరియు శ్రేయస్సు కోసం నిర్మాణాత్మకమైన చర్యలను అమలు చేయడానికి మాకు సహాయపడతారు.\n\n</string>
+    <string name="permissions_title">సర్వీస్ మరియు గోప్యత నిబంధనలు</string>
+    <string name="permissions_detail">మేము ఈ విషయం యొక్క స్వభావం మరియు సున్నితత్వం అర్థం చేసుకొన్నాము మరియు మీ డేటా ఇతరులకు అందకుండా ఉండడానికి గట్టి చర్యలు తీసుకున్నాము.</string>
     <string name="location_text">మీరు మీ లొకేషన్ షేరింగ్‌ను ‘ఎల్లప్పుడూ’ అని సెట్ చేసుకోవలసిందిగా సిఫార్సు చేస్తున్నాము. మీరు తర్వాత దీనిని ఏ సమయంలోనైనా మార్చుకోవచ్చు.</string>
-
-    <!--phone_number_layout-->
+    <!-- phone_number_layout -->
     <string name="enter_mobile_number">మొబైల్ నంబర్‌ను ఎంటర్ చేయండి</string>
     <string name="country_code">+91 </string>
     <string name="mobile_number">మొబైల్ నంబర్</string>
     <string name="why_is_it_needed">ఇది ఎందుకు అవసరం?</string>
     <string name="submit">సబ్మిట్ చేయండి</string>
     <string name="resend_otp">OTP ని మళ్ళీ పంపండి</string>
-
-    <!--otp_validation_layout-->
+    <string name="resend_otp_in">OTP ని %s మళ్ళి పంపించుటకు</string>
+    <!-- otp_validation_layout -->
     <string name="enter_otp">OTP ఎంటర్ చేయండి</string>
-    <string name="three_dashes">---</string>
     <string name="we_have_sent_otp">మేము మీ మొబైల్ నంబర్‌కు OTP పంపాము.</string>
     <string name="we_have_resent_otp">ನಿಮ್ಮ ಮೊಬೈಲ್ ನಂಬರಿಗೆ ನಾವು OTP ಯನ್ನು ಮರುಹೊಂದಿಸಿ.</string>
     <string name="otp">OTP</string>
     <string name="please_enter_a_valid_otp">దయచేసి  సరైన  OTP ఎంటర్ చేయండి  </string>
-
-
-    <!--why_needed_layout-->
+    <!-- why_needed_layout -->
     <string name="i_understand">నేను అర్థం చేసుకున్నాను.</string>
     <string name="device_location"><![CDATA[<b>డివైజ్ లొకేషన్</b>]]></string>
     <string name="bluetooth"><![CDATA[<b>బ్లూటూత్</b>]]></string>
+    <string name="data_sharing_with_the_ministry"><![CDATA[<b>డేటా షేరింగ్</b>]]></string>
     <string name="monitors_your_device_s_proximity_within_6_feet_range">మరొక మొబైల్ డివైజ్‌కు మీ డివైజ్ యొక్క సమీపతను మానిటర్ చేస్తుంది. దీనిని అన్ని సమయాలలో ఆన్‌లో ఉంచవలసిందిగా మీకు సిఫార్సు చేస్తున్నాము.</string>
     <string name="tracks_an_individual_s_touch_points_so_can_easily_find_others_who_came_in_close_contact">మీ డేటా భారత ప్రభుత్వంతో మాత్రమే పంచుకోబడుతుంది. యాప్ మీ పేరు మరియు నంబర్‌ను వేరొకరికి తెలపడానికి ఎప్పుడూ అనుమతించదు.</string>
     <string name="contribute_to_a_safer_india">నేను వీటికి అంగీకరిస్తున్నాను</string>
-    <string name="data_sharing_with_the_ministry"><![CDATA[<b>డేటా షేరింగ్</b>]]></string>
-    <string name="text_value">మీరు ఎవరినైనా ఒక సమావేశం వద్ద ఒక వారం క్రితం కలుసుకున్నారు లేదా ఒక పబ్లిక్ ప్రదేశంలో తెలియని ఎవరికైనా సమీపంలో ఉన్నారు, మరియు కొన్ని రోజులలో, వారు COVID-19 పరీక్షలలో పాజిటివ్‌గా నిర్ధారింపబడ్డారా, చెప్పండి.\n\nఆ వ్యక్తి యొక్క సమీప రేడియస్‌లో గత 14 రోజులలో యాప్‌ ఇన్‌స్టాల్ చేసుకున్న యాక్టివ్ డివైజ్‌ల సహాయంతో ఆ వ్యక్తి యొక్క అన్ని టచ్ పాయింట్లను భారత ప్రభుత్వం తిరిగి ట్రేస్ చేస్తుంది.
-\n\nఅప్పుడు అటువంటి అన్ని ‌కాంటాక్ట్‌లకు అవసరమైన విధంగా సెల్ఫ్-ఐసోలేట్ అవ్వడం లేదా సమీప పరీక్షా కేంద్రంలో పరీక్ష చేయిపించుకోవడం మొదలైన సలహాలతో ఒక నోటిఫికేషన్ పంపబడుతుంది.
-\n\nయాక్టివ్ కాంటాక్ట్ ట్రేసింగ్ లో పాల్గొనడం ద్వారా, మీరు COVID-19 యొక్క వ్యాప్తి తగ్గించడానికి మరియు భారత ప్రభుత్వం మీ ఆరోగ్యం మరియు శ్రేయస్సు కోసం నిర్మాణాత్మకమైన చర్యలను అమలు చేయడానికి మాకు సహాయపడతారు.
-\n\n</string>
     <string name="please_select_a_language_en">Please select your language\nकृपया अपनी भाषा चुनें</string>
     <string name="next">తరువాత</string>
     <string name="please_select_a_language_to_proceed">Please select a language to proceed.</string>
     <!-- Strings used for fragments for navigation -->
-
-    <string name="sharing">Contributing...</string>
     <string name="please_enter_a_valid_number">దయచేసి  సరైన  మొబైల్ నెంబర్  ఎంటర్ చేయండి</string>
-    <string name="share_app_text"> COVID19 కు వ్యతిరేకంగా పోరాడటానికి నేను ఈ యాప్‌ని సిఫార్సు చేస్తున్నాను. దయచేసి ఈ లింక్‌ను ఉపయోగించి దానిని డౌన్లోడ్ చేసుకోండి మరియు షేర్ చేయండి : \n </string>
-
-
     <string name="would_you_like_to">మీరు COVID-19 పరీక్షలలో పాజిటివ్‌గా నిర్ధారింపబడిన వారు సంచరించిన ప్రాంతంలో సంచిరించినట్లయితే మీకు తెలియజేయమంటారా?</string>
     <string name="each_one_of_us">మనలోని ప్రతి ఒక్కరికి భారతదేశంలో కరోనావైరస్ మహమ్మారి వ్యాప్తిని నివారించడానికి సహాయపడగలిగే శక్తి ఉంది</string>
     <string name="simply_1_install_the_app">కేవలం,
@@ -50,32 +40,25 @@
 \n३. లొకేషన్ షేరింగ్‌ను "ఎల్లప్పుడూ" అని సెట్ చేసుకోండి
 \n\nమీ స్నేహితులు మరియు కుటుంబo చేత యాప్‌ను ఇన్‌స్టాల్ చేయించడానికి ఆహ్వానించండి.</string>
     <string name="cowin_20_tracks_through"><![CDATA[<b>ఆరోగ్య సేతు</b> COVID-19 పరీక్షలలో పాజిటివ్‌గా నిర్ధారింపబడిన వారితో మీ ఇంటరాక్షన్‌ను, బ్లూటూత్ మరియు లొకేషన్ జనరేటెడ్ సోషల్ గ్రాఫ్ ద్వారా ట్రాక్ చేస్తుంది.]]></string>
-    <string name="the_app_alerts_are_accompanied">యాప్ అలర్ట్స్ సెల్ఫ్-ఐసోలేట్ అవ్వడం ఎలానో తెలిపే మరియు మీలో వైరస్ లక్షణాలు వృద్ధి చెందితే అవసరమైన సహాయం, మద్దతు ఎలా పొందాలో తెలిపే సూచనలు కలిగి ఉంటాయి
-</string>
+    <string name="the_app_alerts_are_accompanied">యాప్ అలర్ట్స్ సెల్ఫ్-ఐసోలేట్ అవ్వడం ఎలానో తెలిపే మరియు మీలో వైరస్ లక్షణాలు వృద్ధి చెందితే అవసరమైన సహాయం, మద్దతు ఎలా పొందాలో తెలిపే సూచనలు కలిగి ఉంటాయి</string>
     <string name="you_will_be_alerted_if">మీకు తెలియకుండా మీరు COVID-19 పరీక్షలలో పాజిటివ్‌గా నిర్ధారింపబడిన వారికి సమీపంగా వెళ్ళినట్లయితే యాప్ నుండి మీకు అలర్ట్ వస్తుంది</string>
     <string name="with_cowin_20_you_can"><![CDATA[<b>ఆరోగ్య సేతుతో</b>, మీరు మిమ్మల్ని, మీ కుటుంబం మరియు స్నేహితులను రక్షించుకోవచ్చు మరియు COVID-19 పోరాడటానికి ప్రయత్నిస్తున్న మన దేశానికి సహాయపడవచ్చు]]></string>
     <string name="register_now">ఇప్పుడే రిజిస్టర్ చేసుకోండి</string>
-
     <string name="install">Install</string>
     <string name="bluetooth_and_gps">Bluetooth &amp; Location</string>
     <string name="location_sharing">location sharing</string>
-    <string name="close">క్లోజ్ చేయండి</string>
-
     <string name="permission_info_tnc_text"><![CDATA[<p>మీరు సురక్షిత భారతదేశానికి సహకారం అందించాలనుకుంటే, దయచేసి  <a href="https://static.swaraksha.gov.in/tnc/">సర్వీస్</a> మరియు <a href="https://web.swaraksha.gov.in/ncv19/privacy/">ప్రైవసీ పాలసీ </a> యొక్క నిబంధనలకు మీ అంగీకారాన్ని క్రింది బటన్ పైన క్లిక్ చేయడం ద్వారా తెలపండి:</p>]]></string>
-
     <string name="auth_error_unknown">There is some error logging you in</string>
     <string name="auth_error_invalid_otp">The OTP you have entered is incorrect</string>
-    <string name="resend_otp_in">OTP ని %s మళ్ళి పంపించుటకు</string>
     <string name="auth_error_user_disabled">You are not allowed to sign in</string>
-    <string name="permissions_title">సర్వీస్ మరియు గోప్యత నిబంధనలు</string>
-    <string name="permissions_detail">మేము ఈ విషయం యొక్క స్వభావం మరియు సున్నితత్వం అర్థం చేసుకొన్నాము మరియు మీ డేటా ఇతరులకు అందకుండా ఉండడానికి గట్టి చర్యలు తీసుకున్నాము.</string>
+    <string name="close">క్లోజ్ చేయండి</string>
     <string name="sync_data_user_consent">కాంటాక్ట్ ట్రేసింగ్‌లో సహాయపడటానికి, బ్లూటూత్ మరియు GPS సర్వీసుల ద్వారా సేకరించబడిన మీ ఇంటర్‌యాక్షన్ డేటా భారతదేశ ప్రభుత్వంతో షేర్ చేయబడుతుంది.</string>
     <string name="confirm_and_proceed">నిర్ధారించండి మరియు కొనసాగండి</string>
     <string name="sync_data_detail">మీ డేటా ఎల్లప్పుడూ మీ ఫోన్‌లో సేవ్ చేయబడి ఉంటుంది. దీనిని సురక్షిత ప్రభుత్వ సర్వర్లకి షేర్ చేయండి, ఒక వేళ…</string>
     <string name="sample_collected_for_testing">టెస్టింగ్ కోసం సేకరించిన నమూనా</string>
     <string name="tested_positive">Covid19 పాజిటివ్‌గా నిర్ధారించబడింది</string>
     <string name="syncing_data">డేటాను సింక్ చేస్తోంది</string>
-    <string name="syncing_data_detail">బ్లూటూత్ మరియు GPS సర్వీసుల ద్వారా సేకరించబడిన ఇంటర్‌యాక్షన్ డేటా భారతదేశ ప్రభుత్వానికి పంపబడుతుంది.</string>
+    <string name="syncing_data_detail"><![CDATA[బ్లూటూత్ మరియు GPS సర్వీసుల ద్వారా సేకరించబడిన ఇంటర్‌యాక్షన్ డేటా భారతదేశ ప్రభుత్వానికి పంపబడుతుంది.]]></string>
     <string name="cancel">రద్దు చేయండి</string>
     <string name="syncing_data_success">సింక్ విజయవంతమైంది</string>
     <string name="syncing_data_success_detail">మీ డేటా ఇప్పుడు భారత దేశ ప్రభుత్వ సర్వర్లలో సురక్షితం చేయబడింది</string>
@@ -83,19 +66,49 @@
     <string name="syncing_data_failed_detail">ఏదో తప్పు జరిగింది, దయచేసి మళ్ళీ ప్రయత్నించండి.</string>
     <string name="retry">మళ్లీ ప్రయత్నించండి</string>
     <string name="ok">సరే</string>
-
     <string name="image_language_change_content_description">భాషను మార్చండి</string>
     <string name="image_share_content_description">అప్లికేషన్ షేర్ చేయండి</string>
     <string name="image_back_content_description">వెనక్కు</string>
     <string name="image_on_board_content_description">ఆన్-బోర్డింగ్ చూపించండి</string>
     <string name="image_close_content_description">@string/close</string>
-    <string name="image_sync_data_content_description">Sync Data</string>
     <string name="permission_alert_message">మీ సెట్టింగ్‌లో మీరు లొకేషన్ / బ్లూటూత్ అనుమతులను అందించాలి, తిరిగీ యాప్ లో కి వచ్చి మళ్ళీ క్లిక్ చేయండి</string>
     <string name="error_network_error">దయచేసి మీ ఇంటర్నెట్ కనెక్షన్‌ను సరి చుడండి</string>
     <string name="error_location">మీరు ఇచ్చిన లొకేషన్ పర్మిషన్ సరిపోదు మరియు ఇక్కడ మార్చలేము . మళ్ళి సెట్టింగులోకి వెళ్లి సరైన పర్మిషన్ ఇవ్వండి</string>
-    <string name="update_required">అప్డేట్ అవసరం</string>
-    <string name="new_version_available">అప్లికేషన్ యొక్క క్రొత్త వెర్షన్ అందుబాటులో ఉంది మీరు యాప్ వాడటం కొనసాగించడానికి ఇది అవసరం. తాజా వెర్షన్ కు అప్డేట్ చేయటానికి దయచేసి క్రింద క్లిక్ చేయండి.</string>
     <string name="turn_on_bluetooth_all_times">ఇతర పరికరాలకు మీరు ఎంత సమీపానికి వచ్చారో ట్రాక్ చేయడానికి మరియు మీకు ఖచ్చితమైన భద్రతా అప్డేట్ లు ఇవ్వడానికి బ్లూటూత్ అన్ని సమయాల్లో ఆన్ లో ఉండాలి</string>
     <string name="make_sure_your_phone_is_connected_to_the_wifi_or_switch_to_mobile_data">మీ ఫోన్ వైఫైకి కనెక్ట్ అయిందని సరిచూడండి లేదా మొబైల్ డేటాకు మారండి..</string>
     <string name="login_failed">లాగిన్ విఫలమైంది. దయచేసి మళ్ళీ ప్రయత్నించండి</string>
+    <string name="image_user_content_description">వినియోగదారి</string>
+    <string name="image_menu_content_description">మెను</string>
+    <string name="generator_scanner_qr_code">QR కోడ్‌ను రూపొందించండి / స్కాన్ చేయండి</string>
+    <string name="verify_installed_app">ఇన్‌స్టాల్ చేసిన అనువర్తనాన్ని ధృవీకరించండి</string>
+    <string name="share_data_with_govt">డేటాను ప్రభుత్వంతో పంచుకోండి</string>
+    <string name="call_helpline">హెల్ప్‌లైన్‌కు కాల్ చేయండి (1075)</string>
+    <string name="settings">సెట్టింగులు</string>
+    <string name="share_data_with_govt_detail">మీరు COVID-19 కోసం పాజిటివ్ పరీక్షించినట్లయితే లేదా ప్రస్తుతం పరీక్షించబడితే మాత్రమే భాగస్వామ్యం చేయండి</string>
+    <string name="call_helpline_detail">COVID-19 కు సంబంధించిన ప్రశ్నలకు ఆరోగ్య మంత్రిత్వ శాఖ టోల్ ఫ్రీ హెల్ప్‌లైన్</string>
+    <string name="faq">తరచుగా అడిగే ప్రశ్నలు</string>
+    <string name="privacy_policy">గోప్యతా విధానం</string>
+    <string name="terms_of_use">ఉపయోగించవలసిన విధానం</string>
+    <string name="app_version">అనువర్తన సంస్కరణ %s</string>
+    <string name="scan_prompt">వేరొకరి ఆరోగ్య స్థితిని తనిఖీ చేయడానికి QR కోడ్‌ను స్కాన్ చేయండి</string>
+    <string name="few_seconds">కొన్ని సెకన్లు</string>
+    <string name="minutes">నిమిషాలు</string>
+    <string name="scan_to_check_status">నా ఆరోగ్య స్థితిని పొందడానికి QR కోడ్‌ను స్కాన్ చేయండి</string>
+    <string name="tap_to_refresh">QR కోడ్‌ను రిఫ్రెష్ చేయడానికి నొక్కండి</string>
+    <string name="qr_code_valid_for">QR కోడ్ చెల్లుతుంది</string>
+    <string name="scan_other_s_qr_code">ఇతరుల QR కోడ్‌ను స్కాన్ చేయండి</string>
+    <string name="generate_my_qr_code">నా QR కోడ్‌ను రూపొందించండి</string>
+    <string name="invalid_qr_code">చెల్లని QR కోడ్</string>
+    <string name="not_generated_aarogya_setu">ఇది అధికారిక ఆరోగ్య సేతు అనువర్తనం ద్వారా ఉత్పత్తి చేయబడలేదు.</string>
+    <string name="request_new_code">దయచేసి క్రొత్త కోడ్‌ను రూపొందించమని వ్యక్తిని అభ్యర్థించండి</string>
+    <string name="expired_code">గడువు ముగిసిన QR కోడ్</string>
+    <string name="low_risk">సంక్రమణ ప్రమాదం తక్కువ</string>
+    <string name="moderate_risk">సంక్రమణ యొక్క మితమైన ప్రమాదం</string>
+    <string name="high_risk">సంక్రమణ ప్రమాదం ఎక్కువగా ఉంది</string>
+    <string name="tested_positive_status">COVID-19 కోసం పాజిటివ్‌ను పరీక్షించింది</string>
+    <string name="provide_necessary_permission">దయచేసి మీ Qr కోడ్‌ను సంగ్రహించడానికి అవసరమైన అనుమతి ఇవ్వండి</string>
+    <string name="scan_without_perm_alert">QR కోడ్ స్కానింగ్ కోసం అనువర్తనానికి కెమెరా అనుమతి అవసరం.</string>
+    <string name="open_settings">సెట్టింగులను తెరవండి</string>
+    <string name="common_scanning_error">కొన్ని మినహాయింపు సంభవించింది. దయచేసి మళ్ళీ స్కాన్ చేయండి</string>
+    <string name="hamburger_menu_intro">హెల్ప్‌లైన్, గోప్యతా విధానం, ఉపయోగ నిబంధనలు మరియు మరెన్నో కొత్త ఫీచర్లు ఇక్కడ చూడవచ్చు.</string>
 </resources>

@@ -2,6 +2,7 @@
 <resources>
 
     <style name="AppTheme.Splash">
+        <item name="android:statusBarColor">@color/white</item>
         <item name="android:windowBackground">@drawable/background_splash</item>
         <item name="android:windowLayoutInDisplayCutoutMode">shortEdges</item>
     </style>

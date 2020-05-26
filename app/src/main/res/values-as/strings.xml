@@ -1,16 +1,11 @@
 <resources>
     <string name="app_name">Aarogya Setu</string>
     <string name="your_mobile_number_is_required_to_know_your_identity">Contact Tracingৰ বাবে আপোনাৰ মোবাইল নং প্ৰয়োজনীয়.</string>
-    <string name="text_value">ধৰা হল, আপুনি ৰাজহুৱা স্থানত কাৰোবাক লগ পাইছিল বা সংস্পৰ্শত আহিছিল আৰু কিছুদিনৰ পিছত গম পালে যে- সেই ব্যক্তিগৰাকী ক\'ভিড-১৯ত আক্ৰান্ত হৈছে।\n\nভাৰত চৰকাৰে এনে ব্যক্তিৰ সৈতে যিসকল সংস্পৰ্শত আহিছিল, তেওঁলোকক এপ্ সংযুক্ত হৈ থকা সক্ৰিয় ডিভাইছৰ জৰিয়তে চিনাক্ত কৰিব পাৰিব।
-\n\nএনে সংস্পৰ্শত থকা ব্যক্তিসকলৰ মোবাইললৈ চৰকাৰে পৰামৰ্শ প্ৰেৰণ কৰিব, যাতে ব্যক্তিসকলে কোৱাৰেণ্টাইন, আছুতীয়াকৈ থকাৰ ক্ষেত্ৰত বা ওচৰৰ পৰীক্ষণ কেন্দ্ৰত পৰীক্ষা কৰাব পাৰে।
-\n\nসক্ৰিয় Contact Tracingত অংশগ্ৰহণ কৰি আপুনি ক\'ভিড-১৯ৰ সংক্ৰমণ হ্ৰাস কৰাত সহায় কৰিব পাৰিব। আপোনালোকৰ সুস্বাস্থ্যৰ বাবে প্ৰয়োজনীয় পদক্ষেপ গ্ৰহণ কৰাত ই ভাৰত চৰকাৰক সহায় কৰিব।
-\n\n</string>
+    <string name="text_value">ধৰা হল, আপুনি ৰাজহুৱা স্থানত কাৰোবাক লগ পাইছিল বা সংস্পৰ্শত আহিছিল আৰু কিছুদিনৰ পিছত গম পালে যে- সেই ব্যক্তিগৰাকী ক\'ভিড-১৯ত আক্ৰান্ত হৈছে।\n\nভাৰত চৰকাৰে এনে ব্যক্তিৰ সৈতে যিসকল সংস্পৰ্শত আহিছিল, তেওঁলোকক এপ্ সংযুক্ত হৈ থকা সক্ৰিয় ডিভাইছৰ জৰিয়তে চিনাক্ত কৰিব পাৰিব।\n\nএনে সংস্পৰ্শত থকা ব্যক্তিসকলৰ মোবাইললৈ চৰকাৰে পৰামৰ্শ প্ৰেৰণ কৰিব, যাতে ব্যক্তিসকলে কোৱাৰেণ্টাইন, আছুতীয়াকৈ থকাৰ ক্ষেত্ৰত বা ওচৰৰ পৰীক্ষণ কেন্দ্ৰত পৰীক্ষা কৰাব পাৰে।\n\nসক্ৰিয় Contact Tracingত অংশগ্ৰহণ কৰি আপুনি ক\'ভিড-১৯ৰ সংক্ৰমণ হ্ৰাস কৰাত সহায় কৰিব পাৰিব। আপোনালোকৰ সুস্বাস্থ্যৰ বাবে প্ৰয়োজনীয় পদক্ষেপ গ্ৰহণ কৰাত ই ভাৰত চৰকাৰক সহায় কৰিব।\n\n</string>
     <string name="permissions_title">সেৱা আৰু গোপনীয়তাৰ নীতি-নিৰ্দেশনা</string>
     <string name="permissions_detail">এই সময়ত এই বিষয়ৰ গুৰুত্ব আমি গভীৰভাৱে উপলব্ধি কৰিছোঁ। সেয়েহে আপোনালোকৰ তথ্য সুৰক্ষিত ৰখাৰ ক্ষেত্ৰত আমি শক্তিশালী ব্যৱস্থা হাতত লৈছোঁ।</string>
-    <string name="location_text"> আপোনাৰ Location Sharing "Always"ত ৰাখিব। যিকোনো সময়তে আপুনি ইয়াক সলনি কৰিব পাৰে।</string>
-
-
-    <!--phone_number_layout-->
+    <string name="location_text"> আপোনাৰ Location Sharing \"Always\"ত ৰাখিব। যিকোনো সময়তে আপুনি ইয়াক সলনি কৰিব পাৰে।</string>
+    <!-- phone_number_layout -->
     <string name="enter_mobile_number">মোবাইল নং দিয়ক</string>
     <string name="country_code">+91 </string>
     <string name="mobile_number">মোবাইল নং</string>
@@ -18,17 +13,13 @@
     <string name="submit">ছাবমিট</string>
     <string name="resend_otp">OTP resend কৰক</string>
     <string name="resend_otp_in">OTP resend কৰক %s</string>
-
-    <!--otp_validation_layout-->
+    <!-- otp_validation_layout -->
     <string name="enter_otp">OTP দিয়ক</string>
-    <string name="three_dashes">---</string>
     <string name="we_have_sent_otp">আপোনাৰ মোবাইললৈ OTP পঠিওৱা হৈছে.</string>
     <string name="we_have_resent_otp">আপোনাৰ মোবাইললৈ OTP পঠিওৱা হৈছে.</string>
     <string name="otp">OTP</string>
     <string name="please_enter_a_valid_otp">এটা সঠিক OTP enter কৰক.</string>
-
-
-    <!--why_needed_layout-->
+    <!-- why_needed_layout -->
     <string name="i_understand">বুজিলোঁ</string>
     <string name="device_location"><![CDATA[<b>ডিভাইছ লোকেশ্বন</b>]]></string>
     <string name="bluetooth"><![CDATA[<b>Bluetooth</b>]]></string>
@@ -40,12 +31,7 @@
     <string name="next">পিছত</string>
     <string name="please_select_a_language_to_proceed">যিকোনো এটা ভাষা নিৰ্বাচন কৰক</string>
     <!-- Strings used for fragments for navigation -->
-
-    <string name="sharing">আগবঢ়াইছোঁ...</string>
     <string name="please_enter_a_valid_number">এটা সঠিক নং enter কৰক</string>
-    <string name="share_app_text"> ক\'ভিড-১৯ৰ বিৰুদ্ধে যুঁজত আৰোগ্য এপ্ ব্যৱহাৰ কৰক। ডাউনলোড কৰক আৰু ইয়াৰ লিংক শ্বেয়াৰ কৰক Android : \n </string>
-
-
     <string name="would_you_like_to">ক\'ভিড-১৯ত আক্ৰান্তৰ সংস্পৰ্শত আহিছে যদি আপুনি এই তথ্য জানিব বিচাৰিবনে ?</string>
     <string name="each_one_of_us">ভাৰতত ক\'ৰোণা মহামাৰীৰ সংক্ৰমণ প্ৰতিৰোধৰ ক্ষেত্ৰত আমাৰ সামূহিক শক্তিয়ে সহায় কৰিব.</string>
     <string name="simply_1_install_the_app"><![CDATA[সহজেই,\n1. এপটো ইনষ্টল কৰক \n2. Bluetooth আৰু Location অন কৰক \n3. Location "Always"ৰ সৈতে সংযোগ কৰক \n\nআপোনাৰ পৰিয়ালৰ অন্য সদস্যৰ লগতে বন্ধু-বান্ধৱক এপটো ইনষ্টল কৰিবলৈ অনুৰোধ জনাওক.]]></string>
@@ -54,29 +40,21 @@
     <string name="you_will_be_alerted_if">ক\'ভিড-১৯ত আক্ৰান্ত কোনো লোকৰ গভীৰ সংস্পৰ্শত (অজানিতে হওক) আহে যদি আপোনাক সজাগ কৰা হ\'ব</string>
     <string name="with_cowin_20_you_can"><![CDATA[<b>আৰোগ্য সেতুৰদ্বাৰা</b>, আপুনি নিজৰ লগতে পৰিয়াল আৰু বন্ধুবৰ্গক সুৰক্ষিত কৰিব পাৰিব আৰু ক\'ভিড-১৯ৰ বিৰুদ্ধে যুঁজত দেশবাসীক সহায় কৰিব পাৰিব।]]></string>
     <string name="register_now">পঞ্জীয়ন কৰক</string>
-
-
     <string name="install">Install</string>
     <string name="bluetooth_and_gps">Bluetooth &amp; Location</string>
     <string name="location_sharing">location sharing</string>
     <string name="permission_info_tnc_text"><![CDATA[<p>এখন সুৰক্ষিত ভাৰতবৰ্ষৰ বাবে যদি আপুনি সহযোগিতা আগবঢ়াব বিচাৰে, তেন্তে তলত ক্লিক্ কৰি <a href="https://static.swaraksha.gov.in/tnc/">Terms of Service</a> আৰু <a href="https://web.swaraksha.gov.in/ncv19/privacy/">Privacy Policy</a> মানি ল\'ব:</p>]]></string>
-
     <string name="auth_error_unknown">Login কৰোতে error আছে</string>
     <string name="auth_error_invalid_otp">আপুনি দিয়া OTP টো ভুল</string>
     <string name="auth_error_user_disabled">You are not allowed to sign in</string>
     <string name="close">বন্ধ কৰক/বন্ধ</string>
-    <string name="internet_connection_lost" translatable="false">Internet Connection Lost</string>
-    <string name="try_again" translatable="false">Try Again</string>
-    <string name="turn_on_bluetooth" translatable="false">Turn on Bluetooth</string>
-    <string name="turn_on" translatable="false">Turn On</string>
-    <string name="later" translatable="false">Later</string>
     <string name="sync_data_user_consent">সম্পৰ্কলৈ অহা লোকসকলক ট্ৰেচ কৰিবৰ বাবে, আপোনাৰ ব্লূটুথ আৰু GPS সেৱাৰে লোৱা সহভাগিতাৰ ডাটা ভাৰত চৰকাৰৰ লগত শ্বেয়াৰ কৰা হ\'ব</string>
     <string name="confirm_and_proceed">নিশ্চিত কৰক আৰু আগবাঢ়ক</string>
     <string name="sync_data_detail">আপোনাৰ ডাটা সদায় আপোনাৰ ফোনত চেভ হৈ থাকে। সুৰক্ষিত চৰকাৰী চাৰ্ভাৰত শ্বেয়াৰ কৰক যদিহে…</string>
     <string name="sample_collected_for_testing">পৰীক্ষণৰ বাবে নমুনা লোৱা হৈছে</string>
     <string name="tested_positive">Covid19ৰ বাবে কৰা পৰীক্ষাৰ ফলাফল পজিটিভ আহিছে</string>
     <string name="syncing_data">ডাটা চিংক কৰা হৈ আছে</string>
-    <string name="syncing_data_detail">ব্লূটুথ আৰু GPS সেৱাৰে লোৱা সহভাগিতাৰ ডাটা ভাৰত চৰকাৰক পঠোৱা হৈ আছে</string>
+    <string name="syncing_data_detail"><![CDATA[ব্লূটুথ আৰু GPS সেৱাৰে লোৱা সহভাগিতাৰ ডাটা ভাৰত চৰকাৰক পঠোৱা হৈ আছে]]></string>
     <string name="cancel">বাতিল কৰক</string>
     <string name="syncing_data_success">চিংক কৰাত সফল</string>
     <string name="syncing_data_success_detail">আপোনাৰ ডাটা এতিয়া ভাৰত চৰকাৰৰ চাৰ্ভাৰত লোৱা হৈছে।</string>
@@ -84,19 +62,49 @@
     <string name="syncing_data_failed_detail">কিবা আঁসোৱাহ সংঘটিত হ\'ল। পুনৰ চেষ্টা কৰক</string>
     <string name="retry">পুনৰ চেষ্টা কৰক</string>
     <string name="ok">ঠিক আছে</string>
-
     <string name="image_language_change_content_description">ভাষা সলাওক</string>
     <string name="image_share_content_description">এপ্পলিকেষন শ্বেয়াৰ কৰক</string>
     <string name="image_back_content_description">পাচলৈ যাওক</string>
     <string name="image_on_board_content_description">অন-ব\'ৰ্ডিং প্ৰদৰ্শন কৰক</string>
     <string name="image_close_content_description">@string/close</string>
-    <string name="image_sync_data_content_description">Sync Data</string>
     <string name="permission_alert_message">আপুনি প্ৰয়োজনীয় Location/Bluetoothৰ বাবে অনুমতি দিব লাগিব আৰু এপটোলৈ ঘূৰি আহি পুনৰ ক্লিক্ কৰক</string>
     <string name="error_network_error">অনুগ্ৰহ কৰি ইণ্টাৰনেট সেৱা Check কৰক</string>
     <string name="error_location">ঠাইৰ ছেটিংছ্ অপৰ্যাপ্ত আৰু ইয়াত fix কৰিব নোৱাৰি। ছেটিংছত fix কৰক</string>
-    <string name="update_required">আপডেট প্ৰয়োজনীয়</string>
-    <string name="new_version_available">এই এপটোৰ এটা নতুন version উপলব্ধ আৰু ইয়াৰ বাবে continue কৰাৰ দৰকাৰ। নতুন Version-ৰ বাবে তলত ক্লিক্ কৰক</string>
     <string name="turn_on_bluetooth_all_times">সুৰক্ষামূলক আপডেটৰ বাবে আৰু অন্য ডিভাইছৰ সৈতে proximity নিৰীক্ষণৰ বাবে Bluetooth অনবৰতে অন ৰাখক</string>
     <string name="make_sure_your_phone_is_connected_to_the_wifi_or_switch_to_mobile_data">নিশ্চিত কৰক যাতে আপোনাৰ ফোনটো ৱাই-ফাইৰ সৈতে সংযুক্ত হৈ আছে অথবা মোবাইল ডাটা অন কৰক</string>
     <string name="login_failed">লগ্ ইন্ ফেইল আৰু এবাৰ চেষ্টা কৰক</string>
+    <string name="image_user_content_description">ব্যৱহাৰকাৰী</string>
+    <string name="image_menu_content_description">মেন্যু</string>
+    <string name="generator_scanner_qr_code">QR কোড সৃষ্টি/স্কেন কৰক</string>
+    <string name="verify_installed_app">ইনষ্টল হোৱা এপ্প পৰীক্ষা কৰক</string>
+    <string name="share_data_with_govt">চৰকাৰৰ সৈতে তথ্য শ্বেয়াৰ কৰক</string>
+    <string name="call_helpline">হেল্পলাইন নম্বৰ (1075)লৈ ফোন কৰক</string>
+    <string name="settings">চেটিংছ</string>
+    <string name="share_data_with_govt_detail">আপোনাৰ COVID-19 পৰীক্ষাৰ ফলাফল যদি পজিটিভ আহিছে বা আপোনাৰ যদি বৰ্তমান পৰীক্ষা  কৰি থকা হৈছে, তেতিয়াহে শ্বেয়াৰ কৰক</string>
+    <string name="call_helpline_detail">COVID-19 ৰ লগত জড়িত প্ৰশ্ন সুধিবৰ বাবে স্বাস্থ্য মন্ত্ৰালয়ৰ নিঃশুল্ক নম্বৰ</string>
+    <string name="faq">সঘনাই উত্থাপিত প্ৰশ্নবোৰ</string>
+    <string name="privacy_policy">গোপনীয়তা নীতি</string>
+    <string name="terms_of_use">ব্যৱহাৰৰ চৰ্ত</string>
+    <string name="app_version">এপ্পৰ সংস্কৰণ %s</string>
+    <string name="scan_prompt">আন কাৰোবাৰ স্বাস্থ্যৰ স্থিতি চাবৰ বাবে QR কোড স্কেন কৰক</string>
+    <string name="few_seconds">কেইচেকেণ্ডমান</string>
+    <string name="minutes">মিনিট</string>
+    <string name="scan_to_check_status">মোৰ স্বাস্থ্যৰ স্থিতি জানিবৰ বাবে QR কোড স্কেন কৰক</string>
+    <string name="tap_to_refresh">QR কোড ৰিফ্ৰেছ কৰিবৰ বাবে টেপ কৰক</string>
+    <string name="qr_code_valid_for">QR কোড এই কামৰ বাবে বৈধ</string>
+    <string name="scan_other_s_qr_code">আনৰ QR কোড স্কেন কৰক</string>
+    <string name="generate_my_qr_code">মোৰ QR কোড সৃষ্টি কৰক</string>
+    <string name="invalid_qr_code">QR কোড অবৈধ</string>
+    <string name="not_generated_aarogya_setu">ইয়াক অ\'ফিছিয়েল আৰোগ্য হেতু এপ্পৰ দ্বাৰা সৃষ্টি কৰা হোৱা নাই</string>
+    <string name="request_new_code">অনুগ্ৰহ কৰি নতুন কোড সৃষ্টি কৰিবলৈ ব্যক্তিজনক অনুৰোধ কৰক</string>
+    <string name="expired_code">QR কোডৰ ম্যাদ উকলিল</string>
+    <string name="low_risk">ৰ সংক্ৰমণৰ আশংকা কম</string>
+    <string name="moderate_risk">ৰ সংক্ৰমণৰ আশংকা মজলীয়া</string>
+    <string name="high_risk">ৰ সংক্ৰমণৰ আশংকা অতি বেছি</string>
+    <string name="tested_positive_status">ৰ COVID-19 পৰীক্ষাৰ ফলাফল পজিটিভ আহিছে</string>
+    <string name="provide_necessary_permission">অনুগ্ৰহ কৰি আপোনাৰ QR কোডটো ফটো আবদ্ধ কৰিবলৈ প্ৰয়োজনীয় অনুমতি প্ৰদান কৰক</string>
+    <string name="scan_without_perm_alert">QR কোড স্কেনিঙৰ বাবে এপ্পটোক কেমেৰা অনুমতিৰ প্ৰয়োজন</string>
+    <string name="open_settings">চেটিংছ অ\'পেন কৰক</string>
+    <string name="common_scanning_error">কিবা ব্যতিক্ৰম হৈছে। অনুগ্ৰহ কৰি পুনৰ স্কেন কৰক</string>
+    <string name="hamburger_menu_intro">হহেল্পলাইন, গোপনীয়তা নীতি, ব্যৱহাৰৰ চৰ্তাৱলীৰ দৰে বহু নতুন বৈশিষ্ট্যৰ লগতে আৰু বহু বিষয় ইয়াত পাব পাৰে</string>
 </resources>
