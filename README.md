@@ -1,6 +1,6 @@
 # Aarogya Setu Android app
 
-![alt text](./aarogya.png "AarogyaSetu Logo")
+![aarogya setu](./aarogya.png "AarogyaSetu Logo")
 
 Aarogya Setu is a mobile application developed by the Government of India to connect essential health services with the people of India in our combined fight against COVID-19. The App is aimed at augmenting the initiatives of the Government of India, particularly the Department of Health, in proactively reaching out to and informing the users of the app regarding risks, best practices and relevant advisories pertaining to the containment of COVID-19.
 
@@ -23,9 +23,9 @@ Aarogya Setu mobile application provides the following features:
 
 The Aarogya Setu App is being widely used by more than 11 Crore Users. The App has been highly successful in identifying people with high risk of COVID-19 infection and has also played a major role in identifying potential COVID-19 hotspots. In the larger public interest and in order to help the international community in their COVID-19 efforts, the Government of India is opening the source code of this App under Apache License 2.0.
 
-If you find any security issues or vulnerabilities in the code, then you can send the details to us at : as-bugbounty@nic.in
+If you find any security issues or vulnerabilities in the code, then you can send the details to us at : [as-bugbounty](mailto:as-bugbounty@nic.in)
 
-If you want to convey any other feedback regarding the App or Code, then you can send it to us at : support.aarogyasetu@nic.in
+If you want to convey any other feedback regarding the App or Code, then you can send it to us at : [support.aarogyasetu](mailto:support.aarogyasetu@nic.in)
 
 
 
@@ -114,4 +114,3 @@ Production: ./app/src/google-services.json
 <p align="center">
 <a href='https://play.google.com/store/apps/details?id=nic.goi.aarogyasetu'><img alt='Get it on Google Play' src='https://play.google.com/intl/en_us/badges/images/generic/en_badge_web_generic.png' width="50%"/></a>
 </p>
-

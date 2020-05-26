@@ -131,8 +131,6 @@ public class GattServer {
         settingsBuilder.setConnectable(isConnectable);
         if (CorUtility.isBluetoothAvailable() && advertiser != null && advertisingCallback != null) {
             advertiser.startAdvertising(settingsBuilder.build(), data, advertisingCallback);
-        } else {
-            //do nothing
         }
     }
 
@@ -141,6 +139,7 @@ public class GattServer {
             try {
                 mBluetoothGattServer.addService(createGattService());
             } catch (Exception ex) {
+                ex.printStackTrace();
                 //Android version 7.0 (Redmi Note 4 & Huawei MediaPad T3 & Nova2Plus device issue) Android BLE characterstic add issue  https://github.com/iDevicesInc/SweetBlue/issues/394
             }
         }
@@ -204,6 +203,7 @@ public class GattServer {
                 advertiser.stopAdvertising(advertisingCallback);
             }
         } catch (Exception ex) {
+            ex.printStackTrace();
             //Handle StopAdvertisingSet Android Internal bug (Redmi Note 7 Pro Android 9)
         }
     }

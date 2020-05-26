@@ -19,5 +19,4 @@ public class LanguageDTO {
     public String getLanguageTitle() {
         return mLanguageTitle;
     }
-
 }

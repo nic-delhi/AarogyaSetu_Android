@@ -51,13 +51,10 @@ public class FcmMessagingService extends FirebaseMessagingService {
      * @param remoteMessageData: The data received from the firebase notification
      */
     private void pushDataToServer(Map<String, String> remoteMessageData) {
-        if (remoteMessageData.containsKey(Constants.PUSH_COVID_POSTIVE_P) && Constants.COVID_POSTIVE_PUSH_P_VALUE.equals(remoteMessageData.get(Constants.PUSH_COVID_POSTIVE_P)))
-        {
-
+        if (remoteMessageData.containsKey(Constants.PUSH_COVID_POSTIVE_P) && Constants.COVID_POSTIVE_PUSH_P_VALUE.equals(remoteMessageData.get(Constants.PUSH_COVID_POSTIVE_P))) {
             CorUtility.Companion.pushDataToServer(this);
             UploadDataUtil mUploadDataUtil = new UploadDataUtil();
             mUploadDataUtil.startInBackground();
-
         }
     }
 

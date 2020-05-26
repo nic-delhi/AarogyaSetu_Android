@@ -25,5 +25,4 @@ public class DataPoint {
         dl = new ArrayList<>();
         dl.add(new Dl(postData.getBluetoothMacAddress(), postData.getDistance(), postData.getTxPowerLevel(), postData.getTxPower()));
     }
-
 }

@@ -4,7 +4,6 @@ import android.util.Log;
 
 import nic.goi.aarogyasetu.BuildConfig;
 
-
 /**
  * @author chandrapal.yadav
  */

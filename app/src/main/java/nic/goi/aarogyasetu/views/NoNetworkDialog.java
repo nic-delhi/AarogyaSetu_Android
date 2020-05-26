@@ -66,5 +66,3 @@ public class NoNetworkDialog extends DialogFragment {
                 v -> Objects.requireNonNull(getActivity()).startActivityForResult(new Intent(android.provider.Settings.ACTION_SETTINGS), HomeActivity.NO_NETWORK));
     }
 }
-
-

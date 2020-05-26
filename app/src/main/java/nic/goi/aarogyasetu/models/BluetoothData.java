@@ -32,7 +32,6 @@ import javax.crypto.NoSuchPaddingException;
 @Entity(tableName = "nearby_devices_info_table")
 public class BluetoothData {
 
-
     @ColumnInfo(name = "id")
     @SerializedName("id")
     @Expose

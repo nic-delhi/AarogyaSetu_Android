@@ -14,7 +14,6 @@ import nic.goi.aarogyasetu.viewmodel.OnBoardingViewModel
 class WhyNeededFragment : BottomSheetDialogFragment() {
     private lateinit var onboardingViewModel: OnBoardingViewModel
 
-
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
@@ -45,5 +44,4 @@ class WhyNeededFragment : BottomSheetDialogFragment() {
             dismiss()
         }
     }
-
 }

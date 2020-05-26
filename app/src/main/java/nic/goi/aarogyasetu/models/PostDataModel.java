@@ -4,7 +4,6 @@ package nic.goi.aarogyasetu.models;
  * Created by Kshitij Khatri on 21/03/20.
  */
 
-
 import java.util.List;
 
 import com.google.gson.annotations.Expose;

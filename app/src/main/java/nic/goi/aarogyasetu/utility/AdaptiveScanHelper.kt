@@ -7,7 +7,6 @@ import nic.goi.aarogyasetu.firebase.FirebaseRemoteConfigUtil
 import org.jetbrains.annotations.NotNull
 import java.util.*
 
-
 /**
  * This is a helper class used to change BluetoothLE Scan and advertisement mode using and adaptive algorithm
  * @author Punit Chhajer

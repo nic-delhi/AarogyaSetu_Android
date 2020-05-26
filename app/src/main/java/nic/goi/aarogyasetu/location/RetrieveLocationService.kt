@@ -86,16 +86,12 @@ class RetrieveLocationService {
         mLocationRequestHighAccuracy.fastestInterval = FASTEST_INTERVAL
         mLocationRequestHighAccuracy.smallestDisplacement = DISPLACEMENT
 
-
-
         if (ActivityCompat.checkSelfPermission(
                 context,
                 Manifest.permission.ACCESS_FINE_LOCATION
-            ) != PackageManager.PERMISSION_GRANTED
-        ) {
+            ) != PackageManager.PERMISSION_GRANTED ) {
             return
         }
-
 
         mFusedLocationClient.requestLocationUpdates(
             mLocationRequestHighAccuracy, locationCallback,
@@ -106,12 +102,10 @@ class RetrieveLocationService {
     }
 
     fun stopService() {
-
         if (isServiceRunning) {
             mFusedLocationClient.removeLocationUpdates(locationCallback).addOnSuccessListener {
                 isServiceRunning = false
             }
         }
     }
-
 }
