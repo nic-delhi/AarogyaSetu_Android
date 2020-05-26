@@ -138,7 +138,7 @@ dependencies {
 
     implementation 'com.squareup.retrofit2:converter-gson:2.8.1' //for retrofit conversion
 
-    implementation 'com.squareup.okhttp3:logging-interceptor:3.9.0'
+    implementation 'com.squareup.okhttp3:logging-interceptor:4.1.0'
     implementation 'fr.avianey.com.viewpagerindicator:library:2.4.1.1@aar'
 
     implementation 'com.github.bumptech.glide:glide:4.11.0'
