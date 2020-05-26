@@ -110,5 +110,5 @@
     <string name="scan_without_perm_alert">अ‍ॅपला क्यूआर कोड स्कॅनिंगसाठी कॅमेर्‍याची परवानगी आवश्यक आहे.</string>
     <string name="open_settings">सेटिंग्ज उघडा</string>
     <string name="common_scanning_error">काही अपवाद आढळले. कृपया पुन्हा स्कॅन करा</string>
-    <string name="hamburger_menu_intro">हेल्पलाइन, सेटिंग्ज, एफएक्यू, गोपनीयता धोरण, वापराच्या अटी आणि बर्‍याच नवीन वैशिष्ट्यांचा समावेश आहे.</string>
+    <string name="hamburger_menu_intro">हहेल्पलाइन, गोपनीयता धोरण, वापराच्या अटी आणि बरेच काही यासारख्या बरीच नवीन वैशिष्ट्ये येथे आढळू शकतात.</string>
 </resources>

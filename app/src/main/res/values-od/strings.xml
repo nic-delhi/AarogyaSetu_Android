@@ -110,5 +110,5 @@
     <string name="scan_without_perm_alert">QR କୋଡ୍ ସ୍କାନିଂ ପାଇଁ ଆପ୍ କ୍ୟାମେରା ଅନୁମତି ଆବଶ୍ୟକ କରେ</string>
     <string name="open_settings">ସେଟିଂଗୁଡିକ ଖୋଲନ୍ତୁ</string>
     <string name="common_scanning_error">କିଛି ବ୍ୟତିକ୍ରମ ଘଟିଛି | ଦୟାକରି ଆଉଥରେ ସ୍କାନ୍ କରନ୍ତୁ</string>
-    <string name="hamburger_menu_intro">ଅନେକ ନୂତନ ସୁବିଧା ପୁର୍ଣ ହେଲ୍ପଲାଇନ, ସେଟିଂଗୁଡିକ,ସାଧାରଣତଃ ପଚାର ଯାଉଥିବା ପ୍ରଶ୍ନଗୁଡିକ, ଗୋପନୀୟତା ନୀତି, ବ୍ୟବହାର ସର୍ତ୍ତାବଳୀ,ଏଠାରେ ମିଳିପାରିବ</string>
+    <string name="hamburger_menu_intro">ଅନେକ ନୂତନ ସୁବିଧାପୁର୍ଣ ହେଲ୍ପଲାଇନ, ଗୋପନୀୟତା ନୀତି, ବ୍ୟବହାର ସର୍ତ୍ତାବଳୀ ଏବଂ ଅନେକ କିଛି ଏଠାରେ ମିଳିପାରିବ |</string>
 </resources>

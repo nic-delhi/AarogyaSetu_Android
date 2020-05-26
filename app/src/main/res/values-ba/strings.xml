@@ -110,5 +110,5 @@
     <string name="scan_without_perm_alert">অ্যাপ্লিকেশনটির কিউআর কোড স্ক্যান করার জন্য ক্যামেরার অনুমতি প্রয়োজন।</string>
     <string name="open_settings">ওপেন সেটিংস</string>
     <string name="common_scanning_error">কিছু ব্যতিক্রম ঘটেছে দয়া করে আবার স্ক্যান করুন</string>
-    <string name="hamburger_menu_intro">হেল্পলাইন, সেটিংস, প্রায়শই জিজ্ঞাসিত প্রশ্নাবলী, গোপনীয়তা নীতি, ব্যবহারের শর্তাদি এবং আরও অনেকগুলি নতুন বৈশিষ্ট্য এখানে পাওয়া যায়</string>
+    <string name="hamburger_menu_intro">হহেল্পলাইন, গোপনীয়তা নীতি, ব্যবহারের শর্তাদি এবং আরও অনেক কিছু নতুন বৈশিষ্ট্য এখানে পাওয়া যাবে।</string>
 </resources>

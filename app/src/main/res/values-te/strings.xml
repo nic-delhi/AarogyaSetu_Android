@@ -110,5 +110,5 @@
     <string name="scan_without_perm_alert">QR కోడ్ స్కానింగ్ కోసం అనువర్తనానికి కెమెరా అనుమతి అవసరం.</string>
     <string name="open_settings">సెట్టింగులను తెరవండి</string>
     <string name="common_scanning_error">కొన్ని మినహాయింపు సంభవించింది. దయచేసి మళ్ళీ స్కాన్ చేయండి</string>
-    <string name="hamburger_menu_intro">చాలా కొత్త ఫీచర్లు ప్లస్ హెల్ప్‌లైన్, సెట్టింగులు, తరచుగా అడిగే ప్రశ్నలు, గోప్యతా విధానం, ఉపయోగ నిబంధనలు మరియు ఇక్కడ చూడవచ్చు.</string>
+    <string name="hamburger_menu_intro">హెల్ప్‌లైన్, గోప్యతా విధానం, ఉపయోగ నిబంధనలు మరియు మరెన్నో కొత్త ఫీచర్లు ఇక్కడ చూడవచ్చు.</string>
 </resources>
