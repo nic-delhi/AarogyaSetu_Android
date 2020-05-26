@@ -52,7 +52,7 @@ public class CustomScannerActivity extends Activity implements CustomCaptureMana
     private CustomCaptureManager capture;
     private DecoratedBarcodeView barcodeScannerView;
     private View statusContainer;
-    private ImageView profileIcon, statusClose, close;
+    private ImageView statusClose, close;
     private TextView desc, descReason, generateQr;
     private View promptContainer;
 
@@ -71,7 +71,6 @@ public class CustomScannerActivity extends Activity implements CustomCaptureMana
         close = findViewById(R.id.close);
         statusClose = findViewById(R.id.status_close);
         statusContainer = findViewById(R.id.status_container);
-        profileIcon = findViewById(R.id.profile);
         desc = findViewById(R.id.failure_reason);
         descReason = findViewById(R.id.failure_reason_desc);
         generateQr = findViewById(R.id.generate_qr);
@@ -207,7 +206,6 @@ public class CustomScannerActivity extends Activity implements CustomCaptureMana
         if (scannerName != null) {
             name = scannerName;
         }
-        profileIcon.setVisibility(VISIBLE);
         desc.setVisibility(GONE);
         String descVal;
         if (status.equalsIgnoreCase(Constants.HEALTHY)) {
@@ -232,7 +230,6 @@ public class CustomScannerActivity extends Activity implements CustomCaptureMana
     }
 
     private void showExpiredCode() {
-        profileIcon.setVisibility(GONE);
         desc.setVisibility(VISIBLE);
         descReason.setText(LocalizationUtil.getLocalisedString(this, R.string.request_new_code));
         desc.setText(LocalizationUtil.getLocalisedString(this, R.string.expired_code));
@@ -243,7 +240,6 @@ public class CustomScannerActivity extends Activity implements CustomCaptureMana
     }
 
     private void showInvalidStatus() {
-        profileIcon.setVisibility(GONE);
         desc.setVisibility(VISIBLE);
         descReason.setText(LocalizationUtil.getLocalisedString(this, R.string.not_generated_aarogya_setu));
         desc.setText(LocalizationUtil.getLocalisedString(this, R.string.invalid_qr_code));
@@ -254,7 +250,6 @@ public class CustomScannerActivity extends Activity implements CustomCaptureMana
     }
 
     private void showCommonInvalidStatus() {
-        profileIcon.setVisibility(GONE);
         desc.setVisibility(VISIBLE);
         descReason.setText(LocalizationUtil.getLocalisedString(this, R.string.common_scanning_error));
         desc.setText(LocalizationUtil.getLocalisedString(this, R.string.invalid_qr_code));

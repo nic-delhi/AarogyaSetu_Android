@@ -98,7 +98,7 @@
         android:layout_alignParentBottom="true"
         android:layout_centerInParent="true"
         android:layout_gravity="center"
-        android:layout_marginBottom="16dp"
+        android:layout_marginBottom="12dp"
         android:background="@drawable/button_with_dark_stroke"
         android:padding="16dp"
         android:textStyle="bold"

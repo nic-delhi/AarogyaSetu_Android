@@ -46,7 +46,7 @@
             android:id="@+id/status_view"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="80dp"
+            android:layout_marginBottom="65dp"
             android:background="@color/zxing_transparent"
             android:gravity="center"
             android:text="@string/scan_prompt"
