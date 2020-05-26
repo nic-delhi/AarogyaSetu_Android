@@ -110,5 +110,5 @@
     <string name="scan_without_perm_alert">એપ્લિકેશનને QR કોડ સ્કેનીંગ માટે કૅમેરાની પરવાનગીની જરૂર છે.</string>
     <string name="open_settings">સેટિંગ્સ ખોલો</string>
     <string name="common_scanning_error">કેટલાક અપવાદ થયાં. કૃપા કરીને ફરીથી સ્કેન કરો</string>
-    <string name="hamburger_menu_intro">હેલ્પલાઇન, સેટિંગ્સ, વારંવાર પૂછાતા પ્રશ્નો, ગોપનીયતા નીતિ, ઉપયોગની શરતો, અને નવી સુવિધાઓ અહીં મળશે.</string>
+    <string name="hamburger_menu_intro">હેલ્પલાઇન, ગોપનીયતા નીતિ, ઉપયોગની શરતો અને વધુ જેવી ઘણી નવી સુવિધાઓ અહીં મળી શકે છે.</string>
 </resources>

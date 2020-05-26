@@ -110,5 +110,5 @@
     <string name="scan_without_perm_alert">ಕ್ಯೂಆರ್ ಕೋಡ್ ಸ್ಕ್ಯಾನಿಂಗ್ ಮಾಡಲು ಅಪ್ಲಿಕೇಶನ್‌ಗೆ ಕ್ಯಾಮೆರಾ ಅನುಮತಿ ಅಗತ್ಯವಿದೆ.</string>
     <string name="open_settings">ಸೆಟ್ಟಿಂಗ್‌ಗಳನ್ನು ತೆರೆಯಿರಿ</string>
     <string name="common_scanning_error">ಕೆಲವು ವಿನಾಯಿತಿ ಸಂಭವಿಸಿದೆ. ದಯವಿಟ್ಟು ಮತ್ತೆ ಸ್ಕ್ಯಾನ್ ಮಾಡಿ</string>
-    <string name="hamburger_menu_intro">ಬಹಳಷ್ಟು ಹೊಸ ವೈಶಿಷ್ಟ್ಯಗಳು ಮತ್ತು ಸಹಾಯವಾಣಿ, ಸೆಟ್ಟಿಂಗ್‌ಗಳು, ಎಫ್ಎಕ್ಯೂಸ್ಗಳು, ಗೌಪ್ಯತೆ ನೀತಿ, ಬಳಕೆಯ ನಿಯಮಗಳು ಮತ್ತು ಇಲ್ಲಿ ಕಾಣಬಹುದು.</string>
+    <string name="hamburger_menu_intro">ಸಹಾಯವಾಣಿ, ಗೌಪ್ಯತೆ ನೀತಿ, ಬಳಕೆಯ ನಿಯಮಗಳು ಮತ್ತು ಹೆಚ್ಚಿನ ಹೊಸ ವೈಶಿಷ್ಟ್ಯಗಳನ್ನು ಇಲ್ಲಿ ಕಾಣಬಹುದು.</string>
 </resources>

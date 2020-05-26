@@ -33,7 +33,7 @@ import nic.goi.aarogyasetu.utility.CorUtility.Companion.isNetworkAvailable
 class SplashActivity : AppCompatActivity(), SelectLanguageFragment.LanguageChangeListener,
     NoNetworkDialog.Retry, ProviderInstaller.ProviderInstallListener {
     companion object {
-        const val TIME_DELAY: Long = 1000
+        const val TIME_DELAY: Long = 200
         const val REQUEST_CODE_GOOGLE_SERVICE_ERROR: Int = 2000
     }
 

@@ -110,5 +110,5 @@
     <string name="scan_without_perm_alert">QR കോഡ് സ്കാനിംഗിന് അപ്ലിക്കേഷന് ക്യാമറ അനുമതി ആവശ്യമാണ്.</string>
     <string name="open_settings">ക്രമീകരണങ്ങൾ തുറക്കുക</string>
     <string name="common_scanning_error">ചില അപവാദങ്ങൾ സംഭവിച്ചു. ദയവായി വീണ്ടും സ്കാൻ ചെയ്യുക</string>
-    <string name="hamburger_menu_intro">ധാരാളം പുതിയ സവിശേഷതകളും ഹെൽപ്പ്ലൈനും ക്രമീകരണങ്ങളും പതിവുചോദ്യങ്ങളും സ്വകാര്യതാ നയവും ഉപയോഗ നിബന്ധനകളും ഇവിടെ കണ്ടെത്താനാകും.</string>
+    <string name="hamburger_menu_intro">ഹെൽപ്പ്ലൈൻ, സ്വകാര്യതാ നയം, ഉപയോഗ നിബന്ധനകൾ എന്നിവയും അതിലേറെയും പുതിയ സവിശേഷതകൾ ഇവിടെ കാണാം</string>
 </resources>
