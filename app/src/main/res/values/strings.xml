@@ -128,7 +128,7 @@
     <string name="scan_without_perm_alert">App needs Camera permission for QR code scanning.</string>
     <string name="open_settings">Open Settings</string>
     <string name="common_scanning_error">Some error occurred.Please scan again.</string>
-    <string name="hamburger_menu_intro">A lot of new Features plus Helpline, Settings, FAQs, Privacy Policy, Terms of Use, and can be found here.</string>
+    <string name="hamburger_menu_intro">A lot of new Features like Helpline, Privacy Policy, Terms of Use and more can be found here.</string>
     <string name="seconds">sec</string>
     <string name="refresh">REFRESH</string>
 </resources>
