@@ -42,7 +42,7 @@ public class RegisterationData {
         this.n = n;
         this.d = d;
         this.fcmToken = fcmToken;
-        Location location = CoronaApplication.getInstance().getLastKnownLocation();
+        Location location = CoronaApplication.getInstance().getDeviceLastKnownLocation();
         if (location != null) {
             this.lat = String.valueOf(location.getLatitude());
             this.lon = String.valueOf(location.getLongitude());
