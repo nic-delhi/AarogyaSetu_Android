@@ -483,6 +483,7 @@ public class HomeActivity extends AppCompatActivity implements SelectLanguageFra
     @Override
     protected void onResume() {
         super.onResume();
+        updateNavigationDrawer();
         if (CorUtility.arePermissionsGranted(this)) {
             checkBluetooth();
         } else {
@@ -498,6 +499,12 @@ public class HomeActivity extends AppCompatActivity implements SelectLanguageFra
             });
         }
 
+    }
+
+    private void updateNavigationDrawer() {
+        if (homeNavigationView != null) {
+            homeNavigationView.setDetail();
+        }
     }
 
     /**
@@ -700,9 +707,7 @@ public class HomeActivity extends AppCompatActivity implements SelectLanguageFra
                 //do nothing
             }
         }
-        if (homeNavigationView != null) {
-            homeNavigationView.setDetail();
-        }
+        updateNavigationDrawer();
     }
 
     /**
