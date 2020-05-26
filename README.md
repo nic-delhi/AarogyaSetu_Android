@@ -39,8 +39,8 @@ If you want to convey any other feedback regarding the App or Code, then you can
 - AndroidX
 
 ### Configure
-- ./keystore.properties
-- Firebase - google-services.json
+- `./keystore.properties`
+- Firebase - `google-services.json`
 
 **keystore.properties**
 
@@ -101,9 +101,9 @@ key_password = yourPassword
 Setup Firebase for the different environment.
 Download the google-services.json for each of the environments and put it in the corresponding folder.
 
-Debug: ./app/src/debug/google-services.json
+Debug: `./app/src/debug/google-services.json`
 
-Production: ./app/src/google-services.json
+Production: `./app/src/google-services.json`
 
 
 ### Build
