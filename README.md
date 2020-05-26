@@ -2,26 +2,26 @@
 
 ![alt text](./aarogya.png "AarogyaSetu Logo")
 
-Aarogya Setu is a mobile application developed by the Government of India to connect essential health services with the people of India in our combined fight against COVID-19. The App is aimed at augmenting the initiatives of the Government of India, particularly the Department of Health, in proactively reaching out to and informing the users of the app regarding risks, best practices and relevant advisories pertaining to the containment of COVID-19.
+Aarogya Setu is a mobile application developed by the Government of India to connect essential health services with the people of India in our combined fight against COVID-19. This App is aimed at augmenting the initiatives of the Government of India, particularly the Department of Health, in proactively reaching out to and informing the users of the app regarding risks, best practices, and relevant advisories about the containment of COVID-19.
 
 ## Features
-
 Aarogya Setu mobile application provides the following features:
 
-- Minimal and simple user interface, which user can get easily acquainted with
+- A minimal and simple user interface, which user can get easily acquainted with
 - Scan nearby Aarogya Setu user using BluetoothLE Scanner 
 - Advertise to nearby Aarogya Setu user using BluetoothLE GATT Server
-- Update user about nearby activity using Location Service
+- Update user about the nearby activity using Location Service
 - Secure information transfer with SSL Pinning
 - Encrypt any sensitive information
 - Available in 12 different languages
-- Nation wide COVID-19 Statistics
+- Nationwide COVID-19 Statistics
 - Self-Assessment as per MoHFW and ICMR guidelines
 - Emergency Helpline Contact
 - List of ICMR approved labs with COVID-19 testing facilities
 - e-Pass integration
 
-The Aarogya Setu App is being widely used by more than 11 Crore Users. The App has been highly successful in identifying people with high risk of COVID-19 infection and has also played a major role in identifying potential COVID-19 hotspots. In the larger public interest and in order to help the international community in their COVID-19 efforts, the Government of India is opening the source code of this App under Apache License 2.0.
+
+The Aarogya Setu App is being widely used by more than 11 Crore Users. The App has been highly successful in identifying people with a high risk of COVID-19 infection and has also played a major role in identifying potential COVID-19 hotspots. In the larger public interest and to help the international community in their COVID-19 efforts, the Government of India is opening the source code of this App under Apache License 2.0.
 
 If you find any security issues or vulnerabilities in the code, then you can send the details to us at : as-bugbounty@nic.in
 
