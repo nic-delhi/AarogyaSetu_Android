@@ -729,7 +729,7 @@ class CorUtility {
         @JvmStatic
         fun remove30DaysOldData() {
             val dbInstance = nic.goi.aarogyasetu.db.FightCovidDB.getInstance()
-            val timestamp30 = 30 * 24 * 60 * 60
+            val timestamp30 = 30 * 24 * 60 * 60  // timestamp for 30 days
             dbInstance.bluetoothDataDao.deleteXDaysOldData(timestamp30, getCurrentEpochTimeInSec())
         }
     }
