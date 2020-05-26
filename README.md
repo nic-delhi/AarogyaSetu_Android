@@ -1,4 +1,4 @@
-# Aarogya Setu Android app
+# Aarogya Setu Android app.
 
 ![alt text](./aarogya.png "AarogyaSetu Logo")
 
@@ -114,4 +114,6 @@ Production: ./app/src/google-services.json
 <p align="center">
 <a href='https://play.google.com/store/apps/details?id=nic.goi.aarogyasetu'><img alt='Get it on Google Play' src='https://play.google.com/intl/en_us/badges/images/generic/en_badge_web_generic.png' width="50%"/></a>
 </p>
+
+
 
