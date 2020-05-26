@@ -537,6 +537,7 @@ public class HomeActivity extends AppCompatActivity implements SelectLanguageFra
                 openQrScreen();
                 break;
             case R.id.verify_installed_app:
+                loadUrl(BuildConfig.VERIFY_APP_URL);
                 break;
             case R.id.share_data:
                 onUploadDataClicked();
