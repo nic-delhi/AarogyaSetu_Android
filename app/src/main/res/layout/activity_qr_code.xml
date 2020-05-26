@@ -26,7 +26,7 @@
         android:gravity="center"
         android:padding="4dp"
         android:text="@string/refresh"
-        android:textColor="@color/blue"
+        android:textColor="@color/refresh_blue"
         android:textSize="14sp"
         android:textStyle="bold" />
 
@@ -80,6 +80,7 @@
                 android:layout_marginLeft="8dp"
                 android:layout_marginTop="6dp"
                 android:layout_marginRight="8dp"
+                android:textStyle="bold"
                 android:text="@string/scan_to_check_status"
                 android:textAppearance="@style/TextStyleFontSemiBold"
                 android:textColor="@color/black"

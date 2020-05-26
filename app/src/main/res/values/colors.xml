@@ -8,6 +8,7 @@
     <color name="transparent">#00000000</color>
     <color name="black_10_op">#1A000000</color>
     <color name="divider">#E9E9E9</color>
+    <color name="refresh_blue">#008CFF</color>
 
     <color name="onboarding_text_color">#242833</color>
 
