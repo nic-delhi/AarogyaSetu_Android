@@ -47,6 +47,17 @@
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+            <intent-filter android:autoVerify="true">
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data
+                    android:host="www.aarogyasetu.gov.in"
+                    android:pathPrefix="/app"
+                    android:scheme="https" />
+            </intent-filter>
         </activity>
         <activity
             android:name="nic.goi.aarogyasetu.views.PermissionActivity"
