@@ -23,6 +23,7 @@ public class NetworkClient {
     /*
     This public static method will return Retrofit client
     anywhere in the appplication
+    Configuring SSL Pinning
     */
     public static Retrofit getRetrofitClient(boolean zip, boolean isExecutor, boolean shouldUseSSL, String baseURLOverride,
                                              boolean needsAuthenticator) {
