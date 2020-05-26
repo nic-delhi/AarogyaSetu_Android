@@ -14,7 +14,19 @@ Aarogya Setu mobile application provides the following features:
 - Update user about nearby activity using Location Service
 - Secure information transfer with SSL Pinning
 - Encrypt any sensitive information
-- Available in 11 different languages
+- Available in 12 different languages
+- Nation wide COVID-19 Statistics
+- Self-Assessment as per MoHFW and ICMR guidelines
+- Emergency Helpline Contact
+- List of ICMR approved labs with COVID-19 testing facilities
+- e-Pass integration
+
+The Aarogya Setu App is being widely used by more than 11 Crore Users. The App has been highly successful in identifying people with high risk of COVID-19 infection and has also played a major role in identifying potential COVID-19 hotspots. In the larger public interest and in order to help the international community in their COVID-19 efforts, the Government of India is opening the source code of this App under Apache License 2.0.
+
+If you find any security issues or vulnerabilities in the code, then you can send the details to us at : as-bugbounty@nic.in
+If you want to convey any other feedback regarding the App or Code, then you can send it to us at : support.aarogyasetu@nic.in
+
+
 
 ## Setup
 
@@ -73,7 +85,6 @@ call_us_url=tel:1075
 faq_url=<Your URL>
 privacy_policy_url=<Your URL>
 tnc_url=<Your URL>
-verify_app_url=<Your URL>
 
 # APK sign Keystore details:
 key_store_cetificate = yourCertificate.jks
