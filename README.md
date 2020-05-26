@@ -85,6 +85,7 @@ call_us_url=tel:1075
 faq_url=<Your URL>
 privacy_policy_url=<Your URL>
 tnc_url=<Your URL>
+verify_app_url=<Your URL>
 
 # APK sign Keystore details:
 key_store_cetificate = yourCertificate.jks
