@@ -110,7 +110,7 @@
     <string name="app_version">App Version %s</string>
     <string name="scan_prompt">Scan QR Code to check health status of someone else</string>
     <string name="few_seconds">few seconds</string>
-    <string name="minutes">min</string>
+    <string name="minutes" translatable="false">min</string>
     <string name="scan_to_check_status">Scan QR Code to get my health status</string>
     <string name="tap_to_refresh">Tap to Refresh QR Code</string>
     <string name="qr_code_valid_for">QR code valid for</string>
