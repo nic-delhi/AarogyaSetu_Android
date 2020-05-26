@@ -74,6 +74,7 @@ android {
         buildConfigField "String", "FAQ_URL", "\"${keystoreProperties['faq_url']}\""
         buildConfigField "String", "PRIVACY_POLICY_URL", "\"${keystoreProperties['privacy_policy_url']}\""
         buildConfigField "String", "TNC_URL", "\"${keystoreProperties['tnc_url']}\""
+        buildConfigField "String", "VERIFY_APP_URL", "\"${keystoreProperties['verify_app_url']}\""
 
 
         applicationId "nic.goi.aarogyasetu"
