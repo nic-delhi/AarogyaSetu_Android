@@ -26,7 +26,7 @@ import nic.goi.aarogyasetu.utility.CorUtility;
 public class CoronaApplication extends Application implements Configuration.Provider {
 
     public static CoronaApplication instance;
-     static Location bestLocation = null;
+     static Location lastKnownLocation = null;
     
     public static CoronaApplication getInstance() {
         return instance;
@@ -50,10 +50,15 @@ public class CoronaApplication extends Application implements Configuration.Prov
 
     public void setBestLocation(Location location)
     {
-        bestLocation = location;
+        lastKnownLocation = location;
     }
 
-    public Location getLastKnownLocation() {
+    public Location getAppLastLocation()
+    {
+        return lastKnownLocation;
+    }
+
+    public Location getDeviceLastKnownLocation() {
 
         if(CorUtility.Companion.isLocationPermissionAvailable(CoronaApplication.getInstance()))
         {
@@ -65,22 +70,22 @@ public class CoronaApplication extends Application implements Configuration.Prov
                     if (l == null) {
                         continue;
                     }
-                    if (bestLocation == null || l.getAccuracy() > bestLocation.getAccuracy()) {
-                        bestLocation = l;
+                    if (lastKnownLocation == null || l.getAccuracy() > lastKnownLocation.getAccuracy()) {
+                        lastKnownLocation = l;
                     }
                 }catch (SecurityException e){
 
                 }
             }
         }
-        return bestLocation;
+        return lastKnownLocation;
     }
 
     public static void warmUpLocation() {
         if (CorUtility.Companion.isLocationPermissionAvailable(CoronaApplication.getInstance())) {
             LocationServices.getFusedLocationProviderClient(CoronaApplication.getInstance()).getLastLocation().addOnSuccessListener(location -> {
                 if (location != null) {
-                    bestLocation = location;
+                    lastKnownLocation = location;
                 }
             });
         }

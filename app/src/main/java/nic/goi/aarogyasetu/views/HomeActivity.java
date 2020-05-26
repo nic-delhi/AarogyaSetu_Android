@@ -132,7 +132,7 @@ public class HomeActivity extends AppCompatActivity implements SelectLanguageFra
         @JavascriptInterface
         public String getHeaders() {
             Map<String, String> crunchifyMap = CorUtility.Companion.getHeaders(false);
-            final Location lastLocation = CoronaApplication.getInstance().getLastKnownLocation();
+            final Location lastLocation = CoronaApplication.getInstance().getDeviceLastKnownLocation();
             if (lastLocation != null) {
                 crunchifyMap.put(Constants.LATITUDE, String.valueOf(lastLocation.getLatitude()));
                 crunchifyMap.put(Constants.LONGITUDE, String.valueOf(lastLocation.getLongitude()));
