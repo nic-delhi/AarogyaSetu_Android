@@ -121,7 +121,7 @@ public class GattClient {
      */
 
     private void storeDetectedUserDeviceInDB(BluetoothModel bluetoothModel) {
-        Location loc = CoronaApplication.getInstance().getLastKnownLocation();
+        Location loc = CoronaApplication.getInstance().getDeviceLastKnownLocation();
         if (loc != null) {
             if (bluetoothModel != null) {
                 BluetoothData bluetoothData = new BluetoothData(bluetoothModel.getAddress(), bluetoothModel.getRssi(),

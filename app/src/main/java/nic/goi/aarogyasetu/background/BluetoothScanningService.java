@@ -229,16 +229,17 @@ public class BluetoothScanningService extends Service implements AdaptiveScanHel
      * @param bluetoothModel The newly detected device nearby
      */
     void storeDetectedUserDeviceInDB(BluetoothModel bluetoothModel) {
-        Location loc = CoronaApplication.getInstance().getLastKnownLocation();
-        if (loc != null) {
             if (bluetoothModel != null) {
                 BluetoothData bluetoothData = new BluetoothData(bluetoothModel.getAddress(), bluetoothModel.getRssi(),
                         bluetoothModel.getTxPower(), bluetoothModel.getTxPowerLevel());
-                bluetoothData.setLatitude(loc.getLatitude());
-                bluetoothData.setLongitude(loc.getLongitude());
+                Location loc = CoronaApplication.getInstance().getAppLastLocation();
+                if (loc != null) {
+                    bluetoothData.setLatitude(loc.getLatitude());
+                    bluetoothData.setLongitude(loc.getLongitude());
+                }
                 DBManager.insertNearbyDetectedDeviceInfo(bluetoothData);
             }
-        }
+
     }
 
     @Override
