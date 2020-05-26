@@ -112,13 +112,6 @@ class CorUtility {
                                 parseForceUpgradeJson(jsonObject.get(Constants.FORCE_UPGRADE).toString())
                             }
 
-                            if (jsonObject.has(SharedPrefsConstants.PERSISTANCE_DAYS)) {
-                                SharedPref.setStringParams(
-                                    CoronaApplication.instance,
-                                    SharedPrefsConstants.PERSISTANCE_DAYS,
-                                    jsonObject.get(SharedPrefsConstants.PERSISTANCE_DAYS).toString()
-                                )
-                            }
                         } catch (e: java.lang.Exception) {
                             //do nothing
                         }
@@ -736,13 +729,7 @@ class CorUtility {
         @JvmStatic
         fun remove30DaysOldData() {
             val dbInstance = nic.goi.aarogyasetu.db.FightCovidDB.getInstance()
-            val timestamp30 = Integer.parseInt(
-                SharedPref.getStringParams(
-                    CoronaApplication.instance,
-                    SharedPrefsConstants.PERSISTANCE_DAYS, Constants.VALUE_30
-                )
-            ) * 24 * 60 * 60
-
+            val timestamp30 = 30 * 24 * 60 * 60
             dbInstance.bluetoothDataDao.deleteXDaysOldData(timestamp30, getCurrentEpochTimeInSec())
         }
     }
