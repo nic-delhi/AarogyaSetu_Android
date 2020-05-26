@@ -70,8 +70,8 @@ Kunal Prasad
 Manuj Porwal
 Naveen Setia  
 Niharika Arora 
-Punit Chajjer
-Praveen Bhagat  
+Praveen Bhagat
+Punit Chhajer
 Radha Krishan  
 Sanket Bansal  
 Saurav Yadav  
