@@ -102,7 +102,6 @@ public class HomeActivity extends AppCompatActivity implements SelectLanguageFra
     public static final String DO_NOT_SHOW_BACK = "do_not_show_back";
 
     public static final Integer NO_NETWORK = 1000;
-    public static final Integer UPI_PAYMENT = 1001;
 
     private static final int REQUEST_CODE_PERMISSION = 642;
     private static final int REQUEST_CODE_FLEXIBLE_UPDATE = 1734;
@@ -156,12 +155,6 @@ public class HomeActivity extends AppCompatActivity implements SelectLanguageFra
             }
         }
 
-
-        @JavascriptInterface
-        public void payUsingUpi(String amount, String upiId, String name, String note) {
-            startUPIActivity(amount, upiId, name, note);
-            AnalyticsUtils.sendBasicEvent(EventNames.EVENT_UPI_CLICKED, ScreenNames.SCREEN_DASHBOARD);
-        }
 
         @JavascriptInterface
         public void copyToClipboard(String text) {
@@ -771,16 +764,7 @@ public class HomeActivity extends AppCompatActivity implements SelectLanguageFra
                 }
 
             }
-        } else if (requestCode == UPI_PAYMENT) {
-            List<String> dataList = new ArrayList<>();
-            if ((Activity.RESULT_OK == resultCode || resultCode == 11) && data != null) {
-                String trxt = data.getStringExtra("response");
-                dataList.add(trxt);
-            } else {
-                dataList.add("nothing");
-            }
-            upiPaymentDataOperation(dataList);
-        } else if (requestCode == REQUEST_CODE_IMMEDIATE_UPDATE) {
+        }  else if (requestCode == REQUEST_CODE_IMMEDIATE_UPDATE) {
             finish();
         } else if (requestCode == REQUEST_CODE_FLEXIBLE_UPDATE) {
             //todo handle this accordingly for Immediate when user cancelled
@@ -848,87 +832,6 @@ public class HomeActivity extends AppCompatActivity implements SelectLanguageFra
         CorUtility.enableLocation(this, aBoolean -> null);
     }
 
-    public static String createUpiTxnId() {
-        Random rnd = new Random();
-        int number = rnd.nextInt(999999);
-        return String.format(Locale.getDefault(), "%06d", number);
-    }
-
-    /**
-     * This method is used to start UPI payment.
-     *
-     * @param amount: Amount of money which user what to transfer.
-     * @param upiId:  The UPI ID of the recipient of the transfer.
-     * @param name:   The name of the recipient of the transfer.
-     * @param note:   The note to describe intention of the transfer.
-     */
-    private void startUPIActivity(String amount, String upiId, String name, String note) {
-        Uri uri = Uri.parse("upi://pay").buildUpon()
-                .appendQueryParameter("pa", upiId)
-                .appendQueryParameter("pn", name)
-                .appendQueryParameter("tn", note)
-                .appendQueryParameter("tr", createUpiTxnId())
-                .appendQueryParameter("am", !TextUtils.isEmpty(amount) ? amount : "")
-                .appendQueryParameter("cu", "INR")
-                .build();
-        Intent upiPayIntent = new Intent(Intent.ACTION_VIEW);
-        upiPayIntent.setData(uri);
-
-        // will always show a dialog to user to choose an app
-        Intent chooser = Intent.createChooser(upiPayIntent, "Pay with");
-
-        // check if intent resolves
-        if (null != chooser.resolveActivity(getPackageManager())) {
-            startActivityForResult(chooser, UPI_PAYMENT);
-        } else {
-            Toast.makeText(this, "No UPI app found, please install one to continue",
-                    Toast.LENGTH_SHORT).show();
-        }
-    }
-
-    /**
-     * This method is used to define success and failure of the UPI payment.
-     *
-     * @param data: The data received from the UPI payment application.
-     */
-    private void upiPaymentDataOperation(List<String> data) {
-        try {
-            if (CorUtility.isNetworkAvailable(HomeActivity.this)) {
-                String str = "discard";
-                String paymentCancel = "";
-                if (data != null && data.size() > 0) str = data.get(0);
-                String status = "";
-                if (str != null && !str.isEmpty()) {
-                    String[] response = str.split("&");//.dropLastWhile { it.isEmpty() }.toTypedArray()
-                    for (String value : response) {
-                        if (value.contains("=")) {
-                            String[] equalStr = value.replaceAll("[\\s]", "").split("=");
-                            if (equalStr.length >= 2) {
-                                if (equalStr[0].equalsIgnoreCase("Status")) {
-                                    status = equalStr[1].toLowerCase();
-                                }
-                            } else {
-                                paymentCancel = "Payment cancelled by user.";
-                            }
-                        }
-                    }
-                    if (status.equalsIgnoreCase("success")) {
-                        //Code to handle successful transaction here.
-                        Toast.makeText(this, "Transaction successful.", Toast.LENGTH_SHORT).show();
-                    } else if ("Payment cancelled by user.".equalsIgnoreCase(paymentCancel)) {
-                        Toast.makeText(this, "Payment cancelled by user.", Toast.LENGTH_SHORT).show();
-                    } else {
-                        Toast.makeText(this, "Transaction failed. Please try again", Toast.LENGTH_SHORT).show();
-                    }
-                } else {
-                    Toast.makeText(this, "Internet connection is not available. Please check and try again",
-                            Toast.LENGTH_SHORT).show();
-                }
-            }
-        } catch (Exception ex) {
-            CorUtilityKt.reportException(ex);
-        }
-    }
 
     private void notifyUserForFail() {
         Snackbar.make(webView, Constants.DOWNLOAD_FAIL, Snackbar.LENGTH_INDEFINITE).setAction(R.string.message_failed_tap_to_retry, v -> checkForUpdates()).show();
