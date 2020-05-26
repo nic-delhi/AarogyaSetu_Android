@@ -227,6 +227,7 @@ public class HomeActivity extends AppCompatActivity implements SelectLanguageFra
         IntentFilter filter = new IntentFilter(BluetoothAdapter.ACTION_STATE_CHANGED);
         registerReceiver(mBluetoothStatusChangeReceiver, filter);
         handleShare();
+        checkForUpdates();
 
         doNotShowBack = getIntent().getBooleanExtra(HomeActivity.DO_NOT_SHOW_BACK, false);
 
@@ -257,7 +258,6 @@ public class HomeActivity extends AppCompatActivity implements SelectLanguageFra
             SharedPref.setStringParams(this, SharedPrefsConstants.APPLICATION_INSTALL_TIME, String.valueOf(System.currentTimeMillis()));
         }
 
-        checkForUpdates();
         checkOldData();
     }
 
