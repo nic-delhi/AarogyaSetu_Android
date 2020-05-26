@@ -86,6 +86,7 @@ import nic.goi.aarogyasetu.views.sync.SyncDataDialog;
 import nic.goi.aarogyasetu.views.sync.SyncDataStateDialog;
 
 import static nic.goi.aarogyasetu.utility.LocalizationUtil.getLocalisedString;
+
 /**
  * @author Chandrapal Yadav
  * @author Niharika.Arora
@@ -187,12 +188,6 @@ public class HomeActivity extends AppCompatActivity implements SelectLanguageFra
     };
     private FullScreenVideoWebChromeClient fullScreenVideoWebChromeClient;
 
-    private void startOnBoarding() {
-        Intent intent = new Intent(HomeActivity.this, OnboardingActivity.class);
-        intent.putExtra(Constants.FINISH, true);
-        startActivity(intent);
-    }
-
     private void disableScreenShot() {
         try {
             getWindow().setFlags(WindowManager.LayoutParams.FLAG_SECURE, WindowManager.LayoutParams.FLAG_SECURE);
@@ -232,9 +227,6 @@ public class HomeActivity extends AppCompatActivity implements SelectLanguageFra
         IntentFilter filter = new IntentFilter(BluetoothAdapter.ACTION_STATE_CHANGED);
         registerReceiver(mBluetoothStatusChangeReceiver, filter);
         handleShare();
-
-        final View onboarding = findViewById(R.id.onboarding);
-        onboarding.setOnClickListener(v -> startOnBoarding());
 
         doNotShowBack = getIntent().getBooleanExtra(HomeActivity.DO_NOT_SHOW_BACK, false);
 
