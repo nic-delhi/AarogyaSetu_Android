@@ -11,5 +11,4 @@ public class FCMTokenObject{
     public FCMTokenObject(String ft){
         this.ft = ft;
     }
-
 }

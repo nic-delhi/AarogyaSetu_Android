@@ -24,7 +24,6 @@ class FirstOnBoardIntroFragment : Fragment() {
         val wouldYouLikeTo: TextView = view.findViewById(R.id.tv_would_you_like_to) as TextView
         wouldYouLikeTo.text = getLocalisedString(view.context, R.string.would_you_like_to)
 
-
         return view
     }
 }

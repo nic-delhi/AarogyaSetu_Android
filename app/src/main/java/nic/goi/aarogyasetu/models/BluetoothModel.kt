@@ -1,6 +1,5 @@
 package nic.goi.aarogyasetu.models
 
-
 data class BluetoothModel(
     val name: String?,
     val address: String?,

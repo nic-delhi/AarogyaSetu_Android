@@ -12,10 +12,6 @@ public class SharedPref {
     private static final String PREFS_NAME = "FightCorona_prefs";
     private static SharedPreferences _sharedPreferences = null;
 
-
-    private SharedPref() {
-    }
-
     public static SharedPreferences getInstance(Context aContext) {
         if (_sharedPreferences == null)
             _sharedPreferences = aContext.getSharedPreferences(PREFS_NAME, Context.MODE_PRIVATE);
@@ -29,24 +25,19 @@ public class SharedPref {
     }
 
     public static void setStringParams(Context aContext, String a_ParamName, String a_ParamValue) {
-
         SharedPreferences.Editor editor = getInstance(aContext).edit();
         editor.putString(a_ParamName, a_ParamValue);
         editor.commit();
-
     }
 
     public static void setBooleanParams(Context aContext, String a_ParamName, boolean a_ParamValue) {
-
         SharedPreferences.Editor editor = getInstance(aContext).edit();
         editor.putBoolean(a_ParamName, a_ParamValue);
         editor.apply();
-
     }
 
     public static boolean getBooleanParams(Context aContext, String a_ParamName) {
         return getInstance(aContext).getBoolean(a_ParamName, false);
-
     }
 
     public static boolean hasKey(Context context, String key) {

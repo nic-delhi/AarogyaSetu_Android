@@ -10,7 +10,7 @@ import nic.goi.aarogyasetu.utility.Constants
 import nic.goi.aarogyasetu.utility.CorUtility
 
 /**
- *  @author Damanpreet.Singh
+ * @author Damanpreet.Singh
  * @author Niharika.Arora
  */
 class BackgroundWorker(context: Context, workerParams: WorkerParameters) : Worker(context, workerParams) {
@@ -28,7 +28,6 @@ class BackgroundWorker(context: Context, workerParams: WorkerParameters) : Worke
         }
         CorUtility.remove30DaysOldData()
         return Result.success()
-
     }
 
     private fun startService(intent: Intent) {

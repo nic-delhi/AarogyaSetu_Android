@@ -1,6 +1,5 @@
 package nic.goi.aarogyasetu.utility;
 
-
 import android.os.Build;
 import android.util.Base64;
 

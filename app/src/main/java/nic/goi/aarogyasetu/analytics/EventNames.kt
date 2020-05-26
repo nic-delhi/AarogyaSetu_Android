@@ -16,7 +16,6 @@ object EventNames {
 
     const val EVENT_USER_SESSION_EXPIRED = "sessionExpired"
 
-
     const val EVENT_OPEN_UPLOAD_CHOICE = "uploadChoiceScreen"
     const val EVENT_OPEN_UPLOAD_CONSENT_SCREEN = "uploadConsentScreen"
     const val EVENT_OPEN_SPLASH = "splashScreen"

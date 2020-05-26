@@ -123,7 +123,6 @@ public class BluetoothScanningService extends Service implements AdaptiveScanHel
 
     }
 
-
     private void createNotificationChannel() {
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
             CharSequence name = getString(R.string.app_name);
@@ -141,7 +140,6 @@ public class BluetoothScanningService extends Service implements AdaptiveScanHel
             }
         }
     }
-
 
     /**
      * Method to clear list after specified scan poll time for same device scanning
@@ -165,20 +163,18 @@ public class BluetoothScanningService extends Service implements AdaptiveScanHel
         }
         timer = new Timer();
         timer.scheduleAtFixedRate(new TimerTask() {
-
-                                      @Override
-                                      public void run() {
-                                          if (isBluetoothAvailable()) {
-                                              mGattServer.advertise(mAdaptiveScanHelper.getAdvertisementMode());
-                                              discover(mAdaptiveScanHelper.getScanMode());
-                                          }
-                                      }
-                                  },
-                0,
-                FIVE_MINUTES);
+            @Override
+            public void run() {
+                if (isBluetoothAvailable()) {
+                    mGattServer.advertise(mAdaptiveScanHelper.getAdvertisementMode());
+                    discover(mAdaptiveScanHelper.getScanMode());
+                }
+            }
+        },
+        0,
+        FIVE_MINUTES);
         mAdaptiveScanHelper.start();
     }
-
 
     /**
      * Start scanning BLE devices with provided scan mode
@@ -229,17 +225,16 @@ public class BluetoothScanningService extends Service implements AdaptiveScanHel
      * @param bluetoothModel The newly detected device nearby
      */
     void storeDetectedUserDeviceInDB(BluetoothModel bluetoothModel) {
-            if (bluetoothModel != null) {
-                BluetoothData bluetoothData = new BluetoothData(bluetoothModel.getAddress(), bluetoothModel.getRssi(),
-                        bluetoothModel.getTxPower(), bluetoothModel.getTxPowerLevel());
-                Location loc = CoronaApplication.getInstance().getAppLastLocation();
-                if (loc != null) {
-                    bluetoothData.setLatitude(loc.getLatitude());
-                    bluetoothData.setLongitude(loc.getLongitude());
-                }
-                DBManager.insertNearbyDetectedDeviceInfo(bluetoothData);
+        if (bluetoothModel != null) {
+            BluetoothData bluetoothData = new BluetoothData(bluetoothModel.getAddress(), bluetoothModel.getRssi(),
+                bluetoothModel.getTxPower(), bluetoothModel.getTxPowerLevel());
+            Location loc = CoronaApplication.getInstance().getAppLastLocation();
+            if (loc != null) {
+                bluetoothData.setLatitude(loc.getLatitude());
+                bluetoothData.setLongitude(loc.getLongitude());
             }
-
+            DBManager.insertNearbyDetectedDeviceInfo(bluetoothData);
+        }
     }
 
     @Override
@@ -321,7 +316,6 @@ public class BluetoothScanningService extends Service implements AdaptiveScanHel
             //As this exception doesn't matter for user,service already destroying,so just logging this on firebase
             CorUtilityKt.reportException(ex);
         }
-
     }
 
     public static boolean isBluetoothAvailable() {
