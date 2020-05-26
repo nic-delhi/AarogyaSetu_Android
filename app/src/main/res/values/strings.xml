@@ -129,6 +129,6 @@
     <string name="open_settings">Open Settings</string>
     <string name="common_scanning_error">Some error occurred.Please scan again.</string>
     <string name="hamburger_menu_intro">A lot of Features like Helpline, Privacy Policy, Terms of Use and more can be found here.</string>
-    <string name="seconds">sec</string>
-    <string name="refresh">REFRESH</string>
+    <string name="seconds" translatable="false">sec</string>
+    <string name="refresh" translatable="false">Refresh</string>
 </resources>
