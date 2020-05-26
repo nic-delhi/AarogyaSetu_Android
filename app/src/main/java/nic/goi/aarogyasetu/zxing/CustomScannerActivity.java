@@ -208,8 +208,8 @@ public class CustomScannerActivity extends Activity implements CustomCaptureMana
 
     private void showPersonStatus(String scannerName, String mobileNo, String status) {
         String name = "";
-        if (scannerName != null) {
-            name = scannerName;
+        if (!TextUtils.isEmpty(scannerName)) {
+            name = CorUtility.Companion.toTitleCase(scannerName);
         }
         desc.setVisibility(GONE);
         String descVal;

@@ -195,7 +195,7 @@ public class QrActivity extends AppCompatActivity implements QrCodeListener, QrP
             phoneView.setText(mobileNo);
         }
         if (!TextUtils.isEmpty(name)) {
-            nameView.setText(name);
+            nameView.setText(CorUtility.Companion.toTitleCase(name));
         }
     }
 
