@@ -22,7 +22,7 @@
         android:layout_marginStart="8dp"
         android:layout_marginTop="12dp"
         android:contentDescription="@null"
-        android:src="@drawable/ic_profile_icon"
+        android:src="@drawable/ic_grocery_male"
         android:visibility="visible"
         tools:visibility="visible" />
 
@@ -63,7 +63,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="4dp"
-            android:textColor="@android:color/black"
+            android:textColor="@android:color/white"
             android:textSize="16sp"
             android:visibility="visible"
             tools:text="Please request the person to generate new code"

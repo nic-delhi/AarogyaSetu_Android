@@ -88,16 +88,6 @@
             <include
                 android:id="@+id/scan_validity_container"
                 layout="@layout/scan_validity_view" />
-
-            <ImageView
-                android:id="@+id/app_icon"
-                android:layout_width="40dp"
-                android:layout_height="40dp"
-                android:layout_below="@+id/scan_validity_container"
-                android:layout_centerInParent="true"
-                android:layout_marginTop="6dp"
-                android:contentDescription="@null"
-                android:src="@drawable/qr_app_logo" />
         </RelativeLayout>
     </androidx.core.widget.NestedScrollView>
 
@@ -111,9 +101,10 @@
         android:layout_marginBottom="16dp"
         android:background="@drawable/button_with_dark_stroke"
         android:padding="16dp"
+        android:textStyle="bold"
         android:text="@string/scan_other_s_qr_code"
         android:textColor="@color/black"
-        android:textSize="14sp" />
+        android:textSize="16sp" />
 
     <ProgressBar
         android:id="@+id/progress"

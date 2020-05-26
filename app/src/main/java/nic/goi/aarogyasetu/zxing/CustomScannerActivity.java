@@ -66,7 +66,7 @@ public class CustomScannerActivity extends Activity implements CustomCaptureMana
         initCapture(savedInstanceState);
     }
 
-    private void configureViews(){
+    private void configureViews() {
         barcodeScannerView = findViewById(R.id.barcode_scanner);
         close = findViewById(R.id.close);
         statusClose = findViewById(R.id.status_close);
@@ -166,8 +166,6 @@ public class CustomScannerActivity extends Activity implements CustomCaptureMana
             showExpiredCode();
         } catch (NoSuchAlgorithmException | DecodingException | MalformedJwtException exception) {
             showInvalidStatus();
-        } catch (SignatureException | InvalidKeySpecException exception) {
-            //todo add firebase String here and add text to status dialog
         } catch (Exception exception) {
             showCommonInvalidStatus();
         }
@@ -229,6 +227,7 @@ public class CustomScannerActivity extends Activity implements CustomCaptureMana
             descReason.setText(descVal);
             statusContainer.setBackgroundTintList(ContextCompat.getColorStateList(this, R.color.chat_bubble_red));
         }
+        descReason.setTextColor(ContextCompat.getColorStateList(this, R.color.white));
         statusClose.setImageTintList(ContextCompat.getColorStateList(this, R.color.white));
     }
 
@@ -238,6 +237,7 @@ public class CustomScannerActivity extends Activity implements CustomCaptureMana
         descReason.setText(LocalizationUtil.getLocalisedString(this, R.string.request_new_code));
         desc.setText(LocalizationUtil.getLocalisedString(this, R.string.expired_code));
         desc.setTextColor(ContextCompat.getColorStateList(this, R.color.chat_title_orange));
+        descReason.setTextColor(ContextCompat.getColorStateList(this, R.color.black));
         statusContainer.setBackgroundTintList(ContextCompat.getColorStateList(this, R.color.chat_bubble_light_orange));
         statusClose.setImageTintList(ContextCompat.getColorStateList(this, R.color.chat_close_dark));
     }
@@ -248,6 +248,7 @@ public class CustomScannerActivity extends Activity implements CustomCaptureMana
         descReason.setText(LocalizationUtil.getLocalisedString(this, R.string.not_generated_aarogya_setu));
         desc.setText(LocalizationUtil.getLocalisedString(this, R.string.invalid_qr_code));
         desc.setTextColor(ContextCompat.getColorStateList(this, R.color.chat_title_red));
+        descReason.setTextColor(ContextCompat.getColorStateList(this, R.color.black));
         statusContainer.setBackgroundTintList(null);
         statusClose.setImageTintList(ContextCompat.getColorStateList(this, R.color.chat_close_dark));
     }
@@ -258,6 +259,7 @@ public class CustomScannerActivity extends Activity implements CustomCaptureMana
         descReason.setText(LocalizationUtil.getLocalisedString(this, R.string.common_scanning_error));
         desc.setText(LocalizationUtil.getLocalisedString(this, R.string.invalid_qr_code));
         desc.setTextColor(ContextCompat.getColorStateList(this, R.color.chat_title_red));
+        descReason.setTextColor(ContextCompat.getColorStateList(this, R.color.black));
         statusContainer.setBackgroundTintList(null);
         statusClose.setImageTintList(ContextCompat.getColorStateList(this, R.color.chat_close_dark));
     }
