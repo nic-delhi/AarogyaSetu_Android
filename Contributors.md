@@ -13,8 +13,8 @@ Dr.Seema Khanna
 Industry and Academia Leadership
 ---------------------------------
 Dr.Lalitesh Katragadda  
-Prof. V Kamakoti
-Deep Kalra
+Prof. V Kamakoti  
+Deep Kalra  
 Prof. Amrutur Bharadawaj  
 Vikalp Sahni  
 Rahul Goyal  
