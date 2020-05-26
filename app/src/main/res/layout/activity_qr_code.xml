@@ -80,11 +80,12 @@
                 android:layout_marginLeft="8dp"
                 android:layout_marginTop="6dp"
                 android:layout_marginRight="8dp"
-                android:textStyle="bold"
+                android:gravity="center"
                 android:text="@string/scan_to_check_status"
                 android:textAppearance="@style/TextStyleFontSemiBold"
                 android:textColor="@color/black"
-                android:textSize="16sp" />
+                android:textSize="16sp"
+                android:textStyle="bold" />
 
             <include
                 android:id="@+id/scan_validity_container"
@@ -102,10 +103,10 @@
         android:layout_marginBottom="12dp"
         android:background="@drawable/button_with_dark_stroke"
         android:padding="16dp"
-        android:textStyle="bold"
         android:text="@string/scan_other_s_qr_code"
         android:textColor="@color/black"
-        android:textSize="16sp" />
+        android:textSize="16sp"
+        android:textStyle="bold" />
 
     <ProgressBar
         android:id="@+id/progress"
