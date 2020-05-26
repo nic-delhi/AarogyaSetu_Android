@@ -25,7 +25,7 @@
         android:layout_marginEnd="10dp"
         android:gravity="center"
         android:textAppearance="@style/TextStyleFontSemiBold"
-        android:textColor="@android:color/holo_green_dark"
+        android:textColor="@color/chat_bubble_green"
         android:textSize="12sp"
         android:textStyle="bold"
         tools:text="60 min" />
