@@ -129,7 +129,7 @@ public class QrActivity extends AppCompatActivity implements QrCodeListener, QrP
         findViewById(R.id.scan_validity_container).setVisibility(View.GONE);
         SharedPref.setStringParams(CoronaApplication.instance, SharedPrefsConstants.QR_TEXT, Constants.EMPTY);
         findViewById(R.id.refresh_container).setVisibility(View.VISIBLE);
-        qrCodeView.setAlpha(0.3f);
+        qrCodeView.setAlpha(0.1f);
     }
 
     private void onRefreshClick() {
