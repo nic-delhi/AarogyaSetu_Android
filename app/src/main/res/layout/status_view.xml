@@ -36,7 +36,7 @@
         android:layout_toStartOf="@+id/status_close"
         android:orientation="vertical">
 
-        <TextView
+        <androidx.appcompat.widget.AppCompatTextView
             android:id="@+id/failure_reason"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -47,15 +47,15 @@
             tools:text="Expired QR Code"
             tools:visibility="gone" />
 
-        <TextView
+        <androidx.appcompat.widget.AppCompatTextView
             android:id="@+id/failure_reason_desc"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="4dp"
             android:textColor="@android:color/white"
             android:textSize="16sp"
-            android:visibility="visible"
             android:textStyle="bold"
+            android:visibility="visible"
             tools:text="Please request the person to generate new code"
             tools:visibility="visible" />
     </LinearLayout>
