@@ -9,6 +9,7 @@ import android.os.CountDownTimer;
 import android.text.TextUtils;
 import android.text.format.Time;
 import android.view.View;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.ProgressBar;
 import android.widget.TextView;
@@ -29,18 +30,19 @@ import java.security.spec.InvalidKeySpecException;
 import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.Jws;
 import io.jsonwebtoken.JwtException;
+import io.jsonwebtoken.security.SignatureException;
 import nic.goi.aarogyasetu.CoronaApplication;
 import nic.goi.aarogyasetu.R;
+import nic.goi.aarogyasetu.listener.QrCodeListener;
+import nic.goi.aarogyasetu.listener.QrPublicKeyListener;
 import nic.goi.aarogyasetu.prefs.SharedPref;
 import nic.goi.aarogyasetu.prefs.SharedPrefsConstants;
 import nic.goi.aarogyasetu.utility.AuthUtility;
 import nic.goi.aarogyasetu.utility.Constants;
 import nic.goi.aarogyasetu.utility.CorUtility;
 import nic.goi.aarogyasetu.utility.DecryptionUtil;
+import nic.goi.aarogyasetu.utility.LocalizationUtil;
 import nic.goi.aarogyasetu.utility.Logger;
-import nic.goi.aarogyasetu.utility.QrCodeListener;
-import nic.goi.aarogyasetu.utility.authsp.AuthSpFactory;
-import nic.goi.aarogyasetu.utility.authsp.AuthSpHelper;
 import nic.goi.aarogyasetu.zxing.CustomScannerActivity;
 
 /**
@@ -48,18 +50,19 @@ import nic.goi.aarogyasetu.zxing.CustomScannerActivity;
  *
  * @author Niharika.Arora
  */
-public class QrActivity extends AppCompatActivity implements QrCodeListener {
+public class QrActivity extends AppCompatActivity implements QrCodeListener, QrPublicKeyListener {
 
     private ImageView qrCodeView;
     private ProgressBar progress;
     private View nestedView;
-    private TextView qrExpiryView, phoneView, nameView;
+    private TextView qrExpiryView, phoneView, nameView, qrTapToRefresh, scanBtn, refreshView;
     private final int COUNT_DOWN_INTERVAL_MILLISECONDS = 1000;
     private final int SECONDS_PER_DAY = 86400;
     private final int SECONDS_PER_HOUR = 3600;
     private final int SECONDS_PER_MINUTE = 60;
     private CountDownTimer timer;
     private BitMatrix bitMatrix;
+    private boolean isPublicKeyToBeFetched = false;
 
     public static void start(Activity activity) {
         activity.startActivity(new Intent(activity, QrActivity.class));
@@ -69,17 +72,33 @@ public class QrActivity extends AppCompatActivity implements QrCodeListener {
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_qr_code);
+
+        configureView();
+        configureClicks();
+        checkQrStatus();
+    }
+
+    private void configureView() {
         qrCodeView = findViewById(R.id.scan_code);
         progress = findViewById(R.id.progress);
         qrExpiryView = findViewById(R.id.expiry_time);
         phoneView = findViewById(R.id.phone);
         nameView = findViewById(R.id.name);
         nestedView = findViewById(R.id.nested_view);
-        configureClicks();
+        qrTapToRefresh = findViewById(R.id.tap_to_refresh);
+        refreshView = findViewById(R.id.refresh_view);
+        qrTapToRefresh.setText(LocalizationUtil.getLocalisedString(this, R.string.tap_to_refresh));
+        TextView scanTextDescription = findViewById(R.id.scan_text_desc);
+        scanTextDescription.setText(LocalizationUtil.getLocalisedString(this, R.string.scan_to_check_status));
+        TextView expiryDescription = findViewById(R.id.expiry_desc);
+        expiryDescription.setText(LocalizationUtil.getLocalisedString(this, R.string.qr_code_valid_for));
+        scanBtn = findViewById(R.id.scan_btn);
+        scanBtn.setText(LocalizationUtil.getLocalisedString(this, R.string.scan_other_s_qr_code));
+        refreshView.setText(LocalizationUtil.getLocalisedString(this, R.string.refresh));
+
     }
 
     private void configureClicks() {
-        checkQrStatus();
         onDoneClick();
         onScanClick();
         onRefreshClick();
@@ -90,10 +109,18 @@ public class QrActivity extends AppCompatActivity implements QrCodeListener {
             SharedPref.setStringParams(CoronaApplication.instance, SharedPrefsConstants.QR_TEXT, Constants.EMPTY);
             nestedView.setVisibility(View.GONE);
             progress.setVisibility(View.VISIBLE);
-            CorUtility.Companion.fetchQrCodeText(this);
+            configureQr();
         } else {
-            Toast.makeText(this, getString(R.string.make_sure_your_phone_is_connected_to_the_wifi_or_switch_to_mobile_data), Toast.LENGTH_LONG).show();
+            Toast.makeText(this, LocalizationUtil.getLocalisedString(this, R.string.make_sure_your_phone_is_connected_to_the_wifi_or_switch_to_mobile_data), Toast.LENGTH_LONG).show();
             showQrFailureView();
+        }
+    }
+
+    private void configureQr() {
+        if (isPublicKeyToBeFetched) {
+            CorUtility.Companion.fetchQrPublicKey(this);
+        } else {
+            CorUtility.Companion.fetchQrCodeText(this);
         }
     }
 
@@ -102,17 +129,18 @@ public class QrActivity extends AppCompatActivity implements QrCodeListener {
         findViewById(R.id.scan_validity_container).setVisibility(View.GONE);
         SharedPref.setStringParams(CoronaApplication.instance, SharedPrefsConstants.QR_TEXT, Constants.EMPTY);
         findViewById(R.id.refresh_container).setVisibility(View.VISIBLE);
-        qrCodeView.setAlpha(0.3f);
+        qrCodeView.setAlpha(0.1f);
     }
 
     private void onRefreshClick() {
         findViewById(R.id.refresh_container).setOnClickListener(v -> fetchQrCode());
         findViewById(R.id.refresh_icon).setOnClickListener(v -> fetchQrCode());
-        findViewById(R.id.tap_to_refresh).setOnClickListener(v -> fetchQrCode());
+        refreshView.setOnClickListener(v -> fetchQrCode());
+        qrTapToRefresh.setOnClickListener(v -> fetchQrCode());
     }
 
     private void onScanClick() {
-        findViewById(R.id.scan_btn).setOnClickListener(v -> {
+        scanBtn.setOnClickListener(v -> {
             startActivity(new Intent(QrActivity.this, CustomScannerActivity.class));
             finish();
         });
@@ -129,8 +157,10 @@ public class QrActivity extends AppCompatActivity implements QrCodeListener {
         Jws<Claims> claimsJws = null;
         try {
             claimsJws = DecryptionUtil.decryptFile(text);
-        } catch (NoSuchAlgorithmException | InvalidKeySpecException | JwtException e) {
-            //do nothing
+        } catch (InvalidKeySpecException | SignatureException e) {
+            isPublicKeyToBeFetched = true;
+        } catch (NoSuchAlgorithmException | JwtException e) {
+            Logger.d(Constants.QR_SCREEN_TAG, e.getMessage());
         }
         Logger.d(Constants.QR_SCREEN_TAG, "Decryption end");
         if (claimsJws == null) {
@@ -165,7 +195,7 @@ public class QrActivity extends AppCompatActivity implements QrCodeListener {
             phoneView.setText(mobileNo);
         }
         if (!TextUtils.isEmpty(name)) {
-            nameView.setText(name);
+            nameView.setText(CorUtility.Companion.toTitleCase(name));
         }
     }
 
@@ -218,12 +248,12 @@ public class QrActivity extends AppCompatActivity implements QrCodeListener {
     private void configureExpiryTime(int minutes, int seconds) {
         String expiryTme;
         if (minutes < 1) {
-            qrExpiryView.setText(R.string.few_seconds);
+            qrExpiryView.setText(LocalizationUtil.getLocalisedString(this, R.string.few_seconds));
         } else if (seconds < 1) {
-            expiryTme = minutes + Constants.SPACE + getString(R.string.minutes);
+            expiryTme = minutes + Constants.SPACE + LocalizationUtil.getLocalisedString(this, R.string.minutes);
             qrExpiryView.setText(expiryTme);
         } else {
-            expiryTme = minutes + Constants.SPACE + getString(R.string.minutes) + Constants.SPACE + seconds + Constants.SPACE + getString(R.string.seconds);
+            expiryTme = minutes + Constants.SPACE + LocalizationUtil.getLocalisedString(this, R.string.minutes) + Constants.SPACE + seconds + Constants.SPACE + LocalizationUtil.getLocalisedString(this, R.string.seconds);
             qrExpiryView.setText(expiryTme);
         }
     }
@@ -269,5 +299,16 @@ public class QrActivity extends AppCompatActivity implements QrCodeListener {
         } else {
             fetchQrCode();
         }
+    }
+
+    @Override
+    public void onQrPublicKeyFetched() {
+        isPublicKeyToBeFetched = false;
+        CorUtility.Companion.fetchQrCodeText(this);
+    }
+
+    @Override
+    public void onPublicKeyFetchFailure() {
+        onFailure();
     }
 }

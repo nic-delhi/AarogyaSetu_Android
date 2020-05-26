@@ -1,7 +1,6 @@
 package nic.goi.aarogyasetu.zxing;
 
 import android.app.Activity;
-import android.app.AlertDialog;
 import android.content.ActivityNotFoundException;
 import android.content.Intent;
 import android.content.pm.PackageManager;
@@ -12,12 +11,15 @@ import android.provider.Settings;
 import android.text.TextUtils;
 import android.view.KeyEvent;
 import android.view.View;
+import android.view.Window;
+import android.view.WindowManager;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.RequiresApi;
+import androidx.appcompat.app.AlertDialog;
 import androidx.core.content.ContextCompat;
 
 import com.journeyapps.barcodescanner.DecoratedBarcodeView;
@@ -30,10 +32,12 @@ import io.jsonwebtoken.ExpiredJwtException;
 import io.jsonwebtoken.Jws;
 import io.jsonwebtoken.MalformedJwtException;
 import io.jsonwebtoken.io.DecodingException;
+import io.jsonwebtoken.security.SignatureException;
 import nic.goi.aarogyasetu.R;
 import nic.goi.aarogyasetu.utility.Constants;
 import nic.goi.aarogyasetu.utility.CorUtility;
 import nic.goi.aarogyasetu.utility.DecryptionUtil;
+import nic.goi.aarogyasetu.utility.LocalizationUtil;
 import nic.goi.aarogyasetu.views.QrActivity;
 
 import static android.view.View.GONE;
@@ -50,26 +54,35 @@ public class CustomScannerActivity extends Activity implements CustomCaptureMana
     private CustomCaptureManager capture;
     private DecoratedBarcodeView barcodeScannerView;
     private View statusContainer;
-    private ImageView profileIcon, statusClose, close;
+    private ImageView statusClose, close;
     private TextView desc, descReason, generateQr;
     private View promptContainer;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        requestWindowFeature(Window.FEATURE_NO_TITLE);
+        getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
+                WindowManager.LayoutParams.FLAG_FULLSCREEN);
         setContentView(R.layout.activity_custom_scanner);
 
+        configureViews();
+        configureClicks();
+        initCapture(savedInstanceState);
+    }
+
+    private void configureViews() {
         barcodeScannerView = findViewById(R.id.barcode_scanner);
         close = findViewById(R.id.close);
         statusClose = findViewById(R.id.status_close);
         statusContainer = findViewById(R.id.status_container);
-        profileIcon = findViewById(R.id.profile);
         desc = findViewById(R.id.failure_reason);
         descReason = findViewById(R.id.failure_reason_desc);
         generateQr = findViewById(R.id.generate_qr);
+        generateQr.setText(LocalizationUtil.getLocalisedString(this, R.string.generate_my_qr_code));
         promptContainer = findViewById(R.id.prompt_container);
-        configureClicks();
-        initCapture(savedInstanceState);
+        TextView statusDescription = findViewById(R.id.status_view);
+        statusDescription.setText(LocalizationUtil.getLocalisedString(this, R.string.scan_prompt));
     }
 
     private void configureClicks() {
@@ -155,7 +168,7 @@ public class CustomScannerActivity extends Activity implements CustomCaptureMana
             claimsJws = DecryptionUtil.decryptFile(code);
         } catch (ExpiredJwtException e) {
             showExpiredCode();
-        } catch (NoSuchAlgorithmException | InvalidKeySpecException | DecodingException | MalformedJwtException exception) {
+        } catch (NoSuchAlgorithmException | DecodingException | MalformedJwtException exception) {
             showInvalidStatus();
         } catch (Exception exception) {
             showCommonInvalidStatus();
@@ -195,60 +208,60 @@ public class CustomScannerActivity extends Activity implements CustomCaptureMana
 
     private void showPersonStatus(String scannerName, String mobileNo, String status) {
         String name = "";
-        if (scannerName != null) {
-            name = scannerName;
+        if (!TextUtils.isEmpty(scannerName)) {
+            name = CorUtility.Companion.toTitleCase(scannerName);
         }
-        profileIcon.setVisibility(VISIBLE);
         desc.setVisibility(GONE);
         String descVal;
         if (status.equalsIgnoreCase(Constants.HEALTHY)) {
-            descVal = name + " (" + mobileNo + ") " + getString(R.string.low_risk);
+            descVal = name + " (" + mobileNo + ") " + LocalizationUtil.getLocalisedString(this, R.string.low_risk);
             descReason.setText(descVal);
-            statusContainer.setBackgroundTintList(ContextCompat.getColorStateList(this, R.color.zxing_chat_bubble_green));
+            statusContainer.setBackgroundTintList(ContextCompat.getColorStateList(this, R.color.chat_bubble_green));
         } else if (status.equalsIgnoreCase(Constants.MODERATE)) {
-            descVal = name + " (" + mobileNo + ") " + this.getString(R.string.moderate_risk);
+            descVal = name + " (" + mobileNo + ") " + LocalizationUtil.getLocalisedString(this, R.string.moderate_risk);
             descReason.setText(descVal);
-            statusContainer.setBackgroundTintList(ContextCompat.getColorStateList(this, R.color.zxing_chat_bubble_yellow));
+            statusContainer.setBackgroundTintList(ContextCompat.getColorStateList(this, R.color.chat_bubble_yellow));
         } else if (status.equalsIgnoreCase(Constants.HIGH)) {
-            descVal = name + " (" + mobileNo + ") " + this.getString(R.string.high_risk);
+            descVal = name + " (" + mobileNo + ") " + LocalizationUtil.getLocalisedString(this, R.string.high_risk);
             descReason.setText(descVal);
-            statusContainer.setBackgroundTintList(ContextCompat.getColorStateList(this, R.color.zxing_chat_bubble_orange));
+            statusContainer.setBackgroundTintList(ContextCompat.getColorStateList(this, R.color.chat_bubble_orange));
         } else {
-            descVal = name + " (" + mobileNo + ") " + this.getString(R.string.tested_positive_status);
+            descVal = name + " (" + mobileNo + ") " + LocalizationUtil.getLocalisedString(this, R.string.tested_positive_status);
             descReason.setText(descVal);
-            statusContainer.setBackgroundTintList(ContextCompat.getColorStateList(this, R.color.zxing_chat_bubble_red));
+            statusContainer.setBackgroundTintList(ContextCompat.getColorStateList(this, R.color.chat_bubble_red));
         }
+        descReason.setTextColor(ContextCompat.getColorStateList(this, R.color.white));
         statusClose.setImageTintList(ContextCompat.getColorStateList(this, R.color.white));
     }
 
     private void showExpiredCode() {
-        profileIcon.setVisibility(GONE);
         desc.setVisibility(VISIBLE);
-        descReason.setText(R.string.request_new_code);
-        desc.setText(R.string.expired_code);
-        desc.setTextColor(ContextCompat.getColorStateList(this, R.color.zxing_chat_title_orange));
-        statusContainer.setBackgroundTintList(ContextCompat.getColorStateList(this, R.color.zxing_chat_bubble_light_orange));
-        statusClose.setImageTintList(ContextCompat.getColorStateList(this, R.color.zxing_chat_close_dark));
+        descReason.setText(LocalizationUtil.getLocalisedString(this, R.string.request_new_code));
+        desc.setText(LocalizationUtil.getLocalisedString(this, R.string.expired_code));
+        desc.setTextColor(ContextCompat.getColorStateList(this, R.color.chat_title_orange));
+        descReason.setTextColor(ContextCompat.getColorStateList(this, R.color.black));
+        statusContainer.setBackgroundTintList(ContextCompat.getColorStateList(this, R.color.chat_bubble_light_orange));
+        statusClose.setImageTintList(ContextCompat.getColorStateList(this, R.color.chat_close_dark));
     }
 
     private void showInvalidStatus() {
-        profileIcon.setVisibility(GONE);
         desc.setVisibility(VISIBLE);
-        descReason.setText(R.string.not_generated_aarogya_setu);
-        desc.setText(R.string.invalid_qr_code);
-        desc.setTextColor(ContextCompat.getColorStateList(this, R.color.zxing_chat_title_red));
+        descReason.setText(LocalizationUtil.getLocalisedString(this, R.string.not_generated_aarogya_setu));
+        desc.setText(LocalizationUtil.getLocalisedString(this, R.string.invalid_qr_code));
+        desc.setTextColor(ContextCompat.getColorStateList(this, R.color.chat_title_red));
+        descReason.setTextColor(ContextCompat.getColorStateList(this, R.color.black));
         statusContainer.setBackgroundTintList(null);
-        statusClose.setImageTintList(ContextCompat.getColorStateList(this, R.color.zxing_chat_close_dark));
+        statusClose.setImageTintList(ContextCompat.getColorStateList(this, R.color.chat_close_dark));
     }
 
     private void showCommonInvalidStatus() {
-        profileIcon.setVisibility(GONE);
         desc.setVisibility(VISIBLE);
-        descReason.setText(R.string.common_scanning_error);
-        desc.setText(R.string.invalid_qr_code);
-        desc.setTextColor(ContextCompat.getColorStateList(this, R.color.zxing_chat_title_red));
+        descReason.setText(LocalizationUtil.getLocalisedString(this, R.string.common_scanning_error));
+        desc.setText(LocalizationUtil.getLocalisedString(this, R.string.invalid_qr_code));
+        desc.setTextColor(ContextCompat.getColorStateList(this, R.color.chat_title_red));
+        descReason.setTextColor(ContextCompat.getColorStateList(this, R.color.black));
         statusContainer.setBackgroundTintList(null);
-        statusClose.setImageTintList(ContextCompat.getColorStateList(this, R.color.zxing_chat_close_dark));
+        statusClose.setImageTintList(ContextCompat.getColorStateList(this, R.color.chat_close_dark));
     }
 
     @RequiresApi(api = Build.VERSION_CODES.M)
