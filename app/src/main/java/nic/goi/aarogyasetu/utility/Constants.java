@@ -7,6 +7,7 @@ public class Constants {
     public static final String ALREADY_CONTRIBUTING = "You are already contributing";
     public static final String PACKAGE = "package";
     public static final String UNIQUE_ID = "did";
+    public static final String QR_PUBLIC_KEY = "qr_public_key";
     public static final String PUSH_COVID_POSTIVE_P = "p";
     public static final String DATA = "data";
     public static final String AUTH = "Authorization";
@@ -60,7 +61,6 @@ public class Constants {
     public static final String HYPHEN = "-";
     public static final String X_API_KEY = "x-api-key";
     public static final String RESTART_TO_UPDATE = "Please restart to update";
-    public static final String VALUE_30 = "30";
     public static final String UPLOAD_TYPE = "upload_type";
     public static final String LEGACY_ISSUE = "Legacy advertising data too big";
 

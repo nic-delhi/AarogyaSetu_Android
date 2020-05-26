@@ -12,10 +12,9 @@ public class SharedPrefsConstants {
 
     public static final String UNIQUE_ID = "unique_id";
 
-    public static final String PERSISTANCE_DAYS = "max_data_persisting_days";
-
     public static final String APPLICATION_INSTALL_TIME = "application_install_time";
     public static final String QR_TEXT = "qr_text";
     public static final String MENU_INTRO_COUNT = "menu_intro_count";
     public static final String DEFAULT_MENU_INTRO_COUNT = "0";
+    public static final String PUBLIC_KEY="public_key";
 }

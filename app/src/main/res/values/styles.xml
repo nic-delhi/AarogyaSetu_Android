@@ -34,6 +34,7 @@
     </style>
 
     <style name="AppTheme.Splash">
+        <item name="android:statusBarColor">@color/white</item>
         <item name="android:windowBackground">@drawable/background_splash</item>
     </style>
 
