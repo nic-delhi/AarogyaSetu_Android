@@ -47,11 +47,12 @@ Shipra Saxena
 ---------------------------------
 Contributors (Industry)
 ---------------------------------
+Aalekh Sharan  
 Akash Kumar  
 Aman Kapoor  
 Anjali Aggarwal  
-Ankit Garg 
-Ankit Gupta  
+Ankit Garg  
+Ankit Gupta   
 Ankit Raj  
 Anusheel Singh  
 Ashok Kumar Bhakhar  
