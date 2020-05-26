@@ -13,7 +13,8 @@ Dr.Seema Khanna
 Industry and Academia Leadership
 ---------------------------------
 Dr.Lalitesh Katragadda  
-Prof. V Kamakoti  
+Prof. V Kamakoti
+Deep Kalra
 Prof. Amrutur Bharadawaj  
 Vikalp Sahni  
 Rahul Goyal  
@@ -49,7 +50,7 @@ Contributors (Industry)
 Akash Kumar  
 Aman Kapoor  
 Anjali Aggarwal  
-Ankit  
+Ankit Garg 
 Ankit Gupta  
 Ankit Raj  
 Anusheel Singh  
@@ -60,15 +61,16 @@ Chandrapal Yadav
 Damanpreet Singh  
 Dhananjay Kumar  
 Digjot Singh  
-Jaskaran  
-Jasmeet  
+Jaskaran Singh  
+Jasmeet Singh  
 Jaydeep Dutta  
 Juhi Dua  
 Keshav Agrawal  
 Kunal Prasad  
-Manuj  
+Manuj Porwal
 Naveen Setia  
-Niharika  
+Niharika Arora 
+Punit Chajjer
 Praveen Bhagat  
 Radha Krishan  
 Sanket Bansal  
