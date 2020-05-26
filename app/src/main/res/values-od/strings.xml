@@ -97,7 +97,7 @@
     <string name="tap_to_refresh">QR କୋଡ୍ ରିଫ୍ରେଶ କରିବାକୁ ଟ୍ୟାପ୍ କରନ୍ତୁ</string>
     <string name="qr_code_valid_for">QR କୋଡ୍ ବୈଧ୍ୟ</string>
     <string name="scan_other_s_qr_code">ଅନ୍ୟର QR କୋଡ୍ ସ୍କାନ୍ କରନ୍ତୁ</string>
-    <string name="zxing_generate_my_qr_code">ମୋର QR କୋଡ୍ ତିଆରି କରନ୍ତୁ</string>
+    <string name="generate_my_qr_code">ମୋର QR କୋଡ୍ ତିଆରି କରନ୍ତୁ</string>
     <string name="invalid_qr_code">ଅବୈଧ୍ୟ QR କୋଡ୍</string>
     <string name="not_generated_aarogya_setu">ସରକାରୀ ଆରୋଗ୍ୟ ସେତୁ ଆପ୍ ଦ୍ୱାରା ଏହା ସୃଷ୍ଟି ହୋଇନାହିଁ</string>
     <string name="request_new_code">ଦୟାକରି ନୂତନ କୋଡ୍ ସୃଷ୍ଟି କରିବାକୁ ବ୍ୟକ୍ତିଙ୍କୁ ଅନୁରୋଧ କରନ୍ତୁ</string>

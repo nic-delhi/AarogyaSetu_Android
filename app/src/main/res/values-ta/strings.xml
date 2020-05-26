@@ -97,7 +97,7 @@
     <string name="tap_to_refresh">QR குறியீட்டைப் புதுப்பிக்க டேப் செய்யவும்</string>
     <string name="qr_code_valid_for">QR குறியீடு செல்லுபடியாகும் காலம்</string>
     <string name="scan_other_s_qr_code">மற்றவர்களின் QR குறியீட்டை ஸ்கேன் செய்யவும்</string>
-    <string name="zxing_generate_my_qr_code">எனது QR குறியீட்டை உருவாக்கவும்</string>
+    <string name="generate_my_qr_code">எனது QR குறியீட்டை உருவாக்கவும்</string>
     <string name="invalid_qr_code">தவறான QR குறியீடு</string>
     <string name="not_generated_aarogya_setu">அதிகாரப்பூர்வ ஆரோக்ய சேது செயலியின் மூலம் இது உருவாக்கப்படவில்லை</string>
     <string name="request_new_code">புதிய குறியீட்டை உருவாக்க சம்பந்தப்பட்ட நபரிடம் கோரவும்</string>

@@ -93,7 +93,7 @@
     <string name="tap_to_refresh">QR কোড ৰিফ্ৰেছ কৰিবৰ বাবে টেপ কৰক</string>
     <string name="qr_code_valid_for">QR কোড এই কামৰ বাবে বৈধ</string>
     <string name="scan_other_s_qr_code">আনৰ QR কোড স্কেন কৰক</string>
-    <string name="zxing_generate_my_qr_code">মোৰ QR কোড সৃষ্টি কৰক</string>
+    <string name="generate_my_qr_code">মোৰ QR কোড সৃষ্টি কৰক</string>
     <string name="invalid_qr_code">QR কোড অবৈধ</string>
     <string name="not_generated_aarogya_setu">ইয়াক অ\'ফিছিয়েল আৰোগ্য হেতু এপ্পৰ দ্বাৰা সৃষ্টি কৰা হোৱা নাই</string>
     <string name="request_new_code">অনুগ্ৰহ কৰি নতুন কোড সৃষ্টি কৰিবলৈ ব্যক্তিজনক অনুৰোধ কৰক</string>

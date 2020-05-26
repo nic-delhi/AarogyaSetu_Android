@@ -97,7 +97,7 @@
     <string name="tap_to_refresh">QR કોડને તાજું કરવા માટે અહીં દબાવો</string>
     <string name="qr_code_valid_for">માટે QR કોડ માન્ય છે</string>
     <string name="scan_other_s_qr_code">અન્યનો QR કોડ સ્કેન કરો</string>
-    <string name="zxing_generate_my_qr_code">મારો QR કોડ બનાવો</string>
+    <string name="generate_my_qr_code">મારો QR કોડ બનાવો</string>
     <string name="invalid_qr_code">અમાન્ય QR કોડ</string>
     <string name="not_generated_aarogya_setu">તે સત્તાવાર આરોગ્ય સેતુ એપ્લિકેશન દ્વારા બનાવવામાં આવ્યું નથી.</string>
     <string name="request_new_code">કૃપા કરીને વ્યક્તિને નવો કોડ જનરેટ કરવા વિનંતી કરો</string>
