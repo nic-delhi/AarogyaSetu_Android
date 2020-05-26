@@ -100,10 +100,12 @@ class UploadDataUtil(
         for (bluetoothData in bluetoothDataList) {
             val dataLatitudeEnc = bluetoothData.latitudeenc
             val dataLongitudeEnc = bluetoothData.longitudeenc
-            var decLatitude: String?
-            var decLongitude: String?
-            decLatitude = getDecryptedData(dataLatitudeEnc)
-            decLongitude = getDecryptedData(dataLongitudeEnc)
+            var decLatitude: String? = "";
+            var decLongitude: String? = ""
+            if(dataLatitudeEnc!=null&&dataLongitudeEnc!=null) {
+                decLatitude = getDecryptedData(dataLatitudeEnc)
+                decLongitude = getDecryptedData(dataLongitudeEnc)
+            }
             if (!TextUtils.isEmpty(decLatitude) && !TextUtils.isEmpty(decLongitude)) {
                 val dataPoint = DataPoint(bluetoothData, decLatitude, decLongitude)
                 dataPointList.add(dataPoint)
