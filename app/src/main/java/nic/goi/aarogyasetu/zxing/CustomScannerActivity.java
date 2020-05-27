@@ -217,16 +217,24 @@ public class CustomScannerActivity extends Activity implements CustomCaptureMana
             descVal = name + " (" + mobileNo + ") " + LocalizationUtil.getLocalisedString(this, R.string.low_risk);
             descReason.setText(descVal);
             statusContainer.setBackgroundTintList(ContextCompat.getColorStateList(this, R.color.chat_bubble_green));
-        } else if (status.equalsIgnoreCase(Constants.MODERATE)) {
+        } else if (status.equalsIgnoreCase(Constants.CAUTION)) {
             descVal = name + " (" + mobileNo + ") " + LocalizationUtil.getLocalisedString(this, R.string.moderate_risk);
             descReason.setText(descVal);
             statusContainer.setBackgroundTintList(ContextCompat.getColorStateList(this, R.color.chat_bubble_yellow));
-        } else if (status.equalsIgnoreCase(Constants.HIGH)) {
+        } else if (status.equalsIgnoreCase(Constants.QUARANTINE)) {
             descVal = name + " (" + mobileNo + ") " + LocalizationUtil.getLocalisedString(this, R.string.high_risk);
             descReason.setText(descVal);
             statusContainer.setBackgroundTintList(ContextCompat.getColorStateList(this, R.color.chat_bubble_orange));
-        } else {
+        } else if (status.equalsIgnoreCase(Constants.TEST)) {
             descVal = name + " (" + mobileNo + ") " + LocalizationUtil.getLocalisedString(this, R.string.tested_positive_status);
+            descReason.setText(descVal);
+            statusContainer.setBackgroundTintList(ContextCompat.getColorStateList(this, R.color.chat_bubble_orange));
+        } else if (status.equalsIgnoreCase(Constants.INFECTED)) {
+            descVal = name + " (" + mobileNo + ") is " + status;
+            descReason.setText(descVal);
+            statusContainer.setBackgroundTintList(ContextCompat.getColorStateList(this, R.color.chat_bubble_red));
+        } else {
+            descVal = name + " (" + mobileNo + ") is " + status;
             descReason.setText(descVal);
             statusContainer.setBackgroundTintList(ContextCompat.getColorStateList(this, R.color.chat_bubble_red));
         }

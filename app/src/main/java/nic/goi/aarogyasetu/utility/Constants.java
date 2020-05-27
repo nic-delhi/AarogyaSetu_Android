@@ -68,9 +68,12 @@ public class Constants {
     public static final String ACTION_GOTO_SETTINGS = "Open settings";
     public static final String ACTION_REMIND_LATER = "Remind later";
     public static final String SPACE = " ";
+
     public static final String HEALTHY = "healthy";
-    public static final String MODERATE = "moderate";
-    public static final String HIGH = "high";
+    public static final String QUARANTINE = "quarantine";
+    public static final String CAUTION = "caution";
+    public static final String TEST = "test";
+    public static final String INFECTED = "infected";
     public static final String EXPIRY = "exp";
     public static final String NAME = "name";
     public static final String MOBILE = "mobile_no";
