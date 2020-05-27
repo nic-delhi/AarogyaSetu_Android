@@ -309,7 +309,7 @@ public class HomeActivity extends AppCompatActivity implements SelectLanguageFra
                         Intent intent = new Intent(Intent.ACTION_DIAL,
                                 Uri.parse(url));
                         startActivity(intent);
-                    } catch (ActivityNotFoundException ignored) {
+                    } catch (Exception ignored) {
                         // do nothing
                     }
 
@@ -761,7 +761,7 @@ public class HomeActivity extends AppCompatActivity implements SelectLanguageFra
                 }
 
             }
-        }  else if (requestCode == REQUEST_CODE_IMMEDIATE_UPDATE) {
+        } else if (requestCode == REQUEST_CODE_IMMEDIATE_UPDATE) {
             finish();
         } else if (requestCode == REQUEST_CODE_FLEXIBLE_UPDATE) {
             //todo handle this accordingly for Immediate when user cancelled
