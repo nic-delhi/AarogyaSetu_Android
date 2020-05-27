@@ -5,6 +5,7 @@
     <string name="permissions_title">సర్వీస్ మరియు గోప్యత నిబంధనలు</string>
     <string name="permissions_detail">మేము ఈ విషయం యొక్క స్వభావం మరియు సున్నితత్వం అర్థం చేసుకొన్నాము మరియు మీ డేటా ఇతరులకు అందకుండా ఉండడానికి గట్టి చర్యలు తీసుకున్నాము.</string>
     <string name="location_text">మీరు మీ లొకేషన్ షేరింగ్‌ను ‘ఎల్లప్పుడూ’ అని సెట్ చేసుకోవలసిందిగా సిఫార్సు చేస్తున్నాము. మీరు తర్వాత దీనిని ఏ సమయంలోనైనా మార్చుకోవచ్చు.</string>
+    
     <!-- phone_number_layout -->
     <string name="enter_mobile_number">మొబైల్ నంబర్‌ను ఎంటర్ చేయండి</string>
     <string name="country_code">+91 </string>
@@ -13,23 +14,26 @@
     <string name="submit">సబ్మిట్ చేయండి</string>
     <string name="resend_otp">OTP ని మళ్ళీ పంపండి</string>
     <string name="resend_otp_in">OTP ని %s మళ్ళి పంపించుటకు</string>
+    
     <!-- otp_validation_layout -->
     <string name="enter_otp">OTP ఎంటర్ చేయండి</string>
     <string name="we_have_sent_otp">మేము మీ మొబైల్ నంబర్‌కు OTP పంపాము.</string>
     <string name="we_have_resent_otp">మేము మీ మొబైల్ నంబర్‌కు మళ్ళి OTP పంపాము.</string>
     <string name="otp">OTP</string>
     <string name="please_enter_a_valid_otp">దయచేసి  సరైన  OTP ఎంటర్ చేయండి  </string>
+    
     <!-- why_needed_layout -->
     <string name="i_understand">నేను అర్థం చేసుకున్నాను.</string>
     <string name="device_location"><![CDATA[<b>డివైజ్ లొకేషన్</b>]]></string>
     <string name="bluetooth"><![CDATA[<b>బ్లూటూత్</b>]]></string>
     <string name="data_sharing_with_the_ministry"><![CDATA[<b>డేటా షేరింగ్</b>]]></string>
     <string name="monitors_your_device_s_proximity_within_6_feet_range">మరొక మొబైల్ డివైజ్‌కు మీ డివైజ్ యొక్క సమీపతను మానిటర్ చేస్తుంది. దీనిని అన్ని సమయాలలో ఆన్‌లో ఉంచవలసిందిగా మీకు సిఫార్సు చేస్తున్నాము.</string>
-    <string name="tracks_an_individual_s_touch_points_so_can_easily_find_others_who_came_in_close_contact">వ్యక్తులు టచ్ పాయింట్లను ట్రాక్ చేస్తారు కాబట్టి సన్నిహిత సంబంధంలో ఉన్న ఇతరులను సులభంగా కనుగొనవచ్చు.</string>
+    <string name="tracks_an_individual_s_touch_points_so_can_easily_find_others_who_came_in_close_contact">వ్యక్తుల టచ్ పాయింట్లను ట్రాక్ చేస్తారు కాబట్టి సన్నిహిత సంబంధంలో ఉన్న ఇతరులను సులభంగా కనుగొనవచ్చు.</string>
     <string name="contribute_to_a_safer_india">నేను వీటికి అంగీకరిస్తున్నాను</string>
     <string name="please_select_a_language_en">Please select your language\nదయచేసి మీ భాషను ఎంచుకోండి.</string>
     <string name="next">తరువాత</string>
     <string name="please_select_a_language_to_proceed">Please select a language to proceed.\n కొనసాగడానికి దయచేసి ఒక భాషను ఎంచుకోండి.</string>
+    
     <!-- Strings used for fragments for navigation -->
     <string name="please_enter_a_valid_number">దయచేసి  సరైన  మొబైల్ నెంబర్  ఎంటర్ చేయండి</string>
     <string name="would_you_like_to">మీరు COVID-19 పరీక్షలలో పాజిటివ్‌గా నిర్ధారింపబడిన వారు సంచరించిన ప్రాంతంలో సంచిరించినట్లయితే మీకు తెలియజేయమంటారా?</string>
@@ -106,7 +110,7 @@
     <string name="moderate_risk">సంక్రమణ యొక్క మితమైన ప్రమాదం</string>
     <string name="high_risk">సంక్రమణ ప్రమాదం ఎక్కువగా ఉంది</string>
     <string name="tested_positive_status">COVID-19 కోసం పాజిటివ్‌ను పరీక్షించింది</string>
-    <string name="provide_necessary_permission">దయచేసి మీ Qr కోడ్‌ను సంగ్రహించడానికి అవసరమైన అనుమతి ఇవ్వండి</string>
+    <string name="provide_necessary_permission">దయచేసి మీ QR కోడ్‌ను సంగ్రహించడానికి అవసరమైన అనుమతి ఇవ్వండి</string>
     <string name="scan_without_perm_alert">QR కోడ్ స్కానింగ్ కోసం అనువర్తనానికి కెమెరా అనుమతి అవసరం.</string>
     <string name="open_settings">సెట్టింగులను తెరవండి</string>
     <string name="common_scanning_error">కొన్ని మినహాయింపు సంభవించింది. దయచేసి మళ్ళీ స్కాన్ చేయండి</string>
