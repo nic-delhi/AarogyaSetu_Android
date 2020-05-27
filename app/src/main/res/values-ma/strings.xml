@@ -16,7 +16,7 @@
     <!-- otp_validation_layout -->
     <string name="enter_otp">ओटीपी प्रविष्ट करा</string>
     <string name="we_have_sent_otp">आम्ही आपल्या मोबाइल क्रमांकावर ओटीपी पाठविला आहे.</string>
-    <string name="we_have_resent_otp">आम्ही आपल्या मोबाइल नंबरवर पुन्हा ओटीपी पाठविला आहे.</string>
+    <string name="we_have_resent_otp">आम्ही आपल्या मोबाइल क्रमांकावर ओटीपी पुन्हा पाठविला आहे.</string>
     <string name="otp">OTP</string>
     <string name="please_enter_a_valid_otp">कृपया वैध OTP एन्टर करा.</string>
     <!-- why_needed_layout -->
