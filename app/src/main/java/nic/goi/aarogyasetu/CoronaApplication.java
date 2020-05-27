@@ -37,11 +37,6 @@ public class CoronaApplication extends Application implements Configuration.Prov
         super.onCreate();
         FirebaseApp.initializeApp(this);
         instance = this;
-        WorkManager.initialize(
-                this,
-                new Configuration.Builder()
-                        .setExecutor(Executors.newFixedThreadPool(8))
-                        .build());
         new Thread(() -> {
             Fabric.with(CoronaApplication.getInstance(), new Crashlytics());
         }).start();
@@ -100,8 +95,5 @@ public class CoronaApplication extends Application implements Configuration.Prov
     public Configuration getWorkManagerConfiguration() {
         return new Configuration.Builder().setExecutor(Executors.newFixedThreadPool(8)).build();
     }
-
-
-
 
 }
