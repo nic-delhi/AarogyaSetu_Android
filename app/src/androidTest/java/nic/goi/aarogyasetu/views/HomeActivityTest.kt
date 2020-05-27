@@ -12,6 +12,7 @@ import androidx.test.ext.junit.runners.AndroidJUnit4
 import androidx.test.platform.app.InstrumentationRegistry
 import androidx.test.rule.ActivityTestRule
 import nic.goi.aarogyasetu.R
+import nic.goi.aarogyasetu.utility.Constants
 import nic.goi.aarogyasetu.utility.CorUtility
 import nic.goi.aarogyasetu.utility.chooser
 import org.hamcrest.CoreMatchers
@@ -31,6 +32,7 @@ class HomeActivityTest {
         val shareText = CorUtility.getShareText(appContext)
 
         Intents.init()
+        Espresso.onView(ViewMatchers.withText(Constants.ACTION_REMIND_LATER)).perform(ViewActions.click())
         Espresso.onView(ViewMatchers.withId(R.id.share)).perform(ViewActions.click())
         Intents.intended(
             chooser(
@@ -51,6 +53,7 @@ class HomeActivityTest {
 
     @Test
     fun testClickLanguageChange() {
+        Espresso.onView(ViewMatchers.withText(Constants.ACTION_REMIND_LATER)).perform(ViewActions.click())
         Espresso.onView(ViewMatchers.withId(R.id.language_change))
             .check(ViewAssertions.matches(ViewMatchers.isDisplayed()))
         Espresso.onView(ViewMatchers.withId(R.id.language_change)).perform(ViewActions.click())
