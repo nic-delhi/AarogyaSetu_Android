@@ -69,7 +69,6 @@ public class Constants {
     public static final String ACTION_REMIND_LATER = "Remind later";
     public static final String SPACE = " ";
 
-
     public static final String EXPIRY = "exp";
     public static final String NAME = "name";
     public static final String MOBILE = "mobile_no";
