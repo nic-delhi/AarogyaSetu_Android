@@ -62,7 +62,8 @@ Ankit Raj
 Anusheel Singh  
 Ashok Kumar Bhakhar  
 Astha Goel  
-Bhoomit Vasani  
+Bhoomit Vasani 
+Bravish Ghosh
 Chandrapal Yadav  
 Damanpreet Singh  
 Dhananjay Kumar  
