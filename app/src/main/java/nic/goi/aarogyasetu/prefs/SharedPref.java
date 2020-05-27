@@ -3,6 +3,13 @@ package nic.goi.aarogyasetu.prefs;
 import android.content.Context;
 import android.content.SharedPreferences;
 
+import androidx.security.crypto.EncryptedSharedPreferences;
+import androidx.security.crypto.MasterKeys;
+
+import java.io.IOException;
+import java.security.GeneralSecurityException;
+
+
 /**
  * Created by kshitij.khatri on 24-Jul-17.
  */
@@ -12,13 +19,24 @@ public class SharedPref {
     private static final String PREFS_NAME = "FightCorona_prefs";
     private static SharedPreferences _sharedPreferences = null;
 
-
     private SharedPref() {
     }
 
     public static SharedPreferences getInstance(Context aContext) {
-        if (_sharedPreferences == null)
-            _sharedPreferences = aContext.getSharedPreferences(PREFS_NAME, Context.MODE_PRIVATE);
+
+        if (_sharedPreferences == null) {
+            try {
+                _sharedPreferences = EncryptedSharedPreferences.create(
+                        PREFS_NAME,
+                        MasterKeys.getOrCreate(MasterKeys.AES256_GCM_SPEC),
+                        aContext,
+                        EncryptedSharedPreferences.PrefKeyEncryptionScheme.AES256_SIV,
+                        EncryptedSharedPreferences.PrefValueEncryptionScheme.AES256_GCM
+                );
+            } catch (GeneralSecurityException | IOException e) {
+                _sharedPreferences = aContext.getSharedPreferences(PREFS_NAME, Context.MODE_PRIVATE);
+            }
+        }
 
         return _sharedPreferences;
     }
