@@ -220,7 +220,7 @@ public class CustomScannerActivity extends Activity implements CustomCaptureMana
         }
         desc.setVisibility(GONE);
         //set status container background color
-        statusContainer.setBackgroundTintList(ColorStateList.valueOf(Color.parseColor("#44000000")));
+        statusContainer.setBackgroundTintList(ColorStateList.valueOf(Color.parseColor(colorCode)));
         String languageCode = SharedPref.getStringParams(this, SharedPrefsConstants.USER_SELECTED_LANGUAGE_CODE, "en");
         if (languageCode.equalsIgnoreCase("en")) {
             //show message from backend
