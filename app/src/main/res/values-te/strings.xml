@@ -16,7 +16,7 @@
     <!-- otp_validation_layout -->
     <string name="enter_otp">OTP ఎంటర్ చేయండి</string>
     <string name="we_have_sent_otp">మేము మీ మొబైల్ నంబర్‌కు OTP పంపాము.</string>
-    <string name="we_have_resent_otp">ನಿಮ್ಮ ಮೊಬೈಲ್ ನಂಬರಿಗೆ ನಾವು OTP ಯನ್ನು ಮರುಹೊಂದಿಸಿ.</string>
+    <string name="we_have_resent_otp">మేము మీ మొబైల్ నంబర్‌కు మళ్ళి OTP పంపాము.</string>
     <string name="otp">OTP</string>
     <string name="please_enter_a_valid_otp">దయచేసి  సరైన  OTP ఎంటర్ చేయండి  </string>
     <!-- why_needed_layout -->
@@ -25,11 +25,11 @@
     <string name="bluetooth"><![CDATA[<b>బ్లూటూత్</b>]]></string>
     <string name="data_sharing_with_the_ministry"><![CDATA[<b>డేటా షేరింగ్</b>]]></string>
     <string name="monitors_your_device_s_proximity_within_6_feet_range">మరొక మొబైల్ డివైజ్‌కు మీ డివైజ్ యొక్క సమీపతను మానిటర్ చేస్తుంది. దీనిని అన్ని సమయాలలో ఆన్‌లో ఉంచవలసిందిగా మీకు సిఫార్సు చేస్తున్నాము.</string>
-    <string name="tracks_an_individual_s_touch_points_so_can_easily_find_others_who_came_in_close_contact">మీ డేటా భారత ప్రభుత్వంతో మాత్రమే పంచుకోబడుతుంది. యాప్ మీ పేరు మరియు నంబర్‌ను వేరొకరికి తెలపడానికి ఎప్పుడూ అనుమతించదు.</string>
+    <string name="tracks_an_individual_s_touch_points_so_can_easily_find_others_who_came_in_close_contact">వ్యక్తులు టచ్ పాయింట్లను ట్రాక్ చేస్తారు కాబట్టి సన్నిహిత సంబంధంలో ఉన్న ఇతరులను సులభంగా కనుగొనవచ్చు.</string>
     <string name="contribute_to_a_safer_india">నేను వీటికి అంగీకరిస్తున్నాను</string>
-    <string name="please_select_a_language_en">Please select your language\nकृपया अपनी भाषा चुनें</string>
+    <string name="please_select_a_language_en">Please select your language\nదయచేసి మీ భాషను ఎంచుకోండి.</string>
     <string name="next">తరువాత</string>
-    <string name="please_select_a_language_to_proceed">Please select a language to proceed.</string>
+    <string name="please_select_a_language_to_proceed">Please select a language to proceed.\n కొనసాగడానికి దయచేసి ఒక భాషను ఎంచుకోండి.</string>
     <!-- Strings used for fragments for navigation -->
     <string name="please_enter_a_valid_number">దయచేసి  సరైన  మొబైల్ నెంబర్  ఎంటర్ చేయండి</string>
     <string name="would_you_like_to">మీరు COVID-19 పరీక్షలలో పాజిటివ్‌గా నిర్ధారింపబడిన వారు సంచరించిన ప్రాంతంలో సంచిరించినట్లయితే మీకు తెలియజేయమంటారా?</string>
@@ -44,13 +44,13 @@
     <string name="you_will_be_alerted_if">మీకు తెలియకుండా మీరు COVID-19 పరీక్షలలో పాజిటివ్‌గా నిర్ధారింపబడిన వారికి సమీపంగా వెళ్ళినట్లయితే యాప్ నుండి మీకు అలర్ట్ వస్తుంది</string>
     <string name="with_cowin_20_you_can"><![CDATA[<b>ఆరోగ్య సేతుతో</b>, మీరు మిమ్మల్ని, మీ కుటుంబం మరియు స్నేహితులను రక్షించుకోవచ్చు మరియు COVID-19 పోరాడటానికి ప్రయత్నిస్తున్న మన దేశానికి సహాయపడవచ్చు]]></string>
     <string name="register_now">ఇప్పుడే రిజిస్టర్ చేసుకోండి</string>
-    <string name="install">Install</string>
+    <string name="install">ఇన్‌స్టాల్</string>
     <string name="bluetooth_and_gps">Bluetooth &amp; Location</string>
     <string name="location_sharing">location sharing</string>
     <string name="permission_info_tnc_text"><![CDATA[<p>మీరు సురక్షిత భారతదేశానికి సహకారం అందించాలనుకుంటే, దయచేసి  <a href="https://static.swaraksha.gov.in/tnc/">సర్వీస్</a> మరియు <a href="https://web.swaraksha.gov.in/ncv19/privacy/">ప్రైవసీ పాలసీ </a> యొక్క నిబంధనలకు మీ అంగీకారాన్ని క్రింది బటన్ పైన క్లిక్ చేయడం ద్వారా తెలపండి:</p>]]></string>
-    <string name="auth_error_unknown">There is some error logging you in</string>
-    <string name="auth_error_invalid_otp">The OTP you have entered is incorrect</string>
-    <string name="auth_error_user_disabled">You are not allowed to sign in</string>
+    <string name="auth_error_unknown">మేము మిమ్మల్ని లాగిన్ చేయలేము, దయచేసి మళ్ళీ ప్రయత్నించండి</string>
+    <string name="auth_error_invalid_otp">దయచేసి మీరు నమోదు చేసిన OTP ని సరి చూసుకోండి</string>
+    <string name="auth_error_user_disabled">సైన్ ఇన్ చేయడానికి మీకు అనుమతి లేదు</string>
     <string name="close">క్లోజ్ చేయండి</string>
     <string name="sync_data_user_consent">కాంటాక్ట్ ట్రేసింగ్‌లో సహాయపడటానికి, బ్లూటూత్ మరియు GPS సర్వీసుల ద్వారా సేకరించబడిన మీ ఇంటర్‌యాక్షన్ డేటా భారతదేశ ప్రభుత్వంతో షేర్ చేయబడుతుంది.</string>
     <string name="confirm_and_proceed">నిర్ధారించండి మరియు కొనసాగండి</string>
@@ -98,7 +98,7 @@
     <string name="qr_code_valid_for">QR కోడ్ చెల్లుతుంది</string>
     <string name="scan_other_s_qr_code">ఇతరుల QR కోడ్‌ను స్కాన్ చేయండి</string>
     <string name="generate_my_qr_code">నా QR కోడ్‌ను రూపొందించండి</string>
-    <string name="invalid_qr_code">చెల్లని QR కోడ్</string>
+    <string name="invalid_qr_code">QR కోడ్ చెల్లదు</string>
     <string name="not_generated_aarogya_setu">ఇది అధికారిక ఆరోగ్య సేతు అనువర్తనం ద్వారా ఉత్పత్తి చేయబడలేదు.</string>
     <string name="request_new_code">దయచేసి క్రొత్త కోడ్‌ను రూపొందించమని వ్యక్తిని అభ్యర్థించండి</string>
     <string name="expired_code">గడువు ముగిసిన QR కోడ్</string>
