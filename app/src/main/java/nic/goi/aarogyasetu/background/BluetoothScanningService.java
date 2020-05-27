@@ -416,7 +416,12 @@ public class BluetoothScanningService extends Service implements AdaptiveScanHel
     public void onModeChange(int scanMode, int advertisementMode) {
         if (isBluetoothAvailable()) {
             if (mBluetoothLeScanner != null) {
-                mBluetoothLeScanner.stopScan(mScanCallback);
+                try {
+                    mBluetoothLeScanner.stopScan(mScanCallback);
+                } catch (Exception ex) {
+                    //Handle Android internal exception for BT adapter not turned ON(Known Android bug)
+                    CorUtilityKt.reportException(ex);
+                }
             }
             mGattServer.stopAdvertising();
             discover(scanMode);
