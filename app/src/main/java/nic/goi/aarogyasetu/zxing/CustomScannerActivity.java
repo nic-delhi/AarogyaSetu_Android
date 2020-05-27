@@ -235,37 +235,39 @@ public class CustomScannerActivity extends Activity implements CustomCaptureMana
 
     private void configureStatusText(String mobileNo, int statusCode, String message, String
             name) {
-        String descVal;
         switch (statusCode) {
             case Constants.STATUS_200:
             case Constants.STATUS_100:
             case Constants.STATUS_800:
             case Constants.STATUS_301:
             case Constants.STATUS_302:
-                descVal = name + " (" + mobileNo + ") " + LocalizationUtil.getLocalisedString(this, R.string.low_risk);
-                descReason.setText(descVal);
+                setDescriptionText(mobileNo, name, R.string.low_risk);
                 break;
             case Constants.STATUS_500:
             case Constants.STATUS_600:
             case Constants.STATUS_501:
             case Constants.STATUS_502:
-                descVal = name + " (" + mobileNo + ") " + LocalizationUtil.getLocalisedString(this, R.string.high_risk);
-                descReason.setText(descVal);
+                setDescriptionText(mobileNo, name, R.string.high_risk);
                 break;
             case Constants.STATUS_400:
             case Constants.STATUS_401:
             case Constants.STATUS_402:
             case Constants.STATUS_403:
-                descVal = name + " (" + mobileNo + ") " + LocalizationUtil.getLocalisedString(this, R.string.moderate_risk);
-                descReason.setText(descVal);
+                setDescriptionText(mobileNo, name, R.string.moderate_risk);
                 break;
             case Constants.STATUS_700:
-                descVal = name + " (" + mobileNo + ") " + LocalizationUtil.getLocalisedString(this, R.string.tested_positive_status);
-                descReason.setText(descVal);
+            case Constants.STATUS_1000:
+                setDescriptionText(mobileNo, name, R.string.tested_positive_status);
                 break;
             default:
                 descReason.setText(message);
+                break;
         }
+    }
+
+    private void setDescriptionText(String mobileNo, String name, int message) {
+        String descVal = name + " (" + mobileNo + ") " + LocalizationUtil.getLocalisedString(this, message);
+        descReason.setText(descVal);
     }
 
     private void showExpiredCode() {

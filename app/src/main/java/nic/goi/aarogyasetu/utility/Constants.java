@@ -95,6 +95,7 @@ public class Constants {
     public static final int STATUS_402 = 402;
     public static final int STATUS_403 = 403;
     public static final int STATUS_700 = 700;
+    public static final int STATUS_1000 = 1000;
 
     public static class Errors {
         public static final String SELECT_OTHER_APP = "Select any other app to open this url";
