@@ -100,11 +100,7 @@ public class CustomScannerActivity extends Activity implements CustomCaptureMana
     }
 
     private void configurePromptContainer() {
-        if (CorUtility.isQRPermissionAvailable(this)) {
-            promptContainer.setVisibility(VISIBLE);
-        } else {
-            promptContainer.setVisibility(GONE);
-        }
+        promptContainer.setVisibility(CorUtility.isQRPermissionAvailable(this) ? VISIBLE : GONE);
     }
 
 
