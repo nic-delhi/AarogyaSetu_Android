@@ -4,8 +4,8 @@ import android.app.Activity;
 import android.content.ActivityNotFoundException;
 import android.content.Intent;
 import android.content.pm.PackageManager;
+import android.content.res.ColorStateList;
 import android.graphics.Color;
-import android.graphics.PorterDuff;
 import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
@@ -220,7 +220,7 @@ public class CustomScannerActivity extends Activity implements CustomCaptureMana
         }
         desc.setVisibility(GONE);
         //set status container background color
-        statusContainer.getBackground().setColorFilter(Color.parseColor(colorCode), PorterDuff.Mode.SRC_ATOP);
+        statusContainer.setBackgroundTintList(ColorStateList.valueOf(Color.parseColor("#44000000")));
         String languageCode = SharedPref.getStringParams(this, SharedPrefsConstants.USER_SELECTED_LANGUAGE_CODE, "en");
         if (languageCode.equalsIgnoreCase("en")) {
             //show message from backend
@@ -236,17 +236,17 @@ public class CustomScannerActivity extends Activity implements CustomCaptureMana
     private void configureStatusText(String mobileNo, int statusCode, String message, String
             name) {
         switch (statusCode) {
-            case Constants.STATUS_200:
             case Constants.STATUS_100:
-            case Constants.STATUS_800:
+            case Constants.STATUS_200:
             case Constants.STATUS_301:
             case Constants.STATUS_302:
+            case Constants.STATUS_800:
                 setDescriptionText(mobileNo, name, R.string.low_risk);
                 break;
             case Constants.STATUS_500:
-            case Constants.STATUS_600:
             case Constants.STATUS_501:
             case Constants.STATUS_502:
+            case Constants.STATUS_600:
                 setDescriptionText(mobileNo, name, R.string.high_risk);
                 break;
             case Constants.STATUS_400:
