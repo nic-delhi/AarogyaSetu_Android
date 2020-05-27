@@ -4,6 +4,8 @@ import android.app.Activity;
 import android.content.ActivityNotFoundException;
 import android.content.Intent;
 import android.content.pm.PackageManager;
+import android.graphics.Color;
+import android.graphics.PorterDuff;
 import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
@@ -181,19 +183,18 @@ public class CustomScannerActivity extends Activity implements CustomCaptureMana
                     long expiry = body.get(Constants.EXPIRY, Long.class);
                     String name = body.get(Constants.NAME, String.class);
                     String mobileNo = body.get(Constants.MOBILE, String.class);
-                    String status = body.get(Constants.STATUS, String.class);
-                    int colorCode = body.get(Constants.COLOR_CODE, Integer.class);
+                    String colorCode = body.get(Constants.COLOR_CODE, String.class);
                     int statusCode = body.get(Constants.STATUS_CODE, Integer.class);
                     String message = body.get(Constants.MESSAGE, String.class);
 
                     final long millisecondsMultiplier = 1000L;
                     long countDownMilliSeconds = expiry * millisecondsMultiplier;
-                    if (expiry <= 0 || TextUtils.isEmpty(mobileNo) || TextUtils.isEmpty(status)) {
+                    if (expiry <= 0 || TextUtils.isEmpty(mobileNo)) {
                         showInvalidStatus();
                     } else if (expiry > 0 && System.currentTimeMillis() - countDownMilliSeconds > 0) {
                         showExpiredCode();
-                    } else if (!TextUtils.isEmpty(mobileNo) && !TextUtils.isEmpty(status)) {
-                        showPersonStatus(name, mobileNo, status, statusCode, colorCode, message);
+                    } else if (!TextUtils.isEmpty(mobileNo) && !TextUtils.isEmpty(colorCode)) {
+                        showPersonStatus(name, mobileNo, statusCode, colorCode, message);
                     } else {
                         showInvalidStatus();
                     }
@@ -211,7 +212,8 @@ public class CustomScannerActivity extends Activity implements CustomCaptureMana
         statusContainer.postDelayed(this::closeStausView, 5000);
     }
 
-    private void showPersonStatus(String scannerName, String mobileNo, String status, int statusCode, int colorCode, String message) {
+    private void showPersonStatus(String scannerName, String mobileNo, int statusCode, String
+            colorCode, String message) {
         String name = "";
         if (!TextUtils.isEmpty(scannerName)) {
             name = CorUtility.Companion.toTitleCase(scannerName);
@@ -219,7 +221,8 @@ public class CustomScannerActivity extends Activity implements CustomCaptureMana
         desc.setVisibility(GONE);
         String descVal;
         //set status container background color
-        statusContainer.setBackgroundTintList(ContextCompat.getColorStateList(this, colorCode));
+        int i = Color.parseColor("#a8a8a8");
+        statusContainer.getBackground().setColorFilter(Color.parseColor(colorCode), PorterDuff.Mode.SRC_ATOP);
         String languageCode = SharedPref.getStringParams(this, SharedPrefsConstants.USER_SELECTED_LANGUAGE_CODE, "en");
         if (languageCode.equalsIgnoreCase("en")) {
             //show message from backend
@@ -232,7 +235,8 @@ public class CustomScannerActivity extends Activity implements CustomCaptureMana
         statusClose.setImageTintList(ContextCompat.getColorStateList(this, R.color.white));
     }
 
-    private void configureStatusText(String mobileNo, int statusCode, String message, String name) {
+    private void configureStatusText(String mobileNo, int statusCode, String message, String
+            name) {
         String descVal;
         switch (statusCode) {
             case Constants.STATUS_200:
@@ -298,7 +302,8 @@ public class CustomScannerActivity extends Activity implements CustomCaptureMana
 
     @RequiresApi(api = Build.VERSION_CODES.M)
     @Override
-    public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
+    public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions,
+                                           @NonNull int[] grantResults) {
         super.onRequestPermissionsResult(requestCode, permissions, grantResults);
         boolean isPermissionGranted = true;
         if (grantResults.length > 0) {
