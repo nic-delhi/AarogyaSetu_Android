@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Aarogya Setu</string>
+    <string name="app_name">आरोग्य सेतु</string>
     <string name="your_mobile_number_is_required_to_know_your_identity">संपर्क ट्रेसिंगसाठी आपला मोबाइल नंबर आवश्यक आहे.</string>
     <string name="text_value">समजा, तुम्ही एखाद्या आठवड्यात परत एखाद्या संमेलनात भेटला होता किंवा एखाद्या सार्वजनिक ठिकाणी एखाद्याच्या ओळखीच्या जवळ होता आणि काही दिवसांत, ते कोविड -१९ साठी सकारात्मक चाचणी घेतात.\n\nगेल्या १४ दिवसांत भारत सरकार त्या व्यक्तीच्या जवळ असलेल्या त्रिज्येच्या अॅप स्थापित केलेल्या सक्रिय उपकरणांद्वारे त्या व्यक्तीचे सर्व स्पर्श बिंदू शोधून काढेल.\n\nअशा प्रकारच्या सर्व संपर्कांना सल्लामसलत असलेल्या पुढील संपर्कांकरिता स्वत: ला वेगळ्या करण्यासाठी किंवा आवश्यकतेनुसार जवळच्या चाचणी केंद्रात चाचणी घेण्यासंदर्भात सूचना पाठविली जाईल.\n\nसक्रिय संपर्क ट्रेसिंगमध्ये भाग घेऊन आपण आम्हाला कोविड -१९ of चा प्रसार कमी करण्यात मदत कराल आणि आपल्या आरोग्यासाठी आणि आरोग्यासाठी कृतीशील उपाययोजना राबविण्यास भारत सरकार सक्षम कराल.\n\n</string>
     <string name="permissions_title">सेवा अटी आणि गोपनीयता</string>
@@ -16,9 +16,9 @@
     <!-- otp_validation_layout -->
     <string name="enter_otp">ओटीपी प्रविष्ट करा</string>
     <string name="we_have_sent_otp">आम्ही आपल्या मोबाइल क्रमांकावर ओटीपी पाठविला आहे.</string>
-    <string name="we_have_resent_otp">We have resent OTP to your mobile number.</string>
+    <string name="we_have_resent_otp">आम्ही ओटीपी आपल्या मोबाईल क्रमांकावर परत पाठवला आहे.</string>
     <string name="otp">OTP</string>
-    <string name="please_enter_a_valid_otp">कृपया वैध OTP एन्टर करा.</string>
+    <string name="please_enter_a_valid_otp">कृपया वैध ओटीपी एन्टर करा.</string>
     <!-- why_needed_layout -->
     <string name="i_understand">मी समजतो.</string>
     <string name="device_location"><![CDATA[<b>डिव्हाइस स्थान</b>]]></string>
@@ -27,7 +27,7 @@
     <string name="monitors_your_device_s_proximity_within_6_feet_range">आपल्या डिव्हाइसच्या दुसर्‍या मोबाइल डिव्हाइसच्या जवळपासचे परीक्षण करते. आपण हे नेहमीच चालू ठेवावे अशी शिफारस केली जाते.</string>
     <string name="tracks_an_individual_s_touch_points_so_can_easily_find_others_who_came_in_close_contact">आपला डेटा फक्त भारत सरकारबरोबर सामायिक केला जाईल.\nअॅप आपले नाव आणि नंबर कोणत्याही वेळी मोठ्या प्रमाणात जाहीर करण्याची परवानगी देत नाही.</string>
     <string name="contribute_to_a_safer_india">मी सहमत आहे</string>
-    <string name="please_select_a_language_en">Please select your language\nकृपया अपनी भाषा चुनें</string>
+    <string name="please_select_a_language_en">Please select your language\nकृपया आपली भाषा निवडा</string>
     <string name="next">पुढे</string>
     <string name="please_select_a_language_to_proceed">Please select a language to proceed.</string>
     <!-- Strings used for fragments for navigation -->
