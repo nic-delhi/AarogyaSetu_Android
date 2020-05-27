@@ -1,6 +1,6 @@
 <resources>
     <string name="app_name">Aarogya Setu</string>
-    <string name="your_mobile_number_is_required_to_know_your_identity">ਸੰਪਰਕ ਟਰੇਸ ਕਰਨ ਲਈ ਤੁਹਾਡਾ ਮੋਬਾਈਲ ਨੰਬਰ ਲੋੜੀਂਦਾ ਹੈ।</string>
+    <string name="your_mobile_number_is_required_to_know_your_identity">ਸੰਪਰਕ ਟਰੇਸਿੰਗ ਲਈ ਤੁਹਾਡਾ ਮੋਬਾਈਲ ਨੰਬਰ ਲਾਜ਼ਮੀ ਹੈ।</string>
     <string name="text_value">ਕਹੋ, ਤੁਸੀਂ ਕਿਸੇ ਹਫ਼ਤੇ ਪਹਿਲਾਂ ਕਿਸੇ ਇਕੱਠ ਵਿੱਚ ਕਿਸੇ ਨੂੰ ਮਿਲੇ ਸੀ ਜਾਂ ਕਿਸੇ ਜਨਤਕ ਜਗ੍ਹਾ‘ ਤੇ ਕਿਸੇ ਅਣਜਾਣ ਵਿਅਕਤੀ ਦੇ ਨੇੜਤਾ ਵਿੱਚ ਸੀ, ਅਤੇ ਕੁਝ ਦਿਨਾਂ ਵਿੱਚ, ਉਹ ਕੋਵਿਡ -19 ਲਈ ਸਕਾਰਾਤਮਕ ਟੈਸਟ ਕਰਦੇ ਹਨ।\n\nਭਾਰਤ ਸਰਕਾਰ ਪਿਛਲੇ 14 ਦਿਨਾਂ ਦੌਰਾਨ ਉਸ ਵਿਅਕਤੀ ਦੇ ਸਾਰੇ ਟੱਚ ਪੁਆਇੰਟਾਂ ਦਾ ਪਤਾ ਲਗਾਏਗੀ, ਜੋ ਐਪ ਦੀ ਸਥਾਪਨਾ ਨਾਲ ਸਰਗਰਮ ਉਪਕਰਣਾਂ ਰਾਹੀਂ ਉਸ ਵਿਅਕਤੀ ਦੇ ਨਜ਼ਦੀਕੀ ਘੇਰੇ ਵਿਚ ਸਨ।\n\nਫਿਰ ਅਜਿਹੇ ਸਾਰੇ ਸੰਪਰਕਾਂ ਨੂੰ ਇਕ ਸਲਾਹਕਾਰ ਨਾਲ ਅਗਲੇਰੀ ਕਾਰਵਾਈ ਲਈ ਸਵੈ-ਅਲੱਗ-ਥਲੱਗ ਕਰਨ ਜਾਂ ਕਿਸੇ ਟੈਸਟ ਨੂੰ ਨੇੜੇ ਦੇ ਟੈਸਟਿੰਗ ਕੇਂਦਰ ਵਿਖੇ ਕਰਵਾਉਣ ਲਈ, ਜ਼ਰੂਰਤ ਅਨੁਸਾਰ ਭੇਜਿਆ ਜਾਵੇਗਾ।\n\nਸਰਗਰਮ ਸੰਪਰਕ ਟਰੇਸਿੰਗ ਵਿਚ ਹਿੱਸਾ ਲੈ ਕੇ, ਤੁਸੀਂ ਸਾਡੀ ਕੋਵਿਡ -19 ਦੇ ਫੈਲਣ ਨੂੰ ਘੱਟ ਕਰਨ ਅਤੇ ਭਾਰਤ ਸਰਕਾਰ ਨੂੰ ਤੁਹਾਡੀ ਸਿਹਤ ਅਤੇ ਤੰਦਰੁਸਤੀ ਲਈ ਕਿਰਿਆਸ਼ੀਲ ਉਪਾਅ ਲਾਗੂ ਕਰਨ ਵਿਚ ਸਹਾਇਤਾ ਕਰੋਗੇ।\n\n</string>
     <string name="permissions_title">ਸੇਵਾ ਦੀਆਂ ਸ਼ਰਤਾਂ ਅਤੇ ਗੋਪਨੀਯਤਾ</string>
     <string name="permissions_detail">ਅਸੀਂ ਇਸ ਵਿਸ਼ੇ ਦੀ ਸੁਭਾਅ ਅਤੇ ਸੰਵੇਦਨਸ਼ੀਲਤਾ ਨੂੰ ਸਮਝਦੇ ਹਾਂ ਅਤੇ ਇਹ ਸੁਨਿਸ਼ਚਿਤ ਕਰਨ ਲਈ ਸਖਤ ਕਦਮ ਚੁੱਕੇ ਹਨ ਕਿ ਤੁਹਾਡੇ ਡੇਟਾ ਨਾਲ ਸਮਝੌਤਾ ਨਾ ਹੋਵੇ.</string>
@@ -11,31 +11,31 @@
     <string name="mobile_number">ਮੋਬਾਈਲ ਨੰਬਰ</string>
     <string name="why_is_it_needed">ਇਸਦੀ ਲੋੜ ਕਿਉਂ ਹੈ?</string>
     <string name="submit">ਜਮ੍ਹਾਂ ਕਰੋ</string>
-    <string name="resend_otp">ਦੁਬਾਰਾ OTP</string>
-    <string name="resend_otp_in">%s ਦੁਬਾਰਾ OTP</string>
+    <string name="resend_otp">ਦੁਬਾਰਾ ਓਟੀਪ</string>
+    <string name="resend_otp_in">%s ਦੁਬਾਰਾ ਓਟੀਪ</string>
     <!-- otp_validation_layout -->
-    <string name="enter_otp">OTP ਦਰਜ ਕਰੋ</string>
+    <string name="enter_otp">ਓਟੀਪ ਦਰਜ ਕਰੋ</string>
     <string name="we_have_sent_otp">ਅਸੀਂ ਤੁਹਾਡੇ ਮੋਬਾਈਲ ਨੰਬਰ ਤੇ ਓਟੀਪੀ ਭੇਜਿਆ ਹੈ</string>
     <string name="we_have_resent_otp">ਅਸੀਂ ਤੁਹਾਡੇ ਮੋਬਾਈਲ ਨੰਬਰ ਤੇ ਓਟੀਪੀ ਭੇਜਿਆ ਹੈ</string>
-    <string name="otp">OTP</string>
-    <string name="please_enter_a_valid_otp">ਕਿਰਪਾ ਕਰਕੇ ਇੱਕ ਵੈਧ OTP ਦਾਖਲ ਕਰੋ</string>
+    <string name="otp">ਓਟੀਪ</string>
+    <string name="please_enter_a_valid_otp">ਕਿਰਪਾ ਕਰਕੇ ਇੱਕ ਵੈਧ ਓਟੀਪ ਦਾਖਲ ਕਰੋ</string>
     <!-- why_needed_layout -->
-    <string name="i_understand">ਮੈਂ ਸੱਮਝਦਾ ਹਾਂ.</string>
+    <string name="i_understand">ਮੈਂ ਸੱਮਝਦਾ ਹਾਂ ।</string>
     <string name="device_location"><![CDATA[<b>ਜੰਤਰ ਟਿਕਾਣਾ</b>]]></string>
     <string name="bluetooth"><![CDATA[<b>ਬਲੁਟੁੱਥ</b>]]></string>
     <string name="data_sharing_with_the_ministry"><![CDATA[<b>ਡਾਟਾ ਸ਼ੇਅਰਿੰਗ</b>]]></string>
     <string name="monitors_your_device_s_proximity_within_6_feet_range">ਤੁਹਾਡੀ ਡਿਵਾਈਸ ਦੀ ਕਿਸੇ ਹੋਰ ਮੋਬਾਈਲ ਡਿਵਾਈਸ ਨਾਲ ਨੇੜਤਾ ਦੀ ਨਿਗਰਾਨੀ ਕਰਦਾ ਹੈ. ਇਹ ਸਿਫਾਰਸ਼ ਕੀਤੀ ਜਾਂਦੀ ਹੈ ਕਿ ਤੁਸੀਂ ਇਸਨੂੰ ਹਰ ਸਮੇਂ ਜਾਰੀ ਰੱਖੋ.</string>
     <string name="tracks_an_individual_s_touch_points_so_can_easily_find_others_who_came_in_close_contact">ਤੁਹਾਡਾ ਡੇਟਾ ਸਿਰਫ ਭਾਰਤ ਸਰਕਾਰ ਨਾਲ ਸਾਂਝਾ ਕੀਤਾ ਜਾਵੇਗਾ. ਐਪ ਕਿਸੇ ਵੀ ਸਮੇਂ ਤੁਹਾਡੇ ਨਾਮ ਅਤੇ ਨੰਬਰ ਜਨਤਾ ਨੂੰ ਦੱਸਣ ਦੀ ਆਗਿਆ ਨਹੀਂ ਦਿੰਦੀ.</string>
     <string name="contribute_to_a_safer_india">ਮੈਂ ਸਹਿਮਤ ਹਾਂ</string>
-    <string name="please_select_a_language_en">Please select your language\nकृपया अपनी भाषा चुनें</string>
+    <string name="please_select_a_language_en">Please select your language\nਕਿਰਪਾ ਕਰਕੇ ਆਪਣੀ ਭਾਸ਼ਾ ਚੁਣੋ</string>
     <string name="next">ਅਗਲਾ</string>
-    <string name="please_select_a_language_to_proceed">Please select a language to proceed.</string>
+    <string name="please_select_a_language_to_proceed">ਕਿਰਪਾ ਕਰਕੇ ਜਾਰੀ ਕਰਨ ਲਈ ਇੱਕ ਭਾਸ਼ਾ ਚੁਣੋ। </string>
     <!-- Strings used for fragments for navigation -->
     <string name="please_enter_a_valid_number">ਕਿਰਪਾ ਕਰਕੇ ਇੱਕ ਯੋਗ ਨੰਬਰ ਦਾਖਲ ਕਰੋ</string>
     <string name="would_you_like_to">ਕੀ ਤੁਸੀਂ ਸੂਚਿਤ ਕਰਨਾ ਚਾਹੁੰਦੇ ਹੋ ਜੇ ਤੁਸੀਂ ਕਿਸੇ ਅਜਿਹੇ ਵਿਅਕਤੀ ਨਾਲ ਰਸਤਾ ਪਾਰ ਕੀਤਾ ਹੈ ਜਿਸਨੇ ਕੋਵਿਡ -19 ਨੂੰ ਸਕਾਰਾਤਮਕ ਟੈਸਟ ਕੀਤਾ ਹੈ?</string>
     <string name="each_one_of_us">ਸਾਡੇ ਵਿਚੋਂ ਹਰ ਇਕ ਕੋਲ ਭਾਰਤ ਵਿਚ ਕੋਰੋਨਾਵਾਇਰਸ ਮਹਾਂਮਾਰੀ ਦੇ ਫੈਲਣ ਨੂੰ ਰੋਕਣ ਵਿਚ ਮਦਦ ਕਰਨ ਦੀ ਸ਼ਕਤੀ ਹੈl</string>
     <string name="simply_1_install_the_app">ਬਸ,
-\n१ ऐਪ ਇੰਸਟਾਲ ਕਰੋ
+\n१ ਐਪ ਇੰਸਟਾਲ ਕਰੋ
 \n२. ਆਪਣੇ ਬਲੂਟੂਥ / Location ਤੇ ਜਾਓ
 \n३. ਆਪਣੇ ਲੋਕ ਸ਼ੇਅਰਿੰਗ ਹਮੇਸ਼ਾ "ਆਵੇਜ਼" ਜਾਰੀ ਰੱਖੋ
 \n\nਆਪਣੇ ਦੋਸਤਾਂ ਅਤੇ ਪਰਿਵਾਰ ਨੂੰ ਐਪ ਸਥਾਪਤ ਕਰਨ ਲਈ ਸੱਦਾ ਦਿਓ </string>
@@ -48,9 +48,9 @@
     <string name="bluetooth_and_gps">Bluetooth &amp; Location</string>
     <string name="location_sharing">location sharing</string>
     <string name="permission_info_tnc_text"><![CDATA[<p>ਜੇ ਤੁਸੀਂ ਕਿਸੇ ਸੁਰੱਖਿਅਤ ਭਾਰਤ ਵਿਚ ਯੋਗਦਾਨ ਪਾਉਣਾ ਚਾਹੁੰਦੇ ਹੋ ਤਾਂ ਕਿਰਪਾ ਕਰਕੇ ਹੇਠਾਂ ਦਿੱਤੇ ਬਟਨ ਤੇ ਕਲਿਕ ਕਰਕੇ <a href="https://static.swaraksha.gov.in/tnc/">ਸੇਵਾ ਦੀਆਂ ਸ਼ਰਤਾਂ</a> ਅਤੇ <a href="https://web.swaraksha.gov.in/ncv19/privacy/">ਗੋਪਨੀਯਤਾ ਨੀਤੀ</a> ਨੂੰ ਸਵੀਕਾਰ ਕਰੋ:</p>]]></string>
-    <string name="auth_error_unknown">There is some error logging you in</string>
-    <string name="auth_error_invalid_otp">The OTP you have entered is incorrect</string>
-    <string name="auth_error_user_disabled">You are not allowed to sign in</string>
+    <string name="auth_error_unknown">ਤੁਹਾਨੂੰ ਲੌਗਇਨ ਦਰਜਤਾ  ਵਿੱਚ ਕੁਝ ਕਮੀ  ਹੈ</string>
+    <string name="auth_error_invalid_otp">ਤੁਹਾਡੇ ਦੁਆਰਾ ਦਰਜ਼  ਕੀਤਾ ਓਟੀਪੀ ਗਲਤ ਹੈ</string>
+    <string name="auth_error_user_disabled">ਤੁਸੀ  ਸਾਈਨ ਇਨ ਨਹੀਂ ਕਰ ਸਕਦੇ</string>
     <string name="close">ਬੰਦ ਕਰੋ</string>
     <string name="sync_data_user_consent">ਕੰਟੈਕਟ ਟ੍ਰੇਸਿੰਗ ਵਿੱਚ ਮਦਦ ਕਰਨ ਲਈ, ਬਲੂਟੁੱਥ ਅਤੇ GPS ਰਾਹੀਂ ਕੈਪਚਰ ਕੀਤੇ ਗਏ ਤੁਹਾਡੇ ਸੰਵਾਦ ਡਾਟਾ ਨੂੰ ਭਾਰਤ ਸਰਕਾਰ ਨਾਲ ਸ਼ੇਅਰ ਕੀਤਾ ਜਾਵੇਗਾ.</string>
     <string name="confirm_and_proceed">ਪੁਸ਼ਟੀ ਕਰੋ ਅਤੇ ਅੱਗੇ ਵਧੋ</string>
