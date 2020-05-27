@@ -32,15 +32,12 @@
 
 
         <activity
-            android:name="nic.goi.aarogyasetu.views.HomeActivity"
-            android:screenOrientation="portrait" />
+            android:name="nic.goi.aarogyasetu.views.HomeActivity"/>
         <activity
             android:name="nic.goi.aarogyasetu.views.OnboardingActivity"
-            android:launchMode="singleTask"
-            android:screenOrientation="portrait" />
+            android:launchMode="singleTask" />
         <activity
             android:name="nic.goi.aarogyasetu.views.SplashActivity"
-            android:screenOrientation="portrait"
             android:theme="@style/AppTheme.Splash">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -62,17 +59,14 @@
         <activity
             android:name="nic.goi.aarogyasetu.views.PermissionActivity"
             android:launchMode="singleTask"
-            android:screenOrientation="portrait"
             android:windowSoftInputMode="adjustResize" />
         <activity
             android:name="nic.goi.aarogyasetu.views.QrActivity"
             android:launchMode="singleTask"
-            android:screenOrientation="portrait"
             android:windowSoftInputMode="adjustResize" />
         <activity
             android:name="nic.goi.aarogyasetu.zxing.CustomScannerActivity"
             android:launchMode="singleTask"
-            android:screenOrientation="portrait"
             android:stateNotNeeded="true"
             android:windowSoftInputMode="stateAlwaysHidden" />
 

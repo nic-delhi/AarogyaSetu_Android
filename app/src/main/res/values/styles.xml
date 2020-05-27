@@ -6,6 +6,7 @@
         <item name="colorPrimary">@color/black</item>
         <item name="colorPrimaryDark">@color/blue</item>
         <item name="colorAccent">@color/white</item>
+	<item name="android:screenOrientation">portrait</item>
         <item name="materialButtonStyle">@style/AppButton</item>
         <item name="textInputStyle">@style/AppTextField</item>
         <item name="android:textColorLink">@color/blue</item>
@@ -36,6 +37,7 @@
     <style name="AppTheme.Splash">
         <item name="android:statusBarColor">@color/white</item>
         <item name="android:windowBackground">@drawable/background_splash</item>
+        <item name="android:screenOrientation">portrait</item>
     </style>
 
     <style name="AppButton" parent="Widget.MaterialComponents.Button">
