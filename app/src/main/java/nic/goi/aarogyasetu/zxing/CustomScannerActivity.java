@@ -34,6 +34,9 @@ import io.jsonwebtoken.Jws;
 import io.jsonwebtoken.MalformedJwtException;
 import io.jsonwebtoken.io.DecodingException;
 import nic.goi.aarogyasetu.R;
+import nic.goi.aarogyasetu.analytics.EventNames;
+import nic.goi.aarogyasetu.analytics.EventParams;
+import nic.goi.aarogyasetu.utility.AnalyticsUtils;
 import nic.goi.aarogyasetu.utility.Constants;
 import nic.goi.aarogyasetu.utility.CorUtility;
 import nic.goi.aarogyasetu.utility.DecryptionUtil;
@@ -171,7 +174,7 @@ public class CustomScannerActivity extends Activity implements CustomCaptureMana
         } catch (ExpiredJwtException e) {
             showExpiredCode();
         } catch (NoSuchAlgorithmException | DecodingException | MalformedJwtException exception) {
-            showInvalidStatus();
+            showInvalidStatus(exception.getMessage());
         } catch (Exception exception) {
             showCommonInvalidStatus();
         }
@@ -189,13 +192,13 @@ public class CustomScannerActivity extends Activity implements CustomCaptureMana
                     final long millisecondsMultiplier = 1000L;
                     long countDownMilliSeconds = expiry * millisecondsMultiplier;
                     if (expiry <= 0 || TextUtils.isEmpty(mobileNo)) {
-                        showInvalidStatus();
+                        showInvalidStatus(EventParams.EXPIRY_OR_MOBILE_FAILURE);
                     } else if (expiry > 0 && System.currentTimeMillis() - countDownMilliSeconds > 0) {
                         showExpiredCode();
                     } else if (!TextUtils.isEmpty(mobileNo) && !TextUtils.isEmpty(colorCode)) {
                         showPersonStatus(name, mobileNo, statusCode, colorCode, message);
                     } else {
-                        showInvalidStatus();
+                        showInvalidStatus(EventParams.OTHER_DECODE_ERROR);
                     }
                 } else {
                     showCommonInvalidStatus();
@@ -270,7 +273,8 @@ public class CustomScannerActivity extends Activity implements CustomCaptureMana
         statusClose.setImageTintList(ContextCompat.getColorStateList(this, R.color.chat_close_dark));
     }
 
-    private void showInvalidStatus() {
+    private void showInvalidStatus(String message) {
+        sendInvalidExceptionEvent(message);
         desc.setVisibility(VISIBLE);
         descReason.setText(LocalizationUtil.getLocalisedString(this, R.string.not_generated_aarogya_setu));
         desc.setText(LocalizationUtil.getLocalisedString(this, R.string.invalid_qr_code));
@@ -278,6 +282,12 @@ public class CustomScannerActivity extends Activity implements CustomCaptureMana
         descReason.setTextColor(ContextCompat.getColorStateList(this, R.color.black));
         statusContainer.setBackgroundTintList(null);
         statusClose.setImageTintList(ContextCompat.getColorStateList(this, R.color.chat_close_dark));
+    }
+
+    private void sendInvalidExceptionEvent(String message) {
+        Bundle bundle = new Bundle();
+        bundle.putString(EventParams.SCAN_ERROR, "Exception: " + message);
+        AnalyticsUtils.sendEvent(EventNames.EVENT_SCAN_FAILED, bundle);
     }
 
     private void showCommonInvalidStatus() {

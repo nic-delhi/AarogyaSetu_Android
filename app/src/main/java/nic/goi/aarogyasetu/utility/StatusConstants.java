@@ -4,7 +4,6 @@ package nic.goi.aarogyasetu.utility;
  * @author Niharika.Arora
  * Constant file for status code to be used during scan
  */
-
 public class StatusConstants {
     public static final int STATUS_301 = 301;
     public static final int STATUS_302 = 302;
