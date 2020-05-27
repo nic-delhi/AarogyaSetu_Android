@@ -152,7 +152,7 @@ dependencies {
     implementation 'com.google.android.gms:play-services-location:17.0.0'
     implementation 'com.google.android.gms:play-services-auth-api-phone:17.4.0'
 
-    implementation "androidx.security:security-crypto:1.0.0-beta01"
+    implementation "androidx.security:security-crypto:1.0.0-rc02"
 
     //Firebase remote config
     implementation 'com.google.firebase:firebase-config:19.1.3'
