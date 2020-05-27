@@ -2,6 +2,7 @@ package nic.goi.aarogyasetu.utility;
 
 /**
  * @author Niharika.Arora
+ * Constant file for status code to be used during scan
  */
 
 public class StatusConstants {
