@@ -131,4 +131,5 @@
     <string name="hamburger_menu_intro">A lot of Features like Helpline, Privacy Policy, Terms of Use and more can be found here.</string>
     <string name="seconds" translatable="false">sec</string>
     <string name="refresh" translatable="false">Refresh</string>
+    <string name="emulator_detected">Emulator detected, Make sure app is not running on emulator</string>
 </resources>
