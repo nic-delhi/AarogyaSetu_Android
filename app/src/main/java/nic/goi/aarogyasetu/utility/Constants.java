@@ -90,4 +90,10 @@ public class Constants {
         public static final String TESTED_POSITIVE_CONSENT = "tested_positive_consent";
         public static final String SELF_CONSENT = "self_consent";
     }
+
+    public static final String DEEPLINK_TAG = "tg";
+    public static class SCREEN_TAG {
+        public static final int _2_QR_CODE_PAGE = 2;
+        public static final int _3_QR_CODE_SCAN_PAGE = 3;
+    }
 }
