@@ -34,12 +34,11 @@ import io.jsonwebtoken.Jws;
 import io.jsonwebtoken.MalformedJwtException;
 import io.jsonwebtoken.io.DecodingException;
 import nic.goi.aarogyasetu.R;
-import nic.goi.aarogyasetu.prefs.SharedPref;
-import nic.goi.aarogyasetu.prefs.SharedPrefsConstants;
 import nic.goi.aarogyasetu.utility.Constants;
 import nic.goi.aarogyasetu.utility.CorUtility;
 import nic.goi.aarogyasetu.utility.DecryptionUtil;
 import nic.goi.aarogyasetu.utility.LocalizationUtil;
+import nic.goi.aarogyasetu.utility.StatusConstants;
 import nic.goi.aarogyasetu.views.QrActivity;
 
 import static android.view.View.GONE;
@@ -221,14 +220,7 @@ public class CustomScannerActivity extends Activity implements CustomCaptureMana
         desc.setVisibility(GONE);
         //set status container background color
         statusContainer.setBackgroundTintList(ColorStateList.valueOf(Color.parseColor(colorCode)));
-        String languageCode = SharedPref.getStringParams(this, SharedPrefsConstants.USER_SELECTED_LANGUAGE_CODE, "en");
-        if (languageCode.equalsIgnoreCase("en")) {
-            //show message from backend
-            descReason.setText(message);
-        } else {
-            //show localized messages in different langauges according to status codes
-            configureStatusText(mobileNo, statusCode, message, name);
-        }
+        configureStatusText(mobileNo, statusCode, message, name);
         descReason.setTextColor(ContextCompat.getColorStateList(this, R.color.white));
         statusClose.setImageTintList(ContextCompat.getColorStateList(this, R.color.white));
     }
@@ -236,27 +228,27 @@ public class CustomScannerActivity extends Activity implements CustomCaptureMana
     private void configureStatusText(String mobileNo, int statusCode, String message, String
             name) {
         switch (statusCode) {
-            case Constants.STATUS_100:
-            case Constants.STATUS_200:
-            case Constants.STATUS_301:
-            case Constants.STATUS_302:
-            case Constants.STATUS_800:
+            case StatusConstants.STATUS_100:
+            case StatusConstants.STATUS_200:
+            case StatusConstants.STATUS_301:
+            case StatusConstants.STATUS_302:
+            case StatusConstants.STATUS_800:
                 setDescriptionText(mobileNo, name, R.string.low_risk);
                 break;
-            case Constants.STATUS_500:
-            case Constants.STATUS_501:
-            case Constants.STATUS_502:
-            case Constants.STATUS_600:
+            case StatusConstants.STATUS_500:
+            case StatusConstants.STATUS_501:
+            case StatusConstants.STATUS_502:
+            case StatusConstants.STATUS_600:
                 setDescriptionText(mobileNo, name, R.string.high_risk);
                 break;
-            case Constants.STATUS_400:
-            case Constants.STATUS_401:
-            case Constants.STATUS_402:
-            case Constants.STATUS_403:
+            case StatusConstants.STATUS_400:
+            case StatusConstants.STATUS_401:
+            case StatusConstants.STATUS_402:
+            case StatusConstants.STATUS_403:
                 setDescriptionText(mobileNo, name, R.string.moderate_risk);
                 break;
-            case Constants.STATUS_700:
-            case Constants.STATUS_1000:
+            case StatusConstants.STATUS_700:
+            case StatusConstants.STATUS_1000:
                 setDescriptionText(mobileNo, name, R.string.tested_positive_status);
                 break;
             default:
