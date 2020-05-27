@@ -75,7 +75,7 @@
     <string name="permission_alert_message">आपको अपनी सेटिंग्स ( समायोजन) से योगदान के लिए आवश्यक स्थान / ब्लूटूथ अनुमति प्रदान करनी होगी, ऐप पर वापस आना होगा और फिर से क्लिक करना होगा।</string>
     <string name="error_network_error">कृपया इंटरनेट कनेक्शन की जाँच करें</string>
     <string name="error_location">स्थान सेटिंग्स अपर्याप्त हैं, और यहां तय नहीं किया जा सकता है। सेटिंग्स में ठीक करें।</string>
-    <string name="turn_on_bluetooth_all_times">अन्य उपकरणों से आपकी निकटता को ट्रैक ( धावन पथ) करने और आपको सटीक सुरक्षा अपडेट देने के लिए ब्लूटूथ हर समय ऑन होना चाहिए।</string>
+    <string name="turn_on_bluetooth_all_times">अन्य उपकरणों से आपकी निकटता पर नज़र रखने और आपको सटीक सुरक्षा जानकारी देने के लिए ब्लूटूथ हर समय ऑन होना चाहिए।</string>
     <string name="make_sure_your_phone_is_connected_to_the_wifi_or_switch_to_mobile_data">सुनिश्चित करें कि आपका फ़ोन वाईफाई से जुड़ा है या मोबाइल डेटा पर स्विच करें</string>
     <string name="login_failed">लॉगिन विफल। कृपया पुन: प्रयास करें</string>
     <string name="image_user_content_description">उपयोगकर्ता</string>
