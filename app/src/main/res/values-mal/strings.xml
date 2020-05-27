@@ -10,7 +10,7 @@
     <string name="country_code">+91 </string>
     <string name="mobile_number">മൊബൈൽ നമ്പർ</string>
     <string name="why_is_it_needed">എന്തുകൊണ്ട് ഇത് ആവശ്യമാണ്?</string>
-    <string name="submit">സബ്മിറ്</string>
+    <string name="submit">സബ്മിറ്റ്</string>
     <string name="resend_otp">OTP വീണ്ടും അയക്കുക</string>
     <string name="resend_otp_in">OTP %s വീണ്ടും ലഭിക്കുവാൻ</string>
     <!-- otp_validation_layout -->
