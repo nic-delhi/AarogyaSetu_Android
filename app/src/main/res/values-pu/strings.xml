@@ -45,7 +45,7 @@
     <string name="with_cowin_20_you_can"><![CDATA[<b>ਅਰੋਗਿਆ ਸੇਤੂ</b> ਦੇ ਨਾਲ, ਤੁਸੀਂ ਆਪਣੇ ਆਪ ਨੂੰ, ਆਪਣੇ ਪਰਿਵਾਰ ਅਤੇ ਦੋਸਤਾਂ ਦੀ ਰੱਖਿਆ ਕਰ ਸਕਦੇ ਹੋ ਅਤੇ ਕੋਵਿਡ -19 ਨਾਲ ਲੜਨ ਦੀ ਕੋਸ਼ਿਸ਼ ਵਿੱਚ ਸਾਡੇ ਦੇਸ਼ ਦੀ ਸਹਾਇਤਾ ਕਰ ਸਕਦੇ ਹੋlਆਓ ਕੋਵਿਨ -19 ਨੁ ਮਿਲ ਕੇ ਹਰਾਇਏ]]></string>
     <string name="register_now">ਹੁਣੇ ਦਰਜ ਕਰਵਾਓ</string>
     <string name="install">Install</string>
-    <string name="bluetooth_and_gps">Bluetooth &amp; Location</string>
+    <string name="bluetooth_and_gps">Bluetooth ਅਤੇ ਟਿਕਾਣਾ</string>
     <string name="location_sharing">location sharing</string>
     <string name="permission_info_tnc_text"><![CDATA[<p>ਜੇ ਤੁਸੀਂ ਕਿਸੇ ਸੁਰੱਖਿਅਤ ਭਾਰਤ ਵਿਚ ਯੋਗਦਾਨ ਪਾਉਣਾ ਚਾਹੁੰਦੇ ਹੋ ਤਾਂ ਕਿਰਪਾ ਕਰਕੇ ਹੇਠਾਂ ਦਿੱਤੇ ਬਟਨ ਤੇ ਕਲਿਕ ਕਰਕੇ <a href="https://static.swaraksha.gov.in/tnc/">ਸੇਵਾ ਦੀਆਂ ਸ਼ਰਤਾਂ</a> ਅਤੇ <a href="https://web.swaraksha.gov.in/ncv19/privacy/">ਗੋਪਨੀਯਤਾ ਨੀਤੀ</a> ਨੂੰ ਸਵੀਕਾਰ ਕਰੋ:</p>]]></string>
     <string name="auth_error_unknown">There is some error logging you in</string>

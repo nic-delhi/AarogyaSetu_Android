@@ -45,7 +45,7 @@
     <string name="with_cowin_20_you_can"><![CDATA[<b>Aarogya Setu</b> ସହିତ, ଆପଣ ନିଜକୁ, ଆପଣଙ୍କ ପରିବାର ଏବଂ ବନ୍ଧୁମାନଙ୍କୁ ସୁରକ୍ଷା ଦେଇପାରିବେ ଏବଂ COVID-19 ସହିତ ଲ to ିବା ପାଇଁ ଆମ ଦେଶକୁ ସାହାଯ୍ୟ କରିପାରିବେ |]]></string>
     <string name="register_now">ବର୍ତ୍ତମାନ ପଞ୍ଜିକରଣ କରନ୍ତୁ</string>
     <string name="install">Install</string>
-    <string name="bluetooth_and_gps">Bluetooth &amp; Location</string>
+    <string name="bluetooth_and_gps">ବ୍ଲୁଟୁଥ୍ ଏବଂ ଅବସ୍ଥାନ</string>
     <string name="location_sharing">location sharing</string>
     <string name="permission_info_tnc_text"><![CDATA[<p>ଯଦି ଆପଣ ଏକ ନିରାପଦ ଭାରତରେ ଯୋଗଦାନ କରିବାକୁ ଚାହାଁନ୍ତି ଦୟାକରି ନିମ୍ନୋକ୍ତ ବଟନ୍ ଉପରେ କ୍ଲିକ୍ କରି <a href="https://static.swaraksha.gov.in/tnc/">ସେବା ସର୍ତ୍ତାବଳୀ</a> ଏବଂ <a href="https://web.swaraksha.gov.in/ncv19/privacy/">ଗୋପନୀୟତା ନୀତିକୁ</a> ଗ୍ରହଣ କରନ୍ତୁ ବୋଲି ସୂଚିତ କରନ୍ତୁ:</p>]]></string>
     <string name="auth_error_unknown">There is some error logging you in</string>
