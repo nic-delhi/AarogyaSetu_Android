@@ -69,11 +69,7 @@ public class Constants {
     public static final String ACTION_REMIND_LATER = "Remind later";
     public static final String SPACE = " ";
 
-    public static final String HEALTHY = "healthy";
-    public static final String QUARANTINE = "quarantine";
-    public static final String CAUTION = "caution";
-    public static final String TEST = "test";
-    public static final String INFECTED = "infected";
+
     public static final String EXPIRY = "exp";
     public static final String NAME = "name";
     public static final String MOBILE = "mobile_no";
@@ -82,6 +78,23 @@ public class Constants {
     public static final String FILE_EXT = ".jpg";
     public static final String QR_SCREEN_TAG = "QR_SCREEN_TAG ";
     public static final int MAX_INTRO_VIEWS = 2;
+    public static final String COLOR_CODE = "color_code";
+    public static final String STATUS_CODE = "status_code";
+    public static final String MESSAGE = "message";
+    public static final int STATUS_200 = 200;
+    public static final int STATUS_100 = 100;
+    public static final int STATUS_800 = 800;
+    public static final int STATUS_301 = 301;
+    public static final int STATUS_302 = 302;
+    public static final int STATUS_500 = 500;
+    public static final int STATUS_600 = 600;
+    public static final int STATUS_501 = 501;
+    public static final int STATUS_502 = 502;
+    public static final int STATUS_400 = 400;
+    public static final int STATUS_401 = 401;
+    public static final int STATUS_402 = 402;
+    public static final int STATUS_403 = 403;
+    public static final int STATUS_700 = 700;
 
     public static class Errors {
         public static final String SELECT_OTHER_APP = "Select any other app to open this url";

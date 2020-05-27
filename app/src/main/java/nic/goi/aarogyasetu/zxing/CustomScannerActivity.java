@@ -25,15 +25,15 @@ import androidx.core.content.ContextCompat;
 import com.journeyapps.barcodescanner.DecoratedBarcodeView;
 
 import java.security.NoSuchAlgorithmException;
-import java.security.spec.InvalidKeySpecException;
 
 import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.ExpiredJwtException;
 import io.jsonwebtoken.Jws;
 import io.jsonwebtoken.MalformedJwtException;
 import io.jsonwebtoken.io.DecodingException;
-import io.jsonwebtoken.security.SignatureException;
 import nic.goi.aarogyasetu.R;
+import nic.goi.aarogyasetu.prefs.SharedPref;
+import nic.goi.aarogyasetu.prefs.SharedPrefsConstants;
 import nic.goi.aarogyasetu.utility.Constants;
 import nic.goi.aarogyasetu.utility.CorUtility;
 import nic.goi.aarogyasetu.utility.DecryptionUtil;
@@ -57,6 +57,7 @@ public class CustomScannerActivity extends Activity implements CustomCaptureMana
     private ImageView statusClose, close;
     private TextView desc, descReason, generateQr;
     private View promptContainer;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -181,6 +182,10 @@ public class CustomScannerActivity extends Activity implements CustomCaptureMana
                     String name = body.get(Constants.NAME, String.class);
                     String mobileNo = body.get(Constants.MOBILE, String.class);
                     String status = body.get(Constants.STATUS, String.class);
+                    int colorCode = body.get(Constants.COLOR_CODE, Integer.class);
+                    int statusCode = body.get(Constants.STATUS_CODE, Integer.class);
+                    String message = body.get(Constants.MESSAGE, String.class);
+
                     final long millisecondsMultiplier = 1000L;
                     long countDownMilliSeconds = expiry * millisecondsMultiplier;
                     if (expiry <= 0 || TextUtils.isEmpty(mobileNo) || TextUtils.isEmpty(status)) {
@@ -188,7 +193,7 @@ public class CustomScannerActivity extends Activity implements CustomCaptureMana
                     } else if (expiry > 0 && System.currentTimeMillis() - countDownMilliSeconds > 0) {
                         showExpiredCode();
                     } else if (!TextUtils.isEmpty(mobileNo) && !TextUtils.isEmpty(status)) {
-                        showPersonStatus(name, mobileNo, status);
+                        showPersonStatus(name, mobileNo, status, statusCode, colorCode, message);
                     } else {
                         showInvalidStatus();
                     }
@@ -206,40 +211,59 @@ public class CustomScannerActivity extends Activity implements CustomCaptureMana
         statusContainer.postDelayed(this::closeStausView, 5000);
     }
 
-    private void showPersonStatus(String scannerName, String mobileNo, String status) {
+    private void showPersonStatus(String scannerName, String mobileNo, String status, int statusCode, int colorCode, String message) {
         String name = "";
         if (!TextUtils.isEmpty(scannerName)) {
             name = CorUtility.Companion.toTitleCase(scannerName);
         }
         desc.setVisibility(GONE);
         String descVal;
-        if (status.equalsIgnoreCase(Constants.HEALTHY)) {
-            descVal = name + " (" + mobileNo + ") " + LocalizationUtil.getLocalisedString(this, R.string.low_risk);
-            descReason.setText(descVal);
-            statusContainer.setBackgroundTintList(ContextCompat.getColorStateList(this, R.color.chat_bubble_green));
-        } else if (status.equalsIgnoreCase(Constants.CAUTION)) {
-            descVal = name + " (" + mobileNo + ") " + LocalizationUtil.getLocalisedString(this, R.string.moderate_risk);
-            descReason.setText(descVal);
-            statusContainer.setBackgroundTintList(ContextCompat.getColorStateList(this, R.color.chat_bubble_yellow));
-        } else if (status.equalsIgnoreCase(Constants.QUARANTINE)) {
-            descVal = name + " (" + mobileNo + ") " + LocalizationUtil.getLocalisedString(this, R.string.high_risk);
-            descReason.setText(descVal);
-            statusContainer.setBackgroundTintList(ContextCompat.getColorStateList(this, R.color.chat_bubble_orange));
-        } else if (status.equalsIgnoreCase(Constants.TEST)) {
-            descVal = name + " (" + mobileNo + ") " + LocalizationUtil.getLocalisedString(this, R.string.tested_positive_status);
-            descReason.setText(descVal);
-            statusContainer.setBackgroundTintList(ContextCompat.getColorStateList(this, R.color.chat_bubble_orange));
-        } else if (status.equalsIgnoreCase(Constants.INFECTED)) {
-            descVal = name + " (" + mobileNo + ") is " + status;
-            descReason.setText(descVal);
-            statusContainer.setBackgroundTintList(ContextCompat.getColorStateList(this, R.color.chat_bubble_red));
+        //set status container background color
+        statusContainer.setBackgroundTintList(ContextCompat.getColorStateList(this, colorCode));
+        String languageCode = SharedPref.getStringParams(this, SharedPrefsConstants.USER_SELECTED_LANGUAGE_CODE, "en");
+        if (languageCode.equalsIgnoreCase("en")) {
+            //show message from backend
+            descReason.setText(message);
         } else {
-            descVal = name + " (" + mobileNo + ") is " + status;
-            descReason.setText(descVal);
-            statusContainer.setBackgroundTintList(ContextCompat.getColorStateList(this, R.color.chat_bubble_red));
+            //show localized messages in different langauges according to status codes
+            configureStatusText(mobileNo, statusCode, message, name);
         }
         descReason.setTextColor(ContextCompat.getColorStateList(this, R.color.white));
         statusClose.setImageTintList(ContextCompat.getColorStateList(this, R.color.white));
+    }
+
+    private void configureStatusText(String mobileNo, int statusCode, String message, String name) {
+        String descVal;
+        switch (statusCode) {
+            case Constants.STATUS_200:
+            case Constants.STATUS_100:
+            case Constants.STATUS_800:
+            case Constants.STATUS_301:
+            case Constants.STATUS_302:
+                descVal = name + " (" + mobileNo + ") " + LocalizationUtil.getLocalisedString(this, R.string.low_risk);
+                descReason.setText(descVal);
+                break;
+            case Constants.STATUS_500:
+            case Constants.STATUS_600:
+            case Constants.STATUS_501:
+            case Constants.STATUS_502:
+                descVal = name + " (" + mobileNo + ") " + LocalizationUtil.getLocalisedString(this, R.string.high_risk);
+                descReason.setText(descVal);
+                break;
+            case Constants.STATUS_400:
+            case Constants.STATUS_401:
+            case Constants.STATUS_402:
+            case Constants.STATUS_403:
+                descVal = name + " (" + mobileNo + ") " + LocalizationUtil.getLocalisedString(this, R.string.moderate_risk);
+                descReason.setText(descVal);
+                break;
+            case Constants.STATUS_700:
+                descVal = name + " (" + mobileNo + ") " + LocalizationUtil.getLocalisedString(this, R.string.tested_positive_status);
+                descReason.setText(descVal);
+                break;
+            default:
+                descReason.setText(message);
+        }
     }
 
     private void showExpiredCode() {
