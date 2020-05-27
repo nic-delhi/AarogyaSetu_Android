@@ -115,5 +115,5 @@ Production: ./app/src/google-services.json
 <a href='https://play.google.com/store/apps/details?id=nic.goi.aarogyasetu'><img alt='Get it on Google Play' src='https://play.google.com/intl/en_us/badges/images/generic/en_badge_web_generic.png'  width="50%"/></a>  
 </p>
 <p align="center">
-<a href='https://apps.apple.com/us/app/aarogyasetu/id1505825357'><img alt='Get it on App Store' src='https://developer.apple.com/app-store/marketing/guidelines/images/badge-download-on-the-app-store.svg' height=135px width="50%"/></a>
+<a href='https://apps.apple.com/us/app/aarogyasetu/id1505825357'><img alt='Get it on App Store' src='https://developer.apple.com/app-store/marketing/guidelines/images/badge-download-on-the-app-store.svg' height=133px width="50%"/></a>
 </p>
