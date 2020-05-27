@@ -309,10 +309,15 @@ public class HomeActivity extends AppCompatActivity implements SelectLanguageFra
                         Intent intent = new Intent(Intent.ACTION_DIAL,
                                 Uri.parse(url));
                         startActivity(intent);
-                    } catch (Exception ignored) {
+                    } catch (ActivityNotFoundException ignored) {
                         // do nothing
+                    } catch (Exception ex) {
+                        //Handle permission denial security exception on some chinese ROM devices
+                        if (!isFinishing()) {
+                            Toast.makeText(HomeActivity.this,
+                                    Constants.Errors.ERROR_OPENING_CALL_SCREEN, Toast.LENGTH_LONG).show();
+                        }
                     }
-
                 } else {
 
                     boolean isMyUrl = BuildConfig.WEB_HOST.equals(Uri.parse(url).getHost());

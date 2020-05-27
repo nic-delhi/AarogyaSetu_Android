@@ -82,6 +82,7 @@ public class Constants {
 
     public static class Errors {
         public static final String SELECT_OTHER_APP = "Select any other app to open this url";
+        public static final String ERROR_OPENING_CALL_SCREEN = "Some error occurred while opening your call screen";
     }
 
     public static class UPLOAD_TYPES {
