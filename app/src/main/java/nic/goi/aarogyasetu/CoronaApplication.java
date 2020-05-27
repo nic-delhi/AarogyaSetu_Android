@@ -70,7 +70,7 @@ public class CoronaApplication extends Application implements Configuration.Prov
                     if (l == null) {
                         continue;
                     }
-                    if (lastKnownLocation == null || l.getAccuracy() > lastKnownLocation.getAccuracy()) {
+                    if ((lastKnownLocation == null || l.getAccuracy() > lastKnownLocation.getAccuracy()) && && !isMockLocation(l)) {
                         lastKnownLocation = l;
                     }
                 }catch (SecurityException e){
@@ -89,6 +89,16 @@ public class CoronaApplication extends Application implements Configuration.Prov
                 }
             });
         }
+    }
+    
+    public boolean isMockLocation(Location location) {
+        boolean isMockLocation = false;
+        if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.LOLLIPOP) {
+            isMockLocation = location.isFromMockProvider();
+        } else {
+            isMockLocation = !android.provider.Settings.Secure.getString(getContext().getContentResolver(), android.provider.Settings.Secure.ALLOW_MOCK_LOCATION).equals("0");
+        }
+        return isMockLocation;
     }
 
     public Context getContext() {
