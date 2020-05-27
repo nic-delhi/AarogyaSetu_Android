@@ -32,6 +32,11 @@ public class Logger {
             Log.e(tag, msg);
     }
 
+    public static void e(String tag, String msg, Exception ex) {
+        if (isEnableLog())
+            Log.e(tag, msg, ex);
+    }
+
     public static void i(String tag, String msg) {
         if (isEnableLog())
             Log.i(tag, msg);
