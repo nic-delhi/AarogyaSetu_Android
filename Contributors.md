@@ -16,7 +16,7 @@ Dr.Lalitesh Katragadda
 Prof. V Kamakoti  
 Deep Kalra  
 Arnab Kumar  
-Prashant Tondon  
+Prashant Tandon  
 Prof. Amrutur Bharadawaj  
 Vikalp Sahni  
 Rahul Goyal  
