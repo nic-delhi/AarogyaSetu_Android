@@ -84,8 +84,8 @@
     <string name="share_data_with_govt">ಸರ್ಕಾರದೊಂದಿಗೆ ಡೇಟಾವನ್ನು ಹಂಚಿಕೊಳ್ಳಿ.</string>
     <string name="call_helpline">ಸಹಾಯವಾಣಿಗೆ ಕರೆ ಮಾಡಿ (೧೦೭೫)</string>
     <string name="settings">ಸಂಯೋಜನೆಗಳು</string>
-    <string name="share_data_with_govt_detail">ನೀವು ಕೋವಿಡ್-೧೯ ಗಾಗಿ (COVID-19) ಪಾಸಿಟಿವ್ ಪರೀಕ್ಷೆ ಮಾಡಿದ್ದರೆ ಅಥವಾ ಪ್ರಸ್ತುತ ಪರೀಕ್ಷಿಸಲಾಗುತ್ತಿದ್ದರೆ ಮಾತ್ರ ಹಂಚಿಕೊಳ್ಳಿ</string>
-    <string name="call_helpline_detail">ಕೋವಿಡ್-೧೯ ಗೆ ಸಂಬಂಧಿಸಿದ ಪ್ರಶ್ನೆಗಳಿಗೆ ಆರೋಗ್ಯ ಸಚಿವಾಲಯ ಟೋಲ್-ಫ್ರೀ ಸಹಾಯವಾಣಿ</string>
+    <string name="share_data_with_govt_detail">ನೀವು ಕೋವಿಡ್-೧೯ಗಾಗಿ (COVID-19) ಪಾಸಿಟಿವ್ ಪರೀಕ್ಷೆ ಮಾಡಿದ್ದರೆ ಅಥವಾ ಪ್ರಸ್ತುತ ಪರೀಕ್ಷಿಸಲಾಗುತ್ತಿದ್ದರೆ ಮಾತ್ರ ಹಂಚಿಕೊಳ್ಳಿ</string>
+    <string name="call_helpline_detail">ಕೋವಿಡ್-೧೯ಗೆ ಸಂಬಂಧಿಸಿದ ಪ್ರಶ್ನೆಗಳಿಗೆ ಆರೋಗ್ಯ ಸಚಿವಾಲಯ ಟೋಲ್-ಫ್ರೀ ಸಹಾಯವಾಣಿ</string>
     <string name="faq">ಪದೇ ಪದೇ ಕೇಳಲಾಗುವ ಪ್ರಶ್ನೆಗಳು</string>
     <string name="privacy_policy">ಗೌಪ್ಯತೆ ನೀತಿ</string>
     <string name="terms_of_use">ಬಳಕೆಯ ನಿಯಮಗಳು</string>
