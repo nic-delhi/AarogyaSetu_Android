@@ -85,7 +85,7 @@ class CorUtility {
 
 
             val client =
-                NetworkClient.getRetrofitClient(true, true, true, "")
+                NetworkClient.getRetrofitClient(true, true, "")
             val call = client.create(nic.goi.aarogyasetu.network.PostDataInterface::class.java)
                 .postUserData(
                     getHeaders(false)
@@ -98,7 +98,6 @@ class CorUtility {
 
         fun checkAppMeta() {
             val client = NetworkClient.getRetrofitClient(
-                false,
                 false,
                 false,
                 ""
@@ -131,7 +130,7 @@ class CorUtility {
 
         fun registerUser(context: Context, listener: PermissionActivity.LoginSuccess) {
             val client =
-                NetworkClient.getRetrofitClient(false, false, true, "")
+                NetworkClient.getRetrofitClient(false, false, "")
 
             var registerationData = RegisterationData(
                 BluetoothAdapter.getDefaultAdapter().name,
@@ -193,7 +192,7 @@ class CorUtility {
         fun checkStatus(context: Context, listener: PermissionActivity.LoginSuccess? = null) {
             if (!AuthUtility.isSignedIn()) return
             val client =
-                NetworkClient.getRetrofitClient(false, false, true, "")
+                NetworkClient.getRetrofitClient(false, false, "")
 
             val call = client.create(nic.goi.aarogyasetu.network.PostDataInterface::class.java)
                 .updateStatus(
@@ -342,7 +341,7 @@ class CorUtility {
             if (uidToken.isNullOrEmpty())
                 return
             val client =
-                NetworkClient.getRetrofitClient(false, false, true, "")
+                NetworkClient.getRetrofitClient(false, false, "")
 
             val call = client.create(nic.goi.aarogyasetu.network.PostDataInterface::class.java)
                 .refreshFCM(
@@ -739,7 +738,7 @@ class CorUtility {
             Logger.d(Constants.QR_SCREEN_TAG, "Api hit for fetch ")
 
             val client =
-                NetworkClient.getRetrofitClient(false, false, true, "")
+                NetworkClient.getRetrofitClient(false, false, "")
 
             val call = client.create(nic.goi.aarogyasetu.network.PostDataInterface::class.java)
                 .fetchQr(getHeaders(false))
@@ -765,7 +764,7 @@ class CorUtility {
             Logger.d(Constants.QR_SCREEN_TAG, "Api hit for public key ")
 
             val client =
-                NetworkClient.getRetrofitClient(false, false, true, "")
+                NetworkClient.getRetrofitClient(false, false, "")
 
             val call = client.create(nic.goi.aarogyasetu.network.PostDataInterface::class.java)
                 .fetchQrPublicKey(getHeaders(false))

@@ -2,10 +2,9 @@ package nic.goi.aarogyasetu.network;
 
 import android.text.TextUtils;
 
-import nic.goi.aarogyasetu.BuildConfig;
-
 import java.util.concurrent.Executors;
 
+import nic.goi.aarogyasetu.BuildConfig;
 import okhttp3.CertificatePinner;
 import okhttp3.OkHttpClient;
 import okhttp3.logging.HttpLoggingInterceptor;
@@ -16,15 +15,15 @@ public class NetworkClient {
     private static final String BASE_URL = "https://" + BuildConfig.HOST_URL + "/";
     private static Retrofit retrofit;
 
-    public static Retrofit getRetrofitClient(boolean zip, boolean isExecutor, boolean shouldUseSSL, String baseURLOverride) {
-        return getRetrofitClient(zip, isExecutor, shouldUseSSL, baseURLOverride, true);
+    public static Retrofit getRetrofitClient(boolean zip, boolean isExecutor, String baseURLOverride) {
+        return getRetrofitClient(zip, isExecutor, baseURLOverride, true);
     }
 
     /*
     This public static method will return Retrofit client
     anywhere in the appplication
     */
-    public static Retrofit getRetrofitClient(boolean zip, boolean isExecutor, boolean shouldUseSSL, String baseURLOverride,
+    public static Retrofit getRetrofitClient(boolean zip, boolean isExecutor, String baseURLOverride,
                                              boolean needsAuthenticator) {
 
 
@@ -39,13 +38,13 @@ public class NetworkClient {
             httpClient.addInterceptor(logging);
         }
 
-        if (shouldUseSSL) {
-            CertificatePinner certPinner = new CertificatePinner.Builder()
-                    .add(BuildConfig.HOST_URL, BuildConfig.SSL_PUBLIC_KEY, BuildConfig.SSL_BACKUP_KEY)
-                    .add(BuildConfig.AUTH_HOST_URL, BuildConfig.SSL_AUTH_KEY, BuildConfig.SSL_AUTH_BACKUP_KEY)
-                    .build();
-            httpClient.certificatePinner(certPinner);
-        }
+
+        CertificatePinner certPinner = new CertificatePinner.Builder()
+                .add(BuildConfig.HOST_URL, BuildConfig.SSL_PUBLIC_KEY, BuildConfig.SSL_BACKUP_KEY)
+                .add(BuildConfig.AUTH_HOST_URL, BuildConfig.SSL_AUTH_KEY, BuildConfig.SSL_AUTH_BACKUP_KEY)
+                .build();
+        httpClient.certificatePinner(certPinner);
+
         httpClient.addInterceptor(new SupportInterceptor());
         if (needsAuthenticator) {
             httpClient.authenticator(new SupportInterceptor());
