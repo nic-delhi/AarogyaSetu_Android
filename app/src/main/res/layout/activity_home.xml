@@ -1,142 +1,148 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:id="@+id/drawer"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent">
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
 
-    <RelativeLayout
+    <data>
+
+    </data>
+
+    <androidx.drawerlayout.widget.DrawerLayout
+        android:id="@+id/drawer"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:background="@color/white">
+        android:layout_height="match_parent">
 
-        <ImageView
-            android:id="@+id/menu"
-            android:layout_width="40dp"
-            android:layout_height="40dp"
-            android:layout_alignBottom="@+id/divider"
-            android:layout_alignParentStart="true"
-            android:layout_alignParentTop="true"
-            android:layout_marginStart="8dp"
-            android:contentDescription="@string/image_menu_content_description"
-            android:padding="8dp"
-            android:src="@drawable/ic_menu_black" />
-
-        <ImageView
-            android:id="@+id/back"
-            android:layout_width="30dp"
-            android:layout_height="24dp"
-            android:layout_alignBottom="@+id/divider"
-            android:layout_alignParentTop="true"
-            android:layout_marginStart="16dp"
-            android:layout_toEndOf="@+id/menu"
-            android:contentDescription="@string/image_back_content_description"
-            android:src="@drawable/ic_back"
-            android:visibility="gone" />
-
-        <TextView
-            style="@style/TextStyleFontSemiBold"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_alignBottom="@+id/divider"
-            android:layout_alignParentTop="true"
-            android:layout_marginStart="16dp"
-            android:layout_marginEnd="8dp"
-            android:layout_toStartOf="@+id/share"
-            android:layout_toEndOf="@+id/back"
-            android:gravity="center_vertical"
-            android:text="@string/app_name"
-            android:textColor="@color/black"
-            android:textSize="18sp" />
-
-        <ImageView
-            android:id="@+id/language_change"
-            android:layout_width="40dp"
-            android:layout_height="40dp"
-            android:layout_alignBottom="@+id/divider"
-            android:layout_alignParentTop="true"
-            android:layout_alignParentEnd="true"
-            android:layout_gravity="end|center_vertical"
-            android:layout_marginEnd="8dp"
-            android:background="?selectableItemBackgroundBorderless"
-            android:clickable="true"
-            android:contentDescription="@string/image_language_change_content_description"
-            android:focusable="true"
-            android:padding="8dp"
-            android:src="@drawable/ic_language_change" />
-
-        <ImageView
-            android:id="@+id/share"
-            android:layout_width="40dp"
-            android:layout_height="40dp"
-            android:layout_alignBottom="@+id/divider"
-            android:layout_alignParentTop="true"
-            android:layout_toStartOf="@+id/language_change"
-            android:background="?selectableItemBackgroundBorderless"
-            android:clickable="true"
-            android:contentDescription="@string/image_share_content_description"
-            android:focusable="true"
-            android:padding="8dp"
-            android:src="@drawable/ic_share" />
-
-        <View
-            android:id="@+id/divider"
-            android:layout_width="match_parent"
-            android:layout_height="1dp"
-            android:layout_alignParentTop="true"
-            android:layout_marginTop="60dp"
-            android:background="@color/divider" />
-
-        <WebView
-            android:id="@+id/webView"
+        <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_below="@+id/divider" />
-
-        <LinearLayout
-            android:id="@+id/hamburger_menu_intro"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="40dp"
-            android:layout_alignParentStart="true"
-            android:layout_toStartOf="@+id/language_change"
-            android:background="@drawable/background_blue">
-
-            <TextView
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_margin="8dp"
-                android:layout_weight="1"
-                android:text="@string/hamburger_menu_intro"
-                android:textColor="@color/white" />
+            android:background="@color/white">
 
             <ImageView
-                android:id="@+id/close_menu_intro"
-                android:layout_width="18dp"
-                android:layout_height="18dp"
-                android:layout_margin="8dp"
-                android:src="@drawable/ic_close_white"
-                android:contentDescription="@string/image_close_content_description" />
-        </LinearLayout>
+                android:id="@+id/menu"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_alignBottom="@+id/divider"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginStart="8dp"
+                android:contentDescription="@string/image_menu_content_description"
+                android:padding="8dp"
+                android:src="@drawable/ic_menu_black" />
 
-        <ProgressBar
-            android:id="@+id/progress_bar"
+            <ImageView
+                android:id="@+id/back"
+                android:layout_width="30dp"
+                android:layout_height="24dp"
+                android:layout_alignBottom="@+id/divider"
+                android:layout_alignParentTop="true"
+                android:layout_marginStart="16dp"
+                android:layout_toEndOf="@+id/menu"
+                android:contentDescription="@string/image_back_content_description"
+                android:src="@drawable/ic_back"
+                android:visibility="gone" />
+
+            <TextView
+                style="@style/TextStyleFontSemiBold"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/divider"
+                android:layout_alignParentTop="true"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="8dp"
+                android:layout_toStartOf="@+id/share"
+                android:layout_toEndOf="@+id/back"
+                android:gravity="center_vertical"
+                android:text="@string/app_name"
+                android:textColor="@color/black"
+                android:textSize="18sp" />
+
+            <ImageView
+                android:id="@+id/language_change"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_alignBottom="@+id/divider"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentEnd="true"
+                android:layout_gravity="end|center_vertical"
+                android:layout_marginEnd="8dp"
+                android:background="?selectableItemBackgroundBorderless"
+                android:clickable="true"
+                android:contentDescription="@string/image_language_change_content_description"
+                android:focusable="true"
+                android:padding="8dp"
+                android:src="@drawable/ic_language_change" />
+
+            <ImageView
+                android:id="@+id/share"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_alignBottom="@+id/divider"
+                android:layout_alignParentTop="true"
+                android:layout_toStartOf="@+id/language_change"
+                android:background="?selectableItemBackgroundBorderless"
+                android:clickable="true"
+                android:contentDescription="@string/image_share_content_description"
+                android:focusable="true"
+                android:padding="8dp"
+                android:src="@drawable/ic_share" />
+
+            <View
+                android:id="@+id/divider"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_alignParentTop="true"
+                android:layout_marginTop="60dp"
+                android:background="@color/divider" />
+
+            <WebView
+                android:id="@+id/webView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/divider" />
+
+            <LinearLayout
+                android:id="@+id/hamburger_menu_intro"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="40dp"
+                android:layout_alignParentStart="true"
+                android:layout_toStartOf="@+id/language_change"
+                android:background="@drawable/background_blue">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="8dp"
+                    android:layout_weight="1"
+                    android:text="@string/hamburger_menu_intro"
+                    android:textColor="@color/white" />
+
+                <ImageView
+                    android:id="@+id/close_menu_intro"
+                    android:layout_width="18dp"
+                    android:layout_height="18dp"
+                    android:layout_margin="8dp"
+                    android:src="@drawable/ic_close_white"
+                    android:contentDescription="@string/image_close_content_description" />
+            </LinearLayout>
+
+            <ProgressBar
+                android:id="@+id/progress_bar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_gravity="center"
+                android:indeterminateTint="@color/blue"
+                android:visibility="gone" />
+
+        </RelativeLayout>
+
+        <nic.goi.aarogyasetu.views.HomeNavigationView
+            android:id="@+id/navigation_drawer"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_centerInParent="true"
-            android:layout_gravity="center"
-            android:indeterminateTint="@color/blue"
-            android:visibility="gone" />
+            android:layout_height="match_parent"
+            android:layout_gravity="start">
 
-    </RelativeLayout>
-
-    <nic.goi.aarogyasetu.views.HomeNavigationView
-        android:id="@+id/navigation_drawer"
-        android:layout_width="wrap_content"
-        android:layout_height="match_parent"
-        android:layout_gravity="start">
-
-    </nic.goi.aarogyasetu.views.HomeNavigationView>
+        </nic.goi.aarogyasetu.views.HomeNavigationView>
 
 
-</androidx.drawerlayout.widget.DrawerLayout>
+    </androidx.drawerlayout.widget.DrawerLayout>
+</layout>

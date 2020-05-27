@@ -39,7 +39,9 @@ android {
             keyPassword keystoreProperties['key_password']
         }
     }
-
+    dataBinding {
+        enabled = true
+    }
     defaultConfig {
         buildConfigField "String", "AUTH_ALIAS", "\"${authAlias}\""
         buildConfigField "String", "DID_UUID", "\"${didUUID}\""

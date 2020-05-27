@@ -1,6 +1,5 @@
 package nic.goi.aarogyasetu.views;
 
-import android.app.Activity;
 import android.bluetooth.BluetoothAdapter;
 import android.content.ActivityNotFoundException;
 import android.content.BroadcastReceiver;
@@ -34,6 +33,7 @@ import androidx.annotation.Nullable;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.view.GravityCompat;
+import androidx.databinding.DataBindingUtil;
 import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.fragment.app.DialogFragment;
 import androidx.fragment.app.Fragment;
@@ -56,12 +56,8 @@ import org.jetbrains.annotations.NotNull;
 import java.io.IOException;
 import java.net.MalformedURLException;
 import java.net.URL;
-import java.util.ArrayList;
 import java.util.HashMap;
-import java.util.List;
-import java.util.Locale;
 import java.util.Map;
-import java.util.Random;
 import java.util.Stack;
 
 import nic.goi.aarogyasetu.BuildConfig;
@@ -69,6 +65,7 @@ import nic.goi.aarogyasetu.CoronaApplication;
 import nic.goi.aarogyasetu.R;
 import nic.goi.aarogyasetu.analytics.EventNames;
 import nic.goi.aarogyasetu.analytics.ScreenNames;
+import nic.goi.aarogyasetu.databinding.ActivityHomeBinding;
 import nic.goi.aarogyasetu.firebase.FirebaseRemoteConfigUtil;
 import nic.goi.aarogyasetu.prefs.SharedPref;
 import nic.goi.aarogyasetu.prefs.SharedPrefsConstants;
@@ -112,12 +109,10 @@ public class HomeActivity extends AppCompatActivity implements SelectLanguageFra
     private ActionMode mActionMode;
     private UploadDataUtil mUploadDataUtil;
     private final Stack<String> webPageStack = new Stack<>();
-    private View menu, menuIntro, back;
     private boolean doNotShowBack;
-    private View progressBar;
     private NoNetworkDialog networkDialog;
-    private WebView webView;
-    private HomeNavigationView homeNavigationView;
+
+    private ActivityHomeBinding binding;
 
     final Object javaScriptInterface = new Object() {
         @JavascriptInterface
@@ -151,8 +146,8 @@ public class HomeActivity extends AppCompatActivity implements SelectLanguageFra
 
         @JavascriptInterface
         public void backPressed() {
-            if (webView.canGoBack()) {
-                webView.goBack();
+            if (binding.webView.canGoBack()) {
+                binding.webView.goBack();
             }
         }
 
@@ -168,9 +163,7 @@ public class HomeActivity extends AppCompatActivity implements SelectLanguageFra
 
         @JavascriptInterface
         public void hideLoader() {
-            if (progressBar != null) {
-                progressBar.setVisibility(View.GONE);
-            }
+            binding.progressBar.setVisibility(View.GONE);
         }
 
         @JavascriptInterface
@@ -179,6 +172,7 @@ public class HomeActivity extends AppCompatActivity implements SelectLanguageFra
         }
 
     };
+
     private FullScreenVideoWebChromeClient fullScreenVideoWebChromeClient;
 
     private void disableScreenShot() {
@@ -193,7 +187,8 @@ public class HomeActivity extends AppCompatActivity implements SelectLanguageFra
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         try {
-            setContentView(R.layout.activity_home);
+            binding = DataBindingUtil.setContentView(this, R.layout.activity_home);
+
         } catch (Exception e) {
             //Android OS internal bug - When view is being inflated, the webview package is being updated by the os and therefore it can't find the webview package for those few moments.
             if (e.getMessage() != null && e.getMessage().contains("webview")) {
@@ -206,16 +201,12 @@ public class HomeActivity extends AppCompatActivity implements SelectLanguageFra
         if (!BuildConfig.DEBUG) {
             disableScreenShot();
         }
-        webView = findViewById(R.id.webView);
-        progressBar = findViewById(R.id.progress_bar);
-        progressBar.setVisibility(View.VISIBLE);
-        back = findViewById(R.id.back);
-        menu = findViewById(R.id.menu);
 
-        View languageChange = findViewById(R.id.language_change);
-        languageChange.setOnClickListener(v -> showLanguageSelectionDialog());
+        binding.progressBar.setVisibility(View.VISIBLE);
 
-        back.setOnClickListener(v -> handleBack());
+        binding.languageChange.setOnClickListener(v -> showLanguageSelectionDialog());
+
+        binding.back.setOnClickListener(v -> handleBack());
 
         IntentFilter filter = new IntentFilter(BluetoothAdapter.ACTION_STATE_CHANGED);
         registerReceiver(mBluetoothStatusChangeReceiver, filter);
@@ -259,34 +250,31 @@ public class HomeActivity extends AppCompatActivity implements SelectLanguageFra
     }
 
     private void setupNavigationMenu() {
-        final DrawerLayout drawerLayout = findViewById(R.id.drawer);
 
         // Hide and show hamburger menu and menu action
-        menuIntro = findViewById(R.id.hamburger_menu_intro);
         int menuIntroCount = Integer.parseInt(SharedPref.getStringParams(this, SharedPrefsConstants.MENU_INTRO_COUNT, SharedPrefsConstants.DEFAULT_MENU_INTRO_COUNT)) + 1;
         if (menuIntroCount > Constants.MAX_INTRO_VIEWS) {
-            menuIntro.setVisibility(View.GONE);
+            binding.hamburgerMenuIntro.setVisibility(View.GONE);
         } else {
             SharedPref.setStringParams(this, SharedPrefsConstants.MENU_INTRO_COUNT, "" + menuIntroCount);
-            findViewById(R.id.close_menu_intro).setOnClickListener(v -> menuIntro.setVisibility(View.GONE));
+            binding.closeMenuIntro.setOnClickListener(v -> binding.hamburgerMenuIntro.setVisibility(View.GONE));
         }
 
         // Setup navigation drawer UI
-        homeNavigationView = findViewById(R.id.navigation_drawer);
-        homeNavigationView.inflate(v -> {
-            drawerLayout.closeDrawer(GravityCompat.START);
+        binding.navigationDrawer.inflate(v -> {
+            binding.drawer.closeDrawer(GravityCompat.START);
             HomeActivity.this.onClick(v);
         });
-        menu.setOnClickListener(v -> drawerLayout.openDrawer(GravityCompat.START));
+        binding.menu.setOnClickListener(v -> binding.drawer.openDrawer(GravityCompat.START));
 
         //Hide hamburger intro when drawer opens
         int lockMode = AuthUtility.INSTANCE.isSignedIn() ? DrawerLayout.LOCK_MODE_UNLOCKED : DrawerLayout.LOCK_MODE_LOCKED_CLOSED;
-        drawerLayout.setDrawerLockMode(lockMode);
-        drawerLayout.addDrawerListener(new DrawerLayout.SimpleDrawerListener() {
+        binding.drawer.setDrawerLockMode(lockMode);
+        binding.drawer.addDrawerListener(new DrawerLayout.SimpleDrawerListener() {
             @Override
             public void onDrawerOpened(View drawerView) {
                 super.onDrawerOpened(drawerView);
-                menuIntro.setVisibility(View.GONE);
+                binding.hamburgerMenuIntro.setVisibility(View.GONE);
                 SharedPref.setStringParams(HomeActivity.this, SharedPrefsConstants.MENU_INTRO_COUNT, "" + Constants.MAX_INTRO_VIEWS);
             }
         });
@@ -296,12 +284,12 @@ public class HomeActivity extends AppCompatActivity implements SelectLanguageFra
         if (BuildConfig.DEBUG) {
             WebView.setWebContentsDebuggingEnabled(true);
         }
-        webView.getSettings().setJavaScriptEnabled(true);
-        webView.getSettings().setDomStorageEnabled(true);
-        webView.addJavascriptInterface(javaScriptInterface, "JSMobileCrm");
+        binding.webView.getSettings().setJavaScriptEnabled(true);
+        binding.webView.getSettings().setDomStorageEnabled(true);
+        binding.webView.addJavascriptInterface(javaScriptInterface, "JSMobileCrm");
         fullScreenVideoWebChromeClient = new FullScreenVideoWebChromeClient();
-        webView.setWebChromeClient(fullScreenVideoWebChromeClient);
-        webView.setWebViewClient(new WebViewClient() {
+        binding.webView.setWebChromeClient(fullScreenVideoWebChromeClient);
+        binding.webView.setWebViewClient(new WebViewClient() {
             @Override
             public boolean shouldOverrideUrlLoading(WebView view, String url) {
                 if (url.startsWith("tel:")) {
@@ -319,19 +307,19 @@ public class HomeActivity extends AppCompatActivity implements SelectLanguageFra
 
                     if (!CorUtility.isNetworkAvailable(HomeActivity.this)) {
                         showRetryDialog(isMyUrl ? url : "");
-                        progressBar.setVisibility(View.GONE);
+                        binding.progressBar.setVisibility(View.GONE);
                     } else {
                         if (isMyUrl) {
                             // This is my website, so do not override; let my WebView load the page
                             return false;
                         }
-                        progressBar.setVisibility(View.GONE);
+                        binding.progressBar.setVisibility(View.GONE);
                         // Otherwise, the link is not for a page on my site, so launch another Activity that handles URLs
                         openDefaultBrowser(url);
                         return true;
                     }
                 }
-                progressBar.setVisibility(View.GONE);
+                binding.progressBar.setVisibility(View.GONE);
                 return true;
             }
 
@@ -348,18 +336,18 @@ public class HomeActivity extends AppCompatActivity implements SelectLanguageFra
                         showRetryDialog(url);
 
                     } else {
-                        progressBar.setVisibility(View.VISIBLE);
-                        webView.clearHistory();
+                        binding.progressBar.setVisibility(View.VISIBLE);
+                        binding.webView.clearHistory();
                         if (!isTopUrlSame(url))
                             webPageStack.push(url);
                         super.onPageStarted(view, url, favicon);
                         if (webPageStack.isEmpty() || (webPageStack.size() == 1 && doNotShowBack)) {
-                            menu.setVisibility(View.VISIBLE);
-                            back.setVisibility(View.GONE);
+                            binding.menu.setVisibility(View.VISIBLE);
+                            binding.back.setVisibility(View.GONE);
                         } else {
-                            menu.setVisibility(View.GONE);
-                            menuIntro.setVisibility(View.GONE);
-                            back.setVisibility(View.VISIBLE);
+                            binding.menu.setVisibility(View.GONE);
+                            binding.hamburgerMenuIntro.setVisibility(View.GONE);
+                            binding.back.setVisibility(View.VISIBLE);
                         }
                     }
                 }
@@ -368,7 +356,7 @@ public class HomeActivity extends AppCompatActivity implements SelectLanguageFra
 
             @Override
             public void onPageFinished(WebView view, String url) {
-                progressBar.setVisibility(View.GONE);
+                binding.progressBar.setVisibility(View.GONE);
                 super.onPageFinished(view, url);
             }
 
@@ -376,7 +364,7 @@ public class HomeActivity extends AppCompatActivity implements SelectLanguageFra
             public void onReceivedHttpError(WebView view, WebResourceRequest request, WebResourceResponse errorResponse) {
                 super.onReceivedHttpError(view, request, errorResponse);
                 if (errorResponse.getStatusCode() == 401) {
-                    progressBar.setVisibility(View.VISIBLE);
+                    binding.progressBar.setVisibility(View.VISIBLE);
                     ExecutorHelper.getThreadPoolExecutor().execute(() -> {
 
                         try {
@@ -393,7 +381,7 @@ public class HomeActivity extends AppCompatActivity implements SelectLanguageFra
                             }
                             AppExecutors.INSTANCE.runOnMain(() -> {
                                 try {
-                                    progressBar.setVisibility(View.GONE);
+                                    binding.progressBar.setVisibility(View.GONE);
                                     loadUrl(getCurrentBaseURL());
                                 } catch (Exception e) {
                                     CorUtilityKt.reportException(e);
@@ -407,7 +395,7 @@ public class HomeActivity extends AppCompatActivity implements SelectLanguageFra
                                 if (isFinishing()) {
                                     return null;
                                 }
-                                progressBar.setVisibility(View.GONE);
+                                binding.progressBar.setVisibility(View.GONE);
                                 // Maybe show some error here
                                 return null;
                             });
@@ -447,8 +435,7 @@ public class HomeActivity extends AppCompatActivity implements SelectLanguageFra
      * This method is used to share the application with other user.
      */
     private void handleShare() {
-        View share = findViewById(R.id.share);
-        share.setOnClickListener(v -> {
+        binding.share.setOnClickListener(v -> {
             String appUrl = CorUtility.getShareText(this);
             Intent intent = new Intent(Intent.ACTION_SEND);
             intent.setType("text/plain");
@@ -487,9 +474,8 @@ public class HomeActivity extends AppCompatActivity implements SelectLanguageFra
     }
 
     private void updateNavigationDrawer() {
-        if (homeNavigationView != null) {
-            homeNavigationView.setDetail();
-        }
+        //never null, no need to check
+        binding.navigationDrawer.setDetail();
     }
 
     /**
@@ -549,8 +535,8 @@ public class HomeActivity extends AppCompatActivity implements SelectLanguageFra
     }
 
     private void openQrScreen() {
-        Intent qrItent = new Intent(HomeActivity.this, QrActivity.class);
-        startActivity(qrItent);
+        Intent qrIntent = new Intent(HomeActivity.this, QrActivity.class);
+        startActivity(qrIntent);
     }
 
     /**
@@ -667,7 +653,7 @@ public class HomeActivity extends AppCompatActivity implements SelectLanguageFra
                     ""
             ));
 
-            webView.loadUrl(url, headers);
+            binding.webView.loadUrl(url, headers);
         } else {
             openDefaultBrowser(url);
         }
@@ -761,7 +747,7 @@ public class HomeActivity extends AppCompatActivity implements SelectLanguageFra
                 }
 
             }
-        }  else if (requestCode == REQUEST_CODE_IMMEDIATE_UPDATE) {
+        } else if (requestCode == REQUEST_CODE_IMMEDIATE_UPDATE) {
             finish();
         } else if (requestCode == REQUEST_CODE_FLEXIBLE_UPDATE) {
             //todo handle this accordingly for Immediate when user cancelled
@@ -831,11 +817,11 @@ public class HomeActivity extends AppCompatActivity implements SelectLanguageFra
 
 
     private void notifyUserForFail() {
-        Snackbar.make(webView, Constants.DOWNLOAD_FAIL, Snackbar.LENGTH_INDEFINITE).setAction(R.string.message_failed_tap_to_retry, v -> checkForUpdates()).show();
+        Snackbar.make(binding.webView, Constants.DOWNLOAD_FAIL, Snackbar.LENGTH_INDEFINITE).setAction(R.string.message_failed_tap_to_retry, v -> checkForUpdates()).show();
     }
 
     private void notifyUser() {
-        Snackbar.make(webView, Constants.RESTART_TO_UPDATE, Snackbar.LENGTH_INDEFINITE).setAction(R.string.restart, v -> {
+        Snackbar.make(binding.webView, Constants.RESTART_TO_UPDATE, Snackbar.LENGTH_INDEFINITE).setAction(R.string.restart, v -> {
             if (appUpdateManager != null) {
                 appUpdateManager.completeUpdate();
                 appUpdateManager.unregisterListener(this);
@@ -983,7 +969,7 @@ public class HomeActivity extends AppCompatActivity implements SelectLanguageFra
 
         if (!FirebaseRemoteConfigUtil.getINSTANCE().isUploadEnabled() || SharedPref.getBooleanParams(getBaseContext(), Constants.PUSH_COVID_POSTIVE_P) || !AuthUtility.INSTANCE.isSignedIn()) // Put status and condition here if possible
         {
-            homeNavigationView.hideShareData();
+            binding.navigationDrawer.hideShareData();
         }
 
         if (getIntent() != null && getIntent().hasExtra(Constants.PUSH) && getIntent().hasExtra(Constants.UPLOAD_TYPE)) {
