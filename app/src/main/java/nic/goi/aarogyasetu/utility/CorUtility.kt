@@ -42,6 +42,7 @@ import nic.goi.aarogyasetu.models.network.RegisterationData
 import nic.goi.aarogyasetu.network.NetworkClient
 import nic.goi.aarogyasetu.prefs.SharedPref
 import nic.goi.aarogyasetu.prefs.SharedPrefsConstants
+import nic.goi.aarogyasetu.utility.Constants.EMPTY
 import nic.goi.aarogyasetu.views.HomeActivity
 import nic.goi.aarogyasetu.views.PermissionActivity
 import org.json.JSONObject
@@ -85,7 +86,7 @@ class CorUtility {
 
 
             val client =
-                NetworkClient.getRetrofitClient(true, true, "")
+                NetworkClient.getRetrofitClient(true, true, EMPTY)
             val call = client.create(nic.goi.aarogyasetu.network.PostDataInterface::class.java)
                 .postUserData(
                     getHeaders(false)
@@ -100,7 +101,7 @@ class CorUtility {
             val client = NetworkClient.getRetrofitClient(
                 false,
                 false,
-                ""
+                EMPTY
             )
 
             val call = client.create(nic.goi.aarogyasetu.network.PostDataInterface::class.java)
@@ -130,7 +131,7 @@ class CorUtility {
 
         fun registerUser(context: Context, listener: PermissionActivity.LoginSuccess) {
             val client =
-                NetworkClient.getRetrofitClient(false, false, "")
+                NetworkClient.getRetrofitClient(false, false, EMPTY)
 
             var registerationData = RegisterationData(
                 BluetoothAdapter.getDefaultAdapter().name,
@@ -161,7 +162,7 @@ class CorUtility {
                         if (!SharedPref.getStringParams(
                                 CoronaApplication.instance,
                                 SharedPrefsConstants.UNIQUE_ID,
-                                ""
+                                EMPTY
                             ).isNullOrEmpty()
                         ) {
                             listener.loginSuccess()
@@ -192,7 +193,7 @@ class CorUtility {
         fun checkStatus(context: Context, listener: PermissionActivity.LoginSuccess? = null) {
             if (!AuthUtility.isSignedIn()) return
             val client =
-                NetworkClient.getRetrofitClient(false, false, "")
+                NetworkClient.getRetrofitClient(false, false, EMPTY)
 
             val call = client.create(nic.goi.aarogyasetu.network.PostDataInterface::class.java)
                 .updateStatus(
@@ -238,7 +239,7 @@ class CorUtility {
                         if (SharedPref.getStringParams(
                                 context,
                                 SharedPrefsConstants.UNIQUE_ID,
-                                ""
+                                EMPTY
                             ).isNullOrEmpty()
                         ) {
                             listener?.loginFailed()
@@ -341,7 +342,7 @@ class CorUtility {
             if (uidToken.isNullOrEmpty())
                 return
             val client =
-                NetworkClient.getRetrofitClient(false, false, "")
+                NetworkClient.getRetrofitClient(false, false, EMPTY)
 
             val call = client.create(nic.goi.aarogyasetu.network.PostDataInterface::class.java)
                 .refreshFCM(
@@ -377,7 +378,7 @@ class CorUtility {
         fun getHeaders(isMultipart: Boolean): Map<String, String> {
             val token = AuthUtility.getToken()
             val map = mutableMapOf<String, String>()
-            map[Constants.AUTH] = token ?: ""
+            map[Constants.AUTH] = token ?: EMPTY
             map[Constants.PLATFORM] = BuildConfig.PLATFORM_KEY
             map[Constants.OS] = Build.VERSION.SDK_INT.toString()
             map[Constants.DEVICE_TYPE] = Build.MANUFACTURER + Constants.HYPHEN + Build.MODEL
@@ -398,7 +399,7 @@ class CorUtility {
 
         private fun getBluetoothMacAddress(): String? {
             val bluetoothAdapter = BluetoothAdapter.getDefaultAdapter()
-            var bluetoothMacAddress: String? = ""
+            var bluetoothMacAddress: String? = EMPTY
             if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
                 try {
                     val mServiceField: Field =
@@ -587,7 +588,7 @@ class CorUtility {
                 val uniqueId = SharedPref.getStringParams(
                     CoronaApplication.getInstance(),
                     SharedPrefsConstants.UNIQUE_ID,
-                    ""
+                    EMPTY
                 )
                 if (uniqueId.isNotEmpty() && !activity.isFinishing) {
                     val intent = Intent(activity, BluetoothScanningService::class.java)
@@ -738,7 +739,7 @@ class CorUtility {
             Logger.d(Constants.QR_SCREEN_TAG, "Api hit for fetch ")
 
             val client =
-                NetworkClient.getRetrofitClient(false, false, "")
+                NetworkClient.getRetrofitClient(false, false, EMPTY)
 
             val call = client.create(nic.goi.aarogyasetu.network.PostDataInterface::class.java)
                 .fetchQr(getHeaders(false))
@@ -764,7 +765,7 @@ class CorUtility {
             Logger.d(Constants.QR_SCREEN_TAG, "Api hit for public key ")
 
             val client =
-                NetworkClient.getRetrofitClient(false, false, "")
+                NetworkClient.getRetrofitClient(false, false, EMPTY)
 
             val call = client.create(nic.goi.aarogyasetu.network.PostDataInterface::class.java)
                 .fetchQrPublicKey(getHeaders(false))
