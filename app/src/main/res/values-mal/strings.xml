@@ -99,7 +99,7 @@
     <string name="scan_other_s_qr_code">മറ്റുള്ളവരുടെ QR കോഡ് സ്കാൻ ചെയ്യുക</string>
     <string name="generate_my_qr_code">എന്റെ QR കോഡ് സൃഷ്ടിക്കുക</string>
     <string name="invalid_qr_code">QR കോഡ് അസാധുവാണ്</string>
-    <string name="not_generated_aarogya_setu">ഇത് ഔദ്യോഗിക ആരോജ്യ സെറ്റു അപ്ലിക്കേഷൻ സൃഷ്ടിച്ചതല്ല.</string>
+    <string name="not_generated_aarogya_setu">ഇത് ഔദ്യോഗിക ആരോഗ്യ സേതു ആപ്ലിക്കേഷൻ സൃഷ്ടിച്ചതല്ല.</string>
     <string name="request_new_code">പുതിയ കോഡ് സൃഷ്ടിക്കാൻ വ്യക്തിയോട് അഭ്യർത്ഥിക്കുക</string>
     <string name="expired_code">കാലഹരണപ്പെട്ട QR കോഡ്</string>
     <string name="low_risk">അണുബാധയുടെ സാധ്യത കുറവാണ്</string>
