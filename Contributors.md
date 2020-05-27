@@ -2,6 +2,7 @@
 Government Leadership
 ---------------------------------
 Prof K  VijayRaghavan  
+Amitabh Kant  
 Ajay Sawhney  
 Dr. Neeta Verma  
 Gopala Krishnan S  
@@ -15,10 +16,13 @@ Industry and Academia Leadership
 Dr. Lalitesh Katragadda
 Prof. V Kamakoti  
 Deep Kalra  
+Arnab Kumar  
+Prashant Tandon  
 Prof. Amrutur Bharadawaj  
 Vikalp Sahni  
 Rahul Goyal  
 Rahul Matthan  
+Arghya Sengupta  
 
 ---------------------------------
 Contributors (Government)
