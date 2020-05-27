@@ -43,7 +43,6 @@
         android:id="@+id/i_understand"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="40dp"
         android:background="@drawable/button"
         android:text="@string/i_understand"
         android:textColor="@color/white"
@@ -54,7 +53,6 @@
     <View
         android:layout_width="match_parent"
         android:layout_height="2dp"
-        android:layout_marginTop="50dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/i_understand" />
