@@ -6,7 +6,7 @@
     <string name="permissions_detail">हम इस विषय की संवेदनशीलता को समझते हैं और आपको सुनिश्चित करते हैं कि आपके द्वारा दी गई जानकारी को सुरक्षित रखने के लिए उचित उपाय किए गए हैं</string>
     <string name="location_text">आप से अनुरोध है की आप अपने मोबाइल के लोकेशन की सेटिंग को \'Always\' पर सेट करें।आप इसे बाद में कभी भी बदल सकते हैं।</string>
     <!-- phone_number_layout -->
-    <string name="enter_mobile_number">मोबाइल नंबर एंटर करें</string>
+    <string name="enter_mobile_number">मोबाइल नंबर दर्ज करें</string>
     <string name="country_code">+91 </string>
     <string name="mobile_number">मोबाइल नंबर</string>
     <string name="why_is_it_needed">इसकी आवश्यकता?</string>
@@ -14,7 +14,7 @@
     <string name="resend_otp">OTP को पुनः भेजें</string>
     <string name="resend_otp_in">%s में OTP पुनः भेजें </string>
     <!-- otp_validation_layout -->
-    <string name="enter_otp">OTP एंटर करें</string>
+    <string name="enter_otp">OTP दर्ज करें</string>
     <string name="we_have_sent_otp">हमने आपके मोबाइल नंबर पर OTP भेजा है।</string>
     <string name="we_have_resent_otp">हमने आपके मोबाइल नंबर पर OTP फिर से भेजा है।</string>
     <string name="otp">OTP</string>
@@ -54,13 +54,13 @@
     <string name="auth_error_user_disabled">आपको साइन इन करने की अनुमति नहीं है</string>
     <string name="close">बंद करें</string>
     <string name="sync_data_user_consent">कॉन्टैक्ट ट्रेसिंग में मदद करने के लिए, ब्लूटूथ और GPS के माध्यम से कैप्चर किए गए आपके संवाद डेटा को भारत सरकार के साथ शेयर किया जाएगा.</string>
-    <string name="confirm_and_proceed">कन्फर्म करें और आगे बढ़ें</string>
+    <string name="confirm_and_proceed">पुष्टि करें और आगे बढ़ें</string>
     <string name="sync_data_detail">आपका डेटा हमेशा आपके फोन पर सेव होता है. इसे सुरक्षित सरकारी सर्वर पर शेयर करें अगर…</string>
     <string name="sample_collected_for_testing">टेस्टिंग के लिए सैंपल कलेक्ट हो गया है</string>
     <string name="tested_positive">Covid19 का टेस्ट पॉजिटिव हैं</string>
     <string name="syncing_data">डेटा सिंक हो रहा है</string>
     <string name="syncing_data_detail"><![CDATA[भारत सरकार को ब्लूटूथ और GPS के माध्यम से प्राप्त संवाद डेटा भेजा जा रहा है]]></string>
-    <string name="cancel">कैंसल करें</string>
+    <string name="cancel">रद्द करें</string>
     <string name="syncing_data_success">सिंक हो गया है</string>
     <string name="syncing_data_success_detail">आपका डेटा अब भारत सरकार के सर्वर पर सुरक्षित है.</string>
     <string name="syncing_data_failed">सिंक नहीं हो पाया</string>
@@ -107,7 +107,7 @@
     <string name="moderate_risk">संक्रमण के मध्यम जोखिम में है</string>
     <string name="high_risk">संक्रमण का उच्च जोखिम है</string>
     <string name="tested_positive_status">COVID-19 के लिए सकारात्मक परीक्षण किया है</string>
-    <string name="provide_necessary_permission">कृपया अपना क्यूआर कोड कब्जा करने के लिए आवश्यक अनुमति प्रदान करें</string>
+    <string name="provide_necessary_permission">कृपया अपना क्यूआर कोड पकड़ने के लिए आवश्यक अनुमति प्रदान करें</string>
     <string name="scan_without_perm_alert">ऐप को क्यूआर कोड स्कैनिंग के लिए कैमरा की अनुमति चाहिए।</string>
     <string name="open_settings">सेटिंग्स खोलें</string>
     <string name="common_scanning_error">कुछ अपवाद हुआ। कृपया फिर से स्कैन करें</string>
