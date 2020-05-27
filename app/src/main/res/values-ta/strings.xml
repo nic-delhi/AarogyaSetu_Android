@@ -16,11 +16,11 @@
     <!-- otp_validation_layout -->
     <string name="enter_otp">OTP ஐ உள்ளிடவும்</string>
     <string name="we_have_sent_otp">உங்கள் மொபைல் எண்ணுக்கு OTP ஐ அனுப்பியுள்ளோம்</string>
-    <string name="we_have_resent_otp">உங்கள் மொபைல் எண்ணுக்கு OTP ஐ மீண்டும் அனுப்பியுள்ளோம்.</string>
+    <string name="we_have_resent_otp">உங்கள் மொபைல் எண்ணுக்கு OTP ஐ மீண்டும் அனுப்பியுள்ளோம்</string>
     <string name="otp">OTP</string>
     <string name="please_enter_a_valid_otp">செல்லுபடியாகும் OTP ஐ உள்ளிடவும்</string>
     <!-- why_needed_layout -->
-    <string name="i_understand">எனக்கு புரிகிறது.</string>
+    <string name="i_understand">எனக்கு புரிகிறது</string>
     <string name="device_location"><![CDATA[<b>உங்கள் இருப்பிட</b>]]></string>
     <string name="bluetooth"><![CDATA[<b>புளூடூத்</b>]]></string>
     <string name="data_sharing_with_the_ministry"><![CDATA[<b>தரவு பகிர்வு</b>]]></string>
@@ -29,7 +29,7 @@
     <string name="contribute_to_a_safer_india">நான் ஒப்புக்கொள்கிறேன்</string>
     <string name="please_select_a_language_en">Please select your language\nकृपया अपनी भाषा चुनें</string>
     <string name="next">அடுத்தது</string>
-    <string name="please_select_a_language_to_proceed">தொடர ஒரு மொழியைத் தேர்ந்தெடுக்கவும்.</string>
+    <string name="please_select_a_language_to_proceed">தொடர ஒரு மொழியைத் தேர்ந்தெடுக்கவும்</string>
     <!-- Strings used for fragments for navigation -->
     <string name="please_enter_a_valid_number">சரியான எண்ணை உள்ளிடவும்</string>
     <string name="would_you_like_to">கோவிட்-19  உறுதி செய்யப்பட்டவர் எவரேனும் உங்களுடன் தொடர்பு கொண்டிருந்தால், உங்களுக்கு நாங்கள் அதைத் தெரிவிக்கலாமா?</string>
