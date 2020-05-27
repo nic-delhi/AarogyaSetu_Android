@@ -56,7 +56,7 @@ class RetrieveLocationService {
                     CoronaApplication.getInstance().setBestLocation(it.lastLocation)
 
                     Logger.d(
-                        "Retreive location service",
+                        "Retrieve location service",
                         usersLocationData.latitude.toString() + " - " + usersLocationData.longitude.toString()
                     )
                     DBManager.insertNearbyDetectedDeviceInfo(listOf(usersLocationData))
