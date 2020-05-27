@@ -39,13 +39,13 @@ public class NetworkClient {
             httpClient.addInterceptor(logging);
         }
 
-        if (shouldUseSSL) {
-            CertificatePinner certPinner = new CertificatePinner.Builder()
-                    .add(BuildConfig.HOST_URL, BuildConfig.SSL_PUBLIC_KEY, BuildConfig.SSL_BACKUP_KEY)
-                    .add(BuildConfig.AUTH_HOST_URL, BuildConfig.SSL_AUTH_KEY, BuildConfig.SSL_AUTH_BACKUP_KEY)
-                    .build();
-            httpClient.certificatePinner(certPinner);
-        }
+//        if (shouldUseSSL) {
+//            CertificatePinner certPinner = new CertificatePinner.Builder()
+//                    .add(BuildConfig.HOST_URL, BuildConfig.SSL_PUBLIC_KEY, BuildConfig.SSL_BACKUP_KEY)
+//                    .add(BuildConfig.AUTH_HOST_URL, BuildConfig.SSL_AUTH_KEY, BuildConfig.SSL_AUTH_BACKUP_KEY)
+//                    .build();
+//            httpClient.certificatePinner(certPinner);
+//        }
         httpClient.addInterceptor(new SupportInterceptor());
         if (needsAuthenticator) {
             httpClient.authenticator(new SupportInterceptor());

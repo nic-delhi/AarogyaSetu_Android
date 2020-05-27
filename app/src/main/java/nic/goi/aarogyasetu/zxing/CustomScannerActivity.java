@@ -219,9 +219,7 @@ public class CustomScannerActivity extends Activity implements CustomCaptureMana
             name = CorUtility.Companion.toTitleCase(scannerName);
         }
         desc.setVisibility(GONE);
-        String descVal;
         //set status container background color
-        int i = Color.parseColor("#a8a8a8");
         statusContainer.getBackground().setColorFilter(Color.parseColor(colorCode), PorterDuff.Mode.SRC_ATOP);
         String languageCode = SharedPref.getStringParams(this, SharedPrefsConstants.USER_SELECTED_LANGUAGE_CODE, "en");
         if (languageCode.equalsIgnoreCase("en")) {
