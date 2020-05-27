@@ -15,6 +15,8 @@ Industry and Academia Leadership
 Dr.Lalitesh Katragadda  
 Prof. V Kamakoti  
 Deep Kalra  
+Arnab Kumar  
+Prashant Tondon  
 Prof. Amrutur Bharadawaj  
 Vikalp Sahni  
 Rahul Goyal  
