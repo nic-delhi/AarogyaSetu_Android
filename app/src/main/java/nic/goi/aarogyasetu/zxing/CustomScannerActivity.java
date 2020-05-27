@@ -228,8 +228,6 @@ public class CustomScannerActivity extends Activity implements CustomCaptureMana
     private void configureStatusText(String mobileNo, int statusCode, String message, String
             name) {
         switch (statusCode) {
-            case StatusConstants.STATUS_100:
-            case StatusConstants.STATUS_200:
             case StatusConstants.STATUS_301:
             case StatusConstants.STATUS_302:
             case StatusConstants.STATUS_800:
