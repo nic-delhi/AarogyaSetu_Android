@@ -25,6 +25,7 @@ import nic.goi.aarogyasetu.utility.CorUtility;
  */
 public class CoronaApplication extends Application implements Configuration.Provider {
 
+    private static final int WORK_MANAGER_THREAD_POOL_SIZE = 8;
     public static CoronaApplication instance;
      static Location lastKnownLocation = null;
     
@@ -37,11 +38,7 @@ public class CoronaApplication extends Application implements Configuration.Prov
         super.onCreate();
         FirebaseApp.initializeApp(this);
         instance = this;
-        WorkManager.initialize(
-                this,
-                new Configuration.Builder()
-                        .setExecutor(Executors.newFixedThreadPool(8))
-                        .build());
+        WorkManager.initialize(this, getWorkManagerConfiguration());
         new Thread(() -> {
             Fabric.with(CoronaApplication.getInstance(), new Crashlytics());
         }).start();
@@ -98,10 +95,6 @@ public class CoronaApplication extends Application implements Configuration.Prov
     @NonNull
     @Override
     public Configuration getWorkManagerConfiguration() {
-        return new Configuration.Builder().setExecutor(Executors.newFixedThreadPool(8)).build();
+        return new Configuration.Builder().setExecutor(Executors.newFixedThreadPool(WORK_MANAGER_THREAD_POOL_SIZE)).build();
     }
-
-
-
-
 }
