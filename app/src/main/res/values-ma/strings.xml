@@ -16,7 +16,8 @@
     <!-- otp_validation_layout -->
     <string name="enter_otp">ओटीपी प्रविष्ट करा</string>
     <string name="we_have_sent_otp">आम्ही आपल्या मोबाइल क्रमांकावर ओटीपी पाठविला आहे.</string>
-    <string name="we_have_resent_otp">We have resent OTP to your mobile number.</string>
+    <string name="we_have_resent_otp">
+    आम्ही आपल्या मोबाइल नंबरवर पुन्हा ओटीपी पाठविला आहे.</string>
     <string name="otp">OTP</string>
     <string name="please_enter_a_valid_otp">कृपया वैध OTP एन्टर करा.</string>
     <!-- why_needed_layout -->
@@ -48,8 +49,9 @@
     <string name="bluetooth_and_gps">स्थान</string>
     <string name="location_sharing">स्थान</string>
     <string name="permission_info_tnc_text"><![CDATA[<p>आपण सुरक्षित भारताला हातभार लावू इच्छित असल्यास कृपया खाली दिलेल्या बटणावर क्लिक करुन आपण  <a href="https://static.swaraksha.gov.in/tnc/">सेवा</a> अटी आणि <a href="https://web.swaraksha.gov.in/ncv19/privacy/"> गोपनीयता धोरण</a>स्वीकारण्यास सूचित करा:</p>]]></string>
-    <string name="auth_error_unknown">There is some error login you in</string>
-    <string name="auth_error_invalid_otp">The OTP you have entered is incorrect</string>
+    <string name="auth_error_unknown">आपल्याला लॉग इन करताना काही त्रुटी आली आहे</string>
+    <string name="auth_error_invalid_otp">
+    आपण प्रविष्ट केलेला ओटीपी चुकीचा आहे</string>
     <string name="auth_error_user_disabled">आपल्याला साइन इन करण्याची परवानगी नाही</string>
     <string name="close">बंद</string>
     <string name="sync_data_user_consent">संपर्कातील व्यक्तींच्या शोधाकरिता, ब्लूटूथ आणि GPS सेवेसह कॅप्चर केलेला तुमचा संवाद डाटा भारत सरकारसोबत शेअर केला जाईल</string>
