@@ -344,9 +344,19 @@ public class HomeActivity extends AppCompatActivity implements SelectLanguageFra
             public void onPageStarted(WebView view, String url, Bitmap favicon) {
 
                 if (url.startsWith("tel:")) {
-                    Intent intent = new Intent(Intent.ACTION_DIAL,
-                            Uri.parse(url));
-                    startActivity(intent);
+                    try {
+                        Intent intent = new Intent(Intent.ACTION_DIAL,
+                                Uri.parse(url));
+                        startActivity(intent);
+                    } catch (ActivityNotFoundException ignored) {
+                        // do nothing
+                    } catch (Exception ex) {
+                        //Handle permission denial security exception on some chinese ROM devices
+                        if (!isFinishing()) {
+                            Toast.makeText(HomeActivity.this,
+                                    Constants.Errors.ERROR_OPENING_CALL_SCREEN, Toast.LENGTH_LONG).show();
+                        }
+                    }
                 } else if (url.startsWith("http:") || url.startsWith("https:")) {
 
                     if (!CorUtility.isNetworkAvailable(HomeActivity.this)) {
