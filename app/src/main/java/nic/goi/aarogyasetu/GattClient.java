@@ -188,6 +188,8 @@ public class GattClient {
         IntentFilter filter = new IntentFilter(BluetoothAdapter.ACTION_STATE_CHANGED);
         mContext.registerReceiver(mBluetoothReceiver, filter);
     }
+    //Call to registerReceiver [:189] misses the broadcastPermission argument - no permissions will be
+    //checked for the broadcaster, which allows a malicious application to communicate with the broadcast receiver.
 
     private void startClient() {
         if (mDevice != null) {
