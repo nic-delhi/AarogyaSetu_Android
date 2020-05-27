@@ -70,7 +70,7 @@ public class CoronaApplication extends Application implements Configuration.Prov
                     if (l == null) {
                         continue;
                     }
-                    if ((lastKnownLocation == null || l.getAccuracy() > lastKnownLocation.getAccuracy()) && && !isMockLocation(l)) {
+                    if ((lastKnownLocation == null || l.getAccuracy() > lastKnownLocation.getAccuracy()) && !isMockLocation(l)) {
                         lastKnownLocation = l;
                     }
                 }catch (SecurityException e){
