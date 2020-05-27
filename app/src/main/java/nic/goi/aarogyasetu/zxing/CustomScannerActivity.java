@@ -174,7 +174,7 @@ public class CustomScannerActivity extends Activity implements CustomCaptureMana
         } catch (ExpiredJwtException e) {
             showExpiredCode();
         } catch (NoSuchAlgorithmException | DecodingException | MalformedJwtException exception) {
-            showInvalidStatus(exception);
+            showInvalidStatus(exception.getMessage());
         } catch (Exception exception) {
             showCommonInvalidStatus();
         }
@@ -192,13 +192,13 @@ public class CustomScannerActivity extends Activity implements CustomCaptureMana
                     final long millisecondsMultiplier = 1000L;
                     long countDownMilliSeconds = expiry * millisecondsMultiplier;
                     if (expiry <= 0 || TextUtils.isEmpty(mobileNo)) {
-                        showInvalidStatus(new Exception(EventParams.EXPIRY_OR_MOBILE_FAILURE));
+                        showInvalidStatus(EventParams.EXPIRY_OR_MOBILE_FAILURE);
                     } else if (expiry > 0 && System.currentTimeMillis() - countDownMilliSeconds > 0) {
                         showExpiredCode();
                     } else if (!TextUtils.isEmpty(mobileNo) && !TextUtils.isEmpty(colorCode)) {
                         showPersonStatus(name, mobileNo, statusCode, colorCode, message);
                     } else {
-                        showInvalidStatus(new Exception(EventParams.OTHER_DECODE_ERROR));
+                        showInvalidStatus(EventParams.OTHER_DECODE_ERROR);
                     }
                 } else {
                     showCommonInvalidStatus();
@@ -273,8 +273,8 @@ public class CustomScannerActivity extends Activity implements CustomCaptureMana
         statusClose.setImageTintList(ContextCompat.getColorStateList(this, R.color.chat_close_dark));
     }
 
-    private void showInvalidStatus(Exception exception) {
-        sendInvalidExceptionEvent(exception);
+    private void showInvalidStatus(String message) {
+        sendInvalidExceptionEvent(message);
         desc.setVisibility(VISIBLE);
         descReason.setText(LocalizationUtil.getLocalisedString(this, R.string.not_generated_aarogya_setu));
         desc.setText(LocalizationUtil.getLocalisedString(this, R.string.invalid_qr_code));
@@ -284,7 +284,7 @@ public class CustomScannerActivity extends Activity implements CustomCaptureMana
         statusClose.setImageTintList(ContextCompat.getColorStateList(this, R.color.chat_close_dark));
     }
 
-    private void sendInvalidExceptionEvent(Exception message) {
+    private void sendInvalidExceptionEvent(String message) {
         Bundle bundle = new Bundle();
         bundle.putString(EventParams.SCAN_ERROR, "Exception: " + message);
         AnalyticsUtils.sendEvent(EventNames.EVENT_SCAN_FAILED, bundle);
