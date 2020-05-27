@@ -2,6 +2,7 @@
 Government Leadership
 ---------------------------------
 Prof K  VijayRaghavan  
+Amitabh Kant  
 Ajay Sawhney  
 Dr. Neeta Verma  
 Gopala Krishnan S  
