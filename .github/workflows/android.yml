@@ -21,3 +21,5 @@ jobs:
       run: cp google-services.json.sample app/google-services.json && cp keystore.properties.sample keystore.properties
     - name: Build with Gradle
       run: ./gradlew assembleDebug
+    - name: Run Tests
+      run: ./gradlew test
