@@ -73,7 +73,6 @@ public class Constants {
     public static final String EXPIRY = "exp";
     public static final String NAME = "name";
     public static final String MOBILE = "mobile_no";
-    public static final String STATUS = "status";
     public static final String BAR_CODE_PATH = "barcodeimage";
     public static final String FILE_EXT = ".jpg";
     public static final String QR_SCREEN_TAG = "QR_SCREEN_TAG ";
