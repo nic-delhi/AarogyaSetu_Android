@@ -11,7 +11,7 @@
     <string name="mobile_number">ಮೊಬೈಲ್ ನಂಬರ್</string>
     <string name="why_is_it_needed">ಇದು ಯಾಕೆ ಬೇಕಾಗಿದೆ?</string>
     <string name="submit">ಸಲ್ಲಿಸಿ</string>
-    <string name="resend_otp"> ಒಟಿಪಿಯನ್ನು(OTP) ಮತ್ತೆ ಕಳುಹಿಸಿ</string>
+    <string name="resend_otp">ಒಟಿಪಿಯನ್ನು(OTP) ಮತ್ತೆ ಕಳುಹಿಸಿ</string>
     <string name="resend_otp_in">ಒಟಿಪಿಯನ್ನು(OTP) %s ಮರುಹೊಂದಿಸಿ</string>
     <!-- otp_validation_layout -->
     <string name="enter_otp">ಒಟಿಪಿ(OTP) ನಮೂದಿಸಿ</string>
