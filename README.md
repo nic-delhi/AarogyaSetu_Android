@@ -10,7 +10,7 @@ Aarogya Setu mobile application provides the following features:
 
 - Minimal and simple user interface, which user can get easily acquainted with
 - Scan nearby Aarogya Setu user using BluetoothLE Scanner 
-- Advertise to the nearby Aarogya Setu user using BluetoothLE GATT Server
+- Advertise to nearby Aarogya Setu user using BluetoothLE GATT Server
 - Update user about nearby activity using Location Service
 - Secure information transfer with SSL Pinning
 - Encrypt any sensitive information
