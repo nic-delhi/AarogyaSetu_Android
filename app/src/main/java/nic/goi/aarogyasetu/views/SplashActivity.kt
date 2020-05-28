@@ -47,12 +47,12 @@ class SplashActivity : AppCompatActivity(), SelectLanguageFragment.LanguageChang
     private var isRooted = false;
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        checkRootCheck();
+        isDeviceRooted();
         AnalyticsUtils.updateUserTraits()
         AnalyticsUtils.sendEvent(EventNames.EVENT_OPEN_SPLASH)
     }
 
-    private fun checkRootCheck() {
+    private fun isDeviceRooted() {
         if (mTask != null) {
             mTask!!.cancel(false)
         }
