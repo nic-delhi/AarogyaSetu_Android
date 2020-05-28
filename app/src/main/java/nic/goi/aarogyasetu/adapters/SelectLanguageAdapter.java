@@ -26,9 +26,9 @@ public class SelectLanguageAdapter extends RecyclerView.Adapter<SelectLanguageAd
 
     private List<LanguageDTO> mLanguageList;
 
-    public SelectLanguageAdapter(int selectedLanaguagePosition, List<LanguageDTO> languageList, ItemClickListener listener) {
+    public SelectLanguageAdapter(int selectedLanguagePosition, List<LanguageDTO> languageList, ItemClickListener listener) {
         if (selectedLanaguagePosition > -1) {
-            mIsSelected = selectedLanaguagePosition;
+            mIsSelected = selectedLanguagePosition;
         }
         mLanguageList = languageList;
         mListener = listener;
