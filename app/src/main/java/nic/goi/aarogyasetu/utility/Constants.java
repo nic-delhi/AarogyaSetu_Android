@@ -69,17 +69,17 @@ public class Constants {
     public static final String ACTION_GOTO_SETTINGS = "Open settings";
     public static final String ACTION_REMIND_LATER = "Remind later";
     public static final String SPACE = " ";
-    public static final String HEALTHY = "healthy";
-    public static final String MODERATE = "moderate";
-    public static final String HIGH = "high";
+
     public static final String EXPIRY = "exp";
     public static final String NAME = "name";
     public static final String MOBILE = "mobile_no";
-    public static final String STATUS = "status";
     public static final String BAR_CODE_PATH = "barcodeimage";
     public static final String FILE_EXT = ".jpg";
     public static final String QR_SCREEN_TAG = "QR_SCREEN_TAG ";
     public static final int MAX_INTRO_VIEWS = 2;
+    public static final String COLOR_CODE = "color_code";
+    public static final String STATUS_CODE = "status_code";
+    public static final String MESSAGE = "message";
 
     public static class Errors {
         public static final String SELECT_OTHER_APP = "Select any other app to open this url";
