@@ -17,15 +17,20 @@ import nic.goi.aarogyasetu.models.BluetoothData;
 @Database(entities = {BluetoothData.class}, version = 3)
 public abstract class FightCovidDB extends RoomDatabase {
 
-    private static FightCovidDB sInstance;
+    private volatile static FightCovidDB sInstance;
 
     private static final String DATABASE_NAME = "fight-covid-db";
 
     public static FightCovidDB getInstance() {
         Context context = CoronaApplication.getInstance().getApplicationContext();
         if (sInstance == null) {
-            sInstance = buildDatabase(context.getApplicationContext());
+            synchronized (FightCovidDB.class) {
+                if (sInstance == null) {
+                    sInstance = buildDatabase(context.getApplicationContext());
+                }
+            }
         }
+        
         return sInstance;
     }
 
