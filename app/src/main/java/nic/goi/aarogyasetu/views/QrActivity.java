@@ -8,6 +8,7 @@ import android.os.Bundle;
 import android.os.CountDownTimer;
 import android.text.TextUtils;
 import android.text.format.Time;
+import android.util.DisplayMetrics;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
@@ -22,6 +23,7 @@ import com.google.zxing.BarcodeFormat;
 import com.google.zxing.MultiFormatWriter;
 import com.google.zxing.WriterException;
 import com.google.zxing.common.BitMatrix;
+import com.google.zxing.qrcode.encoder.QRCode;
 import com.journeyapps.barcodescanner.BarcodeEncoder;
 
 import java.security.NoSuchAlgorithmException;
@@ -207,7 +209,7 @@ public class QrActivity extends AppCompatActivity implements QrCodeListener, QrP
             if (bitMatrix != null) {
                 bitMatrix.clear();
             }
-            bitMatrix = multiFormatWriter.encode(qrText, BarcodeFormat.QR_CODE, 440, 440);
+            bitMatrix = multiFormatWriter.encode(qrText, BarcodeFormat.QR_CODE, convertDpToPixel(250), convertDpToPixel(250));
             BarcodeEncoder barcodeEncoder = new BarcodeEncoder();
             Bitmap bitmap = barcodeEncoder.createBitmap(bitMatrix);
             qrCodeView.setImageBitmap(bitmap);
@@ -266,6 +268,10 @@ public class QrActivity extends AppCompatActivity implements QrCodeListener, QrP
         }
     }
 
+    private  int convertDpToPixel(float dp){
+        return (int)(dp * ((float) getResources().getDisplayMetrics().densityDpi / DisplayMetrics.DENSITY_DEFAULT));
+    }
+
     //Show Refresh view when qr code generation failed/qr code expire
     public void onFailure() {
         progress.setVisibility(View.GONE);
@@ -311,4 +317,6 @@ public class QrActivity extends AppCompatActivity implements QrCodeListener, QrP
     public void onPublicKeyFetchFailure() {
         onFailure();
     }
+
+
 }
