@@ -9,6 +9,7 @@ public class Constants {
     public static final String UNIQUE_ID = "did";
     public static final String QR_PUBLIC_KEY = "qr_public_key";
     public static final String PUSH_COVID_POSTIVE_P = "p";
+    public static final String IS_SILENT_NOTIFICATION = "silent";
     public static final String DATA = "data";
     public static final String AUTH = "Authorization";
     public static final String PLATFORM = "pt";
@@ -89,5 +90,11 @@ public class Constants {
         public static final String BEING_TESTED = "being_tested";
         public static final String TESTED_POSITIVE_CONSENT = "tested_positive_consent";
         public static final String SELF_CONSENT = "self_consent";
+    }
+
+    public static final String DEEPLINK_TAG = "tg";
+    public static class SCREEN_TAG {
+        public static final int _2_QR_CODE_PAGE = 2;
+        public static final int _3_QR_CODE_SCAN_PAGE = 3;
     }
 }
