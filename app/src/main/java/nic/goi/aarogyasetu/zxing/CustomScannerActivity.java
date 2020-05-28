@@ -125,10 +125,11 @@ public class CustomScannerActivity extends Activity implements CustomCaptureMana
     }
 
     private void closeStausView() {
-        statusContainer.setVisibility(GONE);
-        capture.setViewCaptureListener(this);
-        capture.decode();
-        capture.onResume();
+        if (statusContainer.getVisibility() == VISIBLE) {
+            statusContainer.setVisibility(GONE);
+            capture.decode();
+            capture.onResume();
+        }
     }
 
     private void onCloseClick() {
@@ -168,6 +169,7 @@ public class CustomScannerActivity extends Activity implements CustomCaptureMana
     @Override
     public void onResultFetched(String code) {
         statusContainer.setVisibility(VISIBLE);
+        hideStatusContainerAfterDelay();
         Jws<Claims> claimsJws = null;
         try {
             claimsJws = DecryptionUtil.decryptFile(code);
@@ -207,7 +209,6 @@ public class CustomScannerActivity extends Activity implements CustomCaptureMana
                 showCommonInvalidStatus();
             }
         }
-        hideStatusContainerAfterDelay();
     }
 
     private void hideStatusContainerAfterDelay() {
