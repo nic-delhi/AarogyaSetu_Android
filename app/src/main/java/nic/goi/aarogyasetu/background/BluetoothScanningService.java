@@ -414,20 +414,20 @@ public class BluetoothScanningService extends Service implements AdaptiveScanHel
 
     @Override
     public void onModeChange(int scanMode, int advertisementMode) {
-        if (isBluetoothAvailable()) {
-            if (mBluetoothLeScanner != null) {
-                try {
+        try {
+            if (isBluetoothAvailable()) {
+                if (mBluetoothLeScanner != null) {
                     mBluetoothLeScanner.stopScan(mScanCallback);
-                } catch (Exception ex) {
-                    //Handle Android internal exception for BT adapter not turned ON(Known Android bug)
-                    CorUtilityKt.reportException(ex);
                 }
+                mGattServer.stopAdvertising();
+                discover(scanMode);
+                mGattServer.advertise(advertisementMode);
+            } else {
+                Logger.d(TAG, "onModeChange failed due to bluetooth not available");
             }
-            mGattServer.stopAdvertising();
-            discover(scanMode);
-            mGattServer.advertise(advertisementMode);
-        } else {
-            Logger.d(TAG, "onModeChange failed due to bluetooth not available");
+        } catch (Exception ex) {
+            //Handle Android internal exception for BT adapter not turned ON(Known Android bug)
+            CorUtilityKt.reportException(ex);
         }
     }
 }
