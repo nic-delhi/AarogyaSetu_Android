@@ -9,6 +9,7 @@ public class Constants {
     public static final String UNIQUE_ID = "did";
     public static final String QR_PUBLIC_KEY = "qr_public_key";
     public static final String PUSH_COVID_POSTIVE_P = "p";
+    public static final String IS_SILENT_NOTIFICATION = "silent";
     public static final String DATA = "data";
     public static final String AUTH = "Authorization";
     public static final String PLATFORM = "pt";

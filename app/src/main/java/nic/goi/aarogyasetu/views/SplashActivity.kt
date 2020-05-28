@@ -93,7 +93,7 @@ class SplashActivity : AppCompatActivity(), SelectLanguageFragment.LanguageChang
         if (intent.extras != null && intent.extras?.containsKey(Constants.PUSH)!!) {
             if (intent.extras!!.getString(Constants.PUSH).equals("1")) {
                 var uploadType = intent.extras!!.getString(Constants.UPLOAD_TYPE);
-                if(TextUtils.isEmpty(uploadType))
+                if(uploadType.isNullOrBlank())
                 {
                     uploadType = Constants.UPLOAD_TYPES.PUSH_CONSENT;
                 }
@@ -112,13 +112,13 @@ class SplashActivity : AppCompatActivity(), SelectLanguageFragment.LanguageChang
         {
             val data = getIntent().data
             val target = data!!.getQueryParameter(Constants.TARGET)
-            if(!TextUtils.isEmpty(target))
+            if(!target.isNullOrBlank())
                 intent.putExtra(Constants.URL,target);
 
             if (!TextUtils.isEmpty(data!!.query) && data.query!!.contains(Constants.DEEPLINK_TAG)) {
                 val paramString =
                     data.getQueryParameter(Constants.DEEPLINK_TAG)
-                if (!TextUtils.isEmpty(paramString)) {
+                if (!paramString.isNullOrBlank()) {
                     try {
                         val tagId = Integer.valueOf(paramString!!)
                         intent.putExtra(Constants.DEEPLINK_TAG, tagId)
@@ -129,7 +129,7 @@ class SplashActivity : AppCompatActivity(), SelectLanguageFragment.LanguageChang
         {
             try {
                val target = getIntent().getStringExtra(Constants.TARGET)
-                if(!TextUtils.isEmpty(target))
+                if(!target.isNullOrBlank())
                 intent.putExtra(Constants.URL,target);
                 val tagId =
                     getIntent().getStringExtra(Constants.DEEPLINK_TAG)

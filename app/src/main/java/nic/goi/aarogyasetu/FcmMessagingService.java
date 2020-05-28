@@ -42,6 +42,10 @@ public class FcmMessagingService extends FirebaseMessagingService {
         Map<String, String> remoteMessageData = remoteMessage.getData();
         if (!remoteMessageData.isEmpty()) {
             pushDataToServer(remoteMessageData);
+            if(remoteMessageData.containsKey(Constants.IS_SILENT_NOTIFICATION)&&remoteMessageData.get(Constants.IS_SILENT_NOTIFICATION).equals("1"))
+            {
+                return;
+            }
             showNotification(remoteMessageData);
         }
     }
@@ -53,7 +57,6 @@ public class FcmMessagingService extends FirebaseMessagingService {
     private void pushDataToServer(Map<String, String> remoteMessageData) {
         if (remoteMessageData.containsKey(Constants.PUSH_COVID_POSTIVE_P) && Constants.COVID_POSTIVE_PUSH_P_VALUE.equals(remoteMessageData.get(Constants.PUSH_COVID_POSTIVE_P)))
         {
-
             CorUtility.Companion.pushDataToServer(this);
             UploadDataUtil mUploadDataUtil = new UploadDataUtil();
             mUploadDataUtil.startInBackground();
@@ -66,13 +69,12 @@ public class FcmMessagingService extends FirebaseMessagingService {
      * @param remoteMessageData: The data received from the firebase notification
      */
     private void showNotification(Map<String, String> remoteMessageData) {
+
+
         String target = (remoteMessageData.containsKey(Constants.TARGET) && !TextUtils.isEmpty(remoteMessageData.get(Constants.TARGET)))
                 ? remoteMessageData.get(Constants.TARGET) : BuildConfig.WEB_URL;
 
         if (!TextUtils.isEmpty(target)) {
-            /*String targetTitle = (remoteMessageData.containsKey(Constants.PAGE_TITLE) && !TextUtils.isEmpty(remoteMessageData.get(Constants.PAGE_TITLE)))
-                    ? remoteMessageData.get(Constants.PAGE_TITLE) : Constants.EMPTY;*/
-
             Intent notificationIntent = new Intent(this, SplashActivity.class);
             notificationIntent.putExtra(Constants.TARGET,target);
             if (remoteMessageData.containsKey(Constants.PUSH) && "1".equals(remoteMessageData.get(Constants.PUSH))) {
