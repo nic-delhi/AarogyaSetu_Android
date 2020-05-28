@@ -1,0 +1,114 @@
+<resources>
+    <string name="app_name">Aarogya Setu</string>
+    <string name="your_mobile_number_is_required_to_know_your_identity">رابطہ کا پتہ لگانے کے لئے آپ کا موبائل نمبر ضروری ہے۔</string>
+    <string name="text_value">فرض کریں کہ آپ نے ایک ہفتہ قبل کسی سے کسی ملاقات میں یا عوامی جگہ میں کسی نامعلوم شخص سے ملاقات کی تھی۔. n \ n ایسے تمام افراد کو قرنطین کی پیروی کا نوٹیفیکیشن بھیجا جائے گا یا ضرورت کے مطابق قریب ترین ٹیسٹنگ سینٹر میں چیک ان کیسے کریں گے۔ n \ n . n \ n حکومت ہند ، اس درخواست کی مدد سے ، ایسے لوگوں کو تلاش کرتی ہے جنہوں نے 14 دن کے اندر اندر شخص کی فریم پر اے پی پی نصب کیا ہے۔</string>
+    <string name="permissions_title">سروس کی شرائط اور رازداری</string>
+    <string name="permissions_detail">ہم اس موضوع کی نوعیت اور حساسیت کو سمجھتے ہیں اور یہ یقینی بنانے کے لئے سخت اقدامات کیے ہیں کہ آپ کے ڈیٹا سے سمجھوتہ نہیں کیا گیا ہے۔</string>
+    <string name="location_text">یہ تجویز کیا جاتا ہے کہ آپ اپنی جگہ کا اشتراک 'ہمیشہ' پر مقرر کریں۔ آپ اسے بعد میں کسی بھی وقت تبدیل کرسکتے ہیں۔</string>
+    <!--phone_number_layout-->
+    <string name="enter_mobile_number">موبائل نمبر درج کریں</string>
+    <string name="country_code">+91 </string>
+    <string name="mobile_number">موبائل فون کانمبر</string>
+    <string name="why_is_it_needed">اس کی ضرورت کیوں ہے؟</string>
+    <string name="submit">جمع کرائیں</string>
+    <string name="resend_otp">او ٹی پی کو دوبارہ بھیجیں</string>
+    <string name="resend_otp_in">او ٹی پی کو دوبارہ بھیجیں %s</string>
+    <!--otp_validation_layout-->
+    <string name="enter_otp">OTP درج کریں</string>
+    <string name="we_have_sent_otp">ہم نے آپ کے موبائل نمبر پر او ٹی پی بھیج دیا ہے۔</string>
+    <string name="we_have_resent_otp">ہم نے آپ کے موبائل نمبر پر او ٹی پی کو ناراض کیا ہے۔</string>
+    <string name="otp">OTP</string>
+    <string name="please_enter_a_valid_otp">براہ کرم ایک درست او پی پی درج کریں۔</string>
+    <!--why_needed_layout-->
+    <string name="i_understand">میں سمجھتا ہوں</string>
+    <string name="device_location"><![CDATA[<b>ڈیوائس لوکیشن</b>]]></string>
+    <string name="bluetooth"><![CDATA[<b>بلوٹوتھ</b>]]></string>
+    <string name="data_sharing_with_the_ministry"><![CDATA[<b>ڈیٹا شیئرنگ</b>]]></string>
+    <string name="monitors_your_device_s_proximity_within_6_feet_range">کسی دوسرے موبائل آلہ سے آپ کے آلے کی قربت کی نگرانی کرتا ہے۔ \ n اس کی سفارش کی جاتی ہے کہ آپ اسے ہر وقت جاری رکھیں۔</string>
+    <string name="tracks_an_individual_s_touch_points_so_can_easily_find_others_who_came_in_close_contact">آپ کا ڈیٹا صرف حکومت ہند کے ساتھ شیئر کیا جائے گا۔ App n ایپ کسی بھی وقت آپ کے نام اور نمبر کو عوام کے سامنے ظاہر کرنے کی اجازت نہیں دیتی ہے۔</string>
+    <string name="contribute_to_a_safer_india">میں راضی ہوں</string>
+    <string name="please_select_a_language_en">Please select your language\nकृपया अपनी भाषा चुनें</string>
+    <string name="next">اگلے</string>
+    <string name="please_select_a_language_to_proceed">Please select a language to proceed.</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="please_enter_a_valid_number">براہ مہربانی ایک درست نمبر درج کریں</string>
+    <string name="would_you_like_to">کیا آپ جاننا چاہیں گے کہ کیا آپ نے کسی ایسے شخص کے ساتھ سڑک عبور کی ہے جس نے کوویڈ ۔19 کے لئے مثبت تجربہ کیا ہے؟</string>
+    <string name="each_one_of_us">ہم میں سے ہر ایک کو یہ طاقت حاصل ہے کہ وہ ملک بھر میں کورونا وائرس (یا وبا) پھیلنے سے روکنے میں مدد کرے۔</string>
+    <string name="simply_1_install_the_app">صرف
+१ n1 ایپ انسٹال کریں
+२ n2. بلوٹوتھ اور مقام کو آن کریں
+n3۔ مقام کا اشتراک "ہمیشہ" پر مقرر کریں
+n n اپنے دوستوں اور اہل خانہ کو بھی ایپ انسٹال کرنے کے لئے مدعو کریں</string>
+    <string name="cowin_20_tracks_through"><![CDATA[<b>Aarogya Setu</b> کوویڈ ۔19 کسی ایسے شخص کے ساتھ آپ کے تعامل کو ٹریک کرتا ہے جو آپ کے بلوٹوتھ اور مقام کے ذریعے معاشرتی گراف کے ذریعہ مثبت جانچ سکتا ہے۔]]></string>
+    <string name="the_app_alerts_are_accompanied">ایپ کے انتباہات کے ذریعہ تنہائی کے بارے میں مدد اور معلومات موجود ہے اور اگر علامات پائے جاتے ہیں تو کیا کریں۔</string>
+    <string name="you_will_be_alerted_if">اگر آپ کوویڈ ۔19 کو مثبت جانچتے ہیں تو ، آپ کو آگاہ کردیا جائے گا اگر آپ بغیر علم ہوئے قریب آئیں گے۔</string>
+    <string name="with_cowin_20_you_can"><![CDATA[<b>Aarogya Setu</b> آپ کی مدد سے اپنے آپ کو ، اپنے کنبہ اور دوستوں کی حفاظت کرسکتے ہیں اور کوویڈ 19 کے خلاف جنگ میں ہمارے ملک کی مدد کرسکتے ہیں۔]]></string>
+    <string name="register_now">ابھی رجسٹر کریں</string>
+    <string name="install">انسٹال کریں</string>
+    <string name="bluetooth_and_gps">جگہ</string>
+    <string name="location_sharing">جگہ</string>
+    <string name="permission_info_tnc_text"><![CDATA[<p>اگر آپ محفوظ ہندوستان میں اپنا حصہ ڈالنا چاہتے ہیں تو ، براہ کرم ذیل کے بٹن پر کلک کریں <a href="https://static.swaraksha.gov.in/tnc/">خدمت</a> شرائط اور <a href="https://web.swaraksha.gov.in/ncv19/privacy/"> رازداری کی پالیسی</a>قبولیت کی تجویز کریں:</p>]]></string>
+    <string name="auth_error_unknown">There is some error login you in</string>
+    <string name="auth_error_invalid_otp">The OTP you have entered is incorrect</string>
+    <string name="auth_error_user_disabled">آپ کو سائن ان کرنے کی اجازت نہیں ہے</string>
+    <string name="close">بند کریں</string>
+    <string name="sync_data_user_consent">رابطوں کی تلاش کے ل Bluetooth آپ کے سرچ ڈیٹا کو بلوٹوتھ اور جی پی ایس سروس کے ساتھ حکومت ہند کے ساتھ شیئر کیا جائے گا۔</string>
+    <string name="confirm_and_proceed">تصدیق کریں اور جاری رکھیں</string>
+    <string name="sync_data_detail">آپ کا ڈیٹا ہمیشہ آپ کے فون میں محفوظ ہوتا ہے۔ گورنمنٹ سیفٹی سرورز پر ڈیٹا شیئر کریں اگر:</string>
+    <string name="sample_collected_for_testing">جانچ کے لئے نمونہ مجموعہ</string>
+    <string name="tested_positive">Covid19 کے لئے مثبت تشخیص</string>
+    <string name="syncing_data">ڈیٹا ہم وقت ساز کیا جا رہا ہے</string>
+    <string name="syncing_data_detail"><![CDATA[ہم قبضہ شدہ ڈیٹا بلوٹوتھ اور جی پی ایس سروس کے ساتھ حکومت ہند کو بھیج رہے ہیں]]></string>
+    <string name="cancel">منسوخ کریں</string>
+    <string name="syncing_data_success">مطابقت پذیری کامیاب</string>
+    <string name="syncing_data_success_detail">آپ کا ڈیٹا اب حکومت ہند سرورز پر محفوظ ہے</string>
+    <string name="syncing_data_failed">مطابقت پذیری ناکام ہوگئی</string>
+    <string name="syncing_data_failed_detail">کچھ غلط ہو گیا ، براہ کرم دوبارہ کوشش کریں</string>
+    <string name="retry">دوبارہ کوشش کریں</string>
+    <string name="ok">ٹھیک ہے</string>
+    <string name="image_language_change_content_description">زبان بدل گئی</string>
+    <string name="image_share_content_description">ایپلیکیشن شیئر کریں</string>
+    <string name="image_back_content_description">واپس جاو</string>
+    <string name="image_on_board_content_description">آن بورڈنگ دکھائیں</string>
+    <string name="image_close_content_description">@string/close</string>
+    <string name="permission_alert_message">اپنی ترتیبات میں شراکت کے ل to آپ کو مطلوبہ مقام / بلوٹوتھ اجازت نامہ فراہم کرنے کی ضرورت ہوگی ، الف</string>
+    <string name="error_network_error">براہ کرم انٹرنیٹ کنکشن کی جانچ کریں</string>
+    <string name="error_location">مقام کی ترتیبات ناکافی ہیں اور یہاں طے نہیں کی جاسکتی ہیں۔ ترتیبات میں درست کریں۔</string>
+    <string name="turn_on_bluetooth_all_times">دوسرے آلات سے اپنی قربت کا سراغ لگانے اور سیکیورٹی کی درست اپڈیٹس فراہم کرنے کے لئے بلوٹوتھ کو ہمیشہ آن کرنا چاہئے۔</string>
+    <string name="make_sure_your_phone_is_connected_to_the_wifi_or_switch_to_mobile_data">یقینی بنائیں کہ آپ کا فون وائی فائی سے منسلک ہے یا موبائل ڈیٹا پر سوئچ کریں۔</string>
+    <string name="login_failed">لاگ ان ناکام رہے. دوبارہ کوشش کریں</string>
+    <string name="image_user_content_description">صارف</string>
+    <string name="image_menu_content_description">مینو</string>
+    <string name="generator_scanner_qr_code">QR کوڈ بنائیں / اسکین کریں</string>
+    <string name="verify_installed_app">انسٹال کردہ ایپ کی تصدیق کریں</string>
+    <string name="share_data_with_govt">حکومت کے ساتھ ڈیٹا شیئر کریں۔</string>
+    <string name="call_helpline">کال ہیلپ لائن (1065)</string>
+    <string name="settings">ترتیبات</string>
+    <string name="share_data_with_govt_detail">صرف اس وقت اشتراک کریں اگر آپ کوویڈ 19 کے لئے مثبت جانچ چکے ہیں یا فی الحال جانچ کررہے ہیں</string>
+    <string name="call_helpline_detail">وزارت صحت کوویڈ 19 سے متعلق سوالات کے لئے ٹول فری ہیلپ لائن ہے</string>
+    <string name="faq">عام سوال</string>
+    <string name="privacy_policy">رازداری کی پالیسی</string>
+    <string name="terms_of_use">استعمال کی شرائط</string>
+    <string name="app_version">ایپ ورژن %s</string>
+    <string name="scan_prompt">دوسرے کی صحت کی حیثیت کو جانچنے کے لئے کیو آر کوڈ اسکین کریں</string>
+    <string name="few_seconds">کچھ سیکنڈ</string>
+    <string name="minutes">کم سے کم</string>
+    <string name="scan_to_check_status">میری صحت کی حیثیت حاصل کرنے کے لئے کیو آر کوڈ اسکین کریں</string>
+    <string name="tap_to_refresh">کیو آر کوڈ کو تازہ کرنے کیلئے ٹیپ کریں</string>
+    <string name="qr_code_valid_for">QR کوڈ کے لئے درست ہے</string>
+    <string name="scan_other_s_qr_code">دوسروں کے QR کوڈ اسکین کریں</string>
+    <string name="generate_my_qr_code">میرا QR کوڈ تیار کریں</string>
+    <string name="invalid_qr_code">غلط QR کوڈ</string>
+    <string name="not_generated_aarogya_setu">یہ سرکاری ہیلتھ برج ایپ کے ذریعہ نہیں بنایا گیا ہے۔</string>
+    <string name="request_new_code">برائے مہربانی اس شخص سے درخواست کریں کہ وہ نیا کوڈ تیار کرے</string>
+    <string name="expired_code">میعاد ختم ہونے والا QR کوڈ</string>
+    <string name="low_risk">انفیکشن کا خطرہ کم ہے</string>
+    <string name="moderate_risk">انفیکشن کا اعتدال پسند خطرہ ہے</string>
+    <string name="high_risk">انفیکشن کا خطرہ زیادہ ہے</string>
+    <string name="tested_positive_status">کوویڈ 19 کے لئے مثبت تجربہ کیا</string>
+    <string name="provide_necessary_permission">براہ کرم اپنے QR کوڈ پر گرفت کرنے کے لئے ضروری اجازت دیں</string>
+    <string name="scan_without_perm_alert">ایپ کو کیو آر کوڈ اسکین کرنے کے لئے کیمرے کی اجازت درکار ہے۔</string>
+    <string name="open_settings">کھلی ترتیبات</string>
+    <string name="common_scanning_error">کچھ مستثنیات پائی گئیں۔ براہ کرم دوبارہ اسکین کریں</string>
+    <string name="hamburger_menu_intro">ہیلپ لائن ، رازداری کی پالیسی ، استعمال کی شرائط اور بہت کچھ جیسے بہت ساری نئی خصوصیات یہاں مل سکتی ہیں۔</string>
+</resources>
