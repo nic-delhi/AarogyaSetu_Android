@@ -126,7 +126,7 @@ class SplashActivity : AppCompatActivity(), SelectLanguageFragment.LanguageChang
         {
             try {
                val target = getIntent().getStringExtra(Constants.TARGET)
-                if(!target.isNullOrBlank()&& BuildConfig.WEB_HOST.equals(Uri.parse(target).host,ignoreCase = true))
+                if(!target.isNullOrBlank())
                 intent.putExtra(Constants.URL,target)
                 val tagId =
                     getIntent().getStringExtra(Constants.DEEPLINK_TAG)
