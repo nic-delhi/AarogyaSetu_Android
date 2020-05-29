@@ -50,7 +50,7 @@
     <string name="permission_info_tnc_text"><![CDATA[<p>നിങ്ങൾ ഒരു സുരക്ഷിത ഭാരതത്തിനു വേണ്ടി സംഭാവന ചെയ്യുവാൻ ആഗ്രഹിക്കുന്നുവെങ്കിൽ, താഴെയുള്ള ബട്ടണിൽ ക്ലിക്കുചെയ്തു <a href="https://static.swaraksha.gov.in/tnc/">സേവന നിബന്ധനകളും</a> <a href="https://web.swaraksha.gov.in/ncv19/privacy/">സ്വകാര്യതാ നയവും</a> അംഗീകരിക്കുക:</p>]]></string>
     <string name="auth_error_unknown">സാങ്കേതിക പിഴവുകൾ കാരണം താങ്കളെ ഇപ്പോൾ ലോഗിൻ ചെയ്യാൻ സാധിക്കുന്നില്ല</string>
     <string name="auth_error_invalid_otp">ddനിങ്ങൾ നൽകിയ OTP തെറ്റാണ്</string>
-    <string name="auth_error_user_disabled">You are not allowed to sign in</string>
+    <string name="auth_error_user_disabled">നിങ്ങൾക്ക് ലോഗിൻ ചെയ്യാൻ അനുവാദമില്ല</string>
     <string name="close">ക്ലോസ്  ചെയ്യുക</string>
     <string name="sync_data_user_consent">കോൺ‌ടാക്റ്റ് ട്രെയ്‌സിംഗിനെ സഹായിക്കുന്നതിന്, ബ്ലൂടൂത്ത്, GPS സേവനങ്ങൾ ഉപയോഗിച്ച് പകർത്തിയ നിങ്ങളുടെ ഇന്‍ററാക്ഷന്‍ ഡാറ്റ ഇന്ത്യൻ ഗവൺമെന്‍റുമായി പങ്കിടും.</string>
     <string name="confirm_and_proceed">സ്ഥിരീകരിച്ച് തുടരുക</string>
@@ -76,7 +76,7 @@
     <string name="error_location">നിങ്ങളുടെ ഫോണിന്റെ ലൊക്കേഷൻ സെറ്റിംഗ്സ് ഈ ആപ്പിൽ നിന്നും പരിഹരിക്കാൻ കഴിയാത്ത വിധം അപൂർണ്ണമാണ്‌. ദയവുചെയ്ത് നിങ്ങളുടെ ഫോണിന്റെ സെറ്റിംഗ്സ് ഉപയോഗിച്ച് പരിഹരിക്കുക.</string>
     <string name="turn_on_bluetooth_all_times">മറ്റ് ഉപകരണങ്ങളുമായുള്ള നിങ്ങളുടെ സാമീപ്യം നിശ്ചിതപ്പെടുത്തുവാനും കൃത്യമായ സുരക്ഷാ അപ്‌ഡേറ്റുകൾ നൽകാനും എല്ലായ്‌പ്പോഴും നിങ്ങളുടെ ഫോണിന്റെ ബ്ലൂടൂത്ത് ഓണായിരിക്കണം.</string>
     <string name="make_sure_your_phone_is_connected_to_the_wifi_or_switch_to_mobile_data">നിങ്ങളുടെ ഫോൺ വൈഫൈയിലേക്ക് കണക്റ്റുചെയ്‌തിട്ടുണ്ടെന്ന് ഉറപ്പാക്കുക അല്ലെങ്കിൽ മൊബൈൽ ഡാറ്റയിലേക്ക് മാറുക.</string>
-    <string name="login_failed">ലോഗിൻ ചെയ്യുന്നത് പരാജയപ്പെട്ടു. ദയവായി വീണ്ടും ശ്രമിക്കുക</string>
+    <string name="login_failed">ലോഗിൻ ചെയ്യുന്നത് പരാജയപ്പെട്ടു. ദയവായി വീണ്ടും ശ്രമിക്കുക</string>
     <string name="image_user_content_description">ഉപയോക്താവ്</string>
     <string name="image_menu_content_description">മെനു</string>
     <string name="generator_scanner_qr_code">QR കോഡ് സൃഷ്ടിക്കുക / സ്കാൻ ചെയ്യുക</string>
@@ -84,11 +84,11 @@
     <string name="share_data_with_govt">സർക്കാരുമായി ഡാറ്റ പങ്കിടുക</string>
     <string name="call_helpline">ഹെൽപ്പ് ലൈനിൽ വിളിക്കുക (1075)</string>
     <string name="settings">ക്രമീകരണങ്ങൾ</string>
-    <string name="share_data_with_govt_detail">നിങ്ങൾ കോവിഡ്-19 നായി പോസിറ്റീവ് പരീക്ഷിച്ചിട്ടുണ്ടെങ്കിലോ, നിലവിൽ പരീക്ഷിക്കുകയാണെങ്കിലോ മാത്രം പങ്കിടുക</string>
-    <string name="call_helpline_detail">കോവിഡ്-19 മായി ബന്ധപ്പെട്ട ചോദ്യങ്ങൾക്ക് ആരോഗ്യ മന്ത്രാലയത്തിന്റെ ടോൾ ഫ്രീ ഹെൽപ്പ്ലൈൻ</string>
+    <string name="share_data_with_govt_detail">നിങ്ങൾ കോവിഡ്-19 നായി പോസിറ്റീവ് പരീക്ഷിച്ചിട്ടുണ്ടെങ്കിലോ, നിലവിൽ പരീക്ഷിക്കുകയാണെങ്കിലോ മാത്രം പങ്കിടുക</string>
+    <string name="call_helpline_detail">കോവിഡ്-19 മായി ബന്ധപ്പെട്ട ചോദ്യങ്ങൾക്ക് ആരോഗ്യ മന്ത്രാലയത്തിന്റെ ടോൾ ഫ്രീ ഹെൽപ്പ്ലൈൻ</string>
     <string name="faq">പതിവുചോദ്യങ്ങൾ</string>
     <string name="privacy_policy">സ്വകാര്യതാനയം</string>
-    <string name="terms_of_use">ഉപയോഗ നിബന്ധനകൾ</string>
+    <string name="terms_of_use">ഉപയോഗ നിബന്ധനകൾ</string>
     <string name="app_version">അപ്ലിക്കേഷൻ പതിപ്പ് %s</string>
     <string name="scan_prompt">മറ്റൊരാളുടെ ആരോഗ്യസ്ഥിതി പരിശോധിക്കുന്നതിന് QR കോഡ് സ്കാൻ ചെയ്യുക</string>
     <string name="few_seconds">കുറച്ച് നിമിഷങ്ങൾ</string>
@@ -105,7 +105,7 @@
     <string name="low_risk">അണുബാധയുടെ സാധ്യത കുറവാണ്</string>
     <string name="moderate_risk">അണുബാധയുടെ മിതമായ അപകടസാധ്യതയിലാണ്</string>
     <string name="high_risk">അണുബാധയുടെ സാധ്യത വളരെ കൂടുതലാണ്</string>
-    <string name="tested_positive_status">കോവിഡ്-19 ന്നായി പോസിറ്റീവ് പരീക്ഷിച്ചു</string>
+    <string name="tested_positive_status">കോവിഡ്-19 ന്നായി പോസിറ്റീവ് പരീക്ഷിച്ചു</string>
     <string name="provide_necessary_permission">നിങ്ങളുടെ Qr കോഡ് ക്യാപ്‌ചർ ചെയ്യുന്നതിന് ആവശ്യമായ അനുമതി നൽകുക</string>
     <string name="scan_without_perm_alert">QR കോഡ് സ്കാനിംഗിന് അപ്ലിക്കേഷന് ക്യാമറ അനുമതി ആവശ്യമാണ്.</string>
     <string name="open_settings">ക്രമീകരണങ്ങൾ തുറക്കുക</string>
