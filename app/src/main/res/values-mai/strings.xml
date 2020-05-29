@@ -1,10 +1,10 @@
 <resources>
   <string name="app_name">Aarogya Setu</string> 
   <string name="your_mobile_number_is_required_to_know_your_identity">संपर्क ट्रेसिंग के लेल अहाँक मोबाइल नंबर आवश्यक अछि।</string> 
-  <string name="text_value"> माईन लिअ, अहाँ एक हफ्ता पहिले, कोनो सभा या सार्वजनिक स्थान पर कोनो अनजान लोक सऽ भेंट केलों या हुनक नकदिकि संपर्क में ऐलों, और किछु दिन बाद वह व्यक्ति COVID-19 पॉज़िटिव पेल गेलेथ।nnएहेन स्थिति में भारत सरकार इ ऐप के मदद सँ, पाछिल १४ दिनों में, उ व्यक्ति के करीब आयल लोकक पता लगा लेतnnएकर बाद, उ सब संपर्क में आएल लोक के आगु के कार्रवाई के लेल सूचित केल जाएत और सलाह देल जाएत कि आगु कि करक चाहि - अलग-थलग हेबाक चाहि या टेस्ट करेबाक चाहि।nnसक्रिय संपर्क ट्रेसिंग में अपन योगदान द कऽ, अहाँ COVID-19 के प्रसार केर कम करबाक और भारत सरकार के अपन स्वास्थ्य और कल्याण के लेल जरूरी उपायों के लागू करे में सक्षम बनबा में मदद करब।nn</string> 
+  <string name="text_value"> माईन लिअ, अहाँ एक हफ्ता पहिले, कोनो सभा या सार्वजनिक स्थान पर कोनो अनजान लोक सऽ भेंट केलों या हुनक नजदिकि संपर्क में ऐलों, और किछु दिन बाद उ व्यक्ति COVID-19 पॉज़िटिव पेल गेलेथ।\n\nएहेन स्थिति में भारत सरकार इ ऐप के मदद सँ, पाछिल १४ दिनों में, उ व्यक्ति के करीब आयल लोकक पता लगा लेतnnएकर बाद, उ सब संपर्क में आएल लोक के आगु के कार्रवाई के लेल सूचित केल जाएत और सलाह देल जाएत कि आगु कि करक चाहि - अलग-थलग हेबाक चाहि या टेस्ट करेबाक चाहि।nnसक्रिय संपर्क ट्रेसिंग में अपन योगदान द कऽ, अहाँ COVID-19 के प्रसार केर कम करबाक और भारत सरकार के अपन स्वास्थ्य और कल्याण के लेल जरूरी उपायों के लागू करे में सक्षम बनबा में मदद करब।nn</string> 
   <string name="permissions_title">सेवा और गोपनीयता के शर्त</string> 
   <string name="permissions_detail">हम इ विषय के संवेदनशीलता सँ बुझईत छि और अहाँ के सुनिश्चित करएत छि कि अहाँ द्वारा देल गेल जानकारी के सुरक्षित रखबाक लेल उचित उपाय केल गेल अछि</string>
-  <string name="location_text">अहाँ सँ अनुरोध अइछ की अहाँ अपन मोबाइल के लोकेशन के सेटिंग के 'Always' पर सेट करब।अहाँ एकरा बाद में कखनो बदईल सकैत छी।</string>
+  <string name="location_text">अहाँ सँ अनुरोध अइछ की अहाँ अपन मोबाइल के लोकेशन के सेटिंग के 'Always' पर सेट करब। अहाँ एकरा बाद में कखनो बदईल सकैत छी।</string>
   <!-- phone_number_layout --> 
   <string name="enter_mobile_number">मोबाइल नंबर एंटर करू</string> 
   <string name="country_code">+91 </string> 
@@ -25,8 +25,8 @@
   <string name="bluetooth"><![CDATA[<b>ब्लूटूथ</b>]]></string> 
   <string name="data_sharing_with_the_ministry"><![CDATA[<b>डाटा शेयरिंग</b>]]></string> 
   <string name="monitors_your_device_s_proximity_within_6_feet_range">ब्‍लूटूथ अहाँक मोबाइल के आस-पास के अन्य मोबाइलक निकटता अनुमानित करबा में मदद करएत अछि।n ई अहाँ सँ अनुरोध जे अहाँ एकरा हमेशा ऑन राखु।</string>
-  <string name="tracks_an_individual_s_touch_points_so_can_easily_find_others_who_came_in_close_contact">अहाँक डेटा केवल भारत सरकार सँ शेयर केल जाएत ।n ई ऐप अहाँके नाम और नंबर के खुलासा केकरो सँ नइ करत ।</string> 
-  <string name="contribute_to_a_safer_india">हम सहमत छी</string> <string name="please_select_a_language_en">Please select your languagenकृपया अपन भाषा चुनु</string>
+  <string name="tracks_an_individual_s_touch_points_so_can_easily_find_others_who_came_in_close_contact">अहाँक डेटा केवल भारत सरकार सँ शेयर केल जाएत।n ई ऐप अहाँके नाम और नंबर के खुलासा केकरो सँ नइ करत ।</string> 
+  <string name="contribute_to_a_safer_india">हम सहमत छी</string> <string name="please_select_a_language_en">कृपया अपन भाषा चुनु</string>
   <string name="next">आगु</string> <string name="please_select_a_language_to_proceed">कृपया आगु बढ्बाक लेल एक भाषा चुनु।</string>
   <!-- Strings used for fragments for navigation --> 
 <string name="please_enter_a_valid_number">कृपया सही नंबर दर्ज करू</string> 
@@ -34,9 +34,9 @@
   <string name="each_one_of_us">हमरा सभ में भारत में फैल रहल कोरोना वायरस महामारी के रोकवाक क्षमता अछि।</string>
   <string name="simply_1_install_the_app">सबसे पहिले, n१ ऍप %s करें n२. %s को स्विच ऑन करू n३. अपन %s शेयरिंग के ‘Always’ पर सेट करू nnऐप के इंस्टॉल करवाक लेल अपन दोस्त और परिवार के सेहो आमंत्रित करू। </string> 
   <string name="cowin_20_tracks_through"><![CDATA[ब्लूटूथ और लोकेशन जेनेरेटेड सोशल ग्राफ की मदद सँ <b>आरोग्य सेतु</b> कोरोना पॉजिटिव लोकक संगे अहाँक संभवतः संपर्क के ट्रैक करईत अछि।]]></string> 
-<string name="the_app_alerts_are_accompanied">ऐप अलर्ट के माध्यम सँ निर्देश देल जाएत । यदि अहाँ के सेल्‍फ-आइसोलेट होबाक आवश्यकता अछि,या अहाँ में COVID-19 के लक्षण विकसित होएत अछि, तऽ उ परिस्थिति में सहायता केल जाएत ।</string> 
+<string name="the_app_alerts_are_accompanied">ऐप अलर्ट के माध्यम सँ निर्देश देल जाएत। यदि अहाँ के सेल्‍फ-आइसोलेट होबाक आवश्यकता अछि, या अहाँ में COVID-19 के लक्षण विकसित होएत अछि, तऽ उ परिस्थिति में सहायता केल जाएत ।</string> 
   <string name="you_will_be_alerted_if">यदि अहाँ जाने-अनजाने में कोनो COVID-19 पॉजिटिव लोक सँ संपर्क में अबेएत छि, तऽ अहाँके सूचित केल जाएत।</string>
-  <string name="with_cowin_20_you_can"><![CDATA[<b>आरोग्य सेतु</b> के साथ अहाँ स्वयं के, अपन परिवार और मित्रों के COVID-19 सँ सुरक्षा क सकएत छी,और राष्ट्र के अहि सँ लडए में सहायता क सकएत छी । <br><b>हम सुरक्षित, तऽ भारत सुरक्षित ।</b>]]></string>
+  <string name="with_cowin_20_you_can"><![CDATA[<b>आरोग्य सेतु</b> के साथ अहाँ स्वयं के, अपन परिवार और मित्रों के COVID-19 सँ सुरक्षा क सकएत छी, और राष्ट्र के अहि सँ लडए में सहायता क सकएत छी । <br><b>हम सुरक्षित, तऽ भारत सुरक्षित ।</b>]]></string>
   <string name="register_now">रजिस्टर करू</string>
   <string name="install">इनस्टॉल</string> <string name="bluetooth_and_gps">ब्लूटूथ और लोकेशन</string>
   <string name="location_sharing">लोकेशन</string>
@@ -64,10 +64,10 @@
   <string name="image_back_content_description">पाछु जाऊ</string>
  <string name="image_on_board_content_description">ऑन-बोर्डिंग दिखाऊ</string> 
 <string name="image_close_content_description">@string/close</string> 
-  <string name="permission_alert_message">अहाँके अपन सेटिंग्स ( समायोजन) से योगदान के लेल आवश्यक स्थान / ब्लूटूथ अनुमति देबअ परत्, ऐप पर वापस आबि क और फेर सँ क्लिक करअ परत।</string>
+  <string name="permission_alert_message">अहाँके अपन सेटिंग्स (समायोजन) से योगदान के लेल आवश्यक स्थान / ब्लूटूथ अनुमति देबअ परत्, ऐप पर वापस आबि क और फेर सँ क्लिक करअ परत।</string>
  <string name="error_network_error">कृपया इंटरनेट कनेक्शनक जाँच करू</string> 
   <string name="error_location">स्थान सेटिंग्स अपर्याप्त अछि, और अहि सऽ तय नइ केल जा सकएत अछि। सेटिंग्स में ठीक करु।</string>
- <string name="turn_on_bluetooth_all_times">अन्य उपकरण सँ अहाँके निकटता के ट्रैक ( धावन पथ) करबा और अहाँके सटीक सुरक्षा अपडेट देबा लेल ब्लूटूथ हर समय ऑन हेवाक चाहि।</string>
+ <string name="turn_on_bluetooth_all_times">अन्य उपकरण सँ अहाँके निकटता के ट्रैक (धावन पथ) करबा और अहाँके सटीक सुरक्षा अपडेट देबा लेल ब्लूटूथ हर समय ऑन हेवाक चाहि।</string>
   <string name="make_sure_your_phone_is_connected_to_the_wifi_or_switch_to_mobile_data">सुनिश्चित करू कि अहाँके फ़ोन वाईफाई से जुड़ल अछि या मोबाइल डेटा पर स्विच करू</string>
   <string name="login_failed">लॉगिन विफल। कृपया पुन: प्रयास करू</string> 
 <string name="image_user_content_description">उपयोगकर्ता</string>
