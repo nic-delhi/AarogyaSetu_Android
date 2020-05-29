@@ -2,6 +2,7 @@ package nic.goi.aarogyasetu.views
 
 import android.bluetooth.BluetoothAdapter
 import android.content.Intent
+import android.net.Uri
 import android.os.Bundle
 import android.os.Handler
 import android.text.TextUtils
@@ -111,10 +112,6 @@ class SplashActivity : AppCompatActivity(), SelectLanguageFragment.LanguageChang
         if (getIntent() != null && getIntent().data != null && !TextUtils.isEmpty(getIntent().data!!.scheme)) // Deeplink
         {
             val data = getIntent().data
-            val target = data!!.getQueryParameter(Constants.TARGET)
-            if(!target.isNullOrBlank())
-                intent.putExtra(Constants.URL,target);
-
             if (!TextUtils.isEmpty(data!!.query) && data.query!!.contains(Constants.DEEPLINK_TAG)) {
                 val paramString =
                     data.getQueryParameter(Constants.DEEPLINK_TAG)
@@ -129,8 +126,8 @@ class SplashActivity : AppCompatActivity(), SelectLanguageFragment.LanguageChang
         {
             try {
                val target = getIntent().getStringExtra(Constants.TARGET)
-                if(!target.isNullOrBlank())
-                intent.putExtra(Constants.URL,target);
+                if(!target.isNullOrBlank()&& BuildConfig.WEB_HOST.equals(Uri.parse(target).host,ignoreCase = true))
+                intent.putExtra(Constants.URL,target)
                 val tagId =
                     getIntent().getStringExtra(Constants.DEEPLINK_TAG)
                 intent.putExtra(Constants.DEEPLINK_TAG, Integer.valueOf(tagId))
