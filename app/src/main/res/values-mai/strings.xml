@@ -24,8 +24,8 @@
   <string name="device_location"><![CDATA[<b>मोबाइल लोकेशन</b>]]></string>
   <string name="bluetooth"><![CDATA[<b>ब्लूटूथ</b>]]></string> 
   <string name="data_sharing_with_the_ministry"><![CDATA[<b>डाटा शेयरिंग</b>]]></string> 
-  <string name="monitors_your_device_s_proximity_within_6_feet_range">ब्‍लूटूथ अहाँक मोबाइल के आस-पास के अन्य मोबाइलक निकटता अनुमानित करबा में मदद करएत अछि।n ई अहाँ सँ अनुरोध जे अहाँ एकरा हमेशा ऑन राखु।</string>
-  <string name="tracks_an_individual_s_touch_points_so_can_easily_find_others_who_came_in_close_contact">अहाँक डेटा केवल भारत सरकार सँ शेयर केल जाएत।n ई ऐप अहाँके नाम और नंबर के खुलासा केकरो सँ नइ करत।</string> 
+  <string name="monitors_your_device_s_proximity_within_6_feet_range">ब्‍लूटूथ अहाँक मोबाइल के आस-पास के अन्य मोबाइलक निकटता अनुमानित करबा में मदद करएत अछि।\n ई अहाँ सँ अनुरोध जे अहाँ एकरा हमेशा ऑन राखु।</string>
+  <string name="tracks_an_individual_s_touch_points_so_can_easily_find_others_who_came_in_close_contact">अहाँक डेटा केवल भारत सरकार सँ शेयर केल जाएत।\n ई ऐप अहाँके नाम और नंबर के खुलासा केकरो सँ नइ करत।</string> 
   <string name="contribute_to_a_safer_india">हम सहमत छी।</string> <string name="please_select_a_language_en">कृपया अपन भाषा चुनु।</string>
   <string name="next">आगु</string> <string name="please_select_a_language_to_proceed">कृपया आगु बढ्बाक लेल एक भाषा चुनु।</string>
   <!-- Strings used for fragments for navigation --> 
