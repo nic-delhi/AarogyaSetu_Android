@@ -103,5 +103,5 @@
  <string name="scan_without_perm_alert">ऐप के क्यूआर कोड स्कैनिंग के लेल कैमराक अनुमति चाहि।</string> 
 <string name="open_settings">सेटिंग्स खोलि</string>
   <string name="common_scanning_error">किछु गलती भेल। कृपया फेर सँ स्कैन करू।</string>
-  <string name="hamburger_menu_intro"> बहुत नया सुविधा जना की हेल्पलाइन, गोपनीयता नीति, उपयोगक शर्त और अधिक अतअ पायल जा सकएत छी।</string>
+  <string name="hamburger_menu_intro">बहुत नया सुविधा जना की हेल्पलाइन, गोपनीयता नीति, उपयोगक शर्त और अधिक अतअ पायल जा सकएत छी।</string>
 </resources>
