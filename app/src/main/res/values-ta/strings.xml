@@ -67,7 +67,7 @@
     <string name="retry">மீண்டும் முயற்சிக்கவும்</string>
     <string name="ok">சரி</string>
     <string name="image_language_change_content_description">மொழியை மாற்றுக</string>
-    <string name="image_share_content_description">செயலியைை பகிருங்கள்</string>
+    <string name="image_share_content_description">செயலியை பகிருங்கள்</string>
     <string name="image_back_content_description">பின்செல்க</string>
     <string name="image_on_board_content_description">ஆன்-போர்டிங்கை காண்பிக்கவும்</string>
     <string name="image_close_content_description">@string/close</string>
