@@ -59,7 +59,7 @@
     <string name="tested_positive">કોવિડ-૧૯ નો ટેસ્ટ પોઝિટિવ છે</string>
     <string name="syncing_data">ડેટા સિંક થઈ રહ્યો છે</string>
     <string name="syncing_data_detail"><![CDATA[ભારત સરકારને બ્લૂટૂથ અને GPS સેવાઓ દ્વારા સંપર્ક ડેટા મોકલવો.]]></string>
-    <string name="cancel">કૅન્સલ કરો</string>
+    <string name="cancel">રદ કરો</string>
     <string name="syncing_data_success">સિંક કરવું સફળ થઈ ગયું છે</string>
     <string name="syncing_data_success_detail">તમારો ડેટા હવે ભારત સરકારના સર્વર પર સુરક્ષિત છે.</string>
     <string name="syncing_data_failed">સિંક કરવું નિષ્ફળ થઈ ગયું છે</string>
