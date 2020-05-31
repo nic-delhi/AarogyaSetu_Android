@@ -68,7 +68,7 @@ class BluetoothDataDaoTest {
     @Test
     fun testRowCount() {
         val count = bluetoothDataDao.rowCount
-        Assert.assertThat(count, Matchers.equalTo(4L))
+        Assert.assertThat(count, Matchers.equalTo(4))
     }
 
     @Test
@@ -111,7 +111,7 @@ class BluetoothDataDaoTest {
 
     @Test
     fun testDeleteXDaysOldData() {
-        val currentTimeInSec = (System.currentTimeMillis() / 1000).toInt()
+        val currentTimeInSec = (System.currentTimeMillis() / 1000).tofloat()
         val count = bluetoothDataDao.deleteXDaysOldData(DAY, currentTimeInSec)
         Assert.assertThat(count, Matchers.equalTo(3))
     }
