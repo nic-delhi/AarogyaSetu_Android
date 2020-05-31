@@ -70,6 +70,7 @@ Digjot Singh
 Jaskaran Singh  
 Jasmeet Singh  
 Jaydeep Dutta  
+Joseph Dias  
 Juhi Dua  
 Keshav Agrawal  
 Kunal Prasad  
