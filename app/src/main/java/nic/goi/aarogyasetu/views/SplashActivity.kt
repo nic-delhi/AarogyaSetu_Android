@@ -5,6 +5,7 @@ import android.content.Intent
 import android.os.Bundle
 import android.os.Handler
 import android.text.TextUtils
+import android.util.Log
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.Lifecycle
@@ -16,7 +17,9 @@ import nic.goi.aarogyasetu.CoronaApplication
 import nic.goi.aarogyasetu.analytics.EventNames
 import nic.goi.aarogyasetu.analytics.ScreenNames
 import nic.goi.aarogyasetu.background.BluetoothScanningService
+import nic.goi.aarogyasetu.constant.GeneralConst.*
 import nic.goi.aarogyasetu.firebase.FirebaseRemoteConfigUtil
+import nic.goi.aarogyasetu.models.rootdetection.TotalResult
 import nic.goi.aarogyasetu.prefs.SharedPref
 import nic.goi.aarogyasetu.prefs.SharedPrefsConstants
 import nic.goi.aarogyasetu.utility.AnalyticsUtils
@@ -24,6 +27,8 @@ import nic.goi.aarogyasetu.utility.AuthUtility
 import nic.goi.aarogyasetu.utility.Constants
 import nic.goi.aarogyasetu.utility.CorUtility
 import nic.goi.aarogyasetu.utility.CorUtility.Companion.isNetworkAvailable
+import nic.goi.aarogyasetu.utility.rootdetection.CheckTask
+import nic.goi.aarogyasetu.utility.rootdetection.IChecksResultListener
 
 
 /**
@@ -31,25 +36,28 @@ import nic.goi.aarogyasetu.utility.CorUtility.Companion.isNetworkAvailable
  * @author Niharika.Arora
  */
 class SplashActivity : AppCompatActivity(), SelectLanguageFragment.LanguageChangeListener,
-    NoNetworkDialog.Retry, ProviderInstaller.ProviderInstallListener {
+    NoNetworkDialog.Retry, ProviderInstaller.ProviderInstallListener, IChecksResultListener {
     companion object {
         const val TIME_DELAY: Long = 200
         const val REQUEST_CODE_GOOGLE_SERVICE_ERROR: Int = 2000
     }
 
+    private var mTask: CheckTask? = null
     private var retryProviderInstall: Boolean = false
-
+    private var isRooted = false;
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        val rooted: Boolean = CommonUtils.isRooted(this)
-        if (rooted) {
-            showDialogAndFinish(Constants.ROOT_ALERT)
-            AnalyticsUtils.sendBasicEvent(EventNames.EVENT_PHONE_ROOTED, ScreenNames.SCREEN_SPLASH)
-        } else {
-            ProviderInstaller.installIfNeededAsync(this, this)
-        }
+        isDeviceRooted();
         AnalyticsUtils.updateUserTraits()
         AnalyticsUtils.sendEvent(EventNames.EVENT_OPEN_SPLASH)
+    }
+
+    private fun isDeviceRooted() {
+        if (mTask != null) {
+            mTask!!.cancel(false)
+        }
+        mTask = CheckTask(this@SplashActivity, false)
+        mTask!!.execute()
     }
 
     private fun startSplashLogic() {
@@ -97,12 +105,11 @@ class SplashActivity : AppCompatActivity(), SelectLanguageFragment.LanguageChang
         if (intent.extras != null && intent.extras?.containsKey(Constants.PUSH)!!) {
             if (intent.extras!!.getString(Constants.PUSH).equals("1")) {
                 var uploadType = intent.extras!!.getString(Constants.UPLOAD_TYPE);
-                if(TextUtils.isEmpty(uploadType))
-                {
+                if (TextUtils.isEmpty(uploadType)) {
                     uploadType = Constants.UPLOAD_TYPES.PUSH_CONSENT;
                 }
-                webIntent.putExtra(Constants.PUSH,true)
-                webIntent.putExtra(Constants.UPLOAD_TYPE,uploadType)
+                webIntent.putExtra(Constants.PUSH, true)
+                webIntent.putExtra(Constants.UPLOAD_TYPE, uploadType)
             }
         }
         startActivity(webIntent)
@@ -147,7 +154,6 @@ class SplashActivity : AppCompatActivity(), SelectLanguageFragment.LanguageChang
             builder.create().show()
         }
     }
-
 
 
     /**
@@ -225,15 +231,30 @@ class SplashActivity : AppCompatActivity(), SelectLanguageFragment.LanguageChang
                 if (isUserResolvableError(errorCode)) {
                     // Recoverable error. Show a dialog prompting the user to
                     // install/update/enable Google Play services.
-                    showErrorDialogFragment(this@SplashActivity, errorCode, REQUEST_CODE_GOOGLE_SERVICE_ERROR) {
+                    showErrorDialogFragment(
+                        this@SplashActivity,
+                        errorCode,
+                        REQUEST_CODE_GOOGLE_SERVICE_ERROR
+                    ) {
                         // The user chose not to take the recovery action
                         showDialogAndFinish(this.getErrorString(errorCode))
-                        AnalyticsUtils.sendBasicEvent(EventNames.EVENT_GOOGLE_SERVICE_ERROR_RESOLUTION_CANCEL, ScreenNames.SCREEN_SPLASH)
+                        AnalyticsUtils.sendBasicEvent(
+                            EventNames.EVENT_GOOGLE_SERVICE_ERROR_RESOLUTION_CANCEL,
+                            ScreenNames.SCREEN_SPLASH
+                        )
                     }
-                    AnalyticsUtils.sendBasicEvent(EventNames.EVENT_GOOGLE_SERVICE_RESOLVABLE_ERROR, ScreenNames.SCREEN_SPLASH, this.getErrorString(errorCode))
+                    AnalyticsUtils.sendBasicEvent(
+                        EventNames.EVENT_GOOGLE_SERVICE_RESOLVABLE_ERROR,
+                        ScreenNames.SCREEN_SPLASH,
+                        this.getErrorString(errorCode)
+                    )
                 } else {
                     showDialogAndFinish(this.getErrorString(errorCode))
-                    AnalyticsUtils.sendBasicEvent(EventNames.EVENT_GOOGLE_SERVICE_NON_RESOLVABLE_ERROR, ScreenNames.SCREEN_SPLASH, this.getErrorString(errorCode))
+                    AnalyticsUtils.sendBasicEvent(
+                        EventNames.EVENT_GOOGLE_SERVICE_NON_RESOLVABLE_ERROR,
+                        ScreenNames.SCREEN_SPLASH,
+                        this.getErrorString(errorCode)
+                    )
                 }
             }
         } else {
@@ -247,5 +268,44 @@ class SplashActivity : AppCompatActivity(), SelectLanguageFragment.LanguageChang
         } else {
             retryProviderInstall = true
         }
+    }
+
+    override fun onUpdateResult(result: TotalResult?) {
+
+    }
+
+    override fun onProcessStarted() {
+
+    }
+
+    override fun onProcessFinished(result: TotalResult?) {
+        if (mTask != null) {
+            mTask = null
+        }
+
+        if (result != null) {
+            when (result.checkState) {
+                CH_STATE_CHECKED_ROOT_DETECTED -> isRooted = true
+                CH_STATE_CHECKED_ROOT_NOT_DETECTED -> isRooted = false
+                CH_STATE_STILL_GOING -> {
+                }
+                CH_STATE_UNCHECKED -> {
+                }
+                CH_STATE_CHECKED_ERROR -> {
+                }
+                else -> throw IllegalStateException("Unknown state of the result")
+            }
+
+            if (isRooted) {
+                showDialogAndFinish(Constants.ROOT_ALERT)
+                AnalyticsUtils.sendBasicEvent(
+                    EventNames.EVENT_PHONE_ROOTED,
+                    ScreenNames.SCREEN_SPLASH
+                )
+            } else {
+                ProviderInstaller.installIfNeededAsync(this, this)
+            }
+        }
+
     }
 }
