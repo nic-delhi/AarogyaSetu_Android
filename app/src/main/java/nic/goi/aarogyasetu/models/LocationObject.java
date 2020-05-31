@@ -16,5 +16,4 @@ public class LocationObject {
         this.lat = latitude;
         this.lon = longitude;
     }
-
 }

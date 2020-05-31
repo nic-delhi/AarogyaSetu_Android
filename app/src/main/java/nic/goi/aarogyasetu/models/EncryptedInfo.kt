@@ -1,6 +1,5 @@
 package nic.goi.aarogyasetu.models
 
-
 /**
  * @author Niharika.Arora
  */

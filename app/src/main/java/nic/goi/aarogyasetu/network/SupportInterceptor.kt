@@ -72,5 +72,4 @@ class SupportInterceptor : Interceptor, Authenticator {
         }
         return true
     }
-
 }

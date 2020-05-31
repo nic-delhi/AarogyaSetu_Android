@@ -5,8 +5,6 @@ package nic.goi.aarogyasetu.prefs;
  */
 
 public class SharedPrefsConstants {
-
-
     public static final String USER_SELECTED_LANGUAGE_CODE = "USER_SELECTED_LANGUAGE_CODE";
     public static final String DEFAULT_LANGUAGE_CODE = "en";
 

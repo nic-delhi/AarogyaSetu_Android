@@ -22,6 +22,7 @@ import retrofit2.http.HeaderMap;
 import retrofit2.http.POST;
 
 public interface PostDataInterface {
+    
     @POST(BuildConfig.BULK_UPLOAD_API)
     Call<JSONObject> postUserData(@HeaderMap Map<String, String> headers, @Body BulkDataObject jsonObject);
 

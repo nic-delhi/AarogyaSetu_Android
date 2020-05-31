@@ -14,6 +14,5 @@ class OnBoardingViewModel : ViewModel() {
     init {
         signedInState.value = AuthUtility.isSignedIn()
         isSharingPossible.value = true
-
     }
 }

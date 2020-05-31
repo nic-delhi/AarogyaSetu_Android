@@ -28,7 +28,6 @@ public class NetworkClient {
     public static Retrofit getRetrofitClient(boolean zip, boolean isExecutor, boolean shouldUseSSL, String baseURLOverride,
                                              boolean needsAuthenticator) {
 
-
         HttpLoggingInterceptor logging = new HttpLoggingInterceptor();
         logging.setLevel(HttpLoggingInterceptor.Level.BODY);
 

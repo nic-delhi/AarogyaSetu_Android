@@ -1,6 +1,5 @@
 package nic.goi.aarogyasetu.models.network;
 
-
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
@@ -20,5 +19,4 @@ public class TokenValidationResponse {
     public String getRefreshToken() {
         return refreshToken;
     }
-
 }

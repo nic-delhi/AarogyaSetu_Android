@@ -14,7 +14,6 @@ import nic.goi.aarogyasetu.utility.Constants
 import nic.goi.aarogyasetu.utility.CorUtility
 
 class BootReceiver : BroadcastReceiver() {
-
     override fun onReceive(context: Context?, bootIntent: Intent?) {
         if (context == null) return
         if (bootIntent?.action == Intent.ACTION_BOOT_COMPLETED) {
