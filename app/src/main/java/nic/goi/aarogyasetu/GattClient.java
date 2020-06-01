@@ -114,7 +114,7 @@ public class GattClient {
     };
 
     /**
-     * This method will stoer the detected device infos into the local database to query in future if the need arise
+     * This method will store the detected device infos into the local database to query in future if the need arise
      * to push the data
      *
      * @param bluetoothModel The newly detected device nearby
