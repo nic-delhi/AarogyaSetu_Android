@@ -27,11 +27,29 @@ If you find any security issues or vulnerabilities in the code, then you can sen
 
 If you want to convey any other feedback regarding the App or Code, then you can send it to us at : support.aarogyasetu@nic.in
 
+### APP Permissions
 
+```
+"permissions": [
+    "android.permission.ACCESS_BACKGROUND_LOCATION",
+    "android.permission.ACCESS_COARSE_LOCATION",
+    "android.permission.ACCESS_FINE_LOCATION",
+    "android.permission.ACCESS_NETWORK_STATE",
+    "android.permission.BLUETOOTH",
+    "android.permission.BLUETOOTH_ADMIN",
+    "android.permission.FOREGROUND_SERVICE",
+    "android.permission.INTERNET",
+    "android.permission.RECEIVE_BOOT_COMPLETED",
+    "android.permission.WAKE_LOCK",
+    "com.google.android.c2dm.permission.RECEIVE",
+    "com.google.android.finsky.permission.BIND_GET_INSTALL_REFERRER_SERVICE"
+],
+```
 
 ## Setup
 
 ### Requirements
+
 - JDK 8
 - Latest Android SDK tools
 - Latest Android platform tools
@@ -39,12 +57,14 @@ If you want to convey any other feedback regarding the App or Code, then you can
 - AndroidX
 
 ### Configure
+
 - ./keystore.properties
 - Firebase - google-services.json
 
 **keystore.properties**
 
 Setup a keystore.properties at the root folder with following sample detail and your configurations
+
 ```
 # Server SSL Keys
 ssl_public_key=<Your Public Key>
@@ -107,11 +127,11 @@ Production: ./app/src/google-services.json
 
 
 ### Build
+
     ./gradlew assembleDebug
 
 ## Download App
 
 <p align="center">
-<a href='https://play.google.com/store/apps/details?id=nic.goi.aarogyasetu'><img alt='Get it on Google Play' src='https://play.google.com/intl/en_us/badges/images/generic/en_badge_web_generic.png' width="50%"/></a>
+    <a href='https://play.google.com/store/apps/details?id=nic.goi.aarogyasetu'><img alt='Get it on Google Play' src='https://play.google.com/intl/en_us/badges/images/generic/en_badge_web_generic.png' width="50%"/></a>
 </p>
-
