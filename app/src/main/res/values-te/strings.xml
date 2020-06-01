@@ -35,9 +35,9 @@
     <string name="would_you_like_to">మీరు COVID-19 పరీక్షలలో పాజిటివ్‌గా నిర్ధారింపబడిన వారు సంచరించిన ప్రాంతంలో సంచిరించినట్లయితే మీకు తెలియజేయమంటారా?</string>
     <string name="each_one_of_us">మనలోని ప్రతి ఒక్కరికి భారతదేశంలో కరోనావైరస్ మహమ్మారి వ్యాప్తిని నివారించడానికి సహాయపడగలిగే శక్తి ఉంది</string>
     <string name="simply_1_install_the_app">కేవలం,
-\n१ యాప్ ఇన్‌స్టాల్ చేసుకోండి
-\n२. బ్లూటూత్ మరియు లొకేషన్ స్విచ్ ఆన్ చేయండి
-\n३. లొకేషన్ షేరింగ్‌ను "ఎల్లప్పుడూ" అని సెట్ చేసుకోండి
+\n౧ యాప్ ఇన్‌స్టాల్ చేసుకోండి
+\n౨. బ్లూటూత్ మరియు లొకేషన్ స్విచ్ ఆన్ చేయండి
+\n౩. లొకేషన్ షేరింగ్‌ను "ఎల్లప్పుడూ" అని సెట్ చేసుకోండి
 \n\nమీ స్నేహితులు మరియు కుటుంబo చేత యాప్‌ను ఇన్‌స్టాల్ చేయించడానికి ఆహ్వానించండి.</string>
     <string name="cowin_20_tracks_through"><![CDATA[<b>ఆరోగ్య సేతు</b> COVID-19 పరీక్షలలో పాజిటివ్‌గా నిర్ధారింపబడిన వారితో మీ ఇంటరాక్షన్‌ను, బ్లూటూత్ మరియు లొకేషన్ జనరేటెడ్ సోషల్ గ్రాఫ్ ద్వారా ట్రాక్ చేస్తుంది.]]></string>
     <string name="the_app_alerts_are_accompanied">యాప్ అలర్ట్స్ సెల్ఫ్-ఐసోలేట్ అవ్వడం ఎలానో తెలిపే మరియు మీలో వైరస్ లక్షణాలు వృద్ధి చెందితే అవసరమైన సహాయం, మద్దతు ఎలా పొందాలో తెలిపే సూచనలు కలిగి ఉంటాయి</string>
@@ -48,8 +48,8 @@
     <string name="bluetooth_and_gps">Bluetooth &amp; Location</string>
     <string name="location_sharing">location sharing</string>
     <string name="permission_info_tnc_text"><![CDATA[<p>మీరు సురక్షిత భారతదేశానికి సహకారం అందించాలనుకుంటే, దయచేసి  <a href="https://static.swaraksha.gov.in/tnc/">సర్వీస్</a> మరియు <a href="https://web.swaraksha.gov.in/ncv19/privacy/">ప్రైవసీ పాలసీ </a> యొక్క నిబంధనలకు మీ అంగీకారాన్ని క్రింది బటన్ పైన క్లిక్ చేయడం ద్వారా తెలపండి:</p>]]></string>
-    <string name="auth_error_unknown">There is some error logging you in</string>
-    <string name="auth_error_invalid_otp">The OTP you have entered is incorrect</string>
+    <string name="auth_error_unknown">మిమ్మల్ని లాగిన్ చేయడంలో కొంత లోపం ఉంది</string>
+    <string name="auth_error_invalid_otp">మీరు నమోదు చేసిన OTP తప్పు</string>
     <string name="auth_error_user_disabled">You are not allowed to sign in</string>
     <string name="close">క్లోజ్ చేయండి</string>
     <string name="sync_data_user_consent">కాంటాక్ట్ ట్రేసింగ్‌లో సహాయపడటానికి, బ్లూటూత్ మరియు GPS సర్వీసుల ద్వారా సేకరించబడిన మీ ఇంటర్‌యాక్షన్ డేటా భారతదేశ ప్రభుత్వంతో షేర్ చేయబడుతుంది.</string>
