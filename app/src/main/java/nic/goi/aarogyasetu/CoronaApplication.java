@@ -80,7 +80,7 @@ public class CoronaApplication extends Application implements Configuration.Prov
         }
         return lastKnownLocation;
     }
-
+    /* warmUpLocation */
     public static void warmUpLocation() {
         if (CorUtility.Companion.isLocationPermissionAvailable(CoronaApplication.getInstance())) {
             LocationServices.getFusedLocationProviderClient(CoronaApplication.getInstance()).getLastLocation().addOnSuccessListener(location -> {

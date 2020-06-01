@@ -28,12 +28,15 @@ import androidx.work.WorkManager
 import com.crashlytics.android.Crashlytics
 import com.google.firebase.iid.FirebaseInstanceId
 import com.google.gson.JsonElement
+import com.google.gson.JsonObject
 import nic.goi.aarogyasetu.BuildConfig
 import nic.goi.aarogyasetu.CoronaApplication
 import nic.goi.aarogyasetu.analytics.EventNames
 import nic.goi.aarogyasetu.analytics.ScreenNames
 import nic.goi.aarogyasetu.background.BackgroundWorker
 import nic.goi.aarogyasetu.background.BluetoothScanningService
+import nic.goi.aarogyasetu.listener.QrCodeListener
+import nic.goi.aarogyasetu.listener.QrPublicKeyListener
 import nic.goi.aarogyasetu.models.BulkDataObject
 import nic.goi.aarogyasetu.models.network.RegisterationData
 import nic.goi.aarogyasetu.network.NetworkClient
@@ -51,6 +54,7 @@ import java.util.concurrent.TimeUnit
 
 /**
  * @author Damanpreet Singh
+ * updated by Niharika
  */
 class CorUtility {
 
@@ -112,13 +116,6 @@ class CorUtility {
                                 parseForceUpgradeJson(jsonObject.get(Constants.FORCE_UPGRADE).toString())
                             }
 
-                            if (jsonObject.has(SharedPrefsConstants.PERSISTANCE_DAYS)) {
-                                SharedPref.setStringParams(
-                                    CoronaApplication.instance,
-                                    SharedPrefsConstants.PERSISTANCE_DAYS,
-                                    jsonObject.get(SharedPrefsConstants.PERSISTANCE_DAYS).toString()
-                                )
-                            }
                         } catch (e: java.lang.Exception) {
                             //do nothing
                         }
@@ -228,6 +225,8 @@ class CorUtility {
                             )
                         }
 
+                        savePublicKey(jsonObject)
+
                         if (jsonObject.has(Constants.UNIQUE_ID)) {
                             SharedPref.setStringParams(
                                 CoronaApplication.instance,
@@ -251,9 +250,17 @@ class CorUtility {
                 override fun onFailure(call: Call<JsonElement>, t: Throwable) {
                     listener?.loginFailed()
                 }
-
-
             })
+        }
+
+        private fun savePublicKey(jsonObject: JsonObject) {
+            if (jsonObject.has(Constants.QR_PUBLIC_KEY)) {
+                SharedPref.setStringParams(
+                    CoronaApplication.instance,
+                    SharedPrefsConstants.PUBLIC_KEY,
+                    jsonObject.get(Constants.QR_PUBLIC_KEY).asString
+                )
+            }
         }
 
         private fun parseQrFetchResponse(
@@ -272,6 +279,29 @@ class CorUtility {
             } catch (e: java.lang.Exception) {
                 e.reportException()
                 listener?.onFailure()
+            }
+        }
+
+        private fun parseQrPublicKeyResponse(
+            response: Response<JsonElement>,
+            listener: QrPublicKeyListener? = null
+        ) {
+            try {
+                val jsonObject = response.body()!!.asJsonObject
+                val data =
+                    jsonObject.get(Constants.DATA).asString
+                if (data.isNullOrEmpty()) {
+                    listener?.onPublicKeyFetchFailure()
+                } else {
+                    SharedPref.setStringParams(
+                        CoronaApplication.instance,
+                        SharedPrefsConstants.PUBLIC_KEY,
+                        data
+                    )
+                    listener?.onQrPublicKeyFetched()
+                }
+            } catch (e: java.lang.Exception) {
+                listener?.onPublicKeyFetchFailure()
             }
         }
 
@@ -726,9 +756,33 @@ class CorUtility {
 
                 override fun onFailure(call: Call<JsonElement>, t: Throwable) {
                     Logger.d(Constants.QR_SCREEN_TAG, "Api failure")
-                    val e = Exception(t)
-                    e.reportException()
                     listener.onFailure()
+                }
+            })
+        }
+
+        fun fetchQrPublicKey(listener: QrPublicKeyListener) {
+            Logger.d(Constants.QR_SCREEN_TAG, "Api hit for public key ")
+
+            val client =
+                NetworkClient.getRetrofitClient(false, false, true, "")
+
+            val call = client.create(nic.goi.aarogyasetu.network.PostDataInterface::class.java)
+                .fetchQrPublicKey(getHeaders(false))
+
+            call.enqueue(object : retrofit2.Callback<JsonElement> {
+                override fun onResponse(call: Call<JsonElement>, response: Response<JsonElement>) {
+                    if (response.isSuccessful && response.body() != null) {
+                        Logger.d(Constants.QR_SCREEN_TAG, "Public key Api success")
+                        parseQrPublicKeyResponse(response, listener)
+                    } else {
+                        listener.onPublicKeyFetchFailure()
+                    }
+                }
+
+                override fun onFailure(call: Call<JsonElement>, t: Throwable) {
+                    Logger.d(Constants.QR_SCREEN_TAG, "Public key Api failure")
+                    listener.onPublicKeyFetchFailure()
                 }
             })
         }
@@ -736,14 +790,33 @@ class CorUtility {
         @JvmStatic
         fun remove30DaysOldData() {
             val dbInstance = nic.goi.aarogyasetu.db.FightCovidDB.getInstance()
-            val timestamp30 = Integer.parseInt(
-                SharedPref.getStringParams(
-                    CoronaApplication.instance,
-                    SharedPrefsConstants.PERSISTANCE_DAYS, Constants.VALUE_30
-                )
-            ) * 24 * 60 * 60
-
+            val timestamp30 = 30 * 24 * 60 * 60  // timestamp for 30 days
             dbInstance.bluetoothDataDao.deleteXDaysOldData(timestamp30, getCurrentEpochTimeInSec())
+        }
+
+        @JvmStatic
+        fun toTitleCase(str: String?): String? {
+            if (str == null) {
+                return null
+            }
+            var space = true
+            val builder = StringBuilder(str)
+            val len = builder.length
+            for (i in 0 until len) {
+                val c = builder[i]
+                if (space) {
+                    if (!Character.isWhitespace(c)) {
+                        // Convert to title case and switch out of whitespace mode.
+                        builder.setCharAt(i, Character.toTitleCase(c))
+                        space = false
+                    }
+                } else if (Character.isWhitespace(c)) {
+                    space = true
+                } else {
+                    builder.setCharAt(i, Character.toLowerCase(c))
+                }
+            }
+            return builder.toString()
         }
     }
 }
@@ -760,6 +833,7 @@ fun Exception?.reportException() {
             }
         }
     }
+
 
 
 }

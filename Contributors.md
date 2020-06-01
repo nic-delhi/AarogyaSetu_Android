@@ -2,28 +2,33 @@
 Government Leadership
 ---------------------------------
 Prof K  VijayRaghavan  
+Amitabh Kant  
 Ajay Sawhney  
-Dr.Neeta Verma  
+Dr. Neeta Verma  
 Gopala Krishnan S  
 R S Mani  
 Abhishek Singh  
-Dr.Seema Khanna  
+Dr. Seema Khanna  
 
 ---------------------------------
 Industry and Academia Leadership
 ---------------------------------
-Dr.Lalitesh Katragadda  
-Prof. V Kamakoti
-Deep Kalra
+Dr. Lalitesh Katragadda
+Prof. V Kamakoti  
+Deep Kalra  
+Arnab Kumar  
+Prashant Tandon  
 Prof. Amrutur Bharadawaj  
 Vikalp Sahni  
 Rahul Goyal  
 Rahul Matthan  
+Arghya Sengupta  
 
 ---------------------------------
 Contributors (Government)
 ---------------------------------
 DB Nayak  
+Pawan Joshi  
 Amit Kumar  
 Hari Haran M  
 Syed Hasan Mahmood  
@@ -47,11 +52,12 @@ Shipra Saxena
 ---------------------------------
 Contributors (Industry)
 ---------------------------------
+Aalekh Sharan  
 Akash Kumar  
 Aman Kapoor  
 Anjali Aggarwal  
-Ankit Garg 
-Ankit Gupta  
+Ankit Garg  
+Ankit Gupta   
 Ankit Raj  
 Anusheel Singh  
 Ashok Kumar Bhakhar  
@@ -67,11 +73,11 @@ Jaydeep Dutta
 Juhi Dua  
 Keshav Agrawal  
 Kunal Prasad  
-Manuj Porwal
+Manuj Porwal  
 Naveen Setia  
-Niharika Arora 
-Praveen Bhagat
-Punit Chhajer
+Niharika Arora  
+Praveen Bhagat  
+Punit Chhajer  
 Radha Krishan  
 Sanket Bansal  
 Saurav Yadav  
@@ -79,3 +85,4 @@ Sunny Shah
 Surabhi Vatsa  
 Vikrant Chaudhary  
 Vivek Ratakonda  
+Abhijeet Choudhary

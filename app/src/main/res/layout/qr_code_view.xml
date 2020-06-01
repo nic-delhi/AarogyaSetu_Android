@@ -9,14 +9,23 @@
 
     <ImageView
         android:id="@+id/scan_code"
-        android:layout_width="220dp"
-        android:layout_height="220dp"
+        android:layout_width="250dp"
+        android:layout_height="250dp"
         android:layout_gravity="center"
         android:contentDescription="@null"
         android:src="@drawable/ic_qr_code"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/app_icon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="6dp"
+        android:contentDescription="@null"
+        android:src="@drawable/qr_app_logo" />
 
     <RelativeLayout
         android:id="@+id/refresh_container"

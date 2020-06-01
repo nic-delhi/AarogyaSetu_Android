@@ -8,6 +8,7 @@
     <color name="transparent">#00000000</color>
     <color name="black_10_op">#1A000000</color>
     <color name="divider">#E9E9E9</color>
+    <color name="refresh_blue">#008CFF</color>
 
     <color name="onboarding_text_color">#242833</color>
 
@@ -21,14 +22,14 @@
     <color name="sync_failure">#CF381E</color>
     <color name="sync_success">#249995</color>
 
-    <color name="zxing_chat_bubble_green">#3AA84C</color>
-    <color name="zxing_chat_bubble_yellow">#E8C031</color>
-    <color name="zxing_chat_bubble_orange">#F48242</color>
-    <color name="zxing_chat_bubble_red">#C84D4D</color>FDF4E8
-    <color name="zxing_chat_bubble_light_orange">#FDF4E8</color>
+    <color name="chat_bubble_green">#3AA84C</color>
+    <color name="chat_bubble_yellow">#E8C031</color>
+    <color name="chat_bubble_orange">#F48242</color>
+    <color name="chat_bubble_red">#C84D4D</color>FDF4E8
+    <color name="chat_bubble_light_orange">#FDF4E8</color>
 
-    <color name="zxing_chat_title_orange">#DB7D00</color>
-    <color name="zxing_chat_title_red">#EB2026</color>
+    <color name="chat_title_orange">#DB7D00</color>
+    <color name="chat_title_red">#EB2026</color>
 
-    <color name="zxing_chat_close_dark">#44000000</color>
+    <color name="chat_close_dark">#44000000</color>
 </resources>

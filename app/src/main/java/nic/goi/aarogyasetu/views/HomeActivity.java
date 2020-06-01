@@ -1,6 +1,5 @@
 package nic.goi.aarogyasetu.views;
 
-import android.app.Activity;
 import android.bluetooth.BluetoothAdapter;
 import android.content.ActivityNotFoundException;
 import android.content.BroadcastReceiver;
@@ -56,12 +55,8 @@ import org.jetbrains.annotations.NotNull;
 import java.io.IOException;
 import java.net.MalformedURLException;
 import java.net.URL;
-import java.util.ArrayList;
 import java.util.HashMap;
-import java.util.List;
-import java.util.Locale;
 import java.util.Map;
-import java.util.Random;
 import java.util.Stack;
 
 import nic.goi.aarogyasetu.BuildConfig;
@@ -84,8 +79,10 @@ import nic.goi.aarogyasetu.utility.UploadDataUtil;
 import nic.goi.aarogyasetu.views.sync.SyncDataConsentDialog;
 import nic.goi.aarogyasetu.views.sync.SyncDataDialog;
 import nic.goi.aarogyasetu.views.sync.SyncDataStateDialog;
+import nic.goi.aarogyasetu.zxing.CustomScannerActivity;
 
 import static nic.goi.aarogyasetu.utility.LocalizationUtil.getLocalisedString;
+
 /**
  * @author Chandrapal Yadav
  * @author Niharika.Arora
@@ -180,12 +177,6 @@ public class HomeActivity extends AppCompatActivity implements SelectLanguageFra
     };
     private FullScreenVideoWebChromeClient fullScreenVideoWebChromeClient;
 
-    private void startOnBoarding() {
-        Intent intent = new Intent(HomeActivity.this, OnboardingActivity.class);
-        intent.putExtra(Constants.FINISH, true);
-        startActivity(intent);
-    }
-
     private void disableScreenShot() {
         try {
             getWindow().setFlags(WindowManager.LayoutParams.FLAG_SECURE, WindowManager.LayoutParams.FLAG_SECURE);
@@ -225,9 +216,7 @@ public class HomeActivity extends AppCompatActivity implements SelectLanguageFra
         IntentFilter filter = new IntentFilter(BluetoothAdapter.ACTION_STATE_CHANGED);
         registerReceiver(mBluetoothStatusChangeReceiver, filter);
         handleShare();
-
-        final View onboarding = findViewById(R.id.onboarding);
-        onboarding.setOnClickListener(v -> startOnBoarding());
+        checkForUpdates();
 
         doNotShowBack = getIntent().getBooleanExtra(HomeActivity.DO_NOT_SHOW_BACK, false);
 
@@ -258,8 +247,15 @@ public class HomeActivity extends AppCompatActivity implements SelectLanguageFra
             SharedPref.setStringParams(this, SharedPrefsConstants.APPLICATION_INSTALL_TIME, String.valueOf(System.currentTimeMillis()));
         }
 
-        checkForUpdates();
         checkOldData();
+
+        checkforDeeplink();
+    }
+
+    @Override
+    protected void onNewIntent(Intent intent) {
+        super.onNewIntent(intent);
+        checkforDeeplink();
     }
 
     private void checkOldData() {
@@ -319,8 +315,13 @@ public class HomeActivity extends AppCompatActivity implements SelectLanguageFra
                         startActivity(intent);
                     } catch (ActivityNotFoundException ignored) {
                         // do nothing
+                    } catch (Exception ex) {
+                        //Handle permission denial security exception on some chinese ROM devices
+                        if (!isFinishing()) {
+                            Toast.makeText(HomeActivity.this,
+                                    Constants.Errors.ERROR_OPENING_CALL_SCREEN, Toast.LENGTH_LONG).show();
+                        }
                     }
-
                 } else {
 
                     boolean isMyUrl = BuildConfig.WEB_HOST.equals(Uri.parse(url).getHost());
@@ -347,9 +348,19 @@ public class HomeActivity extends AppCompatActivity implements SelectLanguageFra
             public void onPageStarted(WebView view, String url, Bitmap favicon) {
 
                 if (url.startsWith("tel:")) {
-                    Intent intent = new Intent(Intent.ACTION_DIAL,
-                            Uri.parse(url));
-                    startActivity(intent);
+                    try {
+                        Intent intent = new Intent(Intent.ACTION_DIAL,
+                                Uri.parse(url));
+                        startActivity(intent);
+                    } catch (ActivityNotFoundException ignored) {
+                        // do nothing
+                    } catch (Exception ex) {
+                        //Handle permission denial security exception on some chinese ROM devices
+                        if (!isFinishing()) {
+                            Toast.makeText(HomeActivity.this,
+                                    Constants.Errors.ERROR_OPENING_CALL_SCREEN, Toast.LENGTH_LONG).show();
+                        }
+                    }
                 } else if (url.startsWith("http:") || url.startsWith("https:")) {
 
                     if (!CorUtility.isNetworkAvailable(HomeActivity.this)) {
@@ -476,9 +487,7 @@ public class HomeActivity extends AppCompatActivity implements SelectLanguageFra
     @Override
     protected void onResume() {
         super.onResume();
-        if (homeNavigationView != null) {
-            homeNavigationView.setDetail();
-        }
+        updateNavigationDrawer();
         if (CorUtility.arePermissionsGranted(this)) {
             checkBluetooth();
         } else {
@@ -494,6 +503,12 @@ public class HomeActivity extends AppCompatActivity implements SelectLanguageFra
             });
         }
 
+    }
+
+    private void updateNavigationDrawer() {
+        if (homeNavigationView != null) {
+            homeNavigationView.setDetail();
+        }
     }
 
     /**
@@ -697,6 +712,7 @@ public class HomeActivity extends AppCompatActivity implements SelectLanguageFra
                 //do nothing
             }
         }
+        updateNavigationDrawer();
     }
 
     /**
@@ -764,7 +780,7 @@ public class HomeActivity extends AppCompatActivity implements SelectLanguageFra
                 }
 
             }
-        }  else if (requestCode == REQUEST_CODE_IMMEDIATE_UPDATE) {
+        } else if (requestCode == REQUEST_CODE_IMMEDIATE_UPDATE) {
             finish();
         } else if (requestCode == REQUEST_CODE_FLEXIBLE_UPDATE) {
             //todo handle this accordingly for Immediate when user cancelled
@@ -1047,6 +1063,22 @@ public class HomeActivity extends AppCompatActivity implements SelectLanguageFra
                 return true;
             }
             return false;
+        }
+    }
+
+    private void checkforDeeplink()
+    {
+        if(getIntent().getIntExtra(Constants.DEEPLINK_TAG,0)>0)
+        {
+            switch (getIntent().getIntExtra(Constants.DEEPLINK_TAG,0))
+            {
+                 case Constants.SCREEN_TAG._2_QR_CODE_PAGE:
+                     QrActivity.start(this);
+                    break;
+                    case Constants.SCREEN_TAG._3_QR_CODE_SCAN_PAGE:
+                        startActivity(new Intent(this, CustomScannerActivity.class));
+                        break;
+            }
         }
     }
 }

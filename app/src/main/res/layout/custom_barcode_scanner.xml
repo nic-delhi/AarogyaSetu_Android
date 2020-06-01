@@ -26,31 +26,31 @@
         android:layout_gravity="bottom"
         android:layout_marginLeft="20dp"
         android:layout_marginRight="20dp"
-        android:layout_marginBottom="10dp"
+        android:layout_marginBottom="16dp"
         android:visibility="gone">
 
-        <TextView
+        <androidx.appcompat.widget.AppCompatTextView
             android:id="@+id/generate_qr"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@id/zxing_status_view"
+            android:layout_below="@+id/status_view"
             android:layout_centerHorizontal="true"
             android:background="@drawable/button_with_light_stroke"
             android:padding="16dp"
-            android:text="@string/zxing_generate_my_qr_code"
+            android:text="@string/generate_my_qr_code"
             android:textColor="@android:color/white"
             android:textSize="16sp"
             android:textStyle="bold" />
 
-        <TextView
-            android:id="@+id/zxing_status_view"
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/status_view"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="80dp"
+            android:layout_marginBottom="65dp"
             android:background="@color/zxing_transparent"
             android:gravity="center"
             android:text="@string/scan_prompt"
-            android:textColor="@color/zxing_status_text"
+            android:textColor="@color/white"
             android:textSize="16sp"
             android:textStyle="bold" />
     </RelativeLayout>

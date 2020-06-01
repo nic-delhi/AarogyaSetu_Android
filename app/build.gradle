@@ -59,8 +59,8 @@ android {
         buildConfigField "String", "HOST_URL", "\"${keystoreProperties['app_host_url']}\""
         buildConfigField "String", "AUTH_HOST_URL", "\"${keystoreProperties['auth_host_url']}\""
 
+        buildConfigField "String", "QR_PUBLIC_KEY_API", "\"${keystoreProperties['fetch_qr_public_key_api']}\""
         buildConfigField "String", "QR_CODE_API", "\"${keystoreProperties['fetch_qr_api']}\""
-        buildConfigField "String", "QR_PUBLIC_KEY", "\"${keystoreProperties['qr_public_key']}\""
         buildConfigField "String", "BULK_UPLOAD_API", "\"${keystoreProperties['bulk_upload_api']}\""
         buildConfigField "String", "REGISTER_USER_API", "\"${keystoreProperties['register_user_api']}\""
         buildConfigField "String", "CHECK_STATUS_API", "\"${keystoreProperties['check_status_api']}\""

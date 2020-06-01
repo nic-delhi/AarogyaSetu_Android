@@ -1,6 +1,7 @@
 package nic.goi.aarogyasetu.utility;
 
 import android.os.Build;
+import android.text.TextUtils;
 import android.util.Base64;
 
 import java.io.IOException;
@@ -28,8 +29,11 @@ import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.Jws;
 import io.jsonwebtoken.JwtException;
 import io.jsonwebtoken.Jwts;
-import nic.goi.aarogyasetu.BuildConfig;
+import io.jsonwebtoken.security.SignatureException;
+import nic.goi.aarogyasetu.CoronaApplication;
 import nic.goi.aarogyasetu.models.EncryptedInfo;
+import nic.goi.aarogyasetu.prefs.SharedPref;
+import nic.goi.aarogyasetu.prefs.SharedPrefsConstants;
 
 /**
  * @author Niharika.Arora
@@ -71,11 +75,16 @@ public class DecryptionUtil extends SecureUtil {
 
     public static Jws<Claims> decryptFile(String jwtToken) throws NoSuchAlgorithmException, InvalidKeySpecException, JwtException {
         Logger.d(Constants.QR_SCREEN_TAG, "Decryption start");
-        byte[] publicKeyBytes = Base64.decode(BuildConfig.QR_PUBLIC_KEY, Base64.DEFAULT);
-        // create a key object from the bytes
-        X509EncodedKeySpec keySpec = new X509EncodedKeySpec(publicKeyBytes);
-        KeyFactory keyFactory = KeyFactory.getInstance("RSA");
-        PublicKey publicKey = keyFactory.generatePublic(keySpec);
-        return Jwts.parserBuilder().setSigningKey(publicKey).build().parseClaimsJws(jwtToken);
+        String publicKeyString = SharedPref.getStringParams(CoronaApplication.instance, SharedPrefsConstants.PUBLIC_KEY, Constants.EMPTY);
+        if (!TextUtils.isEmpty(publicKeyString)) {
+            byte[] publicKeyBytes = Base64.decode(publicKeyString, Base64.DEFAULT);
+            // create a key object from the bytes
+            X509EncodedKeySpec keySpec = new X509EncodedKeySpec(publicKeyBytes);
+            KeyFactory keyFactory = KeyFactory.getInstance("RSA");
+            PublicKey publicKey = keyFactory.generatePublic(keySpec);
+            return Jwts.parserBuilder().setSigningKey(publicKey).build().parseClaimsJws(jwtToken);
+        } else {
+            throw new SignatureException("Public key is empty");
+        }
     }
 }
