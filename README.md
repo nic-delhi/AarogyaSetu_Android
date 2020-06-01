@@ -109,6 +109,10 @@ Production: ./app/src/google-services.json
 ### Build
     ./gradlew assembleDebug
 
+## Contribution
+
+Contribution to this repository is always welcome. Please read the guidelines before contributing. By contributing with a useful feature you are helping India to fight corona from all region.
+
 ## Download App
 
 <p align="center">
