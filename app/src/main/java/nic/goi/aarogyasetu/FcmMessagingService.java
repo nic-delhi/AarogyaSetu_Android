@@ -16,7 +16,7 @@ import nic.goi.aarogyasetu.prefs.SharedPrefsConstants;
 import nic.goi.aarogyasetu.utility.Constants;
 import nic.goi.aarogyasetu.utility.CorUtility;
 import nic.goi.aarogyasetu.utility.UploadDataUtil;
-import nic.goi.aarogyasetu.views.HomeActivity;
+import nic.goi.aarogyasetu.views.SplashActivity;
 
 import com.google.firebase.messaging.FirebaseMessagingService;
 import com.google.firebase.messaging.RemoteMessage;
@@ -42,6 +42,10 @@ public class FcmMessagingService extends FirebaseMessagingService {
         Map<String, String> remoteMessageData = remoteMessage.getData();
         if (!remoteMessageData.isEmpty()) {
             pushDataToServer(remoteMessageData);
+            if(remoteMessageData.containsKey(Constants.IS_SILENT_NOTIFICATION)&&remoteMessageData.get(Constants.IS_SILENT_NOTIFICATION).equals("1"))
+            {
+                return;
+            }
             showNotification(remoteMessageData);
         }
     }
@@ -53,7 +57,6 @@ public class FcmMessagingService extends FirebaseMessagingService {
     private void pushDataToServer(Map<String, String> remoteMessageData) {
         if (remoteMessageData.containsKey(Constants.PUSH_COVID_POSTIVE_P) && Constants.COVID_POSTIVE_PUSH_P_VALUE.equals(remoteMessageData.get(Constants.PUSH_COVID_POSTIVE_P)))
         {
-
             CorUtility.Companion.pushDataToServer(this);
             UploadDataUtil mUploadDataUtil = new UploadDataUtil();
             mUploadDataUtil.startInBackground();
@@ -66,19 +69,26 @@ public class FcmMessagingService extends FirebaseMessagingService {
      * @param remoteMessageData: The data received from the firebase notification
      */
     private void showNotification(Map<String, String> remoteMessageData) {
+
+
         String target = (remoteMessageData.containsKey(Constants.TARGET) && !TextUtils.isEmpty(remoteMessageData.get(Constants.TARGET)))
                 ? remoteMessageData.get(Constants.TARGET) : BuildConfig.WEB_URL;
 
         if (!TextUtils.isEmpty(target)) {
-            String targetTitle = (remoteMessageData.containsKey(Constants.PAGE_TITLE) && !TextUtils.isEmpty(remoteMessageData.get(Constants.PAGE_TITLE)))
-                    ? remoteMessageData.get(Constants.PAGE_TITLE) : Constants.EMPTY;
-            Intent notificationIntent = HomeActivity.getLaunchIntent(target, targetTitle, this);
+            Intent notificationIntent = new Intent(this, SplashActivity.class);
+            notificationIntent.putExtra(Constants.TARGET,target);
             if (remoteMessageData.containsKey(Constants.PUSH) && "1".equals(remoteMessageData.get(Constants.PUSH))) {
                 String uploadType = (remoteMessageData.containsKey(Constants.UPLOAD_TYPE) && !TextUtils.isEmpty(remoteMessageData.get(Constants.UPLOAD_TYPE))) ? remoteMessageData.get(Constants.UPLOAD_TYPE) : Constants.UPLOAD_TYPES.PUSH_CONSENT;
                 notificationIntent.putExtra(Constants.UPLOAD_TYPE,uploadType);
                 notificationIntent.putExtra(Constants.PUSH,true);
             }
-            PendingIntent pendingIntent = PendingIntent.getActivities(this, 0, new Intent[]{notificationIntent}, PendingIntent.FLAG_UPDATE_CURRENT);
+
+            if(remoteMessageData.containsKey(Constants.DEEPLINK_TAG))
+            {
+                notificationIntent.putExtra(Constants.DEEPLINK_TAG,remoteMessageData.get(Constants.DEEPLINK_TAG));
+            }
+
+            PendingIntent pendingIntent = PendingIntent.getActivity(this, 0, notificationIntent, PendingIntent.FLAG_CANCEL_CURRENT);
             String channelId = Build.VERSION.SDK_INT >= Build.VERSION_CODES.O ? CorUtility.Companion.getNotificationChannel() : "";
             NotificationCompat.Builder notificationBuilder = new NotificationCompat.Builder(this, channelId);
             Notification notification = notificationBuilder

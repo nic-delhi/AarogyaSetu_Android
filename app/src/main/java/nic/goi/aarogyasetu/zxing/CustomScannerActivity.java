@@ -4,6 +4,8 @@ import android.app.Activity;
 import android.content.ActivityNotFoundException;
 import android.content.Intent;
 import android.content.pm.PackageManager;
+import android.content.res.ColorStateList;
+import android.graphics.Color;
 import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
@@ -25,19 +27,21 @@ import androidx.core.content.ContextCompat;
 import com.journeyapps.barcodescanner.DecoratedBarcodeView;
 
 import java.security.NoSuchAlgorithmException;
-import java.security.spec.InvalidKeySpecException;
 
 import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.ExpiredJwtException;
 import io.jsonwebtoken.Jws;
 import io.jsonwebtoken.MalformedJwtException;
 import io.jsonwebtoken.io.DecodingException;
-import io.jsonwebtoken.security.SignatureException;
 import nic.goi.aarogyasetu.R;
+import nic.goi.aarogyasetu.analytics.EventNames;
+import nic.goi.aarogyasetu.analytics.EventParams;
+import nic.goi.aarogyasetu.utility.AnalyticsUtils;
 import nic.goi.aarogyasetu.utility.Constants;
 import nic.goi.aarogyasetu.utility.CorUtility;
 import nic.goi.aarogyasetu.utility.DecryptionUtil;
 import nic.goi.aarogyasetu.utility.LocalizationUtil;
+import nic.goi.aarogyasetu.utility.StatusConstants;
 import nic.goi.aarogyasetu.views.QrActivity;
 
 import static android.view.View.GONE;
@@ -57,6 +61,7 @@ public class CustomScannerActivity extends Activity implements CustomCaptureMana
     private ImageView statusClose, close;
     private TextView desc, descReason, generateQr;
     private View promptContainer;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -120,10 +125,11 @@ public class CustomScannerActivity extends Activity implements CustomCaptureMana
     }
 
     private void closeStausView() {
-        statusContainer.setVisibility(GONE);
-        capture.setViewCaptureListener(this);
-        capture.decode();
-        capture.onResume();
+        if (statusContainer.getVisibility() == VISIBLE) {
+            statusContainer.setVisibility(GONE);
+            capture.decode();
+            capture.onResume();
+        }
     }
 
     private void onCloseClick() {
@@ -163,13 +169,14 @@ public class CustomScannerActivity extends Activity implements CustomCaptureMana
     @Override
     public void onResultFetched(String code) {
         statusContainer.setVisibility(VISIBLE);
+        hideStatusContainerAfterDelay();
         Jws<Claims> claimsJws = null;
         try {
             claimsJws = DecryptionUtil.decryptFile(code);
         } catch (ExpiredJwtException e) {
             showExpiredCode();
         } catch (NoSuchAlgorithmException | DecodingException | MalformedJwtException exception) {
-            showInvalidStatus();
+            showInvalidStatus(exception.getMessage());
         } catch (Exception exception) {
             showCommonInvalidStatus();
         }
@@ -180,17 +187,20 @@ public class CustomScannerActivity extends Activity implements CustomCaptureMana
                     long expiry = body.get(Constants.EXPIRY, Long.class);
                     String name = body.get(Constants.NAME, String.class);
                     String mobileNo = body.get(Constants.MOBILE, String.class);
-                    String status = body.get(Constants.STATUS, String.class);
+                    String colorCode = body.get(Constants.COLOR_CODE, String.class);
+                    int statusCode = body.get(Constants.STATUS_CODE, Integer.class);
+                    String message = body.get(Constants.MESSAGE, String.class);
+
                     final long millisecondsMultiplier = 1000L;
                     long countDownMilliSeconds = expiry * millisecondsMultiplier;
-                    if (expiry <= 0 || TextUtils.isEmpty(mobileNo) || TextUtils.isEmpty(status)) {
-                        showInvalidStatus();
+                    if (expiry <= 0 || TextUtils.isEmpty(mobileNo)) {
+                        showInvalidStatus(EventParams.EXPIRY_OR_MOBILE_FAILURE);
                     } else if (expiry > 0 && System.currentTimeMillis() - countDownMilliSeconds > 0) {
                         showExpiredCode();
-                    } else if (!TextUtils.isEmpty(mobileNo) && !TextUtils.isEmpty(status)) {
-                        showPersonStatus(name, mobileNo, status);
+                    } else if (!TextUtils.isEmpty(mobileNo) && !TextUtils.isEmpty(colorCode)) {
+                        showPersonStatus(name, mobileNo, statusCode, colorCode, message);
                     } else {
-                        showInvalidStatus();
+                        showInvalidStatus(EventParams.OTHER_DECODE_ERROR);
                     }
                 } else {
                     showCommonInvalidStatus();
@@ -199,39 +209,59 @@ public class CustomScannerActivity extends Activity implements CustomCaptureMana
                 showCommonInvalidStatus();
             }
         }
-        hideStatusContainerAfterDelay();
     }
 
     private void hideStatusContainerAfterDelay() {
         statusContainer.postDelayed(this::closeStausView, 5000);
     }
 
-    private void showPersonStatus(String scannerName, String mobileNo, String status) {
+    private void showPersonStatus(String scannerName, String mobileNo, int statusCode, String
+            colorCode, String message) {
         String name = "";
         if (!TextUtils.isEmpty(scannerName)) {
             name = CorUtility.Companion.toTitleCase(scannerName);
         }
         desc.setVisibility(GONE);
-        String descVal;
-        if (status.equalsIgnoreCase(Constants.HEALTHY)) {
-            descVal = name + " (" + mobileNo + ") " + LocalizationUtil.getLocalisedString(this, R.string.low_risk);
-            descReason.setText(descVal);
-            statusContainer.setBackgroundTintList(ContextCompat.getColorStateList(this, R.color.chat_bubble_green));
-        } else if (status.equalsIgnoreCase(Constants.MODERATE)) {
-            descVal = name + " (" + mobileNo + ") " + LocalizationUtil.getLocalisedString(this, R.string.moderate_risk);
-            descReason.setText(descVal);
-            statusContainer.setBackgroundTintList(ContextCompat.getColorStateList(this, R.color.chat_bubble_yellow));
-        } else if (status.equalsIgnoreCase(Constants.HIGH)) {
-            descVal = name + " (" + mobileNo + ") " + LocalizationUtil.getLocalisedString(this, R.string.high_risk);
-            descReason.setText(descVal);
-            statusContainer.setBackgroundTintList(ContextCompat.getColorStateList(this, R.color.chat_bubble_orange));
-        } else {
-            descVal = name + " (" + mobileNo + ") " + LocalizationUtil.getLocalisedString(this, R.string.tested_positive_status);
-            descReason.setText(descVal);
-            statusContainer.setBackgroundTintList(ContextCompat.getColorStateList(this, R.color.chat_bubble_red));
-        }
+        //set status container background color
+        statusContainer.setBackgroundTintList(ColorStateList.valueOf(Color.parseColor(colorCode)));
+        configureStatusText(mobileNo, statusCode, message, name);
         descReason.setTextColor(ContextCompat.getColorStateList(this, R.color.white));
         statusClose.setImageTintList(ContextCompat.getColorStateList(this, R.color.white));
+    }
+
+    private void configureStatusText(String mobileNo, int statusCode, String message, String
+            name) {
+        switch (statusCode) {
+            case StatusConstants.STATUS_301:
+            case StatusConstants.STATUS_302:
+            case StatusConstants.STATUS_800:
+                setDescriptionText(mobileNo, name, R.string.low_risk);
+                break;
+            case StatusConstants.STATUS_500:
+            case StatusConstants.STATUS_501:
+            case StatusConstants.STATUS_502:
+            case StatusConstants.STATUS_600:
+                setDescriptionText(mobileNo, name, R.string.high_risk);
+                break;
+            case StatusConstants.STATUS_400:
+            case StatusConstants.STATUS_401:
+            case StatusConstants.STATUS_402:
+            case StatusConstants.STATUS_403:
+                setDescriptionText(mobileNo, name, R.string.moderate_risk);
+                break;
+            case StatusConstants.STATUS_700:
+            case StatusConstants.STATUS_1000:
+                setDescriptionText(mobileNo, name, R.string.tested_positive_status);
+                break;
+            default:
+                descReason.setText(message);
+                break;
+        }
+    }
+
+    private void setDescriptionText(String mobileNo, String name, int message) {
+        String descVal = name + " (" + mobileNo + ") " + LocalizationUtil.getLocalisedString(this, message);
+        descReason.setText(descVal);
     }
 
     private void showExpiredCode() {
@@ -244,7 +274,8 @@ public class CustomScannerActivity extends Activity implements CustomCaptureMana
         statusClose.setImageTintList(ContextCompat.getColorStateList(this, R.color.chat_close_dark));
     }
 
-    private void showInvalidStatus() {
+    private void showInvalidStatus(String message) {
+        sendInvalidExceptionEvent(message);
         desc.setVisibility(VISIBLE);
         descReason.setText(LocalizationUtil.getLocalisedString(this, R.string.not_generated_aarogya_setu));
         desc.setText(LocalizationUtil.getLocalisedString(this, R.string.invalid_qr_code));
@@ -252,6 +283,12 @@ public class CustomScannerActivity extends Activity implements CustomCaptureMana
         descReason.setTextColor(ContextCompat.getColorStateList(this, R.color.black));
         statusContainer.setBackgroundTintList(null);
         statusClose.setImageTintList(ContextCompat.getColorStateList(this, R.color.chat_close_dark));
+    }
+
+    private void sendInvalidExceptionEvent(String message) {
+        Bundle bundle = new Bundle();
+        bundle.putString(EventParams.SCAN_ERROR, "Exception: " + message);
+        AnalyticsUtils.sendEvent(EventNames.EVENT_SCAN_FAILED, bundle);
     }
 
     private void showCommonInvalidStatus() {
@@ -266,7 +303,8 @@ public class CustomScannerActivity extends Activity implements CustomCaptureMana
 
     @RequiresApi(api = Build.VERSION_CODES.M)
     @Override
-    public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
+    public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions,
+                                           @NonNull int[] grantResults) {
         super.onRequestPermissionsResult(requestCode, permissions, grantResults);
         boolean isPermissionGranted = true;
         if (grantResults.length > 0) {
