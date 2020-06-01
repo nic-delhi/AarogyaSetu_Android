@@ -11,7 +11,7 @@
 
 
     <!--phone_number_layout-->
-    <string name="enter_mobile_number">Enter Mobile Number</string>
+    <string name="enter_mobile_number">Enter Your Mobile Number</string>
     <string name="country_code">+91 </string>
     <string name="mobile_number">Mobile Number</string>
     <string name="why_is_it_needed">Why is it needed?</string>
@@ -40,7 +40,7 @@
     <string name="please_select_a_language_to_proceed">Please select a language to proceed.</string>
     <!-- Strings used for fragments for navigation -->
 
-    <string name="please_enter_a_valid_number">Please enter a valid number</string>
+    <string name="please_enter_a_valid_number">Please enter a valid mobile number</string>
 
 
     <string name="would_you_like_to">Would you like to be kept informed if you \nhave crossed paths with someone who has \ntested COVID-19 positive?</string>
