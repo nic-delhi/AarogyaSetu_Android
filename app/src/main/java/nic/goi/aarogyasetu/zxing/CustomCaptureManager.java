@@ -52,6 +52,9 @@ public class CustomCaptureManager extends CaptureManager {
             FileOutputStream outputStream = new FileOutputStream(bitmapFile);
             bmp.compress(Bitmap.CompressFormat.JPEG, 100, outputStream);
             outputStream.close();
+            // Closing [:54] resources in the try block where they are used or created
+            // in can lead to leaking resources if an exception occurs between opening/using and closing the resource.
+            //Consider closing java.io.FileOutputStream [:52] in a finally block or using try-with-resources.
             barcodeImagePath = bitmapFile.getAbsolutePath();
         } catch (IOException e) {
         }

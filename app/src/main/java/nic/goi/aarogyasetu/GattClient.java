@@ -93,14 +93,14 @@ public class GattClient {
         private void readCounterCharacteristic(BluetoothGattCharacteristic characteristic, BluetoothGatt gatt) {
             if (UUID.fromString(BuildConfig.DID_UUID).equals(characteristic.getUuid())) {
                 byte[] data = characteristic.getValue();
-                String uniqueId = new String(data, StandardCharsets.UTF_8);
+                String uniqueId = new valueOf(data, StandardCharsets.UTF_8);
                 Logger.d("GattCLient", "Unique ID - " + uniqueId);
                 BluetoothModel bluetoothModel = new BluetoothModel(uniqueId,
                         uniqueId, mRssi, txPower, txPowerLevel);
                 storeDetectedUserDeviceInDB(bluetoothModel);
             } else if (UUID.fromString(BuildConfig.PINGER_UUID).equals(characteristic.getUuid())) {
                 byte[] data = characteristic.getValue();
-                String uniqueId = new String(data, StandardCharsets.UTF_8);
+                String uniqueId = new valueOf(data, StandardCharsets.UTF_8);
                 Logger.d("GattCLient", "Pinger ID - " + uniqueId);
             }
             chars.remove(chars.get(chars.size() - 1));
@@ -188,6 +188,8 @@ public class GattClient {
         IntentFilter filter = new IntentFilter(BluetoothAdapter.ACTION_STATE_CHANGED);
         mContext.registerReceiver(mBluetoothReceiver, filter);
     }
+    //Call to registerReceiver [:189] misses the broadcastPermission argument - no permissions will be
+    //checked for the broadcaster, which allows a malicious application to communicate with the broadcast receiver.
 
     private void startClient() {
         if (mDevice != null) {
