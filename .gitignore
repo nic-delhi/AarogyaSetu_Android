@@ -53,6 +53,9 @@ a# Created by .ignore support plugin (hsz.mobi)
 .idea_modules/
 .idea/
 
+# Visual Studio
+.vscode
+
 # JIRA plugin
 atlassian-ide-plugin.xml
 
