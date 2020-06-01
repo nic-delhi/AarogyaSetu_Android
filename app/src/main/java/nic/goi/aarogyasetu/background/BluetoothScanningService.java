@@ -61,6 +61,16 @@ public class BluetoothScanningService extends Service implements AdaptiveScanHel
     private static final int FIVE_MINUTES = 5 * 60 * 1000;
     private long searchTimestamp;
 
+    /* 
+    signals weaker than this MIN_REQUIRED_RSSI are for far bluetooth devices. So to reduce false positive,
+    place device at approx 2 metres check the RSSI and set MIN_REQUIRED_RSSI to this value.
+    I checked and got approx -83.
+
+    Note: The larger is the MIN_REQUIRED_RSSI the more we can assure about true positives and low false negatives.
+          But it should be less than broadcast power of device
+    */
+    private static final int MIN_REQUIRED_RSSI = -83;
+
     private final GattServer mGattServer = new GattServer();
 
     private static final int NOTIF_ID = 1973;
@@ -77,7 +87,7 @@ public class BluetoothScanningService extends Service implements AdaptiveScanHel
                 String deviceName = result.getDevice().getName();
                 clearList();
                 mAdaptiveScanHelper.addScanResult(result);
-                if (mData.contains(deviceName)) {
+                if (mData.contains(deviceName) || result.getRssi() < MIN_REQUIRED_RSSI) {
                     return;
                 }
 
