@@ -122,14 +122,12 @@ public class GattClient {
 
     private void storeDetectedUserDeviceInDB(BluetoothModel bluetoothModel) {
         Location loc = CoronaApplication.getInstance().getDeviceLastKnownLocation();
-        if (loc != null) {
-            if (bluetoothModel != null) {
+        if (loc != null && bluetoothModel != null) {
                 BluetoothData bluetoothData = new BluetoothData(bluetoothModel.getAddress(), bluetoothModel.getRssi(),
                         bluetoothModel.getTxPower(), bluetoothModel.getTxPowerLevel());
                 bluetoothData.setLatitude(loc.getLatitude());
                 bluetoothData.setLongitude(loc.getLongitude());
                 DBManager.insertNearbyDetectedDeviceInfo(bluetoothData);
-            }
         }
     }
 

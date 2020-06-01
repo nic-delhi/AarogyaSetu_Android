@@ -1,4 +1,4 @@
-# Aarogya Setu Android app
+# Aarogya Setu Android App
 
 ![alt text](./aarogya.png "AarogyaSetu Logo")
 
