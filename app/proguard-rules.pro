@@ -76,8 +76,6 @@
 
 -keep public class * extends java.lang.Exception
 -keep class com.amazonaws.services.cognitoidentityprovider.** { *; }
--keep class com.crashlytics.** { *; }
--dontwarn com.crashlytics.**
 
 ### AWS
 # Class names are needed in reflection

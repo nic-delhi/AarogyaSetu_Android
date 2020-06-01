@@ -25,7 +25,7 @@ import androidx.work.ExistingPeriodicWorkPolicy
 import androidx.work.OneTimeWorkRequest
 import androidx.work.PeriodicWorkRequest
 import androidx.work.WorkManager
-import com.crashlytics.android.Crashlytics
+import com.google.firebase.crashlytics.FirebaseCrashlytics
 import com.google.firebase.iid.FirebaseInstanceId
 import com.google.gson.JsonElement
 import com.google.gson.JsonObject
@@ -827,7 +827,7 @@ fun Exception?.reportException() {
     this?.let {
         if (!BuildConfig.DEBUG) {
             try {
-                Crashlytics.getInstance().core.logException(it)
+                FirebaseCrashlytics.getInstance().recordException(it);
             } catch (e: java.lang.Exception) {
                 //
             }
