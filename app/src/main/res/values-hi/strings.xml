@@ -112,4 +112,5 @@
     <string name="open_settings">सेटिंग्स खोलें</string>
     <string name="common_scanning_error">कुछ अपवाद हुआ। कृपया फिर से स्कैन करें</string>
     <string name="hamburger_menu_intro">कई नई सुविधाएँ जैसे की हेल्पलाइन, गोपनीयता नीति, उपयोग की शर्तें और अधिक यहां पाई जा सकती हैं।</string>
+    <string name="share_text">मैं COVID19 के खिलाफ लड़ने के लिए आरोग्य सेतु ऐप की सिफारिश करता हूं। कृपया इस लिंक का उपयोग करके इसे डाउनलोड और साझा करें</string>
 </resources>

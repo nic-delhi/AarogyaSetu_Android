@@ -55,9 +55,9 @@ public class Constants {
     public static final String UPDATE = "Update";
     public static final String FORCE_UPGRADE = "f_upgrade_android";
     public static final String ALERT = "Alert";
+    public static final String ANDROID_URL_TEXT = "Android : ";
     public static final String IOS_URL_TEXT = "iOS : ";
     public static final String IOS_URL_LINK = "https://apps.apple.com/in/app/aarogyasetu/id1505825357";
-    public static final String SHARE_TEXT = "I recommend Aarogya Setu app to fight against COVID19. Please download and share it using this link Android : \n";
     public static final String DEVICE_TYPE = "device-type";
     public static final String HYPHEN = "-";
     public static final String X_API_KEY = "x-api-key";
