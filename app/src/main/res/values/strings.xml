@@ -131,4 +131,5 @@
     <string name="hamburger_menu_intro">A lot of Features like Helpline, Privacy Policy, Terms of Use and more can be found here.</string>
     <string name="seconds" translatable="false">sec</string>
     <string name="refresh" translatable="false">Refresh</string>
+    <string name="share_text">I recommend Aarogya Setu app to fight against COVID19. Please download and share it using this link </string>
 </resources>

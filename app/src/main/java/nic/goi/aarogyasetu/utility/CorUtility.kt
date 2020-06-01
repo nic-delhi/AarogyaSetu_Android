@@ -31,6 +31,7 @@ import com.google.gson.JsonElement
 import com.google.gson.JsonObject
 import nic.goi.aarogyasetu.BuildConfig
 import nic.goi.aarogyasetu.CoronaApplication
+import nic.goi.aarogyasetu.R
 import nic.goi.aarogyasetu.analytics.EventNames
 import nic.goi.aarogyasetu.analytics.ScreenNames
 import nic.goi.aarogyasetu.background.BackgroundWorker
@@ -638,9 +639,9 @@ class CorUtility {
 
         @JvmStatic
         fun getShareText(context: Context): String? {
-            var shareMessage: String = Constants.SHARE_TEXT
+            var shareMessage: String = LocalizationUtil.getLocalisedString(context, R.string.share_text) + "\n"
             shareMessage =
-                shareMessage + "https://play.google.com/store/apps/details?id=" + BuildConfig.APPLICATION_ID + "\n" + Constants.IOS_URL_TEXT + "\n" + Constants.IOS_URL_LINK + "\n"
+                shareMessage + Constants.ANDROID_URL_TEXT + "\n" + "https://play.google.com/store/apps/details?id=" + BuildConfig.APPLICATION_ID + "\n" + Constants.IOS_URL_TEXT + "\n" + Constants.IOS_URL_LINK + "\n"
             return shareMessage
         }
 
