@@ -18,7 +18,7 @@
     <string name="we_have_sent_otp">ನಿಮ್ಮ ಮೊಬೈಲ್ ನಂಬರಿಗೆ ನಾವು OTP ಯನ್ನು ಕಳುಹಿಸಿದ್ದೇವೆ.</string>
     <string name="we_have_resent_otp">ನಿಮ್ಮ ಮೊಬೈಲ್ ನಂಬರಿಗೆ ನಾವು OTP ಯನ್ನು ಮರುಹೊಂದಿಸಿ.</string>
     <string name="otp">OTP</string>
-    <string name="please_enter_a_valid_otp">ದಯವಿಟ್ಟು ಮಾನ್ಯವಾದ ಒಟಿಪಿ ನಮೂದಿಸಿ</string>
+    <string name="please_enter_a_valid_otp">ದಯವಿಟ್ಟು ಮಾನ್ಯವಾದ OTP ನಮೂದಿಸಿ</string>
     <!-- why_needed_layout -->
     <string name="i_understand">ನನಗೆ ಅರ್ಥವಾಗುತ್ತದೆ.</string>
     <string name="device_location"><![CDATA[<b>ಡಿವೈಸ್ ಲೊಕೇಶನ್</b>]]></string>
