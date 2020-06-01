@@ -26,8 +26,8 @@ import nic.goi.aarogyasetu.utility.CorUtility;
 public class CoronaApplication extends Application implements Configuration.Provider {
 
     public static CoronaApplication instance;
-     static Location lastKnownLocation = null;
-    
+    static Location lastKnownLocation = null;
+
     public static CoronaApplication getInstance() {
         return instance;
     }
@@ -38,33 +38,30 @@ public class CoronaApplication extends Application implements Configuration.Prov
         FirebaseApp.initializeApp(this);
         instance = this;
         WorkManager.initialize(
-                this,
-                new Configuration.Builder()
-                        .setExecutor(Executors.newFixedThreadPool(8))
-                        .build());
-        new Thread(() -> {
+            this,
+            new Configuration.Builder()
+            .setExecutor(Executors.newFixedThreadPool(8))
+            .build());
+        new Thread(() - > {
             Fabric.with(CoronaApplication.getInstance(), new Crashlytics());
         }).start();
 
     }
 
-    public void setBestLocation(Location location)
-    {
+    public void setBestLocation(Location location) {
         lastKnownLocation = location;
     }
 
-    public Location getAppLastLocation()
-    {
+    public Location getAppLastLocation() {
         return lastKnownLocation;
     }
 
     public Location getDeviceLastKnownLocation() {
 
-        if(CorUtility.Companion.isLocationPermissionAvailable(CoronaApplication.getInstance()))
-        {
+        if (CorUtility.Companion.isLocationPermissionAvailable(CoronaApplication.getInstance())) {
             LocationManager mLocationManager = (LocationManager) getApplicationContext().getSystemService(LOCATION_SERVICE);
-            List<String> providers = mLocationManager.getProviders(true);
-            for (String provider : providers) {
+            List < String > providers = mLocationManager.getProviders(true);
+            for (String provider: providers) {
                 try {
                     Location l = mLocationManager.getLastKnownLocation(provider);
                     if (l == null) {
@@ -73,7 +70,7 @@ public class CoronaApplication extends Application implements Configuration.Prov
                     if (lastKnownLocation == null || l.getAccuracy() > lastKnownLocation.getAccuracy()) {
                         lastKnownLocation = l;
                     }
-                }catch (SecurityException e){
+                } catch (SecurityException e) {
 
                 }
             }
@@ -83,7 +80,7 @@ public class CoronaApplication extends Application implements Configuration.Prov
     /* warmUpLocation */
     public static void warmUpLocation() {
         if (CorUtility.Companion.isLocationPermissionAvailable(CoronaApplication.getInstance())) {
-            LocationServices.getFusedLocationProviderClient(CoronaApplication.getInstance()).getLastLocation().addOnSuccessListener(location -> {
+            LocationServices.getFusedLocationProviderClient(CoronaApplication.getInstance()).getLastLocation().addOnSuccessListener(location - > {
                 if (location != null) {
                     lastKnownLocation = location;
                 }
@@ -100,8 +97,5 @@ public class CoronaApplication extends Application implements Configuration.Prov
     public Configuration getWorkManagerConfiguration() {
         return new Configuration.Builder().setExecutor(Executors.newFixedThreadPool(8)).build();
     }
-
-
-
 
 }
