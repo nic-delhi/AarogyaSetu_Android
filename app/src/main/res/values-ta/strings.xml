@@ -1,7 +1,7 @@
 <resources>
     <string name="app_name">Aarogya Setu</string>
     <string name="your_mobile_number_is_required_to_know_your_identity">தொடர்பு கண்காணிப்புக்கு உங்கள் மொபைல் எண் தேவை.</string>
-    <string name="text_value">ஒரு வாரத்திற்கு முன்பு ஒரு கூட்டத்தில் நீங்கள் ஒருவரைச் சந்தித்தீர்கள் அல்லது ஒரு பொது இடத்தில் தெரியாத ஒருவருடன் நெருக்கமாக இருந்தீர்கள் என்று சொல்லுங்கள், சில நாட்களில், அவர்கள் COVID-19 க்கு நேர்மறையானதை சோதிக்கிறார்கள்.\n\nகடந்த 14 நாட்களில், அந்த நபரின் நெருங்கிய சுற்றளவில் நிறுவப்பட்ட பயன்பாட்டைக் கொண்ட செயலில் உள்ள சாதனங்கள் மூலம், அந்த நபரின் அனைத்து தொடு புள்ளிகளையும் இந்திய அரசு கண்டுபிடிக்கும்.\n\nஇதுபோன்ற அனைத்து தொடர்புகளுக்கும் மேலதிக நடவடிக்கை குறித்த ஆலோசனையுடன், சுய-தனிமைப்படுத்த அல்லது தேவைக்கேற்ப அருகிலுள்ள சோதனை மையத்தில் சோதனை செய்ய ஒரு அறிவிப்பு அனுப்பப்படும். \"\n\nசெயலில் தொடர்பு கண்டுபிடிப்பதில் பங்கேற்பதன் மூலம், நீங்கள் COVID-19 இன் பரவலைக் குறைக்க எங்களுக்கு உதவுவீர்கள், மேலும் உங்கள் உடல்நலம் மற்றும் நல்வாழ்வுக்கான செயலூக்கமான நடவடிக்கைகளைச் செயல்படுத்த இந்திய அரசுக்கு உதவுவீர்கள்.\n\n</string>
+    <string name="text_value">ஒரு வாரத்திற்கு முன்பு ஒரு கூட்டத்தில் நீங்கள் ஒருவரைச் சந்தித்தீர்கள் அல்லது ஒரு பொது இடத்தில் தெரியாத ஒருவருடன் நெருக்கமாக இருந்தீர்கள் என்று சொல்லுங்கள், சில நாட்களில், அவர்கள் கோவிட்-19 க்கு நேர்மறையானதை சோதிக்கிறார்கள்.\n\nகடந்த 14 நாட்களில், அந்த நபரின் நெருங்கிய சுற்றளவில் நிறுவப்பட்ட பயன்பாட்டைக் கொண்ட செயலில் உள்ள சாதனங்கள் மூலம், அந்த நபரின் அனைத்து தொடு புள்ளிகளையும் இந்திய அரசு கண்டுபிடிக்கும்.\n\nஇதுபோன்ற அனைத்து தொடர்புகளுக்கும் மேலதிக நடவடிக்கை குறித்த ஆலோசனையுடன், சுய-தனிமைப்படுத்த அல்லது தேவைக்கேற்ப அருகிலுள்ள சோதனை மையத்தில் சோதனை செய்ய ஒரு அறிவிப்பு அனுப்பப்படும். \"\n\nசெயலில் தொடர்பு கண்டுபிடிப்பதில் பங்கேற்பதன் மூலம், நீங்கள் கோவிட்-19 இன் பரவலைக் குறைக்க எங்களுக்கு உதவுவீர்கள், மேலும் உங்கள் உடல்நலம் மற்றும் நல்வாழ்வுக்கான செயலூக்கமான நடவடிக்கைகளைச் செயல்படுத்த இந்திய அரசுக்கு உதவுவீர்கள்.\n\n</string>
     <string name="permissions_title">சேவை விதிமுறைகள் மற்றும் தனியுரிமை</string>
     <string name="permissions_detail">\"இந்த தலைப்பின் தன்மை மற்றும் உணர்திறன் ஆகியவற்றை நாங்கள் புரிந்துகொள்கிறோம், மேலும் உங்கள் தரவு சமரசம் செய்யப்படாமல் இருக்க வலுவான நடவடிக்கைகளை எடுத்துள்ளோம்.</string>
     <string name="location_text">பகிர்வை ‘எப்போதும்’ என அமைக்க பரிந்துரைக்கப்படுகிறது. இதை எப்போது வேண்டுமானாலும் மாற்றலாம்.</string>
@@ -16,11 +16,11 @@
     <!-- otp_validation_layout -->
     <string name="enter_otp">OTP ஐ உள்ளிடவும்</string>
     <string name="we_have_sent_otp">உங்கள் மொபைல் எண்ணுக்கு OTP ஐ அனுப்பியுள்ளோம்</string>
-    <string name="we_have_resent_otp">We have resent OTP to your mobile number.</string>
+    <string name="we_have_resent_otp">உங்கள் மொபைல் எண்ணுக்கு OTP ஐ மீண்டும் அனுப்பியுள்ளோம்</string>
     <string name="otp">OTP</string>
     <string name="please_enter_a_valid_otp">செல்லுபடியாகும் OTP ஐ உள்ளிடவும்</string>
     <!-- why_needed_layout -->
-    <string name="i_understand">எனக்கு புரிகிறது.</string>
+    <string name="i_understand">எனக்கு புரிகிறது</string>
     <string name="device_location"><![CDATA[<b>உங்கள் இருப்பிட</b>]]></string>
     <string name="bluetooth"><![CDATA[<b>புளூடூத்</b>]]></string>
     <string name="data_sharing_with_the_ministry"><![CDATA[<b>தரவு பகிர்வு</b>]]></string>
@@ -29,36 +29,36 @@
     <string name="contribute_to_a_safer_india">நான் ஒப்புக்கொள்கிறேன்</string>
     <string name="please_select_a_language_en">Please select your language\nकृपया अपनी भाषा चुनें</string>
     <string name="next">அடுத்தது</string>
-    <string name="please_select_a_language_to_proceed">தொடர ஒரு மொழியைத் தேர்ந்தெடுக்கவும்.</string>
+    <string name="please_select_a_language_to_proceed">தொடர ஒரு மொழியைத் தேர்ந்தெடுக்கவும்</string>
     <!-- Strings used for fragments for navigation -->
     <string name="please_enter_a_valid_number">சரியான எண்ணை உள்ளிடவும்</string>
     <string name="would_you_like_to">கோவிட்-19  உறுதி செய்யப்பட்டவர் எவரேனும் உங்களுடன் தொடர்பு கொண்டிருந்தால், உங்களுக்கு நாங்கள் அதைத் தெரிவிக்கலாமா?</string>
     <string name="each_one_of_us">கரோனா வைரஸ் கிருமியைப் பரவாமல் தடுப்பதற்கு வேண்டிய சக்தியும், பொறுப்பும் நம் ஒவ்வொருவரிடம் உள்ளது.</string>
     <string name="simply_1_install_the_app">நீங்கள் செய்ய வேண்டியது,
-\n१ இந்த செயலியை (app) ஐ உங்கள் மொபைலில் டௌன்லோட் செய்துகொள்ளுங்கள்
+\n१ இந்த செயலியை (app) ஐ உங்கள் மொபைலில் பதிவிறக்கம் செய்துகொள்ளுங்கள்
 \n२. ப்ளூடூத், ஜீபீஎஸ்ஸை (Bluetooth, LOCATION) ஆன் செய்யுங்கள்.
 \n३. லொகேஷன் (Location)என்ற இடத்தில் ஆல்வேஸ்(Always) என்பதைத் தேர்வு செய்யுங்கள்
 \n\nஉங்கள் குடும்பத்தினருக்கும், நண்பர்களுக்கும், இந்த செயலி அழைப்பை அனுப்புங்கள்.</string>
     <string name="cowin_20_tracks_through"><![CDATA[இந்த <b>ஆரோக்கிய சேது</b> செயலி (app), ப்ளூ டூத், ஜீபீஎஸ் (Bluetooth, Location) மூலமாக கோவிட்-19  ஆல் பாதிக்கப்பட்டவர்களோடு உங்கள் தொடர்பை கண்காணிக்கிறது.]]></string>
-    <string name="the_app_alerts_are_accompanied">ஒரு வேளை உங்களுக்கு நோயின் அறிகுறிகள் இருந்தால், நீங்கள் எடுத்துக் கொள்ள வேண்டிய முன்னெச்சரிக்கை நடவடிக்கைகளையும், சரியான தனிமைப்படுத்தும் வழிகளையும், விளக்கங்களையும் உங்களுக்கு அலெர்ட்டுடன் தெரிவிக்கப்படும்</string>
-    <string name="you_will_be_alerted_if">நீங்கள் எதிர்பாராமல் சமீபத்தில் தொடர்பு கொண்ட யாருக்கேனும் கோவிட்-19  பாதிப்பு நிச்சயமானது பற்றித் தெரியவந்தால்,  உங்களுக்கு (alert) அலர்ட் அனுப்பபடும்</string>
-    <string name="with_cowin_20_you_can"><![CDATA[<b>ஆரோக்கிய சேது</b> செயலி மூலம், நீங்கள் உங்களையும், உங்கள் குடும்பத்தினரையும், நண்பர்களையும் , நமது நாட்டை யும் கோவிட்-19 ஐ எதிர்க்க உதவலாம்.]]></string>
+    <string name="the_app_alerts_are_accompanied">ஒரு வேளை உங்களுக்கு நோயின் அறிகுறிகள் இருந்தால், நீங்கள் எடுத்துக் கொள்ள வேண்டிய முன்னெச்சரிக்கை நடவடிக்கைகளையும், சரியான தனிமைப்படுத்தும் வழிகளையும், விளக்கங்களையும் உங்களுக்கு எச்சரிக்கையுடன் தெரிவிக்கப்படும்</string>
+    <string name="you_will_be_alerted_if">நீங்கள் எதிர்பாராமல் சமீபத்தில் தொடர்பு கொண்ட யாருக்கேனும் கோவிட்-19  பாதிப்பு நிச்சயமானது பற்றித் தெரியவந்தால்,  உங்களுக்கு (alert) எச்சரிக்கை அனுப்பபடும்</string>
+    <string name="with_cowin_20_you_can"><![CDATA[<b>ஆரோக்கிய சேது</b> செயலி மூலம், நீங்கள் உங்களையும், உங்கள் குடும்பத்தினரையும், நண்பர்களையும் , நமது நாட்டையும் கோவிட்-19 ஐ எதிர்க்க உதவலாம்.]]></string>
     <string name="register_now">பதிவு செய்யவும்</string>
-    <string name="install">Install</string>
+    <string name="install">நிறுவு</string>
     <string name="bluetooth_and_gps">Bluetooth &amp; Location</string>
-    <string name="location_sharing">location sharing</string>
-    <string name="permission_info_tnc_text"><![CDATA[<p>நீங்கள் ஒரு பாதுகாப்பான இந்தியாவுக்கு பங்களிக்க விரும்பினால், கீழேயுள்ள பொத்தானைக் கிளிக் செய்வதன் மூலம் <a href="https://static.swaraksha.gov.in/tnc/">சேவை விதிமுறைகள்</a> மற்றும் <a href="https://web.swaraksha.gov.in/ncv19/privacy/">தனியுரிமைக் கொள்கையை</a> நீங்கள் ஏற்றுக்கொள்வதைக் குறிக்கவும்:</p>]]></string>
+    <string name="location_sharing">இருப்பிட பகிர்வு</string>
+    <string name="permission_info_tnc_text"><![CDATA[<p>நீங்கள் ஒரு பாதுகாப்பான இந்தியாவுக்கு பங்களிக்க விரும்பினால், கீழேயுள்ள பொத்தானைக் அழுத்துவதன் மூலம் <a href="https://static.swaraksha.gov.in/tnc/">சேவை விதிமுறைகள்</a> மற்றும் <a href="https://web.swaraksha.gov.in/ncv19/privacy/">தனியுரிமைக் கொள்கையை</a> நீங்கள் ஏற்றுக்கொள்வதைக் குறிக்கவும்:</p>]]></string>
     <string name="auth_error_unknown">நீங்கள் உள்நுழைய சில பிழை உள்ளது</string>
-    <string name="auth_error_invalid_otp">நீங்கள் உள்ளிட்ட OTP தவறானது நீங்கள் உள்ளிட்ட OTP தவறானது</string>
-    <string name="auth_error_user_disabled">You are not allowed to sign in</string>
+    <string name="auth_error_invalid_otp">நீங்கள் உள்ளிட்ட OTP தவறானது</string>
+    <string name="auth_error_user_disabled">உள்நுழைய உங்களுக்கு அனுமதி இல்லை</string>
     <string name="close">மூடவும்</string>
-    <string name="sync_data_user_consent">தொடர்பு கொள்ள உதவுவதற்கு, ப்ளூடூத் மற்றும் GPS சேவைகள் மூலம் கைப்பற்றப்பட்ட உங்கள் தொடர்பு தரவு இந்திய அரசாங்கத்துடன் பகிரப்படும்.</string>
+    <string name="sync_data_user_consent">தொடர்பு கொள்ள உதவுவதற்கு, ப்ளூடூத் மற்றும் GPS சேவைகள் மூலம் சேகரிக்கப்பட்ட உங்கள் தொடர்பு தரவு இந்திய அரசாங்கத்துடன் பகிரப்படும்.</string>
     <string name="confirm_and_proceed">உறுதிசெய்யவும் மற்றும் தொடரவும்</string>
     <string name="sync_data_detail">உங்கள் தரவு எப்போதும் உங்கள் போனில் சேமிக்கப்படுகிறது. பாதுகாப்பான அரசாங்க சர்வர்களில் அதை பகிரவும்…</string>
     <string name="sample_collected_for_testing">சோதனைக்காக மாதிரி சேகரிக்கப்பட்டது</string>
-    <string name="tested_positive">Covid19-க்கான சோதனை செய்யப்பட்ட பாசிட்டிவ்</string>
+    <string name="tested_positive">கோவிட்-19-க்கான சோதனை செய்யப்பட்ட பாசிட்டிவ்</string>
     <string name="syncing_data">தரவை ஒத்திசைக்கிறது</string>
-    <string name="syncing_data_detail"><![CDATA[ப்ளூடூத் மற்றும் GPS சேவைகள் மூலம் சேகரித்த தொடர்பு தகவல்களை இந்திய அரசாங்கத்திற்கு அனுப்புகிறது.]]></string>
+    <string name="syncing_data_detail"><![CDATA[ப்ளூடூத் மற்றும் GPS சேவைகள் மூலம் சேகரிக்கப்பட்ட தொடர்பு தகவல்களை இந்திய அரசாங்கத்திற்கு அனுப்புகிறது.]]></string>
     <string name="cancel">இரத்துசெய்க</string>
     <string name="syncing_data_success">ஒத்திசைவு வெற்றிகரமானது</string>
     <string name="syncing_data_success_detail">உங்கள் தரவு இப்போது இந்திய அரசாங்க சர்வர்களில் பாதுகாக்கப்பட்டுள்ளது.</string>
@@ -71,7 +71,7 @@
     <string name="image_back_content_description">பின்செல்க</string>
     <string name="image_on_board_content_description">ஆன்-போர்டிங்கை காண்பிக்கவும்</string>
     <string name="image_close_content_description">@string/close</string>
-    <string name="permission_alert_message">உங்கள் அமைப்புகளின் பங்களிப்புக்கு தேவையான இடம் / புளூடூத் அனுமதிகளை நீங்கள் வழங்க வேண்டும், பயன்பாட்டிற்கு வந்து மீண்டும் கிளிக் செய்க.</string>
+    <string name="permission_alert_message">உங்கள் அமைப்புகளின் பங்களிப்புக்கு தேவையான இடம்(Location) / ப்ளூடூத்(Bluetooth) அனுமதிகளை நீங்கள் வழங்க வேண்டும், பயன்பாட்டிற்கு வந்து மீண்டும் கிளிக் செய்க.</string>
     <string name="error_network_error">இணைய இணைப்பை சரிபார்க்கவும்</string>
     <string name="error_location">இருப்பிட அமைப்புகள் போதுமானதாக இல்லை, அதை இங்கே சரிசெய்ய முடியாது. அமைப்புகளில் சரிசெய்யவும்</string>
     <string name="turn_on_bluetooth_all_times">பிற சாதனங்களுக்கான உங்கள் அருகாமையைக் கண்காணிக்கவும், துல்லியமான பாதுகாப்பு புதுப்பிப்புகளை வழங்கவும் புளூடூத் எல்லா நேரங்களிலும் இருக்க வேண்டும்.</string>
@@ -84,8 +84,8 @@
     <string name="share_data_with_govt">தரவை அரசாங்கத்துடன் பகிர்ந்து கொள்ளுங்கள்.</string>
     <string name="call_helpline">ஹெல்ப்லைனை அழைக்கவும் (1075)</string>
     <string name="settings">அமைப்புகள்</string>
-    <string name="share_data_with_govt_detail">உங்களுக்கு COVID-19 தொற்று உறுதி செய்ய பட்டிருந்தால் அல்லது தற்போது சோதிக்க பட்டிருந்தால் மட்டுமே பகிரவும்</string>
-    <string name="call_helpline_detail">COVID-19 தொடர்பான கேள்விகளுக்கு சுகாதார அமைச்சரவையின் கட்டணமில்லா ஹெல்ப்லைன்</string>
+    <string name="share_data_with_govt_detail">உங்களுக்கு கோவிட்-19 தொற்று உறுதி செய்ய பட்டிருந்தால் அல்லது தற்போது சோதிக்க பட்டிருந்தால் மட்டுமே பகிரவும்</string>
+    <string name="call_helpline_detail">கோவிட்-19 தொடர்பான கேள்விகளுக்கு சுகாதார அமைச்சரவையின் கட்டணமில்லா ஹெல்ப்லைன்</string>
     <string name="faq">அடிக்கடி கேட்கப்படும் கேள்விகள்</string>
     <string name="privacy_policy">தனியுரிமைக் கொள்கை</string>
     <string name="terms_of_use">பயன்படுத்தும் விதிமுறைகள்</string>
@@ -105,10 +105,10 @@
     <string name="low_risk">நோய்த்தொற்றின் குறைந்த ஆபத்தில் உள்ளது</string>
     <string name="moderate_risk">நோய்த்தொற்றின் மிதமான ஆபத்தில் உள்ளது</string>
     <string name="high_risk">நோய்த்தொற்றின் அதிக ஆபத்தில் உள்ளது</string>
-    <string name="tested_positive_status">COVID-19 தொற்று உறுதி செய்யப்பட்டுள்ளது</string>
+    <string name="tested_positive_status">கோவிட்-19 தொற்று உறுதி செய்யப்பட்டுள்ளது</string>
     <string name="provide_necessary_permission">உங்கள் QR குறியீட்டைப் பெற தேவையான அனுமதியை வழங்கவும்</string>
     <string name="scan_without_perm_alert">QR குறியீடை ஸ்கேன் செய்ய பயன்பாட்டிற்கு கேமரா அனுமதி தேவை.</string>
     <string name="open_settings">அமைப்புகள் பக்கத்தைத் திறக்கவும்</string>
     <string name="common_scanning_error">சில விதிவிலக்கு ஏற்பட்டது. மீண்டும் ஸ்கேன் செய்யவும்</string>
-    <string name="hamburger_menu_intro">ஹஹெல்ப்லைன், தனியுரிமைக் கொள்கை, பயன்பாட்டு விதிமுறைகள் மற்றும் பல புதிய அம்சங்களை இங்கே காணலாம்.</string>
+    <string name="hamburger_menu_intro">ஹெல்ப்லைன், தனியுரிமைக் கொள்கை, பயன்பாட்டு விதிமுறைகள் மற்றும் பல புதிய அம்சங்களை இங்கே காணலாம்.</string>
 </resources>
