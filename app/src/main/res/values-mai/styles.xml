@@ -1,0 +1,6 @@
+<resources> 
+<style name="TextStyleFontSemiBold" parent="AppTheme"> 
+<item name="fontFamily">@font/work_sans_semibold</item> 
+<item name="android:textStyle">bold</item> 
+</style>
+</resources>
