@@ -69,7 +69,7 @@ public class LocalizationUtil {
 
 
     /**
-     * This method extracts the string resource id's entry name to stoer local string values against those keys
+     * This method extracts the string resource id's entry name to store local string values against those keys
      *
      * @param ctx   To get String res entry name from R.string XML
      * @param strId The string resourse id for which the entry name  is needed
