@@ -16,7 +16,7 @@ import okio.Okio;
 class GzipRequestInterceptor implements Interceptor {
     @Override public Response intercept(Chain chain) throws IOException {
       Request originalRequest = chain.request();
-      if (originalRequest.body() == null || originalRequest.header(Constants.CONTENT_ENCODING) != null) {
+      if (originalRequest.body() == null || originalRequest.header(Constants.CONTENT_ENCODING) == null) {
         return chain.proceed(originalRequest);
       }
 
