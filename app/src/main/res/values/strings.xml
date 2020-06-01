@@ -1,9 +1,9 @@
 <resources>
     <string name="app_name">Aarogya Setu</string>
     <string name="your_mobile_number_is_required_to_know_your_identity">Your mobile number is required for contact tracing.</string>
-    <string name="text_value">Say, you met someone a week back at a gathering or were in close proximity of someone unknown at a public place, and in a few days, they test positive for COVID-19.\n\nThe Government of India will trace back all touch points of that person, through the active devices with the app installed that were in close radius of that person, in the past 14 days.
-\n\nA notification will then be sent to all such contacts with an advisory on further course of action, to self-isolate or to get the test done at a nearest testing centre, as needed.
-\n\nBy participating in active contact tracing, you will help us minimise the spread of COVID-19 and enable Government of India to implement proactive measures for your health and well-being.
+    <string name="text_value">Say you met someone a week back at a gathering or were in close proximity of someone unknown at a public place, and in a few days, they test positive for COVID-19.\n\nThe Government of India will trace back all touch points of that person, through the active devices with the app installed that were in close radius of that person, in the past 14 days.
+\n\nA notification will then be sent to all such contacts with an advisory on further course of action, either to self-isolate or to get the test done at a nearest testing centre, as needed.
+\n\nBy participating in active contact tracing, you will help us minimise the spread of COVID-19 and enable the Government of India to implement proactive measures for your health and well-being.
 \n\n</string>
     <string name="permissions_title">Terms of Service &amp; Privacy</string>
     <string name="permissions_detail">We understand the nature and sensitivity of this topic and have taken strong measures to ensure that your data is not compromised.</string>
@@ -90,7 +90,7 @@
     <string name="image_on_board_content_description">Show on-boarding</string>
     <string name="image_close_content_description">@string/close</string>
     <string name="permission_alert_message">To keep you safe and up-to-date, this app needs access to bluetooth and location. You can enable these in your phone settings.</string>
-    <string name="error_network_error">Please check internet connection</string>
+    <string name="error_network_error">Please check your internet connection</string>
     <string name="error_location">Location settings are inadequate, and cannot be fixed here. Fix in Settings.</string>
     <string name="turn_on_bluetooth_all_times">Bluetooth must be on at all times to track your proximity to other devices and give you accurate safety updates.</string>
     <string name="make_sure_your_phone_is_connected_to_the_wifi_or_switch_to_mobile_data">Make sure your phone is connected to the WiFi or switch to mobile data.</string>
@@ -124,11 +124,11 @@
     <string name="moderate_risk">is at moderate risk of infection</string>
     <string name="high_risk">is at high risk of infection</string>
     <string name="tested_positive_status">has tested positive for COVID-19</string>
-    <string name="provide_necessary_permission">Please provide necessary permission to capture your Qr code</string>
+    <string name="provide_necessary_permission">Please provide necessary permission to capture your QR code</string>
     <string name="scan_without_perm_alert">App needs Camera permission for QR code scanning.</string>
     <string name="open_settings">Open Settings</string>
     <string name="common_scanning_error">Some error occurred.Please scan again.</string>
-    <string name="hamburger_menu_intro">A lot of Features like Helpline, Privacy Policy, Terms of Use and more can be found here.</string>
+    <string name="hamburger_menu_intro">A lot of features like Helpline, Privacy Policy, Terms of Use and more can be found here.</string>
     <string name="seconds" translatable="false">sec</string>
     <string name="refresh" translatable="false">Refresh</string>
 </resources>
