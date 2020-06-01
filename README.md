@@ -94,6 +94,9 @@ key_store_password = yourStorePassword
 key_alias = yourAlias
 key_password = yourPassword
 
+# Room database details:
+room_database_name = <database name>
+
 ```
 
 **Firebase and google-services.json**

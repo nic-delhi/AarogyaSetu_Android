@@ -12,6 +12,7 @@ import androidx.sqlite.db.SupportSQLiteDatabase;
 import nic.goi.aarogyasetu.CoronaApplication;
 import nic.goi.aarogyasetu.db.dao.BluetoothDataDao;
 import nic.goi.aarogyasetu.models.BluetoothData;
+import nic.goi.aarogyasetu.BuildConfig;
 
 
 @Database(entities = {BluetoothData.class}, version = 3)
@@ -19,7 +20,7 @@ public abstract class FightCovidDB extends RoomDatabase {
 
     private static FightCovidDB sInstance;
 
-    private static final String DATABASE_NAME = "fight-covid-db";
+    private static final String DATABASE_NAME = BuildConfig.ROOM_DATABASE;
 
     public static FightCovidDB getInstance() {
         Context context = CoronaApplication.getInstance().getApplicationContext();
