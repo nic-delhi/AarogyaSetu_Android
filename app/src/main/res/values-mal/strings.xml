@@ -1,6 +1,6 @@
 <resources>
     <string name="app_name">Aarogya Setu</string>
-    <string name="your_mobile_number_is_required_to_know_your_identity">കോൺടാക്റ്റ് ട്രേസ് ചയ്യാനായി നിങ്ങളുടെ മൊബൈൽ നമ്പർ ആവശ്യമാണ്.</string>
+    <string name="your_mobile_number_is_required_to_know_your_identity">കോൺടാക്റ്റ് ട്രേസ് ചെയ്യാനായി നിങ്ങളുടെ മൊബൈൽ നമ്പർ ആവശ്യമാണ്.</string>
     <string name="text_value">നിങ്ങൾ ഒരാഴ്ച മുമ്പ് ഒരു ഒത്തുചേരലിൽ ഒരാളെ കണ്ടുമുട്ടി അല്ലെങ്കിൽ ഒരു പൊതു സ്ഥലത്ത് അജ്ഞാതനായ ഒരാളുമായി അടുത്തിരുന്നു എന്ന് കരുതുക. കുറച്ച് ദിവസത്തിനുള്ളിൽ അവർക്ക് COVID-19 സ്ഥിരീകരിക്കപ്പെടുന്നു.\n\nഈ അപ്പ്ലിക്കേഷന്റെ സഹായത്തോടെ ഭാരത സർക്കാർ കഴിഞ്ഞ 14 ദിവസത്തിനുള്ളിൽ ആ വ്യക്തിയുടെ നിശ്ചിത ചുറ്റളവിൽ ഉണ്ടായിരുന്ന APP  ഇൻസ്റ്റാൾ ചെയ്തിട്ടുള്ള ആളുകളെ  കണ്ടെത്തുന്നു\n\nഅത്തരം എല്ലാ വ്യക്തികൾക്കും തുടർ നടപടികളായി സ്വയം ക്വാറന്റൈൻ അല്ലെങ്കിൽ ആവശ്യാനുസരണം അടുത്തുള്ള ഒരു ടെസ്റ്റിംഗ് സെന്ററിൽ എങ്ങിനെ പരിശോധന നടത്താം എന്നതിനെ കുറിച്ചുമുള്ള നോട്ടിഫിക്കേഷൻ അയക്കുന്നതായിരിക്കും.\n\nസജീവ കോൺടാക്റ്റ് ട്രെയ്സിംഗിൽ പങ്കെടുക്കുന്നതിലൂടെ, COVID-19 ന്റെ വ്യാപനം കുറയ്ക്കാനും നിങ്ങളുടെ ആരോഗ്യത്തിനും ക്ഷേമത്തിനുമായി സജീവമായ നടപടികൾ നടപ്പിലാക്കാൻ ഭാരത സർക്കാരിനെ പ്രാപ്തമാക്കുകയും ചെയ്യും.\n\n</string>
     <string name="permissions_title">സേവന സ്വകാര്യത നിബന്ധനകൾ</string>
     <string name="permissions_detail">ഈ വിഷയത്തിൻറ്റെ സ്വഭാവവും ഗൗരവവും കണക്കിലെടുത്തുകൊണ്ട്  നിങ്ങളുടെ സ്വകാര്യ വിവരങ്ങളുടെ സുരക്ഷ ഉറപ്പുവരുത്താനുള്ള എല്ലാ നടപടികളും സ്വീകരിച്ചിട്ടുണ്ട്.</string>
@@ -10,7 +10,7 @@
     <string name="country_code">+91 </string>
     <string name="mobile_number">മൊബൈൽ നമ്പർ</string>
     <string name="why_is_it_needed">എന്തുകൊണ്ട് ഇത് ആവശ്യമാണ്?</string>
-    <string name="submit">സബ്മിറ്</string>
+    <string name="submit">സബ്മിറ്റ് </string>
     <string name="resend_otp">OTP വീണ്ടും അയക്കുക</string>
     <string name="resend_otp_in">OTP %s വീണ്ടും ലഭിക്കുവാൻ</string>
     <!-- otp_validation_layout -->
@@ -23,9 +23,9 @@
     <string name="i_understand">ഞാൻ മനസിലാക്കുന്നു</string>
     <string name="device_location"><![CDATA[<b>മൊബൈൽ ലൊക്കേഷൻ</b>]]></string>
     <string name="bluetooth"><![CDATA[<b>ബ്ലൂടൂത്ത്</b>]]></string>
-    <string name="data_sharing_with_the_ministry"><![CDATA[<b>ടാറ്റ ഷെയറിങ്</b>]]></string>
+    <string name="data_sharing_with_the_ministry"><![CDATA[<b>ഡാറ്റ ഷെയറിങ്</b>]]></string>
     <string name="monitors_your_device_s_proximity_within_6_feet_range">ബ്ലൂടൂത്ത് നിങ്ങളുടെ മൊബൈലിൽ നിന്നും മറ്റു മൊബൈലുകളിലേക്കുള്ള ദൂരം അളക്കാൻ സഹായിക്കുന്നു.\nനിങ്ങളുടെ മൊബൈലിന്റെ ബ്ലുടൂത് എപ്പോഴും ഓൺ ചെയ്‌തു വയ്ക്കുവാൻ നിർദ്ദേശിക്കുന്നു</string>
-    <string name="tracks_an_individual_s_touch_points_so_can_easily_find_others_who_came_in_close_contact">നിങ്ങളുടെ ടാറ്റ ഭാരത സർക്കാരുമായി മാത്രം പങ്കുവയ്ക്കുന്നതായിരിക്കും. നിങ്ങളുടെ പേരും നമ്പറും ഒരു സമയത്തും പൊതുജനങ്ങൾക്ക് വെളിപ്പെടുത്താൻ അപ്ലിക്കേഷൻ അനുവദിക്കുന്നില്ല.</string>
+    <string name="tracks_an_individual_s_touch_points_so_can_easily_find_others_who_came_in_close_contact">നിങ്ങളുടെ ഡാറ്റ ഭാരത സർക്കാരുമായി മാത്രം പങ്കുവയ്ക്കുന്നതായിരിക്കും. നിങ്ങളുടെ പേരും നമ്പറും ഒരു സമയത്തും പൊതുജനങ്ങൾക്ക് വെളിപ്പെടുത്താൻ അപ്ലിക്കേഷൻ അനുവദിക്കുന്നില്ല.</string>
     <string name="contribute_to_a_safer_india">ഞാൻ അംഗീകരിക്കുന്നു</string>
     <string name="please_select_a_language_en">Please select your language\nकृपया अपनी भाषा चुनें</string>
     <string name="next">आगे</string>
@@ -38,7 +38,7 @@
 \n१ അപ്ലിക്കേഷൻ ഇൻസ്റ്റാൾ ചെയ്യുക
 \n२. ബ്ലൂടൂത്ത് / ജിപിഎസ് ഓണാക്കുക
 \n३. ലൊക്കേഷൻ ഷെയറിങ് "Always" എന്നായി സെറ്റ് ചെയ്യുക
-\n\nഅപ്ലിക്കേഷൻ ഇൻസ്റ്റാളുചെയ്യാൻ നിങ്ങളുടെ സുഹൃത്തുക്കളെയും കുടുംബാംഗങ്ങളെയും ക്ഷണിക്കുക </string>
+\n\nഅപ്ലിക്കേഷൻ ഇൻസ്റ്റാൾ ചെയ്യാൻ നിങ്ങളുടെ സുഹൃത്തുക്കളെയും കുടുംബാംഗങ്ങളെയും ക്ഷണിക്കുക </string>
     <string name="cowin_20_tracks_through"><![CDATA[ഒരു പക്ഷെ COVID-19 സ്ഥിരീകരിക്കപ്പെട്ടേക്കാവുന്ന ഒരാളുമായുള്ള നിങ്ങളുടെ ഇടപഴകൽ ബ്ലൂടൂത്ത്/ജിപിഎസ് സാങ്കേതിക വിദ്യ ഉപയോഗിച്ച് സൃഷ്ടിച്ച ഒരു സോഷ്യൽ ഗ്രാഫ് മുഖേന <b>ആരോഗ്യ സേതു</b> ട്രാക്ക് ചെയുന്നു.]]></string>
     <string name="the_app_alerts_are_accompanied">App മുഖേനെയുള്ള മുന്നറിയിപ്പിനൊപ്പം നിങ്ങൾക്കു എങ്ങനെ സ്വയം ക്വാറന്റൈൻ ചെയ്യാമെന്നും, എന്തെങ്കിലും രോഗ ലക്ഷണങ്ങളുണ്ടെങ്കിൽ എന്ത് ചെയ്യണമെന്നുമുള്ള നിർദ്ദേശങ്ങളും ഉണ്ടാകുന്നതാണ്.</string>
     <string name="you_will_be_alerted_if">അറിഞ്ഞോ അറിയാതെയോ അടുത്തിടപഴകിയവരിൽ ആർകെങ്കിലും COVID-19 സ്ഥിരീകരിക്കപ്പെട്ടാൽ നിങ്ങള്ക്ക് ഉടൻ തന്നെ മുന്നറിയിപ്പ് ലഭിക്കുന്നതായിരിക്കും.</string>
@@ -52,7 +52,7 @@
     <string name="auth_error_invalid_otp">ddനിങ്ങൾ നൽകിയ OTP തെറ്റാണ്</string>
     <string name="auth_error_user_disabled">You are not allowed to sign in</string>
     <string name="close">ക്ലോസ്  ചെയ്യുക</string>
-    <string name="sync_data_user_consent">കോൺ‌ടാക്റ്റ് ട്രെയ്‌സിംഗിനെ സഹായിക്കുന്നതിന്, ബ്ലൂടൂത്ത്, GPS സേവനങ്ങൾ ഉപയോഗിച്ച് പകർത്തിയ നിങ്ങളുടെ ഇന്‍ററാക്ഷന്‍ ഡാറ്റ ഇന്ത്യൻ ഗവൺമെന്‍റുമായി പങ്കിടും.</string>
+    <string name="sync_data_user_consent">കോൺ‌ടാക്റ്റ് ട്രെയ്‌സിംഗിനെ സഹായിക്കുന്നതിന്, ബ്ലൂടൂത്ത്, GPS സേവനങ്ങൾ ഉപയോഗിച്ച് പകർത്തിയ നിങ്ങളുടെ ഇന്ററാക്ഷൻ ഡാറ്റ ഇന്ത്യൻ ഗവൺമെന്‍റുമായി പങ്കിടും.</string>
     <string name="confirm_and_proceed">സ്ഥിരീകരിച്ച് തുടരുക</string>
     <string name="sync_data_detail">നിങ്ങളുടെ ഡാറ്റ എപ്പോഴും നിങ്ങളുടെ ഫോണിൽ സേവ് ചെയ്തിരിക്കും. സുരക്ഷിതമായ ഗവൺമെന്‍റ് സെർവറുകളിൽ അത് ഷെയർ ചെയ്യുക…</string>
     <string name="sample_collected_for_testing">ടെസ്റ്റിംഗിനായി ശേഖരിച്ച സാമ്പിൾ</string>
@@ -99,16 +99,16 @@
     <string name="scan_other_s_qr_code">മറ്റുള്ളവരുടെ QR കോഡ് സ്കാൻ ചെയ്യുക</string>
     <string name="generate_my_qr_code">എന്റെ QR കോഡ് സൃഷ്ടിക്കുക</string>
     <string name="invalid_qr_code">QR കോഡ് അസാധുവാണ്</string>
-    <string name="not_generated_aarogya_setu">ഇത് ഔദ്യോഗിക ആരോജ്യ സെറ്റു അപ്ലിക്കേഷൻ സൃഷ്ടിച്ചതല്ല.</string>
+    <string name="not_generated_aarogya_setu">ഇത് ഔദ്യോഗിക ആരോഗ്യ സേതു ആപ്ലിക്കേഷൻ സൃഷ്ടിച്ചതല്ല.</string>
     <string name="request_new_code">പുതിയ കോഡ് സൃഷ്ടിക്കാൻ വ്യക്തിയോട് അഭ്യർത്ഥിക്കുക</string>
     <string name="expired_code">കാലഹരണപ്പെട്ട QR കോഡ്</string>
     <string name="low_risk">അണുബാധയുടെ സാധ്യത കുറവാണ്</string>
     <string name="moderate_risk">അണുബാധയുടെ മിതമായ അപകടസാധ്യതയിലാണ്</string>
     <string name="high_risk">അണുബാധയുടെ സാധ്യത വളരെ കൂടുതലാണ്</string>
-    <string name="tested_positive_status">കോവിഡ്-19 ന്നായി പോസിറ്റീവ് പരീക്ഷിച്ചു</string>
+    <string name="tested_positive_status">കോവിഡ്-19 പരിശോധന ഫലം പോസിറ്റീവ് ആണ്</string>
     <string name="provide_necessary_permission">നിങ്ങളുടെ Qr കോഡ് ക്യാപ്‌ചർ ചെയ്യുന്നതിന് ആവശ്യമായ അനുമതി നൽകുക</string>
     <string name="scan_without_perm_alert">QR കോഡ് സ്കാനിംഗിന് അപ്ലിക്കേഷന് ക്യാമറ അനുമതി ആവശ്യമാണ്.</string>
     <string name="open_settings">ക്രമീകരണങ്ങൾ തുറക്കുക</string>
-    <string name="common_scanning_error">ചില അപവാദങ്ങൾ സംഭവിച്ചു. ദയവായി വീണ്ടും സ്കാൻ ചെയ്യുക</string>
-    <string name="hamburger_menu_intro">ഹെൽപ്പ്ലൈൻ, സ്വകാര്യതാ നയം, ഉപയോഗ നിബന്ധനകൾ എന്നിവയും അതിലേറെയും പുതിയ സവിശേഷതകൾ ഇവിടെ കാണാം</string>
+    <string name="common_scanning_error">എന്തോ കുഴപ്പം സംഭവിച്ചു. ദയവായി വീണ്ടും സ്കാൻ ചെയ്യുക</string>
+    <string name="hamburger_menu_intro">ഹെൽപ് ലൈൻ, സ്വകാര്യതാ നയം, ഉപയോഗ നിബന്ധനകൾ എന്നിവയും അതിലേറെയും പുതിയ സവിശേഷതകൾ ഇവിടെ കാണാം</string>
 </resources>
