@@ -7,7 +7,7 @@
     <string name="location_text">आपण आपले स्थान सामायिकरण ‘नेहमी’ वर सेट करावे अशी शिफारस केली जाते. आपण नंतर कधीही हे बदलू शकता.</string>
     <!-- phone_number_layout -->
     <string name="enter_mobile_number">मोबाइल नंबर प्रविष्ट करा</string>
-    <string name="country_code">+91</string>
+    <string name="country_code">+९१</string>
     <string name="mobile_number">मोबाइल नंबर</string>
     <string name="why_is_it_needed">याची गरज का आहे?</string>
     <string name="submit">प्रस्तुत करणे</string>
@@ -25,7 +25,7 @@
     <string name="bluetooth"><![CDATA[<b>ब्लूटूथ</b>]]></string>
     <string name="data_sharing_with_the_ministry"><![CDATA[<b>डेटा सामायिकरण</b>]]></string>
     <string name="monitors_your_device_s_proximity_within_6_feet_range">आपल्या डिव्हाइसच्या दुसर्‍या मोबाइल डिव्हाइसच्या जवळपासचे परीक्षण करते. आपण हे नेहमीच चालू ठेवावे अशी शिफारस केली जाते.</string>
-    <string name="tracks_an_individual_s_touch_points_so_can_easily_find_others_who_came_in_close_contact">आपला डेटा फक्त भारत सरकारबरोबर सामायिक केला जाईल.\nअॅप आपले नाव आणि नंबर कोणत्याही वेळी मोठ्या प्रमाणात जाहीर करण्याची परवानगी देत नाही.</string>
+    <string name="tracks_an_individual_s_touch_points_so_can_easily_find_others_who_came_in_close_contact">आपला डेटा फक्त भारत सरकारबरोबर सामायिक केला जाईल.\n‌ अ‍ॅप आपले नाव आणि नंबर कोणत्याही वेळी मोठ्या प्रमाणात जाहीर करण्याची परवानगी देत नाही.</string>
     <string name="contribute_to_a_safer_india">मी सहमत आहे</string>
     <string name="please_select_a_language_en">Please select your language\nकृपया अपनी भाषा चुनें</string>
     <string name="next">पुढे</string>
@@ -43,7 +43,7 @@
     <string name="the_app_alerts_are_accompanied">ॲप अलर्ट द्वा्रे विलागिकरण विषयी सूचना आणि जर लक्षणें उत्पन्न झाल्यास काय करावे याविषयी मदत आणि माहिती आहे.</string>
     <string name="you_will_be_alerted_if">आपण कोविड -१९ पॉझिटिव्हची चाचणी घेतल्यास आपण नकळत, अगदी नकळत अगदी जवळ आला असल्यास आपल्याला सतर्क केले जाईल.</string>
     <string name="with_cowin_20_you_can"><![CDATA[<b>आरोग्य सेतू</b> च्या मदतीने आपण स्वतःचे, आपल्या कुटुंबाचे आणि मित्रांचे रक्षण करू शकता आणि कोविड -१९ शी लढण्याच्या प्रयत्नात आमच्या देशास मदत करू शकता]]></string>
-    <string name="register_now">अIता नोंदणी करा</string>
+    <string name="register_now">आता नोंदणी करा</string>
     <string name="install">इन्स्टॉल</string>
     <string name="bluetooth_and_gps">स्थान</string>
     <string name="location_sharing">स्थान</string>
@@ -80,7 +80,7 @@
     <string name="image_user_content_description">वापरकर्ता</string>
     <string name="image_menu_content_description">मेनू</string>
     <string name="generator_scanner_qr_code">क्यूआर कोड व्युत्पन्न / स्कॅन करा</string>
-    <string name="verify_installed_app">स्थापित अॅप सत्यापित करा</string>
+    <string name="verify_installed_app">स्थापित अ‍ॅप सत्यापित करा</string>
     <string name="share_data_with_govt">शासनाबरोबर डेटा सामायिक करा.</string>
     <string name="call_helpline">कॉल हेल्पलाइन (१०७५)</string>
     <string name="settings">सेटिंग्ज</string>
