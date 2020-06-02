@@ -13,11 +13,15 @@ import com.crashlytics.android.Crashlytics;
 import com.google.android.gms.location.LocationServices;
 import com.google.firebase.FirebaseApp;
 
+import java.io.IOException;
 import java.util.List;
 import java.util.concurrent.Executors;
 
 import io.fabric.sdk.android.Fabric;
+import nic.goi.aarogyasetu.utility.ConfigUtil;
 import nic.goi.aarogyasetu.utility.CorUtility;
+
+import static nic.goi.aarogyasetu.utility.ConfigUtil.getProperty;
 
 /**
  * @author Chandrapal Yadav
@@ -26,8 +30,8 @@ import nic.goi.aarogyasetu.utility.CorUtility;
 public class CoronaApplication extends Application implements Configuration.Provider {
 
     public static CoronaApplication instance;
-     static Location lastKnownLocation = null;
-    
+    static Location lastKnownLocation = null;
+
     public static CoronaApplication getInstance() {
         return instance;
     }
@@ -37,11 +41,15 @@ public class CoronaApplication extends Application implements Configuration.Prov
         super.onCreate();
         FirebaseApp.initializeApp(this);
         instance = this;
-        WorkManager.initialize(
-                this,
-                new Configuration.Builder()
-                        .setExecutor(Executors.newFixedThreadPool(8))
-                        .build());
+        try {
+            WorkManager.initialize(
+                    this,
+                    new Configuration.Builder()
+                            .setExecutor(Executors.newFixedThreadPool(Integer.parseInt(getProperty("newFixedThreadPoolSize", getApplicationContext()))))
+                            .build());
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
         new Thread(() -> {
             Fabric.with(CoronaApplication.getInstance(), new Crashlytics());
         }).start();
@@ -98,10 +106,12 @@ public class CoronaApplication extends Application implements Configuration.Prov
     @NonNull
     @Override
     public Configuration getWorkManagerConfiguration() {
-        return new Configuration.Builder().setExecutor(Executors.newFixedThreadPool(8)).build();
+        Configuration.Builder builder = new Configuration.Builder();
+        try {
+            builder.setExecutor(Executors.newFixedThreadPool(Integer.parseInt(getProperty("newFixedThreadPoolSize", getApplicationContext()))));
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        return builder.build();
     }
-
-
-
-
 }
