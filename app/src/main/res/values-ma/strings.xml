@@ -16,7 +16,7 @@
     <!-- otp_validation_layout -->
     <string name="enter_otp">ओटीपी प्रविष्ट करा</string>
     <string name="we_have_sent_otp">आम्ही आपल्या मोबाइल क्रमांकावर ओटीपी पाठविला आहे.</string>
-    <string name="we_have_resent_otp">We have resent OTP to your mobile number.</string>
+    <string name="we_have_resent_otp">आम्ही आपल्या मोबाइल क्रमांकावर ओटीपी पुन्हा पाठवला आहे.</string>
     <string name="otp">OTP</string>
     <string name="please_enter_a_valid_otp">कृपया वैध OTP एन्टर करा.</string>
     <!-- why_needed_layout -->
@@ -27,9 +27,9 @@
     <string name="monitors_your_device_s_proximity_within_6_feet_range">आपल्या डिव्हाइसच्या दुसर्‍या मोबाइल डिव्हाइसच्या जवळपासचे परीक्षण करते. आपण हे नेहमीच चालू ठेवावे अशी शिफारस केली जाते.</string>
     <string name="tracks_an_individual_s_touch_points_so_can_easily_find_others_who_came_in_close_contact">आपला डेटा फक्त भारत सरकारबरोबर सामायिक केला जाईल.\nअॅप आपले नाव आणि नंबर कोणत्याही वेळी मोठ्या प्रमाणात जाहीर करण्याची परवानगी देत नाही.</string>
     <string name="contribute_to_a_safer_india">मी सहमत आहे</string>
-    <string name="please_select_a_language_en">Please select your language\nकृपया अपनी भाषा चुनें</string>
+    <string name="please_select_a_language_en">Please select your language\nकृपया आपली भाषा निवडा</string>
     <string name="next">पुढे</string>
-    <string name="please_select_a_language_to_proceed">Please select a language to proceed.</string>
+    <string name="please_select_a_language_to_proceed">कृपया पुढे जाण्यासाठी एक भाषा निवडा.</string>
     <!-- Strings used for fragments for navigation -->
     <string name="please_enter_a_valid_number">कृपया वैध नंबर एन्टर करा</string>
     <string name="would_you_like_to">कोविड -१९ पॉझिटिव्ह चाचणी घेतलेल्या एखाद्या व्यक्तीबरोबर जर आपण रस्ता ओलांडला असेल तर आपल्याला माहिती ठेवण्यास आवडेल काय?</string>
@@ -48,8 +48,8 @@
     <string name="bluetooth_and_gps">स्थान</string>
     <string name="location_sharing">स्थान</string>
     <string name="permission_info_tnc_text"><![CDATA[<p>आपण सुरक्षित भारताला हातभार लावू इच्छित असल्यास कृपया खाली दिलेल्या बटणावर क्लिक करुन आपण  <a href="https://static.swaraksha.gov.in/tnc/">सेवा</a> अटी आणि <a href="https://web.swaraksha.gov.in/ncv19/privacy/"> गोपनीयता धोरण</a>स्वीकारण्यास सूचित करा:</p>]]></string>
-    <string name="auth_error_unknown">There is some error login you in</string>
-    <string name="auth_error_invalid_otp">The OTP you have entered is incorrect</string>
+    <string name="auth_error_unknown">आपल्याला लॉग इन करताना काही त्रुटी आली आहे</string>
+    <string name="auth_error_invalid_otp">आपण प्रविष्ट केलेला ओटीपी चुकीचा आहे</string>
     <string name="auth_error_user_disabled">आपल्याला साइन इन करण्याची परवानगी नाही</string>
     <string name="close">बंद</string>
     <string name="sync_data_user_consent">संपर्कातील व्यक्तींच्या शोधाकरिता, ब्लूटूथ आणि GPS सेवेसह कॅप्चर केलेला तुमचा संवाद डाटा भारत सरकारसोबत शेअर केला जाईल</string>
