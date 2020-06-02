@@ -44,11 +44,11 @@
     <string name="you_will_be_alerted_if">જો તમે અજાણતા જ કોઈ વ્યક્તિ જે કોવિડ-૧૯ પૉઝિટિવ છે અને તમે તેની પ્રોક્સિમિટીમાં આવ્યા હશો, તો તમને ઍલર્ટ કરવામાં આવશે.</string>
     <string name="with_cowin_20_you_can"><![CDATA[<b>આરોગ્ય સેતુ</b> સાથે, તમે પોતાને, તમારા પરિવાર અને મિત્રોને સુરક્ષિત રાખી શકો છો અને આપણા દેશને કોવિડ-૧૯ સાથે લડવાના પ્રયત્નમાં મદદ કરી શકો છો]]></string>
     <string name="register_now">રજિસ્ટર કરો</string>
-    <string name="install">Install</string>
+    <string name="install">ઇન્સ્ટોલ</string>
     <string name="bluetooth_and_gps">બ્લૂટૂથ અને સ્થાન</string>
-    <string name="location_sharing">location sharing</string>
+    <string name="location_sharing">સ્થાન શેર</string>
     <string name="permission_info_tnc_text"><![CDATA[<p>જો તમે સલામત ભારતમાં ફાળો આપવા માંગો છો તો કૃપા કરીને નીચેના બટન પર ક્લિક કરીને <a href="https://static.swaraksha.gov.in/tnc/">સેવાની શરતો</a> અને <a href="https://web.swaraksha.gov.in/ncv19/privacy/">ગોપનીયતા નીતિ</a> ની શરતોની સ્વીકૃતિ જણાવો:</p>]]></string>
-    <string name="auth_error_unknown">There is some error login you in</string>
+    <string name="auth_error_unknown">તમને લૉગિન કરવામાં કેટલીક ભૂલ આવી છે</string>
     <string name="auth_error_invalid_otp">તમે ટાઈપ OTP કરેલો ખોટો છે</string>
     <string name="auth_error_user_disabled">તમને સાઇન ઇન કરવાની પરવાનગી નથી</string>
     <string name="close">બંધ કરો</string>
@@ -70,11 +70,11 @@
     <string name="image_share_content_description">એપ્લિકેશન શેર કરો</string>
     <string name="image_back_content_description">પાછા જાઓ</string>
     <string name="image_on_board_content_description">ઓન-બોર્ડિંગ બતાવો</string>
-    <string name="image_close_content_description">@string/close</string>
+    <string name="image_close_content_description">બંધ</string>
     <string name="permission_alert_message">તમારે તમારી સેટિંગ્સના યોગદાન માટે જરૂરી સ્થાન / બ્લૂટૂથ પરવાનગી આપવી પડશે, એપ્લિકેશન પર પાછા આવો અને ફરીથી ક્લિક કરો.</string>
     <string name="error_network_error">કૃપા કરીને ઇન્ટરનેટ કનેક્શન તપાસો</string>
     <string name="error_location">સ્થાન સેટિંગ્સ અપૂરતી છે, અને અહીં નિશ્ચિત કરી શકાતી નથી. સેટિંગ્સમાં ઠીક કરો.</string>
-    <string name="turn_on_bluetooth_all_times">અન્ય ઉપકરણો સાથેની તમારી નિકટતાને ટ્ર trackક કરવા અને તમને સચોટ સલામતી અપડેટ્સ આપવા માટે બ્લૂટૂથ હંમેશાં ચાલુ હોવું આવશ્યક છે.</string>
+    <string name="turn_on_bluetooth_all_times">અન્ય ઉપકરણો સાથેની તમારી નિકટતાને ટ્રેક કરવા અને તમને સચોટ સલામતી અપડેટ્સ આપવા માટે બ્લૂટૂથ હંમેશાં ચાલુ હોવું આવશ્યક છે.</string>
     <string name="make_sure_your_phone_is_connected_to_the_wifi_or_switch_to_mobile_data">ખાતરી કરો કે તમારો ફોન વાઇફાઇ સાથે જોડાયેલ છે અથવા મોબાઇલ ડેટા પર સ્વિચ કરો.</string>
     <string name="login_failed">પ્રવેશ નિષ્ફળ. મેહરબાની કરી ને ફરી થી પ્રયાસ કરો</string>
     <string name="image_user_content_description">વપરાશકર્તા</string>
