@@ -9,6 +9,7 @@ import org.junit.runner.RunWith
 @RunWith(AndroidJUnit4::class)
 class AuthUtilityTest {
     private val token = "token#123"
+    private val userName = "testUser"
 
     @Test
     fun testGetToken() {
@@ -26,9 +27,9 @@ class AuthUtilityTest {
 
     @Test
     fun testGetUserName() {
-        AuthUtility.setUserName(token)
+        AuthUtility.setUserName(userName)
 
-        Assert.assertThat(AuthUtility.getUserName(), Matchers.equalTo(token))
+        Assert.assertThat(AuthUtility.getUserName(), Matchers.equalTo(CorUtility.toTitleCase(userName)))
     }
 
     @Test
@@ -51,8 +52,8 @@ class AuthUtilityTest {
 
     @Test
     fun testRemoveUserName() {
-        AuthUtility.setUserName(token)
-        Assert.assertThat(AuthUtility.getUserName(), Matchers.equalTo(token))
+        AuthUtility.setUserName(userName)
+        Assert.assertThat(AuthUtility.getUserName(), Matchers.equalTo(CorUtility.toTitleCase(userName)))
         AuthUtility.removeUserName()
 
         Assert.assertThat(AuthUtility.getUserName(), Matchers.equalTo(""))
@@ -62,10 +63,10 @@ class AuthUtilityTest {
     fun testClearUserDetails() {
         AuthUtility.setToken(token)
         AuthUtility.setRefreshToken(token)
-        AuthUtility.setUserName(token)
+        AuthUtility.setUserName(userName)
         Assert.assertThat(AuthUtility.getToken(), Matchers.equalTo(token))
         Assert.assertThat(AuthUtility.getRefreshToken(), Matchers.equalTo(token))
-        Assert.assertThat(AuthUtility.getUserName(), Matchers.equalTo(token))
+        Assert.assertThat(AuthUtility.getUserName(), Matchers.equalTo(CorUtility.toTitleCase(userName)))
         AuthUtility.clearUserDetails()
 
         Assert.assertThat(AuthUtility.getToken(), Matchers.equalTo(""))
