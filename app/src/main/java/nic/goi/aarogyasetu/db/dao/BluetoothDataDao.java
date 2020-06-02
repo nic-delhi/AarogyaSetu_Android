@@ -6,8 +6,6 @@ import androidx.room.Delete;
 import androidx.room.Insert;
 import androidx.room.Query;
 
-import nic.goi.aarogyasetu.models.BluetoothData;
-
 import java.util.List;
 
 import nic.goi.aarogyasetu.models.BluetoothData;

@@ -45,7 +45,6 @@ object AuthUtility {
         val client = nic.goi.aarogyasetu.network.NetworkClient.getRetrofitClient(
             true,
             true,
-            true,
             AUTH_BASE_URL,
             false
         )
@@ -87,7 +86,6 @@ object AuthUtility {
         val client = nic.goi.aarogyasetu.network.NetworkClient.getRetrofitClient(
             false,
             true,
-            true,
             AUTH_BASE_URL,
             false
         )
@@ -127,7 +125,6 @@ object AuthUtility {
     fun verifyOtp(mobile: String, otp: String, listener: UserVerifyListener?) {
         val client = nic.goi.aarogyasetu.network.NetworkClient.getRetrofitClient(
             false,
-            true,
             true,
             AUTH_BASE_URL,
             false
