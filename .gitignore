@@ -26,6 +26,9 @@ app/google-services.json
 app/src/debug/google-services.json
 debug.keystore
 
+# Ignore vs code user files
+.settings
+.project
 
 
 

@@ -36,9 +36,7 @@ public class CustomCaptureManager extends CaptureManager {
     protected void returnResult(BarcodeResult rawResult) {
         Intent intent = resultIntent(rawResult, getBarcodeImagePath(rawResult));
         String contents = intent.getStringExtra(Intents.Scan.RESULT);
-        if (contents == null) {
-            //do nothing
-        } else {
+        if (contents != null) {
             captureViewListener.onResultFetched(rawResult.getText());
         }
 
