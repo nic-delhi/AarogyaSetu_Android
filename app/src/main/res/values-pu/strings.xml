@@ -11,14 +11,14 @@
     <string name="mobile_number">ਮੋਬਾਈਲ ਨੰਬਰ</string>
     <string name="why_is_it_needed">ਇਸਦੀ ਲੋੜ ਕਿਉਂ ਹੈ?</string>
     <string name="submit">ਜਮ੍ਹਾਂ ਕਰੋ</string>
-    <string name="resend_otp">ਦੁਬਾਰਾ OTP</string>
-    <string name="resend_otp_in">%s ਦੁਬਾਰਾ OTP</string>
+    <string name="resend_otp">ਮੁੜ ਓਟੀਪੀ ਭੇਜੋ</string>
+    <string name="resend_otp_in">%s ਮੁੜ ਓਟੀਪੀ</string>
     <!-- otp_validation_layout -->
-    <string name="enter_otp">OTP ਦਰਜ ਕਰੋ</string>
+    <string name="enter_otp">ਓਟੀਪੀ ਦਰਜ ਕਰੋ</string>
     <string name="we_have_sent_otp">ਅਸੀਂ ਤੁਹਾਡੇ ਮੋਬਾਈਲ ਨੰਬਰ ਤੇ ਓਟੀਪੀ ਭੇਜਿਆ ਹੈ</string>
     <string name="we_have_resent_otp">ਅਸੀਂ ਤੁਹਾਡੇ ਮੋਬਾਈਲ ਨੰਬਰ ਤੇ ਓਟੀਪੀ ਭੇਜਿਆ ਹੈ</string>
     <string name="otp">OTP</string>
-    <string name="please_enter_a_valid_otp">ਕਿਰਪਾ ਕਰਕੇ ਇੱਕ ਵੈਧ OTP ਦਾਖਲ ਕਰੋ</string>
+    <string name="please_enter_a_valid_otp">ਕਿਰਪਾ ਕਰਕੇ ਇੱਕ ਵੈਧ ਓਟੀਪੀ ਦਾਖਲ ਕਰੋ</string>
     <!-- why_needed_layout -->
     <string name="i_understand">ਮੈਂ ਸੱਮਝਦਾ ਹਾਂ.</string>
     <string name="device_location"><![CDATA[<b>ਜੰਤਰ ਟਿਕਾਣਾ</b>]]></string>
