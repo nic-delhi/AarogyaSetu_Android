@@ -52,6 +52,7 @@
     <string name="auth_error_invalid_otp">ನೀವು ನಮೂದಿಸಿದ ಒಟಿಪಿ ತಪ್ಪಾಗಿದೆ</string>
     <string name="auth_error_user_disabled">You are not allowed to sign in</string>
     <string name="close">ಮುಚ್ಚಿ</string>
+    <string name="later">ನಂತರ</string>
     <string name="sync_data_user_consent">ಕಾಂಟಾಕ್ಟ್ ಟ್ರೇಸಿಂಗಿಗೆ ಸಹಾಯ ಮಾಡಲು, ಬ್ಲೂಟೂತ್ ಮತ್ತು GPS ಸೇವೆಗಳ ಮೂಲಕ ಕ್ಯಾಪ್ಚರ್ ಮಾಡಲಾದ ನಿಮ್ಮ ಒಡನಾಟಗಳ ಡೇಟಾವನ್ನು ಭಾರತ ಸರ್ಕಾರದೊಂದಿಗೆ ಹಂಚಿಕೊಳ್ಳಲಾಗುತ್ತದೆ.</string>
     <string name="confirm_and_proceed">ಖಚಿತಪಡಿಸಿ ಮತ್ತು ಮುಂದುವರೆಯಿರಿ</string>
     <string name="sync_data_detail">ನಿಮ್ಮ ಡೇಟಾವನ್ನು ಯಾವಾಗಲೂ ನಿಮ್ಮ ಫೋನಿನಲ್ಲಿ ಸೇವ್ ಮಾಡಲಾಗುತ್ತದೆ. ಇದನ್ನು ಸುರಕ್ಷಿತ  ಸರಕಾರಿ ಸರ್ವರ್‌ಗಳಲ್ಲಿ ಹಂಚಿಕೊಳ್ಳಿ, ಒಂದುವೇಳೆ…</string>

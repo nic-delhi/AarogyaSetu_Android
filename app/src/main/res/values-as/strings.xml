@@ -48,6 +48,7 @@
     <string name="auth_error_invalid_otp">আপুনি দিয়া OTP টো ভুল</string>
     <string name="auth_error_user_disabled">You are not allowed to sign in</string>
     <string name="close">বন্ধ কৰক/বন্ধ</string>
+    <string name="later">পিছত</string>
     <string name="sync_data_user_consent">সম্পৰ্কলৈ অহা লোকসকলক ট্ৰেচ কৰিবৰ বাবে, আপোনাৰ ব্লূটুথ আৰু GPS সেৱাৰে লোৱা সহভাগিতাৰ ডাটা ভাৰত চৰকাৰৰ লগত শ্বেয়াৰ কৰা হ\'ব</string>
     <string name="confirm_and_proceed">নিশ্চিত কৰক আৰু আগবাঢ়ক</string>
     <string name="sync_data_detail">আপোনাৰ ডাটা সদায় আপোনাৰ ফোনত চেভ হৈ থাকে। সুৰক্ষিত চৰকাৰী চাৰ্ভাৰত শ্বেয়াৰ কৰক যদিহে…</string>

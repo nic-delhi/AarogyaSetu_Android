@@ -52,6 +52,7 @@
     <string name="auth_error_invalid_otp">The OTP you have entered is incorrect</string>
     <string name="auth_error_user_disabled">आपल्याला साइन इन करण्याची परवानगी नाही</string>
     <string name="close">बंद</string>
+    <string name="later">नंतर</string>
     <string name="sync_data_user_consent">संपर्कातील व्यक्तींच्या शोधाकरिता, ब्लूटूथ आणि GPS सेवेसह कॅप्चर केलेला तुमचा संवाद डाटा भारत सरकारसोबत शेअर केला जाईल</string>
     <string name="confirm_and_proceed">कन्फर्म करा आणि पुढे सुरू ठेवा</string>
     <string name="sync_data_detail">तुमचा डाटा नेहमी तुमच्या फोनमध्ये सेव्ह केलेला असतो. सरकारच्या सुरक्षित सर्वरवर डाटा शेअर करा जर:</string>

@@ -52,6 +52,7 @@
     <string name="auth_error_invalid_otp">ddനിങ്ങൾ നൽകിയ OTP തെറ്റാണ്</string>
     <string name="auth_error_user_disabled">You are not allowed to sign in</string>
     <string name="close">ക്ലോസ്  ചെയ്യുക</string>
+    <string name="later">പിന്നീട്</string>
     <string name="sync_data_user_consent">കോൺ‌ടാക്റ്റ് ട്രെയ്‌സിംഗിനെ സഹായിക്കുന്നതിന്, ബ്ലൂടൂത്ത്, GPS സേവനങ്ങൾ ഉപയോഗിച്ച് പകർത്തിയ നിങ്ങളുടെ ഇന്‍ററാക്ഷന്‍ ഡാറ്റ ഇന്ത്യൻ ഗവൺമെന്‍റുമായി പങ്കിടും.</string>
     <string name="confirm_and_proceed">സ്ഥിരീകരിച്ച് തുടരുക</string>
     <string name="sync_data_detail">നിങ്ങളുടെ ഡാറ്റ എപ്പോഴും നിങ്ങളുടെ ഫോണിൽ സേവ് ചെയ്തിരിക്കും. സുരക്ഷിതമായ ഗവൺമെന്‍റ് സെർവറുകളിൽ അത് ഷെയർ ചെയ്യുക…</string>

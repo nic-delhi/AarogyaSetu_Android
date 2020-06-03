@@ -52,6 +52,7 @@
     <string name="auth_error_invalid_otp">The OTP you have entered is incorrect</string>
     <string name="auth_error_user_disabled">You are not allowed to sign in</string>
     <string name="close">క్లోజ్ చేయండి</string>
+    <string name="later">తరువాత</string>
     <string name="sync_data_user_consent">కాంటాక్ట్ ట్రేసింగ్‌లో సహాయపడటానికి, బ్లూటూత్ మరియు GPS సర్వీసుల ద్వారా సేకరించబడిన మీ ఇంటర్‌యాక్షన్ డేటా భారతదేశ ప్రభుత్వంతో షేర్ చేయబడుతుంది.</string>
     <string name="confirm_and_proceed">నిర్ధారించండి మరియు కొనసాగండి</string>
     <string name="sync_data_detail">మీ డేటా ఎల్లప్పుడూ మీ ఫోన్‌లో సేవ్ చేయబడి ఉంటుంది. దీనిని సురక్షిత ప్రభుత్వ సర్వర్లకి షేర్ చేయండి, ఒక వేళ…</string>

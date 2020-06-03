@@ -52,6 +52,7 @@
     <string name="auth_error_invalid_otp">நீங்கள் உள்ளிட்ட OTP தவறானது நீங்கள் உள்ளிட்ட OTP தவறானது</string>
     <string name="auth_error_user_disabled">You are not allowed to sign in</string>
     <string name="close">மூடவும்</string>
+    <string name="later">பின்னர்</string>
     <string name="sync_data_user_consent">தொடர்பு கொள்ள உதவுவதற்கு, ப்ளூடூத் மற்றும் GPS சேவைகள் மூலம் கைப்பற்றப்பட்ட உங்கள் தொடர்பு தரவு இந்திய அரசாங்கத்துடன் பகிரப்படும்.</string>
     <string name="confirm_and_proceed">உறுதிசெய்யவும் மற்றும் தொடரவும்</string>
     <string name="sync_data_detail">உங்கள் தரவு எப்போதும் உங்கள் போனில் சேமிக்கப்படுகிறது. பாதுகாப்பான அரசாங்க சர்வர்களில் அதை பகிரவும்…</string>

@@ -53,6 +53,7 @@
     <string name="auth_error_invalid_otp">आपके द्वारा दर्ज किया गया OTP गलत है</string>
     <string name="auth_error_user_disabled">आपको साइन इन करने की अनुमति नहीं है</string>
     <string name="close">बंद करें</string>
+    <string name="later">बाद में</string>
     <string name="sync_data_user_consent">कॉन्टैक्ट ट्रेसिंग में मदद करने के लिए, ब्लूटूथ और GPS के माध्यम से कैप्चर किए गए आपके संवाद डेटा को भारत सरकार के साथ शेयर किया जाएगा.</string>
     <string name="confirm_and_proceed">कन्फर्म करें और आगे बढ़ें</string>
     <string name="sync_data_detail">आपका डेटा हमेशा आपके फोन पर सेव होता है. इसे सुरक्षित सरकारी सर्वर पर शेयर करें अगर…</string>
