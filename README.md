@@ -21,7 +21,7 @@ Aarogya Setu mobile application provides the following features:
 - List of ICMR approved labs with COVID-19 testing facilities
 - e-Pass integration
 
-The Aarogya Setu App is being widely used by more than 11 Crore Users. The App has been highly successful in identifying people with high risk of COVID-19 infection and has also played a major role in identifying potential COVID-19 hotspots. In the larger public interest and in order to help the international community in their COVID-19 efforts, the Government of India is opening the source code of this App under Apache License 2.0.
+The Aarogya Setu App is being widely used by more than 11.53 Crore Users. The App has been highly successful in identifying people with high risk of COVID-19 infection and has also played a major role in identifying potential COVID-19 hotspots. In the larger public interest and in order to help the international community in their COVID-19 efforts, the Government of India is opening the source code of this App under Apache License 2.0.
 
 If you find any security issues or vulnerabilities in the code, then you can send the details to us at : as-bugbounty@nic.in
 
