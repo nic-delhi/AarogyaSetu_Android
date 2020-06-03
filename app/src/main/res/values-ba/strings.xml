@@ -52,6 +52,7 @@
     <string name="auth_error_invalid_otp">நீங்கள் உள்ளிட்ட OTP தவறானது நீங்கள் உள்ளிட்ட OTP தவறானது</string>
     <string name="auth_error_user_disabled">You are not allowed to sign in</string>
     <string name="close">ক্লোসে</string>
+    <string name="later">পরে</string>
     <string name="sync_data_user_consent">কন্ট্যাক্ট ট্রেসিং-এ সাহায্য করার জন্য, ব্লুটুথ এবং GPS সার্ভিসের মাধ্যমে ক্যাপচার করা আপনার কথোপকথনের তথ্য ভারত সরকারের সাথে শেয়ার করা হবে.</string>
     <string name="confirm_and_proceed">নিশ্চিত করুন এবং এগিয়ে যান</string>
     <string name="sync_data_detail">আপনার তথ্য সবসময় আপনার ফোনে সেভ হয়. এটিকে নিরাপদ সরকারী সার্ভারে শেয়ার করুন যদি…</string>

@@ -52,6 +52,7 @@
     <string name="auth_error_invalid_otp">તમે ટાઈપ OTP કરેલો ખોટો છે</string>
     <string name="auth_error_user_disabled">તમને સાઇન ઇન કરવાની પરવાનગી નથી</string>
     <string name="close">બંધ કરો</string>
+    <string name="later">પછીથી</string>
     <string name="sync_data_user_consent">સંપર્ક ટ્રેસિંગમાં મદદ કરવા માટે, બ્લૂટૂથ અને જીપીએસ સેવાઓ સાથે કૅપ્ચર કરેલો તમારો સંવાદ ડેટા ભારત સરકાર સાથે શેર કરવામાં આવશે.</string>
     <string name="confirm_and_proceed">કન્ફર્મ કરો અને આગળ વધો</string>
     <string name="sync_data_detail">તમારો ડેટા હંમેશા તમારા ફોન પર સેવ કરવામાં આવે છે. તેને સુરક્ષિત સરકારી સર્વર પર શેર કરો જો…</string>

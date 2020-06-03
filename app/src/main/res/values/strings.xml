@@ -58,10 +58,12 @@
     <string name="location_sharing">location sharing</string>
     <string name="permission_info_tnc_text"><![CDATA[<p>If you would like to contribute to a safer India please indicate your acceptance of the <a href="https://static.swaraksha.gov.in/tnc/">Terms of Service</a> and the <a href="https://web.swaraksha.gov.in/ncv19/privacy/">Privacy Policy</a> by clicking on the button below:</p>]]></string>
 
+
     <string name="auth_error_unknown">There is some error logging you in</string>
     <string name="auth_error_invalid_otp">The OTP you have entered is incorrect</string>
     <string name="auth_error_user_disabled">You are not allowed to sign in</string>
     <string name="close">Close</string>
+    <string name="later">Later</string>
     <string name="internet_connection_lost" translatable="false">Internet Connection Lost</string>
     <string name="try_again" translatable="false">Try Again</string>
     <string name="turn_on_bluetooth" translatable="false">Turn on Bluetooth</string>

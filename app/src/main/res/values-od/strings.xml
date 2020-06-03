@@ -52,6 +52,7 @@
     <string name="auth_error_invalid_otp">The OTP you have entered is incorrect</string>
     <string name="auth_error_user_disabled">You are not allowed to sign in</string>
     <string name="close">ବନ୍ଦ</string>
+    <string name="later">ପରେ</string>
     <string name="sync_data_user_consent">ଯୋଗାଯୋଗ ବିଷୟରେ ଅନୁସନ୍ଧାନ ଜାଣିବାରେ ସାହାଯ୍ୟ କରିବାକୁ, ବ୍ଲୁଟୁଥ୍ ଏବଂ ଜିପିଏସ୍ ସେବା ମାଧ୍ୟମରେ କ୍ୟାପ୍ଚର କରାଯାଇଥିବା ଆପଣଙ୍କର ପାରସ୍ପରିକ ତଥ୍ୟ ଭାରତ ସରକାରଙ୍କ ସହ ସେୟାର୍ କରାଯିବ |</string>
     <string name="confirm_and_proceed">ନିଶ୍ଚିତ କରନ୍ତୁ ଏବଂ ଆଗକୁ ବଢନ୍ତୁ</string>
     <string name="sync_data_detail">ଆପଣଙ୍କ ତଥ୍ୟ ସବୁବେଳେ ଆପଣଙ୍କ ଫୋନରେ ସେଭ୍ ହୋଇଥାଏ | ସୁରକ୍ଷିତ ସରକାରୀ ସର୍ଭରରେ ଏହାକୁ ସେୟାର୍ କରନ୍ତୁ ଯଦି…</string>
