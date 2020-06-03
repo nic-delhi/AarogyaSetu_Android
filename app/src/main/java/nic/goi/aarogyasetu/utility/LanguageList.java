@@ -22,7 +22,7 @@ public class LanguageList {
         list.add(new LanguageDTO("od", "ଓଡ଼ିଆ"));
         list.add(new LanguageDTO("ta", "தமிழ்"));
         list.add(new LanguageDTO("ma", "मराठी"));
-        list.add(new LanguageDTO("mal", "മലയാളം"));
+        list.add(new LanguageDTO("ml", "മലയാളം"));
         list.add(new LanguageDTO("ba", "বাংলা"));
         list.add(new LanguageDTO("pu", "ਪੰਜਾਬੀ"));
         list.add(new LanguageDTO("as", "অসমীয়া"));
