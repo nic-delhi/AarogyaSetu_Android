@@ -6,6 +6,7 @@ import android.net.Uri
 import android.os.Bundle
 import android.os.Handler
 import android.text.TextUtils
+import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.Lifecycle
@@ -14,6 +15,7 @@ import com.google.android.gms.security.ProviderInstaller
 import io.fabric.sdk.android.services.common.CommonUtils
 import nic.goi.aarogyasetu.BuildConfig
 import nic.goi.aarogyasetu.CoronaApplication
+import nic.goi.aarogyasetu.R
 import nic.goi.aarogyasetu.analytics.EventNames
 import nic.goi.aarogyasetu.analytics.ScreenNames
 import nic.goi.aarogyasetu.background.BluetoothScanningService
@@ -269,6 +271,14 @@ class SplashActivity : AppCompatActivity(), SelectLanguageFragment.LanguageChang
     }
 
     override fun onProviderInstalled() {
+        if (!BuildConfig.DEBUG && CorUtility.checkIfEmulator()) {
+            Toast.makeText(
+                applicationContext,
+                getString(R.string.emulator_detected),
+                Toast.LENGTH_LONG
+            ).show()
+            finish()
+        }
         if (lifecycle.currentState.isAtLeast(Lifecycle.State.STARTED)) {
             startSplashLogic()
         } else {
