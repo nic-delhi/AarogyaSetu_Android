@@ -72,7 +72,7 @@
     <string name="image_back_content_description">पीछे जाएं</string>
     <string name="image_on_board_content_description">ऑन-बोर्डिंग दिखाएं</string>
     <string name="image_close_content_description">@string/close</string>
-    <string name="permission_alert_message">आपको अपनी सेटिंग्स ( समायोजन) से योगदान के लिए आवश्यक स्थान / ब्लूटूथ अनुमति प्रदान करनी होगी, ऐप पर वापस आना होगा और फिर से क्लिक करना होगा।</string>
+    <string name="permission_alert_message">आपको अपनी सेटिंग्स (समायोजन) से योगदान के लिए आवश्यक स्थान / ब्लूटूथ अनुमति प्रदान करनी होगी, ऐप पर वापस आना होगा और फिर से क्लिक करना होगा।</string>
     <string name="error_network_error">कृपया इंटरनेट कनेक्शन की जाँच करें</string>
     <string name="error_location">स्थान सेटिंग्स अपर्याप्त हैं, और यहां तय नहीं किया जा सकता है। सेटिंग्स में ठीक करें।</string>
     <string name="turn_on_bluetooth_all_times">अन्य उपकरणों से आपकी निकटता को ट्रैक ( धावन पथ) करने और आपको सटीक सुरक्षा अपडेट देने के लिए ब्लूटूथ हर समय ऑन होना चाहिए।</string>
