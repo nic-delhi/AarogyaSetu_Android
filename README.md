@@ -44,7 +44,7 @@ If you want to convey any other feedback regarding the App or Code, then you can
 
 **keystore.properties**
 
-Setup a keystore.properties at the root folder with following sample detail and your configurations
+Setup a keystore.properties at the root folder with following sample detail and your configurations:
 ```
 # Server SSL Keys
 ssl_public_key=<Your Public Key>
