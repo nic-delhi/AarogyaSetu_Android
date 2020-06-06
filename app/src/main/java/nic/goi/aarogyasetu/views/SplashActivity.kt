@@ -2,6 +2,7 @@ package nic.goi.aarogyasetu.views
 
 import android.bluetooth.BluetoothAdapter
 import android.content.Intent
+import android.net.Uri
 import android.os.Bundle
 import android.os.Handler
 import android.text.TextUtils
@@ -57,10 +58,6 @@ class SplashActivity : AppCompatActivity(), SelectLanguageFragment.LanguageChang
         if (isNetworkAvailable(this@SplashActivity)) {
             setBluetoothName()
             CorUtility.checkAppMeta()
-            if (handleRedirection()) {
-                finish()
-                return
-            }
             proceedToNextSteps()
         } else {
             showNoInternet()
@@ -97,17 +94,47 @@ class SplashActivity : AppCompatActivity(), SelectLanguageFragment.LanguageChang
         if (intent.extras != null && intent.extras?.containsKey(Constants.PUSH)!!) {
             if (intent.extras!!.getString(Constants.PUSH).equals("1")) {
                 var uploadType = intent.extras!!.getString(Constants.UPLOAD_TYPE);
-                if(TextUtils.isEmpty(uploadType))
+                if(uploadType.isNullOrBlank())
                 {
                     uploadType = Constants.UPLOAD_TYPES.PUSH_CONSENT;
                 }
                 webIntent.putExtra(Constants.PUSH,true)
                 webIntent.putExtra(Constants.UPLOAD_TYPE,uploadType)
+
             }
         }
+        resolveDeeplinkNotification(webIntent);
         startActivity(webIntent)
         finish()
     }
+
+    private fun resolveDeeplinkNotification(intent: Intent) {
+        if (getIntent() != null && getIntent().data != null && !TextUtils.isEmpty(getIntent().data!!.scheme)) // Deeplink
+        {
+            val data = getIntent().data
+            if (!TextUtils.isEmpty(data!!.query) && data.query!!.contains(Constants.DEEPLINK_TAG)) {
+                val paramString =
+                    data.getQueryParameter(Constants.DEEPLINK_TAG)
+                if (!paramString.isNullOrBlank()) {
+                    try {
+                        val tagId = Integer.valueOf(paramString!!)
+                        intent.putExtra(Constants.DEEPLINK_TAG, tagId)
+                    } catch (e: Exception) {}
+                }
+            }
+        } else if (getIntent().hasExtra(Constants.DEEPLINK_TAG)||getIntent().hasExtra(Constants.TARGET)) // Notification
+        {
+            try {
+               val target = getIntent().getStringExtra(Constants.TARGET)
+                if(!target.isNullOrBlank())
+                intent.putExtra(Constants.URL,target)
+                val tagId =
+                    getIntent().getStringExtra(Constants.DEEPLINK_TAG)
+                intent.putExtra(Constants.DEEPLINK_TAG, Integer.valueOf(tagId))
+            } catch (e: Exception) {}
+        }
+    }
+
 
     /**
      * This method is used to set unique id in the bluetooth.

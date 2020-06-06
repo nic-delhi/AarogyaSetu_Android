@@ -246,8 +246,7 @@ public class BluetoothScanningService extends Service implements AdaptiveScanHel
     public int onStartCommand(Intent intent, int flags, int startId) {
         super.onStartCommand(intent, flags, startId);
         serviceRunning = true;
-        Notification notification = getNotification(Constants.NOTIFICATION_DESC);
-        startForeground(NOTIF_ID, notification);
+        configureNotification();
         mAdaptiveScanHelper = new AdaptiveScanHelper(this);
         mGattServer.onCreate(BluetoothScanningService.this);
         mGattServer.addGattService();
@@ -257,6 +256,18 @@ public class BluetoothScanningService extends Service implements AdaptiveScanHel
         registerLocationStateListener();
         Logger.d(TAG, "onStartCommand service started");
         return START_STICKY;
+    }
+
+    private void configureNotification() {
+        Notification notification;
+        if (!CorUtility.isLocationOn(CoronaApplication.instance.getContext())) {
+            notification = getNotification(Constants.PLEASE_ALLOW_LOCATION);
+        } else if (!CorUtility.isBluetoothAvailable()) {
+            notification = getNotification(Constants.PLEASE_ALLOW_BLUETOOTH);
+        } else {
+            notification = getNotification(Constants.NOTIFICATION_DESC);
+        }
+        startForeground(NOTIF_ID, notification);
     }
 
     private Notification getNotification(String notificationDescText) {
@@ -414,15 +425,20 @@ public class BluetoothScanningService extends Service implements AdaptiveScanHel
 
     @Override
     public void onModeChange(int scanMode, int advertisementMode) {
-        if (isBluetoothAvailable()) {
-            if (mBluetoothLeScanner != null) {
-                mBluetoothLeScanner.stopScan(mScanCallback);
+        try {
+            if (isBluetoothAvailable()) {
+                if (mBluetoothLeScanner != null) {
+                    mBluetoothLeScanner.stopScan(mScanCallback);
+                }
+                mGattServer.stopAdvertising();
+                discover(scanMode);
+                mGattServer.advertise(advertisementMode);
+            } else {
+                Logger.d(TAG, "onModeChange failed due to bluetooth not available");
             }
-            mGattServer.stopAdvertising();
-            discover(scanMode);
-            mGattServer.advertise(advertisementMode);
-        } else {
-            Logger.d(TAG, "onModeChange failed due to bluetooth not available");
+        } catch (Exception ex) {
+            //Handle Android internal exception for BT adapter not turned ON(Known Android bug)
+            CorUtilityKt.reportException(ex);
         }
     }
 }

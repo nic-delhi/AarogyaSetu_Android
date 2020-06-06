@@ -9,6 +9,7 @@ public class Constants {
     public static final String UNIQUE_ID = "did";
     public static final String QR_PUBLIC_KEY = "qr_public_key";
     public static final String PUSH_COVID_POSTIVE_P = "p";
+    public static final String IS_SILENT_NOTIFICATION = "silent";
     public static final String DATA = "data";
     public static final String AUTH = "Authorization";
     public static final String PLATFORM = "pt";
@@ -68,20 +69,21 @@ public class Constants {
     public static final String ACTION_GOTO_SETTINGS = "Open settings";
     public static final String ACTION_REMIND_LATER = "Remind later";
     public static final String SPACE = " ";
-    public static final String HEALTHY = "healthy";
-    public static final String MODERATE = "moderate";
-    public static final String HIGH = "high";
+
     public static final String EXPIRY = "exp";
     public static final String NAME = "name";
     public static final String MOBILE = "mobile_no";
-    public static final String STATUS = "status";
     public static final String BAR_CODE_PATH = "barcodeimage";
     public static final String FILE_EXT = ".jpg";
     public static final String QR_SCREEN_TAG = "QR_SCREEN_TAG ";
     public static final int MAX_INTRO_VIEWS = 2;
+    public static final String COLOR_CODE = "color_code";
+    public static final String STATUS_CODE = "status_code";
+    public static final String MESSAGE = "message";
 
     public static class Errors {
         public static final String SELECT_OTHER_APP = "Select any other app to open this url";
+        public static final String ERROR_OPENING_CALL_SCREEN = "Some error occurred while opening your call screen";
     }
 
     public static class UPLOAD_TYPES {
@@ -89,5 +91,11 @@ public class Constants {
         public static final String BEING_TESTED = "being_tested";
         public static final String TESTED_POSITIVE_CONSENT = "tested_positive_consent";
         public static final String SELF_CONSENT = "self_consent";
+    }
+
+    public static final String DEEPLINK_TAG = "tg";
+    public static class SCREEN_TAG {
+        public static final int _2_QR_CODE_PAGE = 2;
+        public static final int _3_QR_CODE_SCAN_PAGE = 3;
     }
 }
