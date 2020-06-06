@@ -1,12 +1,12 @@
 <resources>
     <string name="app_name">ଆରୋଗ୍ୟ ସେତୁ</string>
     <string name="your_mobile_number_is_required_to_know_your_identity">ଯୋଗାଯୋଗ ଅନୁସନ୍ଧାନ ପାଇଁ ଆପଣଙ୍କର ମୋବାଇଲ୍ ନମ୍ବର ଆବଶ୍ୟକ |</string>
-    <string name="text_value">କୁହ, ତୁମେ ଏକ ସପ୍ତାହରେ ଏକ ସମାବେଶରେ କାହାକୁ ଭେଟିଥିଲ କିମ୍ବା ସର୍ବସାଧାରଣ ସ୍ଥାନରେ ଅଜ୍ଞାତ ବ୍ୟକ୍ତିଙ୍କ ନିକଟତର ହୋଇଥିଲ ଏବଂ କିଛି ଦିନ ମଧ୍ୟରେ ସେମାନେ COVID-19 ପାଇଁ ପଜିଟିଭ୍ ପରୀକ୍ଷା କରିଥିଲେ |\n\nବିଗତ 14 ଦିନ ମଧ୍ୟରେ ଭାରତ ସରକାର ସେହି ବ୍ୟକ୍ତିଙ୍କ ସମସ୍ତ ସ୍ପର୍ଶ ପଏଣ୍ଟଗୁଡ଼ିକୁ ସକ୍ରିୟ ଡିଭାଇସ୍ ମାଧ୍ୟମରେ ଇନଷ୍ଟଲ୍ ହୋଇଥିବା ଆପ୍ ସହିତ ଅନୁସନ୍ଧାନ କରିବେ।\n\nପରବର୍ତ୍ତୀ କାର୍ଯ୍ୟ ପ୍ରକ୍ରିୟା, ଆତ୍ମ-ପୃଥକ କରିବା କିମ୍ବା ଆବଶ୍ୟକତା ଅନୁଯାୟୀ ନିକଟସ୍ଥ ପରୀକ୍ଷା କେନ୍ଦ୍ରରେ ପରୀକ୍ଷା କରିବା ପାଇଁ ଏକ ପରାମର୍ଶଦାତା ସହିତ ଏହିପରି ସମସ୍ତ ସମ୍ପର୍କକୁ ଏକ ବିଜ୍ଞପ୍ତି ପଠାଯିବ |\n\nସକ୍ରିୟ ଯୋଗାଯୋଗ ଅନୁସନ୍ଧାନରେ ଅଂଶଗ୍ରହଣ କରି, ଆପଣ ଆମକୁ COVID-19 ର ବିସ୍ତାରକୁ କମ୍ କରିବାରେ ସାହାଯ୍ୟ କରିବେ ଏବଂ ଆପଣଙ୍କ ସ୍ୱାସ୍ଥ୍ୟ ଏବଂ କଲ୍ୟାଣ ପାଇଁ ସକ୍ରିୟ ପଦକ୍ଷେପ କାର୍ଯ୍ୟକାରୀ କରିବାକୁ ଭାରତ ସରକାରଙ୍କୁ ସକ୍ଷମ କରିବେ |\n\n</string>
+    <string name="text_value">କୁହ, ତୁମେ ଏହି ସପ୍ତାହରେ ଏକ ସମାବେଶରେ କାହାକୁ ଭେଟିଥିଲ କିମ୍ବା ସର୍ବସାଧାରଣ ସ୍ଥାନରେ ଅଜ୍ଞାତ ବ୍ୟକ୍ତିଙ୍କ ନିକଟତର ହୋଇଥିଲ ଏବଂ କିଛି ଦିନ ମଧ୍ୟରେ ସେମାନେ କୋଭିଡ୍-୧୯ ପାଇଁ ପଜିଟିଭ୍ ପରୀକ୍ଷା କରିଥିଲେ |\n\nବିଗତ 14 ଦିନ ମଧ୍ୟରେ ଭାରତ ସରକାର ସେହି ବ୍ୟକ୍ତିଙ୍କ ସମସ୍ତ ସ୍ପର୍ଶ ପଏଣ୍ଟଗୁଡ଼ିକୁ ସକ୍ରିୟ ଡିଭାଇସ୍ ମାଧ୍ୟମରେ ଇନଷ୍ଟଲ୍ ହୋଇଥିବା ଆପ୍ ସହିତ ଅନୁସନ୍ଧାନ କରିବେ।\n\nପରବର୍ତ୍ତୀ କାର୍ଯ୍ୟ ପ୍ରକ୍ରିୟା, ଆତ୍ମ-ପୃଥକ କରିବା କିମ୍ବା ଆବଶ୍ୟକତା ଅନୁଯାୟୀ ନିକଟସ୍ଥ ପରୀକ୍ଷା କେନ୍ଦ୍ରରେ ପରୀକ୍ଷା କରିବା ପାଇଁ ଏକ ପରାମର୍ଶଦାତା ସହିତ ଏହିପରି ସମସ୍ତ ସମ୍ପର୍କକୁ ଏକ ବିଜ୍ଞପ୍ତି ପଠାଯିବ |\n\nସକ୍ରିୟ ଯୋଗାଯୋଗ ଅନୁସନ୍ଧାନରେ ଅଂଶଗ୍ରହଣ କରି, ଆପଣ ଆମକୁ COVID-19 ର ବିସ୍ତାରକୁ କମ୍ କରିବାରେ ସାହାଯ୍ୟ କରିବେ ଏବଂ ଆପଣଙ୍କ ସ୍ୱାସ୍ଥ୍ୟ ଏବଂ କଲ୍ୟାଣ ପାଇଁ ସକ୍ରିୟ ପଦକ୍ଷେପ କାର୍ଯ୍ୟକାରୀ କରିବାକୁ ଭାରତ ସରକାରଙ୍କୁ ସକ୍ଷମ କରିବେ |\n\n</string>
     <string name="permissions_title">ସେବା ସର୍ତ୍ତାବଳୀ ଏବଂ ଗୋପନୀୟତା |</string>
     <string name="permissions_detail">ଆମେ ଏହି ବିଷୟର ପ୍ରକୃତି ଏବଂ ସମ୍ବେଦନଶୀଳତାକୁ ବୁଝିପାରୁ ଏବଂ ଆପଣଙ୍କ ତଥ୍ୟର ସାଂଘାତିକ ନହେବାକୁ ସୁନିଶ୍ଚିତ କରିବାକୁ ଶକ୍ତିଶାଳୀ ପଦକ୍ଷେପ ନେଇଛୁ |</string>
-    <string name="location_text">ଏହା ପରାମର୍ଶିତ ଯେ ତୁମେ ତୁମର ଅବସ୍ଥାନ ଅଂଶୀଦାରକୁ ‘ସର୍ବଦା’ ସେଟ୍ କର | ଆପଣ ଏହାକୁ ଯେକ time ଣସି ସମୟରେ ପରେ ପରିବର୍ତ୍ତନ କରିପାରିବେ |</string>
+    <string name="location_text">ଏହା ପରାମର୍ଶିତ ଯେ ତୁମେ ତୁମର ଅବସ୍ଥାନ ଅଂଶୀଦାରକୁ ‘ସର୍ବଦା’ ସେଟ୍ କର | ଆପଣ ଏହାକୁ ଯ଼େ କୌଣସି ସମୟରେ ପରେ ପରିବର୍ତ୍ତନ କରିପାରିବେ |</string>
     <!-- phone_number_layout -->
-    <string name="enter_mobile_number">मोबाइल नंबर एंटर करें</string>
+    <string name="enter_mobile_number">ମୋବାଇଲ୍ ନମ୍ବର ପ୍ରବେଶ କର</string>
     <string name="country_code">+91 </string>
     <string name="mobile_number">ମୋବାଇଲ୍ ନମ୍ବର</string>
     <string name="why_is_it_needed">ଏହା କାହିଁକି ଆବଶ୍ୟକ?</string>
@@ -16,7 +16,7 @@
     <!-- otp_validation_layout -->
     <string name="enter_otp">OTP ପ୍ରବେଶ କରନ୍ତୁ |</string>
     <string name="we_have_sent_otp">ଆମେ ଆପଣଙ୍କ ମୋବାଇଲ୍ ନମ୍ବରକୁ OTP ପଠାଇଛୁ |</string>
-    <string name="we_have_resent_otp">We have resent OTP to your mobile number.</string>
+    <string name="we_have_resent_otp">ଆପଣଙ୍କ ମୋବାଇଲ୍ ନମ୍ବରରେ ଆମେ ପୁଣି OTP ପଠାଇଛୁ |</string>
     <string name="otp">OTP</string>
     <string name="please_enter_a_valid_otp">ଦୟାକରି ଏକ ସଠିକ୍ OTP ପ୍ରବେଶ କରନ୍ତୁ |</string>
     <!-- why_needed_layout -->
@@ -24,15 +24,15 @@
     <string name="device_location"><![CDATA[<b>ଉପକରଣ ଅବସ୍ଥାନ</b>]]></string>
     <string name="bluetooth"><![CDATA[<b>ବ୍ଲୁଟୁଥ୍</b>]]></string>
     <string name="data_sharing_with_the_ministry"><![CDATA[<b>ଡାଟା ସେୟାର୍</b>]]></string>
-    <string name="monitors_your_device_s_proximity_within_6_feet_range">ଅନ୍ୟ ଏକ ମୋବାଇଲ୍ ଡିଭାଇସ୍ ସହିତ ଆପଣଙ୍କର ଡିଭାଇସର ନିକଟତରତା ଉପରେ ନଜର ରଖେ | ଆପଣ ଏହାକୁ ସର୍ବଦା ରଖିବା ପାଇଁ ପରାମର୍ଶ ଦିଆଯାଇଛି |</string>
-    <string name="tracks_an_individual_s_touch_points_so_can_easily_find_others_who_came_in_close_contact">ଆପଣଙ୍କର ତଥ୍ୟ କେବଳ ଭାରତ ସରକାରଙ୍କ ସହ ଅଂଶୀଦାର ହେବ | ଆପ୍ ଆପଣଙ୍କ ନାମ ଏବଂ ନମ୍ବରକୁ ଯେକ time ଣସି ସମୟରେ ଜନସାଧାରଣଙ୍କ ନିକଟରେ ପ୍ରକାଶ କରିବାକୁ ଅନୁମତି ଦିଏ ନାହିଁ |</string>
+    <string name="monitors_your_device_s_proximity_within_6_feet_range">ଅନ୍ୟ ଏକ ମୋବାଇଲ୍ ଡିଭାଇସ୍ ସହିତ ଆପଣଙ୍କର ଡିଭାଇସର ନିକଟତରତା ଉପରେ ନଜର ରଖେ | ଆପଣ ଏହାକୁ ସର୍ବଦା ଅନ ରଖିବା ପାଇଁ ପରାମର୍ଶ ଦିଆଯାଇଛି |</string>
+    <string name="tracks_an_individual_s_touch_points_so_can_easily_find_others_who_came_in_close_contact">ଆପଣଙ୍କର ତଥ୍ୟ କେବଳ ଭାରତ ସରକାରଙ୍କ ସହ ଅଂଶୀଦାର ହେବ | ଆପ୍ ଆପଣଙ୍କ ନାମ ଏବଂ ନମ୍ବରକୁ ଯ଼େ କୌଣସି ସମୟରେ ଜନସାଧାରଣଙ୍କ ନିକଟରେ ପ୍ରକାଶ କରିବାକୁ ଅନୁମତି ଦିଏ ନାହିଁ |</string>
     <string name="contribute_to_a_safer_india">ମୁଁ ସହମତ</string>
-    <string name="please_select_a_language_en">Please select your language\nकृपया अपनी भाषा चुनें</string>
-    <string name="next">आगे</string>
-    <string name="please_select_a_language_to_proceed">Please select a language to proceed.</string>
+    <string name="please_select_a_language_en">Please select your language\nଦୟାକରି ଭାଷା ଚୟନ କରନ୍ତୁ </string>
+    <string name="next">ପରବର୍ତ୍ତୀ</string>
+    <string name="please_select_a_language_to_proceed">ଅଗ୍ରଗତି କରିବାକୁ ଦୟାକରି ଏକ ଭାଷା ବାଛନ୍ତୁ |</string>
     <!-- Strings used for fragments for navigation -->
     <string name="please_enter_a_valid_number">ଦୟାକରି ଏକ ସଠିକ୍ ନମ୍ବର ପ୍ରବେଶ କରନ୍ତୁ |</string>
-    <string name="would_you_like_to">ଯଦି ଆପଣ COVID-19 ପଜିଟିଭ୍ ପରୀକ୍ଷା କରିଥିବା ବ୍ୟକ୍ତିଙ୍କ ସହିତ ରାସ୍ତା ଅତିକ୍ରମ କରିଛନ୍ତି ତେବେ ଆପଣଙ୍କୁ ସୂଚନା ଦିଆଯିବାକୁ ଚାହୁଁଛନ୍ତି କି?</string>
+    <string name="would_you_like_to">ଯଦି ଆପଣ କୋଭିଡ୍-୧୯ ପଜିଟିଭ୍ ପରୀକ୍ଷା କରିଥିବା ବ୍ୟକ୍ତିଙ୍କ ସହିତ ରାସ୍ତା ଅତିକ୍ରମ କରିଛନ୍ତି ତେବେ ଆପଣଙ୍କୁ ସୂଚନା ଦିଆଯିବାକୁ ଚାହୁଁଛନ୍ତି କି?</string>
     <string name="each_one_of_us">ଭାରତରେ କରୋନାଭାଇରସ୍ ମହାମାରୀର ପ୍ରସାରକୁ ରୋକିବାରେ ଆମର ପ୍ରତ୍ୟେକଙ୍କର ଶକ୍ତି ଅଛି |</string>
     <string name="simply_1_install_the_app">ସରଳ ଭାବରେ
 \n१ ଆପ୍ ସଂସ୍ଥାପନ କରନ୍ତୁ
@@ -41,7 +41,7 @@
 \n\nଆପ୍ ସଂସ୍ଥାପନ କରିବାକୁ ଆପଣଙ୍କର ସାଙ୍ଗ ଏବଂ ପରିବାରକୁ ଆମନ୍ତ୍ରଣ କରନ୍ତୁ। </string>
     <string name="cowin_20_tracks_through"><![CDATA[<b>Aarogya Setu</b> ଟ୍ରାକ୍, ଏକ ବ୍ଲୁଟୁଥ୍ ଏବଂ ଲୋକେସନ ମାଧ୍ୟମରେ ସାମାଜିକ ଗ୍ରାଫ୍ ସୃଷ୍ଟି କରିଛି, COVID-19 ପଜିଟିଭ୍ ପରୀକ୍ଷା କରିଥାଇ ପାରନ୍ତି |]]></string>
     <string name="the_app_alerts_are_accompanied">ଆପ୍ ଆଲର୍ଟଗୁଡିକ କିପରି ଆତ୍ମ-ବିଚ୍ଛିନ୍ନ ହେବ ଏବଂ ଯଦି ଆପଣ ଲକ୍ଷଣଗୁଡିକ ବିକଶିତ କରନ୍ତି ତେବେ କଣ କରିବେ ସେ ସମ୍ବନ୍ଧରେ ନିର୍ଦ୍ଦେଶନାମା ସହିତ ଆସିଥାଏ ଯାହା ସାହାଯ୍ୟ ଏବଂ ସମର୍ଥନ ଆବଶ୍ୟକ କରିପାରନ୍ତି |</string>
-    <string name="you_will_be_alerted_if">ଯଦି ଆପଣ ଜଣଙ୍କ ନିକଟତର ହୋଇଥିବେ, ଅଜାଣତରେ, COVID-19 ପଜିଟିଭ୍ ପରୀକ୍ଷା କରନ୍ତି ତେବେ ଆପଣଙ୍କୁ ସତର୍କ କରାଯିବ |</string>
+    <string name="you_will_be_alerted_if">ଯଦି ଆପଣ ଜଣଙ୍କ ନିକଟତର ହୋଇଥିବେ, ଅଜାଣତରେ, କୋଭିଡ୍-୧୯ ପଜିଟିଭ୍ ପରୀକ୍ଷା କରନ୍ତି ତେବେ ଆପଣଙ୍କୁ ସତର୍କ କରାଯିବ |</string>
     <string name="with_cowin_20_you_can"><![CDATA[<b>Aarogya Setu</b> ସହିତ, ଆପଣ ନିଜକୁ, ଆପଣଙ୍କ ପରିବାର ଏବଂ ବନ୍ଧୁମାନଙ୍କୁ ସୁରକ୍ଷା ଦେଇପାରିବେ ଏବଂ COVID-19 ସହିତ ଲ to ିବା ପାଇଁ ଆମ ଦେଶକୁ ସାହାଯ୍ୟ କରିପାରିବେ |]]></string>
     <string name="register_now">ବର୍ତ୍ତମାନ ପଞ୍ଜିକରଣ କରନ୍ତୁ</string>
     <string name="install">Install</string>
@@ -56,7 +56,7 @@
     <string name="confirm_and_proceed">ନିଶ୍ଚିତ କରନ୍ତୁ ଏବଂ ଆଗକୁ ବଢନ୍ତୁ</string>
     <string name="sync_data_detail">ଆପଣଙ୍କ ତଥ୍ୟ ସବୁବେଳେ ଆପଣଙ୍କ ଫୋନରେ ସେଭ୍ ହୋଇଥାଏ | ସୁରକ୍ଷିତ ସରକାରୀ ସର୍ଭରରେ ଏହାକୁ ସେୟାର୍ କରନ୍ତୁ ଯଦି…</string>
     <string name="sample_collected_for_testing">ପରୀକ୍ଷା ପାଇଁ ନମୁନା ସଂଗ୍ରହ କରାଯାଇଥାଏ</string>
-    <string name="tested_positive">Covid19 ରେ ପରୀକ୍ଷଣ ଫଳାଫଳ ସକରାତ୍ମକ ଆସିଥାଏ</string>
+    <string name="tested_positive">କୋଭିଡ୍-୧୯ ରେ ପରୀକ୍ଷଣ ଫଳାଫଳ ସକରାତ୍ମକ ଆସିଥାଏ</string>
     <string name="syncing_data">ଡାଟା ସିଙ୍କ୍ ହେଉଛି</string>
     <string name="syncing_data_detail"><![CDATA[ବ୍ଲୁଟୁଥ୍ ଏବଂ ଜିପିଏସ୍ ସେବା ମାଧ୍ୟମରେ କ୍ୟାପ୍ଚର୍ କରାଯାଇଥିବା ପାରସ୍ପରିକ ତଥ୍ୟ ଭାରତ ସରକାରଙ୍କୁ ପଠାଯାଉଛି ।]]></string>
     <string name="cancel">ବାତିଲ୍ କରନ୍ତୁ</string>
@@ -84,8 +84,8 @@
     <string name="share_data_with_govt">ସରକାରଙ୍କୁ ତଥ୍ୟ ଜଣାନ୍ତୁ</string>
     <string name="call_helpline">ହେଲ୍ପଲାଇନକୁ କଲ୍ କରନ୍ତୁ (୧୦୭୫ )</string>
     <string name="settings">ସେଟିଂଗୁଡିକ</string>
-    <string name="share_data_with_govt_detail">ଯଦି ଆପଣ କୋଭିଡ -୧୯ ପଜିଟିଭ୍ ଆସିଛନ୍ତି କିମ୍ବା ବର୍ତ୍ତମାନ ପରୀକ୍ଷା କରାଯାଉଛି ତେବେ ଜଣାନ୍ତୁ |</string>
-    <string name="call_helpline_detail">କୋଭିଡ -୧୯ ସମ୍ବନ୍ଧୀୟ ପ୍ରଶ୍ନଗୁଡିକ ପାଇଁ ସ୍ୱାସ୍ଥ୍ୟ ମନ୍ତ୍ରଣାଳୟର ଟୋଲ୍ ଫ୍ରି ହେଲ୍ପଲାଇନ</string>
+    <string name="share_data_with_govt_detail">ଯଦି ଆପଣ କୋଭିଡ୍-୧୯ ପଜିଟିଭ୍ ଆସିଛନ୍ତି କିମ୍ବା ବର୍ତ୍ତମାନ ପରୀକ୍ଷା କରାଯାଉଛି ତେବେ ଜଣାନ୍ତୁ |</string>
+    <string name="call_helpline_detail">କୋଭିଡ୍-୧୯ ସମ୍ବନ୍ଧୀୟ ପ୍ରଶ୍ନଗୁଡିକ ପାଇଁ ସ୍ୱାସ୍ଥ୍ୟ ମନ୍ତ୍ରଣାଳୟର ଟୋଲ୍ ଫ୍ରି ହେଲ୍ପଲାଇନ</string>
     <string name="faq">ସାଧାରଣତଃ ପଚାର ଯାଉଥିବା ପ୍ରଶ୍ନଗୁଡିକ</string>
     <string name="privacy_policy">ଗୋପନୀୟତା ନୀତି</string>
     <string name="terms_of_use">ବ୍ୟବହାର ସର୍ତ୍ତାବଳୀ</string>
@@ -105,7 +105,7 @@
     <string name="low_risk">ସଂକ୍ରମଣର କମ୍ ବିପଦ ଅଛି</string>
     <string name="moderate_risk">ସଂକ୍ରମଣର ମଧ୍ୟମ ବିପଦ ଅଛି</string>
     <string name="high_risk">ସଂକ୍ରମଣର ଆଶଙ୍କା ଅଧିକ</string>
-    <string name="tested_positive_status">କୋଭିଡ -୧୯ ପଜିଟିଭ୍ ଆସିଛନ୍ତି</string>
+    <string name="tested_positive_status">କୋଭିଡ-୧୯ ପଜିଟିଭ୍ ଆସିଛନ୍ତି</string>
     <string name="provide_necessary_permission">ଆପଣଙ୍କର Qr କୋଡ୍ କ୍ୟାପଚର କରିବାକୁ ଦୟାକରି ଆବଶ୍ୟକ ଅନୁମତି ପ୍ରଦାନ କରନ୍ତୁ</string>
     <string name="scan_without_perm_alert">QR କୋଡ୍ ସ୍କାନିଂ ପାଇଁ ଆପ୍ କ୍ୟାମେରା ଅନୁମତି ଆବଶ୍ୟକ କରେ</string>
     <string name="open_settings">ସେଟିଂଗୁଡିକ ଖୋଲନ୍ତୁ</string>
