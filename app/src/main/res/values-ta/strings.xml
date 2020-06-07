@@ -1,7 +1,7 @@
 <resources>
     <string name="app_name">Aarogya Setu</string>
     <string name="your_mobile_number_is_required_to_know_your_identity">தொடர்பு கண்காணிப்புக்கு உங்கள் மொபைல் எண் தேவை.</string>
-    <string name="text_value">ஒரு வாரத்திற்கு முன்பு ஒரு கூட்டத்தில் நீங்கள் ஒருவரைச் சந்தித்தீர்கள் அல்லது ஒரு பொது இடத்தில் தெரியாத ஒருவருடன் நெருக்கமாக இருந்தீர்கள் என்று சொல்லுங்கள், சில நாட்களில், அவர்கள் COVID-19 க்கு நேர்மறையானதை சோதிக்கிறார்கள்.\n\nகடந்த 14 நாட்களில், அந்த நபரின் நெருங்கிய சுற்றளவில் நிறுவப்பட்ட பயன்பாட்டைக் கொண்ட செயலில் உள்ள சாதனங்கள் மூலம், அந்த நபரின் அனைத்து தொடு புள்ளிகளையும் இந்திய அரசு கண்டுபிடிக்கும்.\n\nஇதுபோன்ற அனைத்து தொடர்புகளுக்கும் மேலதிக நடவடிக்கை குறித்த ஆலோசனையுடன், சுய-தனிமைப்படுத்த அல்லது தேவைக்கேற்ப அருகிலுள்ள சோதனை மையத்தில் சோதனை செய்ய ஒரு அறிவிப்பு அனுப்பப்படும். \"\n\nசெயலில் தொடர்பு கண்டுபிடிப்பதில் பங்கேற்பதன் மூலம், நீங்கள் COVID-19 இன் பரவலைக் குறைக்க எங்களுக்கு உதவுவீர்கள், மேலும் உங்கள் உடல்நலம் மற்றும் நல்வாழ்வுக்கான செயலூக்கமான நடவடிக்கைகளைச் செயல்படுத்த இந்திய அரசுக்கு உதவுவீர்கள்.\n\n</string>
+    <string name="text_value">ஒரு வாரத்திற்கு முன்பு ஒரு கூட்டத்தில் நீங்கள் ஒருவரைச் சந்தித்தீர்கள் அல்லது ஒரு பொது இடத்தில் தெரியாத ஒருவருடன் நெருக்கமாக இருந்தீர்கள் என்று சொல்லுங்கள், சில நாட்களில், அவர்கள் கோவிட்-19 க்கு நேர்மறையானதை சோதிக்கிறார்கள்.\n\nகடந்த 14 நாட்களில், அந்த நபரின் நெருங்கிய சுற்றளவில் நிறுவப்பட்ட பயன்பாட்டைக் கொண்ட செயலில் உள்ள சாதனங்கள் மூலம், அந்த நபரின் அனைத்து தொடு புள்ளிகளையும் இந்திய அரசு கண்டுபிடிக்கும்.\n\nஇதுபோன்ற அனைத்து தொடர்புகளுக்கும் மேலதிக நடவடிக்கை குறித்த ஆலோசனையுடன், சுய-தனிமைப்படுத்த அல்லது தேவைக்கேற்ப அருகிலுள்ள சோதனை மையத்தில் சோதனை செய்ய ஒரு அறிவிப்பு அனுப்பப்படும். \"\n\nசெயலில் தொடர்பு கண்டுபிடிப்பதில் பங்கேற்பதன் மூலம், நீங்கள் கோவிட்-19 இன் பரவலைக் குறைக்க எங்களுக்கு உதவுவீர்கள், மேலும் உங்கள் உடல்நலம் மற்றும் நல்வாழ்வுக்கான செயலூக்கமான நடவடிக்கைகளைச் செயல்படுத்த இந்திய அரசுக்கு உதவுவீர்கள்.\n\n</string>
     <string name="permissions_title">சேவை விதிமுறைகள் மற்றும் தனியுரிமை</string>
     <string name="permissions_detail">\"இந்த தலைப்பின் தன்மை மற்றும் உணர்திறன் ஆகியவற்றை நாங்கள் புரிந்துகொள்கிறோம், மேலும் உங்கள் தரவு சமரசம் செய்யப்படாமல் இருக்க வலுவான நடவடிக்கைகளை எடுத்துள்ளோம்.</string>
     <string name="location_text">பகிர்வை ‘எப்போதும்’ என அமைக்க பரிந்துரைக்கப்படுகிறது. இதை எப்போது வேண்டுமானாலும் மாற்றலாம்.</string>
@@ -16,7 +16,7 @@
     <!-- otp_validation_layout -->
     <string name="enter_otp">OTP ஐ உள்ளிடவும்</string>
     <string name="we_have_sent_otp">உங்கள் மொபைல் எண்ணுக்கு OTP ஐ அனுப்பியுள்ளோம்</string>
-    <string name="we_have_resent_otp">We have resent OTP to your mobile number.</string>
+    <string name="we_have_resent_otp">உங்கள் மொபைல் எண்ணுக்கு OTP ஐ மீண்டும் அனுப்பியுள்ளோம்</string>
     <string name="otp">OTP</string>
     <string name="please_enter_a_valid_otp">செல்லுபடியாகும் OTP ஐ உள்ளிடவும்</string>
     <!-- why_needed_layout -->
@@ -49,14 +49,14 @@
     <string name="location_sharing">location sharing</string>
     <string name="permission_info_tnc_text"><![CDATA[<p>நீங்கள் ஒரு பாதுகாப்பான இந்தியாவுக்கு பங்களிக்க விரும்பினால், கீழேயுள்ள பொத்தானைக் கிளிக் செய்வதன் மூலம் <a href="https://static.swaraksha.gov.in/tnc/">சேவை விதிமுறைகள்</a> மற்றும் <a href="https://web.swaraksha.gov.in/ncv19/privacy/">தனியுரிமைக் கொள்கையை</a> நீங்கள் ஏற்றுக்கொள்வதைக் குறிக்கவும்:</p>]]></string>
     <string name="auth_error_unknown">நீங்கள் உள்நுழைய சில பிழை உள்ளது</string>
-    <string name="auth_error_invalid_otp">நீங்கள் உள்ளிட்ட OTP தவறானது நீங்கள் உள்ளிட்ட OTP தவறானது</string>
-    <string name="auth_error_user_disabled">You are not allowed to sign in</string>
+    <string name="auth_error_invalid_otp">நீங்கள் உள்ளிட்ட OTP தவறானது</string>
+    <string name="auth_error_user_disabled">நீங்கள் உள்நுழைய அனுமதி இல்லை</string>
     <string name="close">மூடவும்</string>
     <string name="sync_data_user_consent">தொடர்பு கொள்ள உதவுவதற்கு, ப்ளூடூத் மற்றும் GPS சேவைகள் மூலம் கைப்பற்றப்பட்ட உங்கள் தொடர்பு தரவு இந்திய அரசாங்கத்துடன் பகிரப்படும்.</string>
     <string name="confirm_and_proceed">உறுதிசெய்யவும் மற்றும் தொடரவும்</string>
     <string name="sync_data_detail">உங்கள் தரவு எப்போதும் உங்கள் போனில் சேமிக்கப்படுகிறது. பாதுகாப்பான அரசாங்க சர்வர்களில் அதை பகிரவும்…</string>
     <string name="sample_collected_for_testing">சோதனைக்காக மாதிரி சேகரிக்கப்பட்டது</string>
-    <string name="tested_positive">Covid19-க்கான சோதனை செய்யப்பட்ட பாசிட்டிவ்</string>
+    <string name="tested_positive">கோவிட்-19க்கான சோதனை செய்யப்பட்ட பாசிட்டிவ்</string>
     <string name="syncing_data">தரவை ஒத்திசைக்கிறது</string>
     <string name="syncing_data_detail"><![CDATA[ப்ளூடூத் மற்றும் GPS சேவைகள் மூலம் சேகரித்த தொடர்பு தகவல்களை இந்திய அரசாங்கத்திற்கு அனுப்புகிறது.]]></string>
     <string name="cancel">இரத்துசெய்க</string>
@@ -84,8 +84,8 @@
     <string name="share_data_with_govt">தரவை அரசாங்கத்துடன் பகிர்ந்து கொள்ளுங்கள்.</string>
     <string name="call_helpline">ஹெல்ப்லைனை அழைக்கவும் (1075)</string>
     <string name="settings">அமைப்புகள்</string>
-    <string name="share_data_with_govt_detail">உங்களுக்கு COVID-19 தொற்று உறுதி செய்ய பட்டிருந்தால் அல்லது தற்போது சோதிக்க பட்டிருந்தால் மட்டுமே பகிரவும்</string>
-    <string name="call_helpline_detail">COVID-19 தொடர்பான கேள்விகளுக்கு சுகாதார அமைச்சரவையின் கட்டணமில்லா ஹெல்ப்லைன்</string>
+    <string name="share_data_with_govt_detail">உங்களுக்கு கோவிட்-19 தொற்று உறுதி செய்ய பட்டிருந்தால் அல்லது தற்போது சோதிக்க பட்டிருந்தால் மட்டுமே பகிரவும்</string>
+    <string name="call_helpline_detail">கோவிட்-19 தொடர்பான கேள்விகளுக்கு சுகாதார அமைச்சரவையின் கட்டணமில்லா ஹெல்ப்லைன்</string>
     <string name="faq">அடிக்கடி கேட்கப்படும் கேள்விகள்</string>
     <string name="privacy_policy">தனியுரிமைக் கொள்கை</string>
     <string name="terms_of_use">பயன்படுத்தும் விதிமுறைகள்</string>
@@ -105,7 +105,7 @@
     <string name="low_risk">நோய்த்தொற்றின் குறைந்த ஆபத்தில் உள்ளது</string>
     <string name="moderate_risk">நோய்த்தொற்றின் மிதமான ஆபத்தில் உள்ளது</string>
     <string name="high_risk">நோய்த்தொற்றின் அதிக ஆபத்தில் உள்ளது</string>
-    <string name="tested_positive_status">COVID-19 தொற்று உறுதி செய்யப்பட்டுள்ளது</string>
+    <string name="tested_positive_status">கோவிட்-19 தொற்று உறுதி செய்யப்பட்டுள்ளது</string>
     <string name="provide_necessary_permission">உங்கள் QR குறியீட்டைப் பெற தேவையான அனுமதியை வழங்கவும்</string>
     <string name="scan_without_perm_alert">QR குறியீடை ஸ்கேன் செய்ய பயன்பாட்டிற்கு கேமரா அனுமதி தேவை.</string>
     <string name="open_settings">அமைப்புகள் பக்கத்தைத் திறக்கவும்</string>
