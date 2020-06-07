@@ -26,6 +26,7 @@ public class LanguageList {
         list.add(new LanguageDTO("ba", "বাংলা"));
         list.add(new LanguageDTO("pu", "ਪੰਜਾਬੀ"));
         list.add(new LanguageDTO("as", "অসমীয়া"));
+        list.add(new LanguageDTO("lus", "Mizo Ṭawng"));
         return list;
     }
 }
