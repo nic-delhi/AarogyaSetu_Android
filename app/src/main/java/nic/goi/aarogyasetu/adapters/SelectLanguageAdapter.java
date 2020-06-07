@@ -56,7 +56,7 @@ public class SelectLanguageAdapter extends RecyclerView.Adapter<SelectLanguageAd
 
     @Override
     public int getItemCount() {
-        return mLanguageList == null ? 0 : mLanguageList.size();
+        return (mLanguageList == null || mLanguageList.isEmpty()) ? 0 : mLanguageList.size();
     }
 
     class LanguageViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
