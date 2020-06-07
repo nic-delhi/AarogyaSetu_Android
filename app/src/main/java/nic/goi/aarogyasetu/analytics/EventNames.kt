@@ -33,5 +33,6 @@ object EventNames {
     const val EVENT_UPLOAD_START = "uploadStart"
     const val EVENT_UPLOAD_SUCCESS = "uploadSuccess"
     const val EVENT_UPLOAD_FAILED = "uploadFailed"
+    const val EVENT_SCAN_FAILED = "eventScanFailed"
 
 }

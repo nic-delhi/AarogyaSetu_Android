@@ -13,7 +13,7 @@ Dr. Seema Khanna
 ---------------------------------
 Industry and Academia Leadership
 ---------------------------------
-Dr. Lalitesh Katragadda  
+Dr. Lalitesh Katragadda
 Prof. V Kamakoti  
 Deep Kalra  
 Arnab Kumar  
@@ -85,3 +85,4 @@ Sunny Shah
 Surabhi Vatsa  
 Vikrant Chaudhary  
 Vivek Ratakonda  
+Abhijeet Choudhary
