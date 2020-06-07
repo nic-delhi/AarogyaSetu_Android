@@ -3,4 +3,18 @@
 
     <dimen name="heading_primary_font_size">16sp</dimen>
     <dimen name="heading_secondary_font_size">14sp</dimen>
+
+    <!-- Dimensions for QR Code -->
+    <dimen name="qr_code_padding">15dp</dimen>
+    <dimen name="qr_code_margin_top">30dp</dimen>
+    <dimen name="qr_code_padding_top">10dp</dimen>
+
+    <!-- Font QR Code -->
+    <dimen name="qr_code_size">14sp</dimen>
+    <dimen name="qr_code_name_size">24sp</dimen>
+    <dimen name="qr_code_phone_size">18sp</dimen>
+    <dimen name="qr_code_scan_size">16sp</dimen>
+
+
+
 </resources>
