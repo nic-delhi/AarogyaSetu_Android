@@ -1,56 +1,70 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:padding="10dp">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:padding="@dimen/qr_code_padding">
 
     <ImageView
         android:id="@+id/close"
-        android:layout_width="40dp"
-        android:layout_height="40dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:contentDescription="@null"
-        android:padding="4dp"
-        android:src="@drawable/ic_close_24px" />
+        android:src="@drawable/ic_close_24px"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="ContentDescription" />
+
 
     <TextView
         android:id="@+id/refresh_view"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentRight="true"
-        android:layout_gravity="center"
-        android:layout_marginLeft="10dp"
-        android:contentDescription="@null"
-        android:drawableLeft="@drawable/ic_refresh"
+        tools:ignore="ContentDescription"
+        android:drawableStart="@drawable/ic_refresh"
         android:gravity="center"
-        android:padding="4dp"
         android:text="@string/refresh"
         android:textColor="@color/refresh_blue"
-        android:textSize="14sp"
-        android:textStyle="bold" />
+        android:textSize="@dimen/qr_code_size"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        />
+
+
 
     <androidx.core.widget.NestedScrollView
         android:id="@+id/nested_view"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         android:layout_below="@id/close"
-        android:visibility="visible">
+        android:visibility="visible"
+        app:layout_constraintTop_toBottomOf="@id/close"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="@dimen/qr_code_margin_top"
+        >
 
-        <RelativeLayout
+        <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="wrap_content"
+            >
 
             <TextView
                 android:id="@+id/name"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_centerHorizontal="true"
-                android:layout_marginTop="30dp"
+                android:layout_marginTop="@dimen/qr_code_margin_top"
                 android:textAppearance="@style/BoldTitleTextStyle"
                 android:textColor="@color/black"
-                android:textSize="24sp"
-                tools:text="Niharika Arora" />
+                android:textSize="@dimen/qr_code_name_size"
+                tools:text="Niharika Arora"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                />
 
             <TextView
                 android:id="@+id/phone"
@@ -61,15 +75,23 @@
                 android:layout_marginTop="4dp"
                 android:textAppearance="@style/TextStyleFontSemiBold"
                 android:textColor="@color/black"
-                android:textSize="18sp"
-                tools:text="75039394506" />
+                android:textSize="@dimen/qr_code_phone_size"
+                tools:text="75039394506"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/name"
+                />
 
             <include
                 android:id="@+id/scan_container"
                 layout="@layout/qr_code_view"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_below="@id/phone" />
+                android:layout_below="@id/phone"
+                app:layout_constraintTop_toBottomOf="@+id/phone"
+                app:layout_constraintStart_toStartOf="parent"
+
+                />
 
             <TextView
                 android:id="@+id/scan_text_desc"
@@ -77,43 +99,45 @@
                 android:layout_height="wrap_content"
                 android:layout_below="@id/scan_container"
                 android:layout_centerHorizontal="true"
-                android:layout_marginLeft="8dp"
-                android:layout_marginTop="6dp"
-                android:layout_marginRight="8dp"
                 android:gravity="center"
                 android:text="@string/scan_to_check_status"
                 android:textAppearance="@style/TextStyleFontSemiBold"
                 android:textColor="@color/black"
-                android:textSize="16sp"
-                android:textStyle="bold" />
+                android:textSize="@dimen/qr_code_scan_size"
+                android:textStyle="bold"
+                android:paddingTop="@dimen/qr_code_padding_top"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/scan_container"
+                app:layout_constraintEnd_toEndOf="parent"
+                />
 
             <include
                 android:id="@+id/scan_validity_container"
-                layout="@layout/scan_validity_view" />
-        </RelativeLayout>
+                layout="@layout/scan_validity_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="@dimen/qr_code_padding_top"
+                app:layout_constraintTop_toBottomOf="@+id/scan_text_desc"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.core.widget.NestedScrollView>
 
     <TextView
         android:id="@+id/scan_btn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_centerInParent="true"
-        android:layout_gravity="center"
-        android:layout_marginBottom="12dp"
         android:background="@drawable/button_with_dark_stroke"
-        android:padding="16dp"
+        android:padding="@dimen/qr_code_padding"
         android:text="@string/scan_other_s_qr_code"
         android:textColor="@color/black"
-        android:textSize="16sp"
-        android:textStyle="bold" />
+        android:textSize="@dimen/qr_code_scan_size"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        />
 
-    <ProgressBar
-        android:id="@+id/progress"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_centerInParent="true"
-        android:indeterminate="true"
-        android:indeterminateTint="@color/blue"
-        android:visibility="gone" />
-</RelativeLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
