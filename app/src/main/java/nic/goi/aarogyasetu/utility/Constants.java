@@ -8,7 +8,7 @@ public class Constants {
     public static final String PACKAGE = "package";
     public static final String UNIQUE_ID = "did";
     public static final String QR_PUBLIC_KEY = "qr_public_key";
-    public static final String PUSH_COVID_POSTIVE_P = "p";
+    public static final String PUSH_COVID_POSITIVE_P = "p";
     public static final String IS_SILENT_NOTIFICATION = "silent";
     public static final String DATA = "data";
     public static final String AUTH = "Authorization";
@@ -44,7 +44,7 @@ public class Constants {
     public static final String NOT_TITLE = "title";
     public static final String NOT_BODY = "body";
     public static final String DOWNLOAD_FAIL = "Error while downloading.Please update from Play Store.";
-    public static final String COVID_POSTIVE_PUSH_P_VALUE = "1";
+    public static final String COVID_POSITIVE_PUSH_P_VALUE = "1";
     public static final String PAGE_TITLE = "pageTitle";
     public static final String EMPTY = "";
     public static final String CLOSE = "Close";

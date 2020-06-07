@@ -91,7 +91,7 @@ public class BluetoothData {
         timeStamp = CorUtility.Companion.getCurrentEpochTimeInSec();
     }
 
-    private void setEncLatitute(double latitude) {
+    private void setEncLatitude(double latitude) {
         EncryptedInfo encryptedInfo = new EncryptedInfo();
         try {
             encryptedInfo.setData(EncryptionUtil.getInstance().encryptText(String.valueOf(latitude)));
@@ -168,7 +168,7 @@ public class BluetoothData {
     }
 
     public void setLatitude(double latitude) {
-        setEncLatitute(latitude);
+        setEncLatitude(latitude);
     }
 
     public double getLongitude() {
