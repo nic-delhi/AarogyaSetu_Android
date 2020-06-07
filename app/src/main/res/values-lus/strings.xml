@@ -4,10 +4,10 @@
     <string name="text_value">Entirnan, kar kalta khan tu emaw nen puipunna engemaw ah in lo inhnaih viau a, chu mi chu COVID-19 a lo positive a.
     \n\n India Sorkar chuan ni 14 kalta chhunga kha mi kal tawhna zawng zawng te, he app hmang ve tho tu te nena an lo in hnaih tawh dan atangin a chhui let ang.
     \n\n Chumi a chhuina atanga a lo hnaih tawh ho zawng zawngte chu he app kaltlang hian in test turin emaw, mahni lo in quarantine turin hriattirna a thawn ang.
-    \n\n He app i lo hman a, contact tracing a i lo tel ve hian nasa takin COVID-19 darh tur venna kawngah nasa takin min pui dawn a. I hrisel zawk theihna kawnga hma la turin India sawrkar i tanpui dawn a ni.</string>
+    \n\n He app i lo hman a, contact tracing a i lo tel ve hian COVID-19 darh tur venna kawngah nasa takin min pui dawn a. I hrisel zawk theihna kawnga hma la turin India sawrkar i tanpui dawn a ni.</string>
     <string name="permissions_title">Terms of Service &amp; Privacy</string>
     <string name="permissions_detail">I privacy pawimawh zia hre reng chungin kan theih ang tawkin i data venhim kawngah hma kan la a ni.</string>
-    <string name="location_text">Location sharing setting kha 'Always' i dah theih chuan duhthusam a ni a. He setting hi duh anga thlak theih reng a ni.</string>
+    <string name="location_text">Location sharing setting kha 'Always' i dah theih chuan duhthusam a ni. He setting hi duh anga thlak theih reng a ni.</string>
 
 
     <!--phone_number_layout-->
@@ -46,8 +46,9 @@
 
     <string name="would_you_like_to">Would you like to be kept informed if you \nhave crossed paths with someone who has \ntested COVID-19 positive?</string>
     <string name="each_one_of_us">Mimal tin ten India rama \nCoronavirus darh tur hi \nkan veng thei.</string>
-    <string name="simply_1_install_the_app"><![CDATA[Simply,\n1. %s the app \n2. Switch on %s \n3. Set %s to ‘Always’ \n\nInvite your friends and family to \ninstall the app too.]]></string>
-    <string name="cowin_20_tracks_through"><![CDATA[<b>Aarogya Setu</b> tracks through a Bluetooth &amp; Location \ngenerated social graph, your interaction \nwith someone who could have tested \nCOVID-19 positive.]]></string>
+    <string name="simply_1_install_the_app"><![CDATA[A awlsam zawngin,\n1. App %s la \n2. %s on la\n3. %s hi ‘Always’ ah dah la \n\nI ṭhiante leh chhungte  \napp install turin sawm ve rawh.]]></string>
+    <string name="cowin_20_tracks_through"><![CDATA[<b>Aarogya Setu</b> hian Bluetooth leh Location hmangin \nCOVID-19 positive mi tu emaw\n nena in interact dan a track a ni\n.]]></string>
+    <string name="the_app_alerts_are_accompanied">He App kaltlanga alert ken tel te\nI inrinhlelh hun leh ṭanpuina i ngaih huna tih tur leh \n Mahni in isolate dan </string>
     <string name="the_app_alerts_are_accompanied">The App alerts are accompanied by \ninstructions on how to self-isolate and what \nto do in case you develop symptoms that \nmay need help and support</string>
     <string name="you_will_be_alerted_if">You will be alerted if someone you have \ncome in close proximity of, even \nunknowingly, tests COVID-19 positive.</string>
     <string name="with_cowin_20_you_can"><![CDATA[With <b>Aarogya Setu</b>, you can protect yourself, \nyour family and friends, and help our \ncountry in the effort to fight COVID-19]]></string>
@@ -78,9 +79,9 @@
     <string name="syncing_data_detail"><![CDATA[Sending interaction data captured with Bluetooth & Location services to Government of India.]]></string>
     <string name="cancel">Cancel</string>
     <string name="syncing_data_success">Sync Successful</string>
-    <string name="syncing_data_success_detail">Your data is now secured on Government of India servers.</string>
+    <string name="syncing_data_success_detail">I data India Sawrkar server-ah him takin a awm tawh e.</string>
     <string name="syncing_data_failed">Sync Failed</string>
-    <string name="syncing_data_failed_detail">Something went wrong, please retry.</string>
+    <string name="syncing_data_failed_detail">Engemaw fuh lo a awm. Lo ti tha leh teh.</string>
     <string name="retry">Retry</string>
     <string name="ok">Ok</string>
     <string name="app_permissions" translatable="false">App Permissions</string>
@@ -90,11 +91,11 @@
     <string name="image_back_content_description">Back</string>
     <string name="image_on_board_content_description">Show on-boarding</string>
     <string name="image_close_content_description">@string/close</string>
-    <string name="permission_alert_message">To keep you safe and up-to-date, this app needs access to bluetooth and location. You can enable these in your phone settings.</string>
+    <string name="permission_alert_message">I lo him zawk nan he app hian bluetooth leh location permission a mamawh a, i phone settings atangin heng hi i on thei ang.</string>
     <string name="error_network_error">Please check internet connection</string>
-    <string name="error_location">Location settings are inadequate, and cannot be fixed here. Fix in Settings.</string>
-    <string name="turn_on_bluetooth_all_times">Bluetooth must be on at all times to track your proximity to other devices and give you accurate safety updates.</string>
-    <string name="make_sure_your_phone_is_connected_to_the_wifi_or_switch_to_mobile_data">Make sure your phone is connected to the WiFi or switch to mobile data.</string>
+    <string name="error_location">Location settings-ah phalna a la kim tawk lova. I phone settings-ah thlak a ngai.</string>
+    <string name="turn_on_bluetooth_all_times">I him zawk nan bluetooth in on reng a ngai.</string>
+    <string name="make_sure_your_phone_is_connected_to_the_wifi_or_switch_to_mobile_data">I phone in internet connection a neih a ngai.</string>
     <string name="login_failed">Login Failed. Please try again</string>
     <string name="image_user_content_description">User</string>
     <string name="image_menu_content_description">Menu</string>
@@ -104,8 +105,8 @@
     <string name="call_helpline">Call Helpline (1075)</string>
     <string name="settings">Settings</string>
     <string name="share_data_with_govt_detail">COVID-19 positive i nih emaw, test mek i nih chauhin share tur</string>
-    <string name="call_helpline_detail">Health ministry toll-free helpline for queries related to COVID-19</string>
-    <string name="faq">Zawhna common deuhte</string>
+    <string name="call_helpline_detail">A thlawna COVID-19 chungchanga Health ministry biak theihna</string>
+    <string name="faq">Zawhna tlanglawn deuhte</string>
     <string name="privacy_policy">Privacy Policy</string>
     <string name="terms_of_use">Terms of Use</string>
     <string name="app_version">App Version %s</string>
