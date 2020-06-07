@@ -111,9 +111,7 @@ public class SelectLanguageFragment extends BottomSheetDialogFragment {
                 if (languageCode.equalsIgnoreCase(languageList.get(mSelectedLanguagePosition).getLanguageCode())) {
                     dismissAllowingStateLoss();
                 } else {
-                    // Setting the user's choice of language in the shared prefs to fetch the language specific strings from the firebase and store them in shared prefs
-                    SharedPref.setStringParams(getContext(), SharedPrefsConstants.USER_SELECTED_LANGUAGE_CODE,
-                            languageList.get(mSelectedLanguagePosition).getLanguageCode());
+                    updateLanguagePref(languageList);
                     AnalyticsUtils.updateUserTraits();
                     if (mLanguageChangeListener != null) {
                         mLanguageChangeListener.languageChange();
@@ -125,6 +123,16 @@ public class SelectLanguageFragment extends BottomSheetDialogFragment {
         });
     }
 
+    /**
+     * Setting the user's choice of language in the shared prefs to fetch the language specific strings from the firebase and store them in shared prefs
+     * @param languageList
+     */
+    private void updateLanguagePref(List<LanguageDTO> languageList)
+    {
+        SharedPref.setStringParams(getContext(), SharedPrefsConstants.USER_SELECTED_LANGUAGE_CODE,
+                languageList.get(mSelectedLanguagePosition).getLanguageCode());
+    }
+
     private void configureAdapter(View view, List<LanguageDTO> languageList) {
         configureSelectedPosition(languageList);
         RecyclerView recyclerView = view.findViewById(R.id.rv_select_language);
@@ -132,6 +140,9 @@ public class SelectLanguageFragment extends BottomSheetDialogFragment {
         mAdapter = new SelectLanguageAdapter(mSelectedLanguagePosition, languageList, (position, language) -> {
             mSelectedLanguagePosition = position;
             mNext.setEnabled(true);
+            updateLanguagePref(languageList);
+            AnalyticsUtils.updateUserTraits();
+            mNext.setText(LocalizationUtil.getLocalisedString(getContext(), R.string.next));
             mAdapter.notifyDataSetChanged();
         });
         recyclerView.setAdapter(mAdapter);
