@@ -16,7 +16,7 @@
     <!-- otp_validation_layout -->
     <string name="enter_otp">OTP ஐ உள்ளிடவும்</string>
     <string name="we_have_sent_otp">உங்கள் மொபைல் எண்ணுக்கு OTP ஐ அனுப்பியுள்ளோம்</string>
-    <string name="we_have_resent_otp">We have resent OTP to your mobile number.</string>
+    <string name="we_have_resent_otp">உங்கள் மொபைல் எண்ணுக்கு OTP ஐ மீண்டும் அனுப்பியுள்ளோம்</string>
     <string name="otp">OTP</string>
     <string name="please_enter_a_valid_otp">செல்லுபடியாகும் OTP ஐ உள்ளிடவும்</string>
     <!-- why_needed_layout -->
@@ -27,7 +27,7 @@
     <string name="monitors_your_device_s_proximity_within_6_feet_range">உங்கள் சாதனத்தின் மற்றொரு மொபைல் சாதனத்தின் அருகாமையைக் கண்காணிக்கிறது. எல்லா நேரங்களிலும் இதை வைத்திருக்க பரிந்துரைக்கப்படுகிறது.</string>
     <string name="tracks_an_individual_s_touch_points_so_can_easily_find_others_who_came_in_close_contact">உங்கள் தரவு இந்திய அரசுடன் மட்டுமே பகிரப்படும்.\nஎந்த நேரத்திலும் உங்கள் பெயரையும் எண்ணையும் பொதுமக்களுக்கு வெளிப்படுத்த பயன்பாடு அனுமதிக்காது.</string>
     <string name="contribute_to_a_safer_india">நான் ஒப்புக்கொள்கிறேன்</string>
-    <string name="please_select_a_language_en">Please select your language\nकृपया अपनी भाषा चुनें</string>
+    <string name="please_select_a_language_en">உங்கள் மொழியை தேர்ந்தெடுக்கவும்</string>
     <string name="next">அடுத்தது</string>
     <string name="please_select_a_language_to_proceed">தொடர ஒரு மொழியைத் தேர்ந்தெடுக்கவும்.</string>
     <!-- Strings used for fragments for navigation -->
