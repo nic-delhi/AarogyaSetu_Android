@@ -1,9 +1,9 @@
 <resources>
     <string name="app_name">Aarogya Setu</string>
     <string name="your_mobile_number_is_required_to_know_your_identity">Your mobile number is required for contact tracing.</string>
-    <string name="text_value">Say, you met someone a week back at a gathering or were in close proximity of someone unknown at a public place, and in a few days, they test positive for COVID-19.\n\nThe Government of India will trace back all touch points of that person, through the active devices with the app installed that were in close radius of that person, in the past 14 days.
+    <string name="text_value">Say, you met someone a week back at a gathering or were in close proximity to someone unknown at a public place, and in a few days, they test positive for COVID-19.\n\nThe Government of India will trace back all touch points of that person, through the active devices with the app installed that were in close radius of that person, in the past 14 days.
 \n\nA notification will then be sent to all such contacts with an advisory on further course of action, to self-isolate or to get the test done at a nearest testing centre, as needed.
-\n\nBy participating in active contact tracing, you will help us minimise the spread of COVID-19 and enable Government of India to implement proactive measures for your health and well-being.
+\n\nBy participating in active contact tracing, you will help us minimise the spread of COVID-19 and enable the Government of India to implement proactive measures for your health and well-being.
 \n\n</string>
     <string name="permissions_title">Terms of Service &amp; Privacy</string>
     <string name="permissions_detail">We understand the nature and sensitivity of this topic and have taken strong measures to ensure that your data is not compromised.</string>
