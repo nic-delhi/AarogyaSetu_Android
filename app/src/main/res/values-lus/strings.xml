@@ -24,7 +24,7 @@
     <string name="we_have_sent_otp">I mobile number-ah OTP kan thawn e.</string>
     <string name="we_have_resent_otp">I mobile number-ah OTP kan thawn nawn leh e.</string>
     <string name="otp">OTP</string>
-    <string name="please_enter_a_valid_otp">Please enter a valid otp.</string>
+    <string name="please_enter_a_valid_otp"> OTP dik chhut rawh.</string>
 
 
     <!--why_needed_layout-->
@@ -35,7 +35,7 @@
     <string name="monitors_your_device_s_proximity_within_6_feet_range">I phone leh midang phone inhnaih dan monitor-na atan a ni a. On reng theih chuan duhthusam a ni.</string>
     <string name="monitors_your_device_s_proximity_within_6_feet_range">I phone leh midang phone inhnaih dan monitor-na atan a ni a. On reng theih chuan duhthusam a ni.</string>
     <string name="tracks_an_individual_s_touch_points_so_can_easily_find_others_who_came_in_close_contact">I Data hi India Sawrkar hnenah chauh a awm a.\nEng lai mahin he app hian i hming leh number hi vantlang hriat theih in a dah chhuak lo.</string>
-    <string name="contribute_to_a_safer_india">I remti e</string>
+    <string name="contribute_to_a_safer_india">K remti e</string>
     <string name="please_select_a_language_en">Eng tawng nge i hman thlang rawh le\nकृपया अपनी भाषा चुनें</string>
     <string name="next">Next</string>
     <string name="please_select_a_language_to_proceed">Tawng pakhat tal i thlan a ngai.</string>
@@ -44,43 +44,43 @@
     <string name="please_enter_a_valid_number">Phone number dik tak enter rawh</string>
 
 
-    <string name="would_you_like_to">Would you like to be kept informed if you \nhave crossed paths with someone who has \ntested COVID-19 positive?</string>
+    <string name="would_you_like_to">Covid19 vei tih finfiah \n tawh nen intawng ta la, \n hriatir i duh a ngem?</string>
     <string name="each_one_of_us">Mimal tin ten India rama \nCoronavirus darh tur hi \nkan veng thei.</string>
     <string name="simply_1_install_the_app"><![CDATA[A awlsam zawngin,\n1. App %s la \n2. %s on la\n3. %s hi ‘Always’ ah dah la \n\nI ṭhiante leh chhungte  \napp install turin sawm ve rawh.]]></string>
     <string name="cowin_20_tracks_through"><![CDATA[<b>Aarogya Setu</b> hian Bluetooth leh Location hmangin \nCOVID-19 positive mi tu emaw\n nena in interact dan a track a ni\n.]]></string>
     <string name="the_app_alerts_are_accompanied">He App kaltlanga alert ken tel te\nI inrinhlelh hun leh ṭanpuina i ngaih huna tih tur leh \n Mahni in isolate dan </string>
     <string name="the_app_alerts_are_accompanied">The App alerts are accompanied by \ninstructions on how to self-isolate and what \nto do in case you develop symptoms that \nmay need help and support</string>
-    <string name="you_will_be_alerted_if">You will be alerted if someone you have \ncome in close proximity of, even \nunknowingly, tests COVID-19 positive.</string>
-    <string name="with_cowin_20_you_can"><![CDATA[With <b>Aarogya Setu</b>, you can protect yourself, \nyour family and friends, and help our \ncountry in the effort to fight COVID-19]]></string>
-    <string name="register_now">Register Now</string>
+    <string name="you_will_be_alerted_if">Covid19 vei tih finfiah tawh nen, \n i hria emaw hrelo emaw, inhnaih taka \n inawm chuan hriattir i ni ang.</string>
+    <string name="with_cowin_20_you_can"><![CDATA[<b>Aarogya Setu</b> hmang hian, nangmah, i chhungte leh thiante \n i humhim thei a, tin rampum \nCOVID-19 dona kawngah i pui thei bawk a ni]]></string>
+    <string name="register_now">In register rawh le</string>
 
 
     <string name="install">Install</string>
     <string name="bluetooth_and_gps">Bluetooth &amp; Location</string>
     <string name="location_sharing">location sharing</string>
-    <string name="permission_info_tnc_text"><![CDATA[<p>If you would like to contribute to a safer India please indicate your acceptance of the <a href="https://static.swaraksha.gov.in/tnc/">Terms of Service</a> and the <a href="https://web.swaraksha.gov.in/ncv19/privacy/">Privacy Policy</a> by clicking on the button below:</p>]]></string>
+    <string name="permission_info_tnc_text"><![CDATA[<p>India lo him zawk nan hma i la duh a nih chuan, khawngaihin he<a href="https://static.swaraksha.gov.in/tnc/">Terms of Service</a> leh <a href="https://web.swaraksha.gov.in/ncv19/privacy/">Privacy Policy</a> hi i pawmpui tih lantir nan a hnuaia button hi click rawh le:</p>]]></string>
 
-    <string name="auth_error_unknown">There is some error logging you in</string>
+    <string name="auth_error_unknown">Log-in dawnin harsatna a awm tlat</string>
     <string name="auth_error_invalid_otp">OTP i enter kha a dik lo</string>
-    <string name="auth_error_user_disabled">You are not allowed to sign in</string>
+    <string name="auth_error_user_disabled">Sign-in phal i ni lo</string>
     <string name="close">Close</string>
     <string name="internet_connection_lost" translatable="false">Internet Connection a tawp</string>
-    <string name="try_again" translatable="false">Try Again</string>
-    <string name="turn_on_bluetooth" translatable="false">Turn on Bluetooth</string>
+    <string name="try_again" translatable="false">Han tum leh chhin ta che</string>
+    <string name="turn_on_bluetooth" translatable="false">Bluetooth ti nung rawh</string>
     <string name="turn_on" translatable="false">Turn On</string>
     <string name="message_failed_tap_to_retry" translatable="false">Update thei lo. Tap to retry.</string>
     <string name="restart" translatable="false">RESTART</string>
     <string name="sync_data_user_consent">Contact tracing atan bluetooth leh i location hmanga midang nena in interaction te India sawrkar nen share a ni ang.</string>
     <string name="confirm_and_proceed">Confirm &amp; Proceed</string>
     <string name="sync_data_detail">Your data is always saved on your phone. Share it on secure Government Servers if…</string>
-    <string name="sample_collected_for_testing">Sample Collected for Testing</string>
-    <string name="tested_positive">Tested Positive for Covid19</string>
+    <string name="sample_collected_for_testing">Enchhin turin sample lak tawh ani</string>
+    <string name="tested_positive">Covid19 vei tih finfiah a ni</string>
     <string name="syncing_data">Syncing Data</string>
-    <string name="syncing_data_detail"><![CDATA[Sending interaction data captured with Bluetooth & Location services to Government of India.]]></string>
+    <string name="syncing_data_detail"><![CDATA[Bluetooth leh Location services hmanga data lakkhawm te chu Government of India hnen ah thawn mek a ni.]]></string>
     <string name="cancel">Cancel</string>
-    <string name="syncing_data_success">Sync Successful</string>
+    <string name="syncing_data_success">Sync a hlawhting e</string>
     <string name="syncing_data_success_detail">I data India Sawrkar server-ah him takin a awm tawh e.</string>
-    <string name="syncing_data_failed">Sync Failed</string>
+    <string name="syncing_data_failed">Sync a hlawhchham</string>
     <string name="syncing_data_failed_detail">Engemaw fuh lo a awm. Lo ti tha leh teh.</string>
     <string name="retry">Retry</string>
     <string name="ok">Ok</string>
@@ -92,17 +92,17 @@
     <string name="image_on_board_content_description">Show on-boarding</string>
     <string name="image_close_content_description">@string/close</string>
     <string name="permission_alert_message">I lo him zawk nan he app hian bluetooth leh location permission a mamawh a, i phone settings atangin heng hi i on thei ang.</string>
-    <string name="error_network_error">Please check internet connection</string>
+    <string name="error_network_error">Internet connection entha rawh</string>
     <string name="error_location">Location settings-ah phalna a la kim tawk lova. I phone settings-ah thlak a ngai.</string>
     <string name="turn_on_bluetooth_all_times">I him zawk nan bluetooth in on reng a ngai.</string>
     <string name="make_sure_your_phone_is_connected_to_the_wifi_or_switch_to_mobile_data">I phone in internet connection a neih a ngai.</string>
-    <string name="login_failed">Login Failed. Please try again</string>
+    <string name="login_failed">Login thei lo. Ti tha leh rawh</string>
     <string name="image_user_content_description">User</string>
     <string name="image_menu_content_description">Menu</string>
     <string name="generator_scanner_qr_code">Generate/Scan QR Code</string>
     <string name="verify_installed_app">Verify Installed App</string>
     <string name="share_data_with_govt">Share Data with Govt.</string>
-    <string name="call_helpline">Call Helpline (1075)</string>
+    <string name="call_helpline">Tanpuitu biana (1075)</string>
     <string name="settings">Settings</string>
     <string name="share_data_with_govt_detail">COVID-19 positive i nih emaw, test mek i nih chauhin share tur</string>
     <string name="call_helpline_detail">A thlawna COVID-19 chungchanga Health ministry biak theihna</string>
@@ -110,11 +110,11 @@
     <string name="privacy_policy">Privacy Policy</string>
     <string name="terms_of_use">Terms of Use</string>
     <string name="app_version">App Version %s</string>
-    <string name="scan_prompt">Scan QR Code to check health status of someone else</string>
-    <string name="few_seconds">few seconds</string>
+    <string name="scan_prompt">Midang hriselna QR Code hmangin scan rawh</string>
+    <string name="few_seconds">second tlem</string>
     <string name="minutes" translatable="false">min</string>
-    <string name="scan_to_check_status">Scan QR Code to get my health status</string>
-    <string name="tap_to_refresh">Tap to Refresh QR Code</string>
+    <string name="scan_to_check_status">Kan hriselna dinhmun enna QR code scan na</string>
+    <string name="tap_to_refresh">QR code refresh nan hmet rawh</string>
     <string name="qr_code_valid_for">QR code valid for</string>
     <string name="scan_other_s_qr_code">Scan QR code</string>
     <string name="generate_my_qr_code">Generate my QR code</string>
@@ -122,15 +122,15 @@
     <string name="not_generated_aarogya_setu">Official Aarogya Setu app atanga generate a ni lo.</string>
     <string name="request_new_code">Code generate tha turin lo dil leh rawh</string>
     <string name="expired_code">Expired QR Code</string>
-    <string name="low_risk">is at low risk of infection</string>
-    <string name="moderate_risk">is at moderate risk of infection</string>
-    <string name="high_risk">is at high risk of infection</string>
-    <string name="tested_positive_status">has tested positive for COVID-19</string>
+    <string name="low_risk">kai theihna a hniam</string>
+    <string name="moderate_risk">kai theihna a sang lutuk lo</string>
+    <string name="high_risk">kai theihna a sang</string>
+    <string name="tested_positive_status">Covid19 vei tih finfiah a ni</string>
     <string name="provide_necessary_permission">Qr code lak nan i phone-ah permission set a la ngai</string>
     <string name="scan_without_perm_alert">QR code scan turin Camera permission a ngai.</string>
     <string name="open_settings">Open Settings</string>
-    <string name="common_scanning_error">Some error occurred.Please scan again.</string>
-    <string name="hamburger_menu_intro">A lot of Features like Helpline, Privacy Policy, Terms of Use and more can be found here.</string>
+    <string name="common_scanning_error">Harsatna a awm. Khawngaih in han ti leh teh.</string>
+    <string name="hamburger_menu_intro">A thil tih theih tamtak : Helpline, Privacy leh thil dang dang hmun theihin a awm nual ang.</string>
     <string name="seconds" translatable="false">sec</string>
     <string name="refresh" translatable="false">Refresh</string>
 </resources>
