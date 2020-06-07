@@ -35,7 +35,7 @@
     <string name="monitors_your_device_s_proximity_within_6_feet_range">I phone leh midang phone inhnaih dan monitor-na atan a ni a. On reng theih chuan duhthusam a ni.</string>
     <string name="monitors_your_device_s_proximity_within_6_feet_range">I phone leh midang phone inhnaih dan monitor-na atan a ni a. On reng theih chuan duhthusam a ni.</string>
     <string name="tracks_an_individual_s_touch_points_so_can_easily_find_others_who_came_in_close_contact">I Data hi India Sawrkar hnenah chauh a awm a.\nEng lai mahin he app hian i hming leh number hi vantlang hriat theih in a dah chhuak lo.</string>
-    <string name="contribute_to_a_safer_india">I Agree</string>
+    <string name="contribute_to_a_safer_india">I remti e</string>
     <string name="please_select_a_language_en">Eng tawng nge i hman thlang rawh le\nकृपया अपनी भाषा चुनें</string>
     <string name="next">Next</string>
     <string name="please_select_a_language_to_proceed">Tawng pakhat tal i thlan a ngai.</string>
@@ -45,7 +45,7 @@
 
 
     <string name="would_you_like_to">Would you like to be kept informed if you \nhave crossed paths with someone who has \ntested COVID-19 positive?</string>
-    <string name="each_one_of_us">Each one of us has the power to help \nprevent the spread of the Coronavirus \npandemic in India.</string>
+    <string name="each_one_of_us">Mimal tin ten India rama \nCoronavirus darh tur hi \nkan veng thei.</string>
     <string name="simply_1_install_the_app"><![CDATA[Simply,\n1. %s the app \n2. Switch on %s \n3. Set %s to ‘Always’ \n\nInvite your friends and family to \ninstall the app too.]]></string>
     <string name="cowin_20_tracks_through"><![CDATA[<b>Aarogya Setu</b> tracks through a Bluetooth &amp; Location \ngenerated social graph, your interaction \nwith someone who could have tested \nCOVID-19 positive.]]></string>
     <string name="the_app_alerts_are_accompanied">The App alerts are accompanied by \ninstructions on how to self-isolate and what \nto do in case you develop symptoms that \nmay need help and support</string>
@@ -60,16 +60,16 @@
     <string name="permission_info_tnc_text"><![CDATA[<p>If you would like to contribute to a safer India please indicate your acceptance of the <a href="https://static.swaraksha.gov.in/tnc/">Terms of Service</a> and the <a href="https://web.swaraksha.gov.in/ncv19/privacy/">Privacy Policy</a> by clicking on the button below:</p>]]></string>
 
     <string name="auth_error_unknown">There is some error logging you in</string>
-    <string name="auth_error_invalid_otp">The OTP you have entered is incorrect</string>
+    <string name="auth_error_invalid_otp">OTP i enter kha a dik lo</string>
     <string name="auth_error_user_disabled">You are not allowed to sign in</string>
     <string name="close">Close</string>
-    <string name="internet_connection_lost" translatable="false">Internet Connection Lost</string>
+    <string name="internet_connection_lost" translatable="false">Internet Connection a tawp</string>
     <string name="try_again" translatable="false">Try Again</string>
     <string name="turn_on_bluetooth" translatable="false">Turn on Bluetooth</string>
     <string name="turn_on" translatable="false">Turn On</string>
-    <string name="message_failed_tap_to_retry" translatable="false">Failed to update. Tap to retry.</string>
+    <string name="message_failed_tap_to_retry" translatable="false">Update thei lo. Tap to retry.</string>
     <string name="restart" translatable="false">RESTART</string>
-    <string name="sync_data_user_consent">To help contact tracing, your interaction data captured with Bluetooth and Location services will be shared with Government of India.</string>
+    <string name="sync_data_user_consent">Contact tracing atan bluetooth leh i location hmanga midang nena in interaction te India sawrkar nen share a ni ang.</string>
     <string name="confirm_and_proceed">Confirm &amp; Proceed</string>
     <string name="sync_data_detail">Your data is always saved on your phone. Share it on secure Government Servers if…</string>
     <string name="sample_collected_for_testing">Sample Collected for Testing</string>
@@ -103,9 +103,9 @@
     <string name="share_data_with_govt">Share Data with Govt.</string>
     <string name="call_helpline">Call Helpline (1075)</string>
     <string name="settings">Settings</string>
-    <string name="share_data_with_govt_detail">Share only if you have tested positive for COVID-19 or are currently being tested</string>
+    <string name="share_data_with_govt_detail">COVID-19 positive i nih emaw, test mek i nih chauhin share tur</string>
     <string name="call_helpline_detail">Health ministry toll-free helpline for queries related to COVID-19</string>
-    <string name="faq">FAQs</string>
+    <string name="faq">Zawhna common deuhte</string>
     <string name="privacy_policy">Privacy Policy</string>
     <string name="terms_of_use">Terms of Use</string>
     <string name="app_version">App Version %s</string>
@@ -118,15 +118,15 @@
     <string name="scan_other_s_qr_code">Scan QR code</string>
     <string name="generate_my_qr_code">Generate my QR code</string>
     <string name="invalid_qr_code">Invalid QR Code</string>
-    <string name="not_generated_aarogya_setu">It has not been generated by official Aarogya Setu app.</string>
-    <string name="request_new_code">Please request the person to generate new code</string>
+    <string name="not_generated_aarogya_setu">Official Aarogya Setu app atanga generate a ni lo.</string>
+    <string name="request_new_code">Code generate tha turin lo dil leh rawh</string>
     <string name="expired_code">Expired QR Code</string>
     <string name="low_risk">is at low risk of infection</string>
     <string name="moderate_risk">is at moderate risk of infection</string>
     <string name="high_risk">is at high risk of infection</string>
     <string name="tested_positive_status">has tested positive for COVID-19</string>
-    <string name="provide_necessary_permission">Please provide necessary permission to capture your Qr code</string>
-    <string name="scan_without_perm_alert">App needs Camera permission for QR code scanning.</string>
+    <string name="provide_necessary_permission">Qr code lak nan i phone-ah permission set a la ngai</string>
+    <string name="scan_without_perm_alert">QR code scan turin Camera permission a ngai.</string>
     <string name="open_settings">Open Settings</string>
     <string name="common_scanning_error">Some error occurred.Please scan again.</string>
     <string name="hamburger_menu_intro">A lot of Features like Helpline, Privacy Policy, Terms of Use and more can be found here.</string>
