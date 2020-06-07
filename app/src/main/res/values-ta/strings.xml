@@ -49,7 +49,7 @@
     <string name="location_sharing">location sharing</string>
     <string name="permission_info_tnc_text"><![CDATA[<p>நீங்கள் ஒரு பாதுகாப்பான இந்தியாவுக்கு பங்களிக்க விரும்பினால், கீழேயுள்ள பொத்தானைக் கிளிக் செய்வதன் மூலம் <a href="https://static.swaraksha.gov.in/tnc/">சேவை விதிமுறைகள்</a> மற்றும் <a href="https://web.swaraksha.gov.in/ncv19/privacy/">தனியுரிமைக் கொள்கையை</a> நீங்கள் ஏற்றுக்கொள்வதைக் குறிக்கவும்:</p>]]></string>
     <string name="auth_error_unknown">நீங்கள் உள்நுழைய சில பிழை உள்ளது</string>
-    <string name="auth_error_invalid_otp">நீங்கள் உள்ளிட்ட OTP தவறானது நீங்கள் உள்ளிட்ட OTP தவறானது</string>
+    <string name="auth_error_invalid_otp">நீங்கள் உள்ளிட்ட OTP தவறானது</string>
     <string name="auth_error_user_disabled">You are not allowed to sign in</string>
     <string name="close">மூடவும்</string>
     <string name="sync_data_user_consent">தொடர்பு கொள்ள உதவுவதற்கு, ப்ளூடூத் மற்றும் GPS சேவைகள் மூலம் கைப்பற்றப்பட்ட உங்கள் தொடர்பு தரவு இந்திய அரசாங்கத்துடன் பகிரப்படும்.</string>
