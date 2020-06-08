@@ -13,11 +13,16 @@ import com.crashlytics.android.Crashlytics;
 import com.google.android.gms.location.LocationServices;
 import com.google.firebase.FirebaseApp;
 
+import java.io.IOException;
 import java.util.List;
 import java.util.concurrent.Executors;
 
 import io.fabric.sdk.android.Fabric;
+import nic.goi.aarogyasetu.utility.ConfigUtil;
+import nic.goi.aarogyasetu.utility.Constants;
 import nic.goi.aarogyasetu.utility.CorUtility;
+
+import static nic.goi.aarogyasetu.utility.ConfigUtil.getProperty;
 
 /**
  * @author Chandrapal Yadav
@@ -26,8 +31,8 @@ import nic.goi.aarogyasetu.utility.CorUtility;
 public class CoronaApplication extends Application implements Configuration.Provider {
 
     public static CoronaApplication instance;
-     static Location lastKnownLocation = null;
-    
+    static Location lastKnownLocation = null;
+
     public static CoronaApplication getInstance() {
         return instance;
     }
@@ -40,7 +45,7 @@ public class CoronaApplication extends Application implements Configuration.Prov
         WorkManager.initialize(
                 this,
                 new Configuration.Builder()
-                        .setExecutor(Executors.newFixedThreadPool(8))
+                        .setExecutor(Executors.newFixedThreadPool(Integer.parseInt(getProperty(Constants.NEW_FIXED_THREADPOOL_SIZE, getApplicationContext()))))
                         .build());
         new Thread(() -> {
             Fabric.with(CoronaApplication.getInstance(), new Crashlytics());
@@ -48,20 +53,17 @@ public class CoronaApplication extends Application implements Configuration.Prov
 
     }
 
-    public void setBestLocation(Location location)
-    {
+    public void setBestLocation(Location location) {
         lastKnownLocation = location;
     }
 
-    public Location getAppLastLocation()
-    {
+    public Location getAppLastLocation() {
         return lastKnownLocation;
     }
 
     public Location getDeviceLastKnownLocation() {
 
-        if(CorUtility.Companion.isLocationPermissionAvailable(CoronaApplication.getInstance()))
-        {
+        if (CorUtility.Companion.isLocationPermissionAvailable(CoronaApplication.getInstance())) {
             LocationManager mLocationManager = (LocationManager) getApplicationContext().getSystemService(LOCATION_SERVICE);
             List<String> providers = mLocationManager.getProviders(true);
             for (String provider : providers) {
@@ -73,13 +75,14 @@ public class CoronaApplication extends Application implements Configuration.Prov
                     if (lastKnownLocation == null || l.getAccuracy() > lastKnownLocation.getAccuracy()) {
                         lastKnownLocation = l;
                     }
-                }catch (SecurityException e){
+                } catch (SecurityException e) {
 
                 }
             }
         }
         return lastKnownLocation;
     }
+
     /* warmUpLocation */
     public static void warmUpLocation() {
         if (CorUtility.Companion.isLocationPermissionAvailable(CoronaApplication.getInstance())) {
@@ -98,10 +101,6 @@ public class CoronaApplication extends Application implements Configuration.Prov
     @NonNull
     @Override
     public Configuration getWorkManagerConfiguration() {
-        return new Configuration.Builder().setExecutor(Executors.newFixedThreadPool(8)).build();
+        return new Configuration.Builder().setExecutor(Executors.newFixedThreadPool(Integer.parseInt(getProperty(Constants.NEW_FIXED_THREADPOOL_SIZE, getApplicationContext())))).build();
     }
-
-
-
-
 }

@@ -64,6 +64,7 @@ public class Constants {
     public static final String RESTART_TO_UPDATE = "Please restart to update";
     public static final String UPLOAD_TYPE = "upload_type";
     public static final String LEGACY_ISSUE = "Legacy advertising data too big";
+    public static final String NEW_FIXED_THREADPOOL_SIZE = "newFixedThreadPoolSize";
 
     // Move to Localized string
     public static final String ACTION_GOTO_SETTINGS = "Open settings";
