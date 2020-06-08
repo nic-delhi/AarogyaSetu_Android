@@ -45,7 +45,7 @@
     <string name="with_cowin_20_you_can"><![CDATA[<b>ஆரோக்கிய சேது</b> செயலி மூலம், நீங்கள் உங்களையும், உங்கள் குடும்பத்தினரையும், நண்பர்களையும் , நமது நாட்டை யும் கோவிட்-19 ஐ எதிர்க்க உதவலாம்.]]></string>
     <string name="register_now">பதிவு செய்யவும்</string>
     <string name="install">Install</string>
-    <string name="bluetooth_and_gps">Bluetooth &amp; Location</string>
+    <string name="bluetooth_and_gps">புளூடூத் மற்றும் இடம்</string>
     <string name="location_sharing">location sharing</string>
     <string name="permission_info_tnc_text"><![CDATA[<p>நீங்கள் ஒரு பாதுகாப்பான இந்தியாவுக்கு பங்களிக்க விரும்பினால், கீழேயுள்ள பொத்தானைக் கிளிக் செய்வதன் மூலம் <a href="https://static.swaraksha.gov.in/tnc/">சேவை விதிமுறைகள்</a> மற்றும் <a href="https://web.swaraksha.gov.in/ncv19/privacy/">தனியுரிமைக் கொள்கையை</a> நீங்கள் ஏற்றுக்கொள்வதைக் குறிக்கவும்:</p>]]></string>
     <string name="auth_error_unknown">நீங்கள் உள்நுழைய சில பிழை உள்ளது</string>

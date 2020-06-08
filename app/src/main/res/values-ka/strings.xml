@@ -45,7 +45,7 @@
     <string name="with_cowin_20_you_can"><![CDATA[<b>Aarogya Setu</b>, ನೀವು ನಿಮ್ಮನ್ನು, ನಿಮ್ಮ ಕುಟುಂಬ ಮತ್ತು ಸ್ನೇಹಿತರನ್ನು ರಕ್ಷಿಸಿಕೊಳ್ಳಬಹುದು ಮತ್ತು ನಮ್ಮ ದೇಶಕ್ಕೆ COVID-19 ವಿರುದ್ಧ ಹೋರಾಡುವಲ್ಲಿ ಸಹಾಯ ಮಾಡಬಹುದು]]></string>
     <string name="register_now">ಈಗಲೇ ನೋಂದಣಿ ಮಾಡಿ</string>
     <string name="install">Install</string>
-    <string name="bluetooth_and_gps">Bluetooth &amp; Location</string>
+    <string name="bluetooth_and_gps">ಬ್ಲೂಟೂತ್ ಮತ್ತು ಸ್ಥಳ</string>
     <string name="location_sharing">location sharing</string>
     <string name="permission_info_tnc_text"><![CDATA[<p>ನೀವು ಸುರಕ್ಷಿತ ಭಾರತಕ್ಕೆ ಕೊಡುಗೆ ನೀಡಲು ಬಯಸಿದರೆ, ದಯವಿಟ್ಟು ಈ ಕೆಳಗಿನ ಬಟನ್ ಕ್ಲಿಕ್ ಮಾಡುವ ಮೂಲಕ ಸೇವೆಯ  <a href="https://static.swaraksha.gov.in/tnc/">ನಿಯಮಗಳು</a> ಮತ್ತು <a href="https://web.swaraksha.gov.in/ncv19/privacy/"> ಗೌಪ್ಯತಾ ನೀತಿಗಳಿಗೆ</a> ನಿಮ್ಮ ಅಂಗೀಕಾರವನ್ನು ಸೂಚಿಸಿ:</p>]]></string>
     <string name="auth_error_unknown">ಲಾಗಿನ್‌ನಲ್ಲಿ ಕೆಲವು ದೋಷವಿದೆ</string>

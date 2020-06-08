@@ -45,7 +45,7 @@
     <string name="with_cowin_20_you_can"><![CDATA[<b>आरोग्य सेतू</b> च्या मदतीने आपण स्वतःचे, आपल्या कुटुंबाचे आणि मित्रांचे रक्षण करू शकता आणि कोविड -१९ शी लढण्याच्या प्रयत्नात आमच्या देशास मदत करू शकता]]></string>
     <string name="register_now">अIता नोंदणी करा</string>
     <string name="install">इन्स्टॉल</string>
-    <string name="bluetooth_and_gps">स्थान</string>
+    <string name="bluetooth_and_gps">ब्लूटुथ आणि स्थान</string>
     <string name="location_sharing">स्थान</string>
     <string name="permission_info_tnc_text"><![CDATA[<p>आपण सुरक्षित भारताला हातभार लावू इच्छित असल्यास कृपया खाली दिलेल्या बटणावर क्लिक करुन आपण  <a href="https://static.swaraksha.gov.in/tnc/">सेवा</a> अटी आणि <a href="https://web.swaraksha.gov.in/ncv19/privacy/"> गोपनीयता धोरण</a>स्वीकारण्यास सूचित करा:</p>]]></string>
     <string name="auth_error_unknown">There is some error login you in</string>
