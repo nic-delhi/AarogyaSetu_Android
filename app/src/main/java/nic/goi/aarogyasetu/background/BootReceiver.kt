@@ -15,9 +15,9 @@ import nic.goi.aarogyasetu.utility.CorUtility
 
 class BootReceiver : BroadcastReceiver() {
 
-    override fun onReceive(context: Context?, bootIntent: Intent?) {
+    override fun onReceive(context: Context?, intent: Intent?) {
         if (context == null) return
-        if (bootIntent?.action == Intent.ACTION_BOOT_COMPLETED
+        if (intent?.action == Intent.ACTION_BOOT_COMPLETED
                 || intent.getAction().equals("android.intent.action.QUICKBOOT_POWERON")
                 || intent.getAction().equals("com.htc.intent.action.QUICKBOOT_POWERON")) {
             startService(context)
