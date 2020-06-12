@@ -40,7 +40,7 @@ class SupportInterceptor : Interceptor, Authenticator {
      * everytime we get a 401 error code
      */
     @Throws(IOException::class)
-    override fun authenticate(route: Route?, response: Response?): Request? {
+    override fun authenticate(route: Route?, response: Response): Request? {
         var requestAvailable: Request? = null
         try {
             var isTokenUpdated = false
@@ -54,9 +54,9 @@ class SupportInterceptor : Interceptor, Authenticator {
             if (!isTokenUpdated) {
                 throw IOException()
             }
-            requestAvailable = response?.request()?.newBuilder()
-                ?.addHeader(Constants.AUTH, AuthUtility.getToken()?:"")
-                ?.build()
+            requestAvailable = response.request.newBuilder()
+                .addHeader(Constants.AUTH, AuthUtility.getToken()?:"")
+                .build()
             return requestAvailable
         } catch (ex: IOException) {
             AuthUtility.logout(CoronaApplication.instance)
@@ -72,5 +72,4 @@ class SupportInterceptor : Interceptor, Authenticator {
         }
         return true
     }
-
 }
