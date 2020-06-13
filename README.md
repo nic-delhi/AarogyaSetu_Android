@@ -89,7 +89,7 @@ tnc_url=<Your URL>
 verify_app_url=<Your URL>
 
 # APK sign Keystore details:
-key_store_cetificate = yourCertificate.jks
+key_store_certificate = yourCertificate.jks
 key_store_password = yourStorePassword
 key_alias = yourAlias
 key_password = yourPassword
