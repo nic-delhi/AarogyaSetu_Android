@@ -66,6 +66,7 @@
     <string name="syncing_data_failed_detail">કંઈક ખોટું થયું છે, કૃપા કરીને ફરીથી પ્રયત્ન કરો.</string>
     <string name="retry">ફરીથી પ્રયત્ન કરો</string>
     <string name="ok">બરાબર</string>
+    <string name="log_out">લૉગ આઉટ</string>
     <string name="image_language_change_content_description">ભાષા બદલો</string>
     <string name="image_share_content_description">એપ્લિકેશન શેર કરો</string>
     <string name="image_back_content_description">પાછા જાઓ</string>

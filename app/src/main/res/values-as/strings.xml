@@ -73,6 +73,7 @@
     <string name="turn_on_bluetooth_all_times">সুৰক্ষামূলক আপডেটৰ বাবে আৰু অন্য ডিভাইছৰ সৈতে proximity নিৰীক্ষণৰ বাবে Bluetooth অনবৰতে অন ৰাখক</string>
     <string name="make_sure_your_phone_is_connected_to_the_wifi_or_switch_to_mobile_data">নিশ্চিত কৰক যাতে আপোনাৰ ফোনটো ৱাই-ফাইৰ সৈতে সংযুক্ত হৈ আছে অথবা মোবাইল ডাটা অন কৰক</string>
     <string name="login_failed">লগ্ ইন্ ফেইল আৰু এবাৰ চেষ্টা কৰক</string>
+    <string name="log_out">প্রস্থান</string>
     <string name="image_user_content_description">ব্যৱহাৰকাৰী</string>
     <string name="image_menu_content_description">মেন্যু</string>
     <string name="generator_scanner_qr_code">QR কোড সৃষ্টি/স্কেন কৰক</string>

@@ -95,6 +95,7 @@
     <string name="turn_on_bluetooth_all_times">Bluetooth must be on at all times to track your proximity to other devices and give you accurate safety updates.</string>
     <string name="make_sure_your_phone_is_connected_to_the_wifi_or_switch_to_mobile_data">Make sure your phone is connected to the WiFi or switch to mobile data.</string>
     <string name="login_failed">Login Failed. Please try again</string>
+    <string name="log_out">Log Out</string>
     <string name="image_user_content_description">User</string>
     <string name="image_menu_content_description">Menu</string>
     <string name="generator_scanner_qr_code">Generate/Scan QR Code</string>

@@ -47,6 +47,7 @@
     <string name="install">Install</string>
     <string name="bluetooth_and_gps">Bluetooth &amp; Location</string>
     <string name="location_sharing">location sharing</string>
+    <string name="log_out">ലോഗ് .ട്ട് ചെയ്യുക</string>
     <string name="permission_info_tnc_text"><![CDATA[<p>നിങ്ങൾ ഒരു സുരക്ഷിത ഭാരതത്തിനു വേണ്ടി സംഭാവന ചെയ്യുവാൻ ആഗ്രഹിക്കുന്നുവെങ്കിൽ, താഴെയുള്ള ബട്ടണിൽ ക്ലിക്കുചെയ്തു <a href="https://static.swaraksha.gov.in/tnc/">സേവന നിബന്ധനകളും</a> <a href="https://web.swaraksha.gov.in/ncv19/privacy/">സ്വകാര്യതാ നയവും</a> അംഗീകരിക്കുക:</p>]]></string>
     <string name="auth_error_unknown">സാങ്കേതിക പിഴവുകൾ കാരണം താങ്കളെ ഇപ്പോൾ ലോഗിൻ ചെയ്യാൻ സാധിക്കുന്നില്ല</string>
     <string name="auth_error_invalid_otp">ddനിങ്ങൾ നൽകിയ OTP തെറ്റാണ്</string>

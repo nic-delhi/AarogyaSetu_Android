@@ -37,6 +37,7 @@ import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.fragment.app.DialogFragment;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentTransaction;
+import androidx.multidex.BuildConfig;
 
 import com.google.android.material.snackbar.Snackbar;
 import com.google.android.play.core.appupdate.AppUpdateInfo;
@@ -562,6 +563,11 @@ public class HomeActivity extends AppCompatActivity implements SelectLanguageFra
             case R.id.terms:
                 loadUrl(BuildConfig.TNC_URL);
                 break;
+
+            case R.id.logout:
+                AuthUtility.logout(this);
+                break;
+
             default:
                 break;
         }

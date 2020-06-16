@@ -81,6 +81,7 @@
     <string name="image_menu_content_description">ਮੇਨੂ</string>
     <string name="generator_scanner_qr_code">QR ਕੋਡ ਬਣਾਓ/ਸਕੈਨ ਕਰੋ</string>
     <string name="verify_installed_app">ਇੰਸਟਾਲ ਐਪ ਦੀ ਜਾਂਚ ਕਰੋ</string>
+    <string name="log_out">ਲਾੱਗ ਆਊਟ</string>
     <string name="share_data_with_govt">ਸਰਕਾਰ ਨਾਲ ਡਾਟਾ ਸਾਂਝਾ ਕਰੋ।</string>
     <string name="call_helpline">ਕਾਲ ਹੈਲਪਲਾਈਨ (1075)</string>
     <string name="settings">ਸੈਟਿੰਗ</string>

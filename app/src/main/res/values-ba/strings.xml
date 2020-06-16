@@ -93,6 +93,7 @@
     <string name="scan_prompt">অন্য কারও স্বাস্থ্যের অবস্থা পরীক্ষা করতে কিউআর কোড স্ক্যান করুন</string>
     <string name="few_seconds">কয়েক সেকেন্ডের</string>
     <string name="minutes">মিনিট</string>
+    <string name="log_out">প্রস্থান</string>
     <string name="scan_to_check_status">আমার স্বাস্থ্যের অবস্থা পেতে কিউআর কোডটি স্ক্যান করুন</string>
     <string name="tap_to_refresh">কিউআর কোড রিফ্রেশ করতে আলতো চাপুন</string>
     <string name="qr_code_valid_for">কিউআর কোড এর জন্য বৈধ</string>
