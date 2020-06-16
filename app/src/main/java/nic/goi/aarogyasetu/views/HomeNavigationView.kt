@@ -11,6 +11,7 @@ import nic.goi.aarogyasetu.BuildConfig
 import nic.goi.aarogyasetu.R
 import nic.goi.aarogyasetu.utility.AuthUtility
 import nic.goi.aarogyasetu.utility.LocalizationUtil
+import org.w3c.dom.Text
 
 class HomeNavigationView(context: Context, attrs: AttributeSet) : NavigationView(context, attrs) {
     var view: View? = null
@@ -24,6 +25,7 @@ class HomeNavigationView(context: Context, attrs: AttributeSet) : NavigationView
         view.findViewById<TextView>(R.id.faq).setOnClickListener(onClick)
         view.findViewById<TextView>(R.id.privacy_policy).setOnClickListener(onClick)
         view.findViewById<TextView>(R.id.terms).setOnClickListener(onClick)
+        view.findViewById<TextView>(R.id.logout).setOnClickListener(onClick)
         this.view = view
     }
 
@@ -40,6 +42,9 @@ class HomeNavigationView(context: Context, attrs: AttributeSet) : NavigationView
             } else {
                 name.visibility = View.GONE
             }
+
+            view.findViewById<TextView>(R.id.logout).text =
+                LocalizationUtil.getLocalisedString(context,R.string.log_out)
 
             view.findViewById<TextView>(R.id.tv_qr).text =
                 LocalizationUtil.getLocalisedString(context, R.string.generator_scanner_qr_code)

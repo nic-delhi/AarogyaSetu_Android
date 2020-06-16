@@ -104,6 +104,7 @@
     <string name="request_new_code">कृपया नए कोड जनरेट करने के लिए व्यक्ति से अनुरोध करें</string>
     <string name="expired_code">समय सीमा समाप्त क्यूआर कोड</string>
     <string name="low_risk">संक्रमण का कम जोखिम है</string>
+    <string name="log_out">लॉग आउट</string>
     <string name="moderate_risk">संक्रमण के मध्यम जोखिम में है</string>
     <string name="high_risk">संक्रमण का उच्च जोखिम है</string>
     <string name="tested_positive_status">COVID-19 के लिए सकारात्मक परीक्षण किया है</string>

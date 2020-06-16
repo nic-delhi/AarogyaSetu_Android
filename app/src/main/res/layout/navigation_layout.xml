@@ -314,6 +314,21 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/privacy_policy" />
 
+            <TextView
+                android:id="@+id/logout"
+                style="@style/TextStyleFontSemiBold"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:background="?android:attr/selectableItemBackground"
+                android:gravity="center_vertical"
+                android:padding="16dp"
+                android:text="@string/log_out"
+                android:textColor="@color/chat_bubble_red"
+                android:textSize="16sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/terms" />
+
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 
