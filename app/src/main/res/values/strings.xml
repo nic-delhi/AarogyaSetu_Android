@@ -131,4 +131,13 @@
     <string name="hamburger_menu_intro">A lot of Features like Helpline, Privacy Policy, Terms of Use and more can be found here.</string>
     <string name="seconds" translatable="false">sec</string>
     <string name="refresh" translatable="false">Refresh</string>
+
+    <!--social distancing breach alert-->
+    <string name="btn_white_list_device">Add as family member</string>
+    <string name="title_distance_breach">Be cautious !!</string>
+    <string name="multiple_breaches_message">You are getting in close proximity to other Arogya Setu users, please keep safe distance.
+If they are your family members, add them as “Family” to avoid further alerts for these people.</string>
+    <string name="single_breache_message">You are getting in close proximity to another Arogya Setu user, please keep safe distance.
+If the person is your family member, add the person as “family” to avoid further alerts for this person.</string>
+
 </resources>

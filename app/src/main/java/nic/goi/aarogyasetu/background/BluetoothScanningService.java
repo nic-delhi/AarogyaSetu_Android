@@ -45,6 +45,7 @@ import nic.goi.aarogyasetu.utility.CorUtility;
 import nic.goi.aarogyasetu.utility.CorUtilityKt;
 import nic.goi.aarogyasetu.utility.Logger;
 import nic.goi.aarogyasetu.models.BluetoothModel;
+import nic.goi.aarogyasetu.utility.SocialDistancingHelper;
 import nic.goi.aarogyasetu.views.SplashActivity;
 
 /**
@@ -61,6 +62,8 @@ public class BluetoothScanningService extends Service implements AdaptiveScanHel
     private static final int FIVE_MINUTES = 5 * 60 * 1000;
     private long searchTimestamp;
 
+    //Helper to manage social distancing
+    private SocialDistancingHelper socialDistancingHelper;
     private final GattServer mGattServer = new GattServer();
 
     private static final int NOTIF_ID = 1973;
@@ -72,6 +75,8 @@ public class BluetoothScanningService extends Service implements AdaptiveScanHel
             super.onScanResult(callbackType, result);
             Logger.d(TAG, "onScanResult : Scanning : " + result.getDevice().getName());
             if (CorUtility.isBluetoothPermissionAvailable(CoronaApplication.instance)) {
+                //check if user is near to other users and is not maintaining social distance
+                socialDistancingHelper.checkForSocialDistancingBreach(result);
                 if (result == null || result.getDevice() == null || result.getDevice().getName() == null)
                     return;
                 String deviceName = result.getDevice().getName();
@@ -116,6 +121,8 @@ public class BluetoothScanningService extends Service implements AdaptiveScanHel
     @Override
     public void onCreate() {
         super.onCreate();
+        //initialize social distancing helper
+        socialDistancingHelper = new SocialDistancingHelper(this);
         createNotificationChannel();
         Notification notification = getNotification(Constants.NOTIFICATION_DESC);
         startForeground(NOTIF_ID, notification);
@@ -307,6 +314,8 @@ public class BluetoothScanningService extends Service implements AdaptiveScanHel
         Logger.d(TAG, "onDestroy");
         super.onDestroy();
         serviceRunning = false;
+        socialDistancingHelper.onDestroy();
+        socialDistancingHelper = null;
         try {
             if (mBluetoothStatusChangeReceiver != null) {
                 unregisterReceiver(mBluetoothStatusChangeReceiver);

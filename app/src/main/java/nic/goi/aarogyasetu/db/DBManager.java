@@ -2,6 +2,7 @@ package nic.goi.aarogyasetu.db;
 
 
 import nic.goi.aarogyasetu.models.BluetoothData;
+import nic.goi.aarogyasetu.models.WhiteListData;
 
 import com.google.android.gms.tasks.Task;
 import com.google.android.gms.tasks.Tasks;
@@ -30,4 +31,8 @@ public class DBManager {
 
         return Tasks.call(executor, () -> FightCovidDB.getInstance().getBluetoothDataDao().insertNearbyUser(userDeviceInfo));
     }
+    public static Task<Long> insertWhiteListData(WhiteListData whiteListData) {
+        return Tasks.call(executor, () -> FightCovidDB.getInstance().getWhiteListDataDao().insertWhiteListDevice(whiteListData));
+    }
+
 }

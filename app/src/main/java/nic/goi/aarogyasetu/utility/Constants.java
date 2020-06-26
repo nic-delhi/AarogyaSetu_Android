@@ -80,6 +80,10 @@ public class Constants {
     public static final String COLOR_CODE = "color_code";
     public static final String STATUS_CODE = "status_code";
     public static final String MESSAGE = "message";
+    public static final String ARGS_DEVICE_ADDRESS = "device_address";
+    public static final String ARGS_DEVICE_NAME = "device_name";
+    public static final String ARGS_NOTIFICATION_ID = "notification_id";
+    public static final String ACTION_WHITELIST_DEVICE = "whitelist_device";
 
     public static class Errors {
         public static final String SELECT_OTHER_APP = "Select any other app to open this url";

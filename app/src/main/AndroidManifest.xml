@@ -111,6 +111,8 @@
                 <action android:name="android.location.PROVIDERS_CHANGED" />
             </intent-filter>
         </receiver>
+        <receiver android:name=".utility.WhiteListBroadcastReceiver"
+            android:exported="false"/>
 
         <meta-data
             android:name="com.google.firebase.messaging.default_notification_icon"
