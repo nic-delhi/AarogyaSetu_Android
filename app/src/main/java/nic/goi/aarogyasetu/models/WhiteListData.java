@@ -10,6 +10,9 @@ import com.google.gson.annotations.SerializedName;
 
 import org.jetbrains.annotations.NotNull;
 
+/**
+ * WhiteListData table to save whiteListed devices in Room DB.
+ */
 @TypeConverters({Converters.class})
 @Entity(tableName = "white_list_devices")
 public class WhiteListData {
@@ -27,23 +30,49 @@ public class WhiteListData {
     private String deviceId;
 
 
+    /**
+     * Instantiates a new White list data.
+     *
+     * @param name     the name
+     * @param deviceId the device id
+     */
     public WhiteListData(String name, String deviceId) {
         this.name = name;
         this.deviceId = deviceId;
     }
 
+    /**
+     * Gets name.
+     *
+     * @return the name
+     */
     public String getName() {
         return name;
     }
 
+    /**
+     * Sets name.
+     *
+     * @param name the name
+     */
     public void setName(String name) {
         this.name = name;
     }
 
+    /**
+     * Gets device id.
+     *
+     * @return the device id
+     */
     public String getDeviceId() {
         return deviceId;
     }
 
+    /**
+     * Sets device id.
+     *
+     * @param deviceId the device id
+     */
     public void setDeviceId(String deviceId) {
         this.deviceId = deviceId;
     }

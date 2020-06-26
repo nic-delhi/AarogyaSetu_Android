@@ -16,7 +16,7 @@ import nic.goi.aarogyasetu.models.BluetoothData;
 import nic.goi.aarogyasetu.models.WhiteListData;
 
 
-@Database(entities = {BluetoothData.class, WhiteListData.class}, version = 3)
+@Database(entities = {BluetoothData.class, WhiteListData.class}, version = 4)
 public abstract class FightCovidDB extends RoomDatabase {
 
     private static FightCovidDB sInstance;

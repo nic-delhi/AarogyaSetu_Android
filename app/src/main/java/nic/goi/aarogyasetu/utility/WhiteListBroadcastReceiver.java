@@ -9,8 +9,7 @@ import nic.goi.aarogyasetu.db.DBManager;
 import nic.goi.aarogyasetu.models.WhiteListData;
 
 /**
- * The type White list broadcast receiver,
- * will receive broadcast when user tap on "add to whitelist" from notification
+ * The WhiteListBroadcastReceiver will receive broadcast when user tap on "Add as family member" from notification
  */
 public class WhiteListBroadcastReceiver extends BroadcastReceiver {
 

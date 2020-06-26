@@ -125,9 +125,9 @@ class SplashActivity : AppCompatActivity(), SelectLanguageFragment.LanguageChang
         } else if (getIntent().hasExtra(Constants.DEEPLINK_TAG)||getIntent().hasExtra(Constants.TARGET)) // Notification
         {
             try {
-                val target = getIntent().getStringExtra(Constants.TARGET)
+               val target = getIntent().getStringExtra(Constants.TARGET)
                 if(!target.isNullOrBlank())
-                    intent.putExtra(Constants.URL,target)
+                intent.putExtra(Constants.URL,target)
                 val tagId =
                     getIntent().getStringExtra(Constants.DEEPLINK_TAG)
                 intent.putExtra(Constants.DEEPLINK_TAG, Integer.valueOf(tagId))
