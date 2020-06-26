@@ -76,7 +76,7 @@ public class BluetoothScanningService extends Service implements AdaptiveScanHel
     private List<String> whiteListDevices = new ArrayList<>();          //Id's for devices that are whitelisted
     private List<String> currentNearDevices = new ArrayList<>();        //Id's for current nearby available devices
     private AlertDialog breachDialog;
-    private static final int breachRssiRange = -50;
+    private static final int BREACH_RSSI_THRESHOLD = -50;
 
     private final GattServer mGattServer = new GattServer();
 
@@ -93,7 +93,7 @@ public class BluetoothScanningService extends Service implements AdaptiveScanHel
                     return;
                 }
                 Logger.d(TAG, "onScanResult : Scanning : " + result.getDevice() + " RSSI:" + result.getRssi());
-                if (result.getRssi() > breachRssiRange) {
+                if (result.getRssi() > BREACH_RSSI_THRESHOLD) {
                     if (!whiteListDevices.contains(result.getDevice().getAddress()) && !currentNearDevices.contains(result.getDevice().getAddress())) {
                             currentNearDevices.add(result.getDevice().getAddress());
                         if (CoronaApplication.appIsInBackground) {
@@ -232,7 +232,7 @@ public class BluetoothScanningService extends Service implements AdaptiveScanHel
     private void showBreachNotification(ScanResult scanResult) {
         Notification notification = getBreachNotification(scanResult);
         NotificationManagerCompat notificationManager = NotificationManagerCompat.from(this);
-// notificationId is a unique int for each notification that you must define
+        // notificationId is a unique int for each notification that you must define
         notificationManager.notify(12, notification);
     }
 
@@ -241,9 +241,7 @@ public class BluetoothScanningService extends Service implements AdaptiveScanHel
         Intent notificationIntent = new Intent(this, SplashActivity.class);
         notificationIntent.putExtra("device", scanResult.getDevice());
         PendingIntent notificationClickIntent = PendingIntent.getActivities(this, 0, new Intent[]{notificationIntent}, PendingIntent.FLAG_UPDATE_CURRENT);
-
         String notificationDescText = getString(R.string.single_breache_message);
-
 
         // Add action button in the notification
         Intent snoozeIntent = new Intent(this, WhiteListBroadcastReceiver.class);
@@ -347,7 +345,7 @@ public class BluetoothScanningService extends Service implements AdaptiveScanHel
         }
         try {
             if (isBluetoothAvailable()) {
-                mBluetoothLeScanner.startScan(null, settings.build(), mScanCallback);
+                mBluetoothLeScanner.startScan(filters, settings.build(), mScanCallback);
             } else {
                 Logger.e(TAG, "startingScan failed : Bluetooth not available");
             }

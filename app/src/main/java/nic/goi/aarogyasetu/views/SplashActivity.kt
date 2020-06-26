@@ -42,20 +42,15 @@ class SplashActivity : AppCompatActivity(), SelectLanguageFragment.LanguageChang
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        if (!BluetoothScanningService.serviceRunning) {
-            CorUtility.startService(this)
+        val rooted: Boolean = CommonUtils.isRooted(this)
+        if (rooted) {
+            showDialogAndFinish(Constants.ROOT_ALERT)
+            AnalyticsUtils.sendBasicEvent(EventNames.EVENT_PHONE_ROOTED, ScreenNames.SCREEN_SPLASH)
+        } else {
+            ProviderInstaller.installIfNeededAsync(this, this)
         }
-        CorUtility.startBackgroundWorker()
-
-//        val rooted: Boolean = CommonUtils.isRooted(this)
-//        if (rooted) {
-//            showDialogAndFinish(Constants.ROOT_ALERT)
-//            AnalyticsUtils.sendBasicEvent(EventNames.EVENT_PHONE_ROOTED, ScreenNames.SCREEN_SPLASH)
-//        } else {
-//            ProviderInstaller.installIfNeededAsync(this, this)
-//        }
-//        AnalyticsUtils.updateUserTraits()
-//        AnalyticsUtils.sendEvent(EventNames.EVENT_OPEN_SPLASH)
+        AnalyticsUtils.updateUserTraits()
+        AnalyticsUtils.sendEvent(EventNames.EVENT_OPEN_SPLASH)
     }
 
     private fun startSplashLogic() {
@@ -130,9 +125,9 @@ class SplashActivity : AppCompatActivity(), SelectLanguageFragment.LanguageChang
         } else if (getIntent().hasExtra(Constants.DEEPLINK_TAG)||getIntent().hasExtra(Constants.TARGET)) // Notification
         {
             try {
-               val target = getIntent().getStringExtra(Constants.TARGET)
+                val target = getIntent().getStringExtra(Constants.TARGET)
                 if(!target.isNullOrBlank())
-                intent.putExtra(Constants.URL,target)
+                    intent.putExtra(Constants.URL,target)
                 val tagId =
                     getIntent().getStringExtra(Constants.DEEPLINK_TAG)
                 intent.putExtra(Constants.DEEPLINK_TAG, Integer.valueOf(tagId))
