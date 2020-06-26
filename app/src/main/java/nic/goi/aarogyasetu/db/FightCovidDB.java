@@ -11,10 +11,12 @@ import androidx.sqlite.db.SupportSQLiteDatabase;
 
 import nic.goi.aarogyasetu.CoronaApplication;
 import nic.goi.aarogyasetu.db.dao.BluetoothDataDao;
+import nic.goi.aarogyasetu.db.dao.WhiteListDataDao;
 import nic.goi.aarogyasetu.models.BluetoothData;
+import nic.goi.aarogyasetu.models.WhiteListData;
 
 
-@Database(entities = {BluetoothData.class}, version = 3)
+@Database(entities = {BluetoothData.class, WhiteListData.class}, version = 3, exportSchema = false)
 public abstract class FightCovidDB extends RoomDatabase {
 
     private static FightCovidDB sInstance;
@@ -81,4 +83,7 @@ public abstract class FightCovidDB extends RoomDatabase {
     };
 
     public abstract BluetoothDataDao getBluetoothDataDao();
+
+    public abstract WhiteListDataDao getWhiteListDataDao();
+
 }

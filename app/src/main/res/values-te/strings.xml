@@ -111,4 +111,14 @@
     <string name="open_settings">సెట్టింగులను తెరవండి</string>
     <string name="common_scanning_error">కొన్ని మినహాయింపు సంభవించింది. దయచేసి మళ్ళీ స్కాన్ చేయండి</string>
     <string name="hamburger_menu_intro">హెల్ప్‌లైన్, గోప్యతా విధానం, ఉపయోగ నిబంధనలు మరియు మరెన్నో కొత్త ఫీచర్లు ఇక్కడ చూడవచ్చు.</string>
+
+
+    <!--social distancing breach alert-->
+    <string name="btn_white_list_device">కుటుంబ సభ్యునిగా చేర్చండి</string>
+    <string name="title_distance_breach">జాగ్రత్తగా ఉండండి !!</string>
+    <string name="multiple_breaches_message">మీరు ఇతర ఆరోగ్య సేతు వినియోగదారులకు దగ్గరగా ఉన్నారు, దయచేసి సురక్షితమైన దూరం ఉంచండి.
+వారు మీ కుటుంబ సభ్యులు అయితే, ఈ వ్యక్తుల కోసం మరింత హెచ్చరికలను నివారించడానికి వారిని “కుటుంబం” గా చేర్చండి.</string>
+    <string name="single_breache_message">మీరు మరొక ఆరోగ్య సేతు వినియోగదారుకు దగ్గరగా ఉన్నారు, దయచేసి సురక్షితమైన దూరం ఉంచండి.
+వ్యక్తి మీ కుటుంబ సభ్యులైతే, ఈ వ్యక్తికి మరింత హెచ్చరికలను నివారించడానికి వ్యక్తిని “కుటుంబం” గా చేర్చండి.</string>
+
 </resources>

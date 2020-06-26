@@ -111,4 +111,13 @@
     <string name="open_settings">ਸੈਟਿੰਗਾਂ ਖੋਲ੍ਹੋ</string>
     <string name="common_scanning_error">ਕੁਝ ਅਪਵਾਦ ਆਇਆ ਹੈ. ਕਿਰਪਾ ਕਰਕੇ ਦੁਬਾਰਾ ਸਕੈਨ ਕਰੋ</string>
     <string name="hamburger_menu_intro">ਹੈਲਪਲਾਈਨ, ਗੋਪਨੀਯਤਾ ਨੀਤੀ, ਵਰਤੋਂ ਦੀਆਂ ਸ਼ਰਤਾਂ ਅਤੇ ਹੋਰ ਬਹੁਤ ਸਾਰੀਆਂ ਨਵੀਆਂ ਵਿਸ਼ੇਸ਼ਤਾਵਾਂ ਇੱਥੇ ਮਿਲੀਆਂ ਹਨ.</string>
+
+    <!--social distancing breach alert-->
+    <string name="btn_white_list_device">ਪਰਿਵਾਰਕ ਮੈਂਬਰ ਵਜੋਂ ਸ਼ਾਮਲ ਕਰੋ</string>
+    <string name="title_distance_breach">ਸਾਵਧਾਨ ਰਹੋ !!</string>
+    <string name="multiple_breaches_message">
+ਤੁਸੀਂ ਹੋਰ ਆਰੋਗਿਆ ਸੇਤੂ ਉਪਭੋਗਤਾਵਾਂ ਦੇ ਨੇੜੇ ਹੋ ਰਹੇ ਹੋ, ਕਿਰਪਾ ਕਰਕੇ ਸੁਰੱਖਿਅਤ ਦੂਰੀ ਬਣਾਈ ਰੱਖੋ.
+ਜੇ ਉਹ ਤੁਹਾਡੇ ਪਰਿਵਾਰਕ ਮੈਂਬਰ ਹਨ, ਤਾਂ ਉਹਨਾਂ ਲੋਕਾਂ ਲਈ ਅੱਗੇ ਤੋਂ ਚਿਤਾਵਨੀਆਂ ਤੋਂ ਬਚਣ ਲਈ ਉਨ੍ਹਾਂ ਨੂੰ "ਪਰਿਵਾਰ" ਵਜੋਂ ਸ਼ਾਮਲ ਕਰੋ.</string>
+    <string name="single_breache_message">ਤੁਸੀਂ ਕਿਸੇ ਹੋਰ ਆਰੋਗਿਆ ਸੇਤੂ ਉਪਭੋਗਤਾ ਦੇ ਨੇੜੇ ਹੋ ਰਹੇ ਹੋ, ਕਿਰਪਾ ਕਰਕੇ ਸੁਰੱਖਿਅਤ ਦੂਰੀ ਬਣਾਈ ਰੱਖੋ.
+ਜੇ ਉਹ ਵਿਅਕਤੀ ਤੁਹਾਡਾ ਪਰਿਵਾਰਕ ਮੈਂਬਰ ਹੈ, ਤਾਂ ਇਸ ਵਿਅਕਤੀ ਲਈ ਵਧੇਰੇ ਚੇਤਾਵਨੀਆਂ ਤੋਂ ਬਚਣ ਲਈ ਉਸ ਵਿਅਕਤੀ ਨੂੰ '' ਪਰਿਵਾਰ '' ਵਜੋਂ ਸ਼ਾਮਲ ਕਰੋ.</string>
 </resources>

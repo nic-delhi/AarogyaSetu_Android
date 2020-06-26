@@ -590,7 +590,7 @@ class CorUtility {
                     SharedPrefsConstants.UNIQUE_ID,
                     ""
                 )
-                if (uniqueId.isNotEmpty() && !activity.isFinishing) {
+                if (/*uniqueId.isNotEmpty() &&*/ !activity.isFinishing) {
                     val intent = Intent(activity, BluetoothScanningService::class.java)
                     ContextCompat.startForegroundService(activity, intent)
                 }

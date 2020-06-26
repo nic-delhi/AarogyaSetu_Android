@@ -111,4 +111,14 @@
     <string name="open_settings">सेटिंग्ज उघडा</string>
     <string name="common_scanning_error">काही अपवाद आढळले. कृपया पुन्हा स्कॅन करा</string>
     <string name="hamburger_menu_intro">हहेल्पलाइन, गोपनीयता धोरण, वापराच्या अटी आणि बरेच काही यासारख्या बरीच नवीन वैशिष्ट्ये येथे आढळू शकतात.</string>
+
+    <!--social distancing breach alert-->
+    <string name="btn_white_list_device">कुटुंबातील सदस्य म्हणून जोडा</string>
+    <string name="title_distance_breach">सावध रहा !!</string>
+    <string name="multiple_breaches_message">
+आपण इतर आरोग्य सेतू वापरकर्त्यांशी जवळ येत आहात, कृपया सुरक्षित अंतर ठेवा.
+जर ते आपले कुटुंबातील सदस्य असतील तर या लोकांना पुढील सतर्कता टाळण्यासाठी त्यांना "फॅमिली" म्हणून जोडा.</string>
+    <string name="single_breache_message">आपणास दुसर्‍या आरोग्य सेतू वापरकर्त्याच्या जवळ जात आहे, कृपया सुरक्षित अंतर ठेवा.
+जर ती व्यक्ती आपल्या कुटुंबातील सदस्य असेल तर या व्यक्तीस पुढील सतर्कता टाळण्यासाठी त्या व्यक्तीस “कुटूंब” म्हणून जोडा.</string>
+
 </resources>

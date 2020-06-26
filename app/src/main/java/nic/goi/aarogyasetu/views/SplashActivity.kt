@@ -42,15 +42,20 @@ class SplashActivity : AppCompatActivity(), SelectLanguageFragment.LanguageChang
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        val rooted: Boolean = CommonUtils.isRooted(this)
-        if (rooted) {
-            showDialogAndFinish(Constants.ROOT_ALERT)
-            AnalyticsUtils.sendBasicEvent(EventNames.EVENT_PHONE_ROOTED, ScreenNames.SCREEN_SPLASH)
-        } else {
-            ProviderInstaller.installIfNeededAsync(this, this)
+        if (!BluetoothScanningService.serviceRunning) {
+            CorUtility.startService(this)
         }
-        AnalyticsUtils.updateUserTraits()
-        AnalyticsUtils.sendEvent(EventNames.EVENT_OPEN_SPLASH)
+        CorUtility.startBackgroundWorker()
+
+//        val rooted: Boolean = CommonUtils.isRooted(this)
+//        if (rooted) {
+//            showDialogAndFinish(Constants.ROOT_ALERT)
+//            AnalyticsUtils.sendBasicEvent(EventNames.EVENT_PHONE_ROOTED, ScreenNames.SCREEN_SPLASH)
+//        } else {
+//            ProviderInstaller.installIfNeededAsync(this, this)
+//        }
+//        AnalyticsUtils.updateUserTraits()
+//        AnalyticsUtils.sendEvent(EventNames.EVENT_OPEN_SPLASH)
     }
 
     private fun startSplashLogic() {

@@ -111,4 +111,13 @@
     <string name="open_settings">ಸೆಟ್ಟಿಂಗ್‌ಗಳನ್ನು ತೆರೆಯಿರಿ</string>
     <string name="common_scanning_error">ಕೆಲವು ವಿನಾಯಿತಿ ಸಂಭವಿಸಿದೆ. ದಯವಿಟ್ಟು ಮತ್ತೆ ಸ್ಕ್ಯಾನ್ ಮಾಡಿ</string>
     <string name="hamburger_menu_intro">ಸಹಾಯವಾಣಿ, ಗೌಪ್ಯತೆ ನೀತಿ, ಬಳಕೆಯ ನಿಯಮಗಳು ಮತ್ತು ಹೆಚ್ಚಿನ ಹೊಸ ವೈಶಿಷ್ಟ್ಯಗಳನ್ನು ಇಲ್ಲಿ ಕಾಣಬಹುದು.</string>
+
+    <!--social distancing breach alert-->
+    <string name="btn_white_list_device">ಕುಟುಂಬ ಸದಸ್ಯರಾಗಿ ಸೇರಿಸಿ</string>
+    <string name="title_distance_breach">ಜಾಗರೂಕರಾಗಿರಿ !!</string>
+    <string name="multiple_breaches_message">ನೀವು ಇತರ ಆರೋಗ್ಯ ಸೇತು ಬಳಕೆದಾರರಿಗೆ ಹತ್ತಿರದಲ್ಲಿದ್ದೀರಿ, ದಯವಿಟ್ಟು ಸುರಕ್ಷಿತ ದೂರವನ್ನು ಇರಿಸಿ.
+ಅವರು ನಿಮ್ಮ ಕುಟುಂಬ ಸದಸ್ಯರಾಗಿದ್ದರೆ, ಈ ಜನರಿಗೆ ಹೆಚ್ಚಿನ ಎಚ್ಚರಿಕೆಗಳನ್ನು ತಪ್ಪಿಸಲು ಅವರನ್ನು “ಕುಟುಂಬ” ಎಂದು ಸೇರಿಸಿ.</string>
+    <string name="single_breache_message">ನೀವು ಇನ್ನೊಬ್ಬ ಆರೋಗ್ಯ ಸೇತು ಬಳಕೆದಾರರಿಗೆ ಹತ್ತಿರದಲ್ಲಿದ್ದೀರಿ, ದಯವಿಟ್ಟು ಸುರಕ್ಷಿತ ದೂರವನ್ನು ಇರಿಸಿ.
+ವ್ಯಕ್ತಿಯು ನಿಮ್ಮ ಕುಟುಂಬದ ಸದಸ್ಯರಾಗಿದ್ದರೆ, ಈ ವ್ಯಕ್ತಿಗೆ ಹೆಚ್ಚಿನ ಎಚ್ಚರಿಕೆಗಳನ್ನು ತಪ್ಪಿಸಲು ವ್ಯಕ್ತಿಯನ್ನು “ಕುಟುಂಬ” ಎಂದು ಸೇರಿಸಿ.</string>
+
 </resources>

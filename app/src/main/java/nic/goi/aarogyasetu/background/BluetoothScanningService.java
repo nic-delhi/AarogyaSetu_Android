@@ -14,16 +14,25 @@ import android.bluetooth.le.ScanResult;
 import android.bluetooth.le.ScanSettings;
 import android.content.BroadcastReceiver;
 import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.IntentFilter;
 import android.location.Location;
 import android.location.LocationManager;
+import android.media.Ringtone;
+import android.media.RingtoneManager;
+import android.net.Uri;
 import android.os.Build;
 import android.os.IBinder;
 import android.os.ParcelUuid;
+import android.view.WindowManager;
 
 import androidx.annotation.Nullable;
+import androidx.appcompat.app.AlertDialog;
 import androidx.core.app.NotificationCompat;
+import androidx.core.app.NotificationManagerCompat;
+
+import com.google.gson.Gson;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -36,15 +45,19 @@ import nic.goi.aarogyasetu.CoronaApplication;
 import nic.goi.aarogyasetu.GattServer;
 import nic.goi.aarogyasetu.R;
 import nic.goi.aarogyasetu.db.DBManager;
+import nic.goi.aarogyasetu.db.FightCovidDB;
 import nic.goi.aarogyasetu.firebase.FirebaseRemoteConfigUtil;
 import nic.goi.aarogyasetu.location.RetrieveLocationService;
 import nic.goi.aarogyasetu.models.BluetoothData;
+import nic.goi.aarogyasetu.models.WhiteListData;
 import nic.goi.aarogyasetu.utility.AdaptiveScanHelper;
 import nic.goi.aarogyasetu.utility.Constants;
 import nic.goi.aarogyasetu.utility.CorUtility;
 import nic.goi.aarogyasetu.utility.CorUtilityKt;
+import nic.goi.aarogyasetu.utility.ExecutorHelper;
 import nic.goi.aarogyasetu.utility.Logger;
 import nic.goi.aarogyasetu.models.BluetoothModel;
+import nic.goi.aarogyasetu.utility.WhiteListBroadcastReceiver;
 import nic.goi.aarogyasetu.views.SplashActivity;
 
 /**
@@ -60,6 +73,10 @@ public class BluetoothScanningService extends Service implements AdaptiveScanHel
 
     private static final int FIVE_MINUTES = 5 * 60 * 1000;
     private long searchTimestamp;
+    private List<String> whiteListDevices = new ArrayList<>();          //Id's for devices that are whitelisted
+    private List<String> currentNearDevices = new ArrayList<>();        //Id's for current nearby available devices
+    private AlertDialog breachDialog;
+    private static final int breachRssiRange = -50;
 
     private final GattServer mGattServer = new GattServer();
 
@@ -70,9 +87,25 @@ public class BluetoothScanningService extends Service implements AdaptiveScanHel
         @Override
         public void onScanResult(int callbackType, ScanResult result) {
             super.onScanResult(callbackType, result);
-            Logger.d(TAG, "onScanResult : Scanning : " + result.getDevice().getName());
             if (CorUtility.isBluetoothPermissionAvailable(CoronaApplication.instance)) {
-                if (result == null || result.getDevice() == null || result.getDevice().getName() == null)
+                //#Impetus add new device dialog here using result.getDevice()
+                if (result == null || result.getDevice() == null){
+                    return;
+                }
+                Logger.d(TAG, "onScanResult : Scanning : " + result.getDevice() + " RSSI:" + result.getRssi());
+                if (result.getRssi() > breachRssiRange) {
+                    if (!whiteListDevices.contains(result.getDevice().getAddress()) && !currentNearDevices.contains(result.getDevice().getAddress())) {
+                            currentNearDevices.add(result.getDevice().getAddress());
+                        if (CoronaApplication.appIsInBackground) {
+                            showBreachNotification(result);
+                        } else {
+                            showDeviceDialog(result);
+                        }
+                    } else {
+                        Logger.d(TAG, "Nearby whitelist device found:" + result.getDevice());
+                    }
+                }
+                if (result.getDevice().getName() == null)
                     return;
                 String deviceName = result.getDevice().getName();
                 clearList();
@@ -120,6 +153,13 @@ public class BluetoothScanningService extends Service implements AdaptiveScanHel
         Notification notification = getNotification(Constants.NOTIFICATION_DESC);
         startForeground(NOTIF_ID, notification);
         searchTimestamp = System.currentTimeMillis();
+        //fetch current list of whiteListed devices from DB
+        ExecutorHelper.getThreadPoolExecutor().execute(new Runnable() {
+            @Override
+            public void run() {
+                whiteListDevices = FightCovidDB.getInstance().getWhiteListDataDao().getAllWhiteListDevices();
+            }
+        });
 
     }
 
@@ -140,6 +180,101 @@ public class BluetoothScanningService extends Service implements AdaptiveScanHel
                 notificationManager.createNotificationChannel(channel);
             }
         }
+    }
+
+    private void showDeviceDialog(ScanResult scanResult) {
+        try {
+            Uri notification = RingtoneManager.getDefaultUri(RingtoneManager.TYPE_NOTIFICATION);
+            Ringtone r = RingtoneManager.getRingtone(getApplicationContext(), notification);
+            r.play();
+        } catch (Exception e) {
+            e.printStackTrace();
+            Logger.e(TAG, "Error while playing sound " + e.toString());
+        }
+        if (breachDialog != null && breachDialog.isShowing()) {
+            if (currentNearDevices.size() > 1) {
+                breachDialog.setMessage(getString(R.string.multiple_breaches_message) + new Gson().toJson(currentNearDevices).toString());
+            } else {
+                String deviceName = scanResult.getDevice().getName() != null ? scanResult.getDevice().getName() : scanResult.getDevice().getAddress();
+                breachDialog.setMessage(getString(R.string.single_breache_message));
+            }
+        } else {
+            AlertDialog.Builder dialogBuilder = new AlertDialog.Builder(getApplicationContext(), R.style.MaterialDialogTheme);
+            dialogBuilder.setTitle(getString(R.string.title_distance_breach));
+            dialogBuilder.setMessage(getString(R.string.single_breache_message));
+            dialogBuilder.setPositiveButton(getString(R.string.ok), new DialogInterface.OnClickListener() {
+                @Override
+                public void onClick(DialogInterface dialog, int which) {
+                    dialog.dismiss();
+                    currentNearDevices.clear();
+                }
+            });
+
+            //Add this device to white list if it is my own device or someone from my family
+            dialogBuilder.setNeutralButton(getString(R.string.btn_white_list_device), new DialogInterface.OnClickListener() {
+                @Override
+                public void onClick(DialogInterface dialog, int which) {
+                    DBManager.insertWhiteListData(new WhiteListData(scanResult.getDevice().getName(), scanResult.getDevice().getAddress()));
+                    dialog.dismiss();
+                    currentNearDevices.clear();
+                }
+            });
+            breachDialog = dialogBuilder.create();
+            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+                breachDialog.getWindow().setType(WindowManager.LayoutParams.TYPE_APPLICATION_OVERLAY - 1);
+            } else {
+                breachDialog.getWindow().setType(WindowManager.LayoutParams.TYPE_SYSTEM_ALERT);
+            }
+            breachDialog.show();
+        }
+    }
+
+    private void showBreachNotification(ScanResult scanResult) {
+        Notification notification = getBreachNotification(scanResult);
+        NotificationManagerCompat notificationManager = NotificationManagerCompat.from(this);
+// notificationId is a unique int for each notification that you must define
+        notificationManager.notify(12, notification);
+    }
+
+    private Notification getBreachNotification(ScanResult scanResult) {
+        Uri soundUri = RingtoneManager.getDefaultUri(RingtoneManager.TYPE_ALARM);
+        Intent notificationIntent = new Intent(this, SplashActivity.class);
+        notificationIntent.putExtra("device", scanResult.getDevice());
+        PendingIntent notificationClickIntent = PendingIntent.getActivities(this, 0, new Intent[]{notificationIntent}, PendingIntent.FLAG_UPDATE_CURRENT);
+
+        String notificationDescText = getString(R.string.single_breache_message);
+
+
+        // Add action button in the notification
+        Intent snoozeIntent = new Intent(this, WhiteListBroadcastReceiver.class);
+        snoozeIntent.setAction(Constants.ACTION_WHITELIST_DEVICE);
+        snoozeIntent.putExtra(Constants.ARGS_DEVICE_ADDRESS, scanResult.getDevice().getAddress());
+        snoozeIntent.putExtra(Constants.ARGS_DEVICE_NAME, scanResult.getDevice().getName());
+        snoozeIntent.putExtra(Constants.ARGS_NOTIFICATION_ID, 12);
+        PendingIntent snoozePendingIntent =
+                PendingIntent.getBroadcast(this, 0, snoozeIntent, 0);
+
+        String channelId = Build.VERSION.SDK_INT >= Build.VERSION_CODES.O ? CorUtility.Companion.getNotificationChannel() : "";
+        NotificationCompat.Builder notificationBuilder = new NotificationCompat.Builder(this, channelId);
+        NotificationCompat.BigTextStyle bigTextStyle = new NotificationCompat.BigTextStyle();
+        bigTextStyle.setBigContentTitle(getResources().getString(R.string.app_name));
+        bigTextStyle.bigText(notificationDescText);
+        notificationBuilder.setPriority(NotificationCompat.PRIORITY_HIGH);
+
+        return notificationBuilder
+                .setStyle(bigTextStyle)
+                .setContentTitle(getResources().getString(R.string.app_name))
+                .setAutoCancel(true)
+                .setContentText(notificationDescText)
+                .setContentIntent(notificationClickIntent)
+                .setOngoing(true)
+                .setSound(soundUri)
+                .setCategory(NotificationCompat.CATEGORY_SERVICE)
+                .setColor(getResources().getColor(R.color.colorPrimary))
+                .setSmallIcon(R.drawable.notification_icon)
+                .addAction(R.drawable.notification_icon, getString(R.string.btn_white_list_device),
+                        snoozePendingIntent)
+                .build();
     }
 
 
@@ -182,6 +317,7 @@ public class BluetoothScanningService extends Service implements AdaptiveScanHel
 
     /**
      * Start scanning BLE devices with provided scan mode
+     *
      * @param scanMode
      */
     private void discover(int scanMode) {
@@ -193,12 +329,12 @@ public class BluetoothScanningService extends Service implements AdaptiveScanHel
         if (mBluetoothLeScanner == null) {
             return;
         }
-        List<ScanFilter> filters = new ArrayList<>();
-
-        ScanFilter filter = new ScanFilter.Builder()
-                .setServiceUuid(new ParcelUuid(UUID.fromString(BuildConfig.SERVICE_UUID)))
-                .build();
-        filters.add(filter);
+//        List<ScanFilter> filters = new ArrayList<>();
+//
+//        ScanFilter filter = new ScanFilter.Builder()
+//                .setServiceUuid(new ParcelUuid(UUID.fromString(BuildConfig.SERVICE_UUID)))
+//                .build();
+//        filters.add(filter);
         ScanSettings.Builder settings = new ScanSettings.Builder()
                 .setScanMode(scanMode);
 
@@ -211,7 +347,7 @@ public class BluetoothScanningService extends Service implements AdaptiveScanHel
         }
         try {
             if (isBluetoothAvailable()) {
-                mBluetoothLeScanner.startScan(filters, settings.build(), mScanCallback);
+                mBluetoothLeScanner.startScan(null, settings.build(), mScanCallback);
             } else {
                 Logger.e(TAG, "startingScan failed : Bluetooth not available");
             }
@@ -229,16 +365,16 @@ public class BluetoothScanningService extends Service implements AdaptiveScanHel
      * @param bluetoothModel The newly detected device nearby
      */
     void storeDetectedUserDeviceInDB(BluetoothModel bluetoothModel) {
-            if (bluetoothModel != null) {
-                BluetoothData bluetoothData = new BluetoothData(bluetoothModel.getAddress(), bluetoothModel.getRssi(),
-                        bluetoothModel.getTxPower(), bluetoothModel.getTxPowerLevel());
-                Location loc = CoronaApplication.getInstance().getAppLastLocation();
-                if (loc != null) {
-                    bluetoothData.setLatitude(loc.getLatitude());
-                    bluetoothData.setLongitude(loc.getLongitude());
-                }
-                DBManager.insertNearbyDetectedDeviceInfo(bluetoothData);
+        if (bluetoothModel != null) {
+            BluetoothData bluetoothData = new BluetoothData(bluetoothModel.getAddress(), bluetoothModel.getRssi(),
+                    bluetoothModel.getTxPower(), bluetoothModel.getTxPowerLevel());
+            Location loc = CoronaApplication.getInstance().getAppLastLocation();
+            if (loc != null) {
+                bluetoothData.setLatitude(loc.getLatitude());
+                bluetoothData.setLongitude(loc.getLongitude());
             }
+            DBManager.insertNearbyDetectedDeviceInfo(bluetoothData);
+        }
 
     }
 

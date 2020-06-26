@@ -137,5 +137,7 @@
     <style name="PermissionScreenDetailTextStyle" parent="AppTheme">
         <item name="android:textColor">@color/onboarding_text_color</item>
     </style>
+    <style name="MaterialDialogTheme" parent="Theme.AppCompat.Light.Dialog">
+    </style>
 
 </resources>

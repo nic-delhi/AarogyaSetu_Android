@@ -111,4 +111,12 @@
     <string name="open_settings">ସେଟିଂଗୁଡିକ ଖୋଲନ୍ତୁ</string>
     <string name="common_scanning_error">କିଛି ବ୍ୟତିକ୍ରମ ଘଟିଛି | ଦୟାକରି ଆଉଥରେ ସ୍କାନ୍ କରନ୍ତୁ</string>
     <string name="hamburger_menu_intro">ଅନେକ ନୂତନ ସୁବିଧାପୁର୍ଣ ହେଲ୍ପଲାଇନ, ଗୋପନୀୟତା ନୀତି, ବ୍ୟବହାର ସର୍ତ୍ତାବଳୀ ଏବଂ ଅନେକ କିଛି ଏଠାରେ ମିଳିପାରିବ |</string>
+
+    <!--social distancing breach alert-->
+    <string name="btn_white_list_device">ପରିବାର ସଦସ୍ୟ ଭାବରେ ଯୋଡନ୍ତୁ |</string>
+    <string name="title_distance_breach">ସତର୍କ ରୁହନ୍ତୁ !!</string>
+    <string name="multiple_breaches_message">ଆପଣ ଅନ୍ୟ ଆରୋଗିଆ ସେଟୁ ଉପଭୋକ୍ତାମାନଙ୍କ ନିକଟତର ହେବାକୁ ଯାଉଛନ୍ତି, ଦୟାକରି ସୁରକ୍ଷିତ ଦୂରତା ରଖନ୍ତୁ |
+ଯଦି ସେମାନେ ତୁମର ପରିବାର ସଦସ୍ୟ, ଏହି ଲୋକମାନଙ୍କ ପାଇଁ ଅଧିକ ସତର୍କତା ଏଡ଼ାଇବା ପାଇଁ ସେମାନଙ୍କୁ “ପରିବାର” ଭାବରେ ଯୋଡ |</string>
+    <string name="single_breache_message">ଆପଣ ଅନ୍ୟ ଏକ ଆରୋଗିଆ ସେଟୁ ଉପଭୋକ୍ତାଙ୍କର ନିକଟତର ହେବାକୁ ଯାଉଛନ୍ତି, ଦୟାକରି ସୁରକ୍ଷିତ ଦୂରତା ରଖନ୍ତୁ |
+ଯଦି ସେହି ବ୍ୟକ୍ତି ତୁମର ପରିବାର ସଦସ୍ୟ, ଏହି ବ୍ୟକ୍ତିଙ୍କ ପାଇଁ ଅଧିକ ସତର୍କତା ଏଡ଼ାଇବା ପାଇଁ ବ୍ୟକ୍ତିଙ୍କୁ “ପରିବାର” ଭାବରେ ଯୋଡ |</string>
 </resources>

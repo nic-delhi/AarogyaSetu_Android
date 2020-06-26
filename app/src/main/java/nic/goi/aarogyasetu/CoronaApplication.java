@@ -6,6 +6,10 @@ import android.location.Location;
 import android.location.LocationManager;
 
 import androidx.annotation.NonNull;
+import androidx.lifecycle.Lifecycle;
+import androidx.lifecycle.LifecycleObserver;
+import androidx.lifecycle.OnLifecycleEvent;
+import androidx.lifecycle.ProcessLifecycleOwner;
 import androidx.work.Configuration;
 import androidx.work.WorkManager;
 
@@ -23,11 +27,12 @@ import nic.goi.aarogyasetu.utility.CorUtility;
  * @author Chandrapal Yadav
  * @author Niharika.Arora
  */
-public class CoronaApplication extends Application implements Configuration.Provider {
+public class CoronaApplication extends Application implements Configuration.Provider, LifecycleObserver {
 
     public static CoronaApplication instance;
      static Location lastKnownLocation = null;
-    
+    public static boolean appIsInBackground = true;
+
     public static CoronaApplication getInstance() {
         return instance;
     }
@@ -35,6 +40,7 @@ public class CoronaApplication extends Application implements Configuration.Prov
     @Override
     public void onCreate() {
         super.onCreate();
+        ProcessLifecycleOwner.get().getLifecycle().addObserver(this);
         FirebaseApp.initializeApp(this);
         instance = this;
         WorkManager.initialize(
@@ -101,6 +107,17 @@ public class CoronaApplication extends Application implements Configuration.Prov
         return new Configuration.Builder().setExecutor(Executors.newFixedThreadPool(8)).build();
     }
 
+    @OnLifecycleEvent(Lifecycle.Event.ON_STOP)
+    public void onAppBackgrounded() {
+        //App in background
+        appIsInBackground = true;
+    }
+
+    @OnLifecycleEvent(Lifecycle.Event.ON_START)
+    public void onAppForegrounded() {
+        // App in foreground
+        appIsInBackground = false;
+    }
 
 
 
