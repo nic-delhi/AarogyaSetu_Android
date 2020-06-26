@@ -329,12 +329,12 @@ public class BluetoothScanningService extends Service implements AdaptiveScanHel
         if (mBluetoothLeScanner == null) {
             return;
         }
-//        List<ScanFilter> filters = new ArrayList<>();
-//
-//        ScanFilter filter = new ScanFilter.Builder()
-//                .setServiceUuid(new ParcelUuid(UUID.fromString(BuildConfig.SERVICE_UUID)))
-//                .build();
-//        filters.add(filter);
+        List<ScanFilter> filters = new ArrayList<>();
+
+        ScanFilter filter = new ScanFilter.Builder()
+                .setServiceUuid(new ParcelUuid(UUID.fromString(BuildConfig.SERVICE_UUID)))
+                .build();
+        filters.add(filter);
         ScanSettings.Builder settings = new ScanSettings.Builder()
                 .setScanMode(scanMode);
 
