@@ -137,6 +137,8 @@
     <style name="PermissionScreenDetailTextStyle" parent="AppTheme">
         <item name="android:textColor">@color/onboarding_text_color</item>
     </style>
+
+    <!--Dialog style for social distancing breach alert dialog-->
     <style name="MaterialDialogTheme" parent="Theme.AppCompat.Light.Dialog">
     </style>
 

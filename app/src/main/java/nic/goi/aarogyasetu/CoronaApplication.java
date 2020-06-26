@@ -28,10 +28,9 @@ import nic.goi.aarogyasetu.utility.CorUtility;
  * @author Niharika.Arora
  */
 public class CoronaApplication extends Application implements Configuration.Provider, LifecycleObserver {
-
     public static CoronaApplication instance;
-     static Location lastKnownLocation = null;
-    public static boolean appIsInBackground = true;
+    static Location lastKnownLocation = null;
+    private boolean appIsInBackground = true;
 
     public static CoronaApplication getInstance() {
         return instance;
@@ -120,5 +119,12 @@ public class CoronaApplication extends Application implements Configuration.Prov
     }
 
 
-
+    /**
+     * Is app in background boolean.
+     *
+     * @return the boolean
+     */
+    public boolean isAppInBackground() {
+        return appIsInBackground;
+    }
 }

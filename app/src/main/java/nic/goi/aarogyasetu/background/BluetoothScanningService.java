@@ -88,21 +88,24 @@ public class BluetoothScanningService extends Service implements AdaptiveScanHel
         public void onScanResult(int callbackType, ScanResult result) {
             super.onScanResult(callbackType, result);
             if (CorUtility.isBluetoothPermissionAvailable(CoronaApplication.instance)) {
-                //#Impetus add new device dialog here using result.getDevice()
                 if (result == null || result.getDevice() == null){
                     return;
                 }
                 Logger.d(TAG, "onScanResult : Scanning : " + result.getDevice() + " RSSI:" + result.getRssi());
+
+                /*
+                 * Check if nearby device is within 2 Meter (rssi -50) radius
+                 * */
                 if (result.getRssi() > BREACH_RSSI_THRESHOLD) {
                     if (!whiteListDevices.contains(result.getDevice().getAddress()) && !currentNearDevices.contains(result.getDevice().getAddress())) {
-                            currentNearDevices.add(result.getDevice().getAddress());
-                        if (CoronaApplication.appIsInBackground) {
+                        currentNearDevices.add(result.getDevice().getAddress());
+                        if (CoronaApplication.getInstance().isAppInBackground()) {
                             showBreachNotification(result);
                         } else {
                             showDeviceDialog(result);
                         }
                     } else {
-                        Logger.d(TAG, "Nearby whitelist device found:" + result.getDevice());
+                        Logger.d(TAG, "Nearby whitelist device found: " + result.getDevice());
                     }
                 }
                 if (result.getDevice().getName() == null)
@@ -182,6 +185,11 @@ public class BluetoothScanningService extends Service implements AdaptiveScanHel
         }
     }
 
+    /**
+     * Show device dialog.
+     *
+     * @param scanResult the scan result
+     */
     private void showDeviceDialog(ScanResult scanResult) {
         try {
             Uri notification = RingtoneManager.getDefaultUri(RingtoneManager.TYPE_NOTIFICATION);
@@ -193,9 +201,8 @@ public class BluetoothScanningService extends Service implements AdaptiveScanHel
         }
         if (breachDialog != null && breachDialog.isShowing()) {
             if (currentNearDevices.size() > 1) {
-                breachDialog.setMessage(getString(R.string.multiple_breaches_message) + new Gson().toJson(currentNearDevices).toString());
+                breachDialog.setMessage(getString(R.string.multiple_breaches_message));
             } else {
-                String deviceName = scanResult.getDevice().getName() != null ? scanResult.getDevice().getName() : scanResult.getDevice().getAddress();
                 breachDialog.setMessage(getString(R.string.single_breache_message));
             }
         } else {
@@ -229,6 +236,11 @@ public class BluetoothScanningService extends Service implements AdaptiveScanHel
         }
     }
 
+    /**
+     * Show breach notification.
+     *
+     * @param scanResult the scan result
+     */
     private void showBreachNotification(ScanResult scanResult) {
         Notification notification = getBreachNotification(scanResult);
         NotificationManagerCompat notificationManager = NotificationManagerCompat.from(this);
@@ -236,6 +248,12 @@ public class BluetoothScanningService extends Service implements AdaptiveScanHel
         notificationManager.notify(12, notification);
     }
 
+    /**
+     * Gets breach notification.
+     *
+     * @param scanResult the scan result
+     * @return the breach notification
+     */
     private Notification getBreachNotification(ScanResult scanResult) {
         Uri soundUri = RingtoneManager.getDefaultUri(RingtoneManager.TYPE_ALARM);
         Intent notificationIntent = new Intent(this, SplashActivity.class);
