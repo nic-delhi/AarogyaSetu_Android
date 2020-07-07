@@ -16,6 +16,7 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.provider.Settings;
 import android.text.TextUtils;
+import android.util.Log;
 import android.view.ActionMode;
 import android.view.KeyEvent;
 import android.view.View;
@@ -963,6 +964,8 @@ public class HomeActivity extends AppCompatActivity implements SelectLanguageFra
         fragmentTransaction.commitAllowingStateLoss();
 
     }
+
+
 
     @Override
     public void syncDataWith(@NotNull String mode) {
