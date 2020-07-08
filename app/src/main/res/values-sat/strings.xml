@@ -1,0 +1,134 @@
+<resources>
+    <string name="app_name">Aarogya Setu</string>
+    <string name="your_mobile_number_is_required_to_know_your_identity">Your mobile number is required for contact tracing.</string>
+    <string name="text_value">Say, you met someone a week back at a gathering or were in close proximity of someone unknown at a public place, and in a few days, they test positive for COVID-19.\n\nThe Government of India will trace back all touch points of that person, through the active devices with the app installed that were in close radius of that person, in the past 14 days.
+\n\nA notification will then be sent to all such contacts with an advisory on further course of action, to self-isolate or to get the test done at a nearest testing centre, as needed.
+\n\nBy participating in active contact tracing, you will help us minimise the spread of COVID-19 and enable Government of India to implement proactive measures for your health and well-being.
+\n\n</string>
+    <string name="permissions_title">Terms of Service &amp; Privacy</string>
+    <string name="permissions_detail">We understand the nature and sensitivity of this topic and have taken strong measures to ensure that your data is not compromised.</string>
+    <string name="location_text">It is recommended that you set your location sharing to ‘Always’. You can change this anytime later.</string>
+
+
+    <!--phone_number_layout-->
+    <string name="enter_mobile_number">Enter Mobile Number</string>
+    <string name="country_code">+91 </string>
+    <string name="mobile_number">Mobile Number</string>
+    <string name="why_is_it_needed">Why is it needed?</string>
+    <string name="submit">Submit</string>
+    <string name="resend_otp">Resend OTP</string>
+    <string name="resend_otp_in">Resend OTP in %s</string>
+
+    <!--otp_validation_layout-->
+    <string name="enter_otp">Enter OTP</string>
+    <string name="we_have_sent_otp">We have sent OTP to your mobile number.</string>
+    <string name="we_have_resent_otp">We have resent OTP to your mobile number.</string>
+    <string name="otp">OTP</string>
+    <string name="please_enter_a_valid_otp">Please enter a valid otp.</string>
+
+
+    <!--why_needed_layout-->
+    <string name="i_understand">I Understand</string>
+    <string name="device_location"><![CDATA[<b>Device Location</b>]]></string>
+    <string name="bluetooth"><![CDATA[<b>Bluetooth</b>]]></string>
+    <string name="data_sharing_with_the_ministry"><![CDATA[<b>Data Sharing</b>]]></string>
+    <string name="monitors_your_device_s_proximity_within_6_feet_range">Monitors your device’s proximity to another mobile device.\nIt is recommended that you keep it on at all times.</string>
+    <string name="tracks_an_individual_s_touch_points_so_can_easily_find_others_who_came_in_close_contact">Your Data will be shared only with the Government of India.\nThe App does not allow your name and number to be disclosed to the public at large at any time.</string>
+    <string name="contribute_to_a_safer_india">I Agree</string>
+    <string name="please_select_a_language_en">Please select your language\nकृपया अपनी भाषा चुनें</string>
+    <string name="next">Next</string>
+    <string name="please_select_a_language_to_proceed">Please select a language to proceed.</string>
+    <!-- Strings used for fragments for navigation -->
+
+    <string name="please_enter_a_valid_number">Please enter a valid number</string>
+
+
+    <string name="would_you_like_to">Would you like to be kept informed if you \nhave crossed paths with someone who has \ntested COVID-19 positive?</string>
+    <string name="each_one_of_us">Each one of us has the power to help \nprevent the spread of the Coronavirus \npandemic in India.</string>
+    <string name="simply_1_install_the_app"><![CDATA[Simply,\n1. %s the app \n2. Switch on %s \n3. Set %s to ‘Always’ \n\nInvite your friends and family to \ninstall the app too.]]></string>
+    <string name="cowin_20_tracks_through"><![CDATA[<b>Aarogya Setu</b> tracks through a Bluetooth &amp; Location \ngenerated social graph, your interaction \nwith someone who could have tested \nCOVID-19 positive.]]></string>
+    <string name="the_app_alerts_are_accompanied">The App alerts are accompanied by \ninstructions on how to self-isolate and what \nto do in case you develop symptoms that \nmay need help and support</string>
+    <string name="you_will_be_alerted_if">You will be alerted if someone you have \ncome in close proximity of, even \nunknowingly, tests COVID-19 positive.</string>
+    <string name="with_cowin_20_you_can"><![CDATA[With <b>Aarogya Setu</b>, you can protect yourself, \nyour family and friends, and help our \ncountry in the effort to fight COVID-19]]></string>
+    <string name="register_now">Register Now</string>
+
+
+    <string name="install">Install</string>
+    <string name="bluetooth_and_gps">Bluetooth &amp; Location</string>
+    <string name="location_sharing">location sharing</string>
+    <string name="permission_info_tnc_text"><![CDATA[<p>If you would like to contribute to a safer India please indicate your acceptance of the <a href="https://static.swaraksha.gov.in/tnc/">Terms of Service</a> and the <a href="https://web.swaraksha.gov.in/ncv19/privacy/">Privacy Policy</a> by clicking on the button below:</p>]]></string>
+
+    <string name="auth_error_unknown">There is some error logging you in</string>
+    <string name="auth_error_invalid_otp">The OTP you have entered is incorrect</string>
+    <string name="auth_error_user_disabled">You are not allowed to sign in</string>
+    <string name="close">Close</string>
+    <string name="internet_connection_lost" translatable="false">Internet Connection Lost</string>
+    <string name="try_again" translatable="false">Try Again</string>
+    <string name="turn_on_bluetooth" translatable="false">Turn on Bluetooth</string>
+    <string name="turn_on" translatable="false">Turn On</string>
+    <string name="message_failed_tap_to_retry" translatable="false">Failed to update. Tap to retry.</string>
+    <string name="restart" translatable="false">RESTART</string>
+    <string name="sync_data_user_consent">To help contact tracing, your interaction data captured with Bluetooth and Location services will be shared with Government of India.</string>
+    <string name="confirm_and_proceed">Confirm &amp; Proceed</string>
+    <string name="sync_data_detail">Your data is always saved on your phone. Share it on secure Government Servers if…</string>
+    <string name="sample_collected_for_testing">Sample Collected for Testing</string>
+    <string name="tested_positive">Tested Positive for Covid19</string>
+    <string name="syncing_data">Syncing Data</string>
+    <string name="syncing_data_detail"><![CDATA[Sending interaction data captured with Bluetooth & Location services to Government of India.]]></string>
+    <string name="cancel">Cancel</string>
+    <string name="syncing_data_success">Sync Successful</string>
+    <string name="syncing_data_success_detail">Your data is now secured on Government of India servers.</string>
+    <string name="syncing_data_failed">Sync Failed</string>
+    <string name="syncing_data_failed_detail">Something went wrong, please retry.</string>
+    <string name="retry">Retry</string>
+    <string name="ok">Ok</string>
+    <string name="app_permissions" translatable="false">App Permissions</string>
+
+    <string name="image_language_change_content_description">Change Language</string>
+    <string name="image_share_content_description">Share Application</string>
+    <string name="image_back_content_description">Back</string>
+    <string name="image_on_board_content_description">Show on-boarding</string>
+    <string name="image_close_content_description">@string/close</string>
+    <string name="permission_alert_message">To keep you safe and up-to-date, this app needs access to bluetooth and location. You can enable these in your phone settings.</string>
+    <string name="error_network_error">Please check internet connection</string>
+    <string name="error_location">Location settings are inadequate, and cannot be fixed here. Fix in Settings.</string>
+    <string name="turn_on_bluetooth_all_times">Bluetooth must be on at all times to track your proximity to other devices and give you accurate safety updates.</string>
+    <string name="make_sure_your_phone_is_connected_to_the_wifi_or_switch_to_mobile_data">Make sure your phone is connected to the WiFi or switch to mobile data.</string>
+    <string name="login_failed">Login Failed. Please try again</string>
+    <string name="image_user_content_description">User</string>
+    <string name="image_menu_content_description">Menu</string>
+    <string name="generator_scanner_qr_code">Generate/Scan QR Code</string>
+    <string name="verify_installed_app">Verify Installed App</string>
+    <string name="share_data_with_govt">Share Data with Govt.</string>
+    <string name="call_helpline">Call Helpline (1075)</string>
+    <string name="settings">Settings</string>
+    <string name="share_data_with_govt_detail">Share only if you have tested positive for COVID-19 or are currently being tested</string>
+    <string name="call_helpline_detail">Health ministry toll-free helpline for queries related to COVID-19</string>
+    <string name="faq">FAQs</string>
+    <string name="privacy_policy">Privacy Policy</string>
+    <string name="terms_of_use">Terms of Use</string>
+    <string name="app_version">App Version %s</string>
+    <string name="scan_prompt">Scan QR Code to check health status of someone else</string>
+    <string name="few_seconds">few seconds</string>
+    <string name="minutes" translatable="false">min</string>
+    <string name="scan_to_check_status">Scan QR Code to get my health status</string>
+    <string name="tap_to_refresh">Tap to Refresh QR Code</string>
+    <string name="qr_code_valid_for">QR code valid for</string>
+    <string name="scan_other_s_qr_code">Scan QR code</string>
+    <string name="generate_my_qr_code">Generate my QR code</string>
+    <string name="invalid_qr_code">Invalid QR Code</string>
+    <string name="not_generated_aarogya_setu">It has not been generated by official Aarogya Setu app.</string>
+    <string name="request_new_code">Please request the person to generate new code</string>
+    <string name="expired_code">Expired QR Code</string>
+    <string name="low_risk">is at low risk of infection</string>
+    <string name="moderate_risk">is at moderate risk of infection</string>
+    <string name="high_risk">is at high risk of infection</string>
+    <string name="tested_positive_status">has tested positive for COVID-19</string>
+    <string name="provide_necessary_permission">Please provide necessary permission to capture your Qr code</string>
+    <string name="scan_without_perm_alert">App needs Camera permission for QR code scanning.</string>
+    <string name="open_settings">Open Settings</string>
+    <string name="common_scanning_error">Some error occurred.Please scan again.</string>
+    <string name="hamburger_menu_intro">A lot of Features like Helpline, Privacy Policy, Terms of Use and more can be found here.</string>
+    <string name="seconds" translatable="false">sec</string>
+    <string name="refresh" translatable="false">Refresh</string>
+</resources>
