@@ -13,6 +13,7 @@
     <string name="submit">ᱡᱚᱢᱟ</string>
     <string name="resend_otp">OTP ᱫᱩᱦᱲᱟ ᱵᱷᱮᱡᱟ</string>
     <string name="resend_otp_in">%s ᱨᱮ OTP ᱫᱩᱦᱲᱟ ᱵᱷᱮᱡᱟ</string>
+     <!-- otp_validation_layout -->
     <string name="enter_otp">OTP ᱟᱫᱮᱨ</string>
     <string name="we_have_sent_otp">ᱟᱞᱮ ᱢᱚᱵᱟᱤᱞ OTP ᱚᱱᱟ ᱢᱚᱵᱟᱤᱞ ᱮᱞ ᱨᱮ ᱵᱷᱮᱡᱟ ᱟᱠᱟᱱᱟ ᱾.</string>
     <string name="we_have_resent_otp">ᱟᱢᱟᱜ ᱢᱚᱵᱟᱤᱞ ᱮᱞ ᱨᱮ OTP ᱵᱷᱮᱡᱟ ᱮᱱᱟ ᱾.</string>
