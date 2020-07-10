@@ -5,6 +5,7 @@
     <string name="permissions_title">ᱠᱟᱹᱢᱤ ᱨᱮᱭᱟᱜ ᱫᱟᱹᱣ ᱟᱨ ᱫᱚᱱᱟᱝ ᱠᱟᱛᱷᱟ</string>
     <string name="permissions_detail">ᱟᱞᱮ ᱵᱤᱥᱚᱭ ᱮᱨᱭᱟᱜ ᱜᱚᱢᱵᱷᱤᱨᱛᱟ ᱞᱮ ᱵᱩᱡᱷᱟᱫᱣᱮᱫᱼᱟ ᱟᱨ ᱟᱢᱟᱜ ᱥᱟᱹᱠᱷᱭᱟᱹᱛ ᱚᱠᱚᱭ ᱥᱟᱞᱟᱜ ᱦᱚᱸ ᱵᱟᱞᱮ ᱥᱩᱞᱟᱹᱭᱞᱟᱢᱟ, ᱚᱱᱟ ᱠᱷᱟᱹᱛᱤᱨ ᱟᱞᱮ ᱠᱚᱰᱟ ᱡᱷᱟᱯ ᱞᱮ ᱤᱫᱤ ᱠᱟᱫᱟ ᱾.</string>
     <string name="location_text">ᱱᱚᱶᱟ ᱥᱤᱞᱟᱹᱨᱟᱜᱼᱠᱟᱱᱟ ᱟᱢ ᱡᱟᱭᱜᱟ ᱦᱟᱹᱴᱤᱧ ‘ᱡᱟᱣᱜᱮ’ ᱨᱮ ᱥᱮᱴ ᱛᱟᱢ ᱾ ᱟᱢ ᱛᱟᱭᱚᱢ ᱛᱮ ᱦᱚᱸ ᱵᱚᱫᱚᱞ ᱫᱟᱫᱮᱟᱜᱼᱟᱢ ᱾.</string>
+    <!-- phone_number_layout -->
     <string name="enter_mobile_number">ᱢᱚᱵᱟᱤᱞ ᱮᱞ ᱟᱫᱮᱨ</string>
     <string name="country_code">+91 </string>
     <string name="mobile_number">ᱢᱚᱵᱟᱤᱞ ᱮᱞ ᱞᱮᱠᱷᱟ</string>
