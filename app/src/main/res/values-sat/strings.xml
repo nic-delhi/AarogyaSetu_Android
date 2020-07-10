@@ -1,4 +1,3 @@
-<?xml version="1.0"?>
 <resources>
     <string name="app_name">ᱟᱨᱚᱜᱭᱟ ᱥᱮᱛᱩ</string>
     <string name="your_mobile_number_is_required_to_know_your_identity">ᱠᱚᱱᱴᱟᱠᱴ ᱴᱨᱮᱥᱤᱝ ᱞᱟᱹᱜᱤᱫ ᱟᱢᱟᱜ ᱢᱚᱵᱟᱤᱞ ᱮᱞ ᱫᱚᱨᱠᱟᱨ ᱾.</string>
@@ -6,9 +5,6 @@
     <string name="permissions_title">ᱠᱟᱹᱢᱤ ᱨᱮᱭᱟᱜ ᱫᱟᱹᱣ ᱟᱨ ᱫᱚᱱᱟᱝ ᱠᱟᱛᱷᱟ</string>
     <string name="permissions_detail">ᱟᱞᱮ ᱵᱤᱥᱚᱭ ᱮᱨᱭᱟᱜ ᱜᱚᱢᱵᱷᱤᱨᱛᱟ ᱞᱮ ᱵᱩᱡᱷᱟᱫᱣᱮᱫᱼᱟ ᱟᱨ ᱟᱢᱟᱜ ᱥᱟᱹᱠᱷᱭᱟᱹᱛ ᱚᱠᱚᱭ ᱥᱟᱞᱟᱜ ᱦᱚᱸ ᱵᱟᱞᱮ ᱥᱩᱞᱟᱹᱭᱞᱟᱢᱟ, ᱚᱱᱟ ᱠᱷᱟᱹᱛᱤᱨ ᱟᱞᱮ ᱠᱚᱰᱟ ᱡᱷᱟᱯ ᱞᱮ ᱤᱫᱤ ᱠᱟᱫᱟ ᱾.</string>
     <string name="location_text">ᱱᱚᱶᱟ ᱥᱤᱞᱟᱹᱨᱟᱜᱼᱠᱟᱱᱟ ᱟᱢ ᱡᱟᱭᱜᱟ ᱦᱟᱹᱴᱤᱧ ‘ᱡᱟᱣᱜᱮ’ ᱨᱮ ᱥᱮᱴ ᱛᱟᱢ ᱾ ᱟᱢ ᱛᱟᱭᱚᱢ ᱛᱮ ᱦᱚᱸ ᱵᱚᱫᱚᱞ ᱫᱟᱫᱮᱟᱜᱼᱟᱢ ᱾.</string>
-
-
-    <!--phone_number_layout-->
     <string name="enter_mobile_number">ᱢᱚᱵᱟᱤᱞ ᱮᱞ ᱟᱫᱮᱨ</string>
     <string name="country_code">+91 </string>
     <string name="mobile_number">ᱢᱚᱵᱟᱤᱞ ᱮᱞ ᱞᱮᱠᱷᱟ</string>
@@ -16,16 +12,11 @@
     <string name="submit">ᱡᱚᱢᱟ</string>
     <string name="resend_otp">OTP ᱫᱩᱦᱲᱟ ᱵᱷᱮᱡᱟ</string>
     <string name="resend_otp_in">%s ᱨᱮ OTP ᱫᱩᱦᱲᱟ ᱵᱷᱮᱡᱟ</string>
-
-    <!--otp_validation_layout-->
     <string name="enter_otp">OTP ᱟᱫᱮᱨ</string>
     <string name="we_have_sent_otp">ᱟᱞᱮ ᱢᱚᱵᱟᱤᱞ OTP ᱚᱱᱟ ᱢᱚᱵᱟᱤᱞ ᱮᱞ ᱨᱮ ᱵᱷᱮᱡᱟ ᱟᱠᱟᱱᱟ ᱾.</string>
     <string name="we_have_resent_otp">ᱟᱢᱟᱜ ᱢᱚᱵᱟᱤᱞ ᱮᱞ ᱨᱮ OTP ᱵᱷᱮᱡᱟ ᱮᱱᱟ ᱾.</string>
     <string name="otp">OTP</string>
     <string name="please_enter_a_valid_otp">ᱫᱚᱭᱟᱠᱟᱛᱮ ᱵᱟᱛᱟᱣᱟᱜ otp ᱟᱫᱮᱨᱢᱮ ᱾.</string>
-
-
-    <!--why_needed_layout-->
     <string name="i_understand">ᱤᱧ ᱵᱩᱡᱷᱟᱣᱮᱫᱟᱹᱧ</string>
     <string name="device_location"><![CDATA[<b>ᱰᱤᱵᱷᱟᱤᱥ ᱡᱟᱭᱜᱟ</b>]]></string>
     <string name="bluetooth"><![CDATA[<b>ᱵᱞᱩᱴᱩᱛᱷ</b>]]></string>
@@ -36,11 +27,7 @@
     <string name="please_select_a_language_en">Please select your language\nकृपया अपनी भाषा चुनें</string>
     <string name="next">ᱤᱱᱟ ᱛᱟᱭᱚᱢ</string>
     <string name="please_select_a_language_to_proceed">ᱞᱟᱦᱟ ᱞᱟᱹᱜᱤᱫ ᱫᱚᱭᱟᱠᱟᱛᱮ ᱟᱲᱟ ᱪᱚᱭᱚᱱ ᱢᱮ ᱾.</string>
-    <!-- Strings used for fragments for navigation -->
-
     <string name="please_enter_a_valid_number">ᱫᱚᱭᱟᱠᱟᱛᱮ ᱮᱞ ᱟᱫᱮᱨ ᱢᱮ</string>
-
-
     <string name="would_you_like_to">ᱟᱢ ᱵᱟᱰᱟᱭ ᱫᱚᱦᱚ ᱥᱟᱱᱟᱢ ᱠᱟᱱᱟ ᱥᱮ ᱡᱚᱫᱤ ᱟᱢ \nᱚᱠᱟᱭ ᱮᱢ ᱯᱟᱨᱚᱢ ᱠᱮᱫ ᱠᱚᱶᱟᱢ ᱚᱠᱚᱭ ᱠᱚ\nCOVID-19 ᱯᱚᱡᱤᱴᱤᱵᱷ ᱠᱟᱱᱟ ᱠᱚ?</string>
     <string name="each_one_of_us">ᱡᱷᱚᱛᱚ ᱦᱚᱲ ᱴᱷᱮᱱ ᱜᱚᱲᱚ ᱨᱮᱭᱟᱜ ᱫᱟᱲᱮ ᱢᱮᱱᱟᱜᱼᱟ\nᱠᱚᱨᱚᱱᱟᱵᱷᱟᱭᱨᱚᱥ  \nᱥᱤᱧᱚᱛ ᱨᱮ ᱥᱚᱨᱣᱚᱵᱭᱟᱯᱤ ᱢᱟᱦᱟᱢᱟᱨᱤ ᱾.</string>
     <string name="simply_1_install_the_app"><![CDATA[ᱟᱞᱜᱟ ᱛᱮ,\n1 ᱾ %s ᱱᱚᱶᱟ ᱮᱯ \n2 ᱾ ᱚᱢ ᱢᱮ %s \n3. ᱥᱮᱴ ᱢᱮ %s ‘ᱡᱟᱣᱜᱮ’ ᱛᱮ \n\nᱚᱲᱟᱜ ᱦᱚᱲ  ᱟᱨ ᱜᱟᱛᱮ ᱠᱚ ᱱᱮᱣᱛᱟ ᱮᱢᱟ ᱠᱚᱢ \nᱮᱯ ᱦᱚᱸ ᱵᱚᱦᱟᱞ ᱯᱮ ᱾.]]></string>
@@ -49,13 +36,10 @@
     <string name="you_will_be_alerted_if">ᱟᱢ ᱠᱚ ᱦᱩᱥᱤᱭᱟᱹᱨ ᱢᱮᱭᱟ ᱡᱚᱫᱤ ᱟᱢ ᱚᱠᱚᱭᱠᱚ ᱴᱷᱮᱱ\nᱥᱩᱨᱛᱮ ᱦᱟᱹᱡᱩᱜᱟᱢ ᱟᱨ ᱩᱱᱤ \nᱵᱟᱝ ᱵᱟᱲᱟᱭ ᱠᱟᱛᱮ ᱨᱮ ᱦᱚᱸ COVID-19 ᱯᱚᱡᱤᱴᱤᱵᱷ ᱥᱟᱵ ᱠᱟᱭᱟ ᱾.</string>
     <string name="with_cowin_20_you_can"><![CDATA[<b>ᱟᱹᱨᱚᱜᱭᱟ ᱥᱮᱛᱩ</b> ᱥᱟᱞᱟᱜ, ᱟᱢ ᱱᱤᱡᱮ ᱛᱮ ᱟᱲ ᱮᱢ ᱤᱫᱤ ᱫᱟᱲᱮᱟᱜᱼᱟᱢ, \nᱟᱢᱟᱜ ᱯᱚᱨᱤᱣᱟᱨ ᱟᱨ ᱜᱟᱛᱮ ᱠᱚ, ᱟᱨ \n ᱫᱤᱥᱚᱢ ᱠᱚ COVID-19 ᱢᱩᱠᱛᱚ ᱨᱮ ᱜᱚᱲᱚ ᱮᱢ ᱫᱟᱲᱮᱭᱟᱜᱼᱟᱢ]]></string>
     <string name="register_now">ᱱᱤᱛᱚᱜ ᱧᱩᱛᱩᱢ ᱚᱞ</string>
-
-
     <string name="install">ᱵᱳᱦᱟᱞ</string>
     <string name="bluetooth_and_gps">ᱵᱞᱩᱴᱩᱴᱷ ᱟᱨ ᱡᱟᱭᱜᱟ</string>
     <string name="location_sharing">ᱡᱟᱭᱜᱟ ᱦᱟᱹᱴᱤᱧ</string>
     <string name="permission_info_tnc_text"><![CDATA[<p>ᱟᱢ ᱡᱩᱫᱤ ᱫᱤᱥᱚᱢ ᱱᱟᱯᱟᱭ ᱫᱚᱦᱚ ᱨᱮ ᱭᱩᱜᱫᱟᱱ ᱮᱢ ᱥᱟᱱᱟᱢ ᱠᱷᱟᱱ ᱞᱟᱛᱟᱨ ᱵᱚᱴᱚᱱ ᱚᱛᱟ ᱠᱟᱛᱮ<a href="https://static.swaraksha.gov.in/tnc/">ᱠᱟᱹᱢᱤ ᱨᱮᱱᱟᱜ ᱥᱚᱨᱛᱚ</a> ᱟᱨ <a href="https://web.swaraksha.gov.in/ncv19/privacy/">ᱩᱠᱩ ᱮᱠᱛᱤᱭᱟᱨ</a> ᱵᱟᱛᱟᱩᱛᱟᱹᱨ ᱢᱮ:</p>]]></string>
-
     <string name="auth_error_unknown">ᱟᱢ ᱵᱚᱞᱚ ᱡᱷᱚᱜ ᱦᱩᱰᱟᱹᱜ ᱦᱩᱭᱮᱱᱟ</string>
     <string name="auth_error_invalid_otp">ᱟᱫᱮᱨ ᱟᱠᱟᱱ OTP ᱵᱷᱩᱞ ᱜᱮᱭᱟ</string>
     <string name="auth_error_user_disabled">ᱟᱢ ᱵᱟᱝ ᱥᱚᱭᱤᱱ ᱤᱱ ᱫᱟᱲᱮᱟᱜᱼᱟᱢ</string>
@@ -81,7 +65,6 @@
     <string name="retry">ᱫᱚᱦᱲᱟ ᱵᱤᱰᱟᱹᱣ</string>
     <string name="ok">ᱴᱷᱤᱠ</string>
     <string name="app_permissions" translatable="false">App Permissions</string>
-
     <string name="image_language_change_content_description">ᱯᱟᱹᱨᱥᱤ ᱵᱚᱫᱚᱞ ᱢᱮ</string>
     <string name="image_share_content_description">ᱦᱟᱹᱴᱤᱧ ᱫᱚᱞᱟᱞ</string>
     <string name="image_back_content_description">ᱛᱟᱭᱚᱢ</string>
