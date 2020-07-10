@@ -19,6 +19,7 @@
     <string name="we_have_resent_otp">ᱟᱢᱟᱜ ᱢᱚᱵᱟᱤᱞ ᱮᱞ ᱨᱮ OTP ᱵᱷᱮᱡᱟ ᱮᱱᱟ ᱾.</string>
     <string name="otp">OTP</string>
     <string name="please_enter_a_valid_otp">ᱫᱚᱭᱟᱠᱟᱛᱮ ᱵᱟᱛᱟᱣᱟᱜ otp ᱟᱫᱮᱨᱢᱮ ᱾.</string>
+     <!-- otp_validation_layout -->
     <string name="i_understand">ᱤᱧ ᱵᱩᱡᱷᱟᱣᱮᱫᱟᱹᱧ</string>
     <string name="device_location"><![CDATA[<b>ᱰᱤᱵᱷᱟᱤᱥ ᱡᱟᱭᱜᱟ</b>]]></string>
     <string name="bluetooth"><![CDATA[<b>ᱵᱞᱩᱴᱩᱛᱷ</b>]]></string>
@@ -29,6 +30,7 @@
     <string name="please_select_a_language_en">Please select your language\nकृपया अपनी भाषा चुनें</string>
     <string name="next">ᱤᱱᱟ ᱛᱟᱭᱚᱢ</string>
     <string name="please_select_a_language_to_proceed">ᱞᱟᱦᱟ ᱞᱟᱹᱜᱤᱫ ᱫᱚᱭᱟᱠᱟᱛᱮ ᱟᱲᱟ ᱪᱚᱭᱚᱱ ᱢᱮ ᱾.</string>
+     <!-- Strings used for fragments for navigation -->
     <string name="please_enter_a_valid_number">ᱫᱚᱭᱟᱠᱟᱛᱮ ᱮᱞ ᱟᱫᱮᱨ ᱢᱮ</string>
     <string name="would_you_like_to">ᱟᱢ ᱵᱟᱰᱟᱭ ᱫᱚᱦᱚ ᱥᱟᱱᱟᱢ ᱠᱟᱱᱟ ᱥᱮ ᱡᱚᱫᱤ ᱟᱢ \nᱚᱠᱟᱭ ᱮᱢ ᱯᱟᱨᱚᱢ ᱠᱮᱫ ᱠᱚᱶᱟᱢ ᱚᱠᱚᱭ ᱠᱚ\nCOVID-19 ᱯᱚᱡᱤᱴᱤᱵᱷ ᱠᱟᱱᱟ ᱠᱚ?</string>
     <string name="each_one_of_us">ᱡᱷᱚᱛᱚ ᱦᱚᱲ ᱴᱷᱮᱱ ᱜᱚᱲᱚ ᱨᱮᱭᱟᱜ ᱫᱟᱲᱮ ᱢᱮᱱᱟᱜᱼᱟ\nᱠᱚᱨᱚᱱᱟᱵᱷᱟᱭᱨᱚᱥ  \nᱥᱤᱧᱚᱛ ᱨᱮ ᱥᱚᱨᱣᱚᱵᱭᱟᱯᱤ ᱢᱟᱦᱟᱢᱟᱨᱤ ᱾.</string>
