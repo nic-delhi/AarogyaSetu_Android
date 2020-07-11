@@ -15,7 +15,7 @@
     <string name="resend_otp_in">%s ᱨᱮ OTP ᱫᱩᱦᱲᱟ ᱵᱷᱮᱡᱟ</string>
      <!-- otp_validation_layout -->
     <string name="enter_otp">OTP ᱟᱫᱮᱨ</string>
-    <string name="we_have_sent_otp">ᱟᱞᱮ ᱢᱚᱵᱟᱤᱞ OTP ᱚᱱᱟ ᱢᱚᱵᱟᱤᱞ ᱮᱞ ᱨᱮ ᱵᱷᱮᱡᱟ ᱟᱠᱟᱱᱟ ᱾.</string>
+    <string name="we_have_sent_otp">ᱟᱞᱮ ᱢᱚᱵᱟᱤᱞ OTP ᱚᱱᱟ ᱢᱚᱵᱟᱤᱞ ᱮᱞ ᱨᱮ ᱵᱷᱮᱡᱟ ᱠᱟᱜᱼᱟᱞᱮ ᱾.</string>
     <string name="we_have_resent_otp">ᱟᱢᱟᱜ ᱢᱚᱵᱟᱤᱞ ᱮᱞ ᱨᱮ OTP ᱵᱷᱮᱡᱟ ᱮᱱᱟ ᱾.</string>
     <string name="otp">OTP</string>
     <string name="please_enter_a_valid_otp">ᱫᱚᱭᱟᱠᱟᱛᱮ ᱵᱟᱛᱟᱣᱟᱜ otp ᱟᱫᱮᱨᱢᱮ ᱾.</string>
@@ -26,13 +26,13 @@
     <string name="data_sharing_with_the_ministry"><![CDATA[<b>ᱥᱟᱹᱠᱷᱤᱭᱟᱹᱛ ᱦᱟᱹᱴᱤᱧ</b>]]></string>
     <string name="monitors_your_device_s_proximity_within_6_feet_range">ᱟᱢᱟᱜ ᱰᱤᱵᱷᱟᱤᱥ ᱨᱮᱭᱟᱜ ᱥᱩᱯᱩᱨ ᱚᱞᱜᱟ ᱢᱚᱵᱟᱤᱞ ᱰᱤᱵᱷᱟᱤᱥ ᱥᱟᱞᱟᱜ ᱮᱢ ᱧᱮᱞᱢᱮ ᱾\nᱥᱤᱯᱷᱟᱨᱤᱥ ᱠᱟᱱᱟ ᱡᱮ ᱟᱢ ᱡᱟᱦᱟᱸᱭ ᱚᱠᱛᱚ ᱨᱮ ᱱᱚᱶᱟ ᱚᱱ ᱫᱚᱦᱚᱭ ᱢᱮ ᱾</string>
     <string name="tracks_an_individual_s_touch_points_so_can_easily_find_others_who_came_in_close_contact">ᱟᱢᱟᱜ ᱥᱟᱹᱠᱷᱭᱟᱹᱛ ᱫᱚ ᱥᱤᱧᱚᱛ ᱫᱤᱥᱚᱢ ᱥᱟᱞᱟᱜ ᱦᱟᱹᱴᱤᱧᱚᱜᱼᱟ ᱾\nᱱᱚᱶᱟ ᱮᱯ ᱟᱢᱟᱜ ᱧᱩᱛᱩᱢ ᱟᱨ ᱮᱞ ᱡᱟᱦᱟᱺᱭ ᱚᱠᱛᱚ ᱨᱮ ᱦᱚᱲ ᱠᱚ ᱥᱟᱞᱟᱜ ᱵᱟᱭ ᱥᱟᱹᱡᱷᱟᱣ ᱟᱭ ᱾</string>
-    <string name="contribute_to_a_safer_india">ᱤᱧᱤᱧ ᱥᱤᱣᱠᱟᱹᱨ ᱜᱮᱭᱟ</string>
+    <string name="contribute_to_a_safer_india">ᱤᱧ ᱫᱚ ᱥᱤᱣᱠᱟᱹᱨ ᱮᱫᱟᱹᱧ</string>
     <string name="please_select_a_language_en">Please select your language\nकृपया अपनी भाषा चुनें</string>
-    <string name="next">ᱤᱱᱟ ᱛᱟᱭᱚᱢ</string>
+    <string name="next">ᱤᱱᱟᱹ ᱛᱟᱭᱚᱢ</string>
     <string name="please_select_a_language_to_proceed">ᱞᱟᱦᱟ ᱞᱟᱹᱜᱤᱫ ᱫᱚᱭᱟᱠᱟᱛᱮ ᱟᱲᱟ ᱪᱚᱭᱚᱱ ᱢᱮ ᱾.</string>
      <!-- Strings used for fragments for navigation -->
     <string name="please_enter_a_valid_number">ᱫᱚᱭᱟᱠᱟᱛᱮ ᱮᱞ ᱟᱫᱮᱨ ᱢᱮ</string>
-    <string name="would_you_like_to">ᱟᱢ ᱵᱟᱰᱟᱭ ᱫᱚᱦᱚ ᱥᱟᱱᱟᱢ ᱠᱟᱱᱟ ᱥᱮ ᱡᱚᱫᱤ ᱟᱢ \nᱚᱠᱟᱭ ᱮᱢ ᱯᱟᱨᱚᱢ ᱠᱮᱫ ᱠᱚᱶᱟᱢ ᱚᱠᱚᱭ ᱠᱚ\nCOVID-19 ᱯᱚᱡᱤᱴᱤᱵᱷ ᱠᱟᱱᱟ ᱠᱚ?</string>
+    <string name="would_you_like_to">ᱟᱢ ᱵᱟᱰᱟᱭ ᱫᱚᱦᱚ ᱥᱟᱱᱟᱢ ᱠᱟᱱᱟ ᱥᱮ ᱡᱚᱫᱤ ᱟᱢ ᱚᱠᱟᱭ ᱮᱢ ᱯᱟᱨᱚᱢ ᱞᱮᱫ ᱠᱚᱶᱟᱢ ᱚᱠᱚᱭ ᱠᱚ COVID-19 ᱯᱚᱡᱤᱴᱤᱵᱷ ᱠᱟᱱᱟ ᱠᱚ?</string>
     <string name="each_one_of_us">ᱡᱷᱚᱛᱚ ᱦᱚᱲ ᱴᱷᱮᱱ ᱜᱚᱲᱚ ᱨᱮᱭᱟᱜ ᱫᱟᱲᱮ ᱢᱮᱱᱟᱜᱼᱟ\nᱠᱚᱨᱚᱱᱟᱵᱷᱟᱭᱨᱚᱥ  \nᱥᱤᱧᱚᱛ ᱨᱮ ᱥᱚᱨᱣᱚᱵᱭᱟᱯᱤ ᱢᱟᱦᱟᱢᱟᱨᱤ ᱾.</string>
     <string name="simply_1_install_the_app"><![CDATA[ᱟᱞᱜᱟ ᱛᱮ,
 \n1 ᱾ %s ᱱᱚᱶᱟ ᱮᱯ 
