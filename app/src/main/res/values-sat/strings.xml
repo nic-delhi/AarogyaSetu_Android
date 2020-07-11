@@ -34,11 +34,15 @@
     <string name="please_enter_a_valid_number">ᱫᱚᱭᱟᱠᱟᱛᱮ ᱮᱞ ᱟᱫᱮᱨ ᱢᱮ</string>
     <string name="would_you_like_to">ᱟᱢ ᱵᱟᱰᱟᱭ ᱫᱚᱦᱚ ᱥᱟᱱᱟᱢ ᱠᱟᱱᱟ ᱥᱮ ᱡᱚᱫᱤ ᱟᱢ \nᱚᱠᱟᱭ ᱮᱢ ᱯᱟᱨᱚᱢ ᱠᱮᱫ ᱠᱚᱶᱟᱢ ᱚᱠᱚᱭ ᱠᱚ\nCOVID-19 ᱯᱚᱡᱤᱴᱤᱵᱷ ᱠᱟᱱᱟ ᱠᱚ?</string>
     <string name="each_one_of_us">ᱡᱷᱚᱛᱚ ᱦᱚᱲ ᱴᱷᱮᱱ ᱜᱚᱲᱚ ᱨᱮᱭᱟᱜ ᱫᱟᱲᱮ ᱢᱮᱱᱟᱜᱼᱟ\nᱠᱚᱨᱚᱱᱟᱵᱷᱟᱭᱨᱚᱥ  \nᱥᱤᱧᱚᱛ ᱨᱮ ᱥᱚᱨᱣᱚᱵᱭᱟᱯᱤ ᱢᱟᱦᱟᱢᱟᱨᱤ ᱾.</string>
-    <string name="simply_1_install_the_app"><![CDATA[ᱟᱞᱜᱟ ᱛᱮ,\n1 ᱾ %s ᱱᱚᱶᱟ ᱮᱯ \n2 ᱾ ᱚᱢ ᱢᱮ %s \n3. ᱥᱮᱴ ᱢᱮ %s ‘ᱡᱟᱣᱜᱮ’ ᱛᱮ \n\nᱚᱲᱟᱜ ᱦᱚᱲ  ᱟᱨ ᱜᱟᱛᱮ ᱠᱚ ᱱᱮᱣᱛᱟ ᱮᱢᱟ ᱠᱚᱢ \nᱮᱯ ᱦᱚᱸ ᱵᱚᱦᱟᱞ ᱯᱮ ᱾.]]></string>
+    <string name="simply_1_install_the_app"><![CDATA[ᱟᱞᱜᱟ ᱛᱮ,
+\n1 ᱾ %s ᱱᱚᱶᱟ ᱮᱯ 
+\n2 ᱾ ᱚᱢ ᱢᱮ %s 
+\n3. ᱥᱮᱴ ᱢᱮ %s ‘ᱡᱟᱣᱜᱮ’ ᱛᱮ 
+\n\nᱚᱲᱟᱜ ᱦᱚᱲ  ᱟᱨ ᱜᱟᱛᱮ ᱠᱚ ᱱᱮᱣᱛᱟ ᱮᱢᱟ ᱠᱚᱢ ᱮᱯ ᱦᱚᱸ ᱵᱚᱦᱟᱞ ᱯᱮ ᱾.></string>
     <string name="cowin_20_tracks_through"><![CDATA[<b>Aarogya Setu</b> ᱵᱞᱩᱴᱩᱛᱷ ᱛᱮ ᱴᱨᱟᱠ ᱯᱮ &amp;ᱡᱟᱭᱜᱟ \nᱥᱚᱥᱤᱭᱟᱹᱞ ᱜᱟᱯᱷ ᱛᱮᱭᱟᱨ, ᱟᱢᱟᱜ ᱠᱟᱹᱢᱤ ᱛᱮ \nᱩᱱᱤᱥᱟᱞᱟᱜ ᱚᱠᱟᱭ ᱫᱚ\nCOVID-19 ᱯᱚᱡᱤᱴᱤᱵᱷ ᱥᱟᱵ ᱟᱠᱟᱫᱮᱟᱭ ᱾.]]></string>
-    <string name="the_app_alerts_are_accompanied">ᱱᱚᱶᱟ ᱮᱯ ᱫᱚ ᱦᱩᱥᱤᱭᱟᱨ ᱠᱚ ᱥᱟᱞᱟᱜ ᱛᱮ \nᱟᱢᱛᱮᱜᱮ ᱟᱭᱥᱚᱞᱮᱴ ᱠᱚ ᱮᱢᱟᱱ ᱫᱤᱥᱟ ᱱᱤᱨᱫᱮᱥ ᱠᱚ ᱢᱮᱱᱟᱜᱼᱟ\nᱟᱢ ᱪᱮᱫ ᱮᱢ ᱪᱤᱠᱟᱹᱭᱟ ᱡᱚᱫᱤ ᱟᱢ ᱴᱦᱮᱢ ᱥᱤᱢᱯᱚᱯᱥ ᱠᱚ ᱫᱮᱠᱷᱟᱣ ᱠᱷᱟᱱᱮ\nᱜᱚᱲᱟ ᱟᱨ ᱥᱟᱹᱯᱚᱨ ᱫᱚᱨᱠᱟᱨ ᱛᱟᱦᱮᱱ ᱜᱮᱭᱟ </string>
-    <string name="you_will_be_alerted_if">ᱟᱢ ᱠᱚ ᱦᱩᱥᱤᱭᱟᱹᱨ ᱢᱮᱭᱟ ᱡᱚᱫᱤ ᱟᱢ ᱚᱠᱚᱭᱠᱚ ᱴᱷᱮᱱ\nᱥᱩᱨᱛᱮ ᱦᱟᱹᱡᱩᱜᱟᱢ ᱟᱨ ᱩᱱᱤ \nᱵᱟᱝ ᱵᱟᱲᱟᱭ ᱠᱟᱛᱮ ᱨᱮ ᱦᱚᱸ COVID-19 ᱯᱚᱡᱤᱴᱤᱵᱷ ᱥᱟᱵ ᱠᱟᱭᱟ ᱾.</string>
-    <string name="with_cowin_20_you_can"><![CDATA[<b>ᱟᱹᱨᱚᱜᱭᱟ ᱥᱮᱛᱩ</b> ᱥᱟᱞᱟᱜ, ᱟᱢ ᱱᱤᱡᱮ ᱛᱮ ᱟᱲ ᱮᱢ ᱤᱫᱤ ᱫᱟᱲᱮᱟᱜᱼᱟᱢ, \nᱟᱢᱟᱜ ᱯᱚᱨᱤᱣᱟᱨ ᱟᱨ ᱜᱟᱛᱮ ᱠᱚ, ᱟᱨ \n ᱫᱤᱥᱚᱢ ᱠᱚ COVID-19 ᱢᱩᱠᱛᱚ ᱨᱮ ᱜᱚᱲᱚ ᱮᱢ ᱫᱟᱲᱮᱭᱟᱜᱼᱟᱢ]]></string>
+    <string name="the_app_alerts_are_accompanied">ᱱᱚᱶᱟ ᱮᱯ ᱫᱚ ᱦᱩᱥᱤᱭᱟᱨ ᱠᱚ ᱥᱟᱞᱟᱜ ᱛᱮ ᱟᱢᱛᱮᱜᱮ ᱟᱭᱥᱚᱞᱮᱴ ᱠᱚ ᱮᱢᱟᱱ ᱫᱤᱥᱟ ᱱᱤᱨᱫᱮᱥ ᱠᱚ ᱢᱮᱱᱟᱜᱼᱟ ᱟᱢ ᱪᱮᱫ ᱮᱢ ᱪᱤᱠᱟᱹᱭᱟ ᱡᱚᱫᱤ ᱟᱢ ᱴᱦᱮᱢ ᱥᱤᱢᱯᱚᱯᱥ ᱠᱚ ᱫᱮᱠᱷᱟᱣ ᱠᱷᱟᱱᱮ ᱜᱚᱲᱟ ᱟᱨ ᱥᱟᱹᱯᱚᱨ ᱫᱚᱨᱠᱟᱨ ᱛᱟᱦᱮᱱ ᱜᱮᱭᱟ </string>
+    <string name="you_will_be_alerted_if">ᱟᱢ ᱠᱚ ᱦᱩᱥᱤᱭᱟᱹᱨ ᱢᱮᱭᱟ ᱡᱚᱫᱤ ᱟᱢ ᱚᱠᱚᱭᱠᱚ ᱴᱷᱮᱱ ᱥᱩᱨᱛᱮ ᱦᱟᱹᱡᱩᱜᱟᱢ ᱟᱨ ᱩᱱᱤ ᱵᱟᱝ ᱵᱟᱲᱟᱭ ᱠᱟᱛᱮ ᱨᱮ ᱦᱚᱸ COVID-19 ᱯᱚᱡᱤᱴᱤᱵᱷ ᱥᱟᱵ ᱠᱟᱭᱟ ᱾.</string>
+    <string name="with_cowin_20_you_can"><![CDATA[<b>Aarogya Setu</b> ᱥᱟᱞᱟᱜ, ᱟᱢ ᱱᱤᱡᱮ ᱛᱮ ᱟᱲ ᱮᱢ ᱤᱫᱤ ᱫᱟᱲᱮᱟᱜᱼᱟᱢ, ᱟᱢᱟᱜ ᱯᱚᱨᱤᱣᱟᱨ ᱟᱨ ᱜᱟᱛᱮ ᱠᱚ, ᱟᱨ ᱫᱤᱥᱚᱢ ᱠᱚ COVID-19 ᱢᱩᱠᱛᱚ ᱨᱮ ᱜᱚᱲᱚ ᱮᱢ ᱫᱟᱲᱮᱭᱟᱜᱼᱟᱢ]]></string>
     <string name="register_now">ᱱᱤᱛᱚᱜ ᱧᱩᱛᱩᱢ ᱚᱞ</string>
     <string name="install">ᱵᱳᱦᱟᱞ</string>
     <string name="bluetooth_and_gps">ᱵᱞᱩᱴᱩᱴᱷ ᱟᱨ ᱡᱟᱭᱜᱟ</string>
