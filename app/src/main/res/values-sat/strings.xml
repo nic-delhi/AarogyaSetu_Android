@@ -51,13 +51,7 @@
     <string name="auth_error_unknown">ᱟᱢ ᱵᱚᱞᱚ ᱡᱷᱚᱜ ᱦᱩᱰᱟᱹᱜ ᱦᱩᱭᱮᱱᱟ</string>
     <string name="auth_error_invalid_otp">ᱟᱫᱮᱨ ᱟᱠᱟᱱ OTP ᱵᱷᱩᱞ ᱜᱮᱭᱟ</string>
     <string name="auth_error_user_disabled">ᱟᱢ ᱵᱟᱝ ᱥᱚᱭᱤᱱ ᱤᱱ ᱫᱟᱲᱮᱟᱜᱼᱟᱢ</string>
-    <string name="close">ᱵᱚᱱᱫᱚ</string>
-    <string name="internet_connection_lost" translatable="false">Internet Connection Lost</string>
-    <string name="try_again" translatable="false">Try Again</string>
-    <string name="turn_on_bluetooth" translatable="false">Turn on Bluetooth</string>
-    <string name="turn_on" translatable="false">Turn On</string>
-    <string name="message_failed_tap_to_retry" translatable="false">Failed to update. Tap to retry.</string>
-    <string name="restart" translatable="false">RESTART</string>
+    <string name="close">ᱥᱤᱠᱲᱤ</string>
     <string name="sync_data_user_consent">ᱠᱚᱱᱴᱟᱠᱴ ᱴᱨᱮᱥᱤᱝ ᱨᱮ ᱜᱚᱲᱚ ᱮᱢ ᱞᱟᱹᱜᱤᱫ, ᱵᱞᱩᱴᱩᱛᱷ ᱟᱨ ᱡᱟᱭᱜᱟ ᱥᱚᱨᱵᱷᱤᱥ ᱮᱢᱟᱱ ᱛᱮ ᱟᱢᱟᱜ ᱵᱮᱵᱷᱟᱨ ᱰᱟᱴᱟ ᱠᱚ ᱥᱤᱧᱚᱛ ᱥᱚᱨᱠᱟᱨ ᱥᱟᱞᱟᱜ ᱦᱟᱹᱴᱤᱧᱼᱚᱜ ᱟ ᱾</string>
     <string name="confirm_and_proceed">ᱜᱚᱴᱟᱭ ᱢᱮ ᱟᱨ ᱞᱟᱦᱟᱜᱭ ᱢᱮ</string>
     <string name="sync_data_detail">ᱟᱢᱟᱜ ᱥᱟᱹᱠᱷᱤᱭᱟᱛ ᱟᱢᱟᱜ ᱯᱷᱚᱱ ᱨᱮ ᱥᱟᱱᱪᱟᱣ ᱟᱠᱟᱱᱟ ᱾ ᱥᱮᱠᱭᱚ ᱥᱚᱨᱠᱟᱨᱤ ᱥᱚᱨᱵᱷᱚᱨ ᱛᱮ ᱵᱷᱮᱡᱟᱭ ᱢᱮ…</string>
@@ -72,7 +66,6 @@
     <string name="syncing_data_failed_detail">ᱰᱤᱜᱟᱹᱣ ᱮᱱᱟ, ᱫᱚᱭᱟᱠᱟᱛᱮ ᱫᱩᱦᱲᱟ ᱪᱮᱥᱴᱟᱭ ᱢᱮ᱾.</string>
     <string name="retry">ᱫᱚᱦᱲᱟ ᱵᱤᱰᱟᱹᱣ</string>
     <string name="ok">ᱴᱷᱤᱠ</string>
-    <string name="app_permissions" translatable="false">App Permissions</string>
     <string name="image_language_change_content_description">ᱯᱟᱹᱨᱥᱤ ᱵᱚᱫᱚᱞ ᱢᱮ</string>
     <string name="image_share_content_description">ᱦᱟᱹᱴᱤᱧ ᱫᱚᱞᱟᱞ</string>
     <string name="image_back_content_description">ᱛᱟᱭᱚᱢ</string>
@@ -89,7 +82,7 @@
     <string name="generator_scanner_qr_code">ᱛᱮᱭᱟᱨ/QR ᱠᱳᱰ ᱥᱠᱟᱱ</string>
     <string name="verify_installed_app">ᱵᱳᱦᱟᱞ ᱮᱯ ᱧᱮᱞ ᱥᱟᱹᱨᱤ</string>
     <string name="share_data_with_govt">ᱥᱚᱨᱠᱟᱨ ᱥᱟᱞᱟᱜ ᱰᱟᱴᱟ ᱦᱟᱴᱤᱧ ᱢᱮ ᱾.</string>
-    <string name="call_helpline">ᱜᱚᱲᱚᱞᱟᱭᱤᱱ ᱠᱚᱞ (1075)</string>
+    <string name="call_helpline">ᱜᱚᱲᱚᱞᱟᱭᱤᱱ ᱠᱚᱞ (᱑᱐᱗᱕)</string>
     <string name="settings">ᱥᱟᱡᱟᱣᱠᱚ</string>
     <string name="share_data_with_govt_detail">Share only if you have tested positive for COVID-19 or are currently being tested</string>
     <string name="call_helpline_detail">COVID-19 ᱵᱟᱵᱚᱫ ᱠᱩᱠᱞᱤ ᱠᱚ ᱞᱟᱹᱜᱤᱪ ᱦᱮᱞᱛᱷ ᱢᱤᱱᱤᱥᱴᱨᱭ ᱴᱚᱞ-ᱯᱷᱨᱤ ᱜᱚᱲᱚᱞᱟᱹᱭᱤᱱ</string>
