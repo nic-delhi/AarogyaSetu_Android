@@ -88,7 +88,7 @@
     <string name="call_helpline_detail">COVID-19 ᱵᱟᱵᱚᱫ ᱠᱩᱠᱞᱤ ᱠᱚ ᱞᱟᱹᱜᱤᱫ ᱦᱮᱞᱛᱷ ᱢᱤᱱᱤᱥᱴᱨᱭ ᱴᱚᱞ-ᱯᱷᱨᱤ ᱜᱚᱲᱚᱞᱟᱹᱭᱤᱱ</string>
     <string name="faq">FAQs</string>
     <string name="privacy_policy">ᱩᱠᱩ ᱮᱠᱛᱤᱭᱟᱨ</string>
-    <string name="terms_of_use">ᱵᱮᱵᱦᱟᱨ ᱨᱮᱭᱟᱜ ᱫᱟᱹᱣ</string>
+    <string name="terms_of_use">ᱵᱮᱵᱷᱟᱨ ᱨᱮᱭᱟᱜ ᱫᱟᱹᱣ</string>
     <string name="app_version">ᱮᱯᱯ ᱦᱟᱹᱞᱤᱭᱟᱠ %s</string>
     <string name="scan_prompt">ᱚᱞᱜᱟ ᱦᱚᱲ ᱠᱚᱣᱟᱜ ᱦᱚᱲᱢᱚ ᱥᱛᱤᱛᱷᱤ ᱵᱟᱲᱟᱭ ᱞᱟᱹᱜᱤᱫ QR Code ᱥᱠᱟᱱ ᱢᱮ </string>
     <string name="few_seconds">ᱠᱟᱹᱴᱤᱡ ᱴᱤᱡ</string>
@@ -110,5 +110,5 @@
     <string name="scan_without_perm_alert">QR ᱠᱳᱰ ᱥᱠᱟᱱᱤᱝ ᱞᱟᱹᱜᱩᱤᱫ ᱮᱢ ᱠᱮᱢᱨᱟ ᱪᱷᱟᱰ ᱫᱚᱨᱠᱟᱨ ᱾.</string>
     <string name="open_settings">ᱥᱟᱡᱟᱣᱠᱚ ᱠᱷᱩᱞᱟᱹᱭ ᱢᱮ </string>
     <string name="common_scanning_error">ᱠᱤᱪᱷᱤ ᱵᱷᱩᱞ ᱦᱩᱭᱮᱱᱟ ᱾ ᱫᱚᱭᱟᱠᱟᱛᱮ ᱟᱨᱦᱚᱸ ᱥᱠᱟᱱ ᱢᱮ ᱾.</string>
-    <string name="hamburger_menu_intro">ᱟᱨᱦᱚᱸ ᱡᱤᱱᱤᱥ ᱠᱚ ᱡᱮᱢᱚᱱ ᱜᱚᱲᱚ ᱞᱟᱹᱭᱤᱱ, ᱩᱠᱩ ᱮᱠᱛᱤᱭᱟᱨ, ᱵᱮᱵᱦᱟᱨ ᱨᱮᱭᱟᱜ ᱫᱟᱹᱣ ᱟᱨ ᱟᱨᱦᱚᱸ ᱱᱚᱰᱮ ᱧᱮᱢᱚᱜᱼᱟ ᱾.</string>
+    <string name="hamburger_menu_intro">ᱟᱨᱦᱚᱸ ᱡᱤᱱᱤᱥ ᱠᱚ ᱡᱮᱢᱚᱱ ᱜᱚᱲᱚ ᱞᱟᱹᱭᱤᱱ, ᱩᱠᱩ ᱮᱠᱛᱤᱭᱟᱨ, ᱵᱮᱵᱷᱟᱨ ᱨᱮᱭᱟᱜ ᱫᱟᱹᱣ ᱟᱨ ᱟᱨᱦᱚᱸ ᱱᱚᱰᱮ ᱧᱮᱢᱚᱜᱼᱟ ᱾.</string>
 </resources>
