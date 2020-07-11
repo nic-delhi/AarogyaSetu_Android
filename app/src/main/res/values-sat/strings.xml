@@ -109,6 +109,6 @@
     <string name="provide_necessary_permission">Qr ᱠᱳᱰ ᱦᱟᱢᱮᱴᱚᱜ ᱞᱟᱹᱜᱤᱫ ᱫᱚᱭᱟᱠᱟᱛᱮ ᱪᱷᱟᱰ ᱮᱢᱚᱜᱼᱢᱮ</string>
     <string name="scan_without_perm_alert">QR code ᱥᱠᱟᱱᱤᱝ ᱞᱟᱹᱜᱩᱤᱫ ᱮᱢ ᱠᱮᱢᱨᱟ ᱪᱷᱟᱰ ᱫᱚᱨᱠᱟᱨ ᱾.</string>
     <string name="open_settings">ᱥᱟᱡᱟᱣᱠᱚ ᱠᱷᱩᱞᱟᱹᱭ ᱢᱮ </string>
-    <string name="common_scanning_error">ᱠᱤᱪᱦᱤ ᱵᱷᱩᱞ ᱦᱩᱭᱮᱱᱟ ᱾ ᱫᱚᱭᱟᱠᱟᱛᱮ ᱟᱨᱦᱚ ᱥᱠᱟᱱ ᱢᱮ ᱾.</string>
-    <string name="hamburger_menu_intro">ᱟᱨᱦᱚᱸ ᱡᱤᱱᱤᱥ ᱠᱚ ᱡᱮᱢᱚᱱ ᱜᱚᱲᱚ ᱞᱟᱭᱤᱱ, ᱩᱠᱩ ᱮᱠᱛᱤᱭᱟᱨ, ᱵᱮᱵᱦᱟᱨ ᱨᱮᱭᱟᱜ ᱫᱟᱹᱣ ᱟᱨ ᱟᱨᱦᱚ ᱱᱚᱰᱮ ᱧᱮᱢᱚᱜᱼᱟ ᱾.</string>
+    <string name="common_scanning_error">ᱠᱤᱪᱦᱤ ᱵᱷᱩᱞ ᱦᱩᱭᱮᱱᱟ ᱾ ᱫᱚᱭᱟᱠᱟᱛᱮ ᱟᱨᱦᱚᱸ ᱥᱠᱟᱱ ᱢᱮ ᱾.</string>
+    <string name="hamburger_menu_intro">ᱟᱨᱦᱚᱸ ᱡᱤᱱᱤᱥ ᱠᱚ ᱡᱮᱢᱚᱱ ᱜᱚᱲᱚ ᱞᱟᱹᱭᱤᱱ, ᱩᱠᱩ ᱮᱠᱛᱤᱭᱟᱨ, ᱵᱮᱵᱦᱟᱨ ᱨᱮᱭᱟᱜ ᱫᱟᱹᱣ ᱟᱨ ᱟᱨᱦᱚ ᱱᱚᱰᱮ ᱧᱮᱢᱚᱜᱼᱟ ᱾.</string>
 </resources>
