@@ -16,7 +16,7 @@
     <!-- otp_validation_layout -->
     <string name="enter_otp">OTP നൽകുക</string>
     <string name="we_have_sent_otp">ഞങ്ങൾ നിങ്ങളുടെ മൊബൈൽ നമ്പറിലേക്ക് OTP അയച്ചിട്ടുണ്ട്.</string>
-    <string name="we_have_resent_otp">हमने आपके मोबाइल नंबर पर OTP फिर से भेजा है।</string>
+    <string name="we_have_resent_otp">ഞങ്ങൾ നിങ്ങളുടെ മൊബൈൽ നമ്പറിലേക്ക് വീണ്ടും OTP അയച്ചിട്ടുണ്ട്.</string>
     <string name="otp">OTP</string>
     <string name="please_enter_a_valid_otp">ദയവായി ശെരി ആയ OTP നൽകുക</string>
     <!-- why_needed_layout -->
