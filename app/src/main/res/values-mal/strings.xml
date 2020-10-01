@@ -44,9 +44,9 @@
     <string name="you_will_be_alerted_if">അറിഞ്ഞോ അറിയാതെയോ അടുത്തിടപഴകിയവരിൽ ആർകെങ്കിലും COVID-19 സ്ഥിരീകരിക്കപ്പെട്ടാൽ നിങ്ങള്ക്ക് ഉടൻ തന്നെ മുന്നറിയിപ്പ് ലഭിക്കുന്നതായിരിക്കും.</string>
     <string name="with_cowin_20_you_can"><![CDATA[<b>ആരോഗ്യ സേതു</b> ഉപയോഗിച്ച്, നിങ്ങൾക്ക് നിങ്ങളെയും കുടുംബത്തെയും സുഹൃത്തുക്കളെയും പരിരക്ഷിക്കാനും COVID-19ന് എതിരെയുള്ള പോരാട്ടത്തിൽ നമ്മുടെ രാജ്യത്തെ സഹായിക്കാനും കഴിയും.]]></string>
     <string name="register_now">രജിസ്റ്റർ ചെയ്യുക</string>
-    <string name="install">Install</string>
+    <string name="install">ഇൻസ്റ്റാൾ</string>
     <string name="bluetooth_and_gps">Bluetooth &amp; Location</string>
-    <string name="location_sharing">location sharing</string>
+    <string name="location_sharing">ലോക്കേഷൻ പങ്കുവെക്കുന്നു</string>
     <string name="permission_info_tnc_text"><![CDATA[<p>നിങ്ങൾ ഒരു സുരക്ഷിത ഭാരതത്തിനു വേണ്ടി സംഭാവന ചെയ്യുവാൻ ആഗ്രഹിക്കുന്നുവെങ്കിൽ, താഴെയുള്ള ബട്ടണിൽ ക്ലിക്കുചെയ്തു <a href="https://static.swaraksha.gov.in/tnc/">സേവന നിബന്ധനകളും</a> <a href="https://web.swaraksha.gov.in/ncv19/privacy/">സ്വകാര്യതാ നയവും</a> അംഗീകരിക്കുക:</p>]]></string>
     <string name="auth_error_unknown">സാങ്കേതിക പിഴവുകൾ കാരണം താങ്കളെ ഇപ്പോൾ ലോഗിൻ ചെയ്യാൻ സാധിക്കുന്നില്ല</string>
     <string name="auth_error_invalid_otp">ddനിങ്ങൾ നൽകിയ OTP തെറ്റാണ്</string>
