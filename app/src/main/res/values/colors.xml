@@ -30,6 +30,7 @@
 
     <color name="chat_title_orange">#DB7D00</color>
     <color name="chat_title_red">#EB2026</color>
+    <color name="actionbar_orange">#fc8040</color>
 
     <color name="chat_close_dark">#44000000</color>
 </resources>
