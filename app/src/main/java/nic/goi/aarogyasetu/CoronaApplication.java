@@ -31,7 +31,8 @@ public class CoronaApplication extends Application implements Configuration.Prov
     public static CoronaApplication getInstance() {
         return instance;
     }
-
+	
+	/* Override onCreate for Custom Behaviour */
     @Override
     public void onCreate() {
         super.onCreate();
@@ -48,16 +49,19 @@ public class CoronaApplication extends Application implements Configuration.Prov
 
     }
 
+	/* setBestLocation */
     public void setBestLocation(Location location)
     {
         lastKnownLocation = location;
     }
 
+	/* getAppLastLocation */
     public Location getAppLastLocation()
     {
         return lastKnownLocation;
     }
-
+	
+	/* getDeviceLastKnownLocation */
     public Location getDeviceLastKnownLocation() {
 
         if(CorUtility.Companion.isLocationPermissionAvailable(CoronaApplication.getInstance()))
@@ -90,11 +94,13 @@ public class CoronaApplication extends Application implements Configuration.Prov
             });
         }
     }
-
+	
+	/* getContext */
     public Context getContext() {
         return getApplicationContext();
     }
 
+	/* getWorkManagerConfiguration */
     @NonNull
     @Override
     public Configuration getWorkManagerConfiguration() {
