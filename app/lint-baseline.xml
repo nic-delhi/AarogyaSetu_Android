@@ -1,0 +1,1002 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<issues format="5" by="lint 3.6.3" client="gradle" variant="debug" version="3.6.3">
+    
+    <issue
+        id="LintError"
+        message="Unexpected failure during lint analysis of CorUtility.kt (this is a bug in lint or one of the libraries it depends on)&#xA;&#xA;Message: java.lang.Integer cannot be cast to java.lang.Long&#xA;&#xA;The crash seems to involve the detector `androidx.work.lint.InvalidPeriodicWorkRequestIntervalDetector`.&#xA;You can try disabling it with something like this:&#xA;    android {&#xA;        lintOptions {&#xA;            disable &quot;InvalidPeriodicWorkRequestInterval&quot;&#xA;        }&#xA;    }&#xA;&#xA;Stack: `ClassCastException:InvalidPeriodicWorkRequestIntervalDetector.visitConstructor(InvalidPeriodicWorkRequestIntervalDetector.kt:70)←UElementVisitor$DelegatingPsiVisitor.visitNewExpression(UElementVisitor.kt:1099)←UElementVisitor$DelegatingPsiVisitor.visitCallExpression(UElementVisitor.kt:1063)←KotlinUFunctionCallExpression.accept(KotlinUFunctionCallExpression.kt:198)←UQualifiedReferenceExpression$DefaultImpls.accept(UQualifiedReferenceExpression.kt:48)←KotlinUQualifiedReferenceExpression.accept(KotlinUQualifiedReferenceExpression.kt:27)←UQualifiedReferenceExpression$DefaultImpls.accept(UQualifiedReferenceExpression.kt:47)←KotlinUQualifiedReferenceExpression.accept(KotlinUQualifiedReferenceExpression.kt:27)`&#xA;&#xA;You can set environment variable `LINT_PRINT_STACKTRACE=true` to dump a full stacktrace to stdout.">
+        <location
+            file="src/main/java/nic/goi/aarogyasetu/utility/CorUtility.kt"/>
+    </issue>
+
+    <issue
+        id="ApplySharedPref"
+        message="Consider using `apply()` instead; `commit` writes its data to persistent storage immediately, whereas `apply` will handle it in the background"
+        errorLine1="            edit.commit();"
+        errorLine2="            ~~~~~~~~~~~~~">
+        <location
+            file="src/main/java/nic/goi/aarogyasetu/utility/SecureUtil.java"
+            line="172"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="ApplySharedPref"
+        message="Consider using `apply()` instead; `commit` writes its data to persistent storage immediately, whereas `apply` will handle it in the background"
+        errorLine1="        editor.commit();"
+        errorLine2="        ~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/java/nic/goi/aarogyasetu/prefs/SharedPref.java"
+            line="35"
+            column="9"/>
+    </issue>
+
+    <issue
+        id="CustomViewStyleable"
+        message="By convention, the custom view (`CustomViewFinderView`) and the declare-styleable (`zxing_finder`) should have the same name (various editor features rely on this convention)"
+        errorLine1="        TypedArray attributes = getContext().obtainStyledAttributes(attrs, R.styleable.zxing_finder);"
+        errorLine2="                                                                           ~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/java/nic/goi/aarogyasetu/zxing/CustomViewFinderView.java"
+            line="63"
+            column="76"/>
+    </issue>
+
+    <issue
+        id="UnusedAttribute"
+        message="Attribute `networkSecurityConfig` is only used in API level 24 and higher (current min is 21)"
+        errorLine1="        android:networkSecurityConfig=&quot;@xml/network_security_config&quot;"
+        errorLine2="        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/AndroidManifest.xml"
+            line="28"
+            column="9"/>
+    </issue>
+
+    <issue
+        id="UnusedAttribute"
+        message="Attribute `autoVerify` is only used in API level 23 and higher (current min is 21)"
+        errorLine1="            &lt;intent-filter android:autoVerify=&quot;true&quot;>"
+        errorLine2="                           ~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/AndroidManifest.xml"
+            line="50"
+            column="28"/>
+    </issue>
+
+    <issue
+        id="UseAlpha2"
+        message="For compatibility, should use 2-letter language codes when available; use `ml` instead of `mal`">
+        <location
+            file="src/main/res/values-mal"/>
+    </issue>
+
+    <issue
+        id="VectorRaster"
+        message="Limit vector icons sizes to 200×200 to keep icon drawing fast; see https://developer.android.com/studio/write/vector-asset-studio#when for more"
+        errorLine1="    android:width=&quot;221dp&quot;"
+        errorLine2="                   ~~~~~">
+        <location
+            file="src/main/res/drawable/ic_qr_code.xml"
+            line="2"
+            column="20"/>
+    </issue>
+
+    <issue
+        id="GradleDependency"
+        message="A newer version of androidx.appcompat:appcompat than 1.2.0-alpha03 is available: 1.3.0-alpha02"
+        errorLine1="    implementation &apos;androidx.appcompat:appcompat:1.2.0-alpha03&apos;"
+        errorLine2="    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="build.gradle"
+            line="123"
+            column="5"/>
+    </issue>
+
+    <issue
+        id="GradleDependency"
+        message="A newer version of androidx.core:core-ktx than 1.2.0 is available: 1.3.2"
+        errorLine1="    implementation &apos;androidx.core:core-ktx:1.2.0&apos;"
+        errorLine2="    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="build.gradle"
+            line="124"
+            column="5"/>
+    </issue>
+
+    <issue
+        id="GradleDependency"
+        message="A newer version of androidx.constraintlayout:constraintlayout than 1.1.3 is available: 2.0.2"
+        errorLine1="    implementation &apos;androidx.constraintlayout:constraintlayout:1.1.3&apos;"
+        errorLine2="    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="build.gradle"
+            line="125"
+            column="5"/>
+    </issue>
+
+    <issue
+        id="GradleDependency"
+        message="A newer version of androidx.test.ext:junit than 1.1.1 is available: 1.1.2"
+        errorLine1="    androidTestImplementation &apos;androidx.test.ext:junit:1.1.1&apos;"
+        errorLine2="    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="build.gradle"
+            line="128"
+            column="5"/>
+    </issue>
+
+    <issue
+        id="GradleDependency"
+        message="A newer version of androidx.test.espresso:espresso-core than 3.2.0 is available: 3.3.0"
+        errorLine1="    androidTestImplementation &apos;androidx.test.espresso:espresso-core:3.2.0&apos;"
+        errorLine2="    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="build.gradle"
+            line="129"
+            column="5"/>
+    </issue>
+
+    <issue
+        id="GradleDependency"
+        message="A newer version of com.google.android.material:material than 1.2.0-alpha05 is available: 1.3.0-alpha03"
+        errorLine1="    implementation &quot;com.google.android.material:material:1.2.0-alpha05&quot;"
+        errorLine2="    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="build.gradle"
+            line="132"
+            column="5"/>
+    </issue>
+
+    <issue
+        id="GradleDependency"
+        message="A newer version of androidx.work:work-runtime than 2.3.4 is available: 2.4.0"
+        errorLine1="    implementation &quot;androidx.work:work-runtime:2.3.4&quot;"
+        errorLine2="    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="build.gradle"
+            line="134"
+            column="5"/>
+    </issue>
+
+    <issue
+        id="GradleDependency"
+        message="A newer version of com.squareup.okhttp3:logging-interceptor than 3.9.0 is available: 3.14.9"
+        errorLine1="    implementation &apos;com.squareup.okhttp3:logging-interceptor:3.9.0&apos;"
+        errorLine2="    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="build.gradle"
+            line="140"
+            column="5"/>
+    </issue>
+
+    <issue
+        id="GradleDependency"
+        message="A newer version of com.google.firebase:firebase-messaging than 20.1.3 is available: 20.3.0"
+        errorLine1="    implementation &apos;com.google.firebase:firebase-messaging:20.1.3&apos;"
+        errorLine2="    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="build.gradle"
+            line="145"
+            column="5"/>
+    </issue>
+
+    <issue
+        id="GradleDependency"
+        message="A newer version of com.google.firebase:firebase-analytics-ktx than 17.3.0 is available: 17.6.0"
+        errorLine1="    implementation &apos;com.google.firebase:firebase-analytics-ktx:17.3.0&apos;"
+        errorLine2="    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="build.gradle"
+            line="147"
+            column="5"/>
+    </issue>
+
+    <issue
+        id="GradleDependency"
+        message="A newer version of com.google.android.gms:play-services-location than 17.0.0 is available: 17.1.0"
+        errorLine1="    implementation &apos;com.google.android.gms:play-services-location:17.0.0&apos;"
+        errorLine2="    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="build.gradle"
+            line="150"
+            column="5"/>
+    </issue>
+
+    <issue
+        id="GradleDependency"
+        message="A newer version of com.google.android.gms:play-services-auth-api-phone than 17.4.0 is available: 17.5.0"
+        errorLine1="    implementation &apos;com.google.android.gms:play-services-auth-api-phone:17.4.0&apos;"
+        errorLine2="    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="build.gradle"
+            line="151"
+            column="5"/>
+    </issue>
+
+    <issue
+        id="GradleDependency"
+        message="A newer version of androidx.security:security-crypto than 1.0.0-beta01 is available: 1.1.0-alpha02"
+        errorLine1="    implementation &quot;androidx.security:security-crypto:1.0.0-beta01&quot;"
+        errorLine2="    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="build.gradle"
+            line="153"
+            column="5"/>
+    </issue>
+
+    <issue
+        id="GradleDependency"
+        message="A newer version of com.google.firebase:firebase-config than 19.1.3 is available: 19.2.0"
+        errorLine1="    implementation &apos;com.google.firebase:firebase-config:19.1.3&apos;"
+        errorLine2="    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="build.gradle"
+            line="156"
+            column="5"/>
+    </issue>
+
+    <issue
+        id="GradleDependency"
+        message="A newer version of com.google.android.play:core than 1.6.0 is available: 1.8.2"
+        errorLine1="    implementation &quot;com.google.android.play:core:1.6.0&quot;"
+        errorLine2="    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="build.gradle"
+            line="158"
+            column="5"/>
+    </issue>
+
+    <issue
+        id="GradleDependency"
+        message="A newer version of androidx.test.espresso:espresso-contrib than 3.2.0 is available: 3.3.0"
+        errorLine1="    androidTestImplementation &quot;androidx.test.espresso:espresso-contrib:3.2.0&quot;"
+        errorLine2="    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="build.gradle"
+            line="163"
+            column="5"/>
+    </issue>
+
+    <issue
+        id="GradleDependency"
+        message="A newer version of androidx.test.espresso:espresso-core than 3.2.0 is available: 3.3.0"
+        errorLine1="    androidTestImplementation &quot;androidx.test.espresso:espresso-core:3.2.0&quot;"
+        errorLine2="    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="build.gradle"
+            line="164"
+            column="5"/>
+    </issue>
+
+    <issue
+        id="GradleDependency"
+        message="A newer version of androidx.test.espresso:espresso-intents than 3.2.0 is available: 3.3.0"
+        errorLine1="    androidTestImplementation &quot;androidx.test.espresso:espresso-intents:3.2.0&quot;"
+        errorLine2="    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="build.gradle"
+            line="165"
+            column="5"/>
+    </issue>
+
+    <issue
+        id="GradleDependency"
+        message="A newer version of androidx.test.ext:junit than 1.1.1 is available: 1.1.2"
+        errorLine1="    androidTestImplementation &quot;androidx.test.ext:junit:1.1.1&quot;"
+        errorLine2="    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="build.gradle"
+            line="166"
+            column="5"/>
+    </issue>
+
+    <issue
+        id="Typos"
+        message="&quot;Ok&quot; is usually capitalized as &quot;OK&quot;"
+        errorLine1="    &lt;string name=&quot;ok&quot;>Ok&lt;/string>"
+        errorLine2="                      ^">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="84"
+            column="23"/>
+    </issue>
+
+    <issue
+        id="Untranslatable"
+        message="The resource string &quot;minutes&quot; has been marked as translatable=&quot;false&quot; elsewhere (usually in the `values` folder), but is translated to &quot;as&quot; (Assamese) here"
+        errorLine1="    &lt;string name=&quot;minutes&quot;>মিনিট&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values-as/strings.xml"
+            line="91"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="Untranslatable"
+        message="The resource string &quot;minutes&quot; has been marked as translatable=&quot;false&quot; elsewhere (usually in the `values` folder), but is translated to &quot;ba&quot; (Bashkir) here"
+        errorLine1="    &lt;string name=&quot;minutes&quot;>মিনিট&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values-ba/strings.xml"
+            line="95"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="Untranslatable"
+        message="The resource string &quot;minutes&quot; has been marked as translatable=&quot;false&quot; elsewhere (usually in the `values` folder), but is translated to &quot;gu&quot; (Gujarati) here"
+        errorLine1="    &lt;string name=&quot;minutes&quot;>મિનિટ&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values-gu/strings.xml"
+            line="95"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="Untranslatable"
+        message="The resource string &quot;minutes&quot; has been marked as translatable=&quot;false&quot; elsewhere (usually in the `values` folder), but is translated to &quot;ka&quot; (Georgian) here"
+        errorLine1="    &lt;string name=&quot;minutes&quot;>ನಿಮಿಷ&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values-ka/strings.xml"
+            line="95"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="Untranslatable"
+        message="The resource string &quot;minutes&quot; has been marked as translatable=&quot;false&quot; elsewhere (usually in the `values` folder), but is translated to &quot;ma&quot; here"
+        errorLine1="    &lt;string name=&quot;minutes&quot;>मिन&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values-ma/strings.xml"
+            line="95"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="Untranslatable"
+        message="The resource string &quot;minutes&quot; has been marked as translatable=&quot;false&quot; elsewhere (usually in the `values` folder), but is translated to &quot;od&quot; here"
+        errorLine1="    &lt;string name=&quot;minutes&quot;>ମିନିଟ&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values-od/strings.xml"
+            line="95"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="Untranslatable"
+        message="The resource string &quot;minutes&quot; has been marked as translatable=&quot;false&quot; elsewhere (usually in the `values` folder), but is translated to &quot;pu&quot; here"
+        errorLine1="    &lt;string name=&quot;minutes&quot;>min&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values-pu/strings.xml"
+            line="95"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="Untranslatable"
+        message="The resource string &quot;minutes&quot; has been marked as translatable=&quot;false&quot; elsewhere (usually in the `values` folder), but is translated to &quot;ta&quot; (Tamil) here"
+        errorLine1="    &lt;string name=&quot;minutes&quot;>நிமிடங்கள்&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values-ta/strings.xml"
+            line="95"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="Untranslatable"
+        message="The resource string &quot;minutes&quot; has been marked as translatable=&quot;false&quot; elsewhere (usually in the `values` folder), but is translated to &quot;te&quot; (Telugu) here"
+        errorLine1="    &lt;string name=&quot;minutes&quot;>నిమిషాలు&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values-te/strings.xml"
+            line="95"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="Untranslatable"
+        message="The resource string &quot;minutes&quot; has been marked as translatable=&quot;false&quot; elsewhere (usually in the `values` folder), but is translated to &quot;hi&quot; (Hindi) here"
+        errorLine1="    &lt;string name=&quot;minutes&quot;>मिनट&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values-hi/strings.xml"
+            line="96"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="StringFormatCount"
+        message="Inconsistent number of arguments in formatting string `simply_1_install_the_app`; found both 0 and 3"
+        errorLine1="    &lt;string name=&quot;simply_1_install_the_app&quot;>सबसे पहले,"
+        errorLine2="    ^">
+        <location
+            file="src/main/res/values-hi/strings.xml"
+            line="37"
+            column="5"/>
+        <location
+            file="src/main/res/values-te/strings.xml"
+            line="37"
+            column="5"/>
+    </issue>
+
+    <issue
+        id="GetInstance"
+        message="ECB encryption mode should not be used (was &quot;AES/ECB/PKCS5Padding&quot;)"
+        errorLine1="        Cipher cipher = Cipher.getInstance(AES_MODE_LESS_THAN_M, CIPHER_PROVIDER_NAME_ENCRYPTION_DECRYPTION_AES);"
+        errorLine2="                                           ~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/java/nic/goi/aarogyasetu/utility/SecureUtil.java"
+            line="80"
+            column="44"/>
+    </issue>
+
+    <issue
+        id="GetInstance"
+        message="The `BC` provider is deprecated and as of Android P this method will throw a `NoSuchAlgorithmException`. To fix this you should stop specifying a provider and use the default implementation"
+        errorLine1="        Cipher cipher = Cipher.getInstance(AES_MODE_LESS_THAN_M, CIPHER_PROVIDER_NAME_ENCRYPTION_DECRYPTION_AES);"
+        errorLine2="                                                                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/java/nic/goi/aarogyasetu/utility/SecureUtil.java"
+            line="80"
+            column="66"/>
+    </issue>
+
+    <issue
+        id="HardwareIds"
+        message="Using `getAddress` to get device identifiers is not recommended."
+        errorLine1="                bluetoothMacAddress = bluetoothAdapter.address"
+        errorLine2="                                      ~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/java/nic/goi/aarogyasetu/utility/CorUtility.kt"
+            line="428"
+            column="39"/>
+    </issue>
+
+    <issue
+        id="HardwareIds"
+        message="Using `getAddress` to get device identifiers is not recommended."
+        errorLine1="                bluetoothMacAddress = bluetoothAdapter.address"
+        errorLine2="                                      ~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/java/nic/goi/aarogyasetu/utility/CorUtility.kt"
+            line="431"
+            column="39"/>
+    </issue>
+
+    <issue
+        id="SetJavaScriptEnabled"
+        message="Using `setJavaScriptEnabled` can introduce XSS vulnerabilities into your application, review carefully."
+        errorLine1="        webView.getSettings().setJavaScriptEnabled(true);"
+        errorLine2="        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/java/nic/goi/aarogyasetu/views/HomeActivity.java"
+            line="303"
+            column="9"/>
+    </issue>
+
+    <issue
+        id="ExportedContentProvider"
+        message="Exported content providers can provide access to potentially sensitive data"
+        errorLine1="        &lt;provider"
+        errorLine2="         ~~~~~~~~">
+        <location
+            file="src/main/AndroidManifest.xml"
+            line="88"
+            column="10"/>
+    </issue>
+
+    <issue
+        id="ExportedReceiver"
+        message="Exported receiver does not require permission"
+        errorLine1="        &lt;receiver android:name=&quot;nic.goi.aarogyasetu.background.BootReceiver&quot;>"
+        errorLine2="         ~~~~~~~~">
+        <location
+            file="src/main/AndroidManifest.xml"
+            line="93"
+            column="10"/>
+    </issue>
+
+    <issue
+        id="ExportedReceiver"
+        message="Exported receiver does not require permission"
+        errorLine1="        &lt;receiver android:name=&quot;nic.goi.aarogyasetu.utility.SmsReceiver&quot;>"
+        errorLine2="         ~~~~~~~~">
+        <location
+            file="src/main/AndroidManifest.xml"
+            line="102"
+            column="10"/>
+    </issue>
+
+    <issue
+        id="OutdatedLibrary"
+        message="This version is deprecated. Details: The Fabric Crashlytics SDK is now deprecated and will continue reporting your app&apos;s crashes only until November 15, 2020. To continue getting crash reports in the Firebase console, make sure you upgrade to the Firebase Crashlytics SDK version 17.0.0+.
+&#xA;For more information, visit https://firebase.google.com/docs/crashlytics/upgrade-sdk. Consider switching to recommended version 17.2.2."
+        errorLine1="    implementation &apos;com.crashlytics.sdk.android:crashlytics:2.10.1&apos;"
+        errorLine2="    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="build.gradle"
+            line="146"
+            column="5"/>
+    </issue>
+
+    <issue
+        id="VectorPath"
+        message="Very long vector path (1147 characters), which is bad for performance. Considering reducing precision, removing minor details or rasterizing vector."
+        errorLine1="      android:pathData=&quot;M21,10.286c1.657,0 3,1.343 3,3L24,21c0,1.657 -1.343,3 -3,3h-7.714c-1.657,0 -3,-1.343 -3,-3v-5.571L12,15.429v4.857c0,1.104 0.895,2 2,2h6.286c1.104,0 2,-0.896 2,-2L22.286,14c0,-1.105 -0.896,-2 -2,-2h-4.857v-1.714zM15.484,14.073c1.08,0 1.771,0.642 1.771,1.567 0,0.574 -0.302,1.032 -0.7,1.226v0.04c0.165,0.038 0.34,0.116 0.496,0.233 0.243,0.126 0.516,0.194 0.808,0.194 0.36,0 0.613,-0.077 0.798,-0.175v-2.16h-0.867v-0.896h2.778v0.895h-0.782v5.529h-1.13L18.656,18.14c-0.136,0.059 -0.31,0.098 -0.515,0.098 -0.224,0 -0.409,-0.05 -0.574,-0.127v0.127c0,1.041 -0.78,1.82 -2.025,1.82 -1.11,0 -1.752,-0.594 -2.015,-0.935l0.779,-0.73c0.204,0.321 0.623,0.701 1.246,0.701 0.594,0 0.924,-0.36 0.924,-0.827 0,-0.467 -0.33,-0.75 -0.983,-0.75h-0.525v-0.954h0.33c0.594,0 0.896,-0.33 0.896,-0.827 0,-0.418 -0.282,-0.71 -0.74,-0.71 -0.399,0 -0.661,0.185 -0.837,0.467l-0.73,-0.682c0.292,-0.408 0.857,-0.74 1.597,-0.74zM11.714,0c1.105,0 2,0.895 2,2v9.714c0,1.105 -0.895,2 -2,2L2,13.714c-1.105,0 -2,-0.895 -2,-2L0,2C0,0.895 0.895,0 2,0zM7.79,3.194L6.16,3.194l-2.916,6.951h1.827l0.51,-1.364h2.69l0.54,1.364h1.866L7.79,3.195zM6.946,5.05l0.864,2.386L6.062,7.436l0.884,-2.386z&quot;"
+        errorLine2="                        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/drawable/ic_language_change.xml"
+            line="7"
+            column="25"/>
+    </issue>
+
+    <issue
+        id="VectorPath"
+        message="Very long vector path (4703 characters), which is bad for performance. Considering reducing precision, removing minor details or rasterizing vector."
+        errorLine1="      android:pathData=&quot;M79.7,176L79.7,211.2L97.3,211.2L97.3,220L70.9,220L70.9,176L79.7,176ZM132.5,211.2L132.5,220L106.1,220L106.1,211.2L132.5,211.2ZM62.1,158.4L62.1,220L0.5,220L0.5,158.4L18.1,158.4L18.1,158.4L62.1,158.4ZM158.9,70.4L158.9,88L167.7,88L167.7,70.4L176.5,70.4L176.5,87.999L194.1,88L194.1,96.8L176.5,96.8L176.5,105.6L185.3,105.6L185.3,114.4L176.5,114.4L176.5,123.2L185.3,123.2L185.3,114.4L194.1,114.4L194.1,105.6L220.5,105.6L220.5,114.4L211.7,114.4L211.7,123.2L220.5,123.2L220.5,140.8L211.7,140.8L211.7,132L202.9,132L202.9,114.4L194.1,114.4L194.1,140.8L202.9,140.8L202.9,158.4L220.5,158.4L220.5,176L211.7,176L211.7,184.8L220.5,184.8L220.5,193.6L220.5,193.6L220.5,220L150.1,220L150.1,211.2L158.9,211.2L158.9,202.4L167.7,202.4L167.7,193.6L150.1,193.6L150.1,184.8L132.5,184.8L132.499,176L123.7,176L123.7,193.6L141.3,193.6L141.3,202.4L150.1,202.4L150.1,211.2L132.5,211.2L132.5,202.4L114.9,202.4L114.9,176L123.7,176L123.7,149.6L114.9,149.6L114.9,140.8L167.7,140.8L167.7,114.4L158.9,114.4L158.9,105.6L167.7,105.6L167.7,96.8L158.9,96.8L158.9,105.6L141.3,105.6L141.3,96.8L132.5,96.8L132.5,123.2L141.3,123.2L141.3,132L123.7,132L123.7,114.4L114.9,114.4L114.9,132L106.1,132L106.1,123.2L97.3,123.2L97.3,114.4L79.7,114.4L79.7,123.2L97.3,123.2L97.3,132L79.7,132L79.7,158.4L97.3,158.4L97.3,167.2L88.5,167.2L88.5,176L79.7,176L79.7,167.2L70.9,167.2L70.9,149.6L44.5,149.6L44.5,140.8L35.7,140.8L35.7,132L26.9,132L26.9,149.6L18.1,149.6L18.1,123.2L26.9,123.2L26.9,114.4L53.3,114.4L53.3,123.2L62.1,123.2L62.1,123.2L70.9,123.2L70.9,114.4L79.7,114.4L79.7,105.6L123.7,105.6L123.7,88L141.3,88L141.3,79.2L150.1,79.2L150.1,70.4L158.9,70.4ZM53.3,167.2L9.3,167.2L9.3,211.2L53.3,211.2L53.3,167.2ZM106.1,202.4L106.1,211.2L97.3,211.2L97.3,202.4L106.1,202.4ZM211.7,193.6L202.9,193.6L202.9,202.4L194.1,202.4L194.1,211.2L211.7,211.2L211.7,193.6ZM106.1,167.2L106.1,193.6L97.3,193.6L97.3,202.4L88.5,202.4L88.5,193.6L88.5,193.6L88.5,184.8L97.3,184.8L97.3,167.2L106.1,167.2ZM44.5,176L44.5,202.4L18.1,202.4L18.1,176L44.5,176ZM194.099,184.8L185.3,184.8L185.3,193.6L176.5,193.6L176.5,202.4L194.1,202.4L194.099,184.8ZM114.9,176L114.9,184.8L106.1,184.8L106.1,176L114.9,176ZM176.5,149.6L150.1,149.6L150.1,176L176.499,175.999L176.5,149.6ZM141.3,149.6L132.5,149.6L132.5,175.999L141.3,176L141.3,149.6ZM202.9,167.2L194.1,167.2L194.1,176L202.9,176L202.9,167.2ZM167.7,158.4L167.7,167.2L158.9,167.2L158.9,158.4L167.7,158.4ZM106.1,149.6L106.1,158.4L97.3,158.4L97.3,149.6L106.1,149.6ZM9.3,114.4L9.3,149.6L0.5,149.6L0.5,114.4L9.3,114.4ZM194.1,140.8L185.3,140.8L185.3,149.6L194.1,149.6L194.1,140.8ZM62.1,132L53.299,132L53.3,140.8L62.1,140.8L62.1,132ZM106.1,132L106.1,140.8L97.3,140.8L97.3,132L106.1,132ZM185.299,132L176.5,132L176.5,140.799L185.3,140.8L185.299,132ZM158.9,123.2L158.9,132L150.1,132L150.1,123.2L158.9,123.2ZM150.1,114.4L150.1,123.2L141.3,123.2L141.3,114.4L150.1,114.4ZM35.7,105.6L35.7,114.4L18.1,114.4L18.1,105.6L35.7,105.6ZM62.1,105.6L62.1,114.4L53.3,114.4L53.3,105.6L62.1,105.6ZM26.9,96.8L26.9,105.6L9.3,105.6L9.3,96.8L26.9,96.8ZM44.5,96.8L44.5,105.6L35.7,105.6L35.7,96.8L44.5,96.8ZM211.7,70.4L211.7,88L220.5,88L220.5,105.6L211.7,105.6L211.7,96.8L202.9,96.8L202.9,70.4L211.7,70.4ZM106.1,96.8L106.1,105.6L97.3,105.6L97.3,96.8L106.1,96.8ZM114.9,88L114.9,96.8L106.1,96.8L106.1,88L114.9,88ZM97.3,52.8L97.3,70.4L88.5,70.4L88.5,79.2L79.7,79.2L79.7,96.8L53.3,96.8L53.3,88L62.1,88L62.1,79.2L53.3,79.2L53.3,70.4L79.7,70.4L79.7,61.6L88.5,61.6L88.5,52.8L97.3,52.8ZM114.9,0L114.9,17.6L106.1,17.6L106.1,26.4L123.7,26.4L123.7,17.6L132.5,17.6L132.5,8.8L141.3,8.8L141.3,0L150.1,0L150.1,17.6L141.3,17.6L141.3,26.399L150.1,26.4L150.1,70.4L141.3,70.4L141.3,79.2L114.9,79.2L114.9,79.2L106.1,79.2L106.1,88L97.299,88L97.3,96.8L88.5,96.8L88.5,79.2L97.3,79.2L97.3,70.4L106.1,70.4L106.1,61.6L114.9,61.6L114.9,70.4L123.7,70.4L123.7,52.8L132.5,52.8L132.5,70.4L141.3,70.4L141.3,52.8L132.5,52.8L132.499,44L123.7,44L123.7,52.8L114.9,52.8L114.9,44L123.7,44L123.7,35.2L106.1,35.2L106.1,44L97.3,44L97.3,35.2L88.5,35.2L88.5,52.8L79.7,52.8L79.7,61.6L70.9,61.6L70.9,44L79.7,44L79.7,35.2L70.9,35.2L70.9,26.4L97.3,26.4L97.3,17.6L88.5,17.6L88.5,8.8L97.3,8.8L97.3,17.6L106.1,17.6L106.1,0L114.9,0ZM44.5,70.4L44.5,88L35.7,88L35.7,79.2L26.9,79.2L26.9,88L9.3,88L9.3,79.2L0.5,79.2L0.5,70.4L44.5,70.4ZM194.1,70.4L194.1,79.2L185.3,79.2L185.3,70.4L194.1,70.4ZM62.1,0L62.1,61.6L0.5,61.6L0.5,0L62.1,0ZM220.5,0L220.5,61.6L158.9,61.6L158.9,0L220.5,0ZM114.9,52.8L114.9,61.6L106.1,61.6L106.1,52.8L114.9,52.8ZM53.3,8.8L9.3,8.8L9.3,52.8L53.3,52.8L53.3,8.8ZM44.5,17.6L44.5,44L18.1,44L18.1,17.6L44.5,17.6ZM202.9,17.6L202.9,44L176.5,44L176.5,17.6L202.9,17.6ZM141.3,26.4L132.5,26.4L132.5,43.999L141.3,44L141.3,26.4ZM79.7,8.8L79.7,17.6L70.9,17.6L70.9,8.8L79.7,8.8ZM167.7,8.8L167.7,52.8L211.7,52.8L211.7,8.8L167.7,8.8Z&quot;"
+        errorLine2="                        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/drawable/ic_qr_code.xml"
+            line="7"
+            column="25"/>
+    </issue>
+
+    <issue
+        id="VectorPath"
+        message="Very long vector path (912 characters), which is bad for performance. Considering reducing precision, removing minor details or rasterizing vector."
+        errorLine1="      android:pathData=&quot;M4.5,16c0,2.947 1.213,5.6 3.147,7.52l-2.014,2.013c-0.413,0.414 -0.12,1.134 0.48,1.134h5.72c0.374,0 0.667,-0.294 0.667,-0.667v-5.72c0,-0.6 -0.72,-0.893 -1.133,-0.467l-1.854,1.854C8.073,20.2 7.167,18.213 7.167,16c0,-3.187 1.866,-5.947 4.573,-7.227 0.453,-0.213 0.76,-0.626 0.76,-1.12L12.5,7.4c0,-0.907 -0.947,-1.48 -1.76,-1.093C7.06,7.987 4.5,11.693 4.5,16zM15.167,22.667h2.666L17.833,20h-2.666v2.667zM26.887,5.333h-5.72c-0.374,0 -0.667,0.294 -0.667,0.667v5.72c0,0.6 0.72,0.893 1.133,0.467l1.854,-1.854c1.44,1.467 2.346,3.454 2.346,5.667 0,3.187 -1.866,5.947 -4.573,7.227 -0.453,0.213 -0.76,0.626 -0.76,1.12v0.24c0,0.906 0.947,1.48 1.76,1.093 3.68,-1.667 6.24,-5.373 6.24,-9.68 0,-2.947 -1.213,-5.6 -3.147,-7.52l2.014,-2.013c0.413,-0.414 0.12,-1.134 -0.48,-1.134zM16.5,17.333c0.733,0 1.333,-0.6 1.333,-1.333v-5.333c0,-0.734 -0.6,-1.334 -1.333,-1.334s-1.333,0.6 -1.333,1.334L15.167,16c0,0.733 0.6,1.333 1.333,1.333z&quot;"
+        errorLine2="                        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/drawable/ic_sync_failure.xml"
+            line="7"
+            column="25"/>
+    </issue>
+
+    <issue
+        id="VectorPath"
+        message="Very long vector path (1392 characters), which is bad for performance. Considering reducing precision, removing minor details or rasterizing vector."
+        errorLine1="      android:pathData=&quot;M8.748,4.47c1.076,-1.738 3.358,-2.275 5.096,-1.199 0.487,0.302 0.897,0.712 1.198,1.199l7.194,11.62c1.076,1.738 0.54,4.019 -1.198,5.095 -0.586,0.362 -1.26,0.554 -1.949,0.554L4.701,21.739C2.657,21.74 1,20.082 1,18.038c0,-0.688 0.192,-1.363 0.554,-1.948zM12.791,4.972c-0.799,-0.495 -1.848,-0.248 -2.342,0.55l-7.194,11.62c-0.167,0.27 -0.255,0.58 -0.255,0.896 0,0.94 0.762,1.701 1.701,1.701L19.09,19.739c0.317,0 0.627,-0.088 0.896,-0.254 0.799,-0.495 1.046,-1.544 0.55,-2.343l-7.193,-11.62c-0.139,-0.223 -0.327,-0.412 -0.551,-0.55zM12.086,15.314c0.152,0 0.296,0.028 0.43,0.085 0.131,0.055 0.247,0.13 0.346,0.226 0.101,0.096 0.18,0.21 0.237,0.34 0.057,0.13 0.085,0.272 0.085,0.421 0,0.15 -0.028,0.291 -0.085,0.424 -0.056,0.131 -0.135,0.246 -0.237,0.343 -0.1,0.096 -0.216,0.171 -0.348,0.225 -0.134,0.054 -0.277,0.08 -0.428,0.08 -0.154,0 -0.299,-0.026 -0.432,-0.08 -0.133,-0.054 -0.25,-0.13 -0.348,-0.226 -0.099,-0.097 -0.176,-0.211 -0.233,-0.342 -0.056,-0.133 -0.085,-0.274 -0.085,-0.424 0,-0.149 0.029,-0.29 0.086,-0.421 0.056,-0.13 0.134,-0.242 0.232,-0.339 0.098,-0.096 0.214,-0.172 0.345,-0.227 0.134,-0.057 0.28,-0.085 0.435,-0.085zM13.041,9.554v3.123l-0.006,0.316c-0.009,0.213 -0.026,0.424 -0.051,0.635 -0.026,0.208 -0.056,0.419 -0.092,0.632l-0.09,0.485L11.4,14.745l-0.088,-0.485c-0.036,-0.213 -0.066,-0.424 -0.092,-0.632 -0.025,-0.21 -0.042,-0.422 -0.05,-0.635l-0.007,-0.32L11.163,9.555h1.88z&quot;"
+        errorLine2="                        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/drawable/ic_warning.xml"
+            line="7"
+            column="25"/>
+    </issue>
+
+    <issue
+        id="MergeRootFrame"
+        message="This `&lt;FrameLayout>` can be replaced with a `&lt;merge>` tag"
+        errorLine1="&lt;FrameLayout xmlns:android=&quot;http://schemas.android.com/apk/res/android&quot;"
+        errorLine2="^">
+        <location
+            file="src/main/res/layout-v23/activity_permission.xml"
+            line="2"
+            column="1"/>
+    </issue>
+
+    <issue
+        id="MergeRootFrame"
+        message="This `&lt;FrameLayout>` can be replaced with a `&lt;merge>` tag"
+        errorLine1="&lt;FrameLayout xmlns:android=&quot;http://schemas.android.com/apk/res/android&quot;"
+        errorLine2="^">
+        <location
+            file="src/main/res/layout/activity_permission.xml"
+            line="2"
+            column="1"/>
+    </issue>
+
+    <issue
+        id="MergeRootFrame"
+        message="This `&lt;FrameLayout>` can be replaced with a `&lt;merge>` tag"
+        errorLine1="&lt;FrameLayout xmlns:android=&quot;http://schemas.android.com/apk/res/android&quot;"
+        errorLine2="^">
+        <location
+            file="src/main/res/layout/qr_code_view.xml"
+            line="2"
+            column="1"/>
+    </issue>
+
+    <issue
+        id="Overdraw"
+        message="Possible overdraw: Root element paints background `@color/onboarding_screen_1_bg_color` with a theme that also paints a background (inferred theme is `@style/AppTheme`)"
+        errorLine1="    android:background=&quot;@color/onboarding_screen_1_bg_color&quot;"
+        errorLine2="    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/fragment_first_introduction.xml"
+            line="7"
+            column="5"/>
+    </issue>
+
+    <issue
+        id="Overdraw"
+        message="Possible overdraw: Root element paints background `@color/onboarding_screen_4_bg_color` with a theme that also paints a background (inferred theme is `@style/AppTheme`)"
+        errorLine1="    android:background=&quot;@color/onboarding_screen_4_bg_color&quot;>"
+        errorLine2="    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/fragment_forth_on_board_intro.xml"
+            line="6"
+            column="5"/>
+    </issue>
+
+    <issue
+        id="Overdraw"
+        message="Possible overdraw: Root element paints background `@color/onboarding_screen_2_bg_color` with a theme that also paints a background (inferred theme is `@style/AppTheme`)"
+        errorLine1="    android:background=&quot;@color/onboarding_screen_2_bg_color&quot;"
+        errorLine2="    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/fragment_second_on_board_intro.xml"
+            line="7"
+            column="5"/>
+    </issue>
+
+    <issue
+        id="Overdraw"
+        message="Possible overdraw: Root element paints background `@color/onboarding_screen_3_bg_color` with a theme that also paints a background (inferred theme is `@style/AppTheme`)"
+        errorLine1="    android:background=&quot;@color/onboarding_screen_3_bg_color&quot;"
+        errorLine2="    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/fragment_third_on_board_intro.xml"
+            line="7"
+            column="5"/>
+    </issue>
+
+    <issue
+        id="Overdraw"
+        message="Possible overdraw: Root element paints background `@drawable/chat_bubble` with a theme that also paints a background (inferred theme is `@style/AppTheme`)"
+        errorLine1="    android:background=&quot;@drawable/chat_bubble&quot;"
+        errorLine2="    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/status_view.xml"
+            line="10"
+            column="5"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.color.colorPrimaryDark` appears to be unused"
+        errorLine1="    &lt;color name=&quot;colorPrimaryDark&quot;>#00574B&lt;/color>"
+        errorLine2="           ~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/colors.xml"
+            line="4"
+            column="12"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.color.black_10_op` appears to be unused"
+        errorLine1="    &lt;color name=&quot;black_10_op&quot;>#1A000000&lt;/color>"
+        errorLine2="           ~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/colors.xml"
+            line="9"
+            column="12"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.color.chat_bubble_yellow` appears to be unused"
+        errorLine1="    &lt;color name=&quot;chat_bubble_yellow&quot;>#E8C031&lt;/color>"
+        errorLine2="           ~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/colors.xml"
+            line="26"
+            column="12"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.color.chat_bubble_orange` appears to be unused"
+        errorLine1="    &lt;color name=&quot;chat_bubble_orange&quot;>#F48242&lt;/color>"
+        errorLine2="           ~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/colors.xml"
+            line="27"
+            column="12"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.color.chat_bubble_red` appears to be unused"
+        errorLine1="    &lt;color name=&quot;chat_bubble_red&quot;>#C84D4D&lt;/color>FDF4E8"
+        errorLine2="           ~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/colors.xml"
+            line="28"
+            column="12"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.drawable.ic_info` appears to be unused"
+        errorLine1="&lt;vector xmlns:android=&quot;http://schemas.android.com/apk/res/android&quot;"
+        errorLine2="^">
+        <location
+            file="src/main/res/drawable/ic_info.xml"
+            line="1"
+            column="1"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.drawable.onboard` appears to be unused">
+        <location
+            file="src/main/res/drawable/onboard.webp"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.anim.slide_down` appears to be unused"
+        errorLine1="&lt;translate xmlns:android=&quot;http://schemas.android.com/apk/res/android&quot;"
+        errorLine2="^">
+        <location
+            file="src/main/res/anim/slide_down.xml"
+            line="2"
+            column="1"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.anim.slide_up` appears to be unused"
+        errorLine1="&lt;translate xmlns:android=&quot;http://schemas.android.com/apk/res/android&quot;"
+        errorLine2="^">
+        <location
+            file="src/main/res/anim/slide_up.xml"
+            line="2"
+            column="1"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.string.image_on_board_content_description` appears to be unused"
+        errorLine1="    &lt;string name=&quot;image_on_board_content_description&quot;>Show on-boarding&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="90"
+            column="13"/>
+        <location
+            file="src/main/res/values-as/strings.xml"
+            line="68"
+            column="13"/>
+        <location
+            file="src/main/res/values-ba/strings.xml"
+            line="72"
+            column="13"/>
+        <location
+            file="src/main/res/values-gu/strings.xml"
+            line="72"
+            column="13"/>
+        <location
+            file="src/main/res/values-hi/strings.xml"
+            line="73"
+            column="13"/>
+        <location
+            file="src/main/res/values-ka/strings.xml"
+            line="72"
+            column="13"/>
+        <location
+            file="src/main/res/values-ma/strings.xml"
+            line="72"
+            column="13"/>
+        <location
+            file="src/main/res/values-mal/strings.xml"
+            line="72"
+            column="13"/>
+        <location
+            file="src/main/res/values-od/strings.xml"
+            line="72"
+            column="13"/>
+        <location
+            file="src/main/res/values-pu/strings.xml"
+            line="72"
+            column="13"/>
+        <location
+            file="src/main/res/values-ta/strings.xml"
+            line="72"
+            column="13"/>
+        <location
+            file="src/main/res/values-te/strings.xml"
+            line="72"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.style.AppButtonDisabled` appears to be unused"
+        errorLine1="    &lt;style name=&quot;AppButtonDisabled&quot; parent=&quot;Widget.MaterialComponents.Button&quot;>"
+        errorLine2="           ~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/styles.xml"
+            line="49"
+            column="12"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.style.ButtonTextStyle` appears to be unused"
+        errorLine1="    &lt;style name=&quot;ButtonTextStyle&quot; parent=&quot;AppTheme&quot;>"
+        errorLine2="           ~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/styles.xml"
+            line="81"
+            column="12"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.style.AppTheme_NoActionBar` appears to be unused"
+        errorLine1="    &lt;style name=&quot;AppTheme.NoActionBar&quot;>"
+        errorLine2="           ~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/styles.xml"
+            line="107"
+            column="12"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.style.AppTheme_AppBarOverlay` appears to be unused"
+        errorLine1="    &lt;style name=&quot;AppTheme.AppBarOverlay&quot; parent=&quot;ThemeOverlay.AppCompat.Dark.ActionBar&quot; />"
+        errorLine2="           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/styles.xml"
+            line="112"
+            column="12"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.style.AppTheme_PopupOverlay` appears to be unused"
+        errorLine1="    &lt;style name=&quot;AppTheme.PopupOverlay&quot; parent=&quot;ThemeOverlay.AppCompat.Light&quot; />"
+        errorLine2="           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/styles.xml"
+            line="114"
+            column="12"/>
+    </issue>
+
+    <issue
+        id="IconLocation"
+        message="Found bitmap drawable `res/drawable/background_blue.9.png` in densityless folder">
+        <location
+            file="src/main/res/drawable/background_blue.9.png"/>
+    </issue>
+
+    <issue
+        id="IconLocation"
+        message="Found bitmap drawable `res/drawable/bluetooth.webp` in densityless folder">
+        <location
+            file="src/main/res/drawable/bluetooth.webp"/>
+    </issue>
+
+    <issue
+        id="IconLocation"
+        message="Found bitmap drawable `res/drawable/chat_bubble.9.png` in densityless folder">
+        <location
+            file="src/main/res/drawable/chat_bubble.9.png"/>
+    </issue>
+
+    <issue
+        id="IconLocation"
+        message="Found bitmap drawable `res/drawable/ic_back.png` in densityless folder">
+        <location
+            file="src/main/res/drawable/ic_back.png"/>
+    </issue>
+
+    <issue
+        id="IconLocation"
+        message="Found bitmap drawable `res/drawable/ic_sync_data.webp` in densityless folder">
+        <location
+            file="src/main/res/drawable/ic_sync_data.webp"/>
+    </issue>
+
+    <issue
+        id="IconLocation"
+        message="Found bitmap drawable `res/drawable/lock_embelem.webp` in densityless folder">
+        <location
+            file="src/main/res/drawable/lock_embelem.webp"/>
+    </issue>
+
+    <issue
+        id="IconLocation"
+        message="Found bitmap drawable `res/drawable/no_network.webp` in densityless folder">
+        <location
+            file="src/main/res/drawable/no_network.webp"/>
+    </issue>
+
+    <issue
+        id="IconLocation"
+        message="Found bitmap drawable `res/drawable/notification_icon.png` in densityless folder">
+        <location
+            file="src/main/res/drawable/notification_icon.png"/>
+    </issue>
+
+    <issue
+        id="IconLocation"
+        message="Found bitmap drawable `res/drawable/onboard.webp` in densityless folder">
+        <location
+            file="src/main/res/drawable/onboard.webp"/>
+    </issue>
+
+    <issue
+        id="IconMissingDensityFolder"
+        message="Missing density variation folders in `src/main/res`: drawable-hdpi, drawable-mdpi, drawable-xhdpi">
+        <location
+            file="src/main/res"/>
+    </issue>
+
+    <issue
+        id="ButtonCase"
+        message="The standard Android way to capitalize Ok is &quot;OK&quot; (tip: use `@android:string/ok` instead)"
+        errorLine1="    &lt;string name=&quot;ok&quot;>Ok&lt;/string>"
+        errorLine2="                      ^">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="84"
+            column="23"/>
+    </issue>
+
+    <issue
+        id="RelativeOverlap"
+        message="`@id/refresh_view` can overlap `@id/close` if @string/refresh grows due to localized text expansion"
+        errorLine1="    &lt;TextView"
+        errorLine2="     ~~~~~~~~">
+        <location
+            file="src/main/res/layout/activity_qr_code.xml"
+            line="17"
+            column="6"/>
+    </issue>
+
+    <issue
+        id="RtlHardcoded"
+        message="Consider replacing `android:layout_alignParentRight` with `android:layout_alignParentEnd=&quot;true&quot;` to better support right-to-left layouts"
+        errorLine1="        android:layout_alignParentRight=&quot;true&quot;"
+        errorLine2="        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/activity_qr_code.xml"
+            line="21"
+            column="9"/>
+    </issue>
+
+    <issue
+        id="RtlHardcoded"
+        message="Consider replacing `android:layout_marginLeft` with `android:layout_marginStart=&quot;10dp&quot;` to better support right-to-left layouts"
+        errorLine1="        android:layout_marginLeft=&quot;10dp&quot;"
+        errorLine2="        ~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/activity_qr_code.xml"
+            line="23"
+            column="9"/>
+    </issue>
+
+    <issue
+        id="RtlHardcoded"
+        message="Consider replacing `android:drawableLeft` with `android:drawableStart=&quot;@drawable/ic_refresh&quot;` to better support right-to-left layouts"
+        errorLine1="        android:drawableLeft=&quot;@drawable/ic_refresh&quot;"
+        errorLine2="        ~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/activity_qr_code.xml"
+            line="25"
+            column="9"/>
+    </issue>
+
+    <issue
+        id="RtlHardcoded"
+        message="Consider replacing `android:layout_marginLeft` with `android:layout_marginStart=&quot;10dp&quot;` to better support right-to-left layouts"
+        errorLine1="        android:layout_marginLeft=&quot;10dp&quot;"
+        errorLine2="        ~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/custom_barcode_scanner.xml"
+            line="62"
+            column="9"/>
+    </issue>
+
+</issues>
