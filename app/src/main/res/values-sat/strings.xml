@@ -1,0 +1,114 @@
+<resources>
+    <string name="app_name">ᱟᱨᱚᱜᱭᱟ ᱥᱮᱛᱩ</string>
+    <string name="your_mobile_number_is_required_to_know_your_identity">ᱠᱚᱱᱴᱟᱠᱴ ᱴᱨᱮᱥᱤᱝ ᱞᱟᱹᱜᱤᱫ ᱟᱢᱟᱜ ᱢᱚᱵᱟᱤᱞ ᱮᱞ ᱫᱚᱨᱠᱟᱨ ᱾.</string>
+    <string name="text_value">ᱢᱮᱢᱚᱱ, ᱟᱢ ᱢᱤᱫ ᱦᱟᱴ ᱢᱟᱲᱟᱝ ᱨᱮ ᱟᱢ ᱵᱷᱤᱲ ᱡᱟᱭᱜᱟ ᱨᱮ ᱵᱟᱝ ᱵᱟᱲᱟᱭ ᱦᱚᱲ ᱥᱟᱞᱟᱜ ᱧᱟᱯᱟᱢ ᱞᱮᱱᱟᱢ, ᱟᱨ ᱤᱱᱟᱹ ᱫᱤᱱ ᱛᱟᱭᱚᱢ, ᱩᱱᱠᱩ COVID-19 ᱯᱚᱡᱤᱴᱤᱵᱷ ᱚᱰᱚᱠ ᱮᱱᱟ ᱠᱚ ᱾\n\nᱥᱤᱧᱚᱛ ᱥᱚᱨᱠᱟᱨ ᱩᱱᱤ ᱦᱚᱲᱼᱟᱜ ᱥᱟᱵ ᱡᱟᱭᱜᱟ ᱠᱚ ᱯᱟᱱᱛᱮ ᱟᱭ, ᱰᱤᱵᱷᱟᱭᱤᱥ ᱮᱨ ᱤᱱᱥᱴᱚᱞᱟᱠᱟᱱ ᱮᱯ ᱛᱮ ᱟᱡᱟᱜ ᱥᱩᱨ ᱨᱮᱭᱟᱜ ᱡᱟᱭᱜᱟ, ᱤᱱᱟ ᱑᱔ ᱫᱤᱱ ᱢᱟᱲᱟᱝ ᱾ \n\nᱢᱤᱫᱴᱟᱹᱝ ᱟᱹᱫᱷᱤᱥᱩᱪᱱᱟ ᱩᱱᱠᱩ ᱥᱚᱢᱯᱚᱨᱠᱤᱭᱚ ᱴᱦᱮᱱ ᱵᱷᱮᱡᱟᱜᱼᱟ ᱚᱱᱟ ᱥᱩᱪᱤ ᱨᱮ ᱜ  ᱪᱮᱫ ᱮᱢ ᱪᱤᱠᱟᱹᱭᱟ ᱚᱞ ᱠᱚᱜᱼᱟ, ᱚᱱᱟ ᱥᱟᱞᱟᱜ ᱥᱮᱞᱯᱷ ᱟᱭᱥᱚᱞᱮᱴ ᱟᱨ  ᱫᱚᱨᱠᱟᱨ ᱯᱟᱲᱟᱣ ᱡᱷᱚᱜ ᱠᱚᱵᱷᱤᱰ ᱥᱮᱱᱴᱚᱨ ᱨᱮᱭᱟᱜ ᱡᱟᱭᱜᱟ ᱛᱟᱦᱮᱸ ᱠᱚᱜᱼᱟ ᱾ \n\nᱮᱠᱴᱤᱵᱷ ᱥᱚᱢᱯᱚᱨᱠ ᱴᱨᱮᱥᱤᱝ ᱨᱮ ᱵᱷᱟᱜ ᱤᱫᱤ ᱠᱷᱟᱱᱮᱢ ᱟᱢ ᱟᱞᱮ COVID-19 ᱵᱮᱢᱟᱨ ᱠᱚᱢ ᱨᱮ ᱜᱚᱲᱚ ᱫᱟᱲᱮᱟᱜᱼᱟᱢ, ᱟᱨ ᱥᱤᱧᱚᱛ ᱥᱚᱨᱠᱟᱨ ᱵᱮᱥ ᱠᱷᱟᱹᱛᱤᱨ ᱢᱟᱲᱟᱝ ᱠᱷᱚᱱ ᱠᱤᱪᱷᱤ ᱠᱟᱹᱢᱤ ᱠᱚᱨᱟᱣ ᱫᱟᱲᱮᱟᱜᱼᱟᱭ ᱾\n\n</string>
+    <string name="permissions_title">ᱠᱟᱹᱢᱤ ᱨᱮᱭᱟᱜ ᱫᱟᱹᱣ ᱟᱨ ᱫᱚᱱᱟᱝ ᱠᱟᱛᱷᱟ</string>
+    <string name="permissions_detail">ᱟᱞᱮ ᱵᱤᱥᱚᱭ ᱮᱨᱭᱟᱜ ᱜᱚᱢᱵᱷᱤᱨᱛᱟ ᱞᱮ ᱵᱩᱡᱷᱟᱫᱣᱮᱫᱼᱟ ᱟᱨ ᱟᱢᱟᱜ ᱥᱟᱹᱠᱷᱭᱟᱹᱛ ᱚᱠᱚᱭ ᱥᱟᱞᱟᱜ ᱦᱚᱸ ᱵᱟᱞᱮ ᱥᱩᱞᱟᱹᱭᱞᱟᱢᱟ, ᱚᱱᱟ ᱠᱷᱟᱹᱛᱤᱨ ᱟᱞᱮ ᱠᱚᱰᱟ ᱡᱷᱟᱯ ᱞᱮ ᱤᱫᱤ ᱠᱟᱫᱟ ᱾.</string>
+    <string name="location_text">ᱱᱚᱶᱟ ᱥᱤᱞᱟᱹᱨᱟᱜᱼᱠᱟᱱᱟ ᱟᱢ ᱡᱟᱭᱜᱟ ᱦᱟᱹᱴᱤᱧ ‘ᱡᱟᱣᱜᱮ’ ᱨᱮ ᱥᱮᱴ ᱛᱟᱢ ᱾ ᱟᱢ ᱛᱟᱭᱚᱢ ᱛᱮ ᱦᱚᱸ ᱵᱚᱫᱚᱞ ᱫᱟᱫᱮᱟᱜᱼᱟᱢ ᱾.</string>
+    <!-- phone_number_layout -->
+    <string name="enter_mobile_number">ᱢᱚᱵᱟᱤᱞ ᱮᱞ ᱟᱫᱮᱨ</string>
+    <string name="country_code">+91 </string>
+    <string name="mobile_number">ᱢᱚᱵᱟᱤᱞ ᱮᱞ ᱞᱮᱠᱷᱟ</string>
+    <string name="why_is_it_needed">ᱱᱚᱶᱟ ᱪᱮᱫᱟᱜ ᱫᱚᱨᱠᱟᱨ?</string>
+    <string name="submit">ᱡᱚᱢᱟᱭ ᱢᱮᱸ</string>
+    <string name="resend_otp">OTP ᱫᱩᱦᱲᱟ ᱵᱷᱮᱡᱟ</string>
+    <string name="resend_otp_in">%s ᱨᱮ OTP ᱫᱩᱦᱲᱟ ᱵᱷᱮᱡᱟ</string>
+     <!-- otp_validation_layout -->
+    <string name="enter_otp">OTP ᱟᱫᱮᱨ</string>
+    <string name="we_have_sent_otp">ᱟᱞᱮ ᱢᱚᱵᱟᱤᱞ OTP ᱚᱱᱟ ᱢᱚᱵᱟᱤᱞ ᱮᱞ ᱨᱮ ᱵᱷᱮᱡᱟ ᱠᱟᱜᱼᱟᱞᱮ ᱾.</string>
+    <string name="we_have_resent_otp">ᱟᱢᱟᱜ ᱢᱚᱵᱟᱤᱞ ᱮᱞ ᱨᱮ OTP ᱵᱷᱮᱡᱟ ᱮᱱᱟ ᱾.</string>
+    <string name="otp">OTP</string>
+    <string name="please_enter_a_valid_otp">ᱫᱚᱭᱟᱠᱟᱛᱮ ᱵᱟᱛᱟᱣᱟᱜ otp ᱟᱫᱮᱨᱢᱮ ᱾.</string>
+     <!-- otp_validation_layout -->
+    <string name="i_understand">ᱤᱧ ᱵᱩᱡᱷᱟᱣᱮᱫᱟᱹᱧ</string>
+    <string name="device_location"><![CDATA[<b>ᱰᱤᱵᱷᱟᱤᱥ ᱡᱟᱭᱜᱟ</b>]]></string>
+    <string name="bluetooth"><![CDATA[<b>ᱵᱞᱩᱴᱩᱛᱷ</b>]]></string>
+    <string name="data_sharing_with_the_ministry"><![CDATA[<b>ᱥᱟᱹᱠᱷᱤᱭᱟᱹᱛ ᱦᱟᱹᱴᱤᱧ</b>]]></string>
+    <string name="monitors_your_device_s_proximity_within_6_feet_range">ᱟᱢᱟᱜ ᱰᱤᱵᱷᱟᱤᱥ ᱨᱮᱭᱟᱜ ᱥᱩᱯᱩᱨ ᱚᱞᱜᱟ ᱢᱚᱵᱟᱤᱞ ᱰᱤᱵᱷᱟᱤᱥ ᱥᱟᱞᱟᱜ ᱮᱢ ᱧᱮᱞᱢᱮ ᱾\nᱥᱤᱯᱷᱟᱨᱤᱥ ᱠᱟᱱᱟ ᱡᱮ ᱟᱢ ᱡᱟᱦᱟᱸᱭ ᱚᱠᱛᱚ ᱨᱮ ᱱᱚᱶᱟ ᱚᱱ ᱫᱚᱦᱚᱭ ᱢᱮ ᱾</string>
+    <string name="tracks_an_individual_s_touch_points_so_can_easily_find_others_who_came_in_close_contact">ᱟᱢᱟᱜ ᱥᱟᱹᱠᱷᱭᱟᱹᱛ ᱫᱚ ᱥᱤᱧᱚᱛ ᱫᱤᱥᱚᱢ ᱥᱟᱞᱟᱜ ᱦᱟᱹᱴᱤᱧᱚᱜᱼᱟ ᱾\nᱱᱚᱶᱟ ᱮᱯ ᱟᱢᱟᱜ ᱧᱩᱛᱩᱢ ᱟᱨ ᱮᱞ ᱡᱟᱦᱟᱺᱭ ᱚᱠᱛᱚ ᱨᱮ ᱦᱚᱲ ᱠᱚ ᱥᱟᱞᱟᱜ ᱵᱟᱭ ᱥᱟᱹᱡᱷᱟᱣ ᱟᱭ ᱾</string>
+    <string name="contribute_to_a_safer_india">ᱤᱧ ᱫᱚ ᱥᱤᱣᱠᱟᱹᱨ ᱮᱫᱟᱹᱧ</string>
+    <string name="please_select_a_language_en">Please select your language\nकृपया अपनी भाषा चुनें</string>
+    <string name="next">ᱤᱱᱟᱹ ᱛᱟᱭᱚᱢ</string>
+    <string name="please_select_a_language_to_proceed">ᱞᱟᱦᱟ ᱞᱟᱹᱜᱤᱫ ᱫᱚᱭᱟᱠᱟᱛᱮ ᱟᱲᱟ ᱪᱚᱭᱚᱱ ᱢᱮ ᱾.</string>
+     <!-- Strings used for fragments for navigation -->
+    <string name="please_enter_a_valid_number">ᱫᱚᱭᱟᱠᱟᱛᱮ ᱮᱞ ᱟᱫᱮᱨ ᱢᱮ</string>
+    <string name="would_you_like_to">ᱟᱢ ᱵᱟᱰᱟᱭ ᱫᱚᱦᱚ ᱥᱟᱱᱟᱢ ᱠᱟᱱᱟ ᱥᱮ ᱡᱚᱫᱤ ᱟᱢ ᱚᱠᱟᱭ ᱮᱢ ᱯᱟᱨᱚᱢ ᱞᱮᱫ ᱠᱚᱶᱟᱢ ᱚᱠᱚᱭ ᱠᱚ COVID-19 ᱯᱚᱡᱤᱴᱤᱵᱷ ᱠᱟᱱᱟ ᱠᱚ?</string>
+    <string name="each_one_of_us">ᱡᱷᱚᱛᱚ ᱦᱚᱲ ᱴᱷᱮᱱ ᱜᱚᱲᱚ ᱨᱮᱭᱟᱜ ᱫᱟᱲᱮ ᱢᱮᱱᱟᱜᱼᱟ ᱠᱚᱨᱚᱱᱟᱵᱷᱟᱭᱨᱚᱥ ᱥᱤᱧᱚᱛ ᱨᱮ ᱥᱚᱨᱣᱚᱵᱭᱟᱯᱤ ᱢᱟᱦᱟᱢᱟᱨᱤ ᱾.</string>
+    <string name="simply_1_install_the_app"><![CDATA[ᱟᱞᱜᱟ ᱛᱮ,
+\n1 ᱱᱚᱶᱟ ᱮᱯ ᱤᱱᱥᱴᱟᱹᱞ ᱢᱮ
+\n2. ᱵᱞᱩᱴᱩᱛᱷ ᱟᱨ ᱡᱟᱭᱜᱟ ᱚᱱ ᱢᱮ
+\n3. ‘ᱡᱟᱣᱜᱮ’ ᱨᱮ ᱡᱷᱚᱛᱚ ᱵᱮᱲᱟ ᱫᱚᱦᱚᱭ ᱢᱮ
+\n\nᱚᱲᱟᱜ ᱦᱚᱲ ᱟᱨ ᱜᱟᱛᱮ ᱠᱚ ᱮᱯ ᱤᱱᱥᱴᱚᱞ ᱞᱟᱹᱜᱤᱫ ᱱᱮᱣᱛᱟ ᱮᱢᱟ ᱠᱚᱢ ᱾.></string>
+    <string name="cowin_20_tracks_through"><![CDATA[<b>Aarogya Setu</b> ᱵᱞᱩᱴᱩᱛᱷ ᱛᱮ ᱴᱨᱟᱠ ᱯᱮ ᱡᱟᱭᱜᱟ ᱥᱚᱥᱤᱭᱟᱹᱞ ᱜᱟᱯᱷ ᱛᱮᱭᱟᱨ, ᱟᱢᱟᱜ ᱠᱟᱹᱢᱤ ᱛᱮ ᱩᱱᱤᱥᱟᱞᱟᱜ ᱚᱠᱟᱭ ᱫᱚ COVID-19 ᱯᱚᱡᱤᱴᱤᱵᱷ ᱥᱟᱵ ᱟᱠᱟᱫᱮᱟᱭ ᱾.]]></string>
+    <string name="the_app_alerts_are_accompanied">ᱱᱚᱶᱟ ᱮᱯ ᱫᱚ ᱦᱩᱥᱤᱭᱟᱨ ᱠᱚ ᱥᱟᱞᱟᱜ ᱛᱮ ᱟᱢᱛᱮᱜᱮ ᱟᱭᱥᱚᱞᱮᱴ ᱠᱚ ᱮᱢᱟᱱ ᱫᱤᱥᱟ ᱱᱤᱨᱫᱮᱥ ᱠᱚ ᱢᱮᱱᱟᱜᱼᱟ ᱟᱢ ᱪᱮᱫ ᱮᱢ ᱪᱤᱠᱟᱹᱭᱟ ᱡᱚᱫᱤ ᱟᱢ ᱴᱷᱮᱱ ᱥᱤᱢᱯᱴᱚᱢᱯᱥ ᱠᱚ ᱫᱮᱠᱷᱟᱣ ᱠᱷᱟᱱᱮ ᱜᱚᱲᱟ ᱟᱨ ᱥᱟᱹᱯᱚᱨ ᱫᱚᱨᱠᱟᱨ ᱛᱟᱦᱮᱱ ᱜᱮᱭᱟ </string>
+    <string name="you_will_be_alerted_if">ᱟᱢ ᱠᱚ ᱦᱩᱥᱤᱭᱟᱹᱨ ᱮᱫ ᱢᱮᱭᱟ ᱡᱚᱫᱤ ᱟᱢ ᱚᱠᱚᱭᱠᱚ ᱴᱷᱮᱱ ᱥᱩᱨᱛᱮ ᱦᱟᱹᱡᱩᱜᱟᱢ ᱟᱨ ᱩᱱᱤ ᱵᱟᱝ ᱵᱟᱲᱟᱭ ᱠᱟᱛᱮ ᱨᱮ ᱦᱚᱸ COVID-19 ᱯᱚᱡᱤᱴᱤᱵᱷ ᱥᱟᱵ ᱠᱟᱭᱟ ᱾.</string>
+    <string name="with_cowin_20_you_can"><![CDATA[<b>Aarogya Setu</b> ᱥᱟᱞᱟᱜ, ᱟᱢ ᱱᱤᱡᱮ ᱛᱮ ᱟᱲ ᱮᱢ ᱤᱫᱤ ᱫᱟᱲᱮᱟᱜᱼᱟᱢ, ᱟᱢᱟᱜ ᱯᱚᱨᱤᱣᱟᱨ ᱟᱨ ᱜᱟᱛᱮ ᱠᱚ, ᱟᱨ ᱫᱤᱥᱚᱢ ᱠᱚ COVID-19 ᱢᱩᱠᱛᱚ ᱨᱮ ᱜᱚᱲᱚ ᱮᱢ ᱫᱟᱲᱮᱭᱟᱜᱼᱟᱢ]]></string>
+    <string name="register_now">ᱱᱤᱛᱚᱜ ᱧᱩᱛᱩᱢ ᱚᱞ</string>
+    <string name="install">ᱵᱳᱦᱟᱞ</string>
+    <string name="bluetooth_and_gps">ᱵᱞᱩᱴᱩᱛᱷ ᱟᱨ ᱡᱟᱭᱜᱟ</string>
+    <string name="location_sharing">ᱡᱟᱭᱜᱟ ᱦᱟᱹᱴᱤᱧ</string>
+    <string name="permission_info_tnc_text"><![CDATA[<p>ᱟᱢ ᱡᱩᱫᱤ ᱫᱤᱥᱚᱢ ᱱᱟᱯᱟᱭ ᱫᱚᱦᱚ ᱨᱮ ᱭᱩᱜᱫᱟᱱ ᱮᱢ ᱥᱟᱱᱟᱢ ᱠᱷᱟᱱ ᱞᱟᱛᱟᱨ ᱵᱚᱴᱚᱱ ᱚᱛᱟ ᱠᱟᱛᱮ<a href="https://static.swaraksha.gov.in/tnc/">ᱠᱟᱹᱢᱤ ᱨᱮᱱᱟᱜ ᱥᱚᱨᱛᱚ</a> ᱟᱨ <a href="https://web.swaraksha.gov.in/ncv19/privacy/">ᱩᱠᱩ ᱮᱠᱛᱤᱭᱟᱨ</a> ᱵᱟᱛᱟᱩᱛᱟᱹᱨ ᱢᱮ:</p>]]></string>
+    <string name="auth_error_unknown">ᱟᱢ ᱵᱚᱞᱚ ᱡᱷᱚᱜ ᱦᱩᱰᱟᱹᱜ ᱦᱩᱭᱮᱱᱟ</string>
+    <string name="auth_error_invalid_otp">ᱟᱫᱮᱨ ᱟᱠᱟᱱ OTP ᱵᱷᱩᱞ ᱜᱮᱭᱟ</string>
+    <string name="auth_error_user_disabled">ᱟᱢ ᱵᱟᱝ ᱥᱟᱭᱤᱱ ᱤᱱ ᱫᱟᱲᱮᱟᱜᱼᱟᱢ</string>
+    <string name="close">ᱥᱤᱠᱲᱤ</string>
+    <string name="sync_data_user_consent">ᱠᱚᱱᱴᱟᱠᱴ ᱴᱨᱮᱥᱤᱝ ᱨᱮ ᱜᱚᱲᱚ ᱮᱢ ᱞᱟᱹᱜᱤᱫ, ᱵᱞᱩᱴᱩᱛᱷ ᱟᱨ ᱡᱟᱭᱜᱟ ᱥᱚᱨᱵᱷᱤᱥ ᱮᱢᱟᱱ ᱛᱮ ᱟᱢᱟᱜ ᱵᱮᱵᱷᱟᱨ ᱰᱟᱴᱟ ᱠᱚ ᱥᱤᱧᱚᱛ ᱥᱚᱨᱠᱟᱨ ᱥᱟᱞᱟᱜ ᱦᱟᱹᱴᱤᱧᱼᱚᱜ ᱟ ᱾</string>
+    <string name="confirm_and_proceed">ᱜᱚᱴᱟᱭ ᱢᱮ ᱟᱨ ᱞᱟᱦᱟᱭ ᱢᱮ</string>
+    <string name="sync_data_detail">ᱟᱢᱟᱜ ᱥᱟᱹᱠᱷᱤᱭᱟᱛ ᱟᱢᱟᱜ ᱯᱷᱚᱱ ᱨᱮ ᱥᱟᱱᱪᱟᱣ ᱟᱠᱟᱱᱟ ᱾ ᱥᱮᱠᱭᱚ ᱥᱚᱨᱠᱟᱨᱤ ᱥᱚᱨᱵᱷᱚᱨ ᱛᱮ ᱵᱷᱮᱡᱟᱭ ᱢᱮ…</string>
+    <string name="sample_collected_for_testing">ᱴᱮᱥᱴᱤᱝ ᱞᱟᱹᱜᱤᱫ ᱥᱮᱢᱯᱟᱹᱞ ᱴᱩᱢᱟᱹᱞ</string>
+    <string name="tested_positive">Covid19 ᱨᱮ ᱯᱚᱡᱤᱴᱤᱵᱷ ᱜᱮᱟᱭ</string>
+    <string name="syncing_data">ᱟᱹᱭᱩᱨ ᱢᱤᱫ ᱰᱟᱴᱟ</string>
+    <string name="syncing_data_detail"><![CDATA[ᱵᱞᱩᱴᱩᱛᱷ ᱟᱨ ᱡᱟᱭᱜᱟ ᱥᱚᱨᱵᱷᱤᱥ ᱮᱢᱟᱱ ᱛᱮ ᱟᱢᱟᱜ ᱵᱮᱵᱷᱟᱨ ᱰᱟᱴᱟ ᱠᱚ ᱥᱤᱧᱚᱛ ᱥᱚᱨᱠᱟᱨ ᱴᱷᱮᱱ ᱵᱷᱮᱡᱟᱜ ᱠᱟᱱᱟ ᱾.]]></string>
+    <string name="cancel">ᱵᱟᱰᱨᱟ</string>
+    <string name="syncing_data_success">ᱟᱹᱭᱩᱨ ᱢᱤᱫ ᱦᱩᱭᱮᱱᱟ</string>
+    <string name="syncing_data_success_detail">ᱟᱢᱟᱜ ᱥᱟᱹᱠᱷᱤᱭᱟᱹᱛ ᱫᱚ ᱥᱤᱧᱚᱛ ᱥᱚᱨᱠᱟᱨᱤ ᱥᱚᱨᱵᱷᱚᱨ ᱨᱮ ᱢᱮᱱᱟᱜᱼᱟ ᱾.</string>
+    <string name="syncing_data_failed">ᱟᱹᱭᱩᱨ ᱢᱤᱫ ᱦᱩᱲᱟᱹᱜ</string>
+    <string name="syncing_data_failed_detail">ᱰᱤᱜᱟᱹᱣ ᱮᱱᱟ, ᱫᱚᱭᱟᱠᱟᱛᱮ ᱫᱩᱦᱲᱟ ᱪᱮᱥᱴᱟᱭ ᱢᱮ᱾.</string>
+    <string name="retry">ᱫᱚᱦᱲᱟ ᱵᱤᱰᱟᱹᱣ</string>
+    <string name="ok">ᱴᱷᱤᱠ</string>
+    <string name="image_language_change_content_description">ᱯᱟᱹᱨᱥᱤ ᱵᱚᱫᱚᱞ ᱢᱮ</string>
+    <string name="image_share_content_description">ᱦᱟᱹᱴᱤᱧ ᱫᱚᱞᱟᱞ</string>
+    <string name="image_back_content_description">ᱛᱟᱭᱚᱢ</string>
+    <string name="image_on_board_content_description">ᱚᱱ-ᱵᱚᱨᱰᱤᱝ ᱫᱮᱠᱷᱟᱣ ᱢᱮ</string>
+    <string name="image_close_content_description">@string/close</string>
+    <string name="permission_alert_message">ᱱᱟᱯᱟᱭ ᱟᱨ ᱦᱟᱹᱞᱤᱭᱟᱹᱠ ᱵᱟᱰᱟᱭ ᱞᱟᱹᱜᱤᱫ, ᱱᱚᱶᱟ ᱮᱯᱯ ᱫᱚ ᱵᱞᱩᱴᱩᱛᱷ ᱟᱨ ᱡᱟᱭᱜᱟ ᱛᱟᱭ ᱫᱚᱨᱠᱟᱨ ᱾ ᱟᱢ ᱯᱷᱚᱱ ᱨᱮᱭᱟᱜ ᱥᱟᱡᱟᱣ ᱠᱚᱨᱮ ᱱᱚᱶᱟ ᱴᱷᱤᱠ ᱞᱟᱹᱜᱤᱫ ᱮᱢ ᱦᱚᱸ ᱪᱚ ᱫᱟᱲᱮᱟᱜᱟᱢ ᱾.</string>
+    <string name="error_network_error">ᱫᱚᱭᱟᱠᱟᱛᱮ ᱤᱱᱴᱚᱨᱱᱮᱴ ᱠᱚᱱᱮᱠᱥᱚᱱ ᱧᱮᱞ ᱵᱤᱰᱟᱣ ᱢᱮ</string>
+    <string name="error_location">ᱡᱟᱭᱜᱟ ᱥᱟᱡᱟᱣᱠᱚ , ᱡᱟᱭᱜᱟ ᱥᱟᱡᱟᱣᱠᱚ ᱱᱟᱠᱟᱯᱷᱤ, ᱟᱨ ᱱᱚᱰᱮ ᱵᱟᱭ ᱜᱚᱴᱟᱣᱜᱼᱟ ᱾ ᱥᱟᱡᱟᱣ ᱴᱷᱮᱱ ᱜᱚᱴᱟᱣ ᱢᱮ</string>
+    <string name="turn_on_bluetooth_all_times">ᱵᱞᱩᱴᱩᱴᱷ ᱥᱟᱨᱟ ᱵᱮᱲᱟ ᱚᱱ ᱫᱚᱦᱚᱭ ᱯᱮ ᱟᱨ ᱟᱢᱟᱜ ᱡᱟᱭᱜᱟ ᱠᱚ ᱮᱢᱟᱱ ᱚᱞᱜᱟ ᱰᱤᱵᱷᱟᱤᱥ ᱠᱚ ᱵᱟᱰᱟᱹᱭ ᱢᱟ ᱟᱨ ᱟᱢ ᱴᱷᱤᱠ ᱴᱷᱟᱠ ᱛᱟᱦᱮᱱ ᱟᱢ ᱾.</string>
+    <string name="make_sure_your_phone_is_connected_to_the_wifi_or_switch_to_mobile_data">ᱟᱢᱟᱜ ᱯᱷᱚᱱ WiFi ᱟᱨ ᱢᱚᱵᱟᱤᱞ ᱰᱟᱴᱟ ᱥᱟᱞᱟᱜ ᱡᱩᱲᱟᱣ ᱠᱟᱱᱟ ᱥᱮ ᱵᱟᱝ ᱧᱮᱞ ᱵᱤᱰᱟᱹᱣ ᱢᱮ ᱾.</string>
+    <string name="login_failed">ᱵᱚᱞᱚ ᱦᱩᱲᱟᱹᱜ ᱾ ᱫᱚᱭᱟᱠᱟᱛᱮ ᱫᱩᱦᱲᱟᱹ ᱪᱮᱥᱴᱟᱭ ᱢᱮ</string>
+    <string name="image_user_content_description">ᱵᱮᱵᱷᱟᱨᱤᱡ</string>
+    <string name="image_menu_content_description">ᱢᱮᱱᱩ</string>
+    <string name="generator_scanner_qr_code">ᱛᱮᱭᱟᱨ/QR ᱠᱳᱰ ᱥᱠᱟᱱ</string>
+    <string name="verify_installed_app">ᱵᱳᱦᱟᱞ ᱮᱯ ᱧᱮᱞ ᱥᱟᱹᱨᱤ</string>
+    <string name="share_data_with_govt">ᱥᱚᱨᱠᱟᱨ ᱥᱟᱞᱟᱜ ᱰᱟᱴᱟ ᱦᱟᱴᱤᱧ ᱢᱮ ᱾.</string>
+    <string name="call_helpline">ᱜᱚᱲᱚᱞᱟᱹᱭᱤᱱ ᱠᱚᱞ (᱑᱐᱗᱕)</string>
+    <string name="settings">ᱥᱟᱡᱟᱣᱠᱚ</string>
+    <string name="share_data_with_govt_detail">ᱩᱱ ᱡᱷᱚᱜ ᱦᱟᱹᱴᱤᱧ ᱢᱮ ᱡᱩᱫᱤ ᱟᱢ COVID-19 ᱞᱟᱹᱜᱤᱫ ᱴᱮᱥᱴᱤᱝᱼᱚᱜ ᱠᱟᱱᱟᱢ ᱟᱨ ᱵᱟᱝᱠᱷᱟᱱ ᱯᱚᱡᱤᱴᱤᱵᱷ ᱠᱟᱱᱟᱢ</string>
+    <string name="call_helpline_detail">COVID-19 ᱵᱟᱵᱚᱫ ᱠᱩᱠᱞᱤ ᱠᱚ ᱞᱟᱹᱜᱤᱫ ᱦᱮᱞᱛᱷ ᱢᱤᱱᱤᱥᱴᱨᱭ ᱴᱚᱞ-ᱯᱷᱨᱤ ᱜᱚᱲᱚᱞᱟᱹᱭᱤᱱ</string>
+    <string name="faq">FAQs</string>
+    <string name="privacy_policy">ᱩᱠᱩ ᱮᱠᱛᱤᱭᱟᱨ</string>
+    <string name="terms_of_use">ᱵᱮᱵᱷᱟᱨ ᱨᱮᱭᱟᱜ ᱫᱟᱹᱣ</string>
+    <string name="app_version">ᱮᱯᱯ ᱦᱟᱹᱞᱤᱭᱟᱠ %s</string>
+    <string name="scan_prompt">ᱚᱞᱜᱟ ᱦᱚᱲ ᱠᱚᱣᱟᱜ ᱦᱚᱲᱢᱚ ᱥᱛᱤᱛᱷᱤ ᱵᱟᱲᱟᱭ ᱞᱟᱹᱜᱤᱫ QR Code ᱥᱠᱟᱱ ᱢᱮ </string>
+    <string name="few_seconds">ᱠᱟᱹᱴᱤᱡ ᱴᱤᱡ</string>
+    <string name="minutes">ᱴᱤᱯᱤᱡ</string>
+    <string name="scan_to_check_status">ᱦᱚᱲᱢᱚ ᱦᱟᱞᱚᱛ ᱵᱟᱲᱟᱭ ᱞᱟᱹᱜᱤᱫ QR ᱠᱳᱰ ᱥᱠᱟᱱ ᱢᱮ</string>
+    <string name="tap_to_refresh">QR ᱠᱳᱰ ᱨᱤᱯᱷᱨᱮᱥ ᱞᱟᱹᱜᱤᱫ ᱴᱤᱲᱟᱹᱜ ᱢᱮ</string>
+    <string name="qr_code_valid_for">QR ᱠᱳᱰ ᱵᱟᱛᱟᱣᱟᱜ</string>
+    <string name="scan_other_s_qr_code">QR ᱠᱳᱰ ᱥᱠᱟᱱ ᱢᱮ</string>
+    <string name="generate_my_qr_code">QR ᱠᱳᱰ ᱛᱮᱭᱟᱨ ᱢᱮ</string>
+    <string name="invalid_qr_code">QR ᱠᱳᱰ ᱵᱟᱰ</string>
+    <string name="not_generated_aarogya_setu">ᱱᱚᱶᱟ ᱫᱚ ᱚᱯᱷᱤᱥᱤᱭᱟᱞ ᱟᱨᱚᱜᱭᱟ ᱥᱮᱛᱩ ᱮᱯ ᱨᱮ ᱵᱟᱭ ᱛᱮᱭᱟᱨ ᱠᱟᱱᱟ ᱾.</string>
+    <string name="request_new_code">ᱫᱚᱭᱟᱠᱟᱛᱮ ᱱᱟᱶᱟ ᱠᱳᱰ ᱛᱮᱭᱟᱨ ᱞᱟᱹᱜᱤᱫ ᱦᱚᱲ ᱱᱮᱦᱚᱨ ᱮᱢ</string>
+    <string name="expired_code">QR ᱠᱳᱰ ᱚᱠᱛᱚ ᱪᱟᱵᱟᱭᱮᱱᱟ</string>
+    <string name="low_risk">ᱫᱚ ᱠᱚᱢ ᱨᱤᱥᱠ ᱵᱮᱢᱟᱨ ᱜᱮᱭᱟ</string>
+    <string name="moderate_risk">ᱫᱚ ᱩᱫᱟᱹᱨ ᱨᱤᱥᱠ ᱵᱮᱢᱮᱨ ᱜᱮᱭᱟ</string>
+    <string name="high_risk">ᱫᱚ ᱡᱟᱹᱥᱛᱤ ᱨᱤᱥᱠ ᱵᱮᱢᱟᱨ</string>
+    <string name="tested_positive_status">ᱫᱚ COVID-19 ᱯᱚᱡᱤᱴᱤᱵᱷ ᱜᱮᱟᱭ</string>
+    <string name="provide_necessary_permission">Qr ᱠᱳᱰ ᱦᱟᱢᱮᱴᱚᱜ ᱞᱟᱹᱜᱤᱫ ᱫᱚᱭᱟᱠᱟᱛᱮ ᱪᱷᱟᱰ ᱮᱢᱚᱜᱼᱢᱮ</string>
+    <string name="scan_without_perm_alert">QR ᱠᱳᱰ ᱥᱠᱟᱱᱤᱝ ᱞᱟᱹᱜᱩᱤᱫ ᱮᱢ ᱠᱮᱢᱨᱟ ᱪᱷᱟᱰ ᱫᱚᱨᱠᱟᱨ ᱾.</string>
+    <string name="open_settings">ᱥᱟᱡᱟᱣᱠᱚ ᱠᱷᱩᱞᱟᱹᱭ ᱢᱮ </string>
+    <string name="common_scanning_error">ᱠᱤᱪᱷᱤ ᱵᱷᱩᱞ ᱦᱩᱭᱮᱱᱟ ᱾ ᱫᱚᱭᱟᱠᱟᱛᱮ ᱟᱨᱦᱚᱸ ᱥᱠᱟᱱ ᱢᱮ ᱾.</string>
+    <string name="hamburger_menu_intro">ᱟᱨᱦᱚᱸ ᱡᱤᱱᱤᱥ ᱠᱚ ᱡᱮᱢᱚᱱ ᱜᱚᱲᱚ ᱞᱟᱹᱭᱤᱱ, ᱩᱠᱩ ᱮᱠᱛᱤᱭᱟᱨ, ᱵᱮᱵᱷᱟᱨ ᱨᱮᱭᱟᱜ ᱫᱟᱹᱣ ᱟᱨ ᱟᱨᱦᱚᱸ ᱱᱚᱰᱮ ᱧᱮᱢᱚᱜᱼᱟ ᱾.</string>
+</resources>
