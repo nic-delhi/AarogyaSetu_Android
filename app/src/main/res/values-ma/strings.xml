@@ -7,7 +7,7 @@
     <string name="location_text">आपण आपले स्थान सामायिकरण ‘नेहमी’ वर ठेवा अशी शिफारस केली जाते. आपण नंतर कधीही हे बदलू शकता.</string>
     <!-- phone_number_layout -->
     <string name="enter_mobile_number">भ्रमणध्वनी क्रमांक प्रविष्ट करा</string>
-    <string name="country_code">९१</string>
+    <string name="country_code">+९१</string>
     <string name="mobile_number">भ्रमणध्वनी क्रमांक</string>
     <string name="why_is_it_needed">याची गरज का आहे?</string>
     <string name="submit">प्रस्तुत करा</string>
@@ -61,7 +61,7 @@
     <string name="syncing_data_detail"><![CDATA[ब्लूटूथ आणि GPS सेवेसह कॅप्चर केलेला संवाद माहिती भारत सरकारला पाठवित आहोत]]></string>
     <string name="cancel">रद्द करा</string>
     <string name="syncing_data_success">सिंक यशस्वी</string>
-    <string name="syncing_data_success_detail">तुमचा माहिती आता भारत सरकारच्या सर्व्हरवर सुरक्षित आहे</string>
+    <string name="syncing_data_success_detail">तुमची माहिती आता भारत सरकारच्या सर्व्हरवर सुरक्षित आहे</string>
     <string name="syncing_data_failed">सिंक अयशस्वी</string>
     <string name="syncing_data_failed_detail">काहीतरी चुकीचे घडले आहे, कृपया पुन्हा प्रयत्न करा</string>
     <string name="retry">पुन्हा प्रयत्न करा</string>
@@ -75,7 +75,7 @@
     <string name="error_network_error">कृपया आंतरजाल जोडणी तपासा</string>
     <string name="error_location">स्थान समायोजन अपुरी आहेत आणि येथे निश्चित केल्या जाऊ शकत नाहीत. समायोजनमध्ये निराकरण करा.</string>
     <string name="turn_on_bluetooth_all_times">इतर साधनांशी असलेला आपला निकट ट्रॅक करण्यासाठी आणि अचूक सुरक्षा अद्यतने देण्यासाठी ब्लूटूथ नेहमीच चालू असणे आवश्यक आहे.</string>
-    <string name="make_sure_your_phone_is_connected_to_the_wifi_or_switch_to_mobile_data">आपला फोन वायफायशी कनेक्ट केलेला असल्याचे सुनिश्चित करा किंवा मोबाइल डेटावर स्विच करा.</string>
+    <string name="make_sure_your_phone_is_connected_to_the_wifi_or_switch_to_mobile_data">आपला भ्रमणध्वनी वायफायशी जोडलेला असल्याचे सुनिश्चित करा किंवा भ्रमणध्वनी डेटावर स्विच करा.</string>
     <string name="login_failed">लॉगिन अयशस्वी. कृपया पुन्हा प्रयत्न करा</string>
     <string name="image_user_content_description">वापरकर्ता</string>
     <string name="image_menu_content_description">मेनू</string>
