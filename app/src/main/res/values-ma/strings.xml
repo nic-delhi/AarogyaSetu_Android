@@ -1,67 +1,67 @@
 <resources>
-    <string name="app_name">Aarogya Setu</string>
-    <string name="your_mobile_number_is_required_to_know_your_identity">संपर्क ट्रेसिंगसाठी आपला मोबाइल नंबर आवश्यक आहे.</string>
+    <string name="app_name">आरोग्य सेतु</string>
+    <string name="your_mobile_number_is_required_to_know_your_identity">संपर्क शोधण्यासाठी आपला भ्रमणध्वनी क्रमांक आवश्यक आहे.</string>
     <string name="text_value">समजा, तुम्ही एखाद्या आठवड्यात परत एखाद्या संमेलनात भेटला होता किंवा एखाद्या सार्वजनिक ठिकाणी एखाद्याच्या ओळखीच्या जवळ होता आणि काही दिवसांत, ते कोविड -१९ साठी सकारात्मक चाचणी घेतात.\n\nगेल्या १४ दिवसांत भारत सरकार त्या व्यक्तीच्या जवळ असलेल्या त्रिज्येच्या अॅप स्थापित केलेल्या सक्रिय उपकरणांद्वारे त्या व्यक्तीचे सर्व स्पर्श बिंदू शोधून काढेल.\n\nअशा प्रकारच्या सर्व संपर्कांना सल्लामसलत असलेल्या पुढील संपर्कांकरिता स्वत: ला वेगळ्या करण्यासाठी किंवा आवश्यकतेनुसार जवळच्या चाचणी केंद्रात चाचणी घेण्यासंदर्भात सूचना पाठविली जाईल.\n\nसक्रिय संपर्क ट्रेसिंगमध्ये भाग घेऊन आपण आम्हाला कोविड -१९ of चा प्रसार कमी करण्यात मदत कराल आणि आपल्या आरोग्यासाठी आणि आरोग्यासाठी कृतीशील उपाययोजना राबविण्यास भारत सरकार सक्षम कराल.\n\n</string>
     <string name="permissions_title">सेवा अटी आणि गोपनीयता</string>
     <string name="permissions_detail">आम्हाला या विषयाचे स्वरूप आणि संवेदनशीलता समजली आहे आणि आपल्या डेटामध्ये कोणतीही तडजोड होणार नाही हे सुनिश्चित करण्यासाठी कठोर उपाययोजना केली आहेत.</string>
-    <string name="location_text">आपण आपले स्थान सामायिकरण ‘नेहमी’ वर सेट करावे अशी शिफारस केली जाते. आपण नंतर कधीही हे बदलू शकता.</string>
+    <string name="location_text">आपण आपले स्थान सामायिकरण ‘नेहमी’ वर ठेवा अशी शिफारस केली जाते. आपण नंतर कधीही हे बदलू शकता.</string>
     <!-- phone_number_layout -->
-    <string name="enter_mobile_number">मोबाइल नंबर प्रविष्ट करा</string>
-    <string name="country_code">+91</string>
-    <string name="mobile_number">मोबाइल नंबर</string>
+    <string name="enter_mobile_number">भ्रमणध्वनी क्रमांक प्रविष्ट करा</string>
+    <string name="country_code">९१</string>
+    <string name="mobile_number">भ्रमणध्वनी क्रमांक</string>
     <string name="why_is_it_needed">याची गरज का आहे?</string>
-    <string name="submit">प्रस्तुत करणे</string>
+    <string name="submit">प्रस्तुत करा</string>
     <string name="resend_otp">ओटीपी पुन्हा पाठवा</string>
-    <string name="resend_otp_in">%s मध्ये ओटीपी पुन्हा पाठव</string>
+    <string name="resend_otp_in">%s मध्ये ओटीपी पुन्हा पाठवा</string>
     <!-- otp_validation_layout -->
     <string name="enter_otp">ओटीपी प्रविष्ट करा</string>
-    <string name="we_have_sent_otp">आम्ही आपल्या मोबाइल क्रमांकावर ओटीपी पाठविला आहे.</string>
-    <string name="we_have_resent_otp">We have resent OTP to your mobile number.</string>
-    <string name="otp">OTP</string>
-    <string name="please_enter_a_valid_otp">कृपया वैध OTP एन्टर करा.</string>
+    <string name="we_have_sent_otp">आम्ही आपल्या भ्रमणध्वनी क्रमांकावर ओटीपी पाठविला आहे.</string>
+    <string name="we_have_resent_otp">आम्ही आपल्या भ्रमणध्वनी क्रमांकावर परत ओटीपी पाठविला आहे.</string>
+    <string name="otp">ओटीपी</string>
+    <string name="please_enter_a_valid_otp">कृपया वैध ओटीपी प्रविष्ट करा.</string>
     <!-- why_needed_layout -->
     <string name="i_understand">मी समजतो.</string>
     <string name="device_location"><![CDATA[<b>डिव्हाइस स्थान</b>]]></string>
     <string name="bluetooth"><![CDATA[<b>ब्लूटूथ</b>]]></string>
     <string name="data_sharing_with_the_ministry"><![CDATA[<b>डेटा सामायिकरण</b>]]></string>
-    <string name="monitors_your_device_s_proximity_within_6_feet_range">आपल्या डिव्हाइसच्या दुसर्‍या मोबाइल डिव्हाइसच्या जवळपासचे परीक्षण करते. आपण हे नेहमीच चालू ठेवावे अशी शिफारस केली जाते.</string>
-    <string name="tracks_an_individual_s_touch_points_so_can_easily_find_others_who_came_in_close_contact">आपला डेटा फक्त भारत सरकारबरोबर सामायिक केला जाईल.\nअॅप आपले नाव आणि नंबर कोणत्याही वेळी मोठ्या प्रमाणात जाहीर करण्याची परवानगी देत नाही.</string>
+    <string name="monitors_your_device_s_proximity_within_6_feet_range">आपल्या भ्रमणध्वनीच्या व दुसर्‍याच्या भ्रमणध्वनीच्या जवळपासचे परीक्षण करते. आपण हे नेहमीच चालू ठेवावे अशी शिफारस केली जाते.</string>
+    <string name="tracks_an_individual_s_touch_points_so_can_easily_find_others_who_came_in_close_contact">तुमची माहिती फक्त भारत सरकारबरोबर सामायिक केला जाईल.\nअॅप आपले नाव आणि नंबर कोणत्याही वेळी मोठ्या प्रमाणात जाहीर करण्याची परवानगी देत नाही.</string>
     <string name="contribute_to_a_safer_india">मी सहमत आहे</string>
-    <string name="please_select_a_language_en">Please select your language\nकृपया अपनी भाषा चुनें</string>
+    <string name="please_select_a_language_en">Please select your language\nकृपया आपली भाषा निवडा</string>
     <string name="next">पुढे</string>
-    <string name="please_select_a_language_to_proceed">Please select a language to proceed.</string>
+    <string name="please_select_a_language_to_proceed">कृपया पुढे जाण्यासाठी एक भाषा निवडा.</string>
     <!-- Strings used for fragments for navigation -->
-    <string name="please_enter_a_valid_number">कृपया वैध नंबर एन्टर करा</string>
-    <string name="would_you_like_to">कोविड -१९ पॉझिटिव्ह चाचणी घेतलेल्या एखाद्या व्यक्तीबरोबर जर आपण रस्ता ओलांडला असेल तर आपल्याला माहिती ठेवण्यास आवडेल काय?</string>
+    <string name="please_enter_a_valid_number">कृपया वैध क्रमांक प्रविष्ट करा</string>
+    <string name="would_you_like_to">कोविड -१९ पॉझिटिव्ह चाचणी घेतलेल्या एखाद्या व्यक्तीबरोबर जर आपण रस्ता ओलांडला असेल तर आपल्याला माहिती देण्यास आवडेल काय?</string>
     <string name="each_one_of_us">आपल्यातील कोरोनाव्हायरस (साथीचा रोग) सर्व देशभर (किंवा (साथीचा रोग)) साथीच्या रोगाचा प्रसार रोखण्यात मदत करण्याची शक्ती आपल्या प्रत्येकामध्ये आहे.</string>
     <string name="simply_1_install_the_app">फक्त,
 \n१ अ‍ॅप स्थापित करा
 \n२.ब्लूटूथ आणि स्थान चालू करा
-\n३. स्थान सामायिकरण "नेहमी" वर सेट करा
+\n३. स्थान सामायिकरण "नेहमी" वर ठेवा
 \n\nआपल्या मित्रांना आणि कुटूंबालाही अ‍ॅप स्थापित करण्यासाठी आमंत्रित करा</string>
-    <string name="cowin_20_tracks_through"><![CDATA[<b>आरोग्य सेतु</b> आपला ब्लूटूथ आणि स्थानाद्वारे कोव्हीड -१९ पॉझिटिव्ह चाचणी घेऊ शकणार्‍या एखाद्या व्यक्तीबरोबर सामाजिक आलेखाद्वारे आपला संवाद ट्रॅक करतो.]]></string>
-    <string name="the_app_alerts_are_accompanied">ॲप अलर्ट द्वा्रे विलागिकरण विषयी सूचना आणि जर लक्षणें उत्पन्न झाल्यास काय करावे याविषयी मदत आणि माहिती आहे.</string>
-    <string name="you_will_be_alerted_if">आपण कोविड -१९ पॉझिटिव्हची चाचणी घेतल्यास आपण नकळत, अगदी नकळत अगदी जवळ आला असल्यास आपल्याला सतर्क केले जाईल.</string>
+    <string name="cowin_20_tracks_through"><![CDATA[<b>आरोग्य सेतु</b> आपला ब्लूटूथ आणि स्थानाद्वारे कोव्हीड -१९ सकारात्मक चाचणी घेऊ शकणार्‍या एखाद्या व्यक्तीबरोबर सामाजिक आलेखाद्वारे आपला संवाद ट्रॅक करतो.]]></string>
+    <string name="the_app_alerts_are_accompanied">ॲप इशारा द्वा्रे विलागिकरण विषयी सूचना आणि जर लक्षणें उत्पन्न झाल्यास काय करावे याविषयी मदत आणि माहिती आहे.</string>
+    <string name="you_will_be_alerted_if">आपण कोविड -१९ सकारात्मक चाचणी घेतल्यास आपण नकळत, अगदी नकळत अगदी जवळ आला असल्यास आपल्याला सतर्क केले जाईल.</string>
     <string name="with_cowin_20_you_can"><![CDATA[<b>आरोग्य सेतू</b> च्या मदतीने आपण स्वतःचे, आपल्या कुटुंबाचे आणि मित्रांचे रक्षण करू शकता आणि कोविड -१९ शी लढण्याच्या प्रयत्नात आमच्या देशास मदत करू शकता]]></string>
-    <string name="register_now">अIता नोंदणी करा</string>
-    <string name="install">इन्स्टॉल</string>
+    <string name="register_now">आता नोंदणी करा</string>
+    <string name="install">स्थापित करा</string>
     <string name="bluetooth_and_gps">स्थान</string>
     <string name="location_sharing">स्थान</string>
     <string name="permission_info_tnc_text"><![CDATA[<p>आपण सुरक्षित भारताला हातभार लावू इच्छित असल्यास कृपया खाली दिलेल्या बटणावर क्लिक करुन आपण  <a href="https://static.swaraksha.gov.in/tnc/">सेवा</a> अटी आणि <a href="https://web.swaraksha.gov.in/ncv19/privacy/"> गोपनीयता धोरण</a>स्वीकारण्यास सूचित करा:</p>]]></string>
-    <string name="auth_error_unknown">There is some error login you in</string>
-    <string name="auth_error_invalid_otp">The OTP you have entered is incorrect</string>
+    <string name="auth_error_unknown">आपल्याला लॉग इन करताना काही त्रुटी आली आहे</string>
+    <string name="auth_error_invalid_otp">आपण प्रविष्ट केलेला ओटीपी चुकीचा आहे</string>
     <string name="auth_error_user_disabled">आपल्याला साइन इन करण्याची परवानगी नाही</string>
     <string name="close">बंद</string>
-    <string name="sync_data_user_consent">संपर्कातील व्यक्तींच्या शोधाकरिता, ब्लूटूथ आणि GPS सेवेसह कॅप्चर केलेला तुमचा संवाद डाटा भारत सरकारसोबत शेअर केला जाईल</string>
-    <string name="confirm_and_proceed">कन्फर्म करा आणि पुढे सुरू ठेवा</string>
-    <string name="sync_data_detail">तुमचा डाटा नेहमी तुमच्या फोनमध्ये सेव्ह केलेला असतो. सरकारच्या सुरक्षित सर्वरवर डाटा शेअर करा जर:</string>
+    <string name="sync_data_user_consent">संपर्कातील व्यक्तींच्या शोधाकरिता, ब्लूटूथ आणि GPS सेवेसह नोंद केलेली तुमची संवाद माहिती भारत सरकारसोबत सामायिक  केला जाईल</string>
+    <string name="confirm_and_proceed">नक्की करा आणि पुढे सुरू ठेवा</string>
+    <string name="sync_data_detail">तुमची  माहिती नेहमी तुमच्या भ्रमणध्वनीमध्ये जतन केलेली असते. सरकारच्या सुरक्षित सर्व्हरवर माहिती सामायिक  करा :</string>
     <string name="sample_collected_for_testing">चाचणीकरिता नमुना संकलन</string>
-    <string name="tested_positive">Covid19 करिता पॉझिटिव्ह निदान</string>
-    <string name="syncing_data">डाटा सिंक होत आहे</string>
-    <string name="syncing_data_detail"><![CDATA[ब्लूटूथ आणि GPS सेवेसह कॅप्चर केलेला संवाद डाटा भारत सरकारला पाठवित आहोत]]></string>
-    <string name="cancel">कॅन्सल करा</string>
+    <string name="tested_positive">कोविड -१९  पॉझिटिव्ह निदान</string>
+    <string name="syncing_data">माहिती सिंक होत आहे</string>
+    <string name="syncing_data_detail"><![CDATA[ब्लूटूथ आणि GPS सेवेसह कॅप्चर केलेला संवाद माहिती भारत सरकारला पाठवित आहोत]]></string>
+    <string name="cancel">रद्द करा</string>
     <string name="syncing_data_success">सिंक यशस्वी</string>
-    <string name="syncing_data_success_detail">तुमचा डाटा आता भारत सरकारच्या सर्वरवर सुरक्षित आहे</string>
+    <string name="syncing_data_success_detail">तुमचा माहिती आता भारत सरकारच्या सर्व्हरवर सुरक्षित आहे</string>
     <string name="syncing_data_failed">सिंक अयशस्वी</string>
     <string name="syncing_data_failed_detail">काहीतरी चुकीचे घडले आहे, कृपया पुन्हा प्रयत्न करा</string>
     <string name="retry">पुन्हा प्रयत्न करा</string>
@@ -70,10 +70,10 @@
     <string name="image_share_content_description">ॲप्लिकेशन शेअर करा</string>
     <string name="image_back_content_description">मागे जा</string>
     <string name="image_on_board_content_description">ऑन-बोर्डिंग दाखवा</string>
-    <string name="image_close_content_description">@string/close</string>
-    <string name="permission_alert_message">आपल्याला आपल्या सेटिंग्जमधील योगदानासाठी आवश्यक स्थान / ब्लूटूथ परवानग्या प्रदान कराव्या लागतील, अ</string>
-    <string name="error_network_error">कृपया इंटरनेट कनेक्शन तपासा</string>
-    <string name="error_location">स्थान सेटिंग्ज अपुरी आहेत आणि येथे निश्चित केल्या जाऊ शकत नाहीत. सेटिंग्जमध्ये निराकरण करा.</string>
+    <string name="image_close_content_description">बंद</string>
+    <string name="permission_alert_message">आपल्याला आपल्या समायोजनमधील योगदानासाठी आवश्यक स्थान / ब्लूटूथ परवानग्या प्रदान कराव्या लागतील, अ</string>
+    <string name="error_network_error">कृपया आंतरजाल जोडणी तपासा</string>
+    <string name="error_location">स्थान समायोजन अपुरी आहेत आणि येथे निश्चित केल्या जाऊ शकत नाहीत. समायोजनमध्ये निराकरण करा.</string>
     <string name="turn_on_bluetooth_all_times">इतर साधनांशी असलेला आपला निकट ट्रॅक करण्यासाठी आणि अचूक सुरक्षा अद्यतने देण्यासाठी ब्लूटूथ नेहमीच चालू असणे आवश्यक आहे.</string>
     <string name="make_sure_your_phone_is_connected_to_the_wifi_or_switch_to_mobile_data">आपला फोन वायफायशी कनेक्ट केलेला असल्याचे सुनिश्चित करा किंवा मोबाइल डेटावर स्विच करा.</string>
     <string name="login_failed">लॉगिन अयशस्वी. कृपया पुन्हा प्रयत्न करा</string>
@@ -82,8 +82,8 @@
     <string name="generator_scanner_qr_code">क्यूआर कोड व्युत्पन्न / स्कॅन करा</string>
     <string name="verify_installed_app">स्थापित अॅप सत्यापित करा</string>
     <string name="share_data_with_govt">शासनाबरोबर डेटा सामायिक करा.</string>
-    <string name="call_helpline">कॉल हेल्पलाइन (१०७५)</string>
-    <string name="settings">सेटिंग्ज</string>
+    <string name="call_helpline"> मदत कक्ष (१०७५) संपर्क करा</string>
+    <string name="settings">समायोजन</string>
     <string name="share_data_with_govt_detail">आपण कोविड १९ साठी सकारात्मक चाचणी केली असेल किंवा सध्या चाचणी घेतली असल्यासच सामायिक करा</string>
     <string name="call_helpline_detail">कोविड १९ ला संबंधित प्रश्नांसाठी आरोग्य मंत्रालयाची टोल फ्री हेल्पलाईन</string>
     <string name="faq">सामान्य प्रश्न</string>
@@ -108,7 +108,7 @@
     <string name="tested_positive_status">कोविड १९ साठी सकारात्मक चाचणी केली आहे</string>
     <string name="provide_necessary_permission">कृपया आपला  क्यूआर कोड कॅप्चर करण्यासाठी आवश्यक परवानगी द्या</string>
     <string name="scan_without_perm_alert">अ‍ॅपला क्यूआर कोड स्कॅनिंगसाठी कॅमेर्‍याची परवानगी आवश्यक आहे.</string>
-    <string name="open_settings">सेटिंग्ज उघडा</string>
+    <string name="open_settings">समायोजन उघडा</string>
     <string name="common_scanning_error">काही अपवाद आढळले. कृपया पुन्हा स्कॅन करा</string>
-    <string name="hamburger_menu_intro">हहेल्पलाइन, गोपनीयता धोरण, वापराच्या अटी आणि बरेच काही यासारख्या बरीच नवीन वैशिष्ट्ये येथे आढळू शकतात.</string>
+    <string name="hamburger_menu_intro">मदत कक्ष, गोपनीयता धोरण, वापराच्या अटी आणि बरेच काही यासारख्या बरीच नवीन वैशिष्ट्ये येथे आढळू शकतात.</string>
 </resources>
