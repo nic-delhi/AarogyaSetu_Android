@@ -32,7 +32,7 @@
     <string name="please_select_a_language_to_proceed">कृपया पुढे जाण्यासाठी एक भाषा निवडा.</string>
     <!-- Strings used for fragments for navigation -->
     <string name="please_enter_a_valid_number">कृपया वैध क्रमांक प्रविष्ट करा</string>
-    <string name="would_you_like_to">कोविड -१९ पॉझिटिव्ह चाचणी घेतलेल्या एखाद्या व्यक्तीबरोबर जर आपण रस्ता ओलांडला असेल तर आपल्याला माहिती देण्यास आवडेल काय?</string>
+    <string name="would_you_like_to">कोविड -१९ संसर्गित चाचणी घेतलेल्या एखाद्या व्यक्तीबरोबर जर आपण रस्ता ओलांडला असेल तर आपल्याला माहिती देण्यास आवडेल काय?</string>
     <string name="each_one_of_us">आपल्यातील कोरोनाव्हायरस (साथीचा रोग) सर्व देशभर (किंवा (साथीचा रोग)) साथीच्या रोगाचा प्रसार रोखण्यात मदत करण्याची शक्ती आपल्या प्रत्येकामध्ये आहे.</string>
     <string name="simply_1_install_the_app">फक्त,
 \n१ अ‍ॅप स्थापित करा
@@ -84,7 +84,7 @@
     <string name="share_data_with_govt">शासनाबरोबर डेटा सामायिक करा.</string>
     <string name="call_helpline"> मदत कक्ष (१०७५) संपर्क करा</string>
     <string name="settings">समायोजन</string>
-    <string name="share_data_with_govt_detail">आपण कोविड १९ साठी सकारात्मक चाचणी केली असेल किंवा सध्या चाचणी घेतली असल्यासच सामायिक करा</string>
+    <string name="share_data_with_govt_detail">आपण कोविड १९ साठी संसर्गित चाचणी केली असेल किंवा सध्या चाचणी घेतली असल्यासच सामायिक करा</string>
     <string name="call_helpline_detail">कोविड १९ ला संबंधित प्रश्नांसाठी आरोग्य मंत्रालयाची टोल फ्री हेल्पलाईन</string>
     <string name="faq">सामान्य प्रश्न</string>
     <string name="privacy_policy">गोपनीयता धोरण</string>
@@ -105,7 +105,7 @@
     <string name="low_risk">संसर्गाचा धोका कमी आहे</string>
     <string name="moderate_risk">संसर्गाचा मध्यम धोका आहे</string>
     <string name="high_risk">संसर्गाचा उच्च धोका आहे</string>
-    <string name="tested_positive_status">कोविड १९ साठी सकारात्मक चाचणी केली आहे</string>
+    <string name="tested_positive_status">कोविड १९ साठी संसर्गित चाचणी केली आहे</string>
     <string name="provide_necessary_permission">कृपया आपला  क्यूआर कोड कॅप्चर करण्यासाठी आवश्यक परवानगी द्या</string>
     <string name="scan_without_perm_alert">अ‍ॅपला क्यूआर कोड स्कॅनिंगसाठी कॅमेर्‍याची परवानगी आवश्यक आहे.</string>
     <string name="open_settings">समायोजन उघडा</string>
