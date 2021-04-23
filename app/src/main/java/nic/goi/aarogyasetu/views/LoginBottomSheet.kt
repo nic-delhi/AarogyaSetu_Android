@@ -31,6 +31,7 @@ import kotlinx.android.synthetic.main.phone_number_layout.view.*
 import nic.goi.aarogyasetu.analytics.EventNames
 import nic.goi.aarogyasetu.analytics.ScreenNames
 import java.util.concurrent.TimeUnit
+import java.util.regex.Pattern
 
 
 class LoginBottomSheet : BottomSheetDialogFragment(), ViewTreeObserver.OnGlobalLayoutListener {
@@ -220,7 +221,10 @@ class LoginBottomSheet : BottomSheetDialogFragment(), ViewTreeObserver.OnGlobalL
             getLocalisedString(context, R.string.submit)
         rootView.phone_number_validation_layout.rootView.validate_phone.setOnClickListener {
 
-            if (android.util.Patterns.PHONE.matcher(rootView.phone_number_validation_layout.rootView.phone_num.text.toString().trim()).matches() && rootView.phone_number_validation_layout.rootView.phone_num.text.toString().trim().length == 10) {
+            if (rootView.phone_number_validation_layout.rootView.phone_num.text.toString().trim().contains(regex = PatternUtility.re)){
+                rootView.phone_number_validation_layout.rootView.phone_number_layout?.error =
+                    getLocalisedString(context, R.string.please_enter_a_valid_number)
+            }else if (android.util.Patterns.PHONE.matcher(rootView.phone_number_validation_layout.rootView.phone_num.text.toString().trim()).matches() && rootView.phone_number_validation_layout.rootView.phone_num.text.toString().trim().length == 10) {
                 if (CorUtility.isNetworkAvailable(context)) {
                     rootView.phone_number_validation_layout.rootView.progress_bar?.visibility =
                         View.VISIBLE
