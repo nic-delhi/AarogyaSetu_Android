@@ -7,7 +7,7 @@
     <string name="location_text">మీరు మీ లొకేషన్ షేరింగ్‌ను ‘ఎల్లప్పుడూ’ అని సెట్ చేసుకోవలసిందిగా సిఫార్సు చేస్తున్నాము. మీరు తర్వాత దీనిని ఏ సమయంలోనైనా మార్చుకోవచ్చు.</string>
     <!-- phone_number_layout -->
     <string name="enter_mobile_number">మొబైల్ నంబర్‌ను ఎంటర్ చేయండి</string>
-    <string name="country_code">+91 </string>
+    <string name="country_code"> </string>
     <string name="mobile_number">మొబైల్ నంబర్</string>
     <string name="why_is_it_needed">ఇది ఎందుకు అవసరం?</string>
     <string name="submit">సబ్మిట్ చేయండి</string>

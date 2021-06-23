@@ -209,7 +209,7 @@ class LoginBottomSheet : BottomSheetDialogFragment(), ViewTreeObserver.OnGlobalL
         rootView.phone_number_validation_layout.rootView.phone_num.requestFocus()
         rootView.otp_validation_layout.rootView.retry_otp.setOnClickListener {
             sendReValidationCode(
-                "+91" + rootView.phone_number_validation_layout.rootView.phone_num.text.toString().trim()
+               rootView.phone_number_validation_layout.rootView.phone_num.text.toString().trim()
             )
             rootView.otp_validation_layout.rootView.otp_layout?.error = null
             rootView.otp_validation_layout.rootView.otp_layout?.helperText =
@@ -226,7 +226,7 @@ class LoginBottomSheet : BottomSheetDialogFragment(), ViewTreeObserver.OnGlobalL
                         View.VISIBLE
                     phoneNumberValidationViewModel.phoneNumberValidation.value = true
                     sendValidationCode(
-                        "+91" + rootView.phone_number_validation_layout.rootView.phone_num?.text.toString().trim()
+                        rootView.phone_number_validation_layout.rootView.phone_num?.text.toString().trim()
                     )
                     rootView.phone_number_validation_layout.rootView.phone_number_layout?.error =
                         null

@@ -7,7 +7,7 @@
     <string name="location_text">ଏହା ପରାମର୍ଶିତ ଯେ ତୁମେ ତୁମର ଅବସ୍ଥାନ ଅଂଶୀଦାରକୁ ‘ସର୍ବଦା’ ସେଟ୍ କର | ଆପଣ ଏହାକୁ ଯେକ time ଣସି ସମୟରେ ପରେ ପରିବର୍ତ୍ତନ କରିପାରିବେ |</string>
     <!-- phone_number_layout -->
     <string name="enter_mobile_number">मोबाइल नंबर एंटर करें</string>
-    <string name="country_code">+91 </string>
+    <string name="country_code"> </string>
     <string name="mobile_number">ମୋବାଇଲ୍ ନମ୍ବର</string>
     <string name="why_is_it_needed">ଏହା କାହିଁକି ଆବଶ୍ୟକ?</string>
     <string name="submit">ଦାଖଲ କରନ୍ତୁ |</string>

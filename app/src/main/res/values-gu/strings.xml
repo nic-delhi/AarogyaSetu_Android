@@ -7,7 +7,7 @@
     <string name="location_text">એવી સલાહ આપવામાં આવે છે કે તમે લોકેશન શેરિંગ \"હંમેશા\" તરીકે સેટ કરો. તમે આને પછી ક્યારેય પણ બદલી શકો છો.</string>
     <!-- phone_number_layout -->
     <string name="enter_mobile_number">મોબાઇલ નંબર દાખલ કરો</string>
-    <string name="country_code">+91</string>
+    <string name="country_code"></string>
     <string name="mobile_number">મોબાઇલ નંબર</string>
     <string name="why_is_it_needed">શા માટે તેની જરૂર છે?</string>
     <string name="submit">સબમિટ કરો</string>

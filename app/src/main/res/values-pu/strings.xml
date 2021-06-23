@@ -7,7 +7,7 @@
     <string name="location_text">ਇਹ ਸਿਫਾਰਸ਼ ਕੀਤੀ ਜਾਂਦੀ ਹੈ ਕਿ ਤੁਸੀਂ ਆਪਣੀ ਸਥਿਤੀ ਸਾਂਝੇ ਕਰਨ ਨੂੰ \"ਹਮੇਸ਼ਾਂ\" ਤੇ ਸੈਟ ਕਰੋ. ਤੁਸੀਂ ਇਸਨੂੰ ਬਾਅਦ ਵਿੱਚ ਕਿਸੇ ਵੀ ਸਮੇਂ ਬਦਲ ਸਕਦੇ ਹੋ.</string>
     <!-- phone_number_layout -->
     <string name="enter_mobile_number">ਮੋਬਾਈਲ ਨੰਬਰ ਦਰਜ ਕਰੋ</string>
-    <string name="country_code">+91 </string>
+    <string name="country_code"> </string>
     <string name="mobile_number">ਮੋਬਾਈਲ ਨੰਬਰ</string>
     <string name="why_is_it_needed">ਇਸਦੀ ਲੋੜ ਕਿਉਂ ਹੈ?</string>
     <string name="submit">ਜਮ੍ਹਾਂ ਕਰੋ</string>

@@ -40,7 +40,6 @@
         app:hintAnimationEnabled="true"
         app:hintEnabled="true"
         app:hintTextColor="@color/blue"
-        app:prefixText="@string/country_code"
         app:prefixTextColor="@color/black">
 
         <com.google.android.material.textfield.TextInputEditText

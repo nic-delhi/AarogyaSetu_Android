@@ -7,7 +7,7 @@
     <string name="location_text">ನಿಮ್ಮ ಲೊಕೇಶನ್ ಅನ್ನು ನೀವು ‘ಯಾವಾಗಲೂ’ ಎಂದು ಸೆಟ್ ಮಾಡಲು ಶಿಫಾರಸು ಮಾಡಲಾಗುತ್ತದೆ. ನೀವು ಇದನ್ನು ನಂತರ ಯಾವಾಗ ಬೇಕಾದರೂ ಬದಲಾಯಿಸಬಹುದು.</string>
     <!-- phone_number_layout -->
     <string name="enter_mobile_number">ಮೊಬೈಲ್ ನಂಬರ್ ನಮೂದಿಸಿ</string>
-    <string name="country_code">+91 </string>
+    <string name="country_code"> </string>
     <string name="mobile_number">ಮೊಬೈಲ್ ನಂಬರ್</string>
     <string name="why_is_it_needed">ಇದು ಯಾಕೆ ಬೇಕಾಗಿದೆ?</string>
     <string name="submit">ಸಲ್ಲಿಸಿ</string>

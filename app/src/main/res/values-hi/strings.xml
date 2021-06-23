@@ -7,7 +7,7 @@
     <string name="location_text">आप से अनुरोध है की आप अपने मोबाइल के लोकेशन की सेटिंग को \'Always\' पर सेट करें।आप इसे बाद में कभी भी बदल सकते हैं।</string>
     <!-- phone_number_layout -->
     <string name="enter_mobile_number">मोबाइल नंबर एंटर करें</string>
-    <string name="country_code">+91 </string>
+    <string name="country_code"> </string>
     <string name="mobile_number">मोबाइल नंबर</string>
     <string name="why_is_it_needed">इसकी आवश्यकता?</string>
     <string name="submit">सबमिट करें</string>

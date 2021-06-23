@@ -7,7 +7,7 @@
     <string name="location_text">নিজের লোকেশন শেয়ারিং (Location Sharing) \"সর্বদা\"(\"Always\") এ সেট করুন। আপনি পরে যে কোনও সময় এটি পরিবর্তন করতে পারেন।</string>
     <!-- phone_number_layout -->
     <string name="enter_mobile_number">মোবাইল নম্বর লিখুন</string>
-    <string name="country_code">+91 </string>
+    <string name="country_code"> </string>
     <string name="mobile_number">মোবাইল নম্বর</string>
     <string name="why_is_it_needed">কেন এটি প্রয়োজন?</string>
     <string name="submit">জমা দিন</string>
