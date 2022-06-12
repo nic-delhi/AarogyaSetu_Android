@@ -3,8 +3,6 @@ package nic.goi.aarogyasetu.utility
 import androidx.test.ext.junit.runners.AndroidJUnit4
 import org.hamcrest.Matchers
 import org.junit.Assert
-import org.junit.Test
-import org.junit.runner.RunWith
 
 @RunWith(AndroidJUnit4::class)
 class AuthUtilityTest {
