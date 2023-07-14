@@ -2,7 +2,7 @@
 
 ![alt text](./aarogya.png "AarogyaSetu Logo")
 
-Aarogya Setu is a mobile application developed by the Government of India to connect essential health services with the people of India in our combined fight against COVID-19. The App is aimed at augmenting the initiatives of the Government of India, particularly the Department of Health, in proactively reaching out to and informing the users of the app regarding risks, best practices and relevant advisories pertaining to the containment of COVID-19.
+Aarogya Setu is a mobile application developed by the Government of India to connect essential health services with the people of India in our united fight against COVID-19. The app aims to enhance the initiatives of the Government of India, specifically the Department of Health, by proactively reaching out to users and providing them with information on risks, best practices, and relevant advisories related to the containment of COVID-19.
 
 ## Features
 
