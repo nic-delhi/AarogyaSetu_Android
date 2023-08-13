@@ -17,6 +17,7 @@ Dr. Lalitesh Katragadda
 Prof. V Kamakoti  
 Deep Kalra  
 Arnab Kumar  
+vamshi krishna
 Prashant Tandon  
 Prof. Amrutur Bharadawaj  
 Vikalp Sahni  
