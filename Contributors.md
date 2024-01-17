@@ -9,6 +9,11 @@ Gopala Krishnan S
 R S Mani  
 Abhishek Singh  
 Dr. Seema Khanna  
+Jaya simha Reddy
+varun mandem
+vedha sai 
+ravi prakya
+
 
 ---------------------------------
 Industry and Academia Leadership
