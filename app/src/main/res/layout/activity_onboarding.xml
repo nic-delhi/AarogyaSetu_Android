@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:clipChildren="false"
     tools:context=".views.OnboardingActivity">
-
+ansffjienrubeuon
     <nic.goi.aarogyasetu.utility.ViewPagerFixed
         android:id="@+id/pager"
         android:layout_width="0dp"
