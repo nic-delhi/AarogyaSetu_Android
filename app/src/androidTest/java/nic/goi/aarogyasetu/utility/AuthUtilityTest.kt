@@ -8,7 +8,7 @@ import org.junit.runner.RunWith
 
 @RunWith(AndroidJUnit4::class)
 class AuthUtilityTest {
-    private val token = "token#123"
+    private val token = "token#12345"
 
     @Test
     fun testGetToken() {
