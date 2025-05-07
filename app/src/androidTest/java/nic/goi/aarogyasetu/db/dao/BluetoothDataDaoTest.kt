@@ -20,6 +20,12 @@ class BluetoothDataDaoTest {
     private val dataB = BluetoothData("abc1002", 20, "", "")
     private val dataC = BluetoothData("abc1003", 20, "", "")
     private val dataD = BluetoothData("abc1004", 20, "", "")
+    private val dataD = BluetoothData("abc1004", 20, "", "")
+    private val dataD = BluetoothData("abc1004", 20, "", "")
+        private val dataD = BluetoothData("abc1004", 20, "", "")
+
+
+
 
 //    @get:Rule
 //    var instantTaskExecutorRule = InstantTaskExecutorRule()

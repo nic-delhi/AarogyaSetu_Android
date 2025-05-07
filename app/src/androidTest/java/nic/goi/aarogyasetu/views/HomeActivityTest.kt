@@ -57,7 +57,7 @@ class HomeActivityTest {
 
         Espresso.onView(ViewMatchers.withId(R.id.rv_select_language))
             .check(ViewAssertions.matches(ViewMatchers.isDisplayed()))
-        Espresso.onView(ViewMatchers.withId(R.id.btn_next))
+        Espresso.onView(ViewMatchers.withId(R.id.btn_next));
             .check(ViewAssertions.matches(ViewMatchers.isDisplayed()))
     }
 }
