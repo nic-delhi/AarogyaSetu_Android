@@ -84,43 +84,51 @@ object AuthUtility {
     fun signIn(mobile: String, listener: UserSignInListener?) {
         if (isSignedIn()) return
 
-        val client = nic.goi.aarogyasetu.network.NetworkClient.getRetrofitClient(
-            false,
-            true,
-            true,
-            AUTH_BASE_URL,
-            false
-        )
-        val generateOTP = GenerateOTP(mobile)
-        val map = mutableMapOf<String, String>()
-        map[Constants.X_API_KEY] = BuildConfig.AWS_API_KEY
-        map[Constants.OS] = Build.VERSION.SDK_INT.toString()
-        map[Constants.DEVICE_TYPE] = Build.MANUFACTURER + Constants.HYPHEN + Build.MODEL
-        val call = client.create(nic.goi.aarogyasetu.network.PostDataInterface::class.java)
-            .generateOTP(map, generateOTP)
+        try {
+            val client = nic.goi.aarogyasetu.network.NetworkClient.getRetrofitClient(
+                false,
+                true,
+                true,
+                AUTH_BASE_URL,
+                false
+            )
+            val generateOTP = GenerateOTP(mobile)
+            val map = mutableMapOf<String, String>()
+            map[Constants.X_API_KEY] = BuildConfig.AWS_API_KEY
+            map[Constants.OS] = Build.VERSION.SDK_INT.toString()
+            map[Constants.DEVICE_TYPE] = Build.MANUFACTURER + Constants.HYPHEN + Build.MODEL
 
-        call.enqueue(object : retrofit2.Callback<JSONObject> {
-            override fun onFailure(call: Call<JSONObject>, t: Throwable) {
-                val e = Exception(t)
-                sendErrorCallback(listener, e, AuthErrorUnknown())
-            }
+            val call = client.create(nic.goi.aarogyasetu.network.PostDataInterface::class.java)
+                .generateOTP(map, generateOTP)
 
-            override fun onResponse(call: Call<JSONObject>, response: Response<JSONObject>) {
-                if (response.isSuccessful) {
-                    AppExecutors.runOnMain {
-                        listener?.onAskOtp()
-                    }
-                } else if (response.code() == 401) {
-                    val e =
-                        Exception("Api Response is not success. Response = ${response.errorBody()?.string()}")
-                    sendErrorCallback(listener, e, AuthErrorUserDisabled())
-                } else {
-                    val e =
-                        Exception("Api Response is not success. Response = ${response.errorBody()?.string()}")
+            call.enqueue(object : retrofit2.Callback<JSONObject> {
+                override fun onFailure(call: Call<JSONObject>, t: Throwable) {
+                    val errorMessage = "Network error: ${t.message}"
+                    val e = Exception(errorMessage)
                     sendErrorCallback(listener, e, AuthErrorUnknown())
                 }
-            }
-        })
+
+                override fun onResponse(call: Call<JSONObject>, response: Response<JSONObject>) {
+                    if (response.isSuccessful) {
+                        AppExecutors.runOnMain {
+                            listener?.onAskOtp()
+                        }
+                    } else if (response.code() == 401) {
+                        val errorBody = response.errorBody()?.string() ?: "Unknown error"
+                        val errorMessage = "Authentication failed: $errorBody"
+                        val e = Exception(errorMessage)
+                        sendErrorCallback(listener, e, AuthErrorUserDisabled())
+                    } else {
+                        val errorBody = response.errorBody()?.string() ?: "Unknown error"
+                        val errorMessage = "API error (${response.code()}): $errorBody"
+                        val e = Exception(errorMessage)
+                        sendErrorCallback(listener, e, AuthErrorUnknown())
+                    }
+                }
+            })
+        } catch (e: Exception) {
+            sendErrorCallback(listener, e, AuthErrorUnknown())
+        }
     }
 
     @AnyThread
