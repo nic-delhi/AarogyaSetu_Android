@@ -9,6 +9,8 @@ import android.graphics.Rect
 import android.graphics.drawable.ColorDrawable
 import android.os.Bundle
 import android.os.CountDownTimer
+import android.text.Editable
+import android.text.TextWatcher
 import android.view.*
 import android.widget.Toast
 import androidx.fragment.app.DialogFragment
@@ -101,7 +103,11 @@ class LoginBottomSheet : BottomSheetDialogFragment(), ViewTreeObserver.OnGlobalL
                             View.GONE
                         contentView.otp_validation_layout.rootView.otp_layout?.isErrorEnabled = true
                         contentView.otp_validation_layout.rootView.otp_layout?.error =
-                            getLocalisedString(context, authError.errorMsg)
+                            try {
+                                getLocalisedString(context, authError.errorMsg)
+                            } catch (e: Exception) {
+                                getLocalisedString(context, R.string.auth_error_unknown)
+                            }
                         AnalyticsUtils.sendBasicEvent(EventNames.EVENT_VALIDATE_OTP_FAILED, ScreenNames.SCREEN_LOGIN,
                             e?.localizedMessage?:getString(authError.errorMsg))
                     }
@@ -239,7 +245,11 @@ class LoginBottomSheet : BottomSheetDialogFragment(), ViewTreeObserver.OnGlobalL
                 }
             } else {
                 rootView.phone_number_validation_layout.rootView.phone_number_layout?.error =
-                    getLocalisedString(context, R.string.please_enter_a_valid_number)
+                    try {
+                        getLocalisedString(context, R.string.please_enter_a_valid_number)
+                    } catch (e: Exception) {
+                        getLocalisedString(context, R.string.auth_error_unknown)
+                    }
             }
         }
 
@@ -258,7 +268,11 @@ class LoginBottomSheet : BottomSheetDialogFragment(), ViewTreeObserver.OnGlobalL
             if (rootView.otp_validation_layout.rootView.otp_layout?.editText?.text.isNullOrEmpty()) {
                 rootView.otp_validation_layout.rootView.otp_layout?.isErrorEnabled = true
                 rootView.otp_validation_layout.rootView.otp_layout?.error =
-                    getLocalisedString(context, R.string.please_enter_a_valid_otp)
+                    try {
+                        getLocalisedString(context, R.string.please_enter_a_valid_otp)
+                    } catch (e: Exception) {
+                        getLocalisedString(context, R.string.auth_error_unknown)
+                    }
             } else {
                 val otp =
                     contentView.rootView.otp_validation_layout.rootView.otp_layout.editText?.text.toString()
@@ -318,16 +332,40 @@ class LoginBottomSheet : BottomSheetDialogFragment(), ViewTreeObserver.OnGlobalL
      * This method is used to start Login process on the server and send OTP on the mobile number.
      */
     private fun sendValidationCode(phoneNumber: String) {
+        if (!CorUtility.isNetworkAvailable(context)) {
+            Toast.makeText(
+                context,
+                getLocalisedString(context, R.string.error_network_error),
+                Toast.LENGTH_SHORT
+            ).show()
+            return
+        }
+
         AnalyticsUtils.sendBasicEvent(EventNames.EVENT_GET_OTP, ScreenNames.SCREEN_LOGIN)
+        contentView.rootView.phone_number_validation_layout.rootView.progress_bar?.visibility = View.VISIBLE
+        contentView.rootView.phone_number_validation_layout.rootView.phone_number_layout?.error = null
+
         AuthUtility.signIn(phoneNumber, object : UserSignInListener {
             override fun onAuthError(e: Exception?, authError: AuthError) {
                 if (isAdded) {
-                    contentView.rootView.phone_number_validation_layout.rootView.progress_bar?.visibility =
-                        View.GONE
-                    contentView.rootView.phone_number_validation_layout.rootView.phone_number_layout?.error =
-                        getLocalisedString(context, authError.errorMsg)
+                    contentView.rootView.phone_number_validation_layout.rootView.progress_bar?.visibility = View.GONE
+                    
+                    // Show more specific error messages based on the exception
+                    val errorMessage = when {
+                        e?.message?.contains("Network error") == true -> 
+                            getLocalisedString(context, R.string.error_network_error)
+                        e?.message?.contains("Authentication failed") == true ->
+                            getLocalisedString(context, R.string.auth_error_user_disabled)
+                        else -> try {
+                            getLocalisedString(context, authError.errorMsg)
+                        } catch (e: Exception) {
+                            getLocalisedString(context, R.string.auth_error_unknown)
+                        }
+                    }
+                    
+                    contentView.rootView.phone_number_validation_layout.rootView.phone_number_layout?.error = errorMessage
                     AnalyticsUtils.sendBasicEvent(EventNames.EVENT_GET_OTP_FAILED, ScreenNames.SCREEN_LOGIN,
-                        e?.localizedMessage?:getString(authError.errorMsg))
+                        e?.localizedMessage ?: getString(authError.errorMsg))
                 }
             }
 
@@ -339,7 +377,6 @@ class LoginBottomSheet : BottomSheetDialogFragment(), ViewTreeObserver.OnGlobalL
                     timer.start()
                 }
             }
-
         })
     }
 
@@ -352,7 +389,11 @@ class LoginBottomSheet : BottomSheetDialogFragment(), ViewTreeObserver.OnGlobalL
             override fun onAuthError(e: Exception?, authError: AuthError) {
                 if (isAdded) {
                     contentView.rootView.phone_number_validation_layout.rootView.otp_layout?.error =
-                        getLocalisedString(context, authError.errorMsg)
+                        try {
+                            getLocalisedString(context, authError.errorMsg)
+                        } catch (e: Exception) {
+                            getLocalisedString(context, R.string.auth_error_unknown)
+                        }
                     AnalyticsUtils.sendBasicEvent(EventNames.EVENT_GET_OTP_FAILED, ScreenNames.SCREEN_LOGIN,
                         e?.localizedMessage?:getString(authError.errorMsg))
                 }
