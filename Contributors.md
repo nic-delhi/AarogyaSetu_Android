@@ -8,7 +8,8 @@ Dr. Neeta Verma
 Gopala Krishnan S  
 R S Mani  
 Abhishek Singh  
-Dr. Seema Khanna  
+Dr. Seema Khanna 
+P Niteesh Krishna 
 
 ---------------------------------
 Industry and Academia Leadership
