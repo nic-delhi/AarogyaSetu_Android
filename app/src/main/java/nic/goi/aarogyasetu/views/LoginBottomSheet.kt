@@ -11,6 +11,7 @@ import android.os.Bundle
 import android.os.CountDownTimer
 import android.view.*
 import android.widget.Toast
+import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.DialogFragment
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
@@ -25,17 +26,15 @@ import com.google.android.gms.auth.api.phone.SmsRetrieverClient
 import com.google.android.gms.tasks.Task
 import com.google.android.material.bottomsheet.BottomSheetBehavior
 import com.google.android.material.bottomsheet.BottomSheetDialogFragment
-import kotlinx.android.synthetic.main.fragment_login_bottom_sheet.view.*
-import kotlinx.android.synthetic.main.otp_validation_layout.view.*
-import kotlinx.android.synthetic.main.phone_number_layout.view.*
 import nic.goi.aarogyasetu.analytics.EventNames
 import nic.goi.aarogyasetu.analytics.ScreenNames
+import nic.goi.aarogyasetu.databinding.FragmentLoginBottomSheetBinding
 import java.util.concurrent.TimeUnit
 
 
 class LoginBottomSheet : BottomSheetDialogFragment(), ViewTreeObserver.OnGlobalLayoutListener {
 
-    private lateinit var contentView: View
+    private lateinit var contentView: FragmentLoginBottomSheetBinding
     private lateinit var onBoardingViewModel: OnBoardingViewModel
     private lateinit var phoneNumberValidationViewModel: BottomSheetViewModel
     private lateinit var bottomSheetBehavior: BottomSheetBehavior<View>
@@ -54,13 +53,13 @@ class LoginBottomSheet : BottomSheetDialogFragment(), ViewTreeObserver.OnGlobalL
                 }
                 val seconds =
                     TimeUnit.SECONDS.convert(millisUntilFinished, TimeUnit.MILLISECONDS).toInt()
-                val retryOtp = contentView.otp_validation_layout?.rootView?.retry_otp
-                retryOtp?.isEnabled = (seconds <= 60)
-                if (retryOtp?.isEnabled == false && (120 - seconds) < 60) {
+                val retryOtp = contentView.otpValidationLayout.retryOtp
+                retryOtp.isEnabled = (seconds <= 60)
+                if (!retryOtp.isEnabled && (120 - seconds) < 60) {
                     val arr = arrayOf("00:" + (seconds - 60))
                     retryOtp.text = getSpannableString(context, R.string.resend_otp_in, arr)
                 } else {
-                    retryOtp?.text = getLocalisedString(context, R.string.resend_otp)
+                    retryOtp.text = getLocalisedString(context, R.string.resend_otp)
                 }
             }
 
@@ -77,14 +76,14 @@ class LoginBottomSheet : BottomSheetDialogFragment(), ViewTreeObserver.OnGlobalL
      */
     private fun signInWithPhoneAuthCredential(otp: String) {
         AnalyticsUtils.sendBasicEvent(EventNames.EVENT_VALIDATE_OTP, ScreenNames.SCREEN_LOGIN)
-        contentView.otp_validation_layout.rootView.progress_bar_otp?.visibility = View.VISIBLE
+        contentView.otpValidationLayout.progressBarOtp.visibility = View.VISIBLE
         AuthUtility.verifyOtp(
             phoneNumberValidationViewModel.phoneNumber,
             otp,
             object : UserVerifyListener {
                 override fun onUserVerified(token: String?) {
                     if (isAdded) {
-                        contentView.otp_validation_layout.rootView.progress_bar_otp?.visibility =
+                        contentView.otpValidationLayout.progressBarOtp.visibility =
                             View.GONE
                         if (CorUtility.isBluetoothAvailable()) {
                             val mBTA = BluetoothAdapter.getDefaultAdapter()
@@ -97,13 +96,15 @@ class LoginBottomSheet : BottomSheetDialogFragment(), ViewTreeObserver.OnGlobalL
 
                 override fun onAuthError(e: java.lang.Exception?, authError: AuthError) {
                     if (isAdded) {
-                        contentView.otp_validation_layout.rootView.progress_bar_otp?.visibility =
+                        contentView.otpValidationLayout.progressBarOtp.visibility =
                             View.GONE
-                        contentView.otp_validation_layout.rootView.otp_layout?.isErrorEnabled = true
-                        contentView.otp_validation_layout.rootView.otp_layout?.error =
+                        contentView.otpValidationLayout.otpLayout.isErrorEnabled = true
+                        contentView.otpValidationLayout.otpLayout.error =
                             getLocalisedString(context, authError.errorMsg)
-                        AnalyticsUtils.sendBasicEvent(EventNames.EVENT_VALIDATE_OTP_FAILED, ScreenNames.SCREEN_LOGIN,
-                            e?.localizedMessage?:getString(authError.errorMsg))
+                        AnalyticsUtils.sendBasicEvent(
+                            EventNames.EVENT_VALIDATE_OTP_FAILED, ScreenNames.SCREEN_LOGIN,
+                            e?.localizedMessage ?: getString(authError.errorMsg)
+                        )
                     }
                 }
             })
@@ -145,10 +146,10 @@ class LoginBottomSheet : BottomSheetDialogFragment(), ViewTreeObserver.OnGlobalL
         override fun onOTPReceived(otp: String?) {
             if (!otp.isNullOrEmpty()) {
                 try {
-                    contentView.rootView.otp_validation_layout.rootView.otp_layout.editText?.setText(
+                    contentView.otpValidationLayout.otpEditText.setText(
                         otp
                     )
-                    contentView.rootView.otp_validation_layout.rootView.otp_layout.editText?.setSelection(
+                    contentView.otpValidationLayout.otpEditText.setSelection(
                         otp.length
                     )
                 } catch (ex: Exception) {
@@ -168,67 +169,75 @@ class LoginBottomSheet : BottomSheetDialogFragment(), ViewTreeObserver.OnGlobalL
     }
 
     private fun handleGlobalLayoutListener() {
-        contentView.viewTreeObserver.addOnGlobalLayoutListener(this)
+        contentView.root.viewTreeObserver.addOnGlobalLayoutListener(this)
     }
 
     @SuppressLint("RestrictedApi")
     override fun setupDialog(dialog: Dialog, style: Int) {
         super.setupDialog(dialog, style)
-        contentView = View.inflate(context, R.layout.fragment_login_bottom_sheet, null)
+        contentView = DataBindingUtil.inflate(
+            LayoutInflater.from(requireContext()),
+            R.layout.fragment_login_bottom_sheet,
+            null,
+            false
+        )
         phoneNumberValidationViewModel =
             ViewModelProvider(this).get(BottomSheetViewModel::class.java)
-        dialog.setContentView(contentView)
+        dialog.setContentView(contentView.root)
         dialog.window?.setBackgroundDrawable(ColorDrawable(Color.TRANSPARENT))
         dialog.window?.setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_ADJUST_RESIZE)
         dialog.setCanceledOnTouchOutside(false)
-        bottomSheetBehavior = BottomSheetBehavior.from(contentView.parent as View)
+        bottomSheetBehavior = BottomSheetBehavior.from(contentView.root.parent as View)
         handleGlobalLayoutListener()
         setViews()
     }
 
-    private fun setViews() {
-        val rootView = contentView.rootView
-        rootView.phone_number_validation_layout.rootView.title.text =
+    private fun setViews() = contentView.apply {
+        phoneNumberValidationLayout.title.text =
             getLocalisedString(context, R.string.enter_mobile_number)
-        rootView.phone_number_validation_layout.rootView.phone_number_layout.hint =
+        phoneNumberValidationLayout.phoneNumberLayout.hint =
             getLocalisedString(context, R.string.mobile_number)
-        rootView.phone_number_validation_layout.rootView.phone_number_layout.prefixText =
+        phoneNumberValidationLayout.phoneNumberLayout.prefixText =
             getLocalisedString(context, R.string.country_code)
 
-        rootView.otp_validation_layout.rootView.otptitleView.text =
+        otpValidationLayout.otptitleView.text =
             getLocalisedString(context, R.string.enter_otp)
-        rootView.otp_validation_layout.rootView.otp_layout.helperText =
+        otpValidationLayout.otpLayout.helperText =
             getLocalisedString(context, R.string.we_have_sent_otp)
-        rootView.otp_validation_layout.rootView.otp_layout.hint =
+        otpValidationLayout.otpLayout.hint =
             getLocalisedString(context, R.string.otp)
-        rootView.phone_number_validation_layout.rootView.why_needed.text =
+        phoneNumberValidationLayout.whyNeeded.text =
             getLocalisedString(context, R.string.why_is_it_needed)
-        rootView.phone_number_validation_layout.rootView.why_needed.setOnClickListener {
+        phoneNumberValidationLayout.whyNeeded.setOnClickListener {
             onBoardingViewModel.whyNeededshown.value = true
         }
-        rootView.phone_number_validation_layout.rootView.phone_num.requestFocus()
-        rootView.otp_validation_layout.rootView.retry_otp.setOnClickListener {
+        contentView.phoneNumberValidationLayout.phoneNum.requestFocus()
+        otpValidationLayout.retryOtp.setOnClickListener {
             sendReValidationCode(
-                "+91" + rootView.phone_number_validation_layout.rootView.phone_num.text.toString().trim()
+                "+91" + phoneNumberValidationLayout.phoneNum.text.toString().trim()
             )
-            rootView.otp_validation_layout.rootView.otp_layout?.error = null
-            rootView.otp_validation_layout.rootView.otp_layout?.helperText =
+            otpValidationLayout.otpLayout.error = null
+            otpValidationLayout.otpLayout.helperText =
                 getLocalisedString(context, R.string.we_have_resent_otp)
         }
 
-        rootView.phone_number_validation_layout.rootView.validate_phone.text =
+        phoneNumberValidationLayout.validatePhone.text =
             getLocalisedString(context, R.string.submit)
-        rootView.phone_number_validation_layout.rootView.validate_phone.setOnClickListener {
+        phoneNumberValidationLayout.validatePhone.setOnClickListener {
 
-            if (android.util.Patterns.PHONE.matcher(rootView.phone_number_validation_layout.rootView.phone_num.text.toString().trim()).matches() && rootView.phone_number_validation_layout.rootView.phone_num.text.toString().trim().length == 10) {
+            if (android.util.Patterns.PHONE.matcher(
+                    phoneNumberValidationLayout.phoneNum.text.toString().trim()
+                ).matches() && phoneNumberValidationLayout.phoneNum.text.toString()
+                    .trim().length == 10
+            ) {
                 if (CorUtility.isNetworkAvailable(context)) {
-                    rootView.phone_number_validation_layout.rootView.progress_bar?.visibility =
+                    phoneNumberValidationLayout.progressBar.visibility =
                         View.VISIBLE
                     phoneNumberValidationViewModel.phoneNumberValidation.value = true
                     sendValidationCode(
-                        "+91" + rootView.phone_number_validation_layout.rootView.phone_num?.text.toString().trim()
+                        "+91" + phoneNumberValidationLayout.phoneNum.text.toString().trim()
                     )
-                    rootView.phone_number_validation_layout.rootView.phone_number_layout?.error =
+                    phoneNumberValidationLayout.phoneNumberLayout.error =
                         null
                 } else {
                     Toast.makeText(
@@ -238,52 +247,53 @@ class LoginBottomSheet : BottomSheetDialogFragment(), ViewTreeObserver.OnGlobalL
                     ).show()
                 }
             } else {
-                rootView.phone_number_validation_layout.rootView.phone_number_layout?.error =
+                phoneNumberValidationLayout.phoneNumberLayout.error =
                     getLocalisedString(context, R.string.please_enter_a_valid_number)
             }
         }
 
-        rootView.phone_number_validation_layout.rootView.back.setOnClickListener {
-            rootView.otp_validation_layout.rootView.progress_bar?.visibility = View.GONE
-            rootView.otp_validation_layout.rootView.otp_layout?.isErrorEnabled = true
-            rootView.otp_validation_layout.rootView.otp_layout?.otp_edit_text?.setText("")
-            rootView.otp_validation_layout.rootView.otp_layout?.error = ""
-            phoneNumberValidationViewModel.otpSent.value = false
-        }
+        //TODO: possible back press handling required
+//        phoneNumberValidationLayout.root.back.setOnClickListener {
+//            otpValidationLayout.progressBarOtp.visibility = View.GONE
+//            otpValidationLayout.otpLayout.isErrorEnabled = true
+//            otpValidationLayout.otpEditText.setText("")
+//            otpValidationLayout.otpLayout.error = ""
+//            phoneNumberValidationViewModel.otpSent.value = false
+//        }
 
-        rootView.otp_validation_layout.rootView.validate_otp.text =
+        otpValidationLayout.validateOtp.text =
             getLocalisedString(context, R.string.submit)
-        rootView.otp_validation_layout.rootView.validate_otp.setOnClickListener {
+        otpValidationLayout.validateOtp.setOnClickListener {
 
-            if (rootView.otp_validation_layout.rootView.otp_layout?.editText?.text.isNullOrEmpty()) {
-                rootView.otp_validation_layout.rootView.otp_layout?.isErrorEnabled = true
-                rootView.otp_validation_layout.rootView.otp_layout?.error =
+            if (otpValidationLayout.otpLayout.editText?.text.isNullOrEmpty()) {
+                otpValidationLayout.otpLayout.isErrorEnabled = true
+                otpValidationLayout.otpLayout.error =
                     getLocalisedString(context, R.string.please_enter_a_valid_otp)
             } else {
                 val otp =
-                    contentView.rootView.otp_validation_layout.rootView.otp_layout.editText?.text.toString()
+                    contentView.otpValidationLayout.otpLayout.editText?.text.toString()
                         .trim()
                 submitOtp(otp)
             }
         }
 
 
-        rootView.phone_number_validation_layout.rootView.close.setOnClickListener {
+        phoneNumberValidationLayout.close.setOnClickListener {
             dismissAllowingStateLoss()
         }
         activity?.let { it ->
             phoneNumberValidationViewModel.otpSent.observe(it, Observer {
-                rootView.phone_number_validation_layout.rootView.progress_bar?.visibility =
+                phoneNumberValidationLayout.progressBar.visibility =
                     View.GONE
                 if (it) {
-                    rootView.otp_validation_layout.rootView.otp_layout.requestFocus()
-                    rootView.otp_validation_layout.rootView.otp_validation_layout?.visibility =
+                    otpValidationLayout.otpLayout.requestFocus()
+                    otpValidationLayout.root.visibility =
                         View.VISIBLE
-                    rootView.phone_number_validation_layout?.visibility = View.GONE
+                    phoneNumberValidationLayout.root.visibility = View.GONE
                 } else {
-                    rootView.otp_validation_layout.rootView.otp_validation_layout?.visibility =
+                    otpValidationLayout.root.visibility =
                         View.GONE
-                    rootView.phone_number_validation_layout.rootView.phone_number_validation_layout?.visibility =
+                    phoneNumberValidationLayout.root.visibility =
                         View.VISIBLE
                 }
             })
@@ -293,9 +303,9 @@ class LoginBottomSheet : BottomSheetDialogFragment(), ViewTreeObserver.OnGlobalL
     private fun submitOtp(otp: String?) {
         if (CorUtility.isNetworkAvailable(context)) {
             if (!otp.isNullOrEmpty()) {
-                contentView.rootView.otp_validation_layout.rootView.otp_layout?.isErrorEnabled =
+                contentView.otpValidationLayout.otpLayout.isErrorEnabled =
                     true
-                contentView.rootView.otp_validation_layout.rootView.otp_layout?.error = ""
+                contentView.otpValidationLayout.otpLayout.error = ""
                 signInWithPhoneAuthCredential(otp)
             } else {
                 Toast.makeText(
@@ -322,12 +332,14 @@ class LoginBottomSheet : BottomSheetDialogFragment(), ViewTreeObserver.OnGlobalL
         AuthUtility.signIn(phoneNumber, object : UserSignInListener {
             override fun onAuthError(e: Exception?, authError: AuthError) {
                 if (isAdded) {
-                    contentView.rootView.phone_number_validation_layout.rootView.progress_bar?.visibility =
+                    contentView.phoneNumberValidationLayout.progressBar.visibility =
                         View.GONE
-                    contentView.rootView.phone_number_validation_layout.rootView.phone_number_layout?.error =
+                    contentView.phoneNumberValidationLayout.phoneNumberLayout.error =
                         getLocalisedString(context, authError.errorMsg)
-                    AnalyticsUtils.sendBasicEvent(EventNames.EVENT_GET_OTP_FAILED, ScreenNames.SCREEN_LOGIN,
-                        e?.localizedMessage?:getString(authError.errorMsg))
+                    AnalyticsUtils.sendBasicEvent(
+                        EventNames.EVENT_GET_OTP_FAILED, ScreenNames.SCREEN_LOGIN,
+                        e?.localizedMessage ?: getString(authError.errorMsg)
+                    )
                 }
             }
 
@@ -351,10 +363,12 @@ class LoginBottomSheet : BottomSheetDialogFragment(), ViewTreeObserver.OnGlobalL
         AuthUtility.signIn(phoneNumber, object : UserSignInListener {
             override fun onAuthError(e: Exception?, authError: AuthError) {
                 if (isAdded) {
-                    contentView.rootView.phone_number_validation_layout.rootView.otp_layout?.error =
+                    contentView.phoneNumberValidationLayout.phoneNum.error =
                         getLocalisedString(context, authError.errorMsg)
-                    AnalyticsUtils.sendBasicEvent(EventNames.EVENT_GET_OTP_FAILED, ScreenNames.SCREEN_LOGIN,
-                        e?.localizedMessage?:getString(authError.errorMsg))
+                    AnalyticsUtils.sendBasicEvent(
+                        EventNames.EVENT_GET_OTP_FAILED, ScreenNames.SCREEN_LOGIN,
+                        e?.localizedMessage ?: getString(authError.errorMsg)
+                    )
                 }
             }
 
@@ -382,11 +396,11 @@ class LoginBottomSheet : BottomSheetDialogFragment(), ViewTreeObserver.OnGlobalL
 
     override fun onGlobalLayout() {
         val rect = Rect()
-        contentView.getWindowVisibleDisplayFrame(rect)
-        val screenHeight = contentView.rootView.height
+        contentView.root.getWindowVisibleDisplayFrame(rect)
+        val screenHeight = contentView.root.height
         val heightDifference = screenHeight - (rect.bottom - rect.top)
         bottomSheetBehavior.peekHeight = screenHeight + heightDifference
-        contentView.viewTreeObserver.removeOnGlobalLayoutListener(this)
+        contentView.root.viewTreeObserver.removeOnGlobalLayoutListener(this)
     }
 
 

@@ -57,7 +57,7 @@ public class LocalizationUtil {
             if (!localisedString.isEmpty()) {
 
                 //Formatter formatter = new Formatter(sb, Locale.US);
-                localisedString = String.format(null, localisedString, null);
+                localisedString = String.format(null, localisedString, (Object[]) null);
                 //localisedString=localisedString.replace("\\\\","\\");
             }
         }

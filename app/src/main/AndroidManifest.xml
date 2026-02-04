@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    package="nic.goi.aarogyasetu">
+    xmlns:tools="http://schemas.android.com/tools">
 
     <uses-sdk tools:overrideLibrary="androidx.security" />
 
@@ -33,15 +32,18 @@
 
         <activity
             android:name="nic.goi.aarogyasetu.views.HomeActivity"
-            android:screenOrientation="portrait" />
+            android:screenOrientation="portrait"
+            android:exported="false"/>
         <activity
             android:name="nic.goi.aarogyasetu.views.OnboardingActivity"
             android:launchMode="singleTask"
-            android:screenOrientation="portrait" />
+            android:screenOrientation="portrait"
+            android:exported="false" />
         <activity
             android:name="nic.goi.aarogyasetu.views.SplashActivity"
             android:screenOrientation="portrait"
-            android:theme="@style/AppTheme.Splash">
+            android:theme="@style/AppTheme.Splash"
+            android:exported="false">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -63,18 +65,21 @@
             android:name="nic.goi.aarogyasetu.views.PermissionActivity"
             android:launchMode="singleTask"
             android:screenOrientation="portrait"
-            android:windowSoftInputMode="adjustResize" />
+            android:windowSoftInputMode="adjustResize"
+            android:exported="false" />
         <activity
             android:name="nic.goi.aarogyasetu.views.QrActivity"
             android:launchMode="singleTask"
             android:screenOrientation="portrait"
-            android:windowSoftInputMode="adjustResize" />
+            android:windowSoftInputMode="adjustResize"
+            android:exported="false" />
         <activity
             android:name="nic.goi.aarogyasetu.zxing.CustomScannerActivity"
             android:launchMode="singleTask"
             android:screenOrientation="portrait"
             android:stateNotNeeded="true"
-            android:windowSoftInputMode="stateAlwaysHidden" />
+            android:windowSoftInputMode="stateAlwaysHidden"
+            android:exported="false" />
 
         <service android:name="nic.goi.aarogyasetu.background.BluetoothScanningService" />
         <service
@@ -90,7 +95,8 @@
             android:authorities="${applicationId}.workmanager-init"
             tools:node="remove" />
 
-        <receiver android:name="nic.goi.aarogyasetu.background.BootReceiver">
+        <receiver android:name="nic.goi.aarogyasetu.background.BootReceiver"
+            android:exported="false">
             <intent-filter>
                 <category android:name="android.intent.category.DEFAULT" />
 
@@ -99,13 +105,15 @@
                 <action android:name="android.intent.action.BOOT_COMPLETED" />
             </intent-filter>
         </receiver>
-        <receiver android:name="nic.goi.aarogyasetu.utility.SmsReceiver">
+        <receiver android:name="nic.goi.aarogyasetu.utility.SmsReceiver"
+            android:exported="false">
             <intent-filter>
                 <action android:name="com.google.android.gms.auth.api.phone.SMS_RETRIEVED" />
             </intent-filter>
         </receiver>
 
-        <receiver android:name="nic.goi.aarogyasetu.utility.BluetoothLocationReceiver">
+        <receiver android:name="nic.goi.aarogyasetu.utility.BluetoothLocationReceiver"
+            android:exported="false">
             <intent-filter>
                 <action android:name="android.bluetooth.adapter.action.STATE_CHANGED" />
                 <action android:name="android.location.PROVIDERS_CHANGED" />

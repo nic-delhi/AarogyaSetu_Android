@@ -27,7 +27,7 @@ import kotlin.concurrent.thread
 object AuthUtility {
     private val TAG =
         AuthUtility::class.java.simpleName
-    private const val AUTH_BASE_URL =  "https://"+BuildConfig.AUTH_HOST_URL+"/"
+    private val AUTH_BASE_URL =  "https://"+BuildConfig.AUTH_HOST_URL+"/"
     private const val KEY_TOKEN = "uidtoken"
     private const val KEY_REFRESH_TOKEN = "refreshtoken"
     private const val KEY_MOBILE_NUMBER = "mobile"

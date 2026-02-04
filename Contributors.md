@@ -86,3 +86,8 @@ Surabhi Vatsa
 Vikrant Chaudhary  
 Vivek Ratakonda  
 Abhijeet Choudhary
+
+---------------------------------
+Contributors (Independent)
+---------------------------------
+Darshan Miskin

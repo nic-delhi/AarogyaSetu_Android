@@ -18,13 +18,13 @@ import androidx.core.content.ContextCompat
 import androidx.core.text.HtmlCompat
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
-import kotlinx.android.synthetic.main.activity_permission.*
 import nic.goi.aarogyasetu.BuildConfig
 import nic.goi.aarogyasetu.CoronaApplication
 import nic.goi.aarogyasetu.R
 import nic.goi.aarogyasetu.analytics.EventNames
 import nic.goi.aarogyasetu.analytics.ScreenNames
 import nic.goi.aarogyasetu.background.BluetoothScanningService
+import nic.goi.aarogyasetu.databinding.ActivityPermissionBinding
 import nic.goi.aarogyasetu.prefs.SharedPref
 import nic.goi.aarogyasetu.prefs.SharedPrefsConstants
 import nic.goi.aarogyasetu.utility.*
@@ -38,6 +38,7 @@ class PermissionActivity : AppCompatActivity(), SelectLanguageFragment.LanguageC
 
     private var alertDialog: AlertDialog? = null
     private lateinit var onBoardingViewModel: OnBoardingViewModel
+    private lateinit var binding: ActivityPermissionBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -87,32 +88,32 @@ class PermissionActivity : AppCompatActivity(), SelectLanguageFragment.LanguageC
 
     private fun initViews() {
 
-        tv_permissions_title.text = getLocalisedString(this, R.string.permissions_title)
+        binding.tvPermissionsTitle.text = getLocalisedString(this, R.string.permissions_title)
 
-        tv_permissions_detail.text = getLocalisedString(this, R.string.permissions_detail)
+        binding.tvPermissionsDetail.text = getLocalisedString(this, R.string.permissions_detail)
 
-        tv_device_location.text = HtmlCompat.fromHtml(
+        binding.tvDeviceLocation.text = HtmlCompat.fromHtml(
             getLocalisedString(this, R.string.device_location),
             HtmlCompat.FROM_HTML_MODE_COMPACT
         )
 
-        tv_location_text.text = getLocalisedString(this, R.string.location_text)
+        binding.tvLocationText.text = getLocalisedString(this, R.string.location_text)
 
 
-        tv_bluetooth.text = HtmlCompat.fromHtml(
+        binding.tvBluetooth.text = HtmlCompat.fromHtml(
             getLocalisedString(this, R.string.bluetooth),
             HtmlCompat.FROM_HTML_MODE_COMPACT
         )
 
-        tv_bluetooth_text.text =
+        binding.tvBluetoothText.text =
             getLocalisedString(this, R.string.monitors_your_device_s_proximity_within_6_feet_range)
 
-        tv_data_sharing.text = HtmlCompat.fromHtml(
+        binding.tvDataSharing.text = HtmlCompat.fromHtml(
             getLocalisedString(this, R.string.data_sharing_with_the_ministry),
             HtmlCompat.FROM_HTML_MODE_COMPACT
         )
 
-        tv_data_sharing_text.text = getLocalisedString(
+        binding.tvDataSharingText.text = getLocalisedString(
             this,
             R.string.tracks_an_individual_s_touch_points_so_can_easily_find_others_who_came_in_close_contact
         )
@@ -121,7 +122,7 @@ class PermissionActivity : AppCompatActivity(), SelectLanguageFragment.LanguageC
             getLocalisedString(this, R.string.permission_info_tnc_text),
             HtmlCompat.FROM_HTML_MODE_COMPACT
         )
-        CorUtility.setTextViewHTML(tv_tnc_text, htmlTextTnc) {
+        CorUtility.setTextViewHTML(binding.tvTncText, htmlTextTnc) {
             val bundle = Bundle()
             bundle.putBoolean(HomeActivity.EXTRA_ASK_PERMISSION, false)
             bundle.putBoolean(HomeActivity.DO_NOT_SHOW_BACK, false)
@@ -129,7 +130,7 @@ class PermissionActivity : AppCompatActivity(), SelectLanguageFragment.LanguageC
         }
 
 
-          btn_start.text = getLocalisedString(this, R.string.contribute_to_a_safer_india)
+        binding.btnStart.text = getLocalisedString(this, R.string.contribute_to_a_safer_india)
 
 
     }
@@ -180,9 +181,9 @@ class PermissionActivity : AppCompatActivity(), SelectLanguageFragment.LanguageC
 
     private fun observeViewModel() {
         onBoardingViewModel.isSharingPossible.observe(this, Observer {
-            btn_start.isEnabled = it
+            binding.btnStart.isEnabled = it
             if (it) {
-                btn_start.setOnClickListener {
+                binding.btnStart.setOnClickListener {
                     val did = SharedPref.getStringParams(CoronaApplication.instance, SharedPrefsConstants.UNIQUE_ID, "")
                     if (AuthUtility.isSignedIn() && !TextUtils.isEmpty(did)) {
                         startBluetoothService()
@@ -199,7 +200,7 @@ class PermissionActivity : AppCompatActivity(), SelectLanguageFragment.LanguageC
                 val listener = object : LoginSuccess {
                     override fun loginSuccess() {
                         if (!isFinishing) {
-                            progress_bar.visibility = View.GONE
+                            binding.progressBar.visibility = View.GONE
                         }
                         val token = SharedPref.getStringParams(
                             CoronaApplication.instance,
@@ -214,7 +215,7 @@ class PermissionActivity : AppCompatActivity(), SelectLanguageFragment.LanguageC
 
                     override fun loginFailed() {
                         if (!isFinishing) {
-                            progress_bar.visibility = View.GONE
+                            binding.progressBar.visibility = View.GONE
                             Toast.makeText(
                                 CoronaApplication.instance,
                                 getLocalisedString(this@PermissionActivity, R.string.login_failed),
@@ -225,10 +226,10 @@ class PermissionActivity : AppCompatActivity(), SelectLanguageFragment.LanguageC
                     }
 
                 }
-                progress_bar.setOnClickListener {
+                binding.progressBar.setOnClickListener {
 
                 }
-                progress_bar.visibility = View.VISIBLE
+                binding.progressBar.visibility = View.VISIBLE
                 CorUtility.sendTokenAndRegisterUser(this, listener)
             }
         })

@@ -6,24 +6,25 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
-import android.widget.TextView
 import android.widget.Toast
 import androidx.core.text.HtmlCompat
+import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
 import com.bumptech.glide.Glide
 import nic.goi.aarogyasetu.R
 import nic.goi.aarogyasetu.utility.AuthUtility
 import nic.goi.aarogyasetu.utility.CorUtility
 import nic.goi.aarogyasetu.utility.LocalizationUtil.getLocalisedString
-import kotlinx.android.synthetic.main.fragment_forth_on_board_intro.*
 import nic.goi.aarogyasetu.BuildConfig
 import nic.goi.aarogyasetu.background.BluetoothScanningService
+import nic.goi.aarogyasetu.databinding.FragmentForthOnBoardIntroBinding
 
 private const val ARG_PARAM1 = "param1"
 
 class ForthOnBoardIntroFragment : Fragment() {
 
     private var isRegistrationFlow: Boolean = false
+    private lateinit var binding: FragmentForthOnBoardIntroBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -35,25 +36,23 @@ class ForthOnBoardIntroFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        val view = inflater.inflate(R.layout.fragment_forth_on_board_intro, container, false)
+        binding = DataBindingUtil.inflate(inflater,R.layout.fragment_forth_on_board_intro, container, false)
+//        val view = inflater.inflate(R.layout.fragment_forth_on_board_intro, container, false)
 
-        val tvWithCowin20YouCan: TextView =
-            view.findViewById(R.id.tv_with_cowin_20_you_can) as TextView
-        tvWithCowin20YouCan.text =
+        binding.tvWithCowin20YouCan.text =
             HtmlCompat.fromHtml(
-                getLocalisedString(view.context, R.string.with_cowin_20_you_can),
+                getLocalisedString(requireContext(), R.string.with_cowin_20_you_can),
                 HtmlCompat.FROM_HTML_MODE_COMPACT
             )
 
-        val btnRegister: Button = view.findViewById(R.id.btn_register) as Button
-        btnRegister.text = getLocalisedString(view.context, R.string.register_now)
+        binding.btnRegister.text = getLocalisedString(requireContext(), R.string.register_now)
         if (!isRegistrationFlow) {
-            btnRegister.visibility = View.INVISIBLE
+            binding.btnRegister.visibility = View.INVISIBLE
         }
         if (AuthUtility.isSignedIn())
-            btnRegister.text = getString(R.string.next)
+            binding.btnRegister.text = getString(R.string.next)
 
-        configureButtonClick(btnRegister)
+        configureButtonClick(binding.btnRegister)
 
         return view
     }
@@ -83,8 +82,8 @@ class ForthOnBoardIntroFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        Glide.with(this).load(R.drawable.onboarding_four).into(imageView20)
-        Glide.with(this).load(R.drawable.map_pins).into(imageView2)
+        Glide.with(this).load(R.drawable.onboarding_four).into(binding.imageView20)
+        Glide.with(this).load(R.drawable.map_pins).into(binding.imageView2)
     }
 
     companion object {

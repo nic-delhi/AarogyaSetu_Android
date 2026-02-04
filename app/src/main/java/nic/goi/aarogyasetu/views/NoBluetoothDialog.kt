@@ -5,15 +5,17 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.DialogFragment
-import kotlinx.android.synthetic.main.dialog_no_bluetooth.*
 import nic.goi.aarogyasetu.R
+import nic.goi.aarogyasetu.databinding.DialogNoBluetoothBinding
 import nic.goi.aarogyasetu.utility.LocalizationUtil
 
 
 class NoBluetoothDialog : DialogFragment() {
 
     private var listener: BluetoothActionListener? = null
+    private lateinit var binding: DialogNoBluetoothBinding
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -21,7 +23,8 @@ class NoBluetoothDialog : DialogFragment() {
         savedInstanceState: Bundle?
     ): View? {
         super.onCreateView(inflater, container, savedInstanceState)
-        return inflater.inflate(R.layout.dialog_no_bluetooth, container, false)
+        binding = DataBindingUtil.inflate(inflater, R.layout.dialog_no_bluetooth, container, false)
+        return binding.root
     }
 
     interface BluetoothActionListener {
@@ -40,7 +43,8 @@ class NoBluetoothDialog : DialogFragment() {
         savedInstanceState: Bundle?
     ) {
         super.onViewCreated(view, savedInstanceState)
-        textView2.text = LocalizationUtil.getLocalisedString(context, R.string.turn_on_bluetooth_all_times)
+        binding.textView2.text =
+            LocalizationUtil.getLocalisedString(context, R.string.turn_on_bluetooth_all_times)
         view.findViewById<View>(R.id.turn_on)
             .setOnClickListener {
                 listener?.onBluetoothRequested()

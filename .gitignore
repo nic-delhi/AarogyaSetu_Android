@@ -19,6 +19,8 @@ captures/
 /*/release
 *.iml
 
+.kotlin/
+
 local.properties
 keystore.properties
 app/covidSignCertificate.jks

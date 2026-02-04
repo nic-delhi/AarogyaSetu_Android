@@ -5,19 +5,17 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Button
-import android.widget.ImageView
-import android.widget.TextView
-import androidx.annotation.Nullable
+import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.DialogFragment
-import kotlinx.android.synthetic.main.dialog_sync_data.*
 import nic.goi.aarogyasetu.R
+import nic.goi.aarogyasetu.databinding.DialogSyncDataBinding
 import nic.goi.aarogyasetu.utility.Constants
 import nic.goi.aarogyasetu.utility.LocalizationUtil
 
 
 class SyncDataDialog : DialogFragment() {
     private var listener: SyncDataModeListener? = null
+    private lateinit var binding: DialogSyncDataBinding
 
     interface SyncDataModeListener {
         fun syncDataWith(mode: String)
@@ -25,7 +23,7 @@ class SyncDataDialog : DialogFragment() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setStyle(STYLE_NORMAL, R.style.Theme_AppCompat_Light_Dialog_Alert)
+        setStyle(STYLE_NORMAL, android.R.style.Theme_Material_Light_Dialog_Alert)
     }
 
     override fun onAttach(context: Context) {
@@ -35,31 +33,32 @@ class SyncDataDialog : DialogFragment() {
         }
     }
 
-    @Nullable
     override fun onCreateView(
         inflater: LayoutInflater,
-        @Nullable container: ViewGroup?,
-        @Nullable savedInstanceState: Bundle?
+        container: ViewGroup?,
+        savedInstanceState: Bundle?
     ): View {
         super.onCreateView(inflater, container, savedInstanceState)
-        return inflater.inflate(R.layout.dialog_sync_data, container, false)
+        binding = DataBindingUtil.inflate(inflater, R.layout.dialog_sync_data, container, false)
+        return binding.root
     }
 
-    override fun onViewCreated(view: View, @Nullable savedInstanceState: Bundle?) {
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        tv_sync_data_detail.text =
+        binding.tvSyncDataDetail.text =
             LocalizationUtil.getLocalisedString(context, R.string.sync_data_detail)
-        btn_being_tested.text =
+        binding.btnBeingTested.text =
             LocalizationUtil.getLocalisedString(context, R.string.sample_collected_for_testing)
-        btn_being_tested.setOnClickListener {
+        binding.btnBeingTested.setOnClickListener {
             listener?.syncDataWith(Constants.UPLOAD_TYPES.BEING_TESTED)
             dismissAllowingStateLoss()
         }
-        btn_tested_positive.text = LocalizationUtil.getLocalisedString(context, R.string.tested_positive)
-        btn_tested_positive.setOnClickListener {
+        binding.btnTestedPositive.text =
+            LocalizationUtil.getLocalisedString(context, R.string.tested_positive)
+        binding.btnTestedPositive.setOnClickListener {
             listener?.syncDataWith(Constants.UPLOAD_TYPES.TESTED_POSITIVE_CONSENT)
             dismissAllowingStateLoss()
         }
-        close.setOnClickListener { dismissAllowingStateLoss() }
+        binding.close.setOnClickListener { dismissAllowingStateLoss() }
     }
 }

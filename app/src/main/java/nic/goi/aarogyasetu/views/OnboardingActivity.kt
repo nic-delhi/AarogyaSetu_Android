@@ -6,10 +6,11 @@ import android.view.View
 import androidx.annotation.ColorRes
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
+import androidx.databinding.DataBindingUtil
 import androidx.viewpager.widget.ViewPager
-import kotlinx.android.synthetic.main.activity_onboarding.*
 import nic.goi.aarogyasetu.R
 import nic.goi.aarogyasetu.analytics.EventNames
+import nic.goi.aarogyasetu.databinding.ActivityOnboardingBinding
 import nic.goi.aarogyasetu.utility.AnalyticsUtils
 import nic.goi.aarogyasetu.utility.Constants
 import nic.goi.aarogyasetu.utility.LocalizationUtil.getLocalisedString
@@ -25,6 +26,7 @@ class OnboardingActivity : AppCompatActivity(), SelectLanguageFragment.LanguageC
     }
 
     var registrationFlow: Boolean = true
+    private lateinit var binding: ActivityOnboardingBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -32,7 +34,7 @@ class OnboardingActivity : AppCompatActivity(), SelectLanguageFragment.LanguageC
             window.decorView.systemUiVisibility = View.SYSTEM_UI_FLAG_LIGHT_STATUS_BAR
         }
         updateStatusColor(R.color.onboarding_screen_1_bg_color)
-        setContentView(R.layout.activity_onboarding)
+        binding = DataBindingUtil.setContentView(this, R.layout.activity_onboarding)
 
         registrationFlow = !(intent.extras != null && intent.extras!!.containsKey(Constants.FINISH))
 
@@ -46,16 +48,16 @@ class OnboardingActivity : AppCompatActivity(), SelectLanguageFragment.LanguageC
     }
 
     private fun configureLanguageChangeClick() {
-        language_change.setOnClickListener {
+        binding.languageChange.setOnClickListener {
             showLanguageSelectionDialog()
         }
     }
 
     private fun configurePagerAdapter() {
-        pager.adapter = OnboardingAdapter(supportFragmentManager, registrationFlow)
-        pageindicator.setViewPager(pager)
+        binding.pager.adapter = OnboardingAdapter(supportFragmentManager, registrationFlow)
+        binding.pageindicator.setViewPager(binding.pager)
 
-        pager.addOnPageChangeListener(object : ViewPager.OnPageChangeListener {
+        binding.pager.addOnPageChangeListener(object : ViewPager.OnPageChangeListener {
             override fun onPageScrollStateChanged(state: Int) {
                 //do nothing
             }
@@ -76,11 +78,11 @@ class OnboardingActivity : AppCompatActivity(), SelectLanguageFragment.LanguageC
                     SCREEN_4 -> updateStatusColor(R.color.onboarding_screen_4_bg_color)
                 }
                 if (registrationFlow) {
-                    if ((pager.currentItem) < (PAGE_COUNT - 1)) {
+                    if ((binding.pager.currentItem) < (PAGE_COUNT - 1)) {
 
-                        close.visibility = View.VISIBLE
+                        binding.close.visibility = View.VISIBLE
                     } else {
-                        close.visibility = View.GONE
+                        binding.close.visibility = View.GONE
                     }
                 }
             }
@@ -88,25 +90,25 @@ class OnboardingActivity : AppCompatActivity(), SelectLanguageFragment.LanguageC
     }
 
     private fun configureOnboardingViews() {
-        close.visibility = View.VISIBLE
-        close.text = getLocalisedString(this, R.string.next)
-        close.setOnClickListener {
+        binding.close.visibility = View.VISIBLE
+        binding.close.text = getLocalisedString(this, R.string.next)
+        binding.close.setOnClickListener {
 
-            if (pager.currentItem < (PAGE_COUNT - 1)) {
-                pager.currentItem = (pager.currentItem + 1)
+            if (binding.pager.currentItem < (PAGE_COUNT - 1)) {
+                binding.pager.currentItem = (binding.pager.currentItem + 1)
             }
         }
         AnalyticsUtils.sendEvent(EventNames.EVENT_OPEN_ONBOARDING)
     }
 
     private fun configureViews() {
-        close.text = getLocalisedString(this, R.string.close)
-        close.visibility = View.VISIBLE
-        close.setOnClickListener {
+        binding.close.text = getLocalisedString(this, R.string.close)
+        binding.close.visibility = View.VISIBLE
+        binding.close.setOnClickListener {
 
             finish()
         }
-        language_change.visibility = View.GONE
+        binding.languageChange.visibility = View.GONE
         AnalyticsUtils.sendEvent(EventNames.EVENT_OPEN_ONBOARDING_AS_INFO)
     }
 
@@ -123,10 +125,10 @@ class OnboardingActivity : AppCompatActivity(), SelectLanguageFragment.LanguageC
 
     override fun languageChange() {
         if (registrationFlow) {
-            close.text = getLocalisedString(this, R.string.next)
+            binding.close.text = getLocalisedString(this, R.string.next)
         } else {
-            close.text = getLocalisedString(this, R.string.close)
+            binding.close.text = getLocalisedString(this, R.string.close)
         }
-        pager.adapter?.notifyDataSetChanged()
+        binding.pager.adapter?.notifyDataSetChanged()
     }
 }

@@ -11,7 +11,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.Lifecycle
 import com.google.android.gms.common.GoogleApiAvailability
 import com.google.android.gms.security.ProviderInstaller
-import io.fabric.sdk.android.services.common.CommonUtils
+import com.google.firebase.crashlytics.internal.common.CommonUtils
 import nic.goi.aarogyasetu.BuildConfig
 import nic.goi.aarogyasetu.CoronaApplication
 import nic.goi.aarogyasetu.analytics.EventNames
@@ -42,7 +42,7 @@ class SplashActivity : AppCompatActivity(), SelectLanguageFragment.LanguageChang
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        val rooted: Boolean = CommonUtils.isRooted(this)
+        val rooted: Boolean = CommonUtils.isRooted()
         if (rooted) {
             showDialogAndFinish(Constants.ROOT_ALERT)
             AnalyticsUtils.sendBasicEvent(EventNames.EVENT_PHONE_ROOTED, ScreenNames.SCREEN_SPLASH)

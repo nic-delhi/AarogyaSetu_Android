@@ -9,14 +9,12 @@ import androidx.annotation.NonNull;
 import androidx.work.Configuration;
 import androidx.work.WorkManager;
 
-import com.crashlytics.android.Crashlytics;
 import com.google.android.gms.location.LocationServices;
 import com.google.firebase.FirebaseApp;
 
 import java.util.List;
 import java.util.concurrent.Executors;
 
-import io.fabric.sdk.android.Fabric;
 import nic.goi.aarogyasetu.utility.CorUtility;
 
 /**
@@ -42,10 +40,6 @@ public class CoronaApplication extends Application implements Configuration.Prov
                 new Configuration.Builder()
                         .setExecutor(Executors.newFixedThreadPool(8))
                         .build());
-        new Thread(() -> {
-            Fabric.with(CoronaApplication.getInstance(), new Crashlytics());
-        }).start();
-
     }
 
     public void setBestLocation(Location location)

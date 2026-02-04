@@ -25,10 +25,15 @@ import androidx.work.ExistingPeriodicWorkPolicy
 import androidx.work.OneTimeWorkRequest
 import androidx.work.PeriodicWorkRequest
 import androidx.work.WorkManager
-import com.crashlytics.android.Crashlytics
-import com.google.firebase.iid.FirebaseInstanceId
+import com.google.firebase.Firebase
+import com.google.firebase.crashlytics.FirebaseCrashlytics
+import com.google.firebase.messaging.FirebaseMessaging
 import com.google.gson.JsonElement
 import com.google.gson.JsonObject
+import kotlinx.coroutines.CoroutineScope
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.launch
+import kotlinx.coroutines.tasks.await
 import nic.goi.aarogyasetu.BuildConfig
 import nic.goi.aarogyasetu.CoronaApplication
 import nic.goi.aarogyasetu.analytics.EventNames
@@ -129,13 +134,13 @@ class CorUtility {
 
         }
 
-        fun registerUser(context: Context, listener: PermissionActivity.LoginSuccess) {
+        suspend fun registerUser(context: Context, listener: PermissionActivity.LoginSuccess) {
             val client =
                 NetworkClient.getRetrofitClient(false, false, true, "")
 
             var registerationData = RegisterationData(
                 BluetoothAdapter.getDefaultAdapter().name,
-                getBluetoothMacAddress(), FirebaseInstanceId.getInstance().getToken()
+                getBluetoothMacAddress(), FirebaseMessaging.getInstance().token.await()
             )
 
             registerationData.isBlAllowed =
@@ -333,7 +338,7 @@ class CorUtility {
                 if (token.isNullOrBlank()) {
                     return@execute
                 }
-                registerUser(context, listener)
+                CoroutineScope(Dispatchers.IO).launch { registerUser(context, listener) }
             }
         }
 
@@ -827,7 +832,7 @@ fun Exception?.reportException() {
     this?.let {
         if (!BuildConfig.DEBUG) {
             try {
-                Crashlytics.getInstance().core.logException(it)
+                FirebaseCrashlytics.getInstance().recordException(it)
             } catch (e: java.lang.Exception) {
                 //
             }
