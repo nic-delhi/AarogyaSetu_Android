@@ -48,6 +48,7 @@ Manisha Agrawal
 Vikas Chaubey  
 Deepak Rawat  
 Shipra Saxena  
+Ronika Reddy (Unicent)
 
 ---------------------------------
 Contributors (Industry)
