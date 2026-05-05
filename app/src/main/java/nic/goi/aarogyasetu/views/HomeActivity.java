@@ -302,6 +302,9 @@ public class HomeActivity extends AppCompatActivity implements SelectLanguageFra
         }
         webView.getSettings().setJavaScriptEnabled(true);
         webView.getSettings().setDomStorageEnabled(true);
+        webView.getSettings().setAllowFileAccess(false);
+        webView.getSettings().setAllowFileAccessFromFileURLs(false);
+        webView.getSettings().setAllowUniversalAccessFromFileURLs(false);
         webView.addJavascriptInterface(javaScriptInterface, "JSMobileCrm");
         fullScreenVideoWebChromeClient = new FullScreenVideoWebChromeClient();
         webView.setWebChromeClient(fullScreenVideoWebChromeClient);
