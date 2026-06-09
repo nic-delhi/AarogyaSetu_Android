@@ -12,11 +12,11 @@
     <string name="why_is_it_needed">ఇది ఎందుకు అవసరం?</string>
     <string name="submit">సబ్మిట్ చేయండి</string>
     <string name="resend_otp">OTP ని మళ్ళీ పంపండి</string>
-    <string name="resend_otp_in">OTP ని %s మళ్ళి పంపించుటకు</string>
+    <string name="resend_otp_in">%s తర్వాత OTP ని మళ్లీ పంపండి</string>
     <!-- otp_validation_layout -->
     <string name="enter_otp">OTP ఎంటర్ చేయండి</string>
     <string name="we_have_sent_otp">మేము మీ మొబైల్ నంబర్‌కు OTP పంపాము.</string>
-    <string name="we_have_resent_otp">ನಿಮ್ಮ ಮೊಬೈಲ್ ನಂಬರಿಗೆ ನಾವು OTP ಯನ್ನು ಮರುಹೊಂದಿಸಿ.</string>
+    <string name="we_have_resent_otp">మేము మీ మొబైల్ నంబర్‌కు OTP మళ్లీ పంపాము.</string>
     <string name="otp">OTP</string>
     <string name="please_enter_a_valid_otp">దయచేసి  సరైన  OTP ఎంటర్ చేయండి  </string>
     <!-- why_needed_layout -->
@@ -35,9 +35,9 @@
     <string name="would_you_like_to">మీరు COVID-19 పరీక్షలలో పాజిటివ్‌గా నిర్ధారింపబడిన వారు సంచరించిన ప్రాంతంలో సంచిరించినట్లయితే మీకు తెలియజేయమంటారా?</string>
     <string name="each_one_of_us">మనలోని ప్రతి ఒక్కరికి భారతదేశంలో కరోనావైరస్ మహమ్మారి వ్యాప్తిని నివారించడానికి సహాయపడగలిగే శక్తి ఉంది</string>
     <string name="simply_1_install_the_app">కేవలం,
-\n१ యాప్ ఇన్‌స్టాల్ చేసుకోండి
-\n२. బ్లూటూత్ మరియు లొకేషన్ స్విచ్ ఆన్ చేయండి
-\n३. లొకేషన్ షేరింగ్‌ను "ఎల్లప్పుడూ" అని సెట్ చేసుకోండి
+\n1 యాప్ ఇన్‌స్టాల్ చేసుకోండి
+\n2. బ్లూటూత్ మరియు లొకేషన్ స్విచ్ ఆన్ చేయండి
+\n3. లొకేషన్ షేరింగ్‌ను "ఎల్లప్పుడూ" అని సెట్ చేసుకోండి
 \n\nమీ స్నేహితులు మరియు కుటుంబo చేత యాప్‌ను ఇన్‌స్టాల్ చేయించడానికి ఆహ్వానించండి.</string>
     <string name="cowin_20_tracks_through"><![CDATA[<b>ఆరోగ్య సేతు</b> COVID-19 పరీక్షలలో పాజిటివ్‌గా నిర్ధారింపబడిన వారితో మీ ఇంటరాక్షన్‌ను, బ్లూటూత్ మరియు లొకేషన్ జనరేటెడ్ సోషల్ గ్రాఫ్ ద్వారా ట్రాక్ చేస్తుంది.]]></string>
     <string name="the_app_alerts_are_accompanied">యాప్ అలర్ట్స్ సెల్ఫ్-ఐసోలేట్ అవ్వడం ఎలానో తెలిపే మరియు మీలో వైరస్ లక్షణాలు వృద్ధి చెందితే అవసరమైన సహాయం, మద్దతు ఎలా పొందాలో తెలిపే సూచనలు కలిగి ఉంటాయి</string>
@@ -75,7 +75,7 @@
     <string name="error_network_error">దయచేసి మీ ఇంటర్నెట్ కనెక్షన్‌ను సరి చుడండి</string>
     <string name="error_location">మీరు ఇచ్చిన లొకేషన్ పర్మిషన్ సరిపోదు మరియు ఇక్కడ మార్చలేము . మళ్ళి సెట్టింగులోకి వెళ్లి సరైన పర్మిషన్ ఇవ్వండి</string>
     <string name="turn_on_bluetooth_all_times">ఇతర పరికరాలకు మీరు ఎంత సమీపానికి వచ్చారో ట్రాక్ చేయడానికి మరియు మీకు ఖచ్చితమైన భద్రతా అప్డేట్ లు ఇవ్వడానికి బ్లూటూత్ అన్ని సమయాల్లో ఆన్ లో ఉండాలి</string>
-    <string name="make_sure_your_phone_is_connected_to_the_wifi_or_switch_to_mobile_data">మీ ఫోన్ వైఫైకి కనెక్ట్ అయిందని సరిచూడండి లేదా మొబైల్ డేటాకు మారండి..</string>
+    <string name="make_sure_your_phone_is_connected_to_the_wifi_or_switch_to_mobile_data">మీ ఫోన్ వైఫైకి కనెక్ట్ అయిందని సరిచూడండి లేదా మొబైల్ డేటాకు మారండి.</string>
     <string name="login_failed">లాగిన్ విఫలమైంది. దయచేసి మళ్ళీ ప్రయత్నించండి</string>
     <string name="image_user_content_description">వినియోగదారి</string>
     <string name="image_menu_content_description">మెను</string>
